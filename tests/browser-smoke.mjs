@@ -9,7 +9,7 @@ const context=await browser.newContext({viewport:{width:1440,height:900},reduced
 const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});mkdirSync('artifacts',{recursive:true});
 const saved=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('honglou-first-three:v3')));
 const node=()=>page.locator('.node-label').textContent();
-const reading=async()=>{for(let i=0;i<4;i++){const skip=page.getByRole('button',{name:'跳过移动',exact:true});if(await skip.isVisible()){await skip.click();await page.waitForTimeout(60);}}await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim());await page.locator('.game-map[data-scene-ready]').waitFor();};
+const reading=async()=>{await page.locator('.loading-screen').waitFor({state:'detached',timeout:20000});for(let i=0;i<4;i++){const skip=page.getByRole('button',{name:'跳过移动',exact:true});if(await skip.isVisible()){await skip.click();await page.waitForTimeout(60);}}await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim());await page.locator('.game-map[data-scene-ready]').waitFor();};
 async function fit(){const control=await page.getByRole('button',{name:'继续剧情',exact:true}).boundingBox();assert.ok(control);const viewport=page.viewportSize();assert.ok(control.y+control.height<=viewport.height,`controls below screen: ${control.y+control.height}>${viewport.height}`);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
 async function next(skip=true){const before=await node();await page.getByRole('button',{name:'继续剧情',exact:true}).click();await page.waitForFunction(id=>document.querySelector('.node-label')?.textContent!==id,before);const b=page.getByRole('button',{name:'跳过移动',exact:true});if(skip&&await b.isVisible())await b.click();await reading();}
 try{
@@ -76,7 +76,12 @@ try{
  await page.waitForFunction(()=>document.querySelectorAll('.world-location image[data-loaded=true]').length===9);await page.screenshot({path:'artifacts/rongguo-estate-rebuilt.png',fullPage:true});
  await page.getByRole('button',{name:'当前场景',exact:true}).click();
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(chapters[6].id);await reading();await page.setViewportSize({width:1280,height:720});await page.waitForTimeout(120);await fit();await page.screenshot({path:'artifacts/chapter-laptop.png',fullPage:true});
- await page.setViewportSize({width:390,height:844});await page.waitForTimeout(120);await fit();assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),205);await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('night');await reading();assert.equal(await node(),'T001');await fit();await page.screenshot({path:'artifacts/chapter-mobile.png',fullPage:true});
+ await page.setViewportSize({width:390,height:844});await page.waitForTimeout(120);
+// Portrait phones get a rotate invitation; dismiss it to verify the compact layout beneath.
+await page.locator('.rotate-hint').waitFor({timeout:4000}).catch(()=>{});
+const rotateDismiss=page.getByRole('button',{name:'仍要竖屏浏览'});
+if(await rotateDismiss.isVisible())await rotateDismiss.click();
+await fit();assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),205);await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('night');await reading();assert.equal(await node(),'T001');await fit();await page.screenshot({path:'artifacts/chapter-mobile.png',fullPage:true});
  await page.reload();await reading();assert.equal(await node(),'T001');await page.evaluate(()=>localStorage.setItem('honglou-first-three:v3','{bad'));await page.reload();await reading();assert.equal(await node(),'C1-001');
  assert.equal(errors.length,0,JSON.stringify(errors));console.log('Passed: all 234 nodes, eighteen maps, complete history, chapter 1–3 selection, cross-scene save/reload, offscreen reveal, natural movement, pause, settings, atlas, stable map area, minimum readable sprites/labels, zoom hit targets, overview browsing, paused estate travel, controls visible at 1440×900 / 1280×720 / 390×844, corrupt-save recovery.');
 }catch(e){console.error('Browser errors:',errors);console.error((await page.locator('body').innerText()).slice(0,3500));await page.screenshot({path:'artifacts/browser-failure.png',fullPage:true});throw e;}finally{await context.close();await browser.close();}

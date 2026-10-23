@@ -6,6 +6,7 @@ import { cast, story, chapters, bookNames } from './story.ts';
 import type { ActorId } from './story.ts';
 import { JourneyMap } from './JourneyMap.tsx';
 import { Portrait } from './Portrait.tsx';
+import { LoadingScreen, RotateHint } from './LoadingScreen.tsx';
 import { WorldMap, worldLocations, travelRoute, worldLocationFor } from './WorldMap.tsx';
 import type { Travel } from './WorldMap.tsx';
 
@@ -27,12 +28,13 @@ function Icon({name}: {name:string}) {
   return <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={shapes[name]??shapes.compass}/></svg>;
 }
 
-function GameMap({engine,onScene,onActor,sceneId}: {sceneId:string;engine:StoryEngine;onScene:(scene:MapScene|null)=>void;onActor:(id:ActorId)=>void}) {
+function GameMap({engine,onScene,onActor,onProgress,sceneId}: {sceneId:string;engine:StoryEngine;onScene:(scene:MapScene|null)=>void;onActor:(id:ActorId)=>void;onProgress:(value:number)=>void}) {
   const host=useRef<HTMLDivElement>(null);
   useEffect(()=>{
     if(!host.current)return;
     const scene=new MapScene(engine,onActor);
     scene.onReady=ready=>{if(host.current)host.current.dataset.sceneReady=sceneId;onScene(ready);};
+    scene.onProgress=onProgress;
     const game=new Phaser.Game({type:Phaser.CANVAS,parent:host.current,width:host.current.clientWidth,height:host.current.clientHeight,
       backgroundColor:'#eee8d7',antialias:true,scene:[scene],audio:{noAudio:true},
       scale:{mode:Phaser.Scale.RESIZE},render:{roundPixels:false}});
@@ -51,6 +53,10 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   const sceneRef=useRef<MapScene|null>(null),dialog=useRef<HTMLDialogElement>(null);
   const [savedLabel,setSavedLabel]=useState('');
   const [overview,setOverview]=useState(false),[travel,setTravel]=useState<Travel|null>(null);
+  const [loadProgress,setLoadProgress]=useState(0),[loaded,setLoaded]=useState(false),[overlay,setOverlay]=useState(true);
+  // A stuck Phaser boot must never trap the reader behind the first-paint stage.
+  useEffect(()=>{if(loaded)return;const timer=setTimeout(()=>setLoaded(true),12000);return ()=>clearTimeout(timer);},[loaded]);
+  useEffect(()=>{if(!loaded||!overlay)return;const timer=setTimeout(()=>setOverlay(false),600);return ()=>clearTimeout(timer);},[loaded,overlay]);
   const worldId=worldLocationFor(state.sceneId,state.focus);
   const previous=useRef({scene:worldId,index:state.index});
   useEffect(()=>{
@@ -60,7 +66,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   },[worldId,state.index]);
   useEffect(()=>{if(!travel||state.paused)return;const timer=setInterval(()=>setTravel(t=>t?(t.progress>=1?null:{...t,progress:Math.min(1,t.progress+.025*state.speed)}):null),50);return ()=>clearInterval(timer);},[!!travel,state.paused,state.speed]);
   const travelRef=useRef(false);travelRef.current=!!travel;
-  const onScene=useCallback((scene:MapScene|null)=>{sceneRef.current=scene;if(scene){scene.presentationPaused=travelRef.current;scene.input.enabled=!document.querySelector('dialog[open]');}},[]);
+  const onScene=useCallback((scene:MapScene|null)=>{sceneRef.current=scene;if(scene){scene.presentationPaused=travelRef.current;scene.input.enabled=!document.querySelector('dialog[open]');setLoaded(true);}},[]);
   useEffect(()=>{if(sceneRef.current)sceneRef.current.presentationPaused=!!travel;},[travel,state.sceneId]);
   const onActor=useCallback((id:ActorId)=>setModal(id),[]);
   const save=useCallback(()=>{
@@ -103,6 +109,8 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   const character=modal && modal in cast ? cast[modal as ActorId] : null;
 
   return <main className="app-shell">
+    {overlay&&<LoadingScreen progress={loadProgress} done={loaded}/>}
+    <RotateHint/>
     <header className="app-header">
       <a className="brand" href="./" aria-label="红楼一隅首页"><span className="brand-seal">红</span><span>红楼一隅</span></a>
       <select className="chapter-select" aria-label="选择剧情段落" value={step.chapter} onChange={e=>{const chapter=chapters.find(c=>c.id===e.target.value)!;setAutomatic(false);setTravel(null);engine.seek(chapter.start);}}>{[1,2,3].map(book=><optgroup label={bookNames[book]} key={book}>{chapters.filter(c=>c.book===book).map(c=><option value={c.id} key={c.id}>{bookNames[book]} · {c.title}</option>)}</optgroup>)}</select>
@@ -117,7 +125,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
     </header>
     <div className="story-stage">
         <section className={`map-panel ${inMotion?'map-action':''}`} aria-label="地图演出" data-paused={state.paused}>
-          <div className={overview||travel?'local-map concealed':'local-map'}><GameMap sceneId={state.sceneId} engine={engine} onScene={onScene} onActor={onActor}/></div>
+          <div className={overview||travel?'local-map concealed':'local-map'}><GameMap sceneId={state.sceneId} engine={engine} onScene={onScene} onActor={onActor} onProgress={setLoadProgress}/></div>
           {overview&&step.source.chapter<3?<JourneyMap chapter={step.source.chapter} sceneId={state.sceneId} onVisit={node=>{setOverview(false);setAutomatic(false);engine.seek(node);}}/>:(overview||travel)&&<WorldMap sceneId={worldId} travel={travel} onVisit={id=>{const place=worldLocations.find(l=>l.id===id);const target=place?.start?story.find(s=>s.id===place.start):story.find(s=>s.source.chapter===3&&s.scene===(place?.scene??id));if(target){setTravel(null);setOverview(false);setAutomatic(false);engine.seek(target.id);}}}/>}
           <div className="map-navigation">
             <div className="view-switch" aria-label="地图视图"><button aria-pressed={!overview&&!travel} onClick={()=>{setTravel(null);setOverview(false);}}>当前场景</button><button aria-pressed={overview||!!travel} onClick={()=>setOverview(true)}>{step.source.chapter<3?'本回行迹':'荣国府总览'}</button></div>

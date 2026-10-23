@@ -24,6 +24,7 @@ export class MapScene extends Phaser.Scene {
   private actorLabels=new Map<ActorId,Phaser.GameObjects.Text>();
   onActor: (id: ActorId) => void;
   onReady?: (scene: MapScene) => void;
+  onProgress?: (value: number) => void;
   private drag?: {x:number;y:number;scrollX:number;scrollY:number;moved:boolean};
   private zoomFactor = 1;
   private unsubscribe?: () => void;
@@ -43,6 +44,7 @@ export class MapScene extends Phaser.Scene {
     this.polygon(g,[this.p(c,r),this.p(c+w,r),this.p(c+w,r+h),this.p(c,r+h)],color);
   }
   preload() {
+    this.load.on('progress', (value: number) => this.onProgress?.(value));
     const used=new Set(this.mapData.art.map(a=>a.asset));
     for(const step of this.engine.steps.filter(s=>s.scene===this.mapData.id))for(const action of step.actions){
       if(action.type==='show')used.add(action.actor==='sedan'?'sedan-chair':`${action.actor}-chibi`);
