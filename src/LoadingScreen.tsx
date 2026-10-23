@@ -7,17 +7,42 @@ const TIPS = [
   '正在点亮荣国府的灯…',
   '正在展开前三回画册…',
 ];
+const SCENE_TIPS = [
+  '正在铺纸上石…',
+  '正在描入院墙…',
+  '正在整理衣妆…',
+  '正在点亮檐下灯…',
+];
 const RUNNERS = ['daiyu-chibi', 'baoyu-chibi', 'feng-chibi'];
 const ROTATE_KEY = 'honglou-rotate-dismissed';
 
-/** First-paint stage: Q-version walkers trot along a painted road while Phaser preloads the scene. */
-export function LoadingScreen({ progress, done }: { progress: number; done: boolean }) {
+/** Shared painted road: walkers trot along the fill and a status line rotates. */
+function Road({progress, tips, interval = 2600}: {progress: number; tips: string[]; interval?: number}) {
   const [tip, setTip] = useState(0);
   useEffect(() => {
-    const timer = setInterval(() => setTip((t) => (t + 1) % TIPS.length), 2600);
+    const timer = setInterval(() => setTip((t) => (t + 1) % tips.length), interval);
     return () => clearInterval(timer);
-  }, []);
+  }, [tips, interval]);
   const pct = Math.max(0, Math.min(100, Math.round(progress * 100)));
+  return <>
+    <div className="loading-track">
+      <div className="loading-fill" style={{ width: `${pct}%` }} />
+      {RUNNERS.map((key, i) => (
+        <img
+          key={key}
+          className={`loading-runner runner-${i}`}
+          src={artImage(key)}
+          alt=""
+          style={{ left: `calc(${pct}% - ${14 + i * 26}px)` }}
+        />
+      ))}
+    </div>
+    <p className="loading-status" aria-live="polite">{pct}% · {tips[tip]}</p>
+  </>;
+}
+
+/** First-paint stage: Q-version walkers trot along a painted road while Phaser preloads the scene. */
+export function LoadingScreen({ progress, done }: { progress: number; done: boolean }) {
   return (
     <div className="loading-screen" role="status" aria-label="正在加载地图与人物" data-done={done}>
       <div className="loading-inner">
@@ -26,20 +51,18 @@ export function LoadingScreen({ progress, done }: { progress: number; done: bool
           <span className="loading-title">红楼一隅</span>
         </div>
         <p className="loading-sub">黛玉初入贾府 · 等距叙事地图</p>
-        <div className="loading-track">
-          <div className="loading-fill" style={{ width: `${pct}%` }} />
-          {RUNNERS.map((key, i) => (
-            <img
-              key={key}
-              className={`loading-runner runner-${i}`}
-              src={artImage(key)}
-              alt=""
-              style={{ left: `calc(${pct}% - ${14 + i * 26}px)` }}
-            />
-          ))}
-        </div>
-        <p className="loading-status" aria-live="polite">{pct}% · {TIPS[tip]}</p>
+        <Road progress={progress} tips={TIPS}/>
       </div>
+    </div>
+  );
+}
+
+/** Scene change stage: the map keeps its previous frame underneath, so waiting looks deliberate. */
+export function SceneLoadingCard({ title, progress }: { title: string; progress: number }) {
+  return (
+    <div className="scene-loading" role="status" aria-label={`正在加载${title}`}>
+      <span className="scene-loading-title">正在描绘 · {title}</span>
+      <Road progress={progress} tips={SCENE_TIPS} interval={2200}/>
     </div>
   );
 }

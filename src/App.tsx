@@ -6,7 +6,8 @@ import { cast, story, chapters, bookNames } from './story.ts';
 import type { ActorId } from './story.ts';
 import { JourneyMap } from './JourneyMap.tsx';
 import { Portrait } from './Portrait.tsx';
-import { LoadingScreen, RotateHint } from './LoadingScreen.tsx';
+import { LoadingScreen, RotateHint, SceneLoadingCard } from './LoadingScreen.tsx';
+import { prefetchCast, prefetchUpcoming } from './prefetch.ts';
 import { WorldMap, worldLocations, travelRoute, worldLocationFor } from './WorldMap.tsx';
 import type { Travel } from './WorldMap.tsx';
 
@@ -28,8 +29,9 @@ function Icon({name}: {name:string}) {
   return <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={shapes[name]??shapes.compass}/></svg>;
 }
 
-function GameMap({engine,onScene,onActor,onProgress,sceneId}: {sceneId:string;engine:StoryEngine;onScene:(scene:MapScene|null)=>void;onActor:(id:ActorId)=>void;onProgress:(value:number)=>void}) {
+function GameMap({engine,onScene,onActor,onProgress,onSnapshot,sceneId}: {sceneId:string;engine:StoryEngine;onScene:(scene:MapScene|null)=>void;onActor:(id:ActorId)=>void;onProgress:(value:number)=>void;onSnapshot:(dataUrl:string)=>void}) {
   const host=useRef<HTMLDivElement>(null);
+  const snapshotRef=useRef(onSnapshot);snapshotRef.current=onSnapshot;
   useEffect(()=>{
     if(!host.current)return;
     const scene=new MapScene(engine,onActor);
@@ -40,7 +42,21 @@ function GameMap({engine,onScene,onActor,onProgress,sceneId}: {sceneId:string;en
       scale:{mode:Phaser.Scale.RESIZE},render:{roundPixels:false}});
     const observer=new ResizeObserver(()=>{if(host.current)game.scale.resize(host.current.clientWidth,host.current.clientHeight);});
     observer.observe(host.current);
-    return ()=>{observer.disconnect();if(host.current)delete host.current.dataset.sceneReady;onScene(null);game.destroy(true);};
+    // Keep the outgoing frame on screen while the next scene loads; a blank stage reads as a crash.
+    return ()=>{
+      const canvas=host.current?.querySelector('canvas') as HTMLCanvasElement|undefined;
+      if(canvas?.width&&canvas.height){
+        try{
+          const scale=Math.min(1,560/canvas.width);
+          const small=document.createElement('canvas');
+          small.width=Math.max(1,Math.round(canvas.width*scale));
+          small.height=Math.max(1,Math.round(canvas.height*scale));
+          const context=small.getContext('2d');
+          if(context){context.drawImage(canvas,0,0,small.width,small.height);snapshotRef.current(small.toDataURL('image/jpeg',.72));}
+        }catch{/* canvas already recycled: fall back to the plain stage */ }
+      }
+      observer.disconnect();if(host.current)delete host.current.dataset.sceneReady;onScene(null);game.destroy(true);
+    };
   },[engine,onActor,onScene,sceneId]);
   return <div className="game-map" ref={host} role="img" aria-label="40×40 格红楼梦等距场景，人物随剧情移动"/>;
 }
@@ -54,6 +70,27 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   const [savedLabel,setSavedLabel]=useState('');
   const [overview,setOverview]=useState(false),[travel,setTravel]=useState<Travel|null>(null);
   const [loadProgress,setLoadProgress]=useState(0),[loaded,setLoaded]=useState(false),[overlay,setOverlay]=useState(true);
+  const [sceneProgress,setSceneProgress]=useState(0),[sceneReady,setSceneReady]=useState(false),[sceneSlow,setSceneSlow]=useState(false);
+  const [snapshot,setSnapshot]=useState('');
+  const readyRef=useRef(false);
+  // Reset the per-scene stage whenever the story moves to another map. The card only shows if loading is slow,
+  // so a cached scene never flashes one.
+  useEffect(()=>{
+    readyRef.current=false;setSceneProgress(0);setSceneReady(false);setSceneSlow(false);
+    const timer=setTimeout(()=>{if(!readyRef.current)setSceneSlow(true);},260);
+    return ()=>clearTimeout(timer);
+  },[state.sceneId]);
+  // Drop the outgoing frame once the new stage has painted.
+  useEffect(()=>{if(!sceneReady||!snapshot)return;const timer=setTimeout(()=>setSnapshot(''),650);return ()=>clearTimeout(timer);},[sceneReady,snapshot]);
+  // Warm what the next scenes will ask for while the reader is busy with this one.
+  useEffect(()=>{
+    if(!sceneReady)return;
+    const timer=setTimeout(()=>{
+      prefetchCast(engine,state.index);
+      prefetchUpcoming(engine,state.index);
+    },300);
+    return ()=>clearTimeout(timer);
+  },[sceneReady,state.index,state.sceneId,engine]);
   // A stuck Phaser boot must never trap the reader behind the first-paint stage.
   useEffect(()=>{if(loaded)return;const timer=setTimeout(()=>setLoaded(true),12000);return ()=>clearTimeout(timer);},[loaded]);
   useEffect(()=>{if(!loaded||!overlay)return;const timer=setTimeout(()=>setOverlay(false),600);return ()=>clearTimeout(timer);},[loaded,overlay]);
@@ -66,9 +103,11 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   },[worldId,state.index]);
   useEffect(()=>{if(!travel||state.paused)return;const timer=setInterval(()=>setTravel(t=>t?(t.progress>=1?null:{...t,progress:Math.min(1,t.progress+.025*state.speed)}):null),50);return ()=>clearInterval(timer);},[!!travel,state.paused,state.speed]);
   const travelRef=useRef(false);travelRef.current=!!travel;
-  const onScene=useCallback((scene:MapScene|null)=>{sceneRef.current=scene;if(scene){scene.presentationPaused=travelRef.current;scene.input.enabled=!document.querySelector('dialog[open]');setLoaded(true);}},[]);
+  const onScene=useCallback((scene:MapScene|null)=>{sceneRef.current=scene;if(scene){scene.presentationPaused=travelRef.current;scene.input.enabled=!document.querySelector('dialog[open]');setLoaded(true);readyRef.current=true;setSceneReady(true);}else{readyRef.current=false;}},[]);
   useEffect(()=>{if(sceneRef.current)sceneRef.current.presentationPaused=!!travel;},[travel,state.sceneId]);
   const onActor=useCallback((id:ActorId)=>setModal(id),[]);
+  // The first-paint stage and the per-scene card share one loader signal.
+  const onMapProgress=useCallback((value:number)=>{setLoadProgress(value);setSceneProgress(value);},[]);
   const save=useCallback(()=>{
     try {const data=engine.serialize();localStorage.setItem(SAVE_KEY,JSON.stringify(data));setSavedLabel(`已保存 · ${engine.step.title}`);setStorageError('');}
     catch(e){setStorageError(e instanceof Error?e.message:'无法保存进度');}
@@ -125,7 +164,11 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
     </header>
     <div className="story-stage">
         <section className={`map-panel ${inMotion?'map-action':''}`} aria-label="地图演出" data-paused={state.paused}>
-          <div className={overview||travel?'local-map concealed':'local-map'}><GameMap sceneId={state.sceneId} engine={engine} onScene={onScene} onActor={onActor} onProgress={setLoadProgress}/></div>
+          <div className={overview||travel?'local-map concealed':'local-map'}>
+            {snapshot&&<img className="map-snapshot" src={snapshot} alt="" aria-hidden="true" data-fade={sceneReady}/>}
+            <GameMap sceneId={state.sceneId} engine={engine} onScene={onScene} onActor={onActor} onProgress={onMapProgress} onSnapshot={setSnapshot}/>
+            {!sceneReady&&sceneSlow&&<SceneLoadingCard title={engine.maps[state.sceneId]?.title??step.place} progress={sceneProgress}/>}
+          </div>
           {overview&&step.source.chapter<3?<JourneyMap chapter={step.source.chapter} sceneId={state.sceneId} onVisit={node=>{setOverview(false);setAutomatic(false);engine.seek(node);}}/>:(overview||travel)&&<WorldMap sceneId={worldId} travel={travel} onVisit={id=>{const place=worldLocations.find(l=>l.id===id);const target=place?.start?story.find(s=>s.id===place.start):story.find(s=>s.source.chapter===3&&s.scene===(place?.scene??id));if(target){setTravel(null);setOverview(false);setAutomatic(false);engine.seek(target.id);}}}/>}
           <div className="map-navigation">
             <div className="view-switch" aria-label="地图视图"><button aria-pressed={!overview&&!travel} onClick={()=>{setTravel(null);setOverview(false);}}>当前场景</button><button aria-pressed={overview||!!travel} onClick={()=>setOverview(true)}>{step.source.chapter<3?'本回行迹':'荣国府总览'}</button></div>

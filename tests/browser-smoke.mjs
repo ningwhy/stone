@@ -64,7 +64,7 @@ try{
  assert.equal(await page.locator('.cast-gallery img').count(),33);
  await page.screenshot({path:'artifacts/cast-directory.png',fullPage:true});
  await page.locator('.cast-gallery article').filter({has:page.locator('strong',{hasText:'冷子兴'})}).getByRole('button',{name:'定位出场 →',exact:true}).click();await reading();assert.equal((await saved()).state.actors.leng.visible,true);assert.ok((await node()).startsWith('C2-'));await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('prologue');await reading();await next();await next();await next();assert.equal(await node(),'P004');
- assert.match(await page.locator('.speaker-portrait img').getAttribute('src'),/^\/assets\/rongguo\/leng-portrait\.png\?v=[a-f0-9]+$/);
+ assert.match(await page.locator('.speaker-portrait img').getAttribute('src'),/^\/assets\/rongguo\/leng-portrait\.webp\?v=[a-f0-9]+$/);
  await page.screenshot({path:'artifacts/leng-zixing.png',fullPage:true});
  await page.getByRole('button',{name:'荣国府总览',exact:true}).click();await page.getByRole('button',{name:'查看王熙凤院地点',exact:true}).click();
  assert.ok((await page.locator('.world-detail').textContent()).includes('粉油大影壁'));

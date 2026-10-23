@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build && node scripts/prune_dist.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "test:browser": "node tests/browser-smoke.mjs",
-    "check:content": "node --experimental-strip-types scripts/check_content.mjs"
+    "check:content": "node --experimental-strip-types scripts/check_content.mjs",
+    "art:webp": "node scripts/build_webp.mjs"
   },
   "engines": {
     "node": ">=22.18"

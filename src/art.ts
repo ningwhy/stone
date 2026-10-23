@@ -3,10 +3,14 @@ import type { ArtObject } from './model.ts';
 
 export const artAssets: Record<string,{image:string;width:number;height:number;anchor:number[];identity?:{character:string;features:string;seed:number;faceBox:number[];revision:string;source:string}}> = manifest.assets;
 
-/** Identity revision invalidates cached portraits and Phaser textures after an art rebuild. */
+/** Identity revision invalidates cached portraits and Phaser textures after an art rebuild.
+ * The manifest keeps the PNG originals as source of truth for calibration and content checks;
+ * scripts/build_webp.mjs ships WebP siblings (committed to the repo), and the runtime
+ * requests WebP exclusively. Regenerate with `npm run art:webp` after an art rebuild. */
 export function artImage(key:string) {
   const asset=artAssets[key];
-  return asset.identity?`${asset.image}?v=${asset.identity.revision}`:asset.image;
+  const image=asset.image.replace(/\.png$/,'.webp');
+  return asset.identity?`${image}?v=${asset.identity.revision}`:image;
 }
 
 /** Tiled bottom-centre image objects and Phaser use the same image-bottom point.

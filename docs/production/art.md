@@ -33,6 +33,10 @@ Qwen 节点需要官方 API JSON，不是 UI 画布导出。图像输入正确�
 
 服务不可达先 health/queue 判断，区分权限、网络和服务停机，不冒称生成完成。不要并行增加作业尝试“加速”。当前人物图不应为文档编辑重复生成。
 
+## WebP 运行副本
+
+运行时通过 `src/art.ts` 统一取素材 URL：manifest 中的 PNG 原图是唯一权威来源（校准、`check:content` 都以它为准），`npm run art:webp`（scripts/build_webp.mjs，需 cwebp）生成同名 `.webp` 并入仓，运行时只请求 WebP；`npm run build` 末尾的 prune_dist 会删除 dist 中未被引用的 PNG。重生成美术后必须重跑 `npm run art:webp`，否则线上请求不到新图。
+
 ## 原图 → 校准契约
 
 新增 `art/generation-plan.json.jobs` 项：`id`、唯一 `seed`、`size`、`prompt`、用于分割的 `subject`。同风格前缀加精确主体，明确建筑视角、门向、完整轮廓、纯白背景、接地点、无附属平台；实际纯白与几何都要检查。

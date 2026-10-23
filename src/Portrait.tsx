@@ -2,15 +2,29 @@ import { artAssets, artImage } from './art.ts';
 import { cast } from './story.ts';
 import type { ActorId } from './story.ts';
 
+/** Painted faces arrive over the network; mark them so CSS can fade in instead of flashing an empty box. */
+function painted(key: string, actor: ActorId, style?: React.CSSProperties) {
+  const done = (element: HTMLImageElement | null) => { if (element && element.complete) element.dataset.loaded = 'true'; };
+  return <img
+    ref={done}
+    src={artImage(key)}
+    className="portrait-svg portrait-painted"
+    alt={`${cast[actor].fullName}手绘立绘`}
+    style={style}
+    onLoad={event => { event.currentTarget.dataset.loaded = 'true'; }}
+    onError={event => { event.currentTarget.dataset.loaded = 'true'; }}
+  />;
+}
+
 /** Shared painted identity, with a close-up frame for the cast directory. */
 export function Portrait({actor, sad=false, closeup=false}: {actor:ActorId; sad?:boolean; closeup?:boolean}) {
   const key=`${actor}-portrait`,asset=artAssets[key];
   if(asset){
-    const image=<img src={artImage(key)} className="portrait-svg portrait-painted" alt={`${cast[actor].fullName}手绘立绘`}/>;
+    const image=painted(key,actor);
     const box=asset.identity?.faceBox;
     if(closeup&&box){
       const h=(box[3]-box[1])*2.25,top=Math.max(0,box[1]-(box[3]-box[1])*.48),cx=(box[0]+box[2])/2;
-      return <div className="portrait-closeup"><img src={artImage(key)} className="portrait-svg portrait-painted" alt={`${cast[actor].fullName}手绘立绘`} style={{height:`${asset.height/h*100}%`,width:'auto',maxWidth:'none',left:'50%',top:`${-top/h*100}%`,transform:`translateX(${-cx/asset.width*100}%)`}}/></div>;
+      return <div className="portrait-closeup">{painted(key,actor,{height:`${asset.height/h*100}%`,width:'auto',maxWidth:'none',left:'50%',top:`${-top/h*100}%`,transform:`translateX(${-cx/asset.width*100}%)`})}</div>;
     }
     return image;
   }
