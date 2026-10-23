@@ -1,0 +1,386 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "PlanZones",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 1,
+          "name": "A0 京城 · 宁荣街",
+          "x": 192,
+          "y": 1472,
+          "width": 2176,
+          "height": 768,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 2,
+          "name": "A1 京城 · 宁荣街",
+          "x": 192,
+          "y": 768,
+          "width": 896,
+          "height": 704,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 3,
+          "name": "A2 京城 · 宁荣街",
+          "x": 1472,
+          "y": 768,
+          "width": 896,
+          "height": 704,
+          "rotation": 0,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PlanBlockers",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 3,
+      "name": "Anchors",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 4,
+          "name": "street_west",
+          "x": 2272.0,
+          "y": 1888.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 5,
+          "name": "ning_gate",
+          "x": 1952.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 6,
+          "name": "rong_gate",
+          "x": 928.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 7,
+          "name": "west_corner",
+          "x": 288.0,
+          "y": 1504.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 8,
+          "name": "outside",
+          "x": 288.0,
+          "y": 2080.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Routes",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 9,
+          "name": "场景动线",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "main",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "street_west,ning_gate,rong_gate,west_corner,outside",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Art",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 10,
+          "name": "manor-main-gate",
+          "x": 2098.376,
+          "y": 1548.93,
+          "width": 650,
+          "height": 528,
+          "rotation": 0,
+          "visible": true,
+          "gid": 98,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "manor-main-gate",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "manor-main-gate",
+          "x": 1103.6512,
+          "y": 1570.7160000000001,
+          "width": 780.0,
+          "height": 633.6,
+          "rotation": 0,
+          "visible": true,
+          "gid": 98,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "manor-main-gate",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "west-wall-gate",
+          "x": 300.6142500000001,
+          "y": 1528.69885,
+          "width": 214.50000000000003,
+          "height": 178.75000000000003,
+          "rotation": 0,
+          "visible": true,
+          "gid": 95,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "west-wall-gate",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "garden-tree",
+          "x": 2343.13625,
+          "y": 1384.7653500000001,
+          "width": 319.0,
+          "height": 277.20000000000005,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ArtFootprints",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 7,
+      "name": "Labels",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "objects": [
+        {
+          "id": 14,
+          "name": "宁国府 · 东",
+          "x": 1952.0,
+          "y": 1184.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 15,
+          "name": "荣国府 · 西",
+          "x": 928.0,
+          "y": 1184.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 16,
+          "name": "西墙角门",
+          "x": 288.0,
+          "y": 1504.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 17,
+          "name": "宁荣街",
+          "x": 1248.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "rongguo-art.tsj"
+    }
+  ],
+  "nextlayerid": 8,
+  "nextobjectid": 18,
+  "properties": [
+    {
+      "name": "sceneId",
+      "type": "string",
+      "value": "capital"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "value": "京城 · 宁荣街"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "value": "street"
+    }
+  ]
+}

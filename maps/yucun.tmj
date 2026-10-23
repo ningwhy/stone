@@ -1,0 +1,334 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "PlanZones",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 1,
+          "name": "A0 京城 · 贾政书房",
+          "x": 640,
+          "y": 512,
+          "width": 1280,
+          "height": 1152,
+          "rotation": 0,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PlanBlockers",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 3,
+      "name": "Anchors",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 2,
+          "name": "visitor",
+          "x": 1120.0,
+          "y": 1376.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 3,
+          "name": "host",
+          "x": 1312.0,
+          "y": 864.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 4,
+          "name": "guest",
+          "x": 1184.0,
+          "y": 992.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 5,
+          "name": "door",
+          "x": 1120.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Routes",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 6,
+          "name": "场景动线",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "main",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "visitor,host,guest,door",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Art",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 7,
+          "name": "main-hall",
+          "x": 1575.622,
+          "y": 1405.5980000000002,
+          "width": 1100,
+          "height": 888,
+          "rotation": 0,
+          "visible": true,
+          "gid": 4,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "main-hall",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "exterior",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "tea-table",
+          "x": 1248.837,
+          "y": 864.837,
+          "width": 117.0,
+          "height": 95.4,
+          "rotation": 0,
+          "visible": true,
+          "gid": 43,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "tea-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "garden-tree",
+          "x": 678.4875000000001,
+          "y": 1511.9685,
+          "width": 290,
+          "height": 252,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "garden-tree",
+          "x": 1894.4875000000002,
+          "y": 1319.9685,
+          "width": 290,
+          "height": 252,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ArtFootprints",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 11,
+          "name": "tea-table",
+          "x": 1216,
+          "y": 832,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Labels",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "objects": [
+        {
+          "id": 12,
+          "name": "贾政书房",
+          "x": 1312.0,
+          "y": 736.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "rongguo-art.tsj"
+    }
+  ],
+  "nextlayerid": 8,
+  "nextobjectid": 13,
+  "properties": [
+    {
+      "name": "sceneId",
+      "type": "string",
+      "value": "yucun"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "value": "京城 · 贾政书房"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "value": "formal"
+    }
+  ]
+}

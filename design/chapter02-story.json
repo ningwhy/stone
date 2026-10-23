@@ -1,0 +1,1101 @@
+[
+  {
+    "id": "C2-001",
+    "chapter": "c2-fortune",
+    "scene": "farm",
+    "title": "旧缘重逢 · 娇杏命转",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "公差到封家找甄士隐，封肃只得说明女婿已出家。众人仍拥着他去见新任知府。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "fengsu",
+        "at": "guest"
+      },
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "entry"
+      },
+      {
+        "type": "show",
+        "actor": "fengshi",
+        "at": "rear"
+      },
+      {
+        "type": "show",
+        "actor": "jiaoxing",
+        "at": "right"
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "却说封肃因听见公差传唤",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-002",
+    "chapter": "c2-fortune",
+    "scene": "farm",
+    "title": "旧缘重逢 · 娇杏命转",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "fengsu",
+    "text": "原来新太爷就是旧日的贾雨村！他见娇杏买线，以为士隐也搬到了这里，才命人来寻。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "fengsu",
+        "via": [
+          "host"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "却说封肃因听见公差传唤",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-003",
+    "chapter": "c2-fortune",
+    "scene": "farm",
+    "title": "旧缘重逢 · 娇杏命转",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "雨村得知士隐的遭际与英莲失踪，叹息后答应派人寻访，又遣人送银缎答谢封氏。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "却说封肃因听见公差传唤",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-004",
+    "chapter": "c2-fortune",
+    "scene": "farm",
+    "title": "一顾生缘",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "雨村另寄密书，托求娇杏作二房。封肃极力促成，一乘小轿，便在夜里把她送了去。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "jiaoxing",
+        "via": [
+          "path",
+          "exit"
+        ]
+      },
+      {
+        "type": "hide",
+        "actor": "jiaoxing"
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "却说封肃因听见公差传唤",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-005",
+    "chapter": "c2-fortune",
+    "scene": "yamen",
+    "title": "旧缘重逢 · 娇杏命转",
+    "place": "知府衙署 · 雨村仕途",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "娇杏一年后生子，又过半载，雨村原配病故，便扶她作正室。昔日偶然回顾，竟改变了一生。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "yucun",
+        "at": "host"
+      },
+      {
+        "type": "show",
+        "actor": "jiaoxing",
+        "at": "right"
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "却说封肃因听见公差传唤",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-006",
+    "chapter": "c2-dismissal",
+    "scene": "yamen",
+    "title": "雨村得官 · 恃才革职",
+    "place": "知府衙署 · 雨村仕途 · 回忆",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "回叙雨村的仕途：他受赠赴京，中了进士，外任后升知府。虽有才干，却有贪酷之弊，又恃才侮上。",
+    "actions": [
+      {
+        "type": "hide",
+        "actor": "jiaoxing"
+      },
+      {
+        "type": "show",
+        "actor": "yucun",
+        "at": "host"
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "原来，雨村因那年士隐赠银之后",
+      "textKind": "adaptation",
+      "layer": "recollection"
+    }
+  },
+  {
+    "id": "C2-007",
+    "chapter": "c2-dismissal",
+    "scene": "yamen",
+    "title": "雨村得官 · 恃才革职",
+    "place": "知府衙署 · 雨村仕途 · 回忆",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "不到一年，上司参奏他的过失，朝廷下旨革职。同僚无不喜悦，他心中惭恨，面上仍作从容。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "entry"
+      },
+      {
+        "type": "move",
+        "actor": "messenger",
+        "via": [
+          "guest"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "原来，雨村因那年士隐赠银之后",
+      "textKind": "adaptation",
+      "layer": "recollection"
+    }
+  },
+  {
+    "id": "C2-008",
+    "chapter": "c2-dismissal",
+    "scene": "yamen",
+    "title": "雨村得官 · 恃才革职",
+    "place": "知府衙署 · 雨村仕途 · 回忆",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "交代公事，把家小与积蓄送回原籍，自己游览天下。他到扬州时，病在旅店，盘费也渐不继。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "guest",
+          "path",
+          "exit"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "原来，雨村因那年士隐赠银之后",
+      "textKind": "adaptation",
+      "layer": "recollection"
+    }
+  },
+  {
+    "id": "C2-009",
+    "chapter": "c2-lin",
+    "scene": "lin",
+    "title": "林家设馆 · 贾敏仙逝",
+    "place": "扬州 · 林府与江岸",
+    "focus": "study_host",
+    "speaker": "narrator",
+    "text": "林如海出身列侯之家，又是科举探花，任巡盐御史。儿子早夭，只剩与贾敏所生的一女黛玉，珍爱非常。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "ruhai",
+        "at": "study_host"
+      },
+      {
+        "type": "show",
+        "actor": "daiyu",
+        "at": "daiyu_wait"
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "那日，偶又游至维扬地面",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-010",
+    "chapter": "c2-lin",
+    "scene": "lin",
+    "title": "林家设馆 · 贾敏仙逝",
+    "place": "扬州 · 林府与江岸",
+    "focus": "study_guest",
+    "speaker": "narrator",
+    "text": "雨村托旧友谋得西席，在林家教黛玉与两个伴读丫鬟识字。学生体弱，课程不拘多寡，他也借此休养。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "yucun",
+        "at": "door"
+      },
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "study_guest"
+        ]
+      },
+      {
+        "type": "show",
+        "actor": "xueyan",
+        "at": "daiyu_wait"
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "那日，偶又游至维扬地面",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-011",
+    "chapter": "c2-lin",
+    "scene": "lin",
+    "title": "林家设馆 · 贾敏仙逝",
+    "place": "扬州 · 林府与江岸",
+    "focus": "study_host",
+    "speaker": "ruhai",
+    "text": "小女读书，贵在识字明理。她身体怯弱，功课不必太重。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "那日，偶又游至维扬地面",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-012",
+    "chapter": "c2-lin",
+    "scene": "lin",
+    "title": "母逝停课",
+    "place": "扬州 · 林府与江岸",
+    "focus": "daiyu_wait",
+    "speaker": "narrator",
+    "text": "又过一年，贾敏一病而终。黛玉侍药尽哀，本就体弱，悲痛又触旧症，连日停课。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "那日，偶又游至维扬地面",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-013",
+    "chapter": "c2-lin",
+    "scene": "lin",
+    "title": "林家设馆 · 贾敏仙逝",
+    "place": "扬州 · 林府与江岸",
+    "focus": "garden",
+    "speaker": "narrator",
+    "text": "雨村原欲辞馆，林如海为女儿守制读书，仍将他留下。学生养病，他常在饭后出郭闲步。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "door",
+          "garden"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "那日，偶又游至维扬地面",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-014",
+    "chapter": "c2-temple",
+    "scene": "zhitong",
+    "title": "郭外闲步 · 智通寺联",
+    "place": "扬州郭外 · 智通寺",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "雨村走到山环水绕、茂林深竹之处，看见一座破败寺院，门额写着智通寺。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "yucun",
+        "at": "entry"
+      },
+      {
+        "type": "show",
+        "actor": "oldmonk",
+        "at": "host"
+      },
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "path",
+          "guest"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这日，偶至郭外",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-015",
+    "chapter": "c2-temple",
+    "scene": "zhitong",
+    "title": "郭外闲步 · 智通寺联",
+    "place": "扬州郭外 · 智通寺",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "身后有馀忘缩手，眼前无路想回头。这副联语浅近，意味却深，里头莫非住着有阅历的人？",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这日，偶至郭外",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-016",
+    "chapter": "c2-temple",
+    "scene": "zhitong",
+    "title": "郭外闲步 · 智通寺联",
+    "place": "扬州郭外 · 智通寺",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "寺内只有龙钟老僧煮粥，既聋且昏，答非所问。雨村不耐，仍出寺去，想在村肆沽酒。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "path",
+          "exit"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这日，偶至郭外",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-017",
+    "chapter": "c2-ningrong",
+    "scene": "tavern",
+    "title": "村肆遇故 · 宁荣兴衰",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "奇遇！奇遇！雨村兄竟也到这里来。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "leng",
+        "at": "host"
+      },
+      {
+        "type": "show",
+        "actor": "yucun",
+        "at": "entry"
+      },
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "guest"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "将入肆门，只见座上吃酒之客有一人起身大笑",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-018",
+    "chapter": "c2-ningrong",
+    "scene": "tavern",
+    "title": "村肆遇故 · 宁荣兴衰",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "冷子兴是在都中古董行贸易的旧友，途经此地访友。二人意气相投，同席添酒，谈起别后近况。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "将入肆门，只见座上吃酒之客有一人起身大笑",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-019",
+    "chapter": "c2-ningrong",
+    "scene": "tavern",
+    "title": "村肆遇故 · 宁荣兴衰",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "都中近来可有什么新闻？",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "将入肆门，只见座上吃酒之客有一人起身大笑",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-020",
+    "chapter": "c2-ningrong",
+    "scene": "tavern",
+    "title": "村肆遇故 · 宁荣兴衰",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "倒是与你同姓的荣国府出了异事。可惜宁荣两门，如今也不比从前了。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "将入肆门，只见座上吃酒之客有一人起身大笑",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-021",
+    "chapter": "c2-ningrong",
+    "scene": "tavern",
+    "title": "村肆遇故 · 宁荣兴衰",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "我去年在金陵见他家老宅，街东宁国府，街西荣国府，厅殿、园林还峥嵘茂盛，哪里像衰败人家？",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "将入肆门，只见座上吃酒之客有一人起身大笑",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-022",
+    "chapter": "c2-ningrong",
+    "scene": "tavern",
+    "title": "村肆遇故 · 宁荣兴衰",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "这是百足之虫，死而不僵。人多事繁，安享富贵的多，谋划的少；排场不肯省，外架还在，内囊已尽。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "将入肆门，只见座上吃酒之客有一人起身大笑",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-023",
+    "chapter": "c2-ningrong",
+    "scene": "tavern",
+    "title": "村肆遇故 · 宁荣兴衰",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "更要紧的，是儿孙一代不如一代。你且听我从宁、荣两位国公讲起。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "将入肆门，只见座上吃酒之客有一人起身大笑",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-024",
+    "chapter": "c2-ningrong",
+    "scene": "tavern",
+    "title": "村肆遇故 · 宁荣兴衰",
+    "place": "扬州郭外 · 村肆 · 转述",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "宁国公居长，后由贾代化袭官。代化长子贾敷早亡，次子贾敬承袭，如今一心炼丹，把爵位让给儿子贾珍。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "将入肆门，只见座上吃酒之客有一人起身大笑",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C2-025",
+    "chapter": "c2-ningrong",
+    "scene": "tavern",
+    "title": "村肆遇故 · 宁荣兴衰",
+    "place": "扬州郭外 · 村肆 · 转述",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "贾珍不肯读书，只顾享乐，无人敢管；他儿子贾蓉已十六岁。父辈求仙，子辈纵情，宁府便是这般光景。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "将入肆门，只见座上吃酒之客有一人起身大笑",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C2-026",
+    "chapter": "c2-ningrong",
+    "scene": "tavern",
+    "title": "村肆遇故 · 宁荣兴衰",
+    "place": "扬州郭外 · 村肆 · 转述",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "荣国公之后是贾代善，娶史侯家小姐，生贾赦、贾政。代善已故，史太君尚在；贾赦袭爵，贾政蒙恩入部，如今是员外郎。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "将入肆门，只见座上吃酒之客有一人起身大笑",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C2-027",
+    "chapter": "c2-jade",
+    "scene": "tavern",
+    "title": "衔玉异事 · 正邪两赋",
+    "place": "扬州郭外 · 村肆 · 转述",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "贾政的夫人王氏，长子贾珠早亡，留下妻儿；次生元春，又生一子，落胎便口衔有字的美玉，便叫宝玉。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这政老爹的夫人王氏",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C2-028",
+    "chapter": "c2-jade",
+    "scene": "tavern",
+    "title": "衔玉异事 · 正邪两赋",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "果然奇异，恐怕来历不小。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这政老爹的夫人王氏",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-029",
+    "chapter": "c2-jade",
+    "scene": "tavern",
+    "title": "衔玉异事 · 正邪两赋",
+    "place": "扬州郭外 · 村肆 · 转述",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "贾母爱如命根。周岁抓周，宝玉专取脂粉钗环，贾政便不喜他。如今七八岁，淘气虽淘气，聪明也百个不及。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这政老爹的夫人王氏",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C2-030",
+    "chapter": "c2-jade",
+    "scene": "tavern",
+    "title": "衔玉异事 · 正邪两赋",
+    "place": "扬州郭外 · 村肆 · 转述",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "他说女儿的骨肉是水做的，男子是泥做的；见女儿清爽，见男子便觉浊臭。你说好笑不好笑？",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这政老爹的夫人王氏",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C2-031",
+    "chapter": "c2-jade",
+    "scene": "tavern",
+    "title": "衔玉异事 · 正邪两赋",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "且莫径以色鬼相看。这种人，未必能用寻常善恶两端判断。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这政老爹的夫人王氏",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-032",
+    "chapter": "c2-jade",
+    "scene": "tavern",
+    "title": "衔玉异事 · 正邪两赋",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "世间有应运的大仁，有应劫的大恶。还有聪俊灵秀与乖僻之气相争、偶然同赋的人，不能成大仁，也不至大恶。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这政老爹的夫人王氏",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-033",
+    "chapter": "c2-jade",
+    "scene": "tavern",
+    "title": "衔玉异事 · 正邪两赋",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "生在富贵家，或成情痴；生在书香清贫家，或成逸士；即使出身寒微，也不肯甘受庸人驱使。古来文人艺士，有不少这样的人。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这政老爹的夫人王氏",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-034",
+    "chapter": "c2-jade",
+    "scene": "tavern",
+    "title": "衔玉异事 · 正邪两赋",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "照你说，倒不能只凭成败论人了。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这政老爹的夫人王氏",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-035",
+    "chapter": "c2-jade",
+    "scene": "tavern",
+    "title": "衔玉异事 · 正邪两赋",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "我离职游历后，见过异样孩子。去年在金陵甄家教书的学生，正是另一个例子。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这政老爹的夫人王氏",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-036",
+    "chapter": "c2-jade",
+    "scene": "tavern",
+    "title": "衔玉异事 · 正邪两赋",
+    "place": "扬州郭外 · 村肆 · 回忆",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "那孩子读书须有女儿相伴，背着小厮把女儿二字说得极尊贵。放学见了姊妹，又从暴躁变得温厚。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这政老爹的夫人王氏",
+      "textKind": "adaptation",
+      "layer": "recollection"
+    }
+  },
+  {
+    "id": "C2-037",
+    "chapter": "c2-jade",
+    "scene": "tavern",
+    "title": "衔玉异事 · 正邪两赋",
+    "place": "扬州郭外 · 村肆 · 回忆",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "受父亲打骂时，他只叫姐姐妹妹，说这样能解疼。祖母又护着，常为孙子责师，我只得辞馆。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这政老爹的夫人王氏",
+      "textKind": "adaptation",
+      "layer": "recollection"
+    }
+  },
+  {
+    "id": "C2-038",
+    "chapter": "c2-jade",
+    "scene": "tavern",
+    "title": "衔玉异事 · 正邪两赋",
+    "place": "扬州郭外 · 村肆 · 转述",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "这是雨村转述金陵甄家之子，后文所称的甄宝玉；此处不把他与荣府贾宝玉画作同一人，也不让他走入当下酒席。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这政老爹的夫人王氏",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C2-039",
+    "chapter": "c2-family",
+    "scene": "tavern",
+    "title": "三春名姓 · 黛玉家世",
+    "place": "扬州郭外 · 村肆 · 转述",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "贾家也有几个好女儿。元春因贤孝才德入宫做女史；迎春、探春、惜春，都跟着祖母一处读书。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "子兴道：便是贾府中",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C2-040",
+    "chapter": "c2-family",
+    "scene": "tavern",
+    "title": "三春名姓 · 黛玉家世",
+    "place": "扬州郭外 · 村肆 · 转述",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "迎春是贾赦之女，探春是贾政庶出，惜春是贾珍胞妹。大小姐正月初一出生，取名元春，妹妹们才从了春字。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "子兴道：便是贾府中",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C2-041",
+    "chapter": "c2-family",
+    "scene": "tavern",
+    "title": "三春名姓 · 黛玉家世",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "我看甄家女名也随男名，原以为贾府不该一概用春红香玉。原来有这一层缘故。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "子兴道：便是贾府中",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-042",
+    "chapter": "c2-family",
+    "scene": "tavern",
+    "title": "三春名姓 · 黛玉家世",
+    "place": "扬州郭外 · 村肆 · 转述",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "上一辈的女子仍从兄弟名。你的东家林公之妻，就是贾赦、贾政的胞妹，闺名贾敏。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "子兴道：便是贾府中",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C2-043",
+    "chapter": "c2-family",
+    "scene": "tavern",
+    "title": "三春名姓 · 黛玉家世",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "怪不得女学生读书遇敏字便读作密，写字还减一两笔！原是为母亲避讳。可伤她的母亲上月已亡故。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "子兴道：便是贾府中",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-044",
+    "chapter": "c2-family",
+    "scene": "tavern",
+    "title": "三春名姓 · 黛玉家世",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "这一辈姊妹中，她年纪最小，如今也去了。往后还要看小一辈各人的姻缘遭际。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "子兴道：便是贾府中",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-045",
+    "chapter": "c2-family",
+    "scene": "tavern",
+    "title": "三春名姓 · 黛玉家世",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "贾政已有宝玉与长子留下的弱孙，那贾赦一房如何？",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "子兴道：便是贾府中",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-046",
+    "chapter": "c2-family",
+    "scene": "tavern",
+    "title": "三春名姓 · 黛玉家世",
+    "place": "扬州郭外 · 村肆 · 转述",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "贾政妾中又添一子，品性还不知。贾赦之子贾琏二十来岁，捐了同知，帮着叔父料理家务。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "子兴道：便是贾府中",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C2-047",
+    "chapter": "c2-family",
+    "scene": "tavern",
+    "title": "三春名姓 · 黛玉家世",
+    "place": "扬州郭外 · 村肆 · 转述",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "贾琏娶王夫人的内侄女。论模样、爽利言谈与心机细密，上下无不称颂，倒把丈夫让过了一步。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "子兴道：便是贾府中",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C2-048",
+    "chapter": "c2-family",
+    "scene": "tavern",
+    "title": "三春名姓 · 黛玉家世",
+    "place": "扬州郭外 · 村肆 · 转述",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "这位被冷子兴赞叹的少奶奶，就是王熙凤。人物先在席间听闻，待第三回黛玉入府，才会真正相见。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "子兴道：便是贾府中",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C2-049",
+    "chapter": "c2-bridge",
+    "scene": "tavern",
+    "title": "日暮进城 · 喜信将至",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "leng",
+    "text": "只顾替别人家算账，你也吃杯酒。正邪也好，闲话正好下酒。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "雨村向窗外看道：天也晚了",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-050",
+    "chapter": "c2-bridge",
+    "scene": "tavern",
+    "title": "日暮进城 · 喜信将至",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "天色晚了，当心城门要关。我们慢慢进城，路上再说。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "雨村向窗外看道：天也晚了",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-051",
+    "chapter": "c2-bridge",
+    "scene": "tavern",
+    "title": "日暮进城 · 喜信将至",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "二人结清酒账，起身欲走。身后忽有人呼唤雨村，说特来报喜。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "path"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "leng",
+        "via": [
+          "entry"
+        ]
+      },
+      {
+        "type": "show",
+        "actor": "zhang",
+        "at": "exit"
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "雨村向窗外看道：天也晚了",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-052",
+    "chapter": "c2-bridge",
+    "scene": "tavern",
+    "title": "日暮进城 · 喜信将至",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "zhang",
+    "text": "雨村兄，恭喜了！我特地来报个喜信。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "zhang",
+        "via": [
+          "guest"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "雨村向窗外看道：天也晚了",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-053",
+    "chapter": "c2-bridge",
+    "scene": "tavern",
+    "title": "日暮进城 · 喜信将至",
+    "place": "扬州郭外 · 村肆",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "雨村回头。来人是谁，又有什么喜信？下一回由张如圭说明起复旧员之事，接上黛玉进京的行程。",
+    "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "雨村向窗外看道：天也晚了",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  }
+]

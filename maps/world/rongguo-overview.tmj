@@ -1,0 +1,1523 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "tiledversion": "1.11.2",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "nextlayerid": 6,
+  "nextobjectid": 56,
+  "layers": [
+    {
+      "id": 1,
+      "name": "Gates",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#655441",
+      "objects": [
+        {
+          "id": 45,
+          "name": "西角门",
+          "type": "",
+          "x": 288.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "gateId",
+              "type": "string",
+              "value": "west_gate"
+            },
+            {
+              "name": "wall",
+              "type": "string",
+              "value": "west"
+            },
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "west-wall-gate"
+            }
+          ]
+        },
+        {
+          "id": 46,
+          "name": "荣府正门",
+          "type": "",
+          "x": 1504.0,
+          "y": 2336.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "gateId",
+              "type": "string",
+              "value": "main_gate"
+            },
+            {
+              "name": "wall",
+              "type": "string",
+              "value": "south"
+            },
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "manor-main-gate"
+            }
+          ]
+        },
+        {
+          "id": 47,
+          "name": "黑油大门",
+          "type": "",
+          "x": 2272.0,
+          "y": 2336.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "gateId",
+              "type": "string",
+              "value": "black_gate"
+            },
+            {
+              "name": "wall",
+              "type": "string",
+              "value": "south"
+            },
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "black-oil-gate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Walls",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#83916c",
+      "objects": [
+        {
+          "id": 48,
+          "name": "院墙",
+          "type": "",
+          "x": 256,
+          "y": 128,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 2304,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 49,
+          "name": "院墙",
+          "type": "",
+          "x": 2560,
+          "y": 128,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 2176
+            }
+          ]
+        },
+        {
+          "id": 50,
+          "name": "院墙",
+          "type": "",
+          "x": 256,
+          "y": 128,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 1696.0
+            }
+          ]
+        },
+        {
+          "id": 51,
+          "name": "院墙",
+          "type": "",
+          "x": 256,
+          "y": 2016.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 288.0
+            }
+          ]
+        },
+        {
+          "id": 52,
+          "name": "院墙",
+          "type": "",
+          "x": 256,
+          "y": 2304,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1120.0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 53,
+          "name": "院墙",
+          "type": "",
+          "x": 1568.0,
+          "y": 2304,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 576.0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 54,
+          "name": "院墙",
+          "type": "",
+          "x": 2336.0,
+          "y": 2304,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 224.0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 55,
+          "name": "院墙",
+          "type": "",
+          "x": 1920,
+          "y": 128,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 2176
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Locations",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#526b54",
+      "objects": [
+        {
+          "id": 1,
+          "name": "capital",
+          "type": "",
+          "x": 288.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "capital"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "荣府西墙 · 西角门"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "西侧院墙的入府角门。黛玉由此换轿入内；去贾赦院先出此门，沿墙外道路转到南面，再向东经过荣府正门。"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "entry",
+          "type": "",
+          "x": 672.0,
+          "y": 1696.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "entry"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "贾母院 · 穿堂"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "垂花门、游廊、穿堂插屏、贾母院落与正房；黛玉入府认亲，初见凤姐。"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "east",
+          "type": "",
+          "x": 2272.0,
+          "y": 1760.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "east"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "贾赦东院"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "荣府东部另院。由南墙偏东的黑油大门进入，经仪门到邢夫人处；不从贾母院横穿院墙。"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "central",
+          "type": "",
+          "x": 1504.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "central"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "荣禧堂"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "内仪门、荣禧堂正堂、东边侧门；黛玉观察堂上陈设。"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "wang",
+          "type": "",
+          "x": 1568.0,
+          "y": 928.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "wang"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "王夫人院"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "正室东耳房、候茶室、东廊三间小正房与王夫人起居处；后廊接南北夹道。"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "dinner",
+          "type": "",
+          "x": 672.0,
+          "y": 1056.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "dinner"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "贾母后房 · 晚膳"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "贾母后房用膳、奉茶、问读书；宝黛初见与摔玉也在此演出。"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "night",
+          "type": "",
+          "x": 672.0,
+          "y": 416.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "night"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "碧纱橱 · 外间"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "碧纱橱、贾母卧房与宝玉外间床；安寝、袭人劝慰及次晨请安。"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "yucun",
+          "type": "",
+          "x": 1504.0,
+          "y": 2080.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "yucun"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "贾政书房"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "贾政的外书房院落。雨村进京持荐书求见的独立支线；黛玉不参与此场拜访。"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "feng",
+          "type": "",
+          "x": 1184.0,
+          "y": 544.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "wang"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": "feng_room"
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": "U019"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "王熙凤院"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "贾琏、王熙凤居住的小院，粉油大影壁后为院门。王夫人领黛玉经过夹道时指认此处；本回只到门前，不虚构入室剧情。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Roads",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#b99553",
+      "objects": [
+        {
+          "id": 10,
+          "name": "capital → west_out",
+          "type": "",
+          "x": 288.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -128,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "west_out → west_turn",
+          "type": "",
+          "x": 160.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 512
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "west_turn → south_main",
+          "type": "",
+          "x": 160.0,
+          "y": 2464.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1344,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "south_main → south_black",
+          "type": "",
+          "x": 1504.0,
+          "y": 2464.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 768,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "south_main → main_gate",
+          "type": "",
+          "x": 1504.0,
+          "y": 2464.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -128
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "main_gate → yucun",
+          "type": "",
+          "x": 1504.0,
+          "y": 2336.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -256
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "south_black → black_gate",
+          "type": "",
+          "x": 2272.0,
+          "y": 2464.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -128
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "black_gate → east",
+          "type": "",
+          "x": 2272.0,
+          "y": 2336.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -576
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "capital → west_inside",
+          "type": "",
+          "x": 288.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 128,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "entry → lane_entry",
+          "type": "",
+          "x": 672.0,
+          "y": 1696.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 448,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "central → lane_central",
+          "type": "",
+          "x": 1504.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -384,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "wang → lane_wang",
+          "type": "",
+          "x": 1568.0,
+          "y": 928.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -448,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "dinner → lane_dinner",
+          "type": "",
+          "x": 672.0,
+          "y": 1056.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 448,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "night → lane_night",
+          "type": "",
+          "x": 672.0,
+          "y": 416.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 448,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "name": "yucun → lane_yucun",
+          "type": "",
+          "x": 1504.0,
+          "y": 2080.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -384,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "name": "feng → lane_feng",
+          "type": "",
+          "x": 1184.0,
+          "y": 544.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -64,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "lane_night → lane_feng",
+          "type": "",
+          "x": 1120.0,
+          "y": 416.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 128
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "name": "lane_feng → lane_wang",
+          "type": "",
+          "x": 1120.0,
+          "y": 544.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 384
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "lane_wang → lane_dinner",
+          "type": "",
+          "x": 1120.0,
+          "y": 928.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 128
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "name": "lane_dinner → lane_central",
+          "type": "",
+          "x": 1120.0,
+          "y": 1056.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 576
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "name": "lane_central → lane_entry",
+          "type": "",
+          "x": 1120.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 64
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "name": "lane_entry → lane_yucun",
+          "type": "",
+          "x": 1120.0,
+          "y": 1696.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 384
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "name": "west_inside → west_approach",
+          "type": "",
+          "x": 416.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -256
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "name": "west_approach → entry",
+          "type": "",
+          "x": 416.0,
+          "y": 1696.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 256,
+              "y": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Art",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#83916c",
+      "objects": [
+        {
+          "id": 34,
+          "name": "荣府西墙 · 西角门",
+          "type": "",
+          "x": 307.4206523076923,
+          "y": 1990.025865846154,
+          "width": 330.24,
+          "height": 275.2,
+          "rotation": 0,
+          "visible": true,
+          "gid": 95,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "west-wall-gate"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "capital"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "capital"
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "name": "贾母院 · 穿堂",
+          "type": "",
+          "x": 677.0291424,
+          "y": 1701.0291424,
+          "width": 990.72,
+          "height": 631.5840000000001,
+          "rotation": 0,
+          "visible": true,
+          "gid": 60,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "estate-grandmother"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "entry"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "entry"
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "name": "贾赦东院",
+          "type": "",
+          "x": 2277.1076432,
+          "y": 1765.1076432,
+          "width": 935.68,
+          "height": 564.9168,
+          "rotation": 0,
+          "visible": true,
+          "gid": 61,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "estate-east"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "east"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "east"
+            }
+          ]
+        },
+        {
+          "id": 37,
+          "name": "荣禧堂",
+          "type": "",
+          "x": 1609.9874257454546,
+          "y": 1694.8953088,
+          "width": 880.64,
+          "height": 745.3416727272727,
+          "rotation": 0,
+          "visible": true,
+          "gid": 37,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "rongxi-hall"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "central"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "central"
+            }
+          ]
+        },
+        {
+          "id": 38,
+          "name": "王夫人院",
+          "type": "",
+          "x": 1572.9271808,
+          "y": 932.9271808,
+          "width": 880.64,
+          "height": 620.8512000000001,
+          "rotation": 0,
+          "visible": true,
+          "gid": 62,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "estate-wang"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "wang"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "wang"
+            }
+          ]
+        },
+        {
+          "id": 39,
+          "name": "贾母后房 · 晚膳",
+          "type": "",
+          "x": 676.6607872000001,
+          "y": 1060.6607872,
+          "width": 880.64,
+          "height": 608.7424,
+          "rotation": 0,
+          "visible": true,
+          "gid": 64,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "estate-rear"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "dinner"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "dinner"
+            }
+          ]
+        },
+        {
+          "id": 40,
+          "name": "碧纱橱 · 外间",
+          "type": "",
+          "x": 676.310664,
+          "y": 420.31066400000003,
+          "width": 825.6,
+          "height": 638.808,
+          "rotation": 0,
+          "visible": true,
+          "gid": 65,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "estate-bisha"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "night"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "night"
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "name": "贾政书房",
+          "type": "",
+          "x": 1507.2297472,
+          "y": 2083.5698943999996,
+          "width": 660.48,
+          "height": 439.2192,
+          "rotation": 0,
+          "visible": true,
+          "gid": 66,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "estate-study"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "yucun"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "yucun"
+            }
+          ]
+        },
+        {
+          "id": 42,
+          "name": "王熙凤院",
+          "type": "",
+          "x": 1187.908528,
+          "y": 547.908528,
+          "width": 715.52,
+          "height": 521.4352,
+          "rotation": 0,
+          "visible": true,
+          "gid": 63,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "estate-feng"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "wang"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "feng"
+            }
+          ]
+        },
+        {
+          "id": 43,
+          "name": "荣府正门",
+          "type": "",
+          "x": 1583.6921281447962,
+          "y": 2395.30523800905,
+          "width": 353.88235294117646,
+          "height": 287.46135746606336,
+          "rotation": 0,
+          "visible": true,
+          "gid": 98,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "manor-main-gate"
+            },
+            {
+              "name": "gateId",
+              "type": "string",
+              "value": "main_gate"
+            }
+          ]
+        },
+        {
+          "id": 44,
+          "name": "黑油大门",
+          "type": "",
+          "x": 2313.3275607843134,
+          "y": 2367.814416732026,
+          "width": 353.88235294117646,
+          "height": 293.3291503267974,
+          "rotation": 0,
+          "visible": true,
+          "gid": 94,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "black-oil-gate"
+            },
+            {
+              "name": "gateId",
+              "type": "string",
+              "value": "black_gate"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "../rongguo-art.tsj"
+    }
+  ],
+  "properties": [
+    {
+      "name": "title",
+      "type": "string",
+      "value": "荣国府总览"
+    },
+    {
+      "name": "note",
+      "type": "string",
+      "value": "依据第三回进出顺序与相对方位编排；西角门采用西墙方案，非历史建筑复原。"
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "value": "design/rongguo-world.json"
+    }
+  ]
+}

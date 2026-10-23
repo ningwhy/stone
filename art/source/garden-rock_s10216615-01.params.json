@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "garden-rock_s10216615-01",
+  "seed": 10216615,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏庭院陈设：一组玲珑精致的青灰太湖石，主石自然向右上伸展，带几处穿孔，旁边两块低矮配石与少许翠绿细叶，古雅自然，石材纹理清楚。正交等距俯视，二比一菱形投影，能看见石头上表面。占地紧凑，接地轮廓明确，无地面平台、土块、建筑、人物或投影。整个物体完整居中，四周留白。纯净均匀纯白色背景，背景贯穿石头孔洞，轮廓清晰，可抠图游戏素材。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "db41a13c-fcb0-4994-8d65-5b1653dfe99d",
+  "generated_at": "2026-10-22 12:09:23",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1024x1024"
+}

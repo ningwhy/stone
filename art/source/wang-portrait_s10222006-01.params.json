@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "wang-portrait_s10222006-01",
+  "seed": 10222006,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立单个人物设定，红楼梦原创形象。清代中年贵族妇人，深墨绿缎袄，端庄黑发髻，朴素金簪，沉静肃穆。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。半身立绘，头顶至腰下完整，人物正面略向左，双手自然拢于身前，四周留白。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "39552939-355b-49ba-9d94-c66eeab5646e",
+  "generated_at": "2026-10-22 19:00:06",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x1024"
+}

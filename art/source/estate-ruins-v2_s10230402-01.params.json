@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "estate-ruins-v2_s10230402-01",
+  "seed": 10230402,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\nA compact heap of burnt rubble, remnants after a devastating fire. ALL ROOFS ARE GONE. Only three short broken plaster wall fragments remain, jagged broken wall tops, black charred timber beams lying horizontally on the ground, piles of broken gray clay roof tiles and fallen bricks, ash stains, sparse weeds. Maximum wall height is half a person. NO standing house, NO intact roofs, NO flames, NO people. Isometric 2:1 orthographic game prop viewed from southeast, exquisite Chinese ink and watercolor with muted gray sage and tan, entire object isolated on pure white, no text. 烧毁后的瓦砾场，房顶全部坍塌，只有低矮残墙、焦黑横木和碎砖瓦。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "0b921f9d-7303-4fcd-bc14-1d0f82544ddc",
+  "generated_at": "2026-10-23 01:32:15",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1024x1024"
+}

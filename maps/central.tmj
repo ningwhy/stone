@@ -1,0 +1,470 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "PlanZones",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 1,
+          "name": "A0 荣府中轴 · 荣禧堂",
+          "x": 832,
+          "y": 1408,
+          "width": 832,
+          "height": 768,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 2,
+          "name": "A1 荣府中轴 · 荣禧堂",
+          "x": 768,
+          "y": 640,
+          "width": 1088,
+          "height": 768,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 3,
+          "name": "A2 荣府中轴 · 荣禧堂",
+          "x": 448,
+          "y": 512,
+          "width": 320,
+          "height": 1024,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 4,
+          "name": "A3 荣府中轴 · 荣禧堂",
+          "x": 1856,
+          "y": 512,
+          "width": 320,
+          "height": 1024,
+          "rotation": 0,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PlanBlockers",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 3,
+      "name": "Anchors",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 5,
+          "name": "ceremonial_gate",
+          "x": 1248.0,
+          "y": 2016.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 6,
+          "name": "inner_gate",
+          "x": 1248.0,
+          "y": 1696.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 7,
+          "name": "rongxi_steps",
+          "x": 1248.0,
+          "y": 1504.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 8,
+          "name": "rongxi_door",
+          "x": 1248.0,
+          "y": 1312.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 9,
+          "name": "rongxi_center",
+          "x": 1312.0,
+          "y": 1056.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 10,
+          "name": "west_room",
+          "x": 928.0,
+          "y": 928.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 11,
+          "name": "east_door",
+          "x": 1760.0,
+          "y": 1120.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 12,
+          "name": "east_court",
+          "x": 2016.0,
+          "y": 1248.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Routes",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 13,
+          "name": "场景动线",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "main",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "ceremonial_gate,inner_gate,rongxi_steps,rongxi_door,rongxi_center,west_room,east_door,east_court",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Art",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 14,
+          "name": "rongxi-hall",
+          "x": 1464.2462,
+          "y": 1402.3463000000002,
+          "width": 1265.0,
+          "height": 1070.6499999999999,
+          "rotation": 0,
+          "visible": true,
+          "gid": 37,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "rongxi-hall",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "exterior",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "main-hall",
+          "x": 792.5354,
+          "y": 1166.3186,
+          "width": 770.0,
+          "height": 621.5999999999999,
+          "rotation": 0,
+          "visible": true,
+          "gid": 4,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "main-hall",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "exterior",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "garden-tree",
+          "x": 743.13625,
+          "y": 1704.7653500000001,
+          "width": 319.0,
+          "height": 277.20000000000005,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "garden-tree",
+          "x": 1895.13625,
+          "y": 1704.7653500000001,
+          "width": 319.0,
+          "height": 277.20000000000005,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "garden-rock",
+          "x": 1766.9466499999999,
+          "y": 1449.52155,
+          "width": 171.0,
+          "height": 188.1,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ArtFootprints",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 19,
+          "name": "garden-rock",
+          "x": 1728,
+          "y": 1408,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Labels",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "objects": [
+        {
+          "id": 20,
+          "name": "荣禧堂",
+          "x": 1376.0,
+          "y": 864.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 21,
+          "name": "内仪门",
+          "x": 1248.0,
+          "y": 1760.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 22,
+          "name": "西耳房",
+          "x": 864.0,
+          "y": 992.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 23,
+          "name": "东角门",
+          "x": 1888.0,
+          "y": 1248.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "rongguo-art.tsj"
+    }
+  ],
+  "nextlayerid": 8,
+  "nextobjectid": 24,
+  "properties": [
+    {
+      "name": "sceneId",
+      "type": "string",
+      "value": "central"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "value": "荣府中轴 · 荣禧堂"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "value": "formal"
+    }
+  ]
+}

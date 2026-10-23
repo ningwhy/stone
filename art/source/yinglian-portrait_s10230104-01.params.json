@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "yinglian-portrait_s10230104-01",
+  "seed": 10230104,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n红楼梦原创人物设定。三岁江南小女孩甄英莲，圆润幼儿面容，眉心一粒小胭脂痣，两个小发髻，杏黄短袄和粉红小裙，天真乖巧，幼小儿童比例，绝不是成年女子。中国工笔淡彩水彩手绘，与古典游戏立绘统一。纯白背景，无建筑无文字无边框，单个人物。头顶至腰下完整的半身立绘，正面略侧，头肩完整清楚，四周留白。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "8721aee6-66c1-4296-a77b-09da0db035b8",
+  "generated_at": "2026-10-23 00:53:40",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x1024"
+}

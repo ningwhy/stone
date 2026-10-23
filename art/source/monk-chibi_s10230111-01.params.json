@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "monk-chibi_s10230111-01",
+  "seed": 10230111,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n红楼梦原创人物设定。红楼梦癞头和尚，五十岁清瘦僧人，头顶稀疏毛发与明显癞疮斑，灰褐破旧僧袍，赤足，笑容旷达，手持一枚小小碧绿玉石，神秘慈悲。中国工笔淡彩水彩手绘，与古典游戏立绘统一。纯白背景，无建筑无文字无边框，单个人物。三头身Q版全身游戏角色，大头小身体，完整脚底，轻微俯视等距，朝右下站立，无地面无投影，四周留白。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "8a5c1e5e-c322-4ee6-949e-5048b8c45508",
+  "generated_at": "2026-10-23 00:54:31",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x1024"
+}

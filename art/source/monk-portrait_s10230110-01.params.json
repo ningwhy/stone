@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "monk-portrait_s10230110-01",
+  "seed": 10230110,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n红楼梦原创人物设定。红楼梦癞头和尚，五十岁清瘦僧人，头顶稀疏毛发与明显癞疮斑，灰褐破旧僧袍，赤足，笑容旷达，手持一枚小小碧绿玉石，神秘慈悲。中国工笔淡彩水彩手绘，与古典游戏立绘统一。纯白背景，无建筑无文字无边框，单个人物。头顶至腰下完整的半身立绘，正面略侧，头肩完整清楚，四周留白。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "b517573f-ac7d-42c3-aa22-0fe696dccfa3",
+  "generated_at": "2026-10-23 00:54:24",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x1024"
+}

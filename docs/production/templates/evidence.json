@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "template": true,
+  "chapter": 4,
+  "source": {
+    "edition": "填写实际底本版本",
+    "url": "填写核验过的来源",
+    "retrievedAt": "YYYY-MM-DD",
+    "localText": "docs/chapter04-source.txt",
+    "processing": "正文抽取方法及删去的导航/页脚"
+  },
+  "evidence": [
+    {
+      "id": "C04-E001",
+      "classification": "explicit",
+      "paragraphLead": "填写准确起句，不是模型生成的近义句",
+      "excerpt": "填写必要的原文短引",
+      "claim": "本条能支持的身份、事件或空间关系",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": ["C04-001"],
+      "designDecision": null,
+      "uncertainty": "没有证据的部分如实写明"
+    },
+    {
+      "id": "C04-D001",
+      "classification": "design",
+      "paragraphLead": "关联的原文起句",
+      "excerpt": null,
+      "claim": "游戏中需要决定、原文未明示的部分",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": ["c4_stage"],
+      "designDecision": "明确写设计取舍和依据",
+      "uncertainty": "列出可行的其他解释"
+    }
+  ]
+}

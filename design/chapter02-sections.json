@@ -1,0 +1,58 @@
+[
+  {
+    "id": "c2-fortune",
+    "title": "旧缘重逢 · 娇杏命转",
+    "scene": "farm",
+    "start": "C2-001",
+    "book": 2
+  },
+  {
+    "id": "c2-dismissal",
+    "title": "雨村得官 · 恃才革职",
+    "scene": "yamen",
+    "start": "C2-006",
+    "book": 2
+  },
+  {
+    "id": "c2-lin",
+    "title": "林家设馆 · 贾敏仙逝",
+    "scene": "lin",
+    "start": "C2-009",
+    "book": 2
+  },
+  {
+    "id": "c2-temple",
+    "title": "郭外闲步 · 智通寺联",
+    "scene": "zhitong",
+    "start": "C2-014",
+    "book": 2
+  },
+  {
+    "id": "c2-ningrong",
+    "title": "村肆遇故 · 宁荣兴衰",
+    "scene": "tavern",
+    "start": "C2-017",
+    "book": 2
+  },
+  {
+    "id": "c2-jade",
+    "title": "衔玉异事 · 正邪两赋",
+    "scene": "tavern",
+    "start": "C2-027",
+    "book": 2
+  },
+  {
+    "id": "c2-family",
+    "title": "三春名姓 · 黛玉家世",
+    "scene": "tavern",
+    "start": "C2-039",
+    "book": 2
+  },
+  {
+    "id": "c2-bridge",
+    "title": "日暮进城 · 喜信将至",
+    "scene": "tavern",
+    "start": "C2-049",
+    "book": 2
+  }
+]

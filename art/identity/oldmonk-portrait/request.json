@@ -1,0 +1,8 @@
+{
+  "id": "oldmonk-portrait",
+  "seed": 10232064,
+  "features": "骨瘦凹陷老脸；垂白眉；深陷半闭眼；长弯鼻；瘪嘴，迟钝衰老",
+  "prompt": "Redesign ONLY the facial features of the person in <image1>. The new distinctive identity is: an extremely gaunt eighty-year-old face, sharply hollow cheeks, drooping long white eyebrows, deeply recessed half-closed eyes, a long curved drooping nose, a sunken toothless mouth and protruding bony chin; asymmetrical deep wrinkles and frail distracted expression. Keep the head center and angle, hairline, hairstyle, ornaments, clothing and white background. You MUST change the original facial outline and facial proportions to match the specified new identity; do not retain the original pointed doll face when a broad or square face is requested. Paint the new facial geometry and expression in the SAME delicate Chinese ink and watercolor hand-painted illustration style as image1, with subtle natural skin tones and fine brush lines. Make the specified face shape, eye shape and spacing, eyebrows, nose and lips clearly visible and character-specific. Emphasize the characteristic facial proportions enough to read in a small game portrait. Use natural eyes and lips, not glamorous makeup, dark eyeliner or a generic beauty filter. Avoid generic identical doll faces. This is a single head detail crop, not a character sheet. No text.",
+  "model": "qwen_image_2.1_int8_convrot",
+  "steps": 30
+}

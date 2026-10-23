@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "courtyard-wall_s10216612-01",
+  "seed": 10216612,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏建筑构件：一段清代内宅粉白院墙，青灰色层叠瓦片墙帽，有精致木色小漏窗和墙脚灰色砖基，米白墙面轻微岁月纹理，墙身单段笔直，两端平齐方便重复拼接。正交等距俯视，墙顶的长边从画面左上斜向右下，水平距离与垂直距离之比二比一，垂直边保持垂直，能看见墙帽瓦片和主要墙面。仅一段墙，无门无拐角，没有地板、草地、平台、人物、树木或投影。整个物体完整居中，四周保留空白，纯净均匀纯白色背景，游戏可抠图素材，轮廓清晰。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "78f07097-5c9b-4aee-8ea7-a308382de8f8",
+  "generated_at": "2026-10-22 12:08:53",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1024x768"
+}

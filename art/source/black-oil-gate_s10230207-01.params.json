@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "black-oil-gate_s10230207-01",
+  "seed": 10230207,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n古代府邸南墙上的黑油大门，黑色双扇木门，黄铜门环，青灰瓦小门楼，两侧连接米白院墙，门洞敞开可穿行，从南向北进入，绝不要红门。严格2比1菱形等距正交俯视，见南面与东面，水墨淡彩手绘灰青米白藕红配色，单个紧凑完整建筑素材，纯白背景，不要大地板不要漂浮岛，无人物无文字无标注，四周留白。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "db67ad95-6246-4bb1-bd05-d33214c42937",
+  "generated_at": "2026-10-23 00:56:46",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1024x1024"
+}

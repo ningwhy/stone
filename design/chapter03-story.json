@@ -1,0 +1,2960 @@
+[
+  {
+    "chapter": "prologue",
+    "scene": "lin",
+    "place": "扬州 · 雨村客寓",
+    "focus": "study_guest",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "卻說雨村忙回頭看時",
+      "textKind": "adaptation"
+    },
+    "id": "P001",
+    "speaker": "narrator",
+    "text": "贾雨村遇见旧日同僚张如圭，得知朝廷准许起复旧员的消息。失意已久的他，又看见了重入仕途的希望。",
+    "title": "旧员起复",
+    "actions": [
+      {
+        "type": "roof",
+        "visible": false
+      },
+      {
+        "type": "show",
+        "actor": "yucun",
+        "at": "study_guest"
+      },
+      {
+        "type": "show",
+        "actor": "zhang",
+        "at": "study_host"
+      }
+    ]
+  },
+  {
+    "chapter": "prologue",
+    "scene": "lin",
+    "place": "扬州 · 雨村客寓",
+    "focus": "study_guest",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "卻說雨村忙回頭看時",
+      "textKind": "adaptation"
+    },
+    "id": "P002",
+    "speaker": "zhang",
+    "text": "都中已有准许旧员起复的消息。我正在四下寻访门路，遇见兄台，便来道喜。",
+    "title": "故人报信",
+    "actions": []
+  },
+  {
+    "chapter": "prologue",
+    "scene": "lin",
+    "place": "扬州 · 雨村客寓",
+    "focus": "study_guest",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "卻說雨村忙回頭看時",
+      "textKind": "adaptation"
+    },
+    "id": "P003",
+    "speaker": "narrator",
+    "text": "张如圭告辞后，冷子兴劝雨村托林如海转荐贾政。雨村领会，回馆查过邸报，次日便向如海商议。",
+    "title": "子兴献计",
+    "actions": [
+      {
+        "type": "hide",
+        "actor": "zhang"
+      },
+      {
+        "type": "show",
+        "actor": "leng",
+        "at": "study_host"
+      }
+    ]
+  },
+  {
+    "chapter": "prologue",
+    "scene": "lin",
+    "place": "扬州 · 雨村客寓",
+    "focus": "study_guest",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "卻說雨村忙回頭看時",
+      "textKind": "adaptation"
+    },
+    "id": "P004",
+    "speaker": "leng",
+    "text": "何不请林如海写信，向京中的贾政求助？有这一层关系，或可周全。",
+    "title": "另寻门路",
+    "actions": []
+  },
+  {
+    "chapter": "prologue",
+    "scene": "lin",
+    "place": "林府 · 书斋",
+    "focus": "study_host",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "次日，面謀之如海",
+      "textKind": "adaptation"
+    },
+    "id": "P005",
+    "speaker": "ruhai",
+    "text": "小女的外祖母已遣船来接，因她病后未愈，才耽搁至今。我已写好荐书，托内兄协助，正可酬答先生教女之恩。",
+    "title": "林府荐书",
+    "actions": [
+      {
+        "type": "hide",
+        "actor": "leng"
+      },
+      {
+        "type": "show",
+        "actor": "ruhai",
+        "at": "study_host"
+      },
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "study_guest"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "prologue",
+    "scene": "lin",
+    "place": "林府 · 书斋",
+    "focus": "study_host",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "次日，面謀之如海",
+      "textKind": "adaptation"
+    },
+    "id": "P006",
+    "speaker": "yucun",
+    "text": "承蒙厚意。只是令亲现居何职？晚生不敢草率进京干渎。",
+    "title": "雨村复职",
+    "actions": []
+  },
+  {
+    "chapter": "prologue",
+    "scene": "lin",
+    "place": "林府 · 书斋",
+    "focus": "study_host",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "次日，面謀之如海",
+      "textKind": "adaptation"
+    },
+    "id": "P007",
+    "speaker": "ruhai",
+    "text": "大内兄贾赦袭一等将军，二内兄贾政任工部员外郎，为人谦恭厚道。小女定在下月初二进京，先生同路，正好两便。",
+    "title": "雨村复职",
+    "actions": []
+  },
+  {
+    "chapter": "prologue",
+    "scene": "lin",
+    "place": "林府 · 辞父",
+    "focus": "daiyu_wait",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "那女學生黛玉，身体方愈",
+      "textKind": "adaptation"
+    },
+    "id": "P008",
+    "speaker": "narrator",
+    "text": "黛玉身体才好，不忍弃父远行。林如海想到女儿年小多病，又无母亲与兄弟姊妹扶持，只得劝她依傍外祖母。",
+    "title": "父女话别",
+    "actions": [
+      {
+        "type": "hide",
+        "actor": "yucun"
+      },
+      {
+        "type": "show",
+        "actor": "daiyu",
+        "at": "daiyu_wait"
+      }
+    ]
+  },
+  {
+    "chapter": "prologue",
+    "scene": "lin",
+    "place": "林府 · 辞父",
+    "focus": "daiyu_wait",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "那女學生黛玉，身体方愈",
+      "textKind": "adaptation"
+    },
+    "id": "P009",
+    "speaker": "ruhai",
+    "text": "你去外祖母与舅氏姊妹身边，也能减轻我的牵挂。莫再说不去了。",
+    "title": "辞父",
+    "actions": [],
+    "mood": "sad"
+  },
+  {
+    "chapter": "prologue",
+    "scene": "lin",
+    "place": "扬州 · 江岸",
+    "focus": "quay",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "那女學生黛玉，身体方愈",
+      "textKind": "adaptation"
+    },
+    "id": "P010",
+    "speaker": "narrator",
+    "text": "黛玉洒泪拜别，随奶娘王嬷嬷和荣府老妪来到江岸。雨村另有一船，带着两个小童随行。",
+    "title": "登舟北上",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "nurse_wang",
+        "at": "door"
+      },
+      {
+        "type": "show",
+        "actor": "xueyan",
+        "at": "garden"
+      },
+      {
+        "type": "parallel",
+        "moves": [
+          {
+            "type": "move",
+            "actor": "daiyu",
+            "via": [
+              "door",
+              "garden",
+              "quay"
+            ]
+          },
+          {
+            "type": "move",
+            "actor": "ruhai",
+            "via": [
+              "door",
+              "garden"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "show",
+        "actor": "yucun",
+        "at": "boat"
+      }
+    ]
+  },
+  {
+    "chapter": "prologue",
+    "scene": "lin",
+    "place": "林府 · 辞父",
+    "focus": "departure",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "那女學生黛玉，身体方愈",
+      "textKind": "adaptation"
+    },
+    "id": "P011",
+    "speaker": "narrator",
+    "text": "船离江岸，父亲的身影渐远。此去京城，黛玉将走进母亲口中那个与别家不同的外祖家。",
+    "title": "离岸",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "boat",
+          "departure"
+        ]
+      }
+    ],
+    "mood": "sad"
+  },
+  {
+    "chapter": "prologue",
+    "scene": "yucun",
+    "place": "京城 · 贾政书房",
+    "focus": "guest",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "有日到了都中，進入神京",
+      "textKind": "adaptation"
+    },
+    "id": "P012",
+    "speaker": "narrator",
+    "text": "叙事先交代雨村的仕途：到京后，他持名帖求见贾政。如海的书信先已送到，贾政见他言谈不俗，便优礼相待。",
+    "title": "荐书入京",
+    "actions": [
+      {
+        "type": "roof",
+        "visible": false
+      },
+      {
+        "type": "show",
+        "actor": "yucun",
+        "at": "visitor"
+      },
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "host"
+      },
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "guest"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "prologue",
+    "scene": "yucun",
+    "place": "京城 · 贾政书房",
+    "focus": "guest",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "有日到了都中，進入神京",
+      "textKind": "adaptation"
+    },
+    "id": "P013",
+    "speaker": "narrator",
+    "text": "贾政竭力相助，雨村获准复职候缺。不到两个月，便补授金陵应天府，择日赴任。这里暂按下仕途，回看黛玉进京当日。",
+    "title": "复职候缺",
+    "actions": []
+  },
+  {
+    "chapter": "arrival",
+    "scene": "capital",
+    "place": "京城 · 宁荣街",
+    "focus": "street_west",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "且說黛玉自那日棄舟登岸時",
+      "textKind": "adaptation"
+    },
+    "id": "A001",
+    "speaker": "narrator",
+    "text": "黛玉弃舟登岸，荣府的轿子和行李车已等候多时。上轿后，她隔着纱窗望见京城街市繁华、人烟阜盛。",
+    "title": "京城入街",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "sedan",
+        "at": "street_west"
+      },
+      {
+        "type": "show",
+        "actor": "guide",
+        "at": "outside"
+      }
+    ]
+  },
+  {
+    "chapter": "arrival",
+    "scene": "capital",
+    "place": "京城 · 宁荣街",
+    "focus": "ning_gate",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "且說黛玉自那日棄舟登岸時",
+      "textKind": "adaptation"
+    },
+    "id": "A002",
+    "speaker": "narrator",
+    "text": "街北两座大石狮守着三间兽头大门，正门不开，只有东西角门出入。匾额写着“敕造宁国府”。她想，这便是外祖家的长房。",
+    "title": "经过宁府",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "sedan",
+        "via": [
+          "ning_gate"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "arrival",
+    "scene": "capital",
+    "place": "京城 · 宁荣街",
+    "focus": "west_corner",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "且說黛玉自那日棄舟登岸時",
+      "textKind": "adaptation"
+    },
+    "id": "A003",
+    "speaker": "narrator",
+    "text": "轿子继续往西，不多远又是一座三间大门，这才是荣国府。轿子不走正门，转入西角门。",
+    "title": "转入西角门",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "sedan",
+        "via": [
+          "rong_gate",
+          "west_corner"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "arrival",
+    "scene": "entry",
+    "place": "荣国府 · 入府通道",
+    "focus": "west_gate",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "那轎夫抬進去，走了一射之地",
+      "textKind": "adaptation"
+    },
+    "id": "A004",
+    "speaker": "narrator",
+    "text": "轿子进府，走到转弯处停下。外面的轿夫退去，婆子赶上，换了府中衣帽齐整的小厮来抬。",
+    "title": "换轿夫",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "sedan",
+        "at": "west_gate"
+      },
+      {
+        "type": "show",
+        "actor": "guide",
+        "at": "handoff"
+      },
+      {
+        "type": "move",
+        "actor": "sedan",
+        "via": [
+          "handoff"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "arrival",
+    "scene": "entry",
+    "place": "垂花门",
+    "focus": "flower_gate_stop",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "那轎夫抬進去，走了一射之地",
+      "textKind": "adaptation"
+    },
+    "id": "A005",
+    "speaker": "narrator",
+    "text": "众婆子步行围随，轿子转过通道，在垂花门前落下。小厮退出，婆子们打起轿帘。",
+    "title": "垂花门下轿",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "sedan",
+        "via": [
+          "outer_turn",
+          "flower_gate_stop"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "guide",
+        "via": [
+          "guide_stop"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "荣国府 · 贾母院",
+    "focus": "flower_gate_stop",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "林黛玉扶著婆子的手",
+      "textKind": "adaptation"
+    },
+    "id": "N005",
+    "speaker": "guide",
+    "text": "姑娘，请下轿，扶着我的手往里面来。",
+    "title": "垂花门前",
+    "actions": [
+      {
+        "type": "hide",
+        "actor": "sedan"
+      },
+      {
+        "type": "show",
+        "actor": "daiyu",
+        "at": "flower_gate_stop"
+      },
+      {
+        "type": "show",
+        "actor": "guide",
+        "at": "guide_stop"
+      }
+    ]
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "荣国府 · 贾母院",
+    "focus": "flower_gate",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "林黛玉扶著婆子的手",
+      "textKind": "adaptation"
+    },
+    "id": "N006",
+    "speaker": "narrator",
+    "text": "黛玉扶着婆子的手，进了垂花门。两边是抄手游廊，当中是穿堂。她步步留心，唯恐失了礼数。",
+    "title": "步入内宅",
+    "actions": [
+      {
+        "type": "parallel",
+        "moves": [
+          {
+            "type": "move",
+            "actor": "daiyu",
+            "via": [
+              "flower_gate",
+              "passage_entry"
+            ]
+          },
+          {
+            "type": "move",
+            "actor": "guide",
+            "via": [
+              "flower_gate",
+              "passage_entry",
+              "screen_detour_start"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "穿堂",
+    "focus": "screen_detour",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "林黛玉扶著婆子的手",
+      "textKind": "adaptation"
+    },
+    "id": "N007",
+    "speaker": "narrator",
+    "text": "穿堂中放着紫檀架子的大理石插屏。转过插屏，穿过小厅，后面便是正房大院。",
+    "title": "转过插屏",
+    "actions": [
+      {
+        "type": "parallel",
+        "moves": [
+          {
+            "type": "move",
+            "actor": "daiyu",
+            "via": [
+              "screen_detour_start",
+              "screen_detour",
+              "passage_exit"
+            ]
+          },
+          {
+            "type": "move",
+            "actor": "guide",
+            "via": [
+              "screen_detour",
+              "passage_exit",
+              "courtyard_west"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "荣国府 · 贾母院",
+    "focus": "courtyard_center",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "林黛玉扶著婆子的手",
+      "textKind": "adaptation"
+    },
+    "id": "N008",
+    "speaker": "narrator",
+    "text": "正面五间上房，雕梁画栋；两边廊庑挂着鹦鹉、画眉。台阶上的丫鬟见来人，忙笑着迎下。",
+    "title": "庭院深处",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "maid",
+        "at": "maid_wait"
+      },
+      {
+        "type": "parallel",
+        "moves": [
+          {
+            "type": "move",
+            "actor": "daiyu",
+            "via": [
+              "courtyard_west",
+              "courtyard_center"
+            ]
+          },
+          {
+            "type": "move",
+            "actor": "guide",
+            "via": [
+              "courtyard_center",
+              "hall_steps"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "荣国府 · 贾母院",
+    "focus": "flower_gate_stop",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "林黛玉扶著婆子的手",
+      "textKind": "adaptation"
+    },
+    "id": "N009",
+    "speaker": "maid",
+    "text": "刚才老太太还念呢，可巧就来了。林姑娘到了！",
+    "title": "林姑娘到了",
+    "actions": []
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "荣国府 · 贾母院",
+    "focus": "hall_door",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "林黛玉扶著婆子的手",
+      "textKind": "adaptation"
+    },
+    "id": "N010",
+    "speaker": "narrator",
+    "text": "丫鬟争着打起帘笼，黛玉进入房中。一位鬓发如银的老母，由两人搀着迎上来，她便知道是外祖母。",
+    "title": "帘内相迎",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "hall_steps",
+          "hall_door"
+        ]
+      },
+      {
+        "type": "roof",
+        "visible": false
+      },
+      {
+        "type": "hide",
+        "actor": "guide"
+      },
+      {
+        "type": "show",
+        "actor": "grandmother",
+        "at": "grandmother_seat"
+      },
+      {
+        "type": "show",
+        "actor": "wang",
+        "at": "wang_seat"
+      },
+      {
+        "type": "show",
+        "actor": "xing",
+        "at": "xing_seat"
+      },
+      {
+        "type": "show",
+        "actor": "liwan",
+        "at": "liwan_seat"
+      }
+    ]
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "荣国府 · 贾母院",
+    "focus": "daiyu_greet",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "林黛玉扶著婆子的手",
+      "textKind": "adaptation"
+    },
+    "id": "N011",
+    "speaker": "narrator",
+    "text": "黛玉还未来得及拜见，已被外祖母一把搂进怀中。祖孙大哭，周围侍立的人也掩面落泪。",
+    "title": "祖孙相见",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "daiyu_greet"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "grandmother",
+        "via": [
+          "grandmother_greet"
+        ]
+      },
+      {
+        "type": "effect",
+        "actor": "daiyu",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ],
+    "mood": "sad"
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "荣国府 · 贾母院",
+    "focus": "flower_gate_stop",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "林黛玉扶著婆子的手",
+      "textKind": "adaptation"
+    },
+    "id": "N012",
+    "speaker": "grandmother",
+    "text": "我的心肝儿！如今你来了……",
+    "title": "悲喜交集",
+    "actions": [],
+    "mood": "sad"
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "荣国府 · 贾母院",
+    "focus": "flower_gate_stop",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "林黛玉扶著婆子的手",
+      "textKind": "adaptation"
+    },
+    "id": "N013",
+    "speaker": "narrator",
+    "text": "众人慢慢劝住，黛玉才向外祖母行礼。贾母又指着身边亲眷，逐一介绍。",
+    "title": "亲眷相劝",
+    "actions": []
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "荣国府 · 贾母院",
+    "focus": "flower_gate_stop",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "林黛玉扶著婆子的手",
+      "textKind": "adaptation"
+    },
+    "id": "N014",
+    "speaker": "grandmother",
+    "text": "这是你大舅母，这是你二舅母，这是你珠大嫂子。",
+    "title": "认亲",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "grandmother",
+        "via": [
+          "grandmother_seat"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "daiyu_seat"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "荣国府 · 贾母院",
+    "focus": "flower_gate_stop",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "林黛玉扶著婆子的手",
+      "textKind": "adaptation"
+    },
+    "id": "N015",
+    "speaker": "narrator",
+    "text": "黛玉一一拜见邢夫人、王夫人与李纨。贾母吩咐请姑娘们来，说今日远客才到，可以不必上学。",
+    "title": "拜见亲眷",
+    "actions": []
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "贾母正房 · 姊妹相认",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "不一時，只見三個奶嬤嬤",
+      "textKind": "adaptation"
+    },
+    "id": "N016",
+    "speaker": "narrator",
+    "text": "奶嬷嬷与丫鬟簇拥着三位姊妹进来。迎春温柔沉默，探春顾盼神飞，惜春身量尚小。三人的钗环裙袄皆是一样的妆饰。",
+    "title": "三春入场",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "yingchun",
+        "at": "hall_door"
+      },
+      {
+        "type": "move",
+        "actor": "yingchun",
+        "via": [
+          "yingchun_seat"
+        ]
+      },
+      {
+        "type": "show",
+        "actor": "tanchun",
+        "at": "hall_door"
+      },
+      {
+        "type": "move",
+        "actor": "tanchun",
+        "via": [
+          "tanchun_seat"
+        ]
+      },
+      {
+        "type": "show",
+        "actor": "xichun",
+        "at": "hall_door"
+      },
+      {
+        "type": "move",
+        "actor": "xichun",
+        "via": [
+          "xichun_seat"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "贾母正房 · 姊妹相认",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "不一時，只見三個奶嬤嬤",
+      "textKind": "adaptation"
+    },
+    "id": "N017",
+    "speaker": "narrator",
+    "text": "黛玉忙起身迎见，互相认过，大家归坐。茶端上来，话头转到母亲的病与丧事，贾母又悲从中来。",
+    "title": "姊妹见礼",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "daiyu",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ],
+    "mood": "sad"
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "贾母正房 · 姊妹相认",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "不一時，只見三個奶嬤嬤",
+      "textKind": "adaptation"
+    },
+    "id": "N018",
+    "speaker": "grandmother",
+    "text": "我这些儿女，最疼的便是你母亲。她先我而去，竟连最后一面也未见，如今见了你，我怎能不伤心？",
+    "title": "忆及贾敏",
+    "actions": [],
+    "mood": "sad"
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "贾母正房 · 问疾",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "眾人見黛玉年貌雖小",
+      "textKind": "adaptation"
+    },
+    "id": "N019",
+    "speaker": "narrator",
+    "text": "众人见黛玉年纪虽小、言谈不俗，只是身体怯弱，便问她平日服何药，如何调治。",
+    "title": "问疾",
+    "actions": []
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "贾母正房 · 问疾",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "眾人見黛玉年貌雖小",
+      "textKind": "adaptation"
+    },
+    "id": "N020",
+    "speaker": "daiyu",
+    "text": "我从会吃饮食时便吃药，到如今未断，求过许多名医，也不见效。三岁时有个癞头和尚要化我出家，父母不从，他又说些不许见哭声、不许见外姓亲友的话。",
+    "title": "黛玉说病",
+    "actions": []
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "贾母正房 · 问疾",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "眾人見黛玉年貌雖小",
+      "textKind": "adaptation"
+    },
+    "id": "N021",
+    "speaker": "daiyu",
+    "text": "那些疯癫的话，也无人理会。如今还是吃人参养荣丸。",
+    "title": "祖孙相见",
+    "actions": []
+  },
+  {
+    "chapter": "reunion",
+    "scene": "entry",
+    "place": "贾母正房 · 问疾",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "眾人見黛玉年貌雖小",
+      "textKind": "adaptation"
+    },
+    "id": "N022",
+    "speaker": "grandmother",
+    "text": "正好，我这里正在配丸药，叫他们多配一料就是了。",
+    "title": "祖孙相见",
+    "actions": []
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 后房门",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽後院中有人笑聲",
+      "textKind": "adaptation"
+    },
+    "id": "F001",
+    "speaker": "feng",
+    "text": "我来迟了，不曾迎接远客！",
+    "title": "笑声先至",
+    "actions": [],
+    "offscreen": true
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 后房门",
+    "focus": "feng_meet",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽後院中有人笑聲",
+      "textKind": "adaptation"
+    },
+    "id": "F002",
+    "speaker": "narrator",
+    "text": "众人都敛声屏气，独这笑声来得爽利。黛玉正纳罕，一群媳妇丫鬟拥着一位彩绣辉煌的年轻妇人，从后房门进来。",
+    "title": "凤姐入场",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "feng",
+        "at": "feng_entry"
+      },
+      {
+        "type": "move",
+        "actor": "feng",
+        "via": [
+          "feng_courtyard",
+          "feng_door",
+          "feng_meet"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 后房门",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽後院中有人笑聲",
+      "textKind": "adaptation"
+    },
+    "id": "F003",
+    "speaker": "grandmother",
+    "text": "你不认得她，她是我们这里有名的“辣子”，只叫她凤辣子就是了。",
+    "title": "凤辣子",
+    "actions": []
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 后房门",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽後院中有人笑聲",
+      "textKind": "adaptation"
+    },
+    "id": "F004",
+    "speaker": "tanchun",
+    "text": "这是琏嫂子。",
+    "title": "认作嫂嫂",
+    "actions": []
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 后房门",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽後院中有人笑聲",
+      "textKind": "adaptation"
+    },
+    "id": "F005",
+    "speaker": "narrator",
+    "text": "黛玉记起母亲说过，贾琏娶的是王夫人的内侄女王熙凤，忙笑着以嫂称呼。",
+    "title": "称嫂见礼",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "daiyu",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 后房门",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽後院中有人笑聲",
+      "textKind": "adaptation"
+    },
+    "id": "F006",
+    "speaker": "feng",
+    "text": "天下竟有这样标致的人物，今儿才算见了！这通身气派，倒像老祖宗嫡亲的孙女，难怪天天惦记。",
+    "title": "携手端详",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "feng",
+        "via": [
+          "feng_meet"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 后房门",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽後院中有人笑聲",
+      "textKind": "adaptation"
+    },
+    "id": "F007",
+    "speaker": "feng",
+    "text": "只可怜妹妹命苦，姑妈怎么偏就去世了！",
+    "title": "拭泪",
+    "actions": [],
+    "mood": "sad"
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 后房门",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽後院中有人笑聲",
+      "textKind": "adaptation"
+    },
+    "id": "F008",
+    "speaker": "grandmother",
+    "text": "我才好了，你又来招我。妹妹远路才来，身子又弱，快休再提前话。",
+    "title": "贾母劝止",
+    "actions": []
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 后房门",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽後院中有人笑聲",
+      "textKind": "adaptation"
+    },
+    "id": "F009",
+    "speaker": "feng",
+    "text": "正是，一见妹妹，一心都在她身上，又喜又悲，竟忘了老祖宗。该打，该打！",
+    "title": "转悲为喜",
+    "actions": []
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 后房门",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽後院中有人笑聲",
+      "textKind": "adaptation"
+    },
+    "id": "F010",
+    "speaker": "feng",
+    "text": "妹妹几岁？可上过学？现吃什么药？在这里不要想家，要什么吃的玩的，只管告诉我，丫头婆子们不好，也告诉我。",
+    "title": "问学问药",
+    "actions": []
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 后房门",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽後院中有人笑聲",
+      "textKind": "adaptation"
+    },
+    "id": "F011",
+    "speaker": "feng",
+    "text": "林姑娘的行李可搬进来了？带了几个人？赶早打扫两间下房，让他们歇歇。",
+    "title": "照管行李",
+    "actions": []
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 茶果",
+    "focus": "feng_meet",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "說話時，已擺了茶果上來",
+      "textKind": "adaptation"
+    },
+    "id": "F012",
+    "speaker": "narrator",
+    "text": "茶果摆上，熙凤亲自捧茶捧果。王夫人又问月钱放过没有，熙凤回说已放完了。",
+    "title": "茶果与家务",
+    "actions": []
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 茶果",
+    "focus": "feng_meet",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "說話時，已擺了茶果上來",
+      "textKind": "adaptation"
+    },
+    "id": "F013",
+    "speaker": "wang",
+    "text": "有无那样的缎子，倒不要紧。该随手拿两匹给你妹妹裁衣裳，晚上再去找，别忘了。",
+    "title": "凤姐迎客",
+    "actions": []
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 茶果",
+    "focus": "feng_meet",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "說話時，已擺了茶果上來",
+      "textKind": "adaptation"
+    },
+    "id": "F014",
+    "speaker": "feng",
+    "text": "早料着妹妹这两日到，我已经备下了。等太太过目，好送来。",
+    "title": "凤姐迎客",
+    "actions": []
+  },
+  {
+    "chapter": "feng",
+    "scene": "entry",
+    "place": "贾母正房 · 茶果",
+    "focus": "feng_meet",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "說話時，已擺了茶果上來",
+      "textKind": "adaptation"
+    },
+    "id": "F015",
+    "speaker": "narrator",
+    "text": "王夫人含笑点头。茶果撤去，贾母让两个老嬷嬷带黛玉去拜见两位舅父，邢夫人起身，说由自己带去便宜。",
+    "title": "去见母舅",
+    "actions": []
+  },
+  {
+    "chapter": "uncles",
+    "scene": "east",
+    "place": "贾赦院 · 黑油大门",
+    "focus": "east_gate",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "當下茶果已撤，賈母命兩個老嬤嬤",
+      "textKind": "adaptation"
+    },
+    "id": "U001",
+    "speaker": "narrator",
+    "text": "黛玉随邢夫人出垂花门，乘翠幄青紬车出西角门，向东经过荣府正门，进一座黑油大门，在仪门前下车。",
+    "title": "车往东院",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "daiyu",
+        "at": "east_gate"
+      },
+      {
+        "type": "show",
+        "actor": "xing",
+        "at": "return_gate"
+      }
+    ]
+  },
+  {
+    "chapter": "uncles",
+    "scene": "east",
+    "place": "邢夫人正室",
+    "focus": "daiyu_guest",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "當下茶果已撤，賈母命兩個老嬤嬤",
+      "textKind": "adaptation"
+    },
+    "id": "U002",
+    "speaker": "narrator",
+    "text": "小院似从花园隔出。经过三层仪门，正房、厢庑、游廊都小巧别致，树木山石散布其间，与贾母院的轩峻大不相同。",
+    "title": "三层仪门",
+    "actions": [
+      {
+        "type": "parallel",
+        "moves": [
+          {
+            "type": "move",
+            "actor": "daiyu",
+            "via": [
+              "small_court",
+              "bamboo_door",
+              "daiyu_guest"
+            ]
+          },
+          {
+            "type": "move",
+            "actor": "xing",
+            "via": [
+              "small_court",
+              "bamboo_door",
+              "xing_host"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "roof",
+        "visible": false
+      }
+    ]
+  },
+  {
+    "chapter": "uncles",
+    "scene": "east",
+    "place": "贾赦院 · 黑油大门",
+    "focus": "east_gate",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "當下茶果已撤，賈母命兩個老嬤嬤",
+      "textKind": "adaptation"
+    },
+    "id": "U003",
+    "speaker": "narrator",
+    "text": "邢夫人让黛玉坐下，命人往外书房请贾赦。来人回话，贾赦因连日身子不好，怕相见更添伤心，暂且不见。",
+    "title": "大舅传话",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "messenger"
+      }
+    ]
+  },
+  {
+    "chapter": "uncles",
+    "scene": "east",
+    "place": "贾赦院 · 黑油大门",
+    "focus": "east_gate",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "當下茶果已撤，賈母命兩個老嬤嬤",
+      "textKind": "adaptation"
+    },
+    "id": "U004",
+    "speaker": "messenger",
+    "text": "老爷嘱姑娘莫伤心想家，在老太太和舅母这里，如在家一般。姊妹同处可解烦闷，有委屈只管说，别当外人。",
+    "title": "转述贾赦",
+    "actions": []
+  },
+  {
+    "chapter": "uncles",
+    "scene": "east",
+    "place": "贾赦院 · 黑油大门",
+    "focus": "east_gate",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "當下茶果已撤，賈母命兩個老嬤嬤",
+      "textKind": "adaptation"
+    },
+    "id": "U005",
+    "speaker": "narrator",
+    "text": "黛玉起身听完，再坐片刻便告辞。邢夫人苦留晚饭，她惦记还未拜见二舅父，便婉言谢辞。",
+    "title": "辞饭",
+    "actions": []
+  },
+  {
+    "chapter": "uncles",
+    "scene": "east",
+    "place": "贾赦院 · 黑油大门",
+    "focus": "east_gate",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "當下茶果已撤，賈母命兩個老嬤嬤",
+      "textKind": "adaptation"
+    },
+    "id": "U006",
+    "speaker": "daiyu",
+    "text": "舅母赐饭，本不应辞。只是还要拜见二舅舅，今日若先领饭，恐失礼数，改日再领，还望见谅。",
+    "title": "拜访母舅",
+    "actions": []
+  },
+  {
+    "chapter": "uncles",
+    "scene": "east",
+    "place": "贾赦院 · 黑油大门",
+    "focus": "return_gate",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "當下茶果已撤，賈母命兩個老嬤嬤",
+      "textKind": "adaptation"
+    },
+    "id": "U007",
+    "speaker": "narrator",
+    "text": "邢夫人送到仪门，再嘱嬷嬷好生照料。黛玉乘原车回荣府。",
+    "title": "回荣府",
+    "actions": [
+      {
+        "type": "parallel",
+        "moves": [
+          {
+            "type": "move",
+            "actor": "daiyu",
+            "via": [
+              "bamboo_door",
+              "small_court",
+              "return_gate"
+            ]
+          },
+          {
+            "type": "move",
+            "actor": "xing",
+            "via": [
+              "bamboo_door",
+              "east_gate"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "uncles",
+    "scene": "central",
+    "place": "荣府正院 · 内仪门",
+    "focus": "ceremonial_gate",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一時黛玉進了榮府，下了車",
+      "textKind": "adaptation"
+    },
+    "id": "U008",
+    "speaker": "narrator",
+    "text": "回到荣府，下车后向东转，穿东西穿堂，来到南大厅后的仪门内大院。五间大正房与两边厢房耳房四通八达，轩昂壮丽。",
+    "title": "荣府中轴",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "daiyu",
+        "at": "ceremonial_gate"
+      },
+      {
+        "type": "show",
+        "actor": "guide",
+        "at": "inner_gate"
+      },
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "inner_gate",
+          "rongxi_steps"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "uncles",
+    "scene": "central",
+    "place": "荣禧堂",
+    "focus": "rongxi_center",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一時黛玉進了榮府，下了車",
+      "textKind": "adaptation"
+    },
+    "id": "U009",
+    "speaker": "narrator",
+    "text": "黛玉进入堂屋，迎面是赤金九龙青地大匾：“荣禧堂”。御赐款识、大紫檀雕螭案、青绿古铜鼎与两溜楠木交椅，显出这家的勋贵根基。",
+    "title": "荣禧堂",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "rongxi_door",
+          "rongxi_center"
+        ]
+      },
+      {
+        "type": "roof",
+        "visible": false
+      }
+    ]
+  },
+  {
+    "chapter": "uncles",
+    "scene": "central",
+    "place": "荣府正院 · 内仪门",
+    "focus": "east_door",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一時黛玉進了榮府，下了車",
+      "textKind": "adaptation"
+    },
+    "id": "U010",
+    "speaker": "narrator",
+    "text": "乌木联牌镶着银字：“座上珠玑昭日月，堂前黼黻焕烟霞。”题款署东安郡王穆莳。黛玉默默看过，随嬷嬷转入正室东边三间耳房。",
+    "title": "堂上陈设",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "east_door"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "uncles",
+    "scene": "wang",
+    "place": "正室东耳房 · 候茶",
+    "focus": "guest_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "原來王夫人時常居坐宴息",
+      "textKind": "adaptation"
+    },
+    "id": "U011",
+    "speaker": "narrator",
+    "text": "临窗大炕铺猩红洋毯，陈着靠背、引枕和条褥。嬷嬷让黛玉上炕，她看炕沿两张锦褥相对，揣度尊卑，便只坐东边椅子。",
+    "title": "候茶辨座",
+    "actions": [
+      {
+        "type": "roof",
+        "visible": false
+      },
+      {
+        "type": "show",
+        "actor": "daiyu",
+        "at": "hall_entry"
+      },
+      {
+        "type": "show",
+        "actor": "guide",
+        "at": "court_entry"
+      },
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "guest_seat"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "uncles",
+    "scene": "wang",
+    "place": "正室东耳房 · 候茶",
+    "focus": "guest_seat",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "原來王夫人時常居坐宴息",
+      "textKind": "adaptation"
+    },
+    "id": "U012",
+    "speaker": "narrator",
+    "text": "丫鬟奉茶，黛玉留心她们的衣饰和举止。茶还未尽，另一丫鬟来请，说太太在东廊三间小正房等她。",
+    "title": "转往东廊",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "maid",
+        "at": "east_corridor"
+      }
+    ]
+  },
+  {
+    "chapter": "uncles",
+    "scene": "wang",
+    "place": "东廊三间 · 王夫人起居处",
+    "focus": "kang_edge",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "茶未吃了，只見一個穿紅綾襖",
+      "textKind": "adaptation"
+    },
+    "id": "U013",
+    "speaker": "narrator",
+    "text": "东廊炕桌上堆着书与茶具。王夫人坐在西边下首，却向东让座。黛玉料定东边是贾政的位置，仍向椅上坐，几番相携，才挨王夫人坐下。",
+    "title": "二舅母相见",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "wang",
+        "at": "wang_host"
+      },
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "east_corridor",
+          "hall_entry",
+          "kang_edge"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "uncles",
+    "scene": "wang",
+    "place": "东廊三间 · 王夫人起居处",
+    "focus": "kang_edge",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "茶未吃了，只見一個穿紅綾襖",
+      "textKind": "adaptation"
+    },
+    "id": "U014",
+    "speaker": "wang",
+    "text": "你舅舅今日斋戒去了，改日再见。三个姊妹都极好，同处念书认字、学针线，偶尔玩笑，都肯相让。",
+    "title": "贾政未归",
+    "actions": []
+  },
+  {
+    "chapter": "uncles",
+    "scene": "wang",
+    "place": "东廊三间 · 王夫人起居处",
+    "focus": "kang_edge",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "茶未吃了，只見一個穿紅綾襖",
+      "textKind": "adaptation"
+    },
+    "id": "U015",
+    "speaker": "wang",
+    "text": "只我有个“混世魔王”，今日去庙里还愿，尚未回来。你晚间见了便知，以后只别理睬他。",
+    "title": "先说宝玉",
+    "actions": []
+  },
+  {
+    "chapter": "uncles",
+    "scene": "wang",
+    "place": "东廊三间 · 王夫人起居处",
+    "focus": "kang_edge",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "茶未吃了，只見一個穿紅綾襖",
+      "textKind": "adaptation"
+    },
+    "id": "U016",
+    "speaker": "daiyu",
+    "text": "可是那位衔玉而生、比我大一岁的宝玉哥哥？母亲曾说，虽顽皮，在姊妹情中倒极好。我自然同姊妹们一处，不会轻易沾惹。",
+    "title": "拜访母舅",
+    "actions": []
+  },
+  {
+    "chapter": "uncles",
+    "scene": "wang",
+    "place": "东廊三间 · 王夫人起居处",
+    "focus": "kang_edge",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "茶未吃了，只見一個穿紅綾襖",
+      "textKind": "adaptation"
+    },
+    "id": "U017",
+    "speaker": "wang",
+    "text": "他自幼跟姊妹们娇养惯了。没人理他倒安静些，一高兴就生出许多事。嘴里一时甜言，一时疯傻，都休信他。",
+    "title": "拜访母舅",
+    "actions": []
+  },
+  {
+    "chapter": "uncles",
+    "scene": "wang",
+    "place": "东廊三间 · 王夫人起居处",
+    "focus": "south_passage",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "茶未吃了，只見一個穿紅綾襖",
+      "textKind": "adaptation"
+    },
+    "id": "U018",
+    "speaker": "narrator",
+    "text": "黛玉一一答应。丫鬟来报，老太太那里传晚饭了。王夫人携她出后房门，经后廊向西，进入南北夹道。",
+    "title": "传晚饭",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "south_passage"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "wang",
+        "via": [
+          "south_passage",
+          "back_lane"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "uncles",
+    "scene": "wang",
+    "place": "南北夹道 · 凤姐院门",
+    "focus": "feng_room",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "茶未吃了，只見一個穿紅綾襖",
+      "textKind": "adaptation"
+    },
+    "id": "U019",
+    "speaker": "wang",
+    "text": "那粉油大影壁后的小院，是你凤姐姐的屋子。以后少什么，便到这里找她。",
+    "title": "指认凤姐住处",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "feng_room"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "uncles",
+    "scene": "wang",
+    "place": "东廊三间 · 王夫人起居处",
+    "focus": "back_lane",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "茶未吃了，只見一個穿紅綾襖",
+      "textKind": "adaptation"
+    },
+    "id": "U020",
+    "speaker": "narrator",
+    "text": "王夫人带黛玉穿过东西穿堂，进入贾母后院，从后房门进去，众人已在等着摆饭。",
+    "title": "回贾母后院",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "back_lane"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "dinner",
+    "scene": "dinner",
+    "place": "贾母后房 · 晚膳",
+    "focus": "daiyu_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "王夫人遂攜黛玉穿過一個東西穿堂",
+      "textKind": "adaptation"
+    },
+    "id": "D001",
+    "speaker": "narrator",
+    "text": "李纨捧饭，熙凤安箸，王夫人进羹。贾母正面独坐，凤姐拉黛玉到左边第一张椅上，她十分推让。",
+    "title": "晚膳入席",
+    "actions": [
+      {
+        "type": "roof",
+        "visible": false
+      },
+      {
+        "type": "show",
+        "actor": "grandmother",
+        "at": "grandmother_place"
+      },
+      {
+        "type": "show",
+        "actor": "daiyu",
+        "at": "back_door"
+      },
+      {
+        "type": "show",
+        "actor": "wang",
+        "at": "wang_place"
+      },
+      {
+        "type": "show",
+        "actor": "feng",
+        "at": "feng_place"
+      },
+      {
+        "type": "show",
+        "actor": "liwan",
+        "at": "liwan_place"
+      },
+      {
+        "type": "show",
+        "actor": "yingchun",
+        "at": "yingchun_place"
+      },
+      {
+        "type": "show",
+        "actor": "tanchun",
+        "at": "tanchun_place"
+      },
+      {
+        "type": "show",
+        "actor": "xichun",
+        "at": "xichun_place"
+      },
+      {
+        "type": "show",
+        "actor": "maid",
+        "at": "maid_place"
+      },
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "daiyu_place"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "dinner",
+    "scene": "dinner",
+    "place": "贾母后房 · 晚膳",
+    "focus": "daiyu_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "王夫人遂攜黛玉穿過一個東西穿堂",
+      "textKind": "adaptation"
+    },
+    "id": "D002",
+    "speaker": "grandmother",
+    "text": "舅母和嫂子们不在这里吃饭。你是客，原该如此坐。",
+    "title": "客位之礼",
+    "actions": []
+  },
+  {
+    "chapter": "dinner",
+    "scene": "dinner",
+    "place": "贾母后房 · 晚膳",
+    "focus": "daiyu_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "王夫人遂攜黛玉穿過一個東西穿堂",
+      "textKind": "adaptation"
+    },
+    "id": "D003",
+    "speaker": "narrator",
+    "text": "黛玉告座坐下。贾母命王夫人坐，三春也依次告座：迎春右首，探春左二，惜春右二。李纨、凤姐立旁布让，满屋竟无一声咳嗽。",
+    "title": "寂然饭毕",
+    "actions": []
+  },
+  {
+    "chapter": "dinner",
+    "scene": "dinner",
+    "place": "贾母后房 · 晚膳",
+    "focus": "daiyu_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "王夫人遂攜黛玉穿過一個東西穿堂",
+      "textKind": "adaptation"
+    },
+    "id": "D004",
+    "speaker": "narrator",
+    "text": "饭后丫鬟捧茶，黛玉想起父亲教她惜福养身，饭后稍候再饮；但眼前规矩与家中不同，只得随众接过。",
+    "title": "漱口与饮茶",
+    "actions": []
+  },
+  {
+    "chapter": "dinner",
+    "scene": "dinner",
+    "place": "贾母后房 · 晚膳",
+    "focus": "tea_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "王夫人遂攜黛玉穿過一個東西穿堂",
+      "textKind": "adaptation"
+    },
+    "id": "D005",
+    "speaker": "narrator",
+    "text": "很快有人送来漱盂，她照样漱口、盥手。再捧来的茶，才是用来饮的。她默默记住这番次序。",
+    "title": "留心礼序",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "tea_place"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "dinner",
+    "scene": "dinner",
+    "place": "贾母后房 · 晚膳",
+    "focus": "daiyu_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "王夫人遂攜黛玉穿過一個東西穿堂",
+      "textKind": "adaptation"
+    },
+    "id": "D006",
+    "speaker": "grandmother",
+    "text": "你们去罢，让我们自在说话。",
+    "title": "饭后闲谈",
+    "actions": [
+      {
+        "type": "hide",
+        "actor": "wang"
+      },
+      {
+        "type": "hide",
+        "actor": "feng"
+      },
+      {
+        "type": "hide",
+        "actor": "liwan"
+      },
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "daiyu_place"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "dinner",
+    "scene": "dinner",
+    "place": "贾母后房 · 晚膳",
+    "focus": "daiyu_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "王夫人遂攜黛玉穿過一個東西穿堂",
+      "textKind": "adaptation"
+    },
+    "id": "D007",
+    "speaker": "grandmother",
+    "text": "玉儿念过什么书？",
+    "title": "问书",
+    "actions": []
+  },
+  {
+    "chapter": "dinner",
+    "scene": "dinner",
+    "place": "贾母后房 · 晚膳",
+    "focus": "daiyu_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "王夫人遂攜黛玉穿過一個東西穿堂",
+      "textKind": "adaptation"
+    },
+    "id": "D008",
+    "speaker": "daiyu",
+    "text": "只刚念了《四书》。姊妹们读的是什么书？",
+    "title": "晚膳礼序",
+    "actions": []
+  },
+  {
+    "chapter": "dinner",
+    "scene": "dinner",
+    "place": "贾母后房 · 晚膳",
+    "focus": "daiyu_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "王夫人遂攜黛玉穿過一個東西穿堂",
+      "textKind": "adaptation"
+    },
+    "id": "D009",
+    "speaker": "grandmother",
+    "text": "不过认得两个字，不做睁眼的瞎子罢了。",
+    "title": "晚膳礼序",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B001",
+    "speaker": "maid",
+    "text": "宝玉来了！",
+    "title": "宝玉归来",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B002",
+    "speaker": "narrator",
+    "text": "黛玉心里正想着那个憊懒顽童，进门却是一位清俊少年：紫金冠、红箭袖，项间系一块美玉。她一见便觉眼熟。",
+    "title": "似曾相识",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "back_door"
+      },
+      {
+        "type": "move",
+        "actor": "baoyu",
+        "via": [
+          "grandmother_place"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B003",
+    "speaker": "grandmother",
+    "text": "去见你娘来。",
+    "title": "先去请安",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B004",
+    "speaker": "narrator",
+    "text": "宝玉转身去见母亲，不久换了家常衣裳回来。银红旧袄、辫上红丝，仍带着项圈、宝玉与护身符。",
+    "title": "换衣回来",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "baoyu",
+        "via": [
+          "back_door"
+        ]
+      },
+      {
+        "type": "hide",
+        "actor": "baoyu"
+      }
+    ]
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B005",
+    "speaker": "narrator",
+    "text": "书中以两阕《西江月》写他，词面看似讥评，衬出这个不合世俗规矩的少年。",
+    "title": "西江月·其一",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "back_door"
+      },
+      {
+        "type": "move",
+        "actor": "baoyu",
+        "via": [
+          "wang_place"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B006",
+    "speaker": "narrator",
+    "text": "无故寻愁觅恨，有时似傻如狂。纵然生得好皮囊，腹内原来草莽。\n潦倒不通世务，愚顽怕读文章。行为偏僻性乖张，那管世人诽谤！",
+    "title": "西江月·其一",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B007",
+    "speaker": "narrator",
+    "text": "富贵不知乐业，贫穷难耐凄凉。可怜辜负好韶光，于国于家无望。\n天下无能第一，古今不肖无双。寄言纨绔与膏粱：莫效此儿形状！",
+    "title": "西江月·其二",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B008",
+    "speaker": "grandmother",
+    "text": "外客还未见，就换了衣裳，还不去见你妹妹！",
+    "title": "宝黛见礼",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B009",
+    "speaker": "narrator",
+    "text": "宝玉作揖，见黛玉罥烟眉、含露目，怯弱中自有清灵。他细看片刻，便笑了。",
+    "title": "两相端详",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "baoyu",
+        "via": [
+          "baoyu_greet"
+        ]
+      },
+      {
+        "type": "effect",
+        "actor": "baoyu",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B010",
+    "speaker": "baoyu",
+    "text": "这个妹妹，我曾见过的。",
+    "title": "旧相识",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B011",
+    "speaker": "grandmother",
+    "text": "又胡说，你何曾见过她？",
+    "title": "宝黛初见",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B012",
+    "speaker": "baoyu",
+    "text": "虽没见过，看着面善，心里便算旧相识。今日只当远别重逢，也无不可。",
+    "title": "宝黛初见",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B013",
+    "speaker": "grandmother",
+    "text": "更好，更好，这样更能和睦了。",
+    "title": "宝黛初见",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B014",
+    "speaker": "baoyu",
+    "text": "妹妹可曾读书？",
+    "title": "问学",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B015",
+    "speaker": "daiyu",
+    "text": "不曾读，只上过一年学，些须认得几个字。",
+    "title": "宝黛初见",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B016",
+    "speaker": "baoyu",
+    "text": "妹妹尊名是哪两个字？可有表字？",
+    "title": "问名",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B017",
+    "speaker": "daiyu",
+    "text": "名唤黛玉，没有表字。",
+    "title": "宝黛初见",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B018",
+    "speaker": "baoyu",
+    "text": "我送妹妹一个妙字，莫若“颦颦”。西方有石名黛，可以画眉，妹妹眉尖若蹙，这两个字正妙。",
+    "title": "赠字颦颦",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B019",
+    "speaker": "tanchun",
+    "text": "这又从哪里来？只怕又是你的杜撰。",
+    "title": "宝黛初见",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B020",
+    "speaker": "baoyu",
+    "text": "除《四书》外，杜撰的多了，偏只我是杜撰不成？",
+    "title": "宝黛初见",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B021",
+    "speaker": "baoyu",
+    "text": "妹妹可也有玉没有？",
+    "title": "问玉",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B022",
+    "speaker": "daiyu",
+    "text": "我没有那个。想来玉是罕物，哪能人人都有。",
+    "title": "宝黛初见",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B023",
+    "speaker": "narrator",
+    "text": "宝玉登时发作，摘下项上美玉，狠命往地上摔去。满屋人一惊，忙着抢拾。",
+    "title": "摔玉",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "baoyu",
+        "kind": "jade",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B024",
+    "speaker": "baoyu",
+    "text": "什么罕物！连人的高低都不择，还说什么通灵？我也不要这劳什子了！",
+    "title": "因玉生波",
+    "actions": [],
+    "mood": "sad"
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B025",
+    "speaker": "grandmother",
+    "text": "孽障！何苦摔那命根子！",
+    "title": "急忙劝哄",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "grandmother",
+        "via": [
+          "grandmother_greet"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B026",
+    "speaker": "baoyu",
+    "text": "家里姊妹都没有，单我有，已觉没趣。如今来了这样神仙似的妹妹也没有，可知不是好东西。",
+    "title": "宝黛初见",
+    "actions": [],
+    "mood": "sad"
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B027",
+    "speaker": "grandmother",
+    "text": "妹妹原也有的，只因你姑妈去世，舍不得女儿，便带了去，既全孝心，也好像仍见着女儿。妹妹不肯自夸，才说没有。",
+    "title": "贾母解围",
+    "actions": []
+  },
+  {
+    "chapter": "meeting",
+    "scene": "dinner",
+    "place": "贾母房 · 宝玉初归",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "一語未了，只聽外面一陣腳步響",
+      "textKind": "adaptation"
+    },
+    "id": "B028",
+    "speaker": "narrator",
+    "text": "贾母从丫鬟手里接过玉，亲自给宝玉戴回。宝玉想想，也就信了，不再争论。风波虽歇，黛玉却暗暗自责。",
+    "title": "重戴通灵玉",
+    "actions": []
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "贾母院 · 碧纱橱",
+    "focus": "daiyu_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "當下，奶娘來請問黛玉之房舍",
+      "textKind": "adaptation"
+    },
+    "id": "T001",
+    "speaker": "narrator",
+    "text": "奶娘来问住处，贾母安排黛玉暂住碧纱橱，待残冬过去、春天再另作安置，宝玉则挪到外面。",
+    "title": "安排住处",
+    "actions": [
+      {
+        "type": "roof",
+        "visible": false
+      },
+      {
+        "type": "show",
+        "actor": "daiyu",
+        "at": "outer_door"
+      },
+      {
+        "type": "show",
+        "actor": "grandmother",
+        "at": "grandmother_bed"
+      },
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "baoyu_bed"
+      },
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "daiyu_bed"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "贾母院 · 碧纱橱",
+    "focus": "daiyu_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "當下，奶娘來請問黛玉之房舍",
+      "textKind": "adaptation"
+    },
+    "id": "T002",
+    "speaker": "baoyu",
+    "text": "好祖宗，我就在碧纱橱外的床上，何必再搬去扰得您不得安静？",
+    "title": "碧纱橱",
+    "actions": []
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "贾母院 · 碧纱橱",
+    "focus": "daiyu_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "當下，奶娘來請問黛玉之房舍",
+      "textKind": "adaptation"
+    },
+    "id": "T003",
+    "speaker": "narrator",
+    "text": "贾母应允。凤姐遣人送来藕合色花帐、锦被缎褥，奶娘与丫鬟分内外照管。",
+    "title": "铺陈衾帐",
+    "actions": []
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "碧纱橱 · 侍女安置",
+    "focus": "daiyu_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "黛玉只帶了兩個人來",
+      "textKind": "adaptation"
+    },
+    "id": "T004",
+    "speaker": "narrator",
+    "text": "黛玉只带来年老的王嬷嬷和十岁的小丫鬟雪雁。贾母怕她们照料不周，便把身边的二等丫鬟鹦哥给她，又照三春例配下人。",
+    "title": "雪雁与鹦哥",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "nurse_wang",
+        "at": "night_talk"
+      },
+      {
+        "type": "show",
+        "actor": "xueyan",
+        "at": "xueyan_place"
+      },
+      {
+        "type": "show",
+        "actor": "yingge",
+        "at": "yingge_place"
+      }
+    ]
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "碧纱橱 · 侍女安置",
+    "focus": "daiyu_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "黛玉只帶了兩個人來",
+      "textKind": "adaptation"
+    },
+    "id": "T005",
+    "speaker": "narrator",
+    "text": "王嬷嬷与鹦哥陪黛玉在橱内，宝玉乳母李嬷嬷与大丫鬟袭人守在外间。",
+    "title": "内外安歇",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "nurse_li",
+        "at": "outer_door"
+      },
+      {
+        "type": "show",
+        "actor": "xiren",
+        "at": "xiren_place"
+      }
+    ]
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "外间 · 袭人",
+    "focus": "xiren_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "原來這襲人亦是賈母之婢",
+      "textKind": "adaptation"
+    },
+    "id": "T006",
+    "speaker": "narrator",
+    "text": "袭人本是贾母的丫鬟，名叫珍珠，因心地纯良、尽职，才给了宝玉。宝玉取“花气袭人”之意，为她改名。",
+    "title": "袭人来历",
+    "actions": []
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "外间 · 袭人",
+    "focus": "xiren_place",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "原來這襲人亦是賈母之婢",
+      "textKind": "adaptation"
+    },
+    "id": "T007",
+    "speaker": "narrator",
+    "text": "她服侍谁，心里眼里便只装着谁。如今一心照看宝玉，却也常因他的乖僻性情而忧郁。",
+    "title": "尽心服侍",
+    "actions": []
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "碧纱橱 · 夜谈",
+    "focus": "daiyu_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "是晚，寶玉李嬤嬤已睡了",
+      "textKind": "adaptation"
+    },
+    "id": "T008",
+    "speaker": "narrator",
+    "text": "夜深，宝玉和李嬷嬷已睡，袭人见橱内黛玉与鹦哥尚未安歇，便卸妆后悄悄进来。",
+    "title": "袭人入内",
+    "actions": [
+      {
+        "type": "hide",
+        "actor": "grandmother"
+      },
+      {
+        "type": "hide",
+        "actor": "nurse_wang"
+      },
+      {
+        "type": "hide",
+        "actor": "xueyan"
+      },
+      {
+        "type": "move",
+        "actor": "xiren",
+        "via": [
+          "night_talk",
+          "bedside"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "碧纱橱 · 夜谈",
+    "focus": "daiyu_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "是晚，寶玉李嬤嬤已睡了",
+      "textKind": "adaptation"
+    },
+    "id": "T009",
+    "speaker": "xiren",
+    "text": "姑娘怎么还不安息？",
+    "title": "碧纱橱",
+    "actions": []
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "碧纱橱 · 夜谈",
+    "focus": "daiyu_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "是晚，寶玉李嬤嬤已睡了",
+      "textKind": "adaptation"
+    },
+    "id": "T010",
+    "speaker": "daiyu",
+    "text": "姐姐请坐。",
+    "title": "碧纱橱",
+    "actions": []
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "碧纱橱 · 夜谈",
+    "focus": "daiyu_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "是晚，寶玉李嬤嬤已睡了",
+      "textKind": "adaptation"
+    },
+    "id": "T011",
+    "speaker": "yingge",
+    "text": "姑娘方才还伤心，说今日才来，便惹出哥儿的狂病，万一摔坏了玉，岂不是自己的过错。我好容易才劝住。",
+    "title": "黛玉自责",
+    "actions": [],
+    "mood": "sad"
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "碧纱橱 · 夜谈",
+    "focus": "daiyu_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "是晚，寶玉李嬤嬤已睡了",
+      "textKind": "adaptation"
+    },
+    "id": "T012",
+    "speaker": "xiren",
+    "text": "姑娘快别如此。他往后只怕还有更奇的行止，若为这些多心，只怕伤感不尽。快莫往心里去。",
+    "title": "袭人宽慰",
+    "actions": []
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "碧纱橱 · 夜谈",
+    "focus": "daiyu_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "是晚，寶玉李嬤嬤已睡了",
+      "textKind": "adaptation"
+    },
+    "id": "T013",
+    "speaker": "daiyu",
+    "text": "姐姐们的话，我记着。只是那玉究竟什么来历，上头可有字？",
+    "title": "夜问通灵玉",
+    "actions": []
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "碧纱橱 · 夜谈",
+    "focus": "daiyu_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "是晚，寶玉李嬤嬤已睡了",
+      "textKind": "adaptation"
+    },
+    "id": "T014",
+    "speaker": "xiren",
+    "text": "连一家人都不知来历。上面原有穿绳的眼，听说出生时从口里取出。我拿来给你看，便明白了。",
+    "title": "碧纱橱",
+    "actions": []
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "碧纱橱 · 夜谈",
+    "focus": "daiyu_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "是晚，寶玉李嬤嬤已睡了",
+      "textKind": "adaptation"
+    },
+    "id": "T015",
+    "speaker": "daiyu",
+    "text": "罢了，夜已深，明日再看也不迟。",
+    "title": "碧纱橱",
+    "actions": []
+  },
+  {
+    "chapter": "night",
+    "scene": "night",
+    "place": "碧纱橱 · 夜谈",
+    "focus": "daiyu_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "是晚，寶玉李嬤嬤已睡了",
+      "textKind": "adaptation"
+    },
+    "id": "T016",
+    "speaker": "narrator",
+    "text": "大家又说了一会，方才安歇。新到的一天，在灯影与低声宽慰中结束。",
+    "title": "各自安歇",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "xiren",
+        "via": [
+          "xiren_place"
+        ]
+      },
+      {
+        "type": "effect",
+        "actor": "daiyu",
+        "kind": "rest",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "letter",
+    "scene": "night",
+    "place": "贾母院 · 晨省",
+    "focus": "grandmother_bed",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "次日起來，省過賈母",
+      "textKind": "adaptation"
+    },
+    "id": "L001",
+    "speaker": "narrator",
+    "text": "次日清晨，黛玉起身，先向贾母请安，再往王夫人处去。",
+    "title": "晨起请安",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "grandmother",
+        "at": "grandmother_bed"
+      },
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "grandmother_bed"
+        ]
+      },
+      {
+        "type": "effect",
+        "actor": "daiyu",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "letter",
+    "scene": "wang",
+    "place": "王夫人处 · 金陵来信",
+    "focus": "kang_edge",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "正值王夫人與熙鳳在一處拆金陵來的書信",
+      "textKind": "adaptation"
+    },
+    "id": "L002",
+    "speaker": "narrator",
+    "text": "王夫人与熙凤正在拆看金陵来信，王子腾家也派了两个媳妇来传话。黛玉不知缘由，探春等却知道是薛家的事。",
+    "title": "拆阅来信",
+    "actions": [
+      {
+        "type": "roof",
+        "visible": false
+      },
+      {
+        "type": "show",
+        "actor": "daiyu",
+        "at": "court_entry"
+      },
+      {
+        "type": "show",
+        "actor": "wang",
+        "at": "wang_host"
+      },
+      {
+        "type": "show",
+        "actor": "feng",
+        "at": "tea_seat"
+      },
+      {
+        "type": "show",
+        "actor": "tanchun",
+        "at": "guest_seat"
+      },
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "east_corridor"
+      },
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "kang_edge"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "letter",
+    "scene": "wang",
+    "place": "王夫人处 · 金陵来信",
+    "focus": "kang_edge",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "正值王夫人與熙鳳在一處拆金陵來的書信",
+      "textKind": "adaptation"
+    },
+    "id": "L003",
+    "speaker": "narrator",
+    "text": "薛姨妈之子薛蟠在金陵倚财仗势，打死人命，案子正在应天府审理。王子腾得讯，派家人来告诉这边，并有接薛家进京之意。",
+    "title": "薛家消息",
+    "actions": []
+  },
+  {
+    "chapter": "letter",
+    "scene": "wang",
+    "place": "王夫人处 · 金陵来信",
+    "focus": "kang_edge",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "正值王夫人與熙鳳在一處拆金陵來的書信",
+      "textKind": "adaptation"
+    },
+    "id": "END",
+    "speaker": "narrator",
+    "text": "一封金陵来信，把荣府的日常与雨村的新任连在一处。事情如何发展，留待第四回。第三回，到此读毕。",
+    "title": "第三回 · 终",
+    "actions": []
+  }
+]

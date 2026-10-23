@@ -1,0 +1,474 @@
+{
+  "width": 40,
+  "height": 40,
+  "orientation": "isometric",
+  "note": "依据第三回进出顺序与相对方位编排；西角门采用西墙方案，非历史建筑复原。",
+  "daiyuScenes": [
+    "capital",
+    "entry",
+    "east",
+    "central",
+    "wang",
+    "dinner",
+    "night",
+    "feng"
+  ],
+  "locations": [
+    {
+      "id": "lin",
+      "name": "扬州林府 · 江岸",
+      "col": 1,
+      "row": 39,
+      "asset": "river-boat",
+      "external": true,
+      "description": "黛玉辞父、登舟入京；府外行程。",
+      "scene": "lin",
+      "start": "",
+      "focus": "",
+      "width": 7,
+      "height": 7
+    },
+    {
+      "id": "capital",
+      "name": "荣府西墙 · 西角门",
+      "col": 4,
+      "row": 30,
+      "asset": "west-wall-gate",
+      "external": false,
+      "description": "西侧院墙的入府角门。黛玉由此换轿入内；去贾赦院先出此门，沿墙外道路转到南面，再向东经过荣府正门。",
+      "scene": "capital",
+      "start": "",
+      "focus": "",
+      "width": 3,
+      "height": 3
+    },
+    {
+      "id": "entry",
+      "name": "贾母院 · 穿堂",
+      "col": 10,
+      "row": 26,
+      "asset": "estate-grandmother",
+      "external": false,
+      "description": "垂花门、游廊、穿堂插屏、贾母院落与正房；黛玉入府认亲，初见凤姐。",
+      "scene": "entry",
+      "start": "",
+      "focus": "",
+      "width": 10,
+      "height": 8
+    },
+    {
+      "id": "east",
+      "name": "贾赦东院",
+      "col": 35,
+      "row": 27,
+      "asset": "estate-east",
+      "external": false,
+      "description": "荣府东部另院。由南墙偏东的黑油大门进入，经仪门到邢夫人处；不从贾母院横穿院墙。",
+      "scene": "east",
+      "start": "",
+      "focus": "",
+      "width": 8,
+      "height": 9
+    },
+    {
+      "id": "central",
+      "name": "荣禧堂",
+      "col": 23,
+      "row": 25,
+      "asset": "rongxi-hall",
+      "external": false,
+      "description": "内仪门、荣禧堂正堂、东边侧门；黛玉观察堂上陈设。",
+      "scene": "central",
+      "start": "",
+      "focus": "",
+      "width": 9,
+      "height": 7
+    },
+    {
+      "id": "wang",
+      "name": "王夫人院",
+      "col": 24,
+      "row": 14,
+      "asset": "estate-wang",
+      "external": false,
+      "description": "正室东耳房、候茶室、东廊三间小正房与王夫人起居处；后廊接南北夹道。",
+      "scene": "wang",
+      "start": "",
+      "focus": "",
+      "width": 8,
+      "height": 8
+    },
+    {
+      "id": "dinner",
+      "name": "贾母后房 · 晚膳",
+      "col": 10,
+      "row": 16,
+      "asset": "estate-rear",
+      "external": false,
+      "description": "贾母后房用膳、奉茶、问读书；宝黛初见与摔玉也在此演出。",
+      "scene": "dinner",
+      "start": "",
+      "focus": "",
+      "width": 9,
+      "height": 7
+    },
+    {
+      "id": "night",
+      "name": "碧纱橱 · 外间",
+      "col": 10,
+      "row": 6,
+      "asset": "estate-bisha",
+      "external": false,
+      "description": "碧纱橱、贾母卧房与宝玉外间床；安寝、袭人劝慰及次晨请安。",
+      "scene": "night",
+      "start": "",
+      "focus": "",
+      "width": 8,
+      "height": 7
+    },
+    {
+      "id": "yucun",
+      "name": "贾政书房",
+      "col": 23,
+      "row": 32,
+      "asset": "estate-study",
+      "external": false,
+      "description": "贾政的外书房院落。雨村进京持荐书求见的独立支线；黛玉不参与此场拜访。",
+      "scene": "yucun",
+      "start": "",
+      "focus": "",
+      "width": 7,
+      "height": 5
+    },
+    {
+      "id": "feng",
+      "scene": "wang",
+      "start": "U019",
+      "focus": "feng_room",
+      "name": "王熙凤院",
+      "col": 18,
+      "row": 8,
+      "width": 7,
+      "height": 6,
+      "asset": "estate-feng",
+      "external": false,
+      "description": "贾琏、王熙凤居住的小院，粉油大影壁后为院门。王夫人领黛玉经过夹道时指认此处；本回只到门前，不虚构入室剧情。"
+    }
+  ],
+  "roads": {
+    "spineCol": 17,
+    "southRow": 38
+  },
+  "compass": {
+    "east": "col+",
+    "south": "row+",
+    "north": "row-",
+    "west": "col-"
+  },
+  "gates": [
+    {
+      "id": "west_gate",
+      "name": "西角门",
+      "col": 4,
+      "row": 30,
+      "wall": "west",
+      "asset": "west-wall-gate"
+    },
+    {
+      "id": "main_gate",
+      "name": "荣府正门",
+      "col": 23,
+      "row": 36,
+      "wall": "south",
+      "asset": "manor-main-gate"
+    },
+    {
+      "id": "black_gate",
+      "name": "黑油大门",
+      "col": 35,
+      "row": 36,
+      "wall": "south",
+      "asset": "black-oil-gate"
+    }
+  ],
+  "walls": [
+    [
+      [
+        4,
+        2
+      ],
+      [
+        40,
+        2
+      ]
+    ],
+    [
+      [
+        40,
+        2
+      ],
+      [
+        40,
+        36
+      ]
+    ],
+    [
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        28.5
+      ]
+    ],
+    [
+      [
+        4,
+        31.5
+      ],
+      [
+        4,
+        36
+      ]
+    ],
+    [
+      [
+        4,
+        36
+      ],
+      [
+        21.5,
+        36
+      ]
+    ],
+    [
+      [
+        24.5,
+        36
+      ],
+      [
+        33.5,
+        36
+      ]
+    ],
+    [
+      [
+        36.5,
+        36
+      ],
+      [
+        40,
+        36
+      ]
+    ],
+    [
+      [
+        30,
+        2
+      ],
+      [
+        30,
+        36
+      ]
+    ]
+  ],
+  "network": {
+    "nodes": {
+      "capital": [
+        4,
+        30
+      ],
+      "entry": [
+        10,
+        26
+      ],
+      "east": [
+        35,
+        27
+      ],
+      "central": [
+        23,
+        25
+      ],
+      "wang": [
+        24,
+        14
+      ],
+      "dinner": [
+        10,
+        16
+      ],
+      "night": [
+        10,
+        6
+      ],
+      "yucun": [
+        23,
+        32
+      ],
+      "feng": [
+        18,
+        8
+      ],
+      "west_out": [
+        2,
+        30
+      ],
+      "west_turn": [
+        2,
+        38
+      ],
+      "south_main": [
+        23,
+        38
+      ],
+      "south_black": [
+        35,
+        38
+      ],
+      "main_gate": [
+        23,
+        36
+      ],
+      "black_gate": [
+        35,
+        36
+      ],
+      "west_inside": [
+        6,
+        30
+      ],
+      "lane_entry": [
+        17,
+        26
+      ],
+      "lane_central": [
+        17,
+        25
+      ],
+      "lane_wang": [
+        17,
+        14
+      ],
+      "lane_dinner": [
+        17,
+        16
+      ],
+      "lane_night": [
+        17,
+        6
+      ],
+      "lane_yucun": [
+        17,
+        32
+      ],
+      "lane_feng": [
+        17,
+        8
+      ],
+      "west_approach": [
+        6,
+        26
+      ]
+    },
+    "edges": [
+      [
+        "capital",
+        "west_out"
+      ],
+      [
+        "west_out",
+        "west_turn"
+      ],
+      [
+        "west_turn",
+        "south_main"
+      ],
+      [
+        "south_main",
+        "south_black"
+      ],
+      [
+        "south_main",
+        "main_gate"
+      ],
+      [
+        "main_gate",
+        "yucun"
+      ],
+      [
+        "south_black",
+        "black_gate"
+      ],
+      [
+        "black_gate",
+        "east"
+      ],
+      [
+        "capital",
+        "west_inside"
+      ],
+      [
+        "entry",
+        "lane_entry"
+      ],
+      [
+        "central",
+        "lane_central"
+      ],
+      [
+        "wang",
+        "lane_wang"
+      ],
+      [
+        "dinner",
+        "lane_dinner"
+      ],
+      [
+        "night",
+        "lane_night"
+      ],
+      [
+        "yucun",
+        "lane_yucun"
+      ],
+      [
+        "feng",
+        "lane_feng"
+      ],
+      [
+        "lane_night",
+        "lane_feng"
+      ],
+      [
+        "lane_feng",
+        "lane_wang"
+      ],
+      [
+        "lane_wang",
+        "lane_dinner"
+      ],
+      [
+        "lane_dinner",
+        "lane_central"
+      ],
+      [
+        "lane_central",
+        "lane_entry"
+      ],
+      [
+        "lane_entry",
+        "lane_yucun"
+      ],
+      [
+        "west_inside",
+        "west_approach"
+      ],
+      [
+        "west_approach",
+        "entry"
+      ]
+    ]
+  }
+}

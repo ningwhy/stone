@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "spirit-stone_s10230300-01",
+  "seed": 10230300,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n单块古典神话通灵顽石，青灰色嶙峋石块，淡淡玉绿光泽，石面几道天然纹理，不要任何文字，等距俯视2比1水彩手绘游戏素材，纯白背景，无底座无人，无大范围地面，主体完整",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "98b3ae16-e32d-4cdb-b4c2-7a3e66d2f021",
+  "generated_at": "2026-10-23 00:57:06",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1024x1024"
+}

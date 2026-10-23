@@ -1,0 +1,467 @@
+{
+  "assets": 66,
+  "checks": [
+    {
+      "asset": "baoyu-chibi",
+      "pixelsChangedInMask": 1119,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "baoyu-portrait",
+      "pixelsChangedInMask": 28739,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "daiyu-chibi",
+      "pixelsChangedInMask": 1108,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "daiyu-portrait",
+      "pixelsChangedInMask": 22169,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "feng-chibi",
+      "pixelsChangedInMask": 476,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "feng-portrait",
+      "pixelsChangedInMask": 7987,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "fengshi-chibi",
+      "pixelsChangedInMask": 586,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "fengshi-portrait",
+      "pixelsChangedInMask": 29830,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "fengsu-chibi",
+      "pixelsChangedInMask": 1146,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "fengsu-portrait",
+      "pixelsChangedInMask": 35702,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "grandmother-chibi",
+      "pixelsChangedInMask": 1300,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "grandmother-portrait",
+      "pixelsChangedInMask": 20720,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "guide-chibi",
+      "pixelsChangedInMask": 1011,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "guide-portrait",
+      "pixelsChangedInMask": 17457,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "huoqi-chibi",
+      "pixelsChangedInMask": 1486,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "huoqi-portrait",
+      "pixelsChangedInMask": 32496,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "jiaoxing-chibi",
+      "pixelsChangedInMask": 1054,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "jiaoxing-portrait",
+      "pixelsChangedInMask": 33916,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "kongkong-chibi",
+      "pixelsChangedInMask": 1098,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "kongkong-portrait",
+      "pixelsChangedInMask": 37060,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "leng-chibi",
+      "pixelsChangedInMask": 1123,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "leng-portrait",
+      "pixelsChangedInMask": 17828,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "liwan-chibi",
+      "pixelsChangedInMask": 602,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "liwan-portrait",
+      "pixelsChangedInMask": 13965,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "maid-chibi",
+      "pixelsChangedInMask": 781,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "maid-portrait",
+      "pixelsChangedInMask": 17481,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "messenger-chibi",
+      "pixelsChangedInMask": 590,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "messenger-portrait",
+      "pixelsChangedInMask": 17391,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "monk-chibi",
+      "pixelsChangedInMask": 1498,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "monk-portrait",
+      "pixelsChangedInMask": 26172,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "nurse_li-chibi",
+      "pixelsChangedInMask": 817,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "nurse_li-portrait",
+      "pixelsChangedInMask": 18109,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "nurse_wang-chibi",
+      "pixelsChangedInMask": 1392,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "nurse_wang-portrait",
+      "pixelsChangedInMask": 18527,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "oldmonk-chibi",
+      "pixelsChangedInMask": 1830,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "oldmonk-portrait",
+      "pixelsChangedInMask": 49950,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "ruhai-chibi",
+      "pixelsChangedInMask": 726,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "ruhai-portrait",
+      "pixelsChangedInMask": 16732,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "shiyin-chibi",
+      "pixelsChangedInMask": 687,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "shiyin-portrait",
+      "pixelsChangedInMask": 30389,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "tanchun-chibi",
+      "pixelsChangedInMask": 752,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "tanchun-portrait",
+      "pixelsChangedInMask": 12724,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "taoist-chibi",
+      "pixelsChangedInMask": 951,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "taoist-portrait",
+      "pixelsChangedInMask": 19608,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "wang-chibi",
+      "pixelsChangedInMask": 757,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "wang-portrait",
+      "pixelsChangedInMask": 14636,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "xichun-chibi",
+      "pixelsChangedInMask": 880,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "xichun-portrait",
+      "pixelsChangedInMask": 15303,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "xing-chibi",
+      "pixelsChangedInMask": 484,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "xing-portrait",
+      "pixelsChangedInMask": 11352,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "xiren-chibi",
+      "pixelsChangedInMask": 581,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "xiren-portrait",
+      "pixelsChangedInMask": 12303,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "xueyan-chibi",
+      "pixelsChangedInMask": 1404,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "xueyan-portrait",
+      "pixelsChangedInMask": 11334,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "yingchun-chibi",
+      "pixelsChangedInMask": 876,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "yingchun-portrait",
+      "pixelsChangedInMask": 13239,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "yingge-chibi",
+      "pixelsChangedInMask": 613,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "yingge-portrait",
+      "pixelsChangedInMask": 13209,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "yinglian-chibi",
+      "pixelsChangedInMask": 967,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "yinglian-portrait",
+      "pixelsChangedInMask": 39398,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "yucun-chibi",
+      "pixelsChangedInMask": 608,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "yucun-portrait",
+      "pixelsChangedInMask": 15389,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "zhang-chibi",
+      "pixelsChangedInMask": 633,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "zhang-portrait",
+      "pixelsChangedInMask": 15185,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "zheng-chibi",
+      "pixelsChangedInMask": 582,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "zheng-portrait",
+      "pixelsChangedInMask": 15438,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    }
+  ]
+}

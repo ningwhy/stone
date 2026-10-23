@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "estate-tavern_s10230205-01",
+  "seed": 10230205,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n江南城郊小酒肆，一座两层灰瓦白墙木楼，一楼敞开前廊有木桌与茶壶，竹帘与素色酒旗，旁有柳树，雅致水彩游戏建筑。严格2比1菱形等距正交俯视，见南面与东面，水墨淡彩手绘灰青米白藕红配色，单个紧凑完整建筑素材，纯白背景，不要大地板不要漂浮岛，无人物无文字无标注，四周留白。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "7c6eb417-a350-47d6-9d79-3e6427c23e4c",
+  "generated_at": "2026-10-23 00:56:26",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1024x1024"
+}

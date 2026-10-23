@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "ruhai-chibi_s10222027-01",
+  "seed": 10222027,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立单个人物设定，红楼梦原创形象。清代中年文士，浅灰蓝长衫，黑色便帽，短须，儒雅清瘦，神情关切。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。三头身Q版游戏角色，头部占身体三分之一，全身完整，脚底清楚，轻微俯视等距，朝右下，站立，无地面无投影，四周留白。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "81a9c603-df8d-4e44-8e0e-13c49cded190",
+  "generated_at": "2026-10-22 19:02:38",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x1024"
+}

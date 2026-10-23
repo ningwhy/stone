@@ -1,0 +1,19 @@
+{
+  "box": [
+    13,
+    16,
+    40,
+    40
+  ],
+  "crop": [
+    2,
+    4,
+    51,
+    52
+  ],
+  "size": [
+    48,
+    116
+  ],
+  "originalSha256": "6a5c9bf26062ae78ea9d9c1bd8d71db3cf2b8f940eabfcecca54cf1314f92077"
+}

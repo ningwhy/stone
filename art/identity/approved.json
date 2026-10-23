@@ -1,0 +1,1062 @@
+{
+  "version": 1,
+  "review": "Visual review of gray face-only comparisons, color full cast, and portrait/chibi pairs. All 33 identities / 66 images.",
+  "assets": {
+    "daiyu-portrait": {
+      "character": "daiyu",
+      "features": "清瘦长鹅蛋脸；细长含愁眉；眼尾微垂的含露杏眼；窄鼻梁；薄小唇；敏感、克制，眼下轻淡倦意",
+      "seed": 10232000,
+      "faceBox": [
+        135,
+        75,
+        237,
+        249
+      ],
+      "original": "art/identity/originals/daiyu-portrait.png",
+      "final": "art/identity/daiyu-portrait/final.png",
+      "mask": "art/identity/daiyu-portrait/mask-native.png",
+      "request": "art/identity/daiyu-portrait/request.json",
+      "portraitReference": null
+    },
+    "daiyu-chibi": {
+      "character": "daiyu",
+      "features": "清瘦长鹅蛋脸；细长含愁眉；眼尾微垂的含露杏眼；窄鼻梁；薄小唇；敏感、克制，眼下轻淡倦意",
+      "seed": 10232001,
+      "faceBox": [
+        19,
+        21,
+        46,
+        51
+      ],
+      "original": "art/identity/originals/daiyu-chibi.png",
+      "final": "art/identity/daiyu-chibi/final.png",
+      "mask": "art/identity/daiyu-chibi/mask-native.png",
+      "request": "art/identity/daiyu-chibi/request.json",
+      "portraitReference": "art/identity/daiyu-portrait/reference.png"
+    },
+    "baoyu-portrait": {
+      "character": "baoyu",
+      "features": "饱满短鹅蛋脸；宽额；浓长平眉；明亮桃花眼；圆润鼻尖；饱满弓唇，喜悦灵动",
+      "seed": 10232002,
+      "faceBox": [
+        90,
+        140,
+        250,
+        285
+      ],
+      "original": "art/identity/originals/baoyu-portrait.png",
+      "final": "art/identity/baoyu-portrait/final.png",
+      "mask": "art/identity/baoyu-portrait/mask-native.png",
+      "request": "art/identity/baoyu-portrait/request.json",
+      "portraitReference": null
+    },
+    "baoyu-chibi": {
+      "character": "baoyu",
+      "features": "饱满短鹅蛋脸；宽额；浓长平眉；明亮桃花眼；圆润鼻尖；饱满弓唇，喜悦灵动",
+      "seed": 10232003,
+      "faceBox": [
+        13,
+        23,
+        45,
+        49
+      ],
+      "original": "art/identity/originals/baoyu-chibi.png",
+      "final": "art/identity/baoyu-chibi/final.png",
+      "mask": "art/identity/baoyu-chibi/mask-native.png",
+      "request": "art/identity/baoyu-chibi/request.json",
+      "portraitReference": "art/identity/baoyu-portrait/reference.png"
+    },
+    "feng-portrait": {
+      "character": "feng",
+      "features": "颧骨鲜明的菱形脸；高挑柳叶眉；细长上挑凤眼；挺直鼻梁；薄唇偏侧笑，锐利干练",
+      "seed": 10232004,
+      "faceBox": [
+        66,
+        45,
+        135,
+        135
+      ],
+      "original": "art/identity/originals/feng-portrait.png",
+      "final": "art/identity/feng-portrait/final.png",
+      "mask": "art/identity/feng-portrait/mask-native.png",
+      "request": "art/identity/feng-portrait/request.json",
+      "portraitReference": null
+    },
+    "feng-chibi": {
+      "character": "feng",
+      "features": "颧骨鲜明的菱形脸；高挑柳叶眉；细长上挑凤眼；挺直鼻梁；薄唇偏侧笑，锐利干练",
+      "seed": 10232005,
+      "faceBox": [
+        14,
+        15,
+        32,
+        34
+      ],
+      "original": "art/identity/originals/feng-chibi.png",
+      "final": "art/identity/feng-chibi/final.png",
+      "mask": "art/identity/feng-chibi/mask-native.png",
+      "request": "art/identity/feng-chibi/request.json",
+      "portraitReference": "art/identity/feng-portrait/reference.png"
+    },
+    "grandmother-portrait": {
+      "character": "grandmother",
+      "features": "宽阔圆方脸；丰颊重下颌；长寿眉；笑眼但目光有威；宽鼻头；笑纹深而温厚",
+      "seed": 10232006,
+      "faceBox": [
+        99,
+        21,
+        207,
+        174
+      ],
+      "original": "art/identity/originals/grandmother-portrait.png",
+      "final": "art/identity/grandmother-portrait/final.png",
+      "mask": "art/identity/grandmother-portrait/mask-native.png",
+      "request": "art/identity/grandmother-portrait/request.json",
+      "portraitReference": null
+    },
+    "grandmother-chibi": {
+      "character": "grandmother",
+      "features": "宽阔圆方脸；丰颊重下颌；长寿眉；笑眼但目光有威；宽鼻头；笑纹深而温厚",
+      "seed": 10232007,
+      "faceBox": [
+        15,
+        6,
+        42,
+        41
+      ],
+      "original": "art/identity/originals/grandmother-chibi.png",
+      "final": "art/identity/grandmother-chibi/final.png",
+      "mask": "art/identity/grandmother-chibi/mask-native.png",
+      "request": "art/identity/grandmother-chibi/request.json",
+      "portraitReference": "art/identity/grandmother-portrait/reference.png"
+    },
+    "wang-portrait": {
+      "character": "wang",
+      "features": "端正方圆脸；低平眉；厚眼睑；内收沉静目光；宽直鼻；嘴角平收，稳重含蓄",
+      "seed": 10232008,
+      "faceBox": [
+        72,
+        48,
+        162,
+        177
+      ],
+      "original": "art/identity/originals/wang-portrait.png",
+      "final": "art/identity/wang-portrait/final.png",
+      "mask": "art/identity/wang-portrait/mask-native.png",
+      "request": "art/identity/wang-portrait/request.json",
+      "portraitReference": null
+    },
+    "wang-chibi": {
+      "character": "wang",
+      "features": "端正方圆脸；低平眉；厚眼睑；内收沉静目光；宽直鼻；嘴角平收，稳重含蓄",
+      "seed": 10232009,
+      "faceBox": [
+        12,
+        12,
+        34,
+        37
+      ],
+      "original": "art/identity/originals/wang-chibi.png",
+      "final": "art/identity/wang-chibi/final.png",
+      "mask": "art/identity/wang-chibi/mask-native.png",
+      "request": "art/identity/wang-chibi/request.json",
+      "portraitReference": "art/identity/wang-portrait/reference.png"
+    },
+    "xing-portrait": {
+      "character": "xing",
+      "features": "长方脸；颧面偏平；略下垂眉；细小眼睛；长鼻；窄嘴，拘谨审视",
+      "seed": 10232010,
+      "faceBox": [
+        75,
+        48,
+        153,
+        162
+      ],
+      "original": "art/identity/originals/xing-portrait.png",
+      "final": "art/identity/xing-portrait/final.png",
+      "mask": "art/identity/xing-portrait/mask-native.png",
+      "request": "art/identity/xing-portrait/request.json",
+      "portraitReference": null
+    },
+    "xing-chibi": {
+      "character": "xing",
+      "features": "长方脸；颧面偏平；略下垂眉；细小眼睛；长鼻；窄嘴，拘谨审视",
+      "seed": 10232011,
+      "faceBox": [
+        18,
+        13,
+        35,
+        33
+      ],
+      "original": "art/identity/originals/xing-chibi.png",
+      "final": "art/identity/xing-chibi/final.png",
+      "mask": "art/identity/xing-chibi/mask-native.png",
+      "request": "art/identity/xing-chibi/request.json",
+      "portraitReference": "art/identity/xing-portrait/reference.png"
+    },
+    "liwan-portrait": {
+      "character": "liwan",
+      "features": "细长柔和脸；淡平眉；深静细眼；长鼻；唇淡而窄，清寂内敛",
+      "seed": 10232012,
+      "faceBox": [
+        93,
+        48,
+        183,
+        171
+      ],
+      "original": "art/identity/originals/liwan-portrait.png",
+      "final": "art/identity/liwan-portrait/final.png",
+      "mask": "art/identity/liwan-portrait/mask-native.png",
+      "request": "art/identity/liwan-portrait/request.json",
+      "portraitReference": null
+    },
+    "liwan-chibi": {
+      "character": "liwan",
+      "features": "细长柔和脸；淡平眉；深静细眼；长鼻；唇淡而窄，清寂内敛",
+      "seed": 10232013,
+      "faceBox": [
+        14,
+        12,
+        33,
+        35
+      ],
+      "original": "art/identity/originals/liwan-chibi.png",
+      "final": "art/identity/liwan-chibi/final.png",
+      "mask": "art/identity/liwan-chibi/mask-native.png",
+      "request": "art/identity/liwan-chibi/request.json",
+      "portraitReference": "art/identity/liwan-portrait/reference.png"
+    },
+    "yingchun-portrait": {
+      "character": "yingchun",
+      "features": "短圆脸；丰颊圆下巴；短淡弯眉；眼距略宽的柔缓垂眼；短圆鼻；圆小嘴，温厚怯弱",
+      "seed": 10232014,
+      "faceBox": [
+        75,
+        57,
+        162,
+        177
+      ],
+      "original": "art/identity/originals/yingchun-portrait.png",
+      "final": "art/identity/yingchun-portrait/final.png",
+      "mask": "art/identity/yingchun-portrait/mask-native.png",
+      "request": "art/identity/yingchun-portrait/request.json",
+      "portraitReference": null
+    },
+    "yingchun-chibi": {
+      "character": "yingchun",
+      "features": "短圆脸；丰颊圆下巴；短淡弯眉；眼距略宽的柔缓垂眼；短圆鼻；圆小嘴，温厚怯弱",
+      "seed": 10232015,
+      "faceBox": [
+        13,
+        16,
+        40,
+        40
+      ],
+      "original": "art/identity/originals/yingchun-chibi.png",
+      "final": "art/identity/yingchun-chibi/final.png",
+      "mask": "art/identity/yingchun-chibi/mask-native.png",
+      "request": "art/identity/yingchun-chibi/request.json",
+      "portraitReference": "art/identity/yingchun-portrait/reference.png"
+    },
+    "tanchun-portrait": {
+      "character": "tanchun",
+      "features": "长鸭蛋脸与圆阔下颏；低平舒展长眉；眼距较宽的俊朗平眼；挺直长鼻；宽嘴与饱满下唇，自信爽朗",
+      "seed": 10232016,
+      "faceBox": [
+        72,
+        57,
+        162,
+        168
+      ],
+      "original": "art/identity/originals/tanchun-portrait.png",
+      "final": "art/identity/tanchun-portrait/final.png",
+      "mask": "art/identity/tanchun-portrait/mask-native.png",
+      "request": "art/identity/tanchun-portrait/request.json",
+      "portraitReference": null
+    },
+    "tanchun-chibi": {
+      "character": "tanchun",
+      "features": "长鸭蛋脸与圆阔下颏；低平舒展长眉；眼距较宽的俊朗平眼；挺直长鼻；宽嘴与饱满下唇，自信爽朗",
+      "seed": 10232017,
+      "faceBox": [
+        16,
+        11,
+        39,
+        35
+      ],
+      "original": "art/identity/originals/tanchun-chibi.png",
+      "final": "art/identity/tanchun-chibi/final.png",
+      "mask": "art/identity/tanchun-chibi/mask-native.png",
+      "request": "art/identity/tanchun-chibi/request.json",
+      "portraitReference": "art/identity/tanchun-portrait/reference.png"
+    },
+    "xichun-portrait": {
+      "character": "xichun",
+      "features": "幼圆短脸；短直眉；圆眼偏冷静；小翘鼻；短小嘴，稚气而疏离",
+      "seed": 10232018,
+      "faceBox": [
+        48,
+        36,
+        147,
+        159
+      ],
+      "original": "art/identity/originals/xichun-portrait.png",
+      "final": "art/identity/xichun-portrait/final.png",
+      "mask": "art/identity/xichun-portrait/mask-native.png",
+      "request": "art/identity/xichun-portrait/request.json",
+      "portraitReference": null
+    },
+    "xichun-chibi": {
+      "character": "xichun",
+      "features": "幼圆短脸；短直眉；圆眼偏冷静；小翘鼻；短小嘴，稚气而疏离",
+      "seed": 10232019,
+      "faceBox": [
+        9,
+        13,
+        35,
+        38
+      ],
+      "original": "art/identity/originals/xichun-chibi.png",
+      "final": "art/identity/xichun-chibi/final.png",
+      "mask": "art/identity/xichun-chibi/mask-native.png",
+      "request": "art/identity/xichun-chibi/request.json",
+      "portraitReference": "art/identity/xichun-portrait/reference.png"
+    },
+    "xiren-portrait": {
+      "character": "xiren",
+      "features": "丰润梨形脸；细弯眉；细长温和笑眼；小圆鼻；厚薄适中唇，稳妥亲切",
+      "seed": 10232020,
+      "faceBox": [
+        75,
+        60,
+        162,
+        171
+      ],
+      "original": "art/identity/originals/xiren-portrait.png",
+      "final": "art/identity/xiren-portrait/final.png",
+      "mask": "art/identity/xiren-portrait/mask-native.png",
+      "request": "art/identity/xiren-portrait/request.json",
+      "portraitReference": null
+    },
+    "xiren-chibi": {
+      "character": "xiren",
+      "features": "丰润梨形脸；细弯眉；细长温和笑眼；小圆鼻；厚薄适中唇，稳妥亲切",
+      "seed": 10232021,
+      "faceBox": [
+        16,
+        12,
+        35,
+        34
+      ],
+      "original": "art/identity/originals/xiren-chibi.png",
+      "final": "art/identity/xiren-chibi/final.png",
+      "mask": "art/identity/xiren-chibi/mask-native.png",
+      "request": "art/identity/xiren-chibi/request.json",
+      "portraitReference": "art/identity/xiren-portrait/reference.png"
+    },
+    "xueyan-portrait": {
+      "character": "xueyan",
+      "features": "短圆幼脸；短淡眉；略下垂大眼；小塌鼻；鼓腮小嘴，童稚谨慎",
+      "seed": 10232022,
+      "faceBox": [
+        60,
+        48,
+        150,
+        147
+      ],
+      "original": "art/identity/originals/xueyan-portrait.png",
+      "final": "art/identity/xueyan-portrait/final.png",
+      "mask": "art/identity/xueyan-portrait/mask-native.png",
+      "request": "art/identity/xueyan-portrait/request.json",
+      "portraitReference": null
+    },
+    "xueyan-chibi": {
+      "character": "xueyan",
+      "features": "短圆幼脸；短淡眉；略下垂大眼；小塌鼻；鼓腮小嘴，童稚谨慎",
+      "seed": 10232023,
+      "faceBox": [
+        12,
+        17,
+        48,
+        47
+      ],
+      "original": "art/identity/originals/xueyan-chibi.png",
+      "final": "art/identity/xueyan-chibi/final.png",
+      "mask": "art/identity/xueyan-chibi/mask-native.png",
+      "request": "art/identity/xueyan-chibi/request.json",
+      "portraitReference": "art/identity/xueyan-portrait/reference.png"
+    },
+    "yingge-portrait": {
+      "character": "yingge",
+      "features": "小巧瓜子脸；弯眉一高一低；机敏长眼；细翘鼻；唇角轻上扬，伶俐",
+      "seed": 10232024,
+      "faceBox": [
+        87,
+        54,
+        174,
+        174
+      ],
+      "original": "art/identity/originals/yingge-portrait.png",
+      "final": "art/identity/yingge-portrait/final.png",
+      "mask": "art/identity/yingge-portrait/mask-native.png",
+      "request": "art/identity/yingge-portrait/request.json",
+      "portraitReference": null
+    },
+    "yingge-chibi": {
+      "character": "yingge",
+      "features": "小巧瓜子脸；弯眉一高一低；机敏长眼；细翘鼻；唇角轻上扬，伶俐",
+      "seed": 10232025,
+      "faceBox": [
+        14,
+        13,
+        34,
+        35
+      ],
+      "original": "art/identity/originals/yingge-chibi.png",
+      "final": "art/identity/yingge-chibi/final.png",
+      "mask": "art/identity/yingge-chibi/mask-native.png",
+      "request": "art/identity/yingge-chibi/request.json",
+      "portraitReference": "art/identity/yingge-portrait/reference.png"
+    },
+    "yucun-portrait": {
+      "character": "yucun",
+      "features": "宽方脸；浓剑眉；星眼深而锐；直鼻权腮；宽口方下颌，雄壮带算计",
+      "seed": 10232026,
+      "faceBox": [
+        105,
+        66,
+        198,
+        198
+      ],
+      "original": "art/identity/originals/yucun-portrait.png",
+      "final": "art/identity/yucun-portrait/final.png",
+      "mask": "art/identity/yucun-portrait/mask-native.png",
+      "request": "art/identity/yucun-portrait/request.json",
+      "portraitReference": null
+    },
+    "yucun-chibi": {
+      "character": "yucun",
+      "features": "宽方脸；浓剑眉；星眼深而锐；直鼻权腮；宽口方下颌，雄壮带算计",
+      "seed": 10232027,
+      "faceBox": [
+        19,
+        15,
+        38,
+        39
+      ],
+      "original": "art/identity/originals/yucun-chibi.png",
+      "final": "art/identity/yucun-chibi/final.png",
+      "mask": "art/identity/yucun-chibi/mask-native.png",
+      "request": "art/identity/yucun-chibi/request.json",
+      "portraitReference": "art/identity/yucun-portrait/reference.png"
+    },
+    "ruhai-portrait": {
+      "character": "ruhai",
+      "features": "瘦长椭圆脸；疏长眉；眼窝较深而柔；修长鼻；薄唇清癯，下颌细",
+      "seed": 10232028,
+      "faceBox": [
+        123,
+        63,
+        219,
+        201
+      ],
+      "original": "art/identity/originals/ruhai-portrait.png",
+      "final": "art/identity/ruhai-portrait/final.png",
+      "mask": "art/identity/ruhai-portrait/mask-native.png",
+      "request": "art/identity/ruhai-portrait/request.json",
+      "portraitReference": null
+    },
+    "ruhai-chibi": {
+      "character": "ruhai",
+      "features": "瘦长椭圆脸；疏长眉；眼窝较深而柔；修长鼻；薄唇清癯，下颌细",
+      "seed": 10232029,
+      "faceBox": [
+        22,
+        16,
+        44,
+        40
+      ],
+      "original": "art/identity/originals/ruhai-chibi.png",
+      "final": "art/identity/ruhai-chibi/final.png",
+      "mask": "art/identity/ruhai-chibi/mask-native.png",
+      "request": "art/identity/ruhai-chibi/request.json",
+      "portraitReference": "art/identity/ruhai-portrait/reference.png"
+    },
+    "zheng-portrait": {
+      "character": "zheng",
+      "features": "端正长方脸；浓平眉；眼裂短而严；挺宽鼻；方唇方颏，肃穆",
+      "seed": 10232030,
+      "faceBox": [
+        126,
+        66,
+        219,
+        198
+      ],
+      "original": "art/identity/originals/zheng-portrait.png",
+      "final": "art/identity/zheng-portrait/final.png",
+      "mask": "art/identity/zheng-portrait/mask-native.png",
+      "request": "art/identity/zheng-portrait/request.json",
+      "portraitReference": null
+    },
+    "zheng-chibi": {
+      "character": "zheng",
+      "features": "端正长方脸；浓平眉；眼裂短而严；挺宽鼻；方唇方颏，肃穆",
+      "seed": 10232031,
+      "faceBox": [
+        19,
+        14,
+        37,
+        37
+      ],
+      "original": "art/identity/originals/zheng-chibi.png",
+      "final": "art/identity/zheng-chibi/final.png",
+      "mask": "art/identity/zheng-chibi/mask-native.png",
+      "request": "art/identity/zheng-chibi/request.json",
+      "portraitReference": "art/identity/zheng-portrait/reference.png"
+    },
+    "zhang-portrait": {
+      "character": "zhang",
+      "features": "窄长脸；拱眉；外凸明亮小眼；尖长鼻；窄唇，热切利落",
+      "seed": 10232032,
+      "faceBox": [
+        174,
+        81,
+        273,
+        204
+      ],
+      "original": "art/identity/originals/zhang-portrait.png",
+      "final": "art/identity/zhang-portrait/final.png",
+      "mask": "art/identity/zhang-portrait/mask-native.png",
+      "request": "art/identity/zhang-portrait/request.json",
+      "portraitReference": null
+    },
+    "zhang-chibi": {
+      "character": "zhang",
+      "features": "窄长脸；拱眉；外凸明亮小眼；尖长鼻；窄唇，热切利落",
+      "seed": 10232033,
+      "faceBox": [
+        18,
+        17,
+        38,
+        40
+      ],
+      "original": "art/identity/originals/zhang-chibi.png",
+      "final": "art/identity/zhang-chibi/final.png",
+      "mask": "art/identity/zhang-chibi/mask-native.png",
+      "request": "art/identity/zhang-chibi/request.json",
+      "portraitReference": "art/identity/zhang-portrait/reference.png"
+    },
+    "leng-portrait": {
+      "character": "leng",
+      "features": "宽圆脸；短弯粗眉；眯笑小眼；肉鼻头；阔嘴厚下唇，精明健谈",
+      "seed": 10232034,
+      "faceBox": [
+        123,
+        42,
+        228,
+        177
+      ],
+      "original": "art/identity/originals/leng-portrait.png",
+      "final": "art/identity/leng-portrait/final.png",
+      "mask": "art/identity/leng-portrait/mask-native.png",
+      "request": "art/identity/leng-portrait/request.json",
+      "portraitReference": null
+    },
+    "leng-chibi": {
+      "character": "leng",
+      "features": "宽圆脸；短弯粗眉；眯笑小眼；肉鼻头；阔嘴厚下唇，精明健谈",
+      "seed": 10232035,
+      "faceBox": [
+        16,
+        14,
+        44,
+        44
+      ],
+      "original": "art/identity/originals/leng-chibi.png",
+      "final": "art/identity/leng-chibi/final.png",
+      "mask": "art/identity/leng-chibi/mask-native.png",
+      "request": "art/identity/leng-chibi/request.json",
+      "portraitReference": "art/identity/leng-portrait/reference.png"
+    },
+    "guide-portrait": {
+      "character": "guide",
+      "features": "瘦长老脸；颧骨高；稀眉；深眼窝；弯鼻；薄嘴与缺齿笑，慈和",
+      "seed": 10232036,
+      "faceBox": [
+        195,
+        33,
+        291,
+        177
+      ],
+      "original": "art/identity/originals/guide-portrait.png",
+      "final": "art/identity/guide-portrait/final.png",
+      "mask": "art/identity/guide-portrait/mask-native.png",
+      "request": "art/identity/guide-portrait/request.json",
+      "portraitReference": null
+    },
+    "guide-chibi": {
+      "character": "guide",
+      "features": "瘦长老脸；颧骨高；稀眉；深眼窝；弯鼻；薄嘴与缺齿笑，慈和",
+      "seed": 10232037,
+      "faceBox": [
+        21,
+        14,
+        47,
+        42
+      ],
+      "original": "art/identity/originals/guide-chibi.png",
+      "final": "art/identity/guide-chibi/final.png",
+      "mask": "art/identity/guide-chibi/mask-native.png",
+      "request": "art/identity/guide-chibi/request.json",
+      "portraitReference": "art/identity/guide-portrait/reference.png"
+    },
+    "maid-portrait": {
+      "character": "maid",
+      "features": "宽额小方脸；粗短眉；大圆眼；短鼻；圆唇，精神利落",
+      "seed": 10232038,
+      "faceBox": [
+        78,
+        60,
+        186,
+        189
+      ],
+      "original": "art/identity/originals/maid-portrait.png",
+      "final": "art/identity/maid-portrait/final.png",
+      "mask": "art/identity/maid-portrait/mask-native.png",
+      "request": "art/identity/maid-portrait/request.json",
+      "portraitReference": null
+    },
+    "maid-chibi": {
+      "character": "maid",
+      "features": "宽额小方脸；粗短眉；大圆眼；短鼻；圆唇，精神利落",
+      "seed": 10232039,
+      "faceBox": [
+        11,
+        15,
+        35,
+        39
+      ],
+      "original": "art/identity/originals/maid-chibi.png",
+      "final": "art/identity/maid-chibi/final.png",
+      "mask": "art/identity/maid-chibi/mask-native.png",
+      "request": "art/identity/maid-chibi/request.json",
+      "portraitReference": "art/identity/maid-portrait/reference.png"
+    },
+    "messenger-portrait": {
+      "character": "messenger",
+      "features": "宽扁脸；平直淡眉；细缝眼；鼻翼宽；薄阔嘴，朴实恭谨",
+      "seed": 10232040,
+      "faceBox": [
+        75,
+        42,
+        177,
+        177
+      ],
+      "original": "art/identity/originals/messenger-portrait.png",
+      "final": "art/identity/messenger-portrait/final.png",
+      "mask": "art/identity/messenger-portrait/mask-native.png",
+      "request": "art/identity/messenger-portrait/request.json",
+      "portraitReference": null
+    },
+    "messenger-chibi": {
+      "character": "messenger",
+      "features": "宽扁脸；平直淡眉；细缝眼；鼻翼宽；薄阔嘴，朴实恭谨",
+      "seed": 10232041,
+      "faceBox": [
+        21,
+        12,
+        41,
+        33
+      ],
+      "original": "art/identity/originals/messenger-chibi.png",
+      "final": "art/identity/messenger-chibi/final.png",
+      "mask": "art/identity/messenger-chibi/mask-native.png",
+      "request": "art/identity/messenger-chibi/request.json",
+      "portraitReference": "art/identity/messenger-portrait/reference.png"
+    },
+    "nurse_wang-portrait": {
+      "character": "nurse_wang",
+      "features": "极瘦小老脸；凹颊尖颏；淡短眉；眼尾下垂；小尖鼻；干瘪唇，老迈慈爱",
+      "seed": 10232042,
+      "faceBox": [
+        21,
+        39,
+        129,
+        177
+      ],
+      "original": "art/identity/originals/nurse_wang-portrait.png",
+      "final": "art/identity/nurse_wang-portrait/final.png",
+      "mask": "art/identity/nurse_wang-portrait/mask-native.png",
+      "request": "art/identity/nurse_wang-portrait/request.json",
+      "portraitReference": null
+    },
+    "nurse_wang-chibi": {
+      "character": "nurse_wang",
+      "features": "极瘦小老脸；凹颊尖颏；淡短眉；眼尾下垂；小尖鼻；干瘪唇，老迈慈爱",
+      "seed": 10232043,
+      "faceBox": [
+        39,
+        10,
+        72,
+        45
+      ],
+      "original": "art/identity/originals/nurse_wang-chibi.png",
+      "final": "art/identity/nurse_wang-chibi/final.png",
+      "mask": "art/identity/nurse_wang-chibi/mask-native.png",
+      "request": "art/identity/nurse_wang-chibi/request.json",
+      "portraitReference": "art/identity/nurse_wang-portrait/reference.png"
+    },
+    "nurse_li-portrait": {
+      "character": "nurse_li",
+      "features": "饱满圆方脸；粗平眉；厚眼皮；宽肉鼻；紧闭厚唇，老练严肃",
+      "seed": 10232044,
+      "faceBox": [
+        96,
+        21,
+        192,
+        171
+      ],
+      "original": "art/identity/originals/nurse_li-portrait.png",
+      "final": "art/identity/nurse_li-portrait/final.png",
+      "mask": "art/identity/nurse_li-portrait/mask-native.png",
+      "request": "art/identity/nurse_li-portrait/request.json",
+      "portraitReference": null
+    },
+    "nurse_li-chibi": {
+      "character": "nurse_li",
+      "features": "饱满圆方脸；粗平眉；厚眼皮；宽肉鼻；紧闭厚唇，老练严肃",
+      "seed": 10232045,
+      "faceBox": [
+        17,
+        10,
+        39,
+        37
+      ],
+      "original": "art/identity/originals/nurse_li-chibi.png",
+      "final": "art/identity/nurse_li-chibi/final.png",
+      "mask": "art/identity/nurse_li-chibi/mask-native.png",
+      "request": "art/identity/nurse_li-chibi/request.json",
+      "portraitReference": "art/identity/nurse_li-portrait/reference.png"
+    },
+    "shiyin-portrait": {
+      "character": "shiyin",
+      "features": "宽额瘦颊；细长眉；深静下垂眼；长而微弯鼻；柔和薄唇，恬淡",
+      "seed": 10232046,
+      "faceBox": [
+        180,
+        78,
+        306,
+        273
+      ],
+      "original": "art/identity/originals/shiyin-portrait.png",
+      "final": "art/identity/shiyin-portrait/final.png",
+      "mask": "art/identity/shiyin-portrait/mask-native.png",
+      "request": "art/identity/shiyin-portrait/request.json",
+      "portraitReference": null
+    },
+    "shiyin-chibi": {
+      "character": "shiyin",
+      "features": "宽额瘦颊；细长眉；深静下垂眼；长而微弯鼻；柔和薄唇，恬淡",
+      "seed": 10232047,
+      "faceBox": [
+        19,
+        15,
+        39,
+        40
+      ],
+      "original": "art/identity/originals/shiyin-chibi.png",
+      "final": "art/identity/shiyin-chibi/final.png",
+      "mask": "art/identity/shiyin-chibi/mask-native.png",
+      "request": "art/identity/shiyin-chibi/request.json",
+      "portraitReference": "art/identity/shiyin-portrait/reference.png"
+    },
+    "fengshi-portrait": {
+      "character": "fengshi",
+      "features": "宽颊长鹅蛋脸；低弯眉；细长柔眼；低圆鼻；厚唇，温柔忧愁",
+      "seed": 10232048,
+      "faceBox": [
+        144,
+        75,
+        264,
+        276
+      ],
+      "original": "art/identity/originals/fengshi-portrait.png",
+      "final": "art/identity/fengshi-portrait/final.png",
+      "mask": "art/identity/fengshi-portrait/mask-native.png",
+      "request": "art/identity/fengshi-portrait/request.json",
+      "portraitReference": null
+    },
+    "fengshi-chibi": {
+      "character": "fengshi",
+      "features": "宽颊长鹅蛋脸；低弯眉；细长柔眼；低圆鼻；厚唇，温柔忧愁",
+      "seed": 10232049,
+      "faceBox": [
+        18,
+        11,
+        36,
+        34
+      ],
+      "original": "art/identity/originals/fengshi-chibi.png",
+      "final": "art/identity/fengshi-chibi/final.png",
+      "mask": "art/identity/fengshi-chibi/mask-native.png",
+      "request": "art/identity/fengshi-chibi/request.json",
+      "portraitReference": "art/identity/fengshi-portrait/reference.png"
+    },
+    "yinglian-portrait": {
+      "character": "yinglian",
+      "features": "真正三岁幼童脸；极短面中；高额宽眼距；圆眼小鼻；圆下巴；眉心胭脂痣",
+      "seed": 10232050,
+      "faceBox": [
+        60,
+        54,
+        216,
+        258
+      ],
+      "original": "art/identity/originals/yinglian-portrait.png",
+      "final": "art/identity/yinglian-portrait/final.png",
+      "mask": "art/identity/yinglian-portrait/mask-native.png",
+      "request": "art/identity/yinglian-portrait/request.json",
+      "portraitReference": null
+    },
+    "yinglian-chibi": {
+      "character": "yinglian",
+      "features": "真正三岁幼童脸；极短面中；高额宽眼距；圆眼小鼻；圆下巴；眉心胭脂痣",
+      "seed": 10232051,
+      "faceBox": [
+        10,
+        12,
+        40,
+        37
+      ],
+      "original": "art/identity/originals/yinglian-chibi.png",
+      "final": "art/identity/yinglian-chibi/final.png",
+      "mask": "art/identity/yinglian-chibi/mask-native.png",
+      "request": "art/identity/yinglian-chibi/request.json",
+      "portraitReference": "art/identity/yinglian-portrait/reference.png"
+    },
+    "jiaoxing-portrait": {
+      "character": "jiaoxing",
+      "features": "微方杏仁脸；浓柔眉；弯月笑眼；略宽鼻头；丰唇，亲切坦然",
+      "seed": 10232052,
+      "faceBox": [
+        99,
+        63,
+        243,
+        255
+      ],
+      "original": "art/identity/originals/jiaoxing-portrait.png",
+      "final": "art/identity/jiaoxing-portrait/final.png",
+      "mask": "art/identity/jiaoxing-portrait/mask-native.png",
+      "request": "art/identity/jiaoxing-portrait/request.json",
+      "portraitReference": null
+    },
+    "jiaoxing-chibi": {
+      "character": "jiaoxing",
+      "features": "微方杏仁脸；浓柔眉；弯月笑眼；略宽鼻头；丰唇，亲切坦然",
+      "seed": 10232053,
+      "faceBox": [
+        18,
+        19,
+        46,
+        47
+      ],
+      "original": "art/identity/originals/jiaoxing-chibi.png",
+      "final": "art/identity/jiaoxing-chibi/final.png",
+      "mask": "art/identity/jiaoxing-chibi/mask-native.png",
+      "request": "art/identity/jiaoxing-chibi/request.json",
+      "portraitReference": "art/identity/jiaoxing-portrait/reference.png"
+    },
+    "fengsu-portrait": {
+      "character": "fengsu",
+      "features": "梯形阔下颌；稀短眉；眼小聚拢；蒜鼻；厚唇，下颏肉厚而世故",
+      "seed": 10232054,
+      "faceBox": [
+        198,
+        54,
+        348,
+        249
+      ],
+      "original": "art/identity/originals/fengsu-portrait.png",
+      "final": "art/identity/fengsu-portrait/final.png",
+      "mask": "art/identity/fengsu-portrait/mask-native.png",
+      "request": "art/identity/fengsu-portrait/request.json",
+      "portraitReference": null
+    },
+    "fengsu-chibi": {
+      "character": "fengsu",
+      "features": "梯形阔下颌；稀短眉；眼小聚拢；蒜鼻；厚唇，下颏肉厚而世故",
+      "seed": 10232055,
+      "faceBox": [
+        19,
+        14,
+        47,
+        45
+      ],
+      "original": "art/identity/originals/fengsu-chibi.png",
+      "final": "art/identity/fengsu-chibi/final.png",
+      "mask": "art/identity/fengsu-chibi/mask-native.png",
+      "request": "art/identity/fengsu-chibi/request.json",
+      "portraitReference": "art/identity/fengsu-portrait/reference.png"
+    },
+    "monk-portrait": {
+      "character": "monk",
+      "features": "宽额尖下颏；颧骨突出；一高一低弯眉；细长笑眼；大耳宽鼻；豁达诙谐",
+      "seed": 10232056,
+      "faceBox": [
+        150,
+        0,
+        255,
+        204
+      ],
+      "original": "art/identity/originals/monk-portrait.png",
+      "final": "art/identity/monk-portrait/final.png",
+      "mask": "art/identity/monk-portrait/mask-native.png",
+      "request": "art/identity/monk-portrait/request.json",
+      "portraitReference": null
+    },
+    "monk-chibi": {
+      "character": "monk",
+      "features": "宽额尖下颏；颧骨突出；一高一低弯眉；细长笑眼；大耳宽鼻；豁达诙谐",
+      "seed": 10232057,
+      "faceBox": [
+        19,
+        0,
+        46,
+        43
+      ],
+      "original": "art/identity/originals/monk-chibi.png",
+      "final": "art/identity/monk-chibi/final.png",
+      "mask": "art/identity/monk-chibi/mask-native.png",
+      "request": "art/identity/monk-chibi/request.json",
+      "portraitReference": "art/identity/monk-portrait/reference.png"
+    },
+    "taoist-portrait": {
+      "character": "taoist",
+      "features": "狭长骨相；高额；斜飞长眉；深长眼；鹰钩鼻；薄唇，疏狂",
+      "seed": 10232058,
+      "faceBox": [
+        156,
+        24,
+        249,
+        192
+      ],
+      "original": "art/identity/originals/taoist-portrait.png",
+      "final": "art/identity/taoist-portrait/final.png",
+      "mask": "art/identity/taoist-portrait/mask-native.png",
+      "request": "art/identity/taoist-portrait/request.json",
+      "portraitReference": null
+    },
+    "taoist-chibi": {
+      "character": "taoist",
+      "features": "狭长骨相；高额；斜飞长眉；深长眼；鹰钩鼻；薄唇，疏狂",
+      "seed": 10232059,
+      "faceBox": [
+        22,
+        7,
+        41,
+        44
+      ],
+      "original": "art/identity/originals/taoist-chibi.png",
+      "final": "art/identity/taoist-chibi/final.png",
+      "mask": "art/identity/taoist-chibi/mask-native.png",
+      "request": "art/identity/taoist-chibi/request.json",
+      "portraitReference": "art/identity/taoist-portrait/reference.png"
+    },
+    "kongkong-portrait": {
+      "character": "kongkong",
+      "features": "方额长脸；平直长眉；宽眼距静眼；方直鼻；薄而平口，沉思",
+      "seed": 10232060,
+      "faceBox": [
+        192,
+        102,
+        336,
+        312
+      ],
+      "original": "art/identity/originals/kongkong-portrait.png",
+      "final": "art/identity/kongkong-portrait/final.png",
+      "mask": "art/identity/kongkong-portrait/mask-native.png",
+      "request": "art/identity/kongkong-portrait/request.json",
+      "portraitReference": null
+    },
+    "kongkong-chibi": {
+      "character": "kongkong",
+      "features": "方额长脸；平直长眉；宽眼距静眼；方直鼻；薄而平口，沉思",
+      "seed": 10232061,
+      "faceBox": [
+        17,
+        17,
+        43,
+        48
+      ],
+      "original": "art/identity/originals/kongkong-chibi.png",
+      "final": "art/identity/kongkong-chibi/final.png",
+      "mask": "art/identity/kongkong-chibi/mask-native.png",
+      "request": "art/identity/kongkong-chibi/request.json",
+      "portraitReference": "art/identity/kongkong-portrait/reference.png"
+    },
+    "huoqi-portrait": {
+      "character": "huoqi",
+      "features": "短方脸；粗短低眉；小圆眼；扁鼻；厚唇，笨拙朴实",
+      "seed": 10232062,
+      "faceBox": [
+        165,
+        63,
+        306,
+        249
+      ],
+      "original": "art/identity/originals/huoqi-portrait.png",
+      "final": "art/identity/huoqi-portrait/final.png",
+      "mask": "art/identity/huoqi-portrait/mask-native.png",
+      "request": "art/identity/huoqi-portrait/request.json",
+      "portraitReference": null
+    },
+    "huoqi-chibi": {
+      "character": "huoqi",
+      "features": "短方脸；粗短低眉；小圆眼；扁鼻；厚唇，笨拙朴实",
+      "seed": 10232063,
+      "faceBox": [
+        12,
+        24,
+        52,
+        53
+      ],
+      "original": "art/identity/originals/huoqi-chibi.png",
+      "final": "art/identity/huoqi-chibi/final.png",
+      "mask": "art/identity/huoqi-chibi/mask-native.png",
+      "request": "art/identity/huoqi-chibi/request.json",
+      "portraitReference": "art/identity/huoqi-portrait/reference.png"
+    },
+    "oldmonk-portrait": {
+      "character": "oldmonk",
+      "features": "骨瘦凹陷老脸；垂白眉；深陷半闭眼；长弯鼻；瘪嘴，迟钝衰老",
+      "seed": 10232064,
+      "faceBox": [
+        228,
+        3,
+        381,
+        273
+      ],
+      "original": "art/identity/originals/oldmonk-portrait.png",
+      "final": "art/identity/oldmonk-portrait/final.png",
+      "mask": "art/identity/oldmonk-portrait/mask-native.png",
+      "request": "art/identity/oldmonk-portrait/request.json",
+      "portraitReference": null
+    },
+    "oldmonk-chibi": {
+      "character": "oldmonk",
+      "features": "骨瘦凹陷老脸；垂白眉；深陷半闭眼；长弯鼻；瘪嘴，迟钝衰老",
+      "seed": 10232065,
+      "faceBox": [
+        21,
+        0,
+        52,
+        46
+      ],
+      "original": "art/identity/originals/oldmonk-chibi.png",
+      "final": "art/identity/oldmonk-chibi/final.png",
+      "mask": "art/identity/oldmonk-chibi/mask-native.png",
+      "request": "art/identity/oldmonk-chibi/request.json",
+      "portraitReference": "art/identity/oldmonk-portrait/reference.png"
+    }
+  }
+}

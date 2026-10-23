@@ -1,0 +1,8 @@
+{
+  "id": "grandmother-portrait",
+  "seed": 10232006,
+  "features": "宽阔圆方脸；丰颊重下颌；长寿眉；笑眼但目光有威；宽鼻头；笑纹深而温厚",
+  "prompt": "Redesign ONLY the facial features of the person in <image1>. The new distinctive identity is: a broad round-square elderly face, substantial full cheeks and heavy rounded jaw, long sparse pale eyebrows, small smiling deep-set eyes with authoritative focus, broad fleshy nose tip, generous mouth, pronounced crow feet and smile creases; warm commanding matriarch, not frail. Keep exactly the existing head position, head size, angle, hairline, hairstyle, hair ornaments, clothing, pose and white background. Paint the new facial geometry and expression in the SAME delicate Chinese ink and watercolor hand-painted illustration style as image1, with subtle natural skin tones and fine brush lines. Make the specified face shape, eye shape and spacing, eyebrows, nose and lips clearly visible and character-specific. Avoid generic identical doll faces. This is a single head detail crop, not a character sheet. No text.",
+  "model": "qwen_image_2.1_int8_convrot",
+  "steps": 30
+}

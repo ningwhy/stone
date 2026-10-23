@@ -1,0 +1,50 @@
+{
+  "id": "rongguo_entry",
+  "title": "荣国府入府片区 · 改编布局草案",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "zones": [
+    {"id":"A","name":"西角门","rect":[1,29,5,8]},
+    {"id":"B","name":"前段通道","rect":[6,27,10,9]},
+    {"id":"C","name":"垂花门","rect":[10,24,7,3]},
+    {"id":"D","name":"穿堂","rect":[10,18,7,6]},
+    {"id":"E","name":"贾母院落","rect":[16,10,12,9]},
+    {"id":"F","name":"贾母正房","rect":[16,4,12,6]},
+    {"id":"G","name":"西侧廊房","rect":[13,10,3,7]},
+    {"id":"H","name":"东侧廊房","rect":[28,10,5,9]},
+    {"id":"I","name":"后续区域","rect":[29,24,7,11]}
+  ],
+  "blockers": [{"id":"screen","name":"插屏","rect":[13,20,2,1]}],
+  "anchors": {
+    "west_gate":[3,32], "handoff":[10,32], "outer_turn":[13,32],
+    "flower_gate_stop":[13,28], "flower_gate":[13,25], "passage_entry":[13,23],
+    "screen_detour_start":[11,23], "screen_detour":[11,19], "passage_exit":[11,17],
+    "courtyard_west":[16,17], "courtyard_center":[19,17], "hall_steps":[19,11],
+    "hall_door":[19,9], "daiyu_greet":[19,7], "daiyu_seat":[20,6],
+    "grandmother_seat":[19,6], "grandmother_greet":[19,8],
+    "xing_seat":[17,5], "wang_seat":[23,5], "liwan_seat":[25,6],
+    "yingchun_seat":[22,8], "tanchun_seat":[23,8], "xichun_seat":[24,8],
+    "feng_entry":[27,14], "feng_courtyard":[24,14], "feng_door":[24,9], "feng_meet":[21,7],
+    "guide_stop":[12,28], "maid_wait":[18,10], "pinger_stop":[25,9]
+  },
+  "routes": [
+    {"id":"arrival","name":"入府路线","anchors":["west_gate","handoff","outer_turn","flower_gate_stop","flower_gate","passage_entry","screen_detour_start","screen_detour","passage_exit","courtyard_west","courtyard_center","hall_steps","hall_door","daiyu_greet"]},
+    {"id":"feng_arrival","name":"凤姐入场","anchors":["feng_entry","feng_courtyard","feng_door","feng_meet"]}
+  ],
+  "cast": [
+    {"id":"daiyu","name":"黛玉","anchor":"daiyu_greet","shownFrom":"N005","note":"此处是会面站位；N005 在 flower_gate_stop 出现，随后移动至此"},
+    {"id":"grandmother","name":"贾母","anchor":"grandmother_seat","shownFrom":"N010"},
+    {"id":"xing","name":"邢夫人","anchor":"xing_seat","shownFrom":"N010"},
+    {"id":"wang","name":"王夫人","anchor":"wang_seat","shownFrom":"N010"},
+    {"id":"liwan","name":"李纨","anchor":"liwan_seat","shownFrom":"N010"},
+    {"id":"yingchun","name":"迎春","anchor":"yingchun_seat","shownFrom":"N016"},
+    {"id":"tanchun","name":"探春","anchor":"tanchun_seat","shownFrom":"N016"},
+    {"id":"xichun","name":"惜春","anchor":"xichun_seat","shownFrom":"N016"},
+    {"id":"feng","name":"凤姐","anchor":"feng_entry","shownFrom":"N019"},
+    {"id":"guide","name":"引路婆子","anchor":"guide_stop","shownFrom":"N005"},
+    {"id":"maid","name":"通报丫鬟","anchor":"maid_wait","shownFrom":"N008"},
+    {"id":"pinger","name":"平儿（待校订）","anchor":"pinger_stop","shownFrom":"N019"}
+  ]
+}

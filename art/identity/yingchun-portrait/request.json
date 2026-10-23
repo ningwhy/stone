@@ -1,0 +1,8 @@
+{
+  "id": "yingchun-portrait",
+  "seed": 10232014,
+  "features": "短圆脸；丰颊圆下巴；短淡弯眉；眼距略宽的柔缓垂眼；短圆鼻；圆小嘴，温厚怯弱",
+  "prompt": "Redesign ONLY the facial features of the person in <image1>. The new distinctive identity is: a distinctly SHORT ROUND face with wide FULL LOWER CHEEKS and a broad ROUND CHIN, cheek width nearly equal to forehead width, short faint gently curved brows, widely spaced SMALL SOFT DROOPING EYES with relaxed heavy upper lids, a SHORT low round nose, a small modest rounded mouth; gentle passive hesitant warmth, NO tapered pointed jaw, NO elongated face, NO winged eyeliner. Keep the head center and angle, hairline, hairstyle, ornaments, clothing and white background. You MUST change the original facial outline and facial proportions to match the specified new identity; do not retain the original pointed doll face when a broad or square face is requested. Paint the new facial geometry and expression in the SAME delicate Chinese ink and watercolor hand-painted illustration style as image1, with subtle natural skin tones and fine brush lines. Make the specified face shape, eye shape and spacing, eyebrows, nose and lips clearly visible and character-specific. Emphasize the characteristic facial proportions enough to read in a small game portrait. Use natural eyes and lips, not glamorous makeup, dark eyeliner or a generic beauty filter. Avoid generic identical doll faces. This is a single head detail crop, not a character sheet. No text.",
+  "model": "qwen_image_2.1_int8_convrot",
+  "steps": 30
+}

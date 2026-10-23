@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "estate-feng_s10222403-01",
+  "seed": 10222403,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n可直接抠图用于等距地图的单个完整宅院建筑群素材。清代荣国府王熙凤与贾琏居住的小院，入口一面粉油大影壁，影壁后敞开侧门，北面精致三间正屋，左右两翼抄手游廊围合，灰绿瓦顶，朱红门窗和细金线，院中一株石榴与两盆花，华贵利落。严格二比一菱形正交等距俯视，从东南侧看见南立面与东立面，屋顶可见，无透视消失点。院落与低矮围墙连成一个完整主体，紧凑方形占地，不要大范围地面底板，不要漂浮岛屿，不要人物。纯白背景，主体完整居中，四周留白，无文字无标注无签名。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "8bca3d6c-0e2a-4151-b4c9-78057047b33e",
+  "generated_at": "2026-10-22 22:26:39",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1024x1024"
+}

@@ -1,0 +1,398 @@
+{
+  "daiyu-chibi": [
+    19,
+    21,
+    46,
+    51
+  ],
+  "daiyu-portrait": [
+    135,
+    75,
+    237,
+    249
+  ],
+  "baoyu-portrait": [
+    81,
+    12,
+    195,
+    90
+  ],
+  "baoyu-chibi": [
+    13,
+    23,
+    45,
+    49
+  ],
+  "feng-portrait": [
+    66,
+    45,
+    135,
+    135
+  ],
+  "feng-chibi": [
+    14,
+    15,
+    32,
+    34
+  ],
+  "grandmother-portrait": [
+    99,
+    21,
+    207,
+    174
+  ],
+  "grandmother-chibi": [
+    15,
+    6,
+    42,
+    41
+  ],
+  "wang-portrait": [
+    72,
+    48,
+    162,
+    177
+  ],
+  "wang-chibi": [
+    12,
+    12,
+    34,
+    37
+  ],
+  "xing-portrait": [
+    75,
+    48,
+    153,
+    162
+  ],
+  "xing-chibi": [
+    18,
+    13,
+    35,
+    33
+  ],
+  "liwan-portrait": [
+    93,
+    48,
+    183,
+    171
+  ],
+  "liwan-chibi": [
+    14,
+    12,
+    33,
+    35
+  ],
+  "yingchun-portrait": [
+    75,
+    57,
+    162,
+    177
+  ],
+  "yingchun-chibi": [
+    13,
+    16,
+    40,
+    40
+  ],
+  "tanchun-portrait": [
+    72,
+    57,
+    162,
+    168
+  ],
+  "tanchun-chibi": [
+    16,
+    11,
+    39,
+    35
+  ],
+  "xichun-portrait": [
+    48,
+    36,
+    147,
+    159
+  ],
+  "xichun-chibi": [
+    9,
+    13,
+    35,
+    38
+  ],
+  "xiren-portrait": [
+    75,
+    60,
+    162,
+    171
+  ],
+  "xiren-chibi": [
+    2,
+    37,
+    46,
+    60
+  ],
+  "xueyan-portrait": [
+    60,
+    48,
+    150,
+    147
+  ],
+  "xueyan-chibi": [
+    12,
+    17,
+    48,
+    47
+  ],
+  "yingge-portrait": [
+    87,
+    54,
+    174,
+    174
+  ],
+  "yingge-chibi": [
+    14,
+    13,
+    34,
+    35
+  ],
+  "yucun-portrait": [
+    105,
+    66,
+    198,
+    198
+  ],
+  "yucun-chibi": [
+    19,
+    15,
+    38,
+    39
+  ],
+  "ruhai-portrait": [
+    123,
+    63,
+    219,
+    201
+  ],
+  "ruhai-chibi": [
+    22,
+    16,
+    44,
+    40
+  ],
+  "zhang-portrait": [
+    174,
+    81,
+    273,
+    204
+  ],
+  "zhang-chibi": [
+    18,
+    17,
+    38,
+    40
+  ],
+  "leng-portrait": [
+    123,
+    42,
+    228,
+    177
+  ],
+  "leng-chibi": [
+    16,
+    14,
+    44,
+    44
+  ],
+  "zheng-portrait": [
+    126,
+    66,
+    219,
+    198
+  ],
+  "zheng-chibi": [
+    19,
+    14,
+    37,
+    37
+  ],
+  "guide-portrait": [
+    195,
+    33,
+    291,
+    177
+  ],
+  "guide-chibi": [
+    21,
+    14,
+    47,
+    42
+  ],
+  "maid-portrait": [
+    78,
+    60,
+    186,
+    189
+  ],
+  "maid-chibi": [
+    11,
+    15,
+    35,
+    39
+  ],
+  "messenger-portrait": [
+    75,
+    42,
+    177,
+    177
+  ],
+  "messenger-chibi": [
+    21,
+    12,
+    41,
+    33
+  ],
+  "nurse_wang-portrait": [
+    21,
+    39,
+    129,
+    177
+  ],
+  "nurse_wang-chibi": [
+    39,
+    10,
+    72,
+    45
+  ],
+  "nurse_li-portrait": [
+    96,
+    21,
+    192,
+    171
+  ],
+  "nurse_li-chibi": [
+    17,
+    10,
+    39,
+    37
+  ],
+  "shiyin-portrait": [
+    180,
+    78,
+    306,
+    273
+  ],
+  "shiyin-chibi": [
+    19,
+    15,
+    39,
+    40
+  ],
+  "fengshi-portrait": [
+    144,
+    75,
+    264,
+    276
+  ],
+  "fengshi-chibi": [
+    0,
+    37,
+    44,
+    60
+  ],
+  "yinglian-portrait": [
+    60,
+    54,
+    216,
+    258
+  ],
+  "yinglian-chibi": [
+    10,
+    12,
+    40,
+    37
+  ],
+  "jiaoxing-portrait": [
+    99,
+    63,
+    243,
+    255
+  ],
+  "jiaoxing-chibi": [
+    18,
+    19,
+    46,
+    47
+  ],
+  "fengsu-portrait": [
+    198,
+    54,
+    348,
+    249
+  ],
+  "fengsu-chibi": [
+    19,
+    14,
+    47,
+    45
+  ],
+  "monk-portrait": [
+    150,
+    0,
+    255,
+    204
+  ],
+  "monk-chibi": [
+    19,
+    0,
+    46,
+    43
+  ],
+  "taoist-portrait": [
+    156,
+    24,
+    249,
+    192
+  ],
+  "taoist-chibi": [
+    22,
+    7,
+    41,
+    44
+  ],
+  "kongkong-portrait": [
+    192,
+    102,
+    336,
+    312
+  ],
+  "kongkong-chibi": [
+    17,
+    17,
+    43,
+    48
+  ],
+  "huoqi-portrait": [
+    165,
+    63,
+    306,
+    249
+  ],
+  "huoqi-chibi": [
+    12,
+    24,
+    52,
+    53
+  ],
+  "oldmonk-portrait": [
+    228,
+    3,
+    381,
+    273
+  ],
+  "oldmonk-chibi": [
+    21,
+    0,
+    52,
+    46
+  ]
+}

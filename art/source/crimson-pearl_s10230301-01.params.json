@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "crimson-pearl_s10230301-01",
+  "seed": 10230301,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n单株红楼梦神话绛珠仙草，几片纤细深绿叶，顶端一颗红色珠状花苞，根部一块小小青石，露珠晶莹，古典工笔淡彩游戏素材，完整植物，等距俯视，纯白背景，无人物无文字",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "7d809d16-239f-4573-93cf-c617db7f7108",
+  "generated_at": "2026-10-23 00:57:17",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1024x1024"
+}

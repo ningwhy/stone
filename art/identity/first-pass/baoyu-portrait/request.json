@@ -1,0 +1,8 @@
+{
+  "id": "baoyu-portrait",
+  "seed": 10232002,
+  "features": "饱满短鹅蛋脸；宽额；浓长平眉；明亮桃花眼；圆润鼻尖；饱满弓唇，喜悦灵动",
+  "prompt": "Redesign ONLY the facial features of the person in <image1>. The new distinctive identity is: a short full oval face, broad smooth forehead, long dark almost horizontal eyebrows, large luminous peach-blossom eyes with rounded inner corners and gently lifted outer corners, a short rounded nose tip, full well-shaped cupid-bow lips, plump youthful cheeks and lively open warmth; a young BOY rather than a woman. Keep exactly the existing head position, head size, angle, hairline, hairstyle, hair ornaments, clothing, pose and white background. Paint the new facial geometry and expression in the SAME delicate Chinese ink and watercolor hand-painted illustration style as image1, with subtle natural skin tones and fine brush lines. Make the specified face shape, eye shape and spacing, eyebrows, nose and lips clearly visible and character-specific. Avoid generic identical doll faces. This is a single head detail crop, not a character sheet. No text.",
+  "model": "qwen_image_2.1_int8_convrot",
+  "steps": 30
+}

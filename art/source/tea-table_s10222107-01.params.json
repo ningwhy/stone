@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "tea-table_s10222107-01",
+  "seed": 10222107,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏素材，清代小型木炕桌，两个茶盅，青花盖碗，黑漆几面，完整独立。二比一菱形正交等距俯视，无透视消失点，完整居中，四周留白。纯白背景，无地面平台，无周围建筑，无文字牌匾，无签名。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "58315169-f07c-481e-82f5-c5c42f76ac49",
+  "generated_at": "2026-10-22 19:03:56",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1024x1024"
+}

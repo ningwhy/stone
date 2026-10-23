@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "guide-portrait_s10222306-01",
+  "seed": 10222306,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立单个人物设定，红楼梦原创形象。六十岁清代荣国府引路嬷嬷，慈祥朴素的老妇，灰白头发盘成低髻，青褐布抹额，藕灰交领短袄和深棕裙，手向前略伸做引路手势，无金冠无贵族华服。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。半身立绘，头顶至腰下完整，人物正面略向左，头肩清楚，双手完整，四周留白。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "ecbe2ec4-84c0-468a-9567-f84c238fbe90",
+  "generated_at": "2026-10-22 22:24:52",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x1024"
+}

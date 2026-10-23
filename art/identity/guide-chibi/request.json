@@ -1,0 +1,8 @@
+{
+  "id": "guide-chibi",
+  "seed": 10232037,
+  "features": "瘦长老脸；颧骨高；稀眉；深眼窝；弯鼻；薄嘴与缺齿笑，慈和",
+  "prompt": "Redesign ONLY the facial features of the person in <image1>. The new distinctive identity is: a lean long elderly face with pronounced high cheekbones and hollow cheeks, sparse uneven brows, small deep-set kindly eyes, a slightly hooked long nose, thin smiling lips and a recessed chin, deep age lines; weathered but benevolent. Keep the head center and angle, hairline, hairstyle, ornaments, clothing and white background. You MUST change the original facial outline and facial proportions to match the specified new identity; do not retain the original pointed doll face when a broad or square face is requested. Paint the new facial geometry and expression in the SAME delicate Chinese ink and watercolor hand-painted illustration style as image1, with subtle natural skin tones and fine brush lines. Make the specified face shape, eye shape and spacing, eyebrows, nose and lips clearly visible and character-specific. Emphasize the characteristic facial proportions enough to read in a small game portrait. Use natural eyes and lips, not glamorous makeup, dark eyeliner or a generic beauty filter. Avoid generic identical doll faces. This is a single head detail crop, not a character sheet. No text. The face in <image2> is the approved SAME CHARACTER identity: transfer its distinctive eyebrow/eye shapes, nose, mouth, age and temperament into the chibi in <image1>, keeping image1 head scale and cute simplified brushwork. Keep eyes readable at tiny map scale; do not copy realistic portrait proportions.",
+  "model": "qwen_image_2.1_int8_convrot",
+  "steps": 30
+}

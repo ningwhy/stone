@@ -1,0 +1,56 @@
+[
+  {
+    "id": "prologue",
+    "title": "雨村复职 · 黛玉辞父",
+    "scene": "lin",
+    "start": "P001"
+  },
+  {
+    "id": "arrival",
+    "title": "初入荣府 · 步步留心",
+    "scene": "capital",
+    "start": "A001"
+  },
+  {
+    "id": "reunion",
+    "title": "祖孙相见 · 姊妹相认",
+    "scene": "entry",
+    "start": "N005"
+  },
+  {
+    "id": "feng",
+    "title": "凤姐迎客 · 笑语先闻",
+    "scene": "entry",
+    "start": "F001"
+  },
+  {
+    "id": "uncles",
+    "title": "拜访母舅 · 两院行走",
+    "scene": "east",
+    "start": "U001"
+  },
+  {
+    "id": "dinner",
+    "title": "晚膳礼序 · 灯下闲谈",
+    "scene": "dinner",
+    "start": "D001"
+  },
+  {
+    "id": "meeting",
+    "title": "宝黛初见 · 因玉生波",
+    "scene": "dinner",
+    "start": "B001"
+  },
+  {
+    "id": "night",
+    "title": "碧纱橱 · 夜话宽心",
+    "scene": "night",
+    "start": "T001"
+  },
+  {
+    "id": "letter",
+    "title": "次日省晨 · 金陵来信",
+    "scene": "night",
+    "start": "L001"
+  }
+]

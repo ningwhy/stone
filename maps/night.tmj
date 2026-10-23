@@ -1,0 +1,495 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "PlanZones",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 1,
+          "name": "A0 贾母院 · 碧纱橱与外间",
+          "x": 640,
+          "y": 448,
+          "width": 1280,
+          "height": 1280,
+          "rotation": 0,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PlanBlockers",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 3,
+      "name": "Anchors",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 2,
+          "name": "outer_door",
+          "x": 928.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 3,
+          "name": "grandmother_bed",
+          "x": 1056.0,
+          "y": 672.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 4,
+          "name": "daiyu_bed",
+          "x": 1376.0,
+          "y": 736.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 5,
+          "name": "baoyu_bed",
+          "x": 1120.0,
+          "y": 1312.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 6,
+          "name": "xiren_place",
+          "x": 1184.0,
+          "y": 1376.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 7,
+          "name": "xueyan_place",
+          "x": 1504.0,
+          "y": 864.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 8,
+          "name": "yingge_place",
+          "x": 1504.0,
+          "y": 736.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 9,
+          "name": "bedside",
+          "x": 1440.0,
+          "y": 736.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 10,
+          "name": "night_talk",
+          "x": 1376.0,
+          "y": 1056.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 11,
+          "name": "letter_place",
+          "x": 1056.0,
+          "y": 1376.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Routes",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 12,
+          "name": "场景动线",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "main",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "outer_door,grandmother_bed,daiyu_bed,baoyu_bed,xiren_place,xueyan_place,yingge_place,bedside,night_talk,letter_place",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Art",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 13,
+          "name": "canopy-bed",
+          "x": 1378.985625,
+          "y": 802.8045749999999,
+          "width": 255.0,
+          "height": 311.95,
+          "rotation": 0,
+          "visible": true,
+          "gid": 41,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "canopy-bed",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": -400,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "canopy-bed",
+          "x": 1058.45875,
+          "y": 738.3096499999999,
+          "width": 210.0,
+          "height": 256.9,
+          "rotation": 0,
+          "visible": true,
+          "gid": 41,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "canopy-bed",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": -400,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "canopy-bed",
+          "x": 1122.81,
+          "y": 1378.6396,
+          "width": 240.0,
+          "height": 293.6,
+          "rotation": 0,
+          "visible": true,
+          "gid": 41,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "canopy-bed",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": -400,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "wood-screen",
+          "x": 1568.468,
+          "y": 1056.468,
+          "width": 171.0,
+          "height": 154.8,
+          "rotation": 0,
+          "visible": true,
+          "gid": 39,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "wood-screen",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "tea-table",
+          "x": 864.6510000000001,
+          "y": 1312.651,
+          "width": 91.0,
+          "height": 74.19999999999999,
+          "rotation": 0,
+          "visible": true,
+          "gid": 43,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "tea-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ArtFootprints",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 18,
+          "name": "canopy-bed",
+          "x": 1344,
+          "y": 768,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 19,
+          "name": "canopy-bed",
+          "x": 1024,
+          "y": 704,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 20,
+          "name": "canopy-bed",
+          "x": 1088,
+          "y": 1344,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 21,
+          "name": "wood-screen",
+          "x": 1536,
+          "y": 1024,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 22,
+          "name": "tea-table",
+          "x": 832,
+          "y": 1280,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Labels",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "objects": [
+        {
+          "id": 23,
+          "name": "贾母套间",
+          "x": 992.0,
+          "y": 672.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 24,
+          "name": "碧纱橱",
+          "x": 1440.0,
+          "y": 608.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 25,
+          "name": "外间暖阁",
+          "x": 1120.0,
+          "y": 1376.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "rongguo-art.tsj"
+    }
+  ],
+  "nextlayerid": 8,
+  "nextobjectid": 26,
+  "properties": [
+    {
+      "name": "sceneId",
+      "type": "string",
+      "value": "night"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "value": "贾母院 · 碧纱橱与外间"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "value": "night"
+    }
+  ]
+}

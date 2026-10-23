@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "baoyu-portrait-v2_s10222200-01",
+  "seed": 10222200,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n清代古典小说红楼梦中的少年公子贾宝玉，十二岁稚气少年，精致中式手绘半身立绘，从头冠到腰部，乌黑头发束在头顶，头戴醒目的束发嵌宝紫金冠，齐眉勒二龙抢珠金抹额，额头不剃发，古代长发完全盘束，面如春花，眉如墨画，双目有神。大红金百蝶箭袖，石青外褂，项上五色丝绦系一枚通灵宝玉。红楼梦古典贵族少年，四周留白，完整头顶到腰部，双手拢身前，纯白背景，没有其他任何物体或文字。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "5ab23260-97c3-44ae-80e2-bab897e61fda",
+  "generated_at": "2026-10-22 21:16:06",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x1024"
+}

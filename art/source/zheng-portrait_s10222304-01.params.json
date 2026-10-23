@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "zheng-portrait_s10222304-01",
+  "seed": 10222304,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立单个人物设定，红楼梦原创形象。五十岁清代贵族文官贾政，端方长脸，整齐黑须，黑色便帽，藏青长袍，灰青外褂，双手端庄交叠，严正儒雅。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。半身立绘，头顶至腰下完整，人物正面略向左，头肩清楚，双手完整，四周留白。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "cad52ae2-8c59-4f27-ae49-411a51806f3c",
+  "generated_at": "2026-10-22 22:24:38",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x1024"
+}

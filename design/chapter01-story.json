@@ -1,0 +1,1410 @@
+[
+  {
+    "id": "C1-001",
+    "chapter": "c1-stone",
+    "scene": "myth",
+    "title": "石头来历 · 无材补天",
+    "place": "大荒山 · 青埂峰（神话）",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "这部书借通灵之说，把往日闺阁中的人、事与悲欢写下来。故事的来历，要从一块未能补天的石头说起。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "monk",
+        "at": "entry"
+      },
+      {
+        "type": "show",
+        "actor": "taoist",
+        "at": "path"
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "列位看官，你道此书从何而来",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-002",
+    "chapter": "c1-stone",
+    "scene": "myth",
+    "title": "石头来历 · 无材补天",
+    "place": "大荒山 · 青埂峰（神话）",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "女娲炼石补天，独剩下一块，弃在青埂峰下。石头通了灵性，因无材入选，日夜自叹。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "monk",
+        "via": [
+          "guest"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "taoist",
+        "via": [
+          "right"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "列位看官，你道此书从何而来",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-003",
+    "chapter": "c1-stone",
+    "scene": "myth",
+    "title": "顽石动凡心",
+    "place": "大荒山 · 青埂峰（神话）",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "一僧一道坐在石旁，从神仙玄幻谈到人间富贵。石头听动了凡心，央求二人携它到红尘享受几年。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "列位看官，你道此书从何而来",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-004",
+    "chapter": "c1-stone",
+    "scene": "myth",
+    "title": "石头来历 · 无材补天",
+    "place": "大荒山 · 青埂峰（神话）",
+    "focus": "guest",
+    "speaker": "monk",
+    "text": "红尘虽有乐事，也总连着美中不足、好事多磨。瞬息间乐极悲生，到头不过一梦。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "列位看官，你道此书从何而来",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-005",
+    "chapter": "c1-stone",
+    "scene": "myth",
+    "title": "石头来历 · 无材补天",
+    "place": "大荒山 · 青埂峰（神话）",
+    "focus": "guest",
+    "speaker": "taoist",
+    "text": "你既一再苦求，我们便带你去。只怕到了不得意的时候，又要后悔。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "列位看官，你道此书从何而来",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-006",
+    "chapter": "c1-stone",
+    "scene": "myth",
+    "title": "幻形入世",
+    "place": "大荒山 · 青埂峰（神话）",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "僧人施法，把大石缩成可佩可拿的美玉，袖在身中，与道人飘然而去。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "monk",
+        "via": [
+          "path",
+          "exit"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "taoist",
+        "via": [
+          "path",
+          "exit"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "列位看官，你道此书从何而来",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-007",
+    "chapter": "c1-stone",
+    "scene": "myth",
+    "title": "石头来历 · 无材补天",
+    "place": "大荒山 · 青埂峰（神话）",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "又不知几世几劫，空空道人经过青埂峰，看见石上刻着入世后的离合悲欢。",
+    "actions": [
+      {
+        "type": "hide",
+        "actor": "monk"
+      },
+      {
+        "type": "hide",
+        "actor": "taoist"
+      },
+      {
+        "type": "show",
+        "actor": "kongkong",
+        "at": "entry"
+      },
+      {
+        "type": "move",
+        "actor": "kongkong",
+        "via": [
+          "guest"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "列位看官，你道此书从何而来",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-008",
+    "chapter": "c1-stone",
+    "scene": "myth",
+    "title": "石头来历 · 无材补天",
+    "place": "大荒山 · 青埂峰（神话）",
+    "focus": "guest",
+    "speaker": "kongkong",
+    "text": "没有确切朝代，又不写帝王治世，只写这些女子与闺阁琐事，世人会爱看么？",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "列位看官，你道此书从何而来",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-009",
+    "chapter": "c1-stone",
+    "scene": "myth",
+    "title": "石头来历 · 无材补天",
+    "place": "大荒山 · 青埂峰（神话）",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "石头答说：只求按亲见亲闻写出人情事理，不胡编才子佳人，不为求奇丢掉真实。空空道人重读之后，抄录问世。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "列位看官，你道此书从何而来",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-010",
+    "chapter": "c1-stone",
+    "scene": "myth",
+    "title": "石头来历 · 无材补天",
+    "place": "大荒山 · 青埂峰（神话）",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "书名数易，后来曹雪芹在悼红轩披阅增删。开篇以一把辛酸泪，留下谁解其中味的疑问。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "kongkong",
+        "via": [
+          "path",
+          "exit"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "列位看官，你道此书从何而来",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-011",
+    "chapter": "c1-dream",
+    "scene": "dream",
+    "title": "士隐午梦 · 绛珠还泪",
+    "place": "太虚幻境 · 灵河（梦中） · 梦境",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "姑苏阊门外，仁清巷葫芦庙旁，住着乡宦甄士隐。妻子封氏贤淑，独女英莲才三岁。夏日书倦，他伏几入梦。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "shiyin",
+        "at": "entry"
+      },
+      {
+        "type": "show",
+        "actor": "monk",
+        "at": "guest"
+      },
+      {
+        "type": "show",
+        "actor": "taoist",
+        "at": "right"
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，炎夏永昼",
+      "textKind": "adaptation",
+      "layer": "dream"
+    }
+  },
+  {
+    "id": "C1-012",
+    "chapter": "c1-dream",
+    "scene": "dream",
+    "title": "士隐午梦 · 绛珠还泪",
+    "place": "太虚幻境 · 灵河（梦中） · 梦境",
+    "focus": "guest",
+    "speaker": "taoist",
+    "text": "你带着这块蠢物，究竟往哪里去？",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "shiyin",
+        "via": [
+          "path",
+          "left"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，炎夏永昼",
+      "textKind": "adaptation",
+      "layer": "dream"
+    }
+  },
+  {
+    "id": "C1-013",
+    "chapter": "c1-dream",
+    "scene": "dream",
+    "title": "士隐午梦 · 绛珠还泪",
+    "place": "太虚幻境 · 灵河（梦中） · 梦境",
+    "focus": "guest",
+    "speaker": "monk",
+    "text": "正有一段风流公案要了结，许多有情人将要下世，顺便让它也去经历。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，炎夏永昼",
+      "textKind": "adaptation",
+      "layer": "dream"
+    }
+  },
+  {
+    "id": "C1-014",
+    "chapter": "c1-dream",
+    "scene": "dream",
+    "title": "士隐午梦 · 绛珠还泪",
+    "place": "太虚幻境 · 灵河（梦中） · 转述",
+    "focus": "left",
+    "speaker": "monk",
+    "text": "灵河岸上有株绛珠草，神瑛侍者日用甘露灌溉。它修成人形，却一直未报灌溉之恩。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，炎夏永昼",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C1-015",
+    "chapter": "c1-dream",
+    "scene": "dream",
+    "title": "士隐午梦 · 绛珠还泪",
+    "place": "太虚幻境 · 灵河（梦中） · 转述",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "神瑛要下凡，绛珠也愿同行。无甘露可还，她便愿以一生眼泪偿报。许多风流冤家，也因此同去历劫。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，炎夏永昼",
+      "textKind": "adaptation",
+      "layer": "reported"
+    }
+  },
+  {
+    "id": "C1-016",
+    "chapter": "c1-dream",
+    "scene": "dream",
+    "title": "士隐午梦 · 绛珠还泪",
+    "place": "太虚幻境 · 灵河（梦中） · 梦境",
+    "focus": "guest",
+    "speaker": "shiyin",
+    "text": "二位仙师所谈，实在罕闻。能否细说，使弟子也有所警醒？",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "shiyin",
+        "via": [
+          "guest"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，炎夏永昼",
+      "textKind": "adaptation",
+      "layer": "dream"
+    }
+  },
+  {
+    "id": "C1-017",
+    "chapter": "c1-dream",
+    "scene": "dream",
+    "title": "士隐午梦 · 绛珠还泪",
+    "place": "太虚幻境 · 灵河（梦中） · 梦境",
+    "focus": "guest",
+    "speaker": "monk",
+    "text": "玄机暂不可泄。到了那时，不要忘了我二人，便能跳出火坑。你问这物件，倒有一面之缘。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，炎夏永昼",
+      "textKind": "adaptation",
+      "layer": "dream"
+    }
+  },
+  {
+    "id": "C1-018",
+    "chapter": "c1-dream",
+    "scene": "dream",
+    "title": "士隐午梦 · 绛珠还泪",
+    "place": "太虚幻境 · 灵河（梦中） · 梦境",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "士隐接过美玉，只看清正面通灵宝玉四字，僧人便取回，和道人走进太虚幻境。士隐欲跟，忽听霹雳，惊醒过来。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "monk",
+        "via": [
+          "rear"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "taoist",
+        "via": [
+          "rear"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，炎夏永昼",
+      "textKind": "adaptation",
+      "layer": "dream"
+    }
+  },
+  {
+    "id": "C1-019",
+    "chapter": "c1-home",
+    "scene": "suzhou",
+    "title": "甄宅相逢 · 娇杏回顾",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "午梦醒来，奶母抱来英莲。士隐逗女儿玩了一回，又带她到门前看热闹。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "shiyin",
+        "at": "host"
+      },
+      {
+        "type": "show",
+        "actor": "yinglian",
+        "at": "right"
+      },
+      {
+        "type": "show",
+        "actor": "fengshi",
+        "at": "rear"
+      },
+      {
+        "type": "move",
+        "actor": "shiyin",
+        "via": [
+          "guest"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "yinglian",
+        "via": [
+          "left"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "士隐大叫一声，定睛一看",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-020",
+    "chapter": "c1-home",
+    "scene": "suzhou",
+    "title": "甄宅相逢 · 娇杏回顾",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "门外恰来癞头和尚、跛足道人。和尚见英莲忽然大哭，劝士隐舍了这孩子。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "monk",
+        "at": "entry"
+      },
+      {
+        "type": "show",
+        "actor": "taoist",
+        "at": "path"
+      },
+      {
+        "type": "move",
+        "actor": "monk",
+        "via": [
+          "left"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "士隐大叫一声，定睛一看",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-021",
+    "chapter": "c1-home",
+    "scene": "suzhou",
+    "title": "甄宅相逢 · 娇杏回顾",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "monk",
+    "text": "只顾娇养她，哪里知道将来？元宵佳节之后，更须小心烟消火灭的灾祸。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "士隐大叫一声，定睛一看",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-022",
+    "chapter": "c1-home",
+    "scene": "suzhou",
+    "title": "甄宅相逢 · 娇杏回顾",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "士隐不耐这些疯话，抱女回身。待他想追问时，僧道早已各自去了。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "shiyin",
+        "via": [
+          "rear"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "yinglian",
+        "via": [
+          "rear"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "monk",
+        "via": [
+          "exit"
+        ]
+      },
+      {
+        "type": "hide",
+        "actor": "monk"
+      },
+      {
+        "type": "hide",
+        "actor": "taoist"
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "士隐大叫一声，定睛一看",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-023",
+    "chapter": "c1-home",
+    "scene": "suzhou",
+    "title": "甄宅相逢 · 娇杏回顾",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "隔壁葫芦庙寄居着穷儒贾雨村，以卖字作文度日。士隐与他常有往来，邀他进书斋消暑。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "yucun",
+        "at": "entry"
+      },
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "guest"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "shiyin",
+        "via": [
+          "host"
+        ]
+      },
+      {
+        "type": "hide",
+        "actor": "yinglian"
+      },
+      {
+        "type": "hide",
+        "actor": "fengshi"
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "士隐大叫一声，定睛一看",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-024",
+    "chapter": "c1-home",
+    "scene": "suzhou",
+    "title": "甄宅相逢 · 娇杏回顾",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "shiyin",
+    "text": "正是长日无聊，兄来得好，请进小斋喝茶说话。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "士隐大叫一声，定睛一看",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-025",
+    "chapter": "c1-home",
+    "scene": "suzhou",
+    "title": "甄宅相逢 · 娇杏回顾",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "严老爷来拜，士隐出厅待客。雨村独坐翻书，忽看见窗外一位丫鬟撷花。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "shiyin",
+        "via": [
+          "exit"
+        ]
+      },
+      {
+        "type": "hide",
+        "actor": "shiyin"
+      },
+      {
+        "type": "show",
+        "actor": "jiaoxing",
+        "at": "right"
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "士隐大叫一声，定睛一看",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-026",
+    "chapter": "c1-home",
+    "scene": "suzhou",
+    "title": "回顾两次",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "jiaoxing",
+    "text": "这位衣衫贫旧、相貌不俗的读书人，想必就是主人说的贾雨村。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "jiaoxing",
+        "via": [
+          "rear"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "士隐大叫一声，定睛一看",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-027",
+    "chapter": "c1-home",
+    "scene": "suzhou",
+    "title": "甄宅相逢 · 娇杏回顾",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "娇杏因好奇回头两次。雨村却以为她识得自己，将她当作风尘知己；得知主人留客，便自行告辞。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "path",
+          "exit"
+        ]
+      },
+      {
+        "type": "hide",
+        "actor": "yucun"
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "士隐大叫一声，定睛一看",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-028",
+    "chapter": "c1-moon",
+    "scene": "suzhou",
+    "title": "中秋酬唱 · 五十两赠银",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "转眼中秋。雨村在庙中对月吟诗，一面想着回顾的女子，一面感慨抱负未伸。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "yucun",
+        "at": "left"
+      },
+      {
+        "type": "hide",
+        "actor": "jiaoxing"
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，早又中秋佳节",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-029",
+    "chapter": "c1-moon",
+    "scene": "suzhou",
+    "title": "中秋酬唱 · 五十两赠银",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "满怀志向，却困在此地。玉在匣中求善价，钗于奁内待时飞。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，早又中秋佳节",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-030",
+    "chapter": "c1-moon",
+    "scene": "suzhou",
+    "title": "中秋酬唱 · 五十两赠银",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "shiyin",
+    "text": "雨村兄的抱负，我听出来了。今夜团圆佳节，已备薄酒，请到敝斋一饮。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "shiyin",
+        "at": "entry"
+      },
+      {
+        "type": "move",
+        "actor": "shiyin",
+        "via": [
+          "host"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "guest"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，早又中秋佳节",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-031",
+    "chapter": "c1-moon",
+    "scene": "suzhou",
+    "title": "中秋酬唱 · 五十两赠银",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "二人杯酒相酬，雨村酒酣赋诗，说月轮初上，天下人仰头而望。士隐更加赞赏，认为他前程可期。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，早又中秋佳节",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-032",
+    "chapter": "c1-moon",
+    "scene": "suzhou",
+    "title": "中秋酬唱 · 五十两赠银",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "yucun",
+    "text": "并非酒后自夸，科场文章我也可试一试。只是行囊空空，神京路远，卖字的钱凑不齐盘费。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，早又中秋佳节",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-033",
+    "chapter": "c1-moon",
+    "scene": "suzhou",
+    "title": "中秋酬唱 · 五十两赠银",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "shiyin",
+    "text": "何不早说？明年大比，兄当速去。我赠五十两银子、两套冬衣，路费由我相助。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，早又中秋佳节",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-034",
+    "chapter": "c1-moon",
+    "scene": "suzhou",
+    "title": "中秋酬唱 · 五十两赠银",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "士隐约十九日吉期买舟，雨村略谢，仍饮酒谈笑至三更。第二天五鼓，他已经起行。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "path",
+          "exit"
+        ]
+      },
+      {
+        "type": "hide",
+        "actor": "yucun"
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，早又中秋佳节",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-035",
+    "chapter": "c1-moon",
+    "scene": "suzhou",
+    "title": "中秋酬唱 · 五十两赠银",
+    "place": "姑苏 · 仁清巷与甄宅",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "士隐原还想写荐书，才知雨村留话：读书人不在黄道黑道，总以事理为要，未及面辞。他也只得作罢。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "一日，早又中秋佳节",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-036",
+    "chapter": "c1-disaster",
+    "scene": "lantern",
+    "title": "元宵失女 · 庙火毁家",
+    "place": "姑苏 · 元宵灯市",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "元宵灯市，士隐让家人霍启抱英莲看社火花灯。人声灯影间，二人来到街上。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "huoqi",
+        "at": "entry"
+      },
+      {
+        "type": "show",
+        "actor": "yinglian",
+        "at": "path"
+      },
+      {
+        "type": "move",
+        "actor": "huoqi",
+        "via": [
+          "guest"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "yinglian",
+        "via": [
+          "right"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "真是闲处光阴易过",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-037",
+    "chapter": "c1-disaster",
+    "scene": "lantern",
+    "title": "灯下失散",
+    "place": "姑苏 · 元宵灯市",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "半夜霍启要小解，把孩子放在门槛上。待他回来，英莲已经不见了。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "huoqi",
+        "via": [
+          "rear"
+        ]
+      },
+      {
+        "type": "hide",
+        "actor": "yinglian"
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "真是闲处光阴易过",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-038",
+    "chapter": "c1-disaster",
+    "scene": "lantern",
+    "title": "元宵失女 · 庙火毁家",
+    "place": "姑苏 · 元宵灯市",
+    "focus": "guest",
+    "speaker": "huoqi",
+    "text": "英莲！方才明明在这里，怎么转眼就没了？",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "huoqi",
+        "via": [
+          "guest",
+          "path",
+          "right",
+          "left"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "真是闲处光阴易过",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-039",
+    "chapter": "c1-disaster",
+    "scene": "lantern",
+    "title": "元宵失女 · 庙火毁家",
+    "place": "姑苏 · 元宵灯市",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "霍启找到天明，仍无踪影，惧罪逃走。士隐夫妇四处寻找，终无音信，相继因思女成病。",
+    "actions": [
+      {
+        "type": "hide",
+        "actor": "huoqi"
+      },
+      {
+        "type": "show",
+        "actor": "shiyin",
+        "at": "guest"
+      },
+      {
+        "type": "show",
+        "actor": "fengshi",
+        "at": "host"
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "真是闲处光阴易过",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-040",
+    "chapter": "c1-disaster",
+    "scene": "ruins",
+    "title": "火后瓦砾",
+    "place": "姑苏 · 葫芦庙火后",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "三月十五，葫芦庙炸供时油锅起火，烧上窗纸，延及整条街。大火一夜方息，甄宅已成瓦砾。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "shiyin",
+        "at": "guest"
+      },
+      {
+        "type": "show",
+        "actor": "fengshi",
+        "at": "host"
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "真是闲处光阴易过",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-041",
+    "chapter": "c1-disaster",
+    "scene": "ruins",
+    "title": "元宵失女 · 庙火毁家",
+    "place": "姑苏 · 葫芦庙火后",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "夫妇与几个家人虽保住性命，家园已毁。田庄又遇水旱盗乱，难以安身，只得变卖，投奔岳丈封肃。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "shiyin",
+        "via": [
+          "path",
+          "exit"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "fengshi",
+        "via": [
+          "path",
+          "exit"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "真是闲处光阴易过",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-042",
+    "chapter": "c1-awakening",
+    "scene": "farm",
+    "title": "投亲穷困 · 好了歌解",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "封肃见女婿狼狈来投，心中不乐。士隐托他置办房田，他却半哄半赚，只给些薄田朽屋。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "shiyin",
+        "at": "entry"
+      },
+      {
+        "type": "show",
+        "actor": "fengshi",
+        "at": "path"
+      },
+      {
+        "type": "show",
+        "actor": "fengsu",
+        "at": "host"
+      },
+      {
+        "type": "move",
+        "actor": "shiyin",
+        "via": [
+          "guest"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "fengshi",
+        "via": [
+          "right"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "他岳丈名唤封肃",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-043",
+    "chapter": "c1-awakening",
+    "scene": "farm",
+    "title": "投亲穷困 · 好了歌解",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "fengsu",
+    "text": "有了住处田地，就该自己好生过活，总不能只顾清闲。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "他岳丈名唤封肃",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-044",
+    "chapter": "c1-awakening",
+    "scene": "farm",
+    "title": "投亲穷困 · 好了歌解",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "士隐不惯经营耕作，一二年间更加穷困。封肃人前人后埋怨，他又悔又病，拄杖到街前散心。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "shiyin",
+        "via": [
+          "path"
+        ]
+      },
+      {
+        "type": "hide",
+        "actor": "fengsu"
+      },
+      {
+        "type": "hide",
+        "actor": "fengshi"
+      },
+      {
+        "type": "show",
+        "actor": "taoist",
+        "at": "entry"
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "他岳丈名唤封肃",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-045",
+    "chapter": "c1-awakening",
+    "scene": "farm",
+    "title": "好了歌",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "taoist",
+    "text": "世人都晓神仙好，却放不下功名、金银、娇妻和儿孙。到头来，富贵恩情，哪样能长留？",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "taoist",
+        "via": [
+          "guest"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "他岳丈名唤封肃",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-046",
+    "chapter": "c1-awakening",
+    "scene": "farm",
+    "title": "投亲穷困 · 好了歌解",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "shiyin",
+    "text": "我只听见好了二字。这好与了，是什么意思？",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "他岳丈名唤封肃",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-047",
+    "chapter": "c1-awakening",
+    "scene": "farm",
+    "title": "投亲穷困 · 好了歌解",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "taoist",
+    "text": "好便是了，了便是好。不了，便不得好；要好，须是了。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "他岳丈名唤封肃",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-048",
+    "chapter": "c1-awakening",
+    "scene": "farm",
+    "title": "好了歌解",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "shiyin",
+    "text": "陋室空堂，曾经笏满床；衰草枯杨，也曾是歌舞场。金银满箱终成乞丐，嫌官位小反戴枷锁，都是荣枯转眼。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "他岳丈名唤封肃",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-049",
+    "chapter": "c1-awakening",
+    "scene": "farm",
+    "title": "投亲穷困 · 好了歌解",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "shiyin",
+    "text": "昨日送人入土，今日自己又顾影妆扮；替子孙筹谋一生，也未必换得报偿。你方唱罢我登场，到头原是为他人作嫁衣裳。",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "他岳丈名唤封肃",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-050",
+    "chapter": "c1-awakening",
+    "scene": "farm",
+    "title": "投亲穷困 · 好了歌解",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "taoist",
+    "text": "解得切！解得切！",
+    "actions": [],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "他岳丈名唤封肃",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-051",
+    "chapter": "c1-awakening",
+    "scene": "farm",
+    "title": "投亲穷困 · 好了歌解",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "士隐豁然醒悟，说一声走罢，便抢过道人肩上褡裢，随他飘然而去。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "shiyin",
+        "via": [
+          "path",
+          "exit"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "taoist",
+        "via": [
+          "path",
+          "exit"
+        ]
+      },
+      {
+        "type": "hide",
+        "actor": "shiyin"
+      },
+      {
+        "type": "hide",
+        "actor": "taoist"
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "他岳丈名唤封肃",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-052",
+    "chapter": "c1-awakening",
+    "scene": "farm",
+    "title": "投亲穷困 · 好了歌解",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "封氏寻夫不获，只得与父亲度日，做针线帮补。娇杏出来买线，恰遇新任官员经过，看见了她。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "fengshi",
+        "at": "rear"
+      },
+      {
+        "type": "show",
+        "actor": "jiaoxing",
+        "at": "entry"
+      },
+      {
+        "type": "move",
+        "actor": "jiaoxing",
+        "via": [
+          "guest"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "他岳丈名唤封肃",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C1-053",
+    "chapter": "c1-awakening",
+    "scene": "farm",
+    "title": "投亲穷困 · 好了歌解",
+    "place": "大如州 · 封家田庄",
+    "focus": "guest",
+    "speaker": "narrator",
+    "text": "不多时，公差来到封家，呼唤甄爷。封家惊慌，不知是福是祸；这段旧缘，留到第二回揭开。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "entry"
+      }
+    ],
+    "source": {
+      "chapter": 1,
+      "paragraphLead": "他岳丈名唤封肃",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  }
+]

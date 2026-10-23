@@ -1,0 +1,8 @@
+{
+  "id": "monk-chibi",
+  "seed": 10232057,
+  "features": "宽额尖下颏；颧骨突出；一高一低弯眉；细长笑眼；大耳宽鼻；豁达诙谐",
+  "prompt": "Redesign ONLY the facial features of the person in <image1>. The new distinctive identity is: a broad forehead tapering to a pointed chin, prominent cheekbones and sunken cheeks, asymmetrically high curved brows, long narrow laughing eyes, a wide short nose, large projecting ears and a broad irreverent grin with laugh folds; eccentric middle-aged monk, not a sweet-faced girl. Keep the head center and angle, hairline, hairstyle, ornaments, clothing and white background. You MUST change the original facial outline and facial proportions to match the specified new identity; do not retain the original pointed doll face when a broad or square face is requested. Paint the new facial geometry and expression in the SAME delicate Chinese ink and watercolor hand-painted illustration style as image1, with subtle natural skin tones and fine brush lines. Make the specified face shape, eye shape and spacing, eyebrows, nose and lips clearly visible and character-specific. Emphasize the characteristic facial proportions enough to read in a small game portrait. Use natural eyes and lips, not glamorous makeup, dark eyeliner or a generic beauty filter. Avoid generic identical doll faces. This is a single head detail crop, not a character sheet. No text. The face in <image2> is the approved SAME CHARACTER identity: transfer its distinctive eyebrow/eye shapes, nose, mouth, age and temperament into the chibi in <image1>, keeping image1 head scale and cute simplified brushwork. Keep eyes readable at tiny map scale; do not copy realistic portrait proportions.",
+  "model": "qwen_image_2.1_int8_convrot",
+  "steps": 30
+}

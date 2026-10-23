@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "flower-gate_s10216611-01",
+  "seed": 10216611,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏建筑素材：一座完整的小型清代内宅垂花门，精巧朱红木构，灰青瓦歇山顶，微微上翘的檐角，雕花额枋，精致垂莲柱头，斑驳但整洁的木纹，暖米白侧墙，宽阔敞开的门洞，门口一层青灰石门槛。正交等距俯视，二比一菱形轴，能看到屋顶和右侧面，门洞正面朝向画面左下方。仅这一座门，不要连带长院墙，不要庭院，不要树木，不要人物，不要地面平台，不要投影。门的最下方地面接触点清楚，整个建筑完整居中，四周保留足够空白，不能裁切飞檐。纯净均匀纯白色背景，白色背景也贯穿敞开的门洞。游戏可抠图素材，轮廓清晰。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "f663a8bf-961c-4583-b7d9-9927dfa597ae",
+  "generated_at": "2026-10-22 12:08:45",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1024x1024"
+}

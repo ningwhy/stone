@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "courtyard-concept_s10216601-01",
+  "seed": 10216601,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n一幅完整的国风手绘等距游戏庭院美术样板。相机为正交等距俯视，地面左右轴呈二比一菱形，无透视消失点，清晰可用于二维游戏。场景是红楼梦荣国府的垂花门前小院：画面中央偏上是一座极精致的小型朱红垂花门，青灰瓦屋顶，飞翘檐角，木雕花牙和垂莲柱头，门洞完全敞开，透过门洞能看见后方院内铺地。两侧米白粉墙、灰瓦墙帽，墙边栽种海棠和翠竹，右侧有一组玲珑太湖石与青花瓷花盆。地面是青石板步道与浅色方砖，两侧青苔，少许落花，几级石阶。垂花门前保留宽阔无障碍的走路空间。左下方站一名很小的淡青色衣裙古代少女作为比例参照，人物全身可见。构图紧凑、层次精致，细节丰富但路径清楚，俯视角度能看见瓦片、院墙顶和地面，画面边缘以温暖宣纸色自然晕染。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "318d1754-ec9f-4e88-9822-ba6e3a2ba403",
+  "generated_at": "2026-10-21 13:11:18",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1536x1024"
+}

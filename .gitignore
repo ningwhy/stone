@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.DS_Store
+.browser4-cli-state/
+artifacts/*.png
+.local-tools/
+__pycache__/

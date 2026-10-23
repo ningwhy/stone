@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "daiyu-chibi_s10216616-01",
+  "seed": 10216616,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n单个完整的古风少女游戏角色素材，林黛玉初入贾府的原创角色设计，稚气清秀，眉眼纤细，神情安静略带拘谨，三头身小巧可爱，乌黑长发盘成简洁双髻与长发束，佩一支小玉簪，穿淡青绿色交领上衣与月白长裙，袖口有很细的淡金绣边，手轻拢身前。正交等距游戏视角，轻微俯视，三分之二侧身，面向画面右下方，能看见头顶，站立姿势，两只鞋的接地点清楚。保持人物年龄感纯真，无成熟妆容。完整全身，头发和鞋都不能裁切，无地面、平台、投影、装饰边框或道具。人物居中，纯净均匀纯白色背景，轮廓清晰，可抠图游戏素材。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "b05079e1-95f7-4b7c-8db7-9fcb05b40fda",
+  "generated_at": "2026-10-22 12:09:31",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x1024"
+}
