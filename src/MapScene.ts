@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import { artAssets, artGround, artImage } from './art.ts';
 import { project } from './model.ts';
 import type { MapData } from './model.ts';
-import { cast } from './story.ts';
+import { cast, facingRight } from './story.ts';
 import type { ActorId } from './story.ts';
 import type { StoryEngine } from './engine.ts';
 
@@ -10,6 +10,7 @@ export class MapScene extends Phaser.Scene {
   engine: StoryEngine;
   mapData: MapData;
   actorViews = new Map<ActorId, Phaser.GameObjects.Container>();
+  private actorSprites = new Map<ActorId, Phaser.GameObjects.Image>();
   roof?: Phaser.GameObjects.Graphics;
   artViews: {view:Phaser.GameObjects.Image;visibility:string}[] = [];
   grid?: Phaser.GameObjects.Graphics;
@@ -180,13 +181,15 @@ export class MapScene extends Phaser.Scene {
     const spriteAsset=artAssets[spriteKey];
     if(spriteAsset) {
       g.fillStyle(0x546b55,.16);g.fillEllipse(0,2,id==='sedan'?110:40,16);
-      container.add(this.add.image(0,0,spriteKey).setOrigin(spriteAsset.anchor[0]/spriteAsset.width,spriteAsset.anchor[1]/spriteAsset.height));
+      const sprite=this.add.image(0,0,spriteKey).setOrigin(spriteAsset.anchor[0]/spriteAsset.width,spriteAsset.anchor[1]/spriteAsset.height);
+      container.add(sprite);this.actorSprites.set(id,sprite);
     } else if(id==='sedan') {
       g.fillStyle(0xa36f5a);g.fillRoundedRect(-30,-60,60,58,5);g.fillStyle(0x7b584a);g.fillTriangle(-37,-60,37,-60,0,-85);
     } else if(id==='daiyu') {
       g.fillStyle(0x546b55,.16);g.fillEllipse(0,2,38,14);
       const asset=artAssets['daiyu-chibi'];
-      container.add(this.add.image(0,0,'daiyu-chibi').setOrigin(asset.anchor[0]/asset.width,asset.anchor[1]/asset.height));
+      const sprite=this.add.image(0,0,'daiyu-chibi').setOrigin(asset.anchor[0]/asset.width,asset.anchor[1]/asset.height);
+      container.add(sprite);this.actorSprites.set(id,sprite);
     } else {
       g.fillStyle(0x546b55,.18);g.fillEllipse(0,1,39,15);
       g.fillStyle(actor.color);g.fillTriangle(-18,-9,18,-9,0,-50);g.fillRoundedRect(-13,-34,26,23,5);
@@ -223,6 +226,9 @@ export class MapScene extends Phaser.Scene {
       const bodyHeight=asset?.height??85;
       const scale=Math.max(1,48/(bodyHeight*zoom));
       view.setScale(scale).setPosition(p.x,p.y+bounce).setVisible(a.visible).setDepth(p.y+1);
+      // Iso walking right means col-row increases; mirror the sprite when that disagrees with its painted facing.
+      const sprite=this.actorSprites.get(id);
+      if(sprite)sprite.setFlipX(a.moving && (a.direction===1)!==facingRight.has(id));
       this.actorLabels.get(id)!.setScale(1/(zoom*scale)).setPosition(0,7/(zoom*scale));
     }
   }

@@ -10,6 +10,8 @@ import { LoadingScreen, RotateHint, SceneLoadingCard } from './LoadingScreen.tsx
 import { prefetchCast, prefetchUpcoming } from './prefetch.ts';
 import { WorldMap, worldLocations, travelRoute, worldLocationFor } from './WorldMap.tsx';
 import type { Travel } from './WorldMap.tsx';
+import { actionNarration } from './narration.ts';
+import { emotionOf } from './emotion.ts';
 
 type Modal = 'history'|'settings'|'source'|'atlas'|'cast'|ActorId|null;
 function Icon({name}: {name:string}) {
@@ -181,16 +183,16 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
         </section>
         <section className={`dialogue-panel ${inMotion?'action-mode':'conversation-mode'} ${overview||travel?'stage-overview':''}`} aria-label="剧情对话" data-mode={inMotion?'action':'dialogue'} data-paused={state.paused}>
           {!inMotion&&<>
-            <div className="speaker-portrait" key={portrait}><Portrait actor={portrait} sad={step.mood==='sad'}/><span className="portrait-role">{step.speaker==='narrator'?'故事视角':'讲话人'}</span></div>
+            <div className="speaker-portrait" key={portrait}><Portrait actor={portrait} face="right" emotion={emotionOf(step)} sad={step.mood==='sad'}/><span className="portrait-role">{step.speaker==='narrator'?'故事视角':'讲话人'}</span></div>
             {listener&&<div className="listener-portraits" aria-label="在场人物立绘">
-              <div className="listener-stack" aria-hidden="true">{listeners.filter(id=>id!==listener).slice(0,2).map(id=><div key={id}><Portrait actor={id} closeup/></div>)}</div>
-              <button className="listener-feature" onClick={()=>setModal(listener)} aria-label={`查看${cast[listener].fullName}资料`}><Portrait actor={listener}/><span>{cast[listener].name}</span></button>
+              <div className="listener-stack" aria-hidden="true">{listeners.filter(id=>id!==listener).slice(0,2).map(id=><div key={id}><Portrait actor={id} face="left" closeup/></div>)}</div>
+              <button className="listener-feature" onClick={()=>setModal(listener)} aria-label={`查看${cast[listener].fullName}资料`}><Portrait actor={listener} face="left"/><span>{cast[listener].name}</span></button>
               <div className="listener-picker" aria-label="切换在场立绘">{listeners.map((id,i)=><button key={id} className={listener===id?'active':''} onClick={()=>setListenerOffset(i)} aria-label={`显示${cast[id].fullName}立绘`} aria-pressed={listener===id}>{cast[id].name}</button>)}</div>
             </div>}
           </>}
           <div className="dialogue-body">
             <div className="speaker-line"><span className="speaker-rule"/><h2>{inMotion?'行 动':step.speaker==='narrator'?'旁白':cast[step.speaker].fullName}</h2><span className="dialogue-type">{inMotion?'地图演出':step.offscreen?'画外':step.speaker==='narrator'?'叙事':'对白'}</span>{step.source.layer&&step.source.layer!=='present'&&<span className="narrative-layer">{({dream:'梦境',recollection:'回忆',reported:'转述'} as Record<string,string>)[step.source.layer]}</span>}<span className="node-label">{step.id==='END'?'终幕':step.id}</span></div>
-            {inMotion?<div className="action-presentation" aria-live="polite"><div className="action-path-motif"><i/><i/><i/><Icon name="compass"/></div><div><strong>{travel?'穿院而行':step.title}</strong><p>{travel?'沿府内道路前往下一处':state.paused?'演出暂停中':'请看地图，'+(state.effect?cast[state.effect.actor].name:present.filter(id=>state.actors[id].moving).map(id=>cast[id].name).join('、'))+'正在行动'}</p></div><span className="action-direction">视线回到地图 ↑</span></div>:<p className="dialogue-text" aria-live="polite">{step.text}</p>}
+            {inMotion?<div className="action-presentation" aria-live="polite"><div className="action-path-motif"><i/><i/><i/><Icon name="compass"/></div><div><strong>{travel?'穿院而行':step.title}</strong><p>{travel?'黛玉正在两处之间赶路，稍候即至':state.paused?'演出暂停中':actionNarration(engine)}</p></div><span className="action-direction">视线回到地图 ↑</span></div>:<p className="dialogue-text" aria-live="polite">{step.text}</p>}
             {state.status==='error'&&<p className="error-message" role="alert">{state.error}</p>}
           </div>
         </section>

@@ -1,2944 +1,3312 @@
 {
-  "version": 1,
-  "tilewidth": 128,
-  "tileheight": 64,
-  "assets": {
-    "flower-gate": {
-      "image": "/assets/rongguo/flower-gate.png",
-      "width": 600,
-      "height": 631,
-      "anchor": [
-        279.671,
-        486.314
-      ],
-      "source": "art/source/flower-gate_s10216611-01.png",
-      "matte": "art/matted/flower-gate_s10216611-sam.png",
-      "crop": [
-        50,
-        184,
-        1024,
-        1208
-      ],
-      "shear": -0.24,
-      "mirror": true,
-      "bodyCompress": null
-    },
-    "courtyard-wall": {
-      "image": "/assets/rongguo/courtyard-wall.png",
-      "width": 540,
-      "height": 439,
-      "anchor": [
-        271.636,
-        335.433
-      ],
-      "source": "art/source/courtyard-wall_s10216612-01.png",
-      "matte": "art/matted/courtyard-wall_s10216612-sam.png",
-      "crop": [
-        99,
-        78,
-        924,
-        749
-      ],
-      "shear": 0.04999999999999999,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "garden-tree": {
-      "image": "/assets/rongguo/garden-tree.png",
-      "width": 290,
-      "height": 252,
-      "anchor": [
-        146.481,
-        244.772
-      ],
-      "source": "art/source/garden-tree_s10216613-01.png",
-      "matte": "art/matted/garden-tree_s10216613-sam.png",
-      "crop": [
-        69,
-        121,
-        950,
-        888
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "main-hall": {
-      "image": "/assets/rongguo/main-hall.png",
-      "width": 1100,
-      "height": 888,
-      "anchor": [
-        443.976,
-        677.39
-      ],
-      "source": "art/source/main-hall_s10216614-01.png",
-      "matte": "art/matted/main-hall_s10216614-sam.png",
-      "crop": [
-        119,
-        153,
-        1447,
-        1225
-      ],
-      "shear": 0.25,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "garden-rock": {
-      "image": "/assets/rongguo/garden-rock.png",
-      "width": 190,
-      "height": 209,
-      "anchor": [
-        97.861,
-        199.851
-      ],
-      "source": "art/source/garden-rock_s10216615-01.png",
-      "matte": "art/matted/garden-rock_s10216615-sam.png",
-      "crop": [
-        182,
-        138,
-        846,
-        869
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "daiyu-chibi": {
-      "image": "/assets/rongguo/daiyu-chibi.png",
-      "width": 54,
-      "height": 118,
-      "anchor": [
-        27.484,
-        116.159
-      ],
-      "source": "art/source/daiyu-chibi_s10216616-01.png",
-      "matte": "art/matted/daiyu-chibi_s10216616-sam.png",
-      "crop": [
-        249,
-        115,
-        528,
-        727
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 410,
-        "factor": 0.55
-      },
-      "identity": {
-        "character": "daiyu",
-        "features": "清瘦长鹅蛋脸；细长含愁眉；眼尾微垂的含露杏眼；窄鼻梁；薄小唇；敏感、克制，眼下轻淡倦意",
-        "seed": 10232001,
-        "faceBox": [
-          19,
-          21,
-          46,
-          51
-        ],
-        "revision": "c5ff876838d9",
-        "source": "art/identity/daiyu-chibi/request.json"
-      }
-    },
-    "daiyu-portrait": {
-      "image": "/assets/rongguo/daiyu-portrait.png",
-      "width": 311,
-      "height": 720,
-      "anchor": [
-        156.582,
-        720.0
-      ],
-      "source": "art/source/daiyu-portrait_s10216617-01.png",
-      "matte": "art/matted/daiyu-portrait_s10216617-sam.png",
-      "crop": [
-        173,
-        153,
-        604,
-        1152
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "daiyu",
-        "features": "清瘦长鹅蛋脸；细长含愁眉；眼尾微垂的含露杏眼；窄鼻梁；薄小唇；敏感、克制，眼下轻淡倦意",
-        "seed": 10232000,
-        "faceBox": [
-          135,
-          75,
-          237,
-          249
-        ],
-        "revision": "ca9fb4a75771",
-        "source": "art/identity/daiyu-portrait/request.json"
-      }
-    },
-    "baoyu-portrait": {
-      "image": "/assets/rongguo/baoyu-portrait.png",
-      "width": 346,
-      "height": 600,
-      "anchor": [
-        172.375,
-        599.376
-      ],
-      "source": "art/source/baoyu-portrait-v2_s10222200-01.png",
-      "matte": "art/matted/baoyu-portrait-v2_s10222200-sam.png",
-      "crop": [
-        114,
-        63,
-        668,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "baoyu",
-        "features": "饱满短鹅蛋脸；宽额；浓长平眉；明亮桃花眼；圆润鼻尖；饱满弓唇，喜悦灵动",
-        "seed": 10232002,
-        "faceBox": [
-          90,
-          140,
-          250,
-          285
-        ],
-        "revision": "ab417ba96524",
-        "source": "art/identity/baoyu-portrait/request.json"
-      }
-    },
-    "baoyu-chibi": {
-      "image": "/assets/rongguo/baoyu-chibi.png",
-      "width": 50,
-      "height": 116,
-      "anchor": [
-        25.0,
-        115.21
-      ],
-      "source": "art/source/baoyu-chibi_s10222001-01.png",
-      "matte": "art/matted/baoyu-chibi_s10222001-sam.png",
-      "crop": [
-        264,
-        131,
-        529,
-        748
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 363,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "baoyu",
-        "features": "饱满短鹅蛋脸；宽额；浓长平眉；明亮桃花眼；圆润鼻尖；饱满弓唇，喜悦灵动",
-        "seed": 10232003,
-        "faceBox": [
-          13,
-          23,
-          45,
-          49
-        ],
-        "revision": "809243255d0f",
-        "source": "art/identity/baoyu-chibi/request.json"
-      }
-    },
-    "feng-portrait": {
-      "image": "/assets/rongguo/feng-portrait.png",
-      "width": 190,
-      "height": 600,
-      "anchor": [
-        95.0,
-        598.67
-      ],
-      "source": "art/source/feng-portrait_s10222002-01.png",
-      "matte": "art/matted/feng-portrait_s10222002-sam.png",
-      "crop": [
-        230,
-        122,
-        516,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "feng",
-        "features": "颧骨鲜明的菱形脸；高挑柳叶眉；细长上挑凤眼；挺直鼻梁；薄唇偏侧笑，锐利干练",
-        "seed": 10232004,
-        "faceBox": [
-          66,
-          45,
-          135,
-          135
-        ],
-        "revision": "0a3a8d0e96c9",
-        "source": "art/identity/feng-portrait/request.json"
-      }
-    },
-    "feng-chibi": {
-      "image": "/assets/rongguo/feng-chibi.png",
-      "width": 45,
-      "height": 116,
-      "anchor": [
-        22.5,
-        115.288
-      ],
-      "source": "art/source/feng-chibi_s10222003-01.png",
-      "matte": "art/matted/feng-chibi_s10222003-sam.png",
-      "crop": [
-        273,
-        149,
-        510,
-        762
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 380,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "feng",
-        "features": "颧骨鲜明的菱形脸；高挑柳叶眉；细长上挑凤眼；挺直鼻梁；薄唇偏侧笑，锐利干练",
-        "seed": 10232005,
-        "faceBox": [
-          14,
-          15,
-          32,
-          34
-        ],
-        "revision": "2183e4431d0d",
-        "source": "art/identity/feng-chibi/request.json"
-      }
-    },
-    "grandmother-portrait": {
-      "image": "/assets/rongguo/grandmother-portrait.png",
-      "width": 296,
-      "height": 600,
-      "anchor": [
-        148.0,
-        598.598
-      ],
-      "source": "art/source/grandmother-portrait_s10222004-01.png",
-      "matte": "art/matted/grandmother-portrait_s10222004-sam.png",
-      "crop": [
-        212,
-        168,
-        635,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "grandmother",
-        "features": "宽阔圆方脸；丰颊重下颌；长寿眉；笑眼但目光有威；宽鼻头；笑纹深而温厚",
-        "seed": 10232006,
-        "faceBox": [
-          99,
-          21,
-          207,
-          174
-        ],
-        "revision": "7b3246af88cf",
-        "source": "art/identity/grandmother-portrait/request.json"
-      }
-    },
-    "grandmother-chibi": {
-      "image": "/assets/rongguo/grandmother-chibi.png",
-      "width": 52,
-      "height": 116,
-      "anchor": [
-        25.902,
-        115.118
-      ],
-      "source": "art/source/grandmother-chibi_s10222005-01.png",
-      "matte": "art/matted/grandmother-chibi_s10222005-sam.png",
-      "crop": [
-        246,
-        169,
-        511,
-        758
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 390,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "grandmother",
-        "features": "宽阔圆方脸；丰颊重下颌；长寿眉；笑眼但目光有威；宽鼻头；笑纹深而温厚",
-        "seed": 10232007,
-        "faceBox": [
-          15,
-          6,
-          42,
-          41
-        ],
-        "revision": "ca8b517e4bb5",
-        "source": "art/identity/grandmother-chibi/request.json"
-      }
-    },
-    "wang-portrait": {
-      "image": "/assets/rongguo/wang-portrait.png",
-      "width": 248,
-      "height": 600,
-      "anchor": [
-        124.0,
-        598.668
-      ],
-      "source": "art/source/wang-portrait_s10222006-01.png",
-      "matte": "art/matted/wang-portrait_s10222006-sam.png",
-      "crop": [
-        236,
-        123,
-        609,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "wang",
-        "features": "端正方圆脸；低平眉；厚眼睑；内收沉静目光；宽直鼻；嘴角平收，稳重含蓄",
-        "seed": 10232008,
-        "faceBox": [
-          72,
-          48,
-          162,
-          177
-        ],
-        "revision": "705378d3b9cc",
-        "source": "art/identity/wang-portrait/request.json"
-      }
-    },
-    "wang-chibi": {
-      "image": "/assets/rongguo/wang-chibi.png",
-      "width": 45,
-      "height": 116,
-      "anchor": [
-        22.5,
-        115.235
-      ],
-      "source": "art/source/wang-chibi_s10222007-01.png",
-      "matte": "art/matted/wang-chibi_s10222007-sam.png",
-      "crop": [
-        283,
-        238,
-        493,
-        778
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 441,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "wang",
-        "features": "端正方圆脸；低平眉；厚眼睑；内收沉静目光；宽直鼻；嘴角平收，稳重含蓄",
-        "seed": 10232009,
-        "faceBox": [
-          12,
-          12,
-          34,
-          37
-        ],
-        "revision": "f11879911182",
-        "source": "art/identity/wang-chibi/request.json"
-      }
-    },
-    "xing-portrait": {
-      "image": "/assets/rongguo/xing-portrait.png",
-      "width": 231,
-      "height": 600,
-      "anchor": [
-        115.5,
-        598.644
-      ],
-      "source": "art/source/xing-portrait_s10222008-01.png",
-      "matte": "art/matted/xing-portrait_s10222008-sam.png",
-      "crop": [
-        237,
-        139,
-        578,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "xing",
-        "features": "长方脸；颧面偏平；略下垂眉；细小眼睛；长鼻；窄嘴，拘谨审视",
-        "seed": 10232010,
-        "faceBox": [
-          75,
-          48,
-          153,
-          162
-        ],
-        "revision": "bf30a5643364",
-        "source": "art/identity/xing-portrait/request.json"
-      }
-    },
-    "xing-chibi": {
-      "image": "/assets/rongguo/xing-chibi.png",
-      "width": 47,
-      "height": 116,
-      "anchor": [
-        23.395,
-        115.309
-      ],
-      "source": "art/source/xing-chibi_s10222009-01.png",
-      "matte": "art/matted/xing-chibi_s10222009-sam.png",
-      "crop": [
-        272,
-        220,
-        496,
-        777
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 430,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "xing",
-        "features": "长方脸；颧面偏平；略下垂眉；细小眼睛；长鼻；窄嘴，拘谨审视",
-        "seed": 10232011,
-        "faceBox": [
-          18,
-          13,
-          35,
-          33
-        ],
-        "revision": "f693af9f15c9",
-        "source": "art/identity/xing-chibi/request.json"
-      }
-    },
-    "liwan-portrait": {
-      "image": "/assets/rongguo/liwan-portrait.png",
-      "width": 258,
-      "height": 600,
-      "anchor": [
-        129.337,
-        598.653
-      ],
-      "source": "art/source/liwan-portrait_s10222010-01.png",
-      "matte": "art/matted/liwan-portrait_s10222010-sam.png",
-      "crop": [
-        190,
-        133,
-        573,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "liwan",
-        "features": "细长柔和脸；淡平眉；深静细眼；长鼻；唇淡而窄，清寂内敛",
-        "seed": 10232012,
-        "faceBox": [
-          93,
-          48,
-          183,
-          171
-        ],
-        "revision": "120ab52d482f",
-        "source": "art/identity/liwan-portrait/request.json"
-      }
-    },
-    "liwan-chibi": {
-      "image": "/assets/rongguo/liwan-chibi.png",
-      "width": 43,
-      "height": 116,
-      "anchor": [
-        21.5,
-        115.199
-      ],
-      "source": "art/source/liwan-chibi_s10222011-01.png",
-      "matte": "art/matted/liwan-chibi_s10222011-sam.png",
-      "crop": [
-        274,
-        173,
-        492,
-        758
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 393,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "liwan",
-        "features": "细长柔和脸；淡平眉；深静细眼；长鼻；唇淡而窄，清寂内敛",
-        "seed": 10232013,
-        "faceBox": [
-          14,
-          12,
-          33,
-          35
-        ],
-        "revision": "25b4746c5723",
-        "source": "art/identity/liwan-chibi/request.json"
-      }
-    },
-    "yingchun-portrait": {
-      "image": "/assets/rongguo/yingchun-portrait.png",
-      "width": 216,
-      "height": 600,
-      "anchor": [
-        108.0,
-        598.641
-      ],
-      "source": "art/source/yingchun-portrait_s10222012-01.png",
-      "matte": "art/matted/yingchun-portrait_s10222012-sam.png",
-      "crop": [
-        222,
-        141,
-        540,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "yingchun",
-        "features": "短圆脸；丰颊圆下巴；短淡弯眉；眼距略宽的柔缓垂眼；短圆鼻；圆小嘴，温厚怯弱",
-        "seed": 10232014,
-        "faceBox": [
-          75,
-          57,
-          162,
-          177
-        ],
-        "revision": "84edbabb2792",
-        "source": "art/identity/yingchun-portrait/request.json"
-      }
-    },
-    "yingchun-chibi": {
-      "image": "/assets/rongguo/yingchun-chibi.png",
-      "width": 48,
-      "height": 116,
-      "anchor": [
-        24.0,
-        115.164
-      ],
-      "source": "art/source/yingchun-chibi_s10222013-01.png",
-      "matte": "art/matted/yingchun-chibi_s10222013-sam.png",
-      "crop": [
-        261,
-        184,
-        500,
-        761
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 401,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "yingchun",
-        "features": "短圆脸；丰颊圆下巴；短淡弯眉；眼距略宽的柔缓垂眼；短圆鼻；圆小嘴，温厚怯弱",
-        "seed": 10232015,
-        "faceBox": [
-          13,
-          16,
-          40,
-          40
-        ],
-        "revision": "483fbe8a0bb0",
-        "source": "art/identity/yingchun-chibi/request.json"
-      }
-    },
-    "tanchun-portrait": {
-      "image": "/assets/rongguo/tanchun-portrait.png",
-      "width": 224,
-      "height": 600,
-      "anchor": [
-        112.0,
-        598.683
-      ],
-      "source": "art/source/tanchun-portrait_s10222014-01.png",
-      "matte": "art/matted/tanchun-portrait_s10222014-sam.png",
-      "crop": [
-        230,
-        113,
-        570,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "tanchun",
-        "features": "长鸭蛋脸与圆阔下颏；低平舒展长眉；眼距较宽的俊朗平眼；挺直长鼻；宽嘴与饱满下唇，自信爽朗",
-        "seed": 10232016,
-        "faceBox": [
-          72,
-          57,
-          162,
-          168
-        ],
-        "revision": "53635d5f1d41",
-        "source": "art/identity/tanchun-portrait/request.json"
-      }
-    },
-    "tanchun-chibi": {
-      "image": "/assets/rongguo/tanchun-chibi.png",
-      "width": 45,
-      "height": 116,
-      "anchor": [
-        22.601,
-        115.294
-      ],
-      "source": "art/source/tanchun-chibi_s10222015-01.png",
-      "matte": "art/matted/tanchun-chibi_s10222015-sam.png",
-      "crop": [
-        285,
-        187,
-        507,
-        765
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 405,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "tanchun",
-        "features": "长鸭蛋脸与圆阔下颏；低平舒展长眉；眼距较宽的俊朗平眼；挺直长鼻；宽嘴与饱满下唇，自信爽朗",
-        "seed": 10232017,
-        "faceBox": [
-          16,
-          11,
-          39,
-          35
-        ],
-        "revision": "13f73eeb0138",
-        "source": "art/identity/tanchun-chibi/request.json"
-      }
-    },
-    "xichun-portrait": {
-      "image": "/assets/rongguo/xichun-portrait.png",
-      "width": 204,
-      "height": 600,
-      "anchor": [
-        102.0,
-        598.544
-      ],
-      "source": "art/source/xichun-portrait_s10222016-01.png",
-      "matte": "art/matted/xichun-portrait_s10222016-sam.png",
-      "crop": [
-        340,
-        200,
-        620,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "xichun",
-        "features": "幼圆短脸；短直眉；圆眼偏冷静；小翘鼻；短小嘴，稚气而疏离",
-        "seed": 10232018,
-        "faceBox": [
-          48,
-          36,
-          147,
-          159
-        ],
-        "revision": "da4affdea6e8",
-        "source": "art/identity/xichun-portrait/request.json"
-      }
-    },
-    "xichun-chibi": {
-      "image": "/assets/rongguo/xichun-chibi.png",
-      "width": 41,
-      "height": 98,
-      "anchor": [
-        20.5,
-        97.106
-      ],
-      "source": "art/source/xichun-chibi_s10222017-01.png",
-      "matte": "art/matted/xichun-chibi_s10222017-sam.png",
-      "crop": [
-        282,
-        256,
-        493,
-        760
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 445,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "xichun",
-        "features": "幼圆短脸；短直眉；圆眼偏冷静；小翘鼻；短小嘴，稚气而疏离",
-        "seed": 10232019,
-        "faceBox": [
-          9,
-          13,
-          35,
-          38
-        ],
-        "revision": "a7dae561bd64",
-        "source": "art/identity/xichun-chibi/request.json"
-      }
-    },
-    "xiren-portrait": {
-      "image": "/assets/rongguo/xiren-portrait.png",
-      "width": 241,
-      "height": 600,
-      "anchor": [
-        120.5,
-        598.652
-      ],
-      "source": "art/source/xiren-portrait_s10222018-01.png",
-      "matte": "art/matted/xiren-portrait_s10222018-sam.png",
-      "crop": [
-        216,
-        134,
-        573,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "xiren",
-        "features": "丰润梨形脸；细弯眉；细长温和笑眼；小圆鼻；厚薄适中唇，稳妥亲切",
-        "seed": 10232020,
-        "faceBox": [
-          75,
-          60,
-          162,
-          171
-        ],
-        "revision": "fdd3f2d0c008",
-        "source": "art/identity/xiren-portrait/request.json"
-      }
-    },
-    "xiren-chibi": {
-      "image": "/assets/rongguo/xiren-chibi.png",
-      "width": 46,
-      "height": 116,
-      "anchor": [
-        23.0,
-        114.875
-      ],
-      "source": "art/source/xiren-chibi_s10222019-01.png",
-      "matte": "art/matted/xiren-chibi_s10222019-sam.png",
-      "crop": [
-        294,
-        240,
-        503,
-        764
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 437,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "xiren",
-        "features": "丰润梨形脸；细弯眉；细长温和笑眼；小圆鼻；厚薄适中唇，稳妥亲切",
-        "seed": 10232021,
-        "faceBox": [
-          16,
-          12,
-          35,
-          34
-        ],
-        "revision": "0e34ac050cba",
-        "source": "art/identity/xiren-chibi/request.json"
-      }
-    },
-    "xueyan-portrait": {
-      "image": "/assets/rongguo/xueyan-portrait.png",
-      "width": 203,
-      "height": 600,
-      "anchor": [
-        101.141,
-        598.568
-      ],
-      "source": "art/source/xueyan-portrait_s10222020-01.png",
-      "matte": "art/matted/xueyan-portrait_s10222020-sam.png",
-      "crop": [
-        252,
-        186,
-        535,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "xueyan",
-        "features": "短圆幼脸；短淡眉；略下垂大眼；小塌鼻；鼓腮小嘴，童稚谨慎",
-        "seed": 10232022,
-        "faceBox": [
-          60,
-          48,
-          150,
-          147
-        ],
-        "revision": "20838ada85b6",
-        "source": "art/identity/xueyan-portrait/request.json"
-      }
-    },
-    "xueyan-chibi": {
-      "image": "/assets/rongguo/xueyan-chibi.png",
-      "width": 52,
-      "height": 116,
-      "anchor": [
-        26.0,
-        115.259
-      ],
-      "source": "art/source/xueyan-chibi_s10222021-01.png",
-      "matte": "art/matted/xueyan-chibi_s10222021-sam.png",
-      "crop": [
-        255,
-        204,
-        503,
-        755
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 411,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "xueyan",
-        "features": "短圆幼脸；短淡眉；略下垂大眼；小塌鼻；鼓腮小嘴，童稚谨慎",
-        "seed": 10232023,
-        "faceBox": [
-          12,
-          17,
-          48,
-          47
-        ],
-        "revision": "26e977d3f5b5",
-        "source": "art/identity/xueyan-chibi/request.json"
-      }
-    },
-    "yingge-portrait": {
-      "image": "/assets/rongguo/yingge-portrait.png",
-      "width": 254,
-      "height": 600,
-      "anchor": [
-        127.0,
-        598.636
-      ],
-      "source": "art/source/yingge-portrait_s10222022-01.png",
-      "matte": "art/matted/yingge-portrait_s10222022-sam.png",
-      "crop": [
-        196,
-        144,
-        569,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "yingge",
-        "features": "小巧瓜子脸；弯眉一高一低；机敏长眼；细翘鼻；唇角轻上扬，伶俐",
-        "seed": 10232024,
-        "faceBox": [
-          87,
-          54,
-          174,
-          174
-        ],
-        "revision": "c2f823a8552b",
-        "source": "art/identity/yingge-portrait/request.json"
-      }
-    },
-    "yingge-chibi": {
-      "image": "/assets/rongguo/yingge-chibi.png",
-      "width": 45,
-      "height": 116,
-      "anchor": [
-        22.5,
-        115.246
-      ],
-      "source": "art/source/yingge-chibi_s10222023-01.png",
-      "matte": "art/matted/yingge-chibi_s10222023-sam.png",
-      "crop": [
-        277,
-        193,
-        501,
-        765
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 408,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "yingge",
-        "features": "小巧瓜子脸；弯眉一高一低；机敏长眼；细翘鼻；唇角轻上扬，伶俐",
-        "seed": 10232025,
-        "faceBox": [
-          14,
-          13,
-          34,
-          35
-        ],
-        "revision": "de093760ba65",
-        "source": "art/identity/yingge-chibi/request.json"
-      }
-    },
-    "yucun-portrait": {
-      "image": "/assets/rongguo/yucun-portrait.png",
-      "width": 317,
-      "height": 600,
-      "anchor": [
-        158.5,
-        598.934
-      ],
-      "source": "art/source/yucun-portrait_s10222024-01.png",
-      "matte": "art/matted/yucun-portrait_s10222024-sam.png",
-      "crop": [
-        280,
-        129,
-        577,
-        692
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "yucun",
-        "features": "宽方脸；浓剑眉；星眼深而锐；直鼻权腮；宽口方下颌，雄壮带算计",
-        "seed": 10232026,
-        "faceBox": [
-          105,
-          66,
-          198,
-          198
-        ],
-        "revision": "e753121b9a83",
-        "source": "art/identity/yucun-portrait/request.json"
-      }
-    },
-    "yucun-chibi": {
-      "image": "/assets/rongguo/yucun-chibi.png",
-      "width": 49,
-      "height": 116,
-      "anchor": [
-        24.5,
-        115.21
-      ],
-      "source": "art/source/yucun-chibi_s10222025-01.png",
-      "matte": "art/matted/yucun-chibi_s10222025-sam.png",
-      "crop": [
-        261,
-        188,
-        498,
-        752
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 400,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "yucun",
-        "features": "宽方脸；浓剑眉；星眼深而锐；直鼻权腮；宽口方下颌，雄壮带算计",
-        "seed": 10232027,
-        "faceBox": [
-          19,
-          15,
-          38,
-          39
-        ],
-        "revision": "8fb1ffcf3bb5",
-        "source": "art/identity/yucun-chibi/request.json"
-      }
-    },
-    "ruhai-portrait": {
-      "image": "/assets/rongguo/ruhai-portrait.png",
-      "width": 336,
-      "height": 600,
-      "anchor": [
-        168.0,
-        598.962
-      ],
-      "source": "art/source/ruhai-portrait_s10222026-01.png",
-      "matte": "art/matted/ruhai-portrait_s10222026-sam.png",
-      "crop": [
-        241,
-        121,
-        565,
-        699
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "ruhai",
-        "features": "瘦长椭圆脸；疏长眉；眼窝较深而柔；修长鼻；薄唇清癯，下颌细",
-        "seed": 10232028,
-        "faceBox": [
-          123,
-          63,
-          219,
-          201
-        ],
-        "revision": "0e7c3ac84f76",
-        "source": "art/identity/ruhai-portrait/request.json"
-      }
-    },
-    "ruhai-chibi": {
-      "image": "/assets/rongguo/ruhai-chibi.png",
-      "width": 53,
-      "height": 116,
-      "anchor": [
-        26.401,
-        115.142
-      ],
-      "source": "art/source/ruhai-chibi_s10222027-01.png",
-      "matte": "art/matted/ruhai-chibi_s10222027-sam.png",
-      "crop": [
-        237,
-        178,
-        506,
-        762
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 398,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "ruhai",
-        "features": "瘦长椭圆脸；疏长眉；眼窝较深而柔；修长鼻；薄唇清癯，下颌细",
-        "seed": 10232029,
-        "faceBox": [
-          22,
-          16,
-          44,
-          40
-        ],
-        "revision": "88c673fb6113",
-        "source": "art/identity/ruhai-chibi/request.json"
-      }
-    },
-    "sedan-chair": {
-      "image": "/assets/rongguo/sedan-chair.png",
-      "width": 170,
-      "height": 146,
-      "anchor": [
-        85.0,
-        145.434
-      ],
-      "source": "art/source/sedan-chair_s10222100-01.png",
-      "matte": "art/matted/sedan-chair_s10222100-sam.png",
-      "crop": [
-        231,
-        336,
-        831,
-        852
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "rongxi-hall": {
-      "image": "/assets/rongguo/rongxi-hall.png",
-      "width": 1100,
-      "height": 931,
-      "anchor": [
-        496.174,
-        825.525
-      ],
-      "source": "art/source/rongxi-hall_s10222101-01.png",
-      "matte": "art/matted/rongxi-hall_s10222101-sam.png",
-      "crop": [
-        46,
-        105,
-        1011,
-        922
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "bamboo-gate": {
-      "image": "/assets/rongguo/bamboo-gate.png",
-      "width": 430,
-      "height": 292,
-      "anchor": [
-        205.588,
-        276.033
-      ],
-      "source": "art/source/bamboo-gate_s10222102-01.png",
-      "matte": "art/matted/bamboo-gate_s10222102-sam.png",
-      "crop": [
-        127,
-        353,
-        868,
-        857
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "wood-screen": {
-      "image": "/assets/rongguo/wood-screen.png",
-      "width": 190,
-      "height": 172,
-      "anchor": [
-        95.0,
-        171.48
-      ],
-      "source": "art/source/wood-screen_s10222103-01.png",
-      "matte": "art/matted/wood-screen_s10222103-sam.png",
-      "crop": [
-        146,
-        128,
-        878,
-        790
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "dining-table": {
-      "image": "/assets/rongguo/dining-table.png",
-      "width": 230,
-      "height": 219,
-      "anchor": [
-        115.0,
-        217.681
-      ],
-      "source": "art/source/dining-table_s10222104-01.png",
-      "matte": "art/matted/dining-table_s10222104-sam.png",
-      "crop": [
-        336,
-        484,
-        684,
-        816
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "canopy-bed": {
-      "image": "/assets/rongguo/canopy-bed.png",
-      "width": 300,
-      "height": 367,
-      "anchor": [
-        149.787,
-        363.594
-      ],
-      "source": "art/source/canopy-bed_s10222105-01.png",
-      "matte": "art/matted/canopy-bed_s10222105-sam.png",
-      "crop": [
-        160,
-        82,
-        865,
-        944
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "river-boat": {
-      "image": "/assets/rongguo/river-boat.png",
-      "width": 340,
-      "height": 201,
-      "anchor": [
-        170.0,
-        199.619
-      ],
-      "source": "art/source/river-boat_s10222106-01.png",
-      "matte": "art/matted/river-boat_s10222106-sam.png",
-      "crop": [
-        285,
-        579,
-        778,
-        870
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "tea-table": {
-      "image": "/assets/rongguo/tea-table.png",
-      "width": 130,
-      "height": 106,
-      "anchor": [
-        65.0,
-        105.07
-      ],
-      "source": "art/source/tea-table_s10222107-01.png",
-      "matte": "art/matted/tea-table_s10222107-sam.png",
-      "crop": [
-        419,
-        547,
-        699,
-        775
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "zhang-portrait": {
-      "image": "/assets/rongguo/zhang-portrait.png",
-      "width": 381,
-      "height": 600,
-      "anchor": [
-        206.375,
-        598.703
-      ],
-      "source": "art/source/zhang-portrait_s10222300-01.png",
-      "matte": "art/matted/zhang-portrait_s10222300-sam.png",
-      "crop": [
-        69,
-        99,
-        657,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "zhang",
-        "features": "窄长脸；拱眉；外凸明亮小眼；尖长鼻；窄唇，热切利落",
-        "seed": 10232032,
-        "faceBox": [
-          174,
-          81,
-          273,
-          204
-        ],
-        "revision": "6b6b8d62418d",
-        "source": "art/identity/zhang-portrait/request.json"
-      }
-    },
-    "zhang-chibi": {
-      "image": "/assets/rongguo/zhang-chibi.png",
-      "width": 66,
-      "height": 116,
-      "anchor": [
-        29.838,
-        115.257
-      ],
-      "source": "art/source/zhang-chibi_s10222301-01.png",
-      "matte": "art/matted/zhang-chibi_s10222301-sam.png",
-      "crop": [
-        257,
-        175,
-        591,
-        762
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 396,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "zhang",
-        "features": "窄长脸；拱眉；外凸明亮小眼；尖长鼻；窄唇，热切利落",
-        "seed": 10232033,
-        "faceBox": [
-          18,
-          17,
-          38,
-          40
-        ],
-        "revision": "280637388b8a",
-        "source": "art/identity/zhang-chibi/request.json"
-      }
-    },
-    "leng-portrait": {
-      "image": "/assets/rongguo/leng-portrait.png",
-      "width": 362,
-      "height": 600,
-      "anchor": [
-        181.0,
-        598.601
-      ],
-      "source": "art/source/leng-portrait_s10222302-01.png",
-      "matte": "art/matted/leng-portrait_s10222302-sam.png",
-      "crop": [
-        148,
-        166,
-        665,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "leng",
-        "features": "宽圆脸；短弯粗眉；眯笑小眼；肉鼻头；阔嘴厚下唇，精明健谈",
-        "seed": 10232034,
-        "faceBox": [
-          123,
-          42,
-          228,
-          177
-        ],
-        "revision": "ed628e148c3c",
-        "source": "art/identity/leng-portrait/request.json"
-      }
-    },
-    "leng-chibi": {
-      "image": "/assets/rongguo/leng-chibi.png",
-      "width": 59,
-      "height": 116,
-      "anchor": [
-        29.5,
-        115.305
-      ],
-      "source": "art/source/leng-chibi_s10222303-01.png",
-      "matte": "art/matted/leng-chibi_s10222303-sam.png",
-      "crop": [
-        223,
-        181,
-        514,
-        755
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 397,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "leng",
-        "features": "宽圆脸；短弯粗眉；眯笑小眼；肉鼻头；阔嘴厚下唇，精明健谈",
-        "seed": 10232035,
-        "faceBox": [
-          16,
-          14,
-          44,
-          44
-        ],
-        "revision": "092274122a94",
-        "source": "art/identity/leng-chibi/request.json"
-      }
-    },
-    "zheng-portrait": {
-      "image": "/assets/rongguo/zheng-portrait.png",
-      "width": 349,
-      "height": 600,
-      "anchor": [
-        174.5,
-        598.641
-      ],
-      "source": "art/source/zheng-portrait_s10222304-01.png",
-      "matte": "art/matted/zheng-portrait_s10222304-sam.png",
-      "crop": [
-        137,
-        141,
-        650,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "zheng",
-        "features": "端正长方脸；浓平眉；眼裂短而严；挺宽鼻；方唇方颏，肃穆",
-        "seed": 10232030,
-        "faceBox": [
-          126,
-          66,
-          219,
-          198
-        ],
-        "revision": "5c3289163026",
-        "source": "art/identity/zheng-portrait/request.json"
-      }
-    },
-    "zheng-chibi": {
-      "image": "/assets/rongguo/zheng-chibi.png",
-      "width": 57,
-      "height": 116,
-      "anchor": [
-        28.5,
-        115.155
-      ],
-      "source": "art/source/zheng-chibi_s10222305-01.png",
-      "matte": "art/matted/zheng-chibi_s10222305-sam.png",
-      "crop": [
-        261,
-        145,
-        561,
-        760
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 376,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "zheng",
-        "features": "端正长方脸；浓平眉；眼裂短而严；挺宽鼻；方唇方颏，肃穆",
-        "seed": 10232031,
-        "faceBox": [
-          19,
-          14,
-          37,
-          37
-        ],
-        "revision": "38ba4a7e2513",
-        "source": "art/identity/zheng-chibi/request.json"
-      }
-    },
-    "guide-portrait": {
-      "image": "/assets/rongguo/guide-portrait.png",
-      "width": 423,
-      "height": 600,
-      "anchor": [
-        211.5,
-        598.646
-      ],
-      "source": "art/source/guide-portrait_s10222306-01.png",
-      "matte": "art/matted/guide-portrait_s10222306-sam.png",
-      "crop": [
-        79,
-        138,
-        703,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "guide",
-        "features": "瘦长老脸；颧骨高；稀眉；深眼窝；弯鼻；薄嘴与缺齿笑，慈和",
-        "seed": 10232036,
-        "faceBox": [
-          195,
-          33,
-          291,
-          177
-        ],
-        "revision": "5b512be8a7d7",
-        "source": "art/identity/guide-portrait/request.json"
-      }
-    },
-    "guide-chibi": {
-      "image": "/assets/rongguo/guide-chibi.png",
-      "width": 60,
-      "height": 116,
-      "anchor": [
-        30.0,
-        115.294
-      ],
-      "source": "art/source/guide-chibi_s10222307-01.png",
-      "matte": "art/matted/guide-chibi_s10222307-sam.png",
-      "crop": [
-        239,
-        184,
-        540,
-        762
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 402,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "guide",
-        "features": "瘦长老脸；颧骨高；稀眉；深眼窝；弯鼻；薄嘴与缺齿笑，慈和",
-        "seed": 10232037,
-        "faceBox": [
-          21,
-          14,
-          47,
-          42
-        ],
-        "revision": "7d9a35fec166",
-        "source": "art/identity/guide-chibi/request.json"
-      }
-    },
-    "maid-portrait": {
-      "image": "/assets/rongguo/maid-portrait.png",
-      "width": 272,
-      "height": 600,
-      "anchor": [
-        136.0,
-        598.632
-      ],
-      "source": "art/source/maid-portrait_s10222308-01.png",
-      "matte": "art/matted/maid-portrait_s10222308-sam.png",
-      "crop": [
-        199,
-        147,
-        596,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "maid",
-        "features": "宽额小方脸；粗短眉；大圆眼；短鼻；圆唇，精神利落",
-        "seed": 10232038,
-        "faceBox": [
-          78,
-          60,
-          186,
-          189
-        ],
-        "revision": "225b1aa1d3de",
-        "source": "art/identity/maid-portrait/request.json"
-      }
-    },
-    "maid-chibi": {
-      "image": "/assets/rongguo/maid-chibi.png",
-      "width": 47,
-      "height": 116,
-      "anchor": [
-        23.606,
-        115.062
-      ],
-      "source": "art/source/maid-chibi_s10222309-01.png",
-      "matte": "art/matted/maid-chibi_s10222309-sam.png",
-      "crop": [
-        270,
-        217,
-        491,
-        766
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 423,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "maid",
-        "features": "宽额小方脸；粗短眉；大圆眼；短鼻；圆唇，精神利落",
-        "seed": 10232039,
-        "faceBox": [
-          11,
-          15,
-          35,
-          39
-        ],
-        "revision": "ba8e2e6e55cd",
-        "source": "art/identity/maid-chibi/request.json"
-      }
-    },
-    "messenger-portrait": {
-      "image": "/assets/rongguo/messenger-portrait.png",
-      "width": 288,
-      "height": 600,
-      "anchor": [
-        144.0,
-        598.656
-      ],
-      "source": "art/source/messenger-portrait_s10222310-01.png",
-      "matte": "art/matted/messenger-portrait_s10222310-sam.png",
-      "crop": [
-        223,
-        131,
-        651,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "messenger",
-        "features": "宽扁脸；平直淡眉；细缝眼；鼻翼宽；薄阔嘴，朴实恭谨",
-        "seed": 10232040,
-        "faceBox": [
-          75,
-          42,
-          177,
-          177
-        ],
-        "revision": "1b75410f312f",
-        "source": "art/identity/messenger-portrait/request.json"
-      }
-    },
-    "messenger-chibi": {
-      "image": "/assets/rongguo/messenger-chibi.png",
-      "width": 51,
-      "height": 116,
-      "anchor": [
-        25.5,
-        115.086
-      ],
-      "source": "art/source/messenger-chibi_s10222311-01.png",
-      "matte": "art/matted/messenger-chibi_s10222311-sam.png",
-      "crop": [
-        273,
-        239,
-        510,
-        782
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 443,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "messenger",
-        "features": "宽扁脸；平直淡眉；细缝眼；鼻翼宽；薄阔嘴，朴实恭谨",
-        "seed": 10232041,
-        "faceBox": [
-          21,
-          12,
-          41,
-          33
-        ],
-        "revision": "2efcfe71f215",
-        "source": "art/identity/messenger-chibi/request.json"
-      }
-    },
-    "nurse_wang-portrait": {
-      "image": "/assets/rongguo/nurse_wang-portrait.png",
-      "width": 291,
-      "height": 600,
-      "anchor": [
-        145.5,
-        598.616
-      ],
-      "source": "art/source/nurse_wang-portrait_s10222312-01.png",
-      "matte": "art/matted/nurse_wang-portrait_s10222312-sam.png",
-      "crop": [
-        202,
-        157,
-        622,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "nurse_wang",
-        "features": "极瘦小老脸；凹颊尖颏；淡短眉；眼尾下垂；小尖鼻；干瘪唇，老迈慈爱",
-        "seed": 10232042,
-        "faceBox": [
-          21,
-          39,
-          129,
-          177
-        ],
-        "revision": "ec190156aa24",
-        "source": "art/identity/nurse_wang-portrait/request.json"
-      }
-    },
-    "nurse_wang-chibi": {
-      "image": "/assets/rongguo/nurse_wang-chibi.png",
-      "width": 72,
-      "height": 116,
-      "anchor": [
-        36.0,
-        115.243
-      ],
-      "source": "art/source/nurse_wang-chibi_s10222313-01.png",
-      "matte": "art/matted/nurse_wang-chibi_s10222313-sam.png",
-      "crop": [
-        184,
-        144,
-        562,
-        751
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 372,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "nurse_wang",
-        "features": "极瘦小老脸；凹颊尖颏；淡短眉；眼尾下垂；小尖鼻；干瘪唇，老迈慈爱",
-        "seed": 10232043,
-        "faceBox": [
-          39,
-          10,
-          72,
-          45
-        ],
-        "revision": "0c52f8589e8b",
-        "source": "art/identity/nurse_wang-chibi/request.json"
-      }
-    },
-    "nurse_li-portrait": {
-      "image": "/assets/rongguo/nurse_li-portrait.png",
-      "width": 291,
-      "height": 600,
-      "anchor": [
-        145.5,
-        598.683
-      ],
-      "source": "art/source/nurse_li-portrait_s10222314-01.png",
-      "matte": "art/matted/nurse_li-portrait_s10222314-sam.png",
-      "crop": [
-        245,
-        113,
-        687,
-        1024
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "nurse_li",
-        "features": "饱满圆方脸；粗平眉；厚眼皮；宽肉鼻；紧闭厚唇，老练严肃",
-        "seed": 10232044,
-        "faceBox": [
-          96,
-          21,
-          192,
-          171
-        ],
-        "revision": "8e29d071d23f",
-        "source": "art/identity/nurse_li-portrait/request.json"
-      }
-    },
-    "nurse_li-chibi": {
-      "image": "/assets/rongguo/nurse_li-chibi.png",
-      "width": 55,
-      "height": 116,
-      "anchor": [
-        27.5,
-        115.308
-      ],
-      "source": "art/source/nurse_li-chibi_s10222315-01.png",
-      "matte": "art/matted/nurse_li-chibi_s10222315-sam.png",
-      "crop": [
-        245,
-        133,
-        541,
-        757
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 368,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "nurse_li",
-        "features": "饱满圆方脸；粗平眉；厚眼皮；宽肉鼻；紧闭厚唇，老练严肃",
-        "seed": 10232045,
-        "faceBox": [
-          17,
-          10,
-          39,
-          37
-        ],
-        "revision": "2650a197cb0c",
-        "source": "art/identity/nurse_li-chibi/request.json"
-      }
-    },
-    "estate-grandmother": {
-      "image": "/assets/rongguo/estate-grandmother.png",
-      "width": 800,
-      "height": 510,
-      "anchor": [
-        400.0,
-        505.939
-      ],
-      "source": "art/source/estate-grandmother_s10222400-01.png",
-      "matte": "art/matted/estate-grandmother_s10222400-sam.png",
-      "crop": [
-        20,
-        270,
-        1005,
-        898
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "estate-east": {
-      "image": "/assets/rongguo/estate-east.png",
-      "width": 800,
-      "height": 483,
-      "anchor": [
-        400.0,
-        478.633
-      ],
-      "source": "art/source/estate-east_s10222401-01.png",
-      "matte": "art/matted/estate-east_s10222401-sam.png",
-      "crop": [
-        56,
-        300,
-        971,
-        853
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "estate-wang": {
-      "image": "/assets/rongguo/estate-wang.png",
-      "width": 800,
-      "height": 564,
-      "anchor": [
-        400.0,
-        559.524
-      ],
-      "source": "art/source/estate-wang_s10222402-01.png",
-      "matte": "art/matted/estate-wang_s10222402-sam.png",
-      "crop": [
-        63,
-        261,
-        956,
-        891
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "estate-feng": {
-      "image": "/assets/rongguo/estate-feng.png",
-      "width": 800,
-      "height": 583,
-      "anchor": [
-        400.0,
-        578.63
-      ],
-      "source": "art/source/estate-feng_s10222403-01.png",
-      "matte": "art/matted/estate-feng_s10222403-sam.png",
-      "crop": [
-        48,
-        248,
-        963,
-        915
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "estate-rear": {
-      "image": "/assets/rongguo/estate-rear.png",
-      "width": 800,
-      "height": 553,
-      "anchor": [
-        400.0,
-        548.766
-      ],
-      "source": "art/source/estate-rear_s10222404-01.png",
-      "matte": "art/matted/estate-rear_s10222404-sam.png",
-      "crop": [
-        34,
-        246,
-        979,
-        899
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "estate-bisha": {
-      "image": "/assets/rongguo/estate-bisha.png",
-      "width": 800,
-      "height": 619,
-      "anchor": [
-        400.0,
-        614.823
-      ],
-      "source": "art/source/estate-bisha_s10222405-01.png",
-      "matte": "art/matted/estate-bisha_s10222405-sam.png",
-      "crop": [
-        29,
-        168,
-        987,
-        909
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "estate-study": {
-      "image": "/assets/rongguo/estate-study.png",
-      "width": 800,
-      "height": 532,
-      "anchor": [
-        400.412,
-        527.882
-      ],
-      "source": "art/source/estate-study_s10222406-01.png",
-      "matte": "art/matted/estate-study_s10222406-sam.png",
-      "crop": [
-        26,
-        254,
-        998,
-        900
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "shiyin-portrait": {
-      "image": "/assets/rongguo/shiyin-portrait.png",
-      "width": 411,
-      "height": 600,
-      "anchor": [
-        205.5,
-        599.018
-      ],
-      "source": "art/source/shiyin-portrait_s10230100-01.png",
-      "matte": "art/matted/shiyin-portrait_s10230100-sam.png",
-      "crop": [
-        145,
-        113,
-        564,
-        724
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "shiyin",
-        "features": "宽额瘦颊；细长眉；深静下垂眼；长而微弯鼻；柔和薄唇，恬淡",
-        "seed": 10232046,
-        "faceBox": [
-          180,
-          78,
-          306,
-          273
-        ],
-        "revision": "5836753f2f05",
-        "source": "art/identity/shiyin-portrait/request.json"
-      }
-    },
-    "shiyin-chibi": {
-      "image": "/assets/rongguo/shiyin-chibi.png",
-      "width": 50,
-      "height": 116,
-      "anchor": [
-        25.0,
-        115.28
-      ],
-      "source": "art/source/shiyin-chibi_s10230101-01.png",
-      "matte": "art/matted/shiyin-chibi_s10230101-sam.png",
-      "crop": [
-        254,
-        178,
-        502,
-        758
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 396,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "shiyin",
-        "features": "宽额瘦颊；细长眉；深静下垂眼；长而微弯鼻；柔和薄唇，恬淡",
-        "seed": 10232047,
-        "faceBox": [
-          19,
-          15,
-          39,
-          40
-        ],
-        "revision": "da60ff66aaeb",
-        "source": "art/identity/shiyin-chibi/request.json"
-      }
-    },
-    "fengshi-portrait": {
-      "image": "/assets/rongguo/fengshi-portrait.png",
-      "width": 396,
-      "height": 600,
-      "anchor": [
-        198.0,
-        599.028
-      ],
-      "source": "art/source/fengshi-portrait_s10230102-01.png",
-      "matte": "art/matted/fengshi-portrait_s10230102-sam.png",
-      "crop": [
-        187,
-        104,
-        594,
-        721
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "fengshi",
-        "features": "宽颊长鹅蛋脸；低弯眉；细长柔眼；低圆鼻；厚唇，温柔忧愁",
-        "seed": 10232048,
-        "faceBox": [
-          144,
-          75,
-          264,
-          276
-        ],
-        "revision": "ca6f8043b06c",
-        "source": "art/identity/fengshi-portrait/request.json"
-      }
-    },
-    "fengshi-chibi": {
-      "image": "/assets/rongguo/fengshi-chibi.png",
-      "width": 44,
-      "height": 116,
-      "anchor": [
-        22.0,
-        115.119
-      ],
-      "source": "art/source/fengshi-chibi_s10230103-01.png",
-      "matte": "art/matted/fengshi-chibi_s10230103-sam.png",
-      "crop": [
-        283,
-        184,
-        505,
-        774
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 406,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "fengshi",
-        "features": "宽颊长鹅蛋脸；低弯眉；细长柔眼；低圆鼻；厚唇，温柔忧愁",
-        "seed": 10232049,
-        "faceBox": [
-          18,
-          11,
-          36,
-          34
-        ],
-        "revision": "aae753e7c321",
-        "source": "art/identity/fengshi-chibi/request.json"
-      }
-    },
-    "yinglian-portrait": {
-      "image": "/assets/rongguo/yinglian-portrait.png",
-      "width": 301,
-      "height": 600,
-      "anchor": [
-        142.172,
-        598.812
-      ],
-      "source": "art/source/yinglian-portrait_s10230104-01.png",
-      "matte": "art/matted/yinglian-portrait_s10230104-sam.png",
-      "crop": [
-        310,
-        237,
-        563,
-        742
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "yinglian",
-        "features": "真正三岁幼童脸；极短面中；高额宽眼距；圆眼小鼻；圆下巴；眉心胭脂痣",
-        "seed": 10232050,
-        "faceBox": [
-          60,
-          54,
-          216,
-          258
-        ],
-        "revision": "cb6665ca9b3e",
-        "source": "art/identity/yinglian-portrait/request.json"
-      }
-    },
-    "yinglian-chibi": {
-      "image": "/assets/rongguo/yinglian-chibi.png",
-      "width": 44,
-      "height": 80,
-      "anchor": [
-        22.0,
-        79.31
-      ],
-      "source": "art/source/yinglian-chibi_s10230105-01.png",
-      "matte": "art/matted/yinglian-chibi_s10230105-sam.png",
-      "crop": [
-        264,
-        355,
-        509,
-        805
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 524,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "yinglian",
-        "features": "真正三岁幼童脸；极短面中；高额宽眼距；圆眼小鼻；圆下巴；眉心胭脂痣",
-        "seed": 10232051,
-        "faceBox": [
-          10,
-          12,
-          40,
-          37
-        ],
-        "revision": "873f76d0d7cc",
-        "source": "art/identity/yinglian-chibi/request.json"
-      }
-    },
-    "jiaoxing-portrait": {
-      "image": "/assets/rongguo/jiaoxing-portrait.png",
-      "width": 347,
-      "height": 600,
-      "anchor": [
-        173.5,
-        599.005
-      ],
-      "source": "art/source/jiaoxing-portrait_s10230106-01.png",
-      "matte": "art/matted/jiaoxing-portrait_s10230106-sam.png",
-      "crop": [
-        215,
-        125,
-        564,
-        728
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "jiaoxing",
-        "features": "微方杏仁脸；浓柔眉；弯月笑眼；略宽鼻头；丰唇，亲切坦然",
-        "seed": 10232052,
-        "faceBox": [
-          99,
-          63,
-          243,
-          255
-        ],
-        "revision": "9f2fb3920018",
-        "source": "art/identity/jiaoxing-portrait/request.json"
-      }
-    },
-    "jiaoxing-chibi": {
-      "image": "/assets/rongguo/jiaoxing-chibi.png",
-      "width": 52,
-      "height": 116,
-      "anchor": [
-        26.0,
-        115.034
-      ],
-      "source": "art/source/jiaoxing-chibi_s10230107-01.png",
-      "matte": "art/matted/jiaoxing-chibi_s10230107-sam.png",
-      "crop": [
-        270,
-        238,
-        511,
-        776
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 440,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "jiaoxing",
-        "features": "微方杏仁脸；浓柔眉；弯月笑眼；略宽鼻头；丰唇，亲切坦然",
-        "seed": 10232053,
-        "faceBox": [
-          18,
-          19,
-          46,
-          47
-        ],
-        "revision": "e252fa481996",
-        "source": "art/identity/jiaoxing-chibi/request.json"
-      }
-    },
-    "fengsu-portrait": {
-      "image": "/assets/rongguo/fengsu-portrait.png",
-      "width": 497,
-      "height": 600,
-      "anchor": [
-        248.5,
-        598.947
-      ],
-      "source": "art/source/fengsu-portrait_s10230108-01.png",
-      "matte": "art/matted/fengsu-portrait_s10230108-sam.png",
-      "crop": [
-        145,
-        174,
-        617,
-        744
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "fengsu",
-        "features": "梯形阔下颌；稀短眉；眼小聚拢；蒜鼻；厚唇，下颏肉厚而世故",
-        "seed": 10232054,
-        "faceBox": [
-          198,
-          54,
-          348,
-          249
-        ],
-        "revision": "de68a8ff4af3",
-        "source": "art/identity/fengsu-portrait/request.json"
-      }
-    },
-    "fengsu-chibi": {
-      "image": "/assets/rongguo/fengsu-chibi.png",
-      "width": 68,
-      "height": 116,
-      "anchor": [
-        34.0,
-        115.07
-      ],
-      "source": "art/source/fengsu-chibi_s10230109-01.png",
-      "matte": "art/matted/fengsu-chibi_s10230109-sam.png",
-      "crop": [
-        270,
-        232,
-        580,
-        761
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 431,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "fengsu",
-        "features": "梯形阔下颌；稀短眉；眼小聚拢；蒜鼻；厚唇，下颏肉厚而世故",
-        "seed": 10232055,
-        "faceBox": [
-          19,
-          14,
-          47,
-          45
-        ],
-        "revision": "e6f66c099ba0",
-        "source": "art/identity/fengsu-chibi/request.json"
-      }
-    },
-    "monk-portrait": {
-      "image": "/assets/rongguo/monk-portrait.png",
-      "width": 406,
-      "height": 600,
-      "anchor": [
-        203.0,
-        598.985
-      ],
-      "source": "art/source/monk-portrait_s10230110-01.png",
-      "matte": "art/matted/monk-portrait_s10230110-sam.png",
-      "crop": [
-        240,
-        113,
-        640,
-        704
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "monk",
-        "features": "宽额尖下颏；颧骨突出；一高一低弯眉；细长笑眼；大耳宽鼻；豁达诙谐",
-        "seed": 10232056,
-        "faceBox": [
-          150,
-          0,
-          255,
-          204
-        ],
-        "revision": "9a31fef62317",
-        "source": "art/identity/monk-portrait/request.json"
-      }
-    },
-    "monk-chibi": {
-      "image": "/assets/rongguo/monk-chibi.png",
-      "width": 71,
-      "height": 116,
-      "anchor": [
-        35.5,
-        115.224
-      ],
-      "source": "art/source/monk-chibi_s10230111-01.png",
-      "matte": "art/matted/monk-chibi_s10230111-sam.png",
-      "crop": [
-        258,
-        206,
-        603,
-        768
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 418,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "monk",
-        "features": "宽额尖下颏；颧骨突出；一高一低弯眉；细长笑眼；大耳宽鼻；豁达诙谐",
-        "seed": 10232057,
-        "faceBox": [
-          19,
-          0,
-          46,
-          43
-        ],
-        "revision": "97b5b2afefc6",
-        "source": "art/identity/monk-chibi/request.json"
-      }
-    },
-    "taoist-portrait": {
-      "image": "/assets/rongguo/taoist-portrait.png",
-      "width": 367,
-      "height": 600,
-      "anchor": [
-        186.691,
-        598.936
-      ],
-      "source": "art/source/taoist-portrait_s10230112-01.png",
-      "matte": "art/matted/taoist-portrait_s10230112-sam.png",
-      "crop": [
-        221,
-        128,
-        566,
-        692
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "taoist",
-        "features": "狭长骨相；高额；斜飞长眉；深长眼；鹰钩鼻；薄唇，疏狂",
-        "seed": 10232058,
-        "faceBox": [
-          156,
-          24,
-          249,
-          192
-        ],
-        "revision": "f5b7f2e01bf1",
-        "source": "art/identity/taoist-portrait/request.json"
-      }
-    },
-    "taoist-chibi": {
-      "image": "/assets/rongguo/taoist-chibi.png",
-      "width": 71,
-      "height": 116,
-      "anchor": [
-        32.846,
-        115.224
-      ],
-      "source": "art/source/taoist-chibi_s10230113-01.png",
-      "matte": "art/matted/taoist-chibi_s10230113-sam.png",
-      "crop": [
-        257,
-        230,
-        578,
-        756
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 428,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "taoist",
-        "features": "狭长骨相；高额；斜飞长眉；深长眼；鹰钩鼻；薄唇，疏狂",
-        "seed": 10232059,
-        "faceBox": [
-          22,
-          7,
-          41,
-          44
-        ],
-        "revision": "756abc0dba41",
-        "source": "art/identity/taoist-chibi/request.json"
-      }
-    },
-    "kongkong-portrait": {
-      "image": "/assets/rongguo/kongkong-portrait.png",
-      "width": 547,
-      "height": 600,
-      "anchor": [
-        260.404,
-        598.993
-      ],
-      "source": "art/source/kongkong-portrait_s10230114-01.png",
-      "matte": "art/matted/kongkong-portrait_s10230114-sam.png",
-      "crop": [
-        130,
-        135,
-        673,
-        731
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "kongkong",
-        "features": "方额长脸；平直长眉；宽眼距静眼；方直鼻；薄而平口，沉思",
-        "seed": 10232060,
-        "faceBox": [
-          192,
-          102,
-          336,
-          312
-        ],
-        "revision": "4f65bbe74c4a",
-        "source": "art/identity/kongkong-portrait/request.json"
-      }
-    },
-    "kongkong-chibi": {
-      "image": "/assets/rongguo/kongkong-chibi.png",
-      "width": 72,
-      "height": 116,
-      "anchor": [
-        32.675,
-        115.158
-      ],
-      "source": "art/source/kongkong-chibi_s10230115-01.png",
-      "matte": "art/matted/kongkong-chibi_s10230115-sam.png",
-      "crop": [
-        285,
-        269,
-        599,
-        776
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 460,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "kongkong",
-        "features": "方额长脸；平直长眉；宽眼距静眼；方直鼻；薄而平口，沉思",
-        "seed": 10232061,
-        "faceBox": [
-          17,
-          17,
-          43,
-          48
-        ],
-        "revision": "ae0f80a07343",
-        "source": "art/identity/kongkong-chibi/request.json"
-      }
-    },
-    "huoqi-portrait": {
-      "image": "/assets/rongguo/huoqi-portrait.png",
-      "width": 426,
-      "height": 600,
-      "anchor": [
-        213.0,
-        598.971
-      ],
-      "source": "art/source/huoqi-portrait_s10230116-01.png",
-      "matte": "art/matted/huoqi-portrait_s10230116-sam.png",
-      "crop": [
-        181,
-        154,
-        595,
-        737
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "huoqi",
-        "features": "短方脸；粗短低眉；小圆眼；扁鼻；厚唇，笨拙朴实",
-        "seed": 10232062,
-        "faceBox": [
-          165,
-          63,
-          306,
-          249
-        ],
-        "revision": "f65160b11b56",
-        "source": "art/identity/huoqi-portrait/request.json"
-      }
-    },
-    "huoqi-chibi": {
-      "image": "/assets/rongguo/huoqi-chibi.png",
-      "width": 58,
-      "height": 116,
-      "anchor": [
-        29.0,
-        115.171
-      ],
-      "source": "art/source/huoqi-chibi_s10230117-01.png",
-      "matte": "art/matted/huoqi-chibi_s10230117-sam.png",
-      "crop": [
-        288,
-        265,
-        538,
-        769
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 455,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "huoqi",
-        "features": "短方脸；粗短低眉；小圆眼；扁鼻；厚唇，笨拙朴实",
-        "seed": 10232063,
-        "faceBox": [
-          12,
-          24,
-          52,
-          53
-        ],
-        "revision": "e70216790258",
-        "source": "art/identity/huoqi-chibi/request.json"
-      }
-    },
-    "oldmonk-portrait": {
-      "image": "/assets/rongguo/oldmonk-portrait.png",
-      "width": 505,
-      "height": 600,
-      "anchor": [
-        253.045,
-        598.909
-      ],
-      "source": "art/source/oldmonk-portrait_s10230118-01.png",
-      "matte": "art/matted/oldmonk-portrait_s10230118-sam.png",
-      "crop": [
-        161,
-        204,
-        624,
-        754
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null,
-      "identity": {
-        "character": "oldmonk",
-        "features": "骨瘦凹陷老脸；垂白眉；深陷半闭眼；长弯鼻；瘪嘴，迟钝衰老",
-        "seed": 10232064,
-        "faceBox": [
-          228,
-          3,
-          381,
-          273
-        ],
-        "revision": "def017f9cb2e",
-        "source": "art/identity/oldmonk-portrait/request.json"
-      }
-    },
-    "oldmonk-chibi": {
-      "image": "/assets/rongguo/oldmonk-chibi.png",
-      "width": 66,
-      "height": 116,
-      "anchor": [
-        33.0,
-        115.239
-      ],
-      "source": "art/source/oldmonk-chibi_s10230119-01.png",
-      "matte": "art/matted/oldmonk-chibi_s10230119-sam.png",
-      "crop": [
-        218,
-        302,
-        495,
-        790
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": {
-        "split": 486,
-        "factor": 0.64
-      },
-      "identity": {
-        "character": "oldmonk",
-        "features": "骨瘦凹陷老脸；垂白眉；深陷半闭眼；长弯鼻；瘪嘴，迟钝衰老",
-        "seed": 10232065,
-        "faceBox": [
-          21,
-          0,
-          52,
-          46
-        ],
-        "revision": "a269377dbda4",
-        "source": "art/identity/oldmonk-chibi/request.json"
-      }
-    },
-    "estate-zhen": {
-      "image": "/assets/rongguo/estate-zhen.png",
-      "width": 800,
-      "height": 633,
-      "anchor": [
-        400.0,
-        628.339
-      ],
-      "source": "art/source/estate-zhen_s10230200-01.png",
-      "matte": "art/matted/estate-zhen_s10230200-sam.png",
-      "crop": [
-        73,
-        219,
-        931,
-        898
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "estate-hulu": {
-      "image": "/assets/rongguo/estate-hulu.png",
-      "width": 800,
-      "height": 724,
-      "anchor": [
-        400.0,
-        719.212
-      ],
-      "source": "art/source/estate-hulu_s10230201-01.png",
-      "matte": "art/matted/estate-hulu_s10230201-sam.png",
-      "crop": [
-        88,
-        158,
-        923,
-        914
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "estate-farm": {
-      "image": "/assets/rongguo/estate-farm.png",
-      "width": 800,
-      "height": 452,
-      "anchor": [
-        400.0,
-        447.728
-      ],
-      "source": "art/source/estate-farm_s10230202-01.png",
-      "matte": "art/matted/estate-farm_s10230202-sam.png",
-      "crop": [
-        45,
-        347,
-        981,
-        876
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "estate-yamen": {
-      "image": "/assets/rongguo/estate-yamen.png",
-      "width": 800,
-      "height": 681,
-      "anchor": [
-        400.0,
-        676.646
-      ],
-      "source": "art/source/estate-yamen_s10230203-01.png",
-      "matte": "art/matted/estate-yamen_s10230203-sam.png",
-      "crop": [
-        54,
-        125,
-        972,
-        907
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "estate-zhitong": {
-      "image": "/assets/rongguo/estate-zhitong.png",
-      "width": 800,
-      "height": 544,
-      "anchor": [
-        400.0,
-        539.16
-      ],
-      "source": "art/source/estate-zhitong_s10230204-01.png",
-      "matte": "art/matted/estate-zhitong_s10230204-sam.png",
-      "crop": [
-        97,
-        289,
-        924,
-        851
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "estate-tavern": {
-      "image": "/assets/rongguo/estate-tavern.png",
-      "width": 800,
-      "height": 691,
-      "anchor": [
-        400.0,
-        686.35
-      ],
-      "source": "art/source/estate-tavern_s10230205-01.png",
-      "matte": "art/matted/estate-tavern_s10230205-sam.png",
-      "crop": [
-        89,
-        153,
-        949,
-        896
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "estate-lantern": {
-      "image": "/assets/rongguo/estate-lantern.png",
-      "width": 800,
-      "height": 551,
-      "anchor": [
-        400.0,
-        546.832
-      ],
-      "source": "art/source/estate-lantern_s10230206-01.png",
-      "matte": "art/matted/estate-lantern_s10230206-sam.png",
-      "crop": [
-        36,
-        261,
-        996,
-        922
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "black-oil-gate": {
-      "image": "/assets/rongguo/black-oil-gate.png",
-      "width": 450,
-      "height": 373,
-      "anchor": [
-        212.903,
-        326.496
-      ],
-      "source": "art/source/black-oil-gate_s10230207-01.png",
-      "matte": "art/matted/black-oil-gate_s10230207-sam.png",
-      "crop": [
-        55,
-        162,
-        985,
-        932
-      ],
-      "shear": 0,
-      "mirror": true,
-      "bodyCompress": null
-    },
-    "west-wall-gate": {
-      "image": "/assets/rongguo/west-wall-gate.png",
-      "width": 390,
-      "height": 325,
-      "anchor": [
-        216.972,
-        291.079
-      ],
-      "source": "art/source/west-wall-gate_s10230208-01.png",
-      "matte": "art/matted/west-wall-gate_s10230208-sam.png",
-      "crop": [
-        86,
-        170,
-        938,
-        879
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "spirit-stone": {
-      "image": "/assets/rongguo/spirit-stone.png",
-      "width": 260,
-      "height": 334,
-      "anchor": [
-        129.752,
-        329.547
-      ],
-      "source": "art/source/spirit-stone_s10230300-01.png",
-      "matte": "art/matted/spirit-stone_s10230300-sam.png",
-      "crop": [
-        250,
-        180,
-        775,
-        855
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "crimson-pearl": {
-      "image": "/assets/rongguo/crimson-pearl.png",
-      "width": 200,
-      "height": 197,
-      "anchor": [
-        99.873,
-        195.225
-      ],
-      "source": "art/source/crimson-pearl_s10230301-01.png",
-      "matte": "art/matted/crimson-pearl_s10230301-sam.png",
-      "crop": [
-        125,
-        144,
-        915,
-        921
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    },
-    "manor-main-gate": {
-      "image": "/assets/rongguo/manor-main-gate.png",
-      "width": 650,
-      "height": 528,
-      "anchor": [
-        287.554,
-        400.347
-      ],
-      "source": "art/source/manor-main-gate_s10230400-01.png",
-      "matte": "art/matted/manor-main-gate_s10230400-sam.png",
-      "crop": [
-        64,
-        362,
-        984,
-        1109
-      ],
-      "shear": -0.2,
-      "mirror": true,
-      "bodyCompress": null
-    },
-    "estate-ruins": {
-      "image": "/assets/rongguo/estate-ruins.png",
-      "width": 800,
-      "height": 626,
-      "anchor": [
-        399.556,
-        620.672
-      ],
-      "source": "art/source/estate-ruins-v2_s10230402-01.png",
-      "matte": "art/matted/estate-ruins-v2_s10230402-sam.png",
-      "crop": [
-        63,
-        168,
-        964,
-        873
-      ],
-      "shear": 0,
-      "mirror": false,
-      "bodyCompress": null
-    }
+ "version": 1,
+ "tilewidth": 128,
+ "tileheight": 64,
+ "assets": {
+  "flower-gate": {
+   "image": "/assets/rongguo/flower-gate.png",
+   "width": 600,
+   "height": 631,
+   "anchor": [
+    279.671,
+    486.314
+   ],
+   "source": "art/source/flower-gate_s10216611-01.png",
+   "matte": "art/matted/flower-gate_s10216611-sam.png",
+   "crop": [
+    50,
+    184,
+    1024,
+    1208
+   ],
+   "shear": -0.24,
+   "mirror": true,
+   "bodyCompress": null
+  },
+  "courtyard-wall": {
+   "image": "/assets/rongguo/courtyard-wall.png",
+   "width": 540,
+   "height": 439,
+   "anchor": [
+    271.636,
+    335.433
+   ],
+   "source": "art/source/courtyard-wall_s10216612-01.png",
+   "matte": "art/matted/courtyard-wall_s10216612-sam.png",
+   "crop": [
+    99,
+    78,
+    924,
+    749
+   ],
+   "shear": 0.04999999999999999,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "garden-tree": {
+   "image": "/assets/rongguo/garden-tree.png",
+   "width": 290,
+   "height": 252,
+   "anchor": [
+    146.481,
+    244.772
+   ],
+   "source": "art/source/garden-tree_s10216613-01.png",
+   "matte": "art/matted/garden-tree_s10216613-sam.png",
+   "crop": [
+    69,
+    121,
+    950,
+    888
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "main-hall": {
+   "image": "/assets/rongguo/main-hall.png",
+   "width": 1100,
+   "height": 888,
+   "anchor": [
+    443.976,
+    677.39
+   ],
+   "source": "art/source/main-hall_s10216614-01.png",
+   "matte": "art/matted/main-hall_s10216614-sam.png",
+   "crop": [
+    119,
+    153,
+    1447,
+    1225
+   ],
+   "shear": 0.25,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "garden-rock": {
+   "image": "/assets/rongguo/garden-rock.png",
+   "width": 190,
+   "height": 209,
+   "anchor": [
+    97.861,
+    199.851
+   ],
+   "source": "art/source/garden-rock_s10216615-01.png",
+   "matte": "art/matted/garden-rock_s10216615-sam.png",
+   "crop": [
+    182,
+    138,
+    846,
+    869
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "daiyu-chibi": {
+   "image": "/assets/rongguo/daiyu-chibi.png",
+   "width": 54,
+   "height": 118,
+   "anchor": [
+    27.484,
+    116.159
+   ],
+   "source": "art/source/daiyu-chibi_s10216616-01.png",
+   "matte": "art/matted/daiyu-chibi_s10216616-sam.png",
+   "crop": [
+    249,
+    115,
+    528,
+    727
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 410,
+    "factor": 0.55
+   },
+   "identity": {
+    "character": "daiyu",
+    "features": "清瘦长鹅蛋脸；细长含愁眉；眼尾微垂的含露杏眼；窄鼻梁；薄小唇；敏感、克制，眼下轻淡倦意",
+    "seed": 10232001,
+    "faceBox": [
+     19,
+     21,
+     46,
+     51
+    ],
+    "revision": "c5ff876838d9",
+    "source": "art/identity/daiyu-chibi/request.json"
+   }
+  },
+  "daiyu-portrait": {
+   "image": "/assets/rongguo/daiyu-portrait.png",
+   "width": 311,
+   "height": 720,
+   "anchor": [
+    156.582,
+    720.0
+   ],
+   "source": "art/source/daiyu-portrait_s10216617-01.png",
+   "matte": "art/matted/daiyu-portrait_s10216617-sam.png",
+   "crop": [
+    173,
+    153,
+    604,
+    1152
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "daiyu",
+    "features": "清瘦长鹅蛋脸；细长含愁眉；眼尾微垂的含露杏眼；窄鼻梁；薄小唇；敏感、克制，眼下轻淡倦意",
+    "seed": 10232000,
+    "faceBox": [
+     135,
+     75,
+     237,
+     249
+    ],
+    "revision": "ca9fb4a75771",
+    "source": "art/identity/daiyu-portrait/request.json"
+   }
+  },
+  "baoyu-portrait": {
+   "image": "/assets/rongguo/baoyu-portrait.png",
+   "width": 346,
+   "height": 600,
+   "anchor": [
+    172.375,
+    599.376
+   ],
+   "source": "art/source/baoyu-portrait-v2_s10222200-01.png",
+   "matte": "art/matted/baoyu-portrait-v2_s10222200-sam.png",
+   "crop": [
+    114,
+    63,
+    668,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "baoyu",
+    "features": "饱满短鹅蛋脸；宽额；浓长平眉；明亮桃花眼；圆润鼻尖；饱满弓唇，喜悦灵动",
+    "seed": 10232002,
+    "faceBox": [
+     90,
+     140,
+     250,
+     285
+    ],
+    "revision": "ab417ba96524",
+    "source": "art/identity/baoyu-portrait/request.json"
+   }
+  },
+  "baoyu-chibi": {
+   "image": "/assets/rongguo/baoyu-chibi.png",
+   "width": 50,
+   "height": 116,
+   "anchor": [
+    25.0,
+    115.21
+   ],
+   "source": "art/source/baoyu-chibi_s10222001-01.png",
+   "matte": "art/matted/baoyu-chibi_s10222001-sam.png",
+   "crop": [
+    264,
+    131,
+    529,
+    748
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 363,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "baoyu",
+    "features": "饱满短鹅蛋脸；宽额；浓长平眉；明亮桃花眼；圆润鼻尖；饱满弓唇，喜悦灵动",
+    "seed": 10232003,
+    "faceBox": [
+     13,
+     23,
+     45,
+     49
+    ],
+    "revision": "809243255d0f",
+    "source": "art/identity/baoyu-chibi/request.json"
+   }
+  },
+  "feng-portrait": {
+   "image": "/assets/rongguo/feng-portrait.png",
+   "width": 190,
+   "height": 600,
+   "anchor": [
+    95.0,
+    598.67
+   ],
+   "source": "art/source/feng-portrait_s10222002-01.png",
+   "matte": "art/matted/feng-portrait_s10222002-sam.png",
+   "crop": [
+    230,
+    122,
+    516,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "feng",
+    "features": "颧骨鲜明的菱形脸；高挑柳叶眉；细长上挑凤眼；挺直鼻梁；薄唇偏侧笑，锐利干练",
+    "seed": 10232004,
+    "faceBox": [
+     66,
+     45,
+     135,
+     135
+    ],
+    "revision": "0a3a8d0e96c9",
+    "source": "art/identity/feng-portrait/request.json"
+   }
+  },
+  "feng-chibi": {
+   "image": "/assets/rongguo/feng-chibi.png",
+   "width": 45,
+   "height": 116,
+   "anchor": [
+    22.5,
+    115.288
+   ],
+   "source": "art/source/feng-chibi_s10222003-01.png",
+   "matte": "art/matted/feng-chibi_s10222003-sam.png",
+   "crop": [
+    273,
+    149,
+    510,
+    762
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 380,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "feng",
+    "features": "颧骨鲜明的菱形脸；高挑柳叶眉；细长上挑凤眼；挺直鼻梁；薄唇偏侧笑，锐利干练",
+    "seed": 10232005,
+    "faceBox": [
+     14,
+     15,
+     32,
+     34
+    ],
+    "revision": "2183e4431d0d",
+    "source": "art/identity/feng-chibi/request.json"
+   }
+  },
+  "grandmother-portrait": {
+   "image": "/assets/rongguo/grandmother-portrait.png",
+   "width": 296,
+   "height": 600,
+   "anchor": [
+    148.0,
+    598.598
+   ],
+   "source": "art/source/grandmother-portrait_s10222004-01.png",
+   "matte": "art/matted/grandmother-portrait_s10222004-sam.png",
+   "crop": [
+    212,
+    168,
+    635,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "grandmother",
+    "features": "宽阔圆方脸；丰颊重下颌；长寿眉；笑眼但目光有威；宽鼻头；笑纹深而温厚",
+    "seed": 10232006,
+    "faceBox": [
+     99,
+     21,
+     207,
+     174
+    ],
+    "revision": "7b3246af88cf",
+    "source": "art/identity/grandmother-portrait/request.json"
+   }
+  },
+  "grandmother-chibi": {
+   "image": "/assets/rongguo/grandmother-chibi.png",
+   "width": 52,
+   "height": 116,
+   "anchor": [
+    25.902,
+    115.118
+   ],
+   "source": "art/source/grandmother-chibi_s10222005-01.png",
+   "matte": "art/matted/grandmother-chibi_s10222005-sam.png",
+   "crop": [
+    246,
+    169,
+    511,
+    758
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 390,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "grandmother",
+    "features": "宽阔圆方脸；丰颊重下颌；长寿眉；笑眼但目光有威；宽鼻头；笑纹深而温厚",
+    "seed": 10232007,
+    "faceBox": [
+     15,
+     6,
+     42,
+     41
+    ],
+    "revision": "ca8b517e4bb5",
+    "source": "art/identity/grandmother-chibi/request.json"
+   }
+  },
+  "wang-portrait": {
+   "image": "/assets/rongguo/wang-portrait.png",
+   "width": 248,
+   "height": 600,
+   "anchor": [
+    124.0,
+    598.668
+   ],
+   "source": "art/source/wang-portrait_s10222006-01.png",
+   "matte": "art/matted/wang-portrait_s10222006-sam.png",
+   "crop": [
+    236,
+    123,
+    609,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "wang",
+    "features": "端正方圆脸；低平眉；厚眼睑；内收沉静目光；宽直鼻；嘴角平收，稳重含蓄",
+    "seed": 10232008,
+    "faceBox": [
+     72,
+     48,
+     162,
+     177
+    ],
+    "revision": "705378d3b9cc",
+    "source": "art/identity/wang-portrait/request.json"
+   }
+  },
+  "wang-chibi": {
+   "image": "/assets/rongguo/wang-chibi.png",
+   "width": 45,
+   "height": 116,
+   "anchor": [
+    22.5,
+    115.235
+   ],
+   "source": "art/source/wang-chibi_s10222007-01.png",
+   "matte": "art/matted/wang-chibi_s10222007-sam.png",
+   "crop": [
+    283,
+    238,
+    493,
+    778
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 441,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "wang",
+    "features": "端正方圆脸；低平眉；厚眼睑；内收沉静目光；宽直鼻；嘴角平收，稳重含蓄",
+    "seed": 10232009,
+    "faceBox": [
+     12,
+     12,
+     34,
+     37
+    ],
+    "revision": "f11879911182",
+    "source": "art/identity/wang-chibi/request.json"
+   }
+  },
+  "xing-portrait": {
+   "image": "/assets/rongguo/xing-portrait.png",
+   "width": 231,
+   "height": 600,
+   "anchor": [
+    115.5,
+    598.644
+   ],
+   "source": "art/source/xing-portrait_s10222008-01.png",
+   "matte": "art/matted/xing-portrait_s10222008-sam.png",
+   "crop": [
+    237,
+    139,
+    578,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "xing",
+    "features": "长方脸；颧面偏平；略下垂眉；细小眼睛；长鼻；窄嘴，拘谨审视",
+    "seed": 10232010,
+    "faceBox": [
+     75,
+     48,
+     153,
+     162
+    ],
+    "revision": "bf30a5643364",
+    "source": "art/identity/xing-portrait/request.json"
+   }
+  },
+  "xing-chibi": {
+   "image": "/assets/rongguo/xing-chibi.png",
+   "width": 47,
+   "height": 116,
+   "anchor": [
+    23.395,
+    115.309
+   ],
+   "source": "art/source/xing-chibi_s10222009-01.png",
+   "matte": "art/matted/xing-chibi_s10222009-sam.png",
+   "crop": [
+    272,
+    220,
+    496,
+    777
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 430,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "xing",
+    "features": "长方脸；颧面偏平；略下垂眉；细小眼睛；长鼻；窄嘴，拘谨审视",
+    "seed": 10232011,
+    "faceBox": [
+     18,
+     13,
+     35,
+     33
+    ],
+    "revision": "f693af9f15c9",
+    "source": "art/identity/xing-chibi/request.json"
+   }
+  },
+  "liwan-portrait": {
+   "image": "/assets/rongguo/liwan-portrait.png",
+   "width": 258,
+   "height": 600,
+   "anchor": [
+    129.337,
+    598.653
+   ],
+   "source": "art/source/liwan-portrait_s10222010-01.png",
+   "matte": "art/matted/liwan-portrait_s10222010-sam.png",
+   "crop": [
+    190,
+    133,
+    573,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "liwan",
+    "features": "细长柔和脸；淡平眉；深静细眼；长鼻；唇淡而窄，清寂内敛",
+    "seed": 10232012,
+    "faceBox": [
+     93,
+     48,
+     183,
+     171
+    ],
+    "revision": "120ab52d482f",
+    "source": "art/identity/liwan-portrait/request.json"
+   }
+  },
+  "liwan-chibi": {
+   "image": "/assets/rongguo/liwan-chibi.png",
+   "width": 43,
+   "height": 116,
+   "anchor": [
+    21.5,
+    115.199
+   ],
+   "source": "art/source/liwan-chibi_s10222011-01.png",
+   "matte": "art/matted/liwan-chibi_s10222011-sam.png",
+   "crop": [
+    274,
+    173,
+    492,
+    758
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 393,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "liwan",
+    "features": "细长柔和脸；淡平眉；深静细眼；长鼻；唇淡而窄，清寂内敛",
+    "seed": 10232013,
+    "faceBox": [
+     14,
+     12,
+     33,
+     35
+    ],
+    "revision": "25b4746c5723",
+    "source": "art/identity/liwan-chibi/request.json"
+   }
+  },
+  "yingchun-portrait": {
+   "image": "/assets/rongguo/yingchun-portrait.png",
+   "width": 216,
+   "height": 600,
+   "anchor": [
+    108.0,
+    598.641
+   ],
+   "source": "art/source/yingchun-portrait_s10222012-01.png",
+   "matte": "art/matted/yingchun-portrait_s10222012-sam.png",
+   "crop": [
+    222,
+    141,
+    540,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "yingchun",
+    "features": "短圆脸；丰颊圆下巴；短淡弯眉；眼距略宽的柔缓垂眼；短圆鼻；圆小嘴，温厚怯弱",
+    "seed": 10232014,
+    "faceBox": [
+     75,
+     57,
+     162,
+     177
+    ],
+    "revision": "84edbabb2792",
+    "source": "art/identity/yingchun-portrait/request.json"
+   }
+  },
+  "yingchun-chibi": {
+   "image": "/assets/rongguo/yingchun-chibi.png",
+   "width": 48,
+   "height": 116,
+   "anchor": [
+    24.0,
+    115.164
+   ],
+   "source": "art/source/yingchun-chibi_s10222013-01.png",
+   "matte": "art/matted/yingchun-chibi_s10222013-sam.png",
+   "crop": [
+    261,
+    184,
+    500,
+    761
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 401,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "yingchun",
+    "features": "短圆脸；丰颊圆下巴；短淡弯眉；眼距略宽的柔缓垂眼；短圆鼻；圆小嘴，温厚怯弱",
+    "seed": 10232015,
+    "faceBox": [
+     13,
+     16,
+     40,
+     40
+    ],
+    "revision": "483fbe8a0bb0",
+    "source": "art/identity/yingchun-chibi/request.json"
+   }
+  },
+  "tanchun-portrait": {
+   "image": "/assets/rongguo/tanchun-portrait.png",
+   "width": 224,
+   "height": 600,
+   "anchor": [
+    112.0,
+    598.683
+   ],
+   "source": "art/source/tanchun-portrait_s10222014-01.png",
+   "matte": "art/matted/tanchun-portrait_s10222014-sam.png",
+   "crop": [
+    230,
+    113,
+    570,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "tanchun",
+    "features": "长鸭蛋脸与圆阔下颏；低平舒展长眉；眼距较宽的俊朗平眼；挺直长鼻；宽嘴与饱满下唇，自信爽朗",
+    "seed": 10232016,
+    "faceBox": [
+     72,
+     57,
+     162,
+     168
+    ],
+    "revision": "53635d5f1d41",
+    "source": "art/identity/tanchun-portrait/request.json"
+   }
+  },
+  "tanchun-chibi": {
+   "image": "/assets/rongguo/tanchun-chibi.png",
+   "width": 45,
+   "height": 116,
+   "anchor": [
+    22.601,
+    115.294
+   ],
+   "source": "art/source/tanchun-chibi_s10222015-01.png",
+   "matte": "art/matted/tanchun-chibi_s10222015-sam.png",
+   "crop": [
+    285,
+    187,
+    507,
+    765
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 405,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "tanchun",
+    "features": "长鸭蛋脸与圆阔下颏；低平舒展长眉；眼距较宽的俊朗平眼；挺直长鼻；宽嘴与饱满下唇，自信爽朗",
+    "seed": 10232017,
+    "faceBox": [
+     16,
+     11,
+     39,
+     35
+    ],
+    "revision": "13f73eeb0138",
+    "source": "art/identity/tanchun-chibi/request.json"
+   }
+  },
+  "xichun-portrait": {
+   "image": "/assets/rongguo/xichun-portrait.png",
+   "width": 204,
+   "height": 600,
+   "anchor": [
+    102.0,
+    598.544
+   ],
+   "source": "art/source/xichun-portrait_s10222016-01.png",
+   "matte": "art/matted/xichun-portrait_s10222016-sam.png",
+   "crop": [
+    340,
+    200,
+    620,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "xichun",
+    "features": "幼圆短脸；短直眉；圆眼偏冷静；小翘鼻；短小嘴，稚气而疏离",
+    "seed": 10232018,
+    "faceBox": [
+     48,
+     36,
+     147,
+     159
+    ],
+    "revision": "da4affdea6e8",
+    "source": "art/identity/xichun-portrait/request.json"
+   }
+  },
+  "xichun-chibi": {
+   "image": "/assets/rongguo/xichun-chibi.png",
+   "width": 41,
+   "height": 98,
+   "anchor": [
+    20.5,
+    97.106
+   ],
+   "source": "art/source/xichun-chibi_s10222017-01.png",
+   "matte": "art/matted/xichun-chibi_s10222017-sam.png",
+   "crop": [
+    282,
+    256,
+    493,
+    760
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 445,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "xichun",
+    "features": "幼圆短脸；短直眉；圆眼偏冷静；小翘鼻；短小嘴，稚气而疏离",
+    "seed": 10232019,
+    "faceBox": [
+     9,
+     13,
+     35,
+     38
+    ],
+    "revision": "a7dae561bd64",
+    "source": "art/identity/xichun-chibi/request.json"
+   }
+  },
+  "xiren-portrait": {
+   "image": "/assets/rongguo/xiren-portrait.png",
+   "width": 241,
+   "height": 600,
+   "anchor": [
+    120.5,
+    598.652
+   ],
+   "source": "art/source/xiren-portrait_s10222018-01.png",
+   "matte": "art/matted/xiren-portrait_s10222018-sam.png",
+   "crop": [
+    216,
+    134,
+    573,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "xiren",
+    "features": "丰润梨形脸；细弯眉；细长温和笑眼；小圆鼻；厚薄适中唇，稳妥亲切",
+    "seed": 10232020,
+    "faceBox": [
+     75,
+     60,
+     162,
+     171
+    ],
+    "revision": "fdd3f2d0c008",
+    "source": "art/identity/xiren-portrait/request.json"
+   }
+  },
+  "xiren-chibi": {
+   "image": "/assets/rongguo/xiren-chibi.png",
+   "width": 46,
+   "height": 116,
+   "anchor": [
+    23.0,
+    114.875
+   ],
+   "source": "art/source/xiren-chibi_s10222019-01.png",
+   "matte": "art/matted/xiren-chibi_s10222019-sam.png",
+   "crop": [
+    294,
+    240,
+    503,
+    764
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 437,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "xiren",
+    "features": "丰润梨形脸；细弯眉；细长温和笑眼；小圆鼻；厚薄适中唇，稳妥亲切",
+    "seed": 10232021,
+    "faceBox": [
+     16,
+     12,
+     35,
+     34
+    ],
+    "revision": "0e34ac050cba",
+    "source": "art/identity/xiren-chibi/request.json"
+   }
+  },
+  "xueyan-portrait": {
+   "image": "/assets/rongguo/xueyan-portrait.png",
+   "width": 203,
+   "height": 600,
+   "anchor": [
+    101.141,
+    598.568
+   ],
+   "source": "art/source/xueyan-portrait_s10222020-01.png",
+   "matte": "art/matted/xueyan-portrait_s10222020-sam.png",
+   "crop": [
+    252,
+    186,
+    535,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "xueyan",
+    "features": "短圆幼脸；短淡眉；略下垂大眼；小塌鼻；鼓腮小嘴，童稚谨慎",
+    "seed": 10232022,
+    "faceBox": [
+     60,
+     48,
+     150,
+     147
+    ],
+    "revision": "20838ada85b6",
+    "source": "art/identity/xueyan-portrait/request.json"
+   }
+  },
+  "xueyan-chibi": {
+   "image": "/assets/rongguo/xueyan-chibi.png",
+   "width": 52,
+   "height": 116,
+   "anchor": [
+    26.0,
+    115.259
+   ],
+   "source": "art/source/xueyan-chibi_s10222021-01.png",
+   "matte": "art/matted/xueyan-chibi_s10222021-sam.png",
+   "crop": [
+    255,
+    204,
+    503,
+    755
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 411,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "xueyan",
+    "features": "短圆幼脸；短淡眉；略下垂大眼；小塌鼻；鼓腮小嘴，童稚谨慎",
+    "seed": 10232023,
+    "faceBox": [
+     12,
+     17,
+     48,
+     47
+    ],
+    "revision": "26e977d3f5b5",
+    "source": "art/identity/xueyan-chibi/request.json"
+   }
+  },
+  "yingge-portrait": {
+   "image": "/assets/rongguo/yingge-portrait.png",
+   "width": 254,
+   "height": 600,
+   "anchor": [
+    127.0,
+    598.636
+   ],
+   "source": "art/source/yingge-portrait_s10222022-01.png",
+   "matte": "art/matted/yingge-portrait_s10222022-sam.png",
+   "crop": [
+    196,
+    144,
+    569,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "yingge",
+    "features": "小巧瓜子脸；弯眉一高一低；机敏长眼；细翘鼻；唇角轻上扬，伶俐",
+    "seed": 10232024,
+    "faceBox": [
+     87,
+     54,
+     174,
+     174
+    ],
+    "revision": "c2f823a8552b",
+    "source": "art/identity/yingge-portrait/request.json"
+   }
+  },
+  "yingge-chibi": {
+   "image": "/assets/rongguo/yingge-chibi.png",
+   "width": 45,
+   "height": 116,
+   "anchor": [
+    22.5,
+    115.246
+   ],
+   "source": "art/source/yingge-chibi_s10222023-01.png",
+   "matte": "art/matted/yingge-chibi_s10222023-sam.png",
+   "crop": [
+    277,
+    193,
+    501,
+    765
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 408,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "yingge",
+    "features": "小巧瓜子脸；弯眉一高一低；机敏长眼；细翘鼻；唇角轻上扬，伶俐",
+    "seed": 10232025,
+    "faceBox": [
+     14,
+     13,
+     34,
+     35
+    ],
+    "revision": "de093760ba65",
+    "source": "art/identity/yingge-chibi/request.json"
+   }
+  },
+  "yucun-portrait": {
+   "image": "/assets/rongguo/yucun-portrait.png",
+   "width": 317,
+   "height": 600,
+   "anchor": [
+    158.5,
+    598.934
+   ],
+   "source": "art/source/yucun-portrait_s10222024-01.png",
+   "matte": "art/matted/yucun-portrait_s10222024-sam.png",
+   "crop": [
+    280,
+    129,
+    577,
+    692
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "yucun",
+    "features": "宽方脸；浓剑眉；星眼深而锐；直鼻权腮；宽口方下颌，雄壮带算计",
+    "seed": 10232026,
+    "faceBox": [
+     105,
+     66,
+     198,
+     198
+    ],
+    "revision": "e753121b9a83",
+    "source": "art/identity/yucun-portrait/request.json"
+   }
+  },
+  "yucun-chibi": {
+   "image": "/assets/rongguo/yucun-chibi.png",
+   "width": 49,
+   "height": 116,
+   "anchor": [
+    24.5,
+    115.21
+   ],
+   "source": "art/source/yucun-chibi_s10222025-01.png",
+   "matte": "art/matted/yucun-chibi_s10222025-sam.png",
+   "crop": [
+    261,
+    188,
+    498,
+    752
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 400,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "yucun",
+    "features": "宽方脸；浓剑眉；星眼深而锐；直鼻权腮；宽口方下颌，雄壮带算计",
+    "seed": 10232027,
+    "faceBox": [
+     19,
+     15,
+     38,
+     39
+    ],
+    "revision": "8fb1ffcf3bb5",
+    "source": "art/identity/yucun-chibi/request.json"
+   }
+  },
+  "ruhai-portrait": {
+   "image": "/assets/rongguo/ruhai-portrait.png",
+   "width": 336,
+   "height": 600,
+   "anchor": [
+    168.0,
+    598.962
+   ],
+   "source": "art/source/ruhai-portrait_s10222026-01.png",
+   "matte": "art/matted/ruhai-portrait_s10222026-sam.png",
+   "crop": [
+    241,
+    121,
+    565,
+    699
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "ruhai",
+    "features": "瘦长椭圆脸；疏长眉；眼窝较深而柔；修长鼻；薄唇清癯，下颌细",
+    "seed": 10232028,
+    "faceBox": [
+     123,
+     63,
+     219,
+     201
+    ],
+    "revision": "0e7c3ac84f76",
+    "source": "art/identity/ruhai-portrait/request.json"
+   }
+  },
+  "ruhai-chibi": {
+   "image": "/assets/rongguo/ruhai-chibi.png",
+   "width": 53,
+   "height": 116,
+   "anchor": [
+    26.401,
+    115.142
+   ],
+   "source": "art/source/ruhai-chibi_s10222027-01.png",
+   "matte": "art/matted/ruhai-chibi_s10222027-sam.png",
+   "crop": [
+    237,
+    178,
+    506,
+    762
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 398,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "ruhai",
+    "features": "瘦长椭圆脸；疏长眉；眼窝较深而柔；修长鼻；薄唇清癯，下颌细",
+    "seed": 10232029,
+    "faceBox": [
+     22,
+     16,
+     44,
+     40
+    ],
+    "revision": "88c673fb6113",
+    "source": "art/identity/ruhai-chibi/request.json"
+   }
+  },
+  "sedan-chair": {
+   "image": "/assets/rongguo/sedan-chair.png",
+   "width": 170,
+   "height": 146,
+   "anchor": [
+    85.0,
+    145.434
+   ],
+   "source": "art/source/sedan-chair_s10222100-01.png",
+   "matte": "art/matted/sedan-chair_s10222100-sam.png",
+   "crop": [
+    231,
+    336,
+    831,
+    852
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "rongxi-hall": {
+   "image": "/assets/rongguo/rongxi-hall.png",
+   "width": 1100,
+   "height": 931,
+   "anchor": [
+    496.174,
+    825.525
+   ],
+   "source": "art/source/rongxi-hall_s10222101-01.png",
+   "matte": "art/matted/rongxi-hall_s10222101-sam.png",
+   "crop": [
+    46,
+    105,
+    1011,
+    922
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "bamboo-gate": {
+   "image": "/assets/rongguo/bamboo-gate.png",
+   "width": 430,
+   "height": 292,
+   "anchor": [
+    205.588,
+    276.033
+   ],
+   "source": "art/source/bamboo-gate_s10222102-01.png",
+   "matte": "art/matted/bamboo-gate_s10222102-sam.png",
+   "crop": [
+    127,
+    353,
+    868,
+    857
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "wood-screen": {
+   "image": "/assets/rongguo/wood-screen.png",
+   "width": 190,
+   "height": 172,
+   "anchor": [
+    95.0,
+    171.48
+   ],
+   "source": "art/source/wood-screen_s10222103-01.png",
+   "matte": "art/matted/wood-screen_s10222103-sam.png",
+   "crop": [
+    146,
+    128,
+    878,
+    790
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "dining-table": {
+   "image": "/assets/rongguo/dining-table.png",
+   "width": 230,
+   "height": 219,
+   "anchor": [
+    115.0,
+    217.681
+   ],
+   "source": "art/source/dining-table_s10222104-01.png",
+   "matte": "art/matted/dining-table_s10222104-sam.png",
+   "crop": [
+    336,
+    484,
+    684,
+    816
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "canopy-bed": {
+   "image": "/assets/rongguo/canopy-bed.png",
+   "width": 300,
+   "height": 367,
+   "anchor": [
+    149.787,
+    363.594
+   ],
+   "source": "art/source/canopy-bed_s10222105-01.png",
+   "matte": "art/matted/canopy-bed_s10222105-sam.png",
+   "crop": [
+    160,
+    82,
+    865,
+    944
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "river-boat": {
+   "image": "/assets/rongguo/river-boat.png",
+   "width": 340,
+   "height": 201,
+   "anchor": [
+    170.0,
+    199.619
+   ],
+   "source": "art/source/river-boat_s10222106-01.png",
+   "matte": "art/matted/river-boat_s10222106-sam.png",
+   "crop": [
+    285,
+    579,
+    778,
+    870
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "tea-table": {
+   "image": "/assets/rongguo/tea-table.png",
+   "width": 130,
+   "height": 106,
+   "anchor": [
+    65.0,
+    105.07
+   ],
+   "source": "art/source/tea-table_s10222107-01.png",
+   "matte": "art/matted/tea-table_s10222107-sam.png",
+   "crop": [
+    419,
+    547,
+    699,
+    775
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "zhang-portrait": {
+   "image": "/assets/rongguo/zhang-portrait.png",
+   "width": 381,
+   "height": 600,
+   "anchor": [
+    206.375,
+    598.703
+   ],
+   "source": "art/source/zhang-portrait_s10222300-01.png",
+   "matte": "art/matted/zhang-portrait_s10222300-sam.png",
+   "crop": [
+    69,
+    99,
+    657,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "zhang",
+    "features": "窄长脸；拱眉；外凸明亮小眼；尖长鼻；窄唇，热切利落",
+    "seed": 10232032,
+    "faceBox": [
+     174,
+     81,
+     273,
+     204
+    ],
+    "revision": "6b6b8d62418d",
+    "source": "art/identity/zhang-portrait/request.json"
+   }
+  },
+  "zhang-chibi": {
+   "image": "/assets/rongguo/zhang-chibi.png",
+   "width": 66,
+   "height": 116,
+   "anchor": [
+    29.838,
+    115.257
+   ],
+   "source": "art/source/zhang-chibi_s10222301-01.png",
+   "matte": "art/matted/zhang-chibi_s10222301-sam.png",
+   "crop": [
+    257,
+    175,
+    591,
+    762
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 396,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "zhang",
+    "features": "窄长脸；拱眉；外凸明亮小眼；尖长鼻；窄唇，热切利落",
+    "seed": 10232033,
+    "faceBox": [
+     18,
+     17,
+     38,
+     40
+    ],
+    "revision": "280637388b8a",
+    "source": "art/identity/zhang-chibi/request.json"
+   }
+  },
+  "leng-portrait": {
+   "image": "/assets/rongguo/leng-portrait.png",
+   "width": 362,
+   "height": 600,
+   "anchor": [
+    181.0,
+    598.601
+   ],
+   "source": "art/source/leng-portrait_s10222302-01.png",
+   "matte": "art/matted/leng-portrait_s10222302-sam.png",
+   "crop": [
+    148,
+    166,
+    665,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "leng",
+    "features": "宽圆脸；短弯粗眉；眯笑小眼；肉鼻头；阔嘴厚下唇，精明健谈",
+    "seed": 10232034,
+    "faceBox": [
+     123,
+     42,
+     228,
+     177
+    ],
+    "revision": "ed628e148c3c",
+    "source": "art/identity/leng-portrait/request.json"
+   }
+  },
+  "leng-chibi": {
+   "image": "/assets/rongguo/leng-chibi.png",
+   "width": 59,
+   "height": 116,
+   "anchor": [
+    29.5,
+    115.305
+   ],
+   "source": "art/source/leng-chibi_s10222303-01.png",
+   "matte": "art/matted/leng-chibi_s10222303-sam.png",
+   "crop": [
+    223,
+    181,
+    514,
+    755
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 397,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "leng",
+    "features": "宽圆脸；短弯粗眉；眯笑小眼；肉鼻头；阔嘴厚下唇，精明健谈",
+    "seed": 10232035,
+    "faceBox": [
+     16,
+     14,
+     44,
+     44
+    ],
+    "revision": "092274122a94",
+    "source": "art/identity/leng-chibi/request.json"
+   }
+  },
+  "zheng-portrait": {
+   "image": "/assets/rongguo/zheng-portrait.png",
+   "width": 349,
+   "height": 600,
+   "anchor": [
+    174.5,
+    598.641
+   ],
+   "source": "art/source/zheng-portrait_s10222304-01.png",
+   "matte": "art/matted/zheng-portrait_s10222304-sam.png",
+   "crop": [
+    137,
+    141,
+    650,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "zheng",
+    "features": "端正长方脸；浓平眉；眼裂短而严；挺宽鼻；方唇方颏，肃穆",
+    "seed": 10232030,
+    "faceBox": [
+     126,
+     66,
+     219,
+     198
+    ],
+    "revision": "5c3289163026",
+    "source": "art/identity/zheng-portrait/request.json"
+   }
+  },
+  "zheng-chibi": {
+   "image": "/assets/rongguo/zheng-chibi.png",
+   "width": 57,
+   "height": 116,
+   "anchor": [
+    28.5,
+    115.155
+   ],
+   "source": "art/source/zheng-chibi_s10222305-01.png",
+   "matte": "art/matted/zheng-chibi_s10222305-sam.png",
+   "crop": [
+    261,
+    145,
+    561,
+    760
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 376,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "zheng",
+    "features": "端正长方脸；浓平眉；眼裂短而严；挺宽鼻；方唇方颏，肃穆",
+    "seed": 10232031,
+    "faceBox": [
+     19,
+     14,
+     37,
+     37
+    ],
+    "revision": "38ba4a7e2513",
+    "source": "art/identity/zheng-chibi/request.json"
+   }
+  },
+  "guide-portrait": {
+   "image": "/assets/rongguo/guide-portrait.png",
+   "width": 423,
+   "height": 600,
+   "anchor": [
+    211.5,
+    598.646
+   ],
+   "source": "art/source/guide-portrait_s10222306-01.png",
+   "matte": "art/matted/guide-portrait_s10222306-sam.png",
+   "crop": [
+    79,
+    138,
+    703,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "guide",
+    "features": "瘦长老脸；颧骨高；稀眉；深眼窝；弯鼻；薄嘴与缺齿笑，慈和",
+    "seed": 10232036,
+    "faceBox": [
+     195,
+     33,
+     291,
+     177
+    ],
+    "revision": "5b512be8a7d7",
+    "source": "art/identity/guide-portrait/request.json"
+   }
+  },
+  "guide-chibi": {
+   "image": "/assets/rongguo/guide-chibi.png",
+   "width": 60,
+   "height": 116,
+   "anchor": [
+    30.0,
+    115.294
+   ],
+   "source": "art/source/guide-chibi_s10222307-01.png",
+   "matte": "art/matted/guide-chibi_s10222307-sam.png",
+   "crop": [
+    239,
+    184,
+    540,
+    762
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 402,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "guide",
+    "features": "瘦长老脸；颧骨高；稀眉；深眼窝；弯鼻；薄嘴与缺齿笑，慈和",
+    "seed": 10232037,
+    "faceBox": [
+     21,
+     14,
+     47,
+     42
+    ],
+    "revision": "7d9a35fec166",
+    "source": "art/identity/guide-chibi/request.json"
+   }
+  },
+  "maid-portrait": {
+   "image": "/assets/rongguo/maid-portrait.png",
+   "width": 272,
+   "height": 600,
+   "anchor": [
+    136.0,
+    598.632
+   ],
+   "source": "art/source/maid-portrait_s10222308-01.png",
+   "matte": "art/matted/maid-portrait_s10222308-sam.png",
+   "crop": [
+    199,
+    147,
+    596,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "maid",
+    "features": "宽额小方脸；粗短眉；大圆眼；短鼻；圆唇，精神利落",
+    "seed": 10232038,
+    "faceBox": [
+     78,
+     60,
+     186,
+     189
+    ],
+    "revision": "225b1aa1d3de",
+    "source": "art/identity/maid-portrait/request.json"
+   }
+  },
+  "maid-chibi": {
+   "image": "/assets/rongguo/maid-chibi.png",
+   "width": 47,
+   "height": 116,
+   "anchor": [
+    23.606,
+    115.062
+   ],
+   "source": "art/source/maid-chibi_s10222309-01.png",
+   "matte": "art/matted/maid-chibi_s10222309-sam.png",
+   "crop": [
+    270,
+    217,
+    491,
+    766
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 423,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "maid",
+    "features": "宽额小方脸；粗短眉；大圆眼；短鼻；圆唇，精神利落",
+    "seed": 10232039,
+    "faceBox": [
+     11,
+     15,
+     35,
+     39
+    ],
+    "revision": "ba8e2e6e55cd",
+    "source": "art/identity/maid-chibi/request.json"
+   }
+  },
+  "messenger-portrait": {
+   "image": "/assets/rongguo/messenger-portrait.png",
+   "width": 288,
+   "height": 600,
+   "anchor": [
+    144.0,
+    598.656
+   ],
+   "source": "art/source/messenger-portrait_s10222310-01.png",
+   "matte": "art/matted/messenger-portrait_s10222310-sam.png",
+   "crop": [
+    223,
+    131,
+    651,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "messenger",
+    "features": "宽扁脸；平直淡眉；细缝眼；鼻翼宽；薄阔嘴，朴实恭谨",
+    "seed": 10232040,
+    "faceBox": [
+     75,
+     42,
+     177,
+     177
+    ],
+    "revision": "1b75410f312f",
+    "source": "art/identity/messenger-portrait/request.json"
+   }
+  },
+  "messenger-chibi": {
+   "image": "/assets/rongguo/messenger-chibi.png",
+   "width": 51,
+   "height": 116,
+   "anchor": [
+    25.5,
+    115.086
+   ],
+   "source": "art/source/messenger-chibi_s10222311-01.png",
+   "matte": "art/matted/messenger-chibi_s10222311-sam.png",
+   "crop": [
+    273,
+    239,
+    510,
+    782
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 443,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "messenger",
+    "features": "宽扁脸；平直淡眉；细缝眼；鼻翼宽；薄阔嘴，朴实恭谨",
+    "seed": 10232041,
+    "faceBox": [
+     21,
+     12,
+     41,
+     33
+    ],
+    "revision": "2efcfe71f215",
+    "source": "art/identity/messenger-chibi/request.json"
+   }
+  },
+  "nurse_wang-portrait": {
+   "image": "/assets/rongguo/nurse_wang-portrait.png",
+   "width": 291,
+   "height": 600,
+   "anchor": [
+    145.5,
+    598.616
+   ],
+   "source": "art/source/nurse_wang-portrait_s10222312-01.png",
+   "matte": "art/matted/nurse_wang-portrait_s10222312-sam.png",
+   "crop": [
+    202,
+    157,
+    622,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "nurse_wang",
+    "features": "极瘦小老脸；凹颊尖颏；淡短眉；眼尾下垂；小尖鼻；干瘪唇，老迈慈爱",
+    "seed": 10232042,
+    "faceBox": [
+     21,
+     39,
+     129,
+     177
+    ],
+    "revision": "ec190156aa24",
+    "source": "art/identity/nurse_wang-portrait/request.json"
+   }
+  },
+  "nurse_wang-chibi": {
+   "image": "/assets/rongguo/nurse_wang-chibi.png",
+   "width": 72,
+   "height": 116,
+   "anchor": [
+    36.0,
+    115.243
+   ],
+   "source": "art/source/nurse_wang-chibi_s10222313-01.png",
+   "matte": "art/matted/nurse_wang-chibi_s10222313-sam.png",
+   "crop": [
+    184,
+    144,
+    562,
+    751
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 372,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "nurse_wang",
+    "features": "极瘦小老脸；凹颊尖颏；淡短眉；眼尾下垂；小尖鼻；干瘪唇，老迈慈爱",
+    "seed": 10232043,
+    "faceBox": [
+     39,
+     10,
+     72,
+     45
+    ],
+    "revision": "0c52f8589e8b",
+    "source": "art/identity/nurse_wang-chibi/request.json"
+   }
+  },
+  "nurse_li-portrait": {
+   "image": "/assets/rongguo/nurse_li-portrait.png",
+   "width": 291,
+   "height": 600,
+   "anchor": [
+    145.5,
+    598.683
+   ],
+   "source": "art/source/nurse_li-portrait_s10222314-01.png",
+   "matte": "art/matted/nurse_li-portrait_s10222314-sam.png",
+   "crop": [
+    245,
+    113,
+    687,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "nurse_li",
+    "features": "饱满圆方脸；粗平眉；厚眼皮；宽肉鼻；紧闭厚唇，老练严肃",
+    "seed": 10232044,
+    "faceBox": [
+     96,
+     21,
+     192,
+     171
+    ],
+    "revision": "8e29d071d23f",
+    "source": "art/identity/nurse_li-portrait/request.json"
+   }
+  },
+  "nurse_li-chibi": {
+   "image": "/assets/rongguo/nurse_li-chibi.png",
+   "width": 55,
+   "height": 116,
+   "anchor": [
+    27.5,
+    115.308
+   ],
+   "source": "art/source/nurse_li-chibi_s10222315-01.png",
+   "matte": "art/matted/nurse_li-chibi_s10222315-sam.png",
+   "crop": [
+    245,
+    133,
+    541,
+    757
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 368,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "nurse_li",
+    "features": "饱满圆方脸；粗平眉；厚眼皮；宽肉鼻；紧闭厚唇，老练严肃",
+    "seed": 10232045,
+    "faceBox": [
+     17,
+     10,
+     39,
+     37
+    ],
+    "revision": "2650a197cb0c",
+    "source": "art/identity/nurse_li-chibi/request.json"
+   }
+  },
+  "estate-grandmother": {
+   "image": "/assets/rongguo/estate-grandmother.png",
+   "width": 800,
+   "height": 510,
+   "anchor": [
+    400.0,
+    505.939
+   ],
+   "source": "art/source/estate-grandmother_s10222400-01.png",
+   "matte": "art/matted/estate-grandmother_s10222400-sam.png",
+   "crop": [
+    20,
+    270,
+    1005,
+    898
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "estate-east": {
+   "image": "/assets/rongguo/estate-east.png",
+   "width": 800,
+   "height": 483,
+   "anchor": [
+    400.0,
+    478.633
+   ],
+   "source": "art/source/estate-east_s10222401-01.png",
+   "matte": "art/matted/estate-east_s10222401-sam.png",
+   "crop": [
+    56,
+    300,
+    971,
+    853
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "estate-wang": {
+   "image": "/assets/rongguo/estate-wang.png",
+   "width": 800,
+   "height": 564,
+   "anchor": [
+    400.0,
+    559.524
+   ],
+   "source": "art/source/estate-wang_s10222402-01.png",
+   "matte": "art/matted/estate-wang_s10222402-sam.png",
+   "crop": [
+    63,
+    261,
+    956,
+    891
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "estate-feng": {
+   "image": "/assets/rongguo/estate-feng.png",
+   "width": 800,
+   "height": 583,
+   "anchor": [
+    400.0,
+    578.63
+   ],
+   "source": "art/source/estate-feng_s10222403-01.png",
+   "matte": "art/matted/estate-feng_s10222403-sam.png",
+   "crop": [
+    48,
+    248,
+    963,
+    915
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "estate-rear": {
+   "image": "/assets/rongguo/estate-rear.png",
+   "width": 800,
+   "height": 553,
+   "anchor": [
+    400.0,
+    548.766
+   ],
+   "source": "art/source/estate-rear_s10222404-01.png",
+   "matte": "art/matted/estate-rear_s10222404-sam.png",
+   "crop": [
+    34,
+    246,
+    979,
+    899
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "estate-bisha": {
+   "image": "/assets/rongguo/estate-bisha.png",
+   "width": 800,
+   "height": 619,
+   "anchor": [
+    400.0,
+    614.823
+   ],
+   "source": "art/source/estate-bisha_s10222405-01.png",
+   "matte": "art/matted/estate-bisha_s10222405-sam.png",
+   "crop": [
+    29,
+    168,
+    987,
+    909
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "estate-study": {
+   "image": "/assets/rongguo/estate-study.png",
+   "width": 800,
+   "height": 532,
+   "anchor": [
+    400.412,
+    527.882
+   ],
+   "source": "art/source/estate-study_s10222406-01.png",
+   "matte": "art/matted/estate-study_s10222406-sam.png",
+   "crop": [
+    26,
+    254,
+    998,
+    900
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "shiyin-portrait": {
+   "image": "/assets/rongguo/shiyin-portrait.png",
+   "width": 411,
+   "height": 600,
+   "anchor": [
+    205.5,
+    599.018
+   ],
+   "source": "art/source/shiyin-portrait_s10230100-01.png",
+   "matte": "art/matted/shiyin-portrait_s10230100-sam.png",
+   "crop": [
+    145,
+    113,
+    564,
+    724
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "shiyin",
+    "features": "宽额瘦颊；细长眉；深静下垂眼；长而微弯鼻；柔和薄唇，恬淡",
+    "seed": 10232046,
+    "faceBox": [
+     180,
+     78,
+     306,
+     273
+    ],
+    "revision": "5836753f2f05",
+    "source": "art/identity/shiyin-portrait/request.json"
+   }
+  },
+  "shiyin-chibi": {
+   "image": "/assets/rongguo/shiyin-chibi.png",
+   "width": 50,
+   "height": 116,
+   "anchor": [
+    25.0,
+    115.28
+   ],
+   "source": "art/source/shiyin-chibi_s10230101-01.png",
+   "matte": "art/matted/shiyin-chibi_s10230101-sam.png",
+   "crop": [
+    254,
+    178,
+    502,
+    758
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 396,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "shiyin",
+    "features": "宽额瘦颊；细长眉；深静下垂眼；长而微弯鼻；柔和薄唇，恬淡",
+    "seed": 10232047,
+    "faceBox": [
+     19,
+     15,
+     39,
+     40
+    ],
+    "revision": "da60ff66aaeb",
+    "source": "art/identity/shiyin-chibi/request.json"
+   }
+  },
+  "fengshi-portrait": {
+   "image": "/assets/rongguo/fengshi-portrait.png",
+   "width": 396,
+   "height": 600,
+   "anchor": [
+    198.0,
+    599.028
+   ],
+   "source": "art/source/fengshi-portrait_s10230102-01.png",
+   "matte": "art/matted/fengshi-portrait_s10230102-sam.png",
+   "crop": [
+    187,
+    104,
+    594,
+    721
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "fengshi",
+    "features": "宽颊长鹅蛋脸；低弯眉；细长柔眼；低圆鼻；厚唇，温柔忧愁",
+    "seed": 10232048,
+    "faceBox": [
+     144,
+     75,
+     264,
+     276
+    ],
+    "revision": "ca6f8043b06c",
+    "source": "art/identity/fengshi-portrait/request.json"
+   }
+  },
+  "fengshi-chibi": {
+   "image": "/assets/rongguo/fengshi-chibi.png",
+   "width": 44,
+   "height": 116,
+   "anchor": [
+    22.0,
+    115.119
+   ],
+   "source": "art/source/fengshi-chibi_s10230103-01.png",
+   "matte": "art/matted/fengshi-chibi_s10230103-sam.png",
+   "crop": [
+    283,
+    184,
+    505,
+    774
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 406,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "fengshi",
+    "features": "宽颊长鹅蛋脸；低弯眉；细长柔眼；低圆鼻；厚唇，温柔忧愁",
+    "seed": 10232049,
+    "faceBox": [
+     18,
+     11,
+     36,
+     34
+    ],
+    "revision": "aae753e7c321",
+    "source": "art/identity/fengshi-chibi/request.json"
+   }
+  },
+  "yinglian-portrait": {
+   "image": "/assets/rongguo/yinglian-portrait.png",
+   "width": 301,
+   "height": 600,
+   "anchor": [
+    142.172,
+    598.812
+   ],
+   "source": "art/source/yinglian-portrait_s10230104-01.png",
+   "matte": "art/matted/yinglian-portrait_s10230104-sam.png",
+   "crop": [
+    310,
+    237,
+    563,
+    742
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "yinglian",
+    "features": "真正三岁幼童脸；极短面中；高额宽眼距；圆眼小鼻；圆下巴；眉心胭脂痣",
+    "seed": 10232050,
+    "faceBox": [
+     60,
+     54,
+     216,
+     258
+    ],
+    "revision": "cb6665ca9b3e",
+    "source": "art/identity/yinglian-portrait/request.json"
+   }
+  },
+  "yinglian-chibi": {
+   "image": "/assets/rongguo/yinglian-chibi.png",
+   "width": 44,
+   "height": 80,
+   "anchor": [
+    22.0,
+    79.31
+   ],
+   "source": "art/source/yinglian-chibi_s10230105-01.png",
+   "matte": "art/matted/yinglian-chibi_s10230105-sam.png",
+   "crop": [
+    264,
+    355,
+    509,
+    805
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 524,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "yinglian",
+    "features": "真正三岁幼童脸；极短面中；高额宽眼距；圆眼小鼻；圆下巴；眉心胭脂痣",
+    "seed": 10232051,
+    "faceBox": [
+     10,
+     12,
+     40,
+     37
+    ],
+    "revision": "873f76d0d7cc",
+    "source": "art/identity/yinglian-chibi/request.json"
+   }
+  },
+  "jiaoxing-portrait": {
+   "image": "/assets/rongguo/jiaoxing-portrait.png",
+   "width": 347,
+   "height": 600,
+   "anchor": [
+    173.5,
+    599.005
+   ],
+   "source": "art/source/jiaoxing-portrait_s10230106-01.png",
+   "matte": "art/matted/jiaoxing-portrait_s10230106-sam.png",
+   "crop": [
+    215,
+    125,
+    564,
+    728
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "jiaoxing",
+    "features": "微方杏仁脸；浓柔眉；弯月笑眼；略宽鼻头；丰唇，亲切坦然",
+    "seed": 10232052,
+    "faceBox": [
+     99,
+     63,
+     243,
+     255
+    ],
+    "revision": "9f2fb3920018",
+    "source": "art/identity/jiaoxing-portrait/request.json"
+   }
+  },
+  "jiaoxing-chibi": {
+   "image": "/assets/rongguo/jiaoxing-chibi.png",
+   "width": 52,
+   "height": 116,
+   "anchor": [
+    26.0,
+    115.034
+   ],
+   "source": "art/source/jiaoxing-chibi_s10230107-01.png",
+   "matte": "art/matted/jiaoxing-chibi_s10230107-sam.png",
+   "crop": [
+    270,
+    238,
+    511,
+    776
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 440,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "jiaoxing",
+    "features": "微方杏仁脸；浓柔眉；弯月笑眼；略宽鼻头；丰唇，亲切坦然",
+    "seed": 10232053,
+    "faceBox": [
+     18,
+     19,
+     46,
+     47
+    ],
+    "revision": "e252fa481996",
+    "source": "art/identity/jiaoxing-chibi/request.json"
+   }
+  },
+  "fengsu-portrait": {
+   "image": "/assets/rongguo/fengsu-portrait.png",
+   "width": 497,
+   "height": 600,
+   "anchor": [
+    248.5,
+    598.947
+   ],
+   "source": "art/source/fengsu-portrait_s10230108-01.png",
+   "matte": "art/matted/fengsu-portrait_s10230108-sam.png",
+   "crop": [
+    145,
+    174,
+    617,
+    744
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "fengsu",
+    "features": "梯形阔下颌；稀短眉；眼小聚拢；蒜鼻；厚唇，下颏肉厚而世故",
+    "seed": 10232054,
+    "faceBox": [
+     198,
+     54,
+     348,
+     249
+    ],
+    "revision": "de68a8ff4af3",
+    "source": "art/identity/fengsu-portrait/request.json"
+   }
+  },
+  "fengsu-chibi": {
+   "image": "/assets/rongguo/fengsu-chibi.png",
+   "width": 68,
+   "height": 116,
+   "anchor": [
+    34.0,
+    115.07
+   ],
+   "source": "art/source/fengsu-chibi_s10230109-01.png",
+   "matte": "art/matted/fengsu-chibi_s10230109-sam.png",
+   "crop": [
+    270,
+    232,
+    580,
+    761
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 431,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "fengsu",
+    "features": "梯形阔下颌；稀短眉；眼小聚拢；蒜鼻；厚唇，下颏肉厚而世故",
+    "seed": 10232055,
+    "faceBox": [
+     19,
+     14,
+     47,
+     45
+    ],
+    "revision": "e6f66c099ba0",
+    "source": "art/identity/fengsu-chibi/request.json"
+   }
+  },
+  "monk-portrait": {
+   "image": "/assets/rongguo/monk-portrait.png",
+   "width": 406,
+   "height": 600,
+   "anchor": [
+    203.0,
+    598.985
+   ],
+   "source": "art/source/monk-portrait_s10230110-01.png",
+   "matte": "art/matted/monk-portrait_s10230110-sam.png",
+   "crop": [
+    240,
+    113,
+    640,
+    704
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "monk",
+    "features": "宽额尖下颏；颧骨突出；一高一低弯眉；细长笑眼；大耳宽鼻；豁达诙谐",
+    "seed": 10232056,
+    "faceBox": [
+     150,
+     0,
+     255,
+     204
+    ],
+    "revision": "9a31fef62317",
+    "source": "art/identity/monk-portrait/request.json"
+   }
+  },
+  "monk-chibi": {
+   "image": "/assets/rongguo/monk-chibi.png",
+   "width": 71,
+   "height": 116,
+   "anchor": [
+    35.5,
+    115.224
+   ],
+   "source": "art/source/monk-chibi_s10230111-01.png",
+   "matte": "art/matted/monk-chibi_s10230111-sam.png",
+   "crop": [
+    258,
+    206,
+    603,
+    768
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 418,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "monk",
+    "features": "宽额尖下颏；颧骨突出；一高一低弯眉；细长笑眼；大耳宽鼻；豁达诙谐",
+    "seed": 10232057,
+    "faceBox": [
+     19,
+     0,
+     46,
+     43
+    ],
+    "revision": "97b5b2afefc6",
+    "source": "art/identity/monk-chibi/request.json"
+   }
+  },
+  "taoist-portrait": {
+   "image": "/assets/rongguo/taoist-portrait.png",
+   "width": 367,
+   "height": 600,
+   "anchor": [
+    186.691,
+    598.936
+   ],
+   "source": "art/source/taoist-portrait_s10230112-01.png",
+   "matte": "art/matted/taoist-portrait_s10230112-sam.png",
+   "crop": [
+    221,
+    128,
+    566,
+    692
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "taoist",
+    "features": "狭长骨相；高额；斜飞长眉；深长眼；鹰钩鼻；薄唇，疏狂",
+    "seed": 10232058,
+    "faceBox": [
+     156,
+     24,
+     249,
+     192
+    ],
+    "revision": "f5b7f2e01bf1",
+    "source": "art/identity/taoist-portrait/request.json"
+   }
+  },
+  "taoist-chibi": {
+   "image": "/assets/rongguo/taoist-chibi.png",
+   "width": 71,
+   "height": 116,
+   "anchor": [
+    32.846,
+    115.224
+   ],
+   "source": "art/source/taoist-chibi_s10230113-01.png",
+   "matte": "art/matted/taoist-chibi_s10230113-sam.png",
+   "crop": [
+    257,
+    230,
+    578,
+    756
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 428,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "taoist",
+    "features": "狭长骨相；高额；斜飞长眉；深长眼；鹰钩鼻；薄唇，疏狂",
+    "seed": 10232059,
+    "faceBox": [
+     22,
+     7,
+     41,
+     44
+    ],
+    "revision": "756abc0dba41",
+    "source": "art/identity/taoist-chibi/request.json"
+   }
+  },
+  "kongkong-portrait": {
+   "image": "/assets/rongguo/kongkong-portrait.png",
+   "width": 547,
+   "height": 600,
+   "anchor": [
+    260.404,
+    598.993
+   ],
+   "source": "art/source/kongkong-portrait_s10230114-01.png",
+   "matte": "art/matted/kongkong-portrait_s10230114-sam.png",
+   "crop": [
+    130,
+    135,
+    673,
+    731
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "kongkong",
+    "features": "方额长脸；平直长眉；宽眼距静眼；方直鼻；薄而平口，沉思",
+    "seed": 10232060,
+    "faceBox": [
+     192,
+     102,
+     336,
+     312
+    ],
+    "revision": "4f65bbe74c4a",
+    "source": "art/identity/kongkong-portrait/request.json"
+   }
+  },
+  "kongkong-chibi": {
+   "image": "/assets/rongguo/kongkong-chibi.png",
+   "width": 72,
+   "height": 116,
+   "anchor": [
+    32.675,
+    115.158
+   ],
+   "source": "art/source/kongkong-chibi_s10230115-01.png",
+   "matte": "art/matted/kongkong-chibi_s10230115-sam.png",
+   "crop": [
+    285,
+    269,
+    599,
+    776
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 460,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "kongkong",
+    "features": "方额长脸；平直长眉；宽眼距静眼；方直鼻；薄而平口，沉思",
+    "seed": 10232061,
+    "faceBox": [
+     17,
+     17,
+     43,
+     48
+    ],
+    "revision": "ae0f80a07343",
+    "source": "art/identity/kongkong-chibi/request.json"
+   }
+  },
+  "huoqi-portrait": {
+   "image": "/assets/rongguo/huoqi-portrait.png",
+   "width": 426,
+   "height": 600,
+   "anchor": [
+    213.0,
+    598.971
+   ],
+   "source": "art/source/huoqi-portrait_s10230116-01.png",
+   "matte": "art/matted/huoqi-portrait_s10230116-sam.png",
+   "crop": [
+    181,
+    154,
+    595,
+    737
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "huoqi",
+    "features": "短方脸；粗短低眉；小圆眼；扁鼻；厚唇，笨拙朴实",
+    "seed": 10232062,
+    "faceBox": [
+     165,
+     63,
+     306,
+     249
+    ],
+    "revision": "f65160b11b56",
+    "source": "art/identity/huoqi-portrait/request.json"
+   }
+  },
+  "huoqi-chibi": {
+   "image": "/assets/rongguo/huoqi-chibi.png",
+   "width": 58,
+   "height": 116,
+   "anchor": [
+    29.0,
+    115.171
+   ],
+   "source": "art/source/huoqi-chibi_s10230117-01.png",
+   "matte": "art/matted/huoqi-chibi_s10230117-sam.png",
+   "crop": [
+    288,
+    265,
+    538,
+    769
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 455,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "huoqi",
+    "features": "短方脸；粗短低眉；小圆眼；扁鼻；厚唇，笨拙朴实",
+    "seed": 10232063,
+    "faceBox": [
+     12,
+     24,
+     52,
+     53
+    ],
+    "revision": "e70216790258",
+    "source": "art/identity/huoqi-chibi/request.json"
+   }
+  },
+  "oldmonk-portrait": {
+   "image": "/assets/rongguo/oldmonk-portrait.png",
+   "width": 505,
+   "height": 600,
+   "anchor": [
+    253.045,
+    598.909
+   ],
+   "source": "art/source/oldmonk-portrait_s10230118-01.png",
+   "matte": "art/matted/oldmonk-portrait_s10230118-sam.png",
+   "crop": [
+    161,
+    204,
+    624,
+    754
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "oldmonk",
+    "features": "骨瘦凹陷老脸；垂白眉；深陷半闭眼；长弯鼻；瘪嘴，迟钝衰老",
+    "seed": 10232064,
+    "faceBox": [
+     228,
+     3,
+     381,
+     273
+    ],
+    "revision": "def017f9cb2e",
+    "source": "art/identity/oldmonk-portrait/request.json"
+   }
+  },
+  "oldmonk-chibi": {
+   "image": "/assets/rongguo/oldmonk-chibi.png",
+   "width": 66,
+   "height": 116,
+   "anchor": [
+    33.0,
+    115.239
+   ],
+   "source": "art/source/oldmonk-chibi_s10230119-01.png",
+   "matte": "art/matted/oldmonk-chibi_s10230119-sam.png",
+   "crop": [
+    218,
+    302,
+    495,
+    790
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 486,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "oldmonk",
+    "features": "骨瘦凹陷老脸；垂白眉；深陷半闭眼；长弯鼻；瘪嘴，迟钝衰老",
+    "seed": 10232065,
+    "faceBox": [
+     21,
+     0,
+     52,
+     46
+    ],
+    "revision": "a269377dbda4",
+    "source": "art/identity/oldmonk-chibi/request.json"
+   }
+  },
+  "estate-zhen": {
+   "image": "/assets/rongguo/estate-zhen.png",
+   "width": 800,
+   "height": 633,
+   "anchor": [
+    400.0,
+    628.339
+   ],
+   "source": "art/source/estate-zhen_s10230200-01.png",
+   "matte": "art/matted/estate-zhen_s10230200-sam.png",
+   "crop": [
+    73,
+    219,
+    931,
+    898
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "estate-hulu": {
+   "image": "/assets/rongguo/estate-hulu.png",
+   "width": 800,
+   "height": 724,
+   "anchor": [
+    400.0,
+    719.212
+   ],
+   "source": "art/source/estate-hulu_s10230201-01.png",
+   "matte": "art/matted/estate-hulu_s10230201-sam.png",
+   "crop": [
+    88,
+    158,
+    923,
+    914
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "estate-farm": {
+   "image": "/assets/rongguo/estate-farm.png",
+   "width": 800,
+   "height": 452,
+   "anchor": [
+    400.0,
+    447.728
+   ],
+   "source": "art/source/estate-farm_s10230202-01.png",
+   "matte": "art/matted/estate-farm_s10230202-sam.png",
+   "crop": [
+    45,
+    347,
+    981,
+    876
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "estate-yamen": {
+   "image": "/assets/rongguo/estate-yamen.png",
+   "width": 800,
+   "height": 681,
+   "anchor": [
+    400.0,
+    676.646
+   ],
+   "source": "art/source/estate-yamen_s10230203-01.png",
+   "matte": "art/matted/estate-yamen_s10230203-sam.png",
+   "crop": [
+    54,
+    125,
+    972,
+    907
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "estate-zhitong": {
+   "image": "/assets/rongguo/estate-zhitong.png",
+   "width": 800,
+   "height": 544,
+   "anchor": [
+    400.0,
+    539.16
+   ],
+   "source": "art/source/estate-zhitong_s10230204-01.png",
+   "matte": "art/matted/estate-zhitong_s10230204-sam.png",
+   "crop": [
+    97,
+    289,
+    924,
+    851
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "estate-tavern": {
+   "image": "/assets/rongguo/estate-tavern.png",
+   "width": 800,
+   "height": 691,
+   "anchor": [
+    400.0,
+    686.35
+   ],
+   "source": "art/source/estate-tavern_s10230205-01.png",
+   "matte": "art/matted/estate-tavern_s10230205-sam.png",
+   "crop": [
+    89,
+    153,
+    949,
+    896
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "estate-lantern": {
+   "image": "/assets/rongguo/estate-lantern.png",
+   "width": 800,
+   "height": 551,
+   "anchor": [
+    400.0,
+    546.832
+   ],
+   "source": "art/source/estate-lantern_s10230206-01.png",
+   "matte": "art/matted/estate-lantern_s10230206-sam.png",
+   "crop": [
+    36,
+    261,
+    996,
+    922
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "black-oil-gate": {
+   "image": "/assets/rongguo/black-oil-gate.png",
+   "width": 450,
+   "height": 373,
+   "anchor": [
+    212.903,
+    326.496
+   ],
+   "source": "art/source/black-oil-gate_s10230207-01.png",
+   "matte": "art/matted/black-oil-gate_s10230207-sam.png",
+   "crop": [
+    55,
+    162,
+    985,
+    932
+   ],
+   "shear": 0,
+   "mirror": true,
+   "bodyCompress": null
+  },
+  "west-wall-gate": {
+   "image": "/assets/rongguo/west-wall-gate.png",
+   "width": 390,
+   "height": 325,
+   "anchor": [
+    216.972,
+    291.079
+   ],
+   "source": "art/source/west-wall-gate_s10230208-01.png",
+   "matte": "art/matted/west-wall-gate_s10230208-sam.png",
+   "crop": [
+    86,
+    170,
+    938,
+    879
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "spirit-stone": {
+   "image": "/assets/rongguo/spirit-stone.png",
+   "width": 260,
+   "height": 334,
+   "anchor": [
+    129.752,
+    329.547
+   ],
+   "source": "art/source/spirit-stone_s10230300-01.png",
+   "matte": "art/matted/spirit-stone_s10230300-sam.png",
+   "crop": [
+    250,
+    180,
+    775,
+    855
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "crimson-pearl": {
+   "image": "/assets/rongguo/crimson-pearl.png",
+   "width": 200,
+   "height": 197,
+   "anchor": [
+    99.873,
+    195.225
+   ],
+   "source": "art/source/crimson-pearl_s10230301-01.png",
+   "matte": "art/matted/crimson-pearl_s10230301-sam.png",
+   "crop": [
+    125,
+    144,
+    915,
+    921
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "manor-main-gate": {
+   "image": "/assets/rongguo/manor-main-gate.png",
+   "width": 650,
+   "height": 528,
+   "anchor": [
+    287.554,
+    400.347
+   ],
+   "source": "art/source/manor-main-gate_s10230400-01.png",
+   "matte": "art/matted/manor-main-gate_s10230400-sam.png",
+   "crop": [
+    64,
+    362,
+    984,
+    1109
+   ],
+   "shear": -0.2,
+   "mirror": true,
+   "bodyCompress": null
+  },
+  "estate-ruins": {
+   "image": "/assets/rongguo/estate-ruins.png",
+   "width": 800,
+   "height": 626,
+   "anchor": [
+    399.556,
+    620.672
+   ],
+   "source": "art/source/estate-ruins-v2_s10230402-01.png",
+   "matte": "art/matted/estate-ruins-v2_s10230402-sam.png",
+   "crop": [
+    63,
+    168,
+    964,
+    873
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null
+  },
+  "daiyu-portrait-joy": {
+   "image": "/assets/rongguo/daiyu-portrait-joy.png",
+   "width": 311,
+   "height": 720,
+   "anchor": [
+    156.582,
+    720.0
+   ],
+   "source": "/Users/bot/WorkBuddy/tiledMap/art/emotions/daiyu-joy-raw-01.png",
+   "identity": {
+    "character": "daiyu",
+    "features": "清瘦长鹅蛋脸；细长含愁眉；眼尾微垂的含露杏眼；窄鼻梁；薄小唇；敏感、克制，眼下轻淡倦意",
+    "seed": 10232000,
+    "faceBox": [
+     135,
+     75,
+     237,
+     249
+    ],
+    "revision": "ca9fb4a75771",
+    "source": "art/identity/daiyu-portrait/request.json"
+   }
+  },
+  "daiyu-portrait-sad": {
+   "image": "/assets/rongguo/daiyu-portrait-sad.png",
+   "width": 311,
+   "height": 720,
+   "anchor": [
+    156.582,
+    720.0
+   ],
+   "source": "/Users/bot/WorkBuddy/tiledMap/art/emotions/daiyu-sad-raw-01.png",
+   "identity": {
+    "character": "daiyu",
+    "features": "清瘦长鹅蛋脸；细长含愁眉；眼尾微垂的含露杏眼；窄鼻梁；薄小唇；敏感、克制，眼下轻淡倦意",
+    "seed": 10232000,
+    "faceBox": [
+     135,
+     75,
+     237,
+     249
+    ],
+    "revision": "ca9fb4a75771",
+    "source": "art/identity/daiyu-portrait/request.json"
+   }
+  },
+  "daiyu-portrait-surprise": {
+   "image": "/assets/rongguo/daiyu-portrait-surprise.png",
+   "width": 311,
+   "height": 720,
+   "anchor": [
+    156.582,
+    720.0
+   ],
+   "source": "/Users/bot/WorkBuddy/tiledMap/art/emotions/daiyu-surprise-raw-01.png",
+   "identity": {
+    "character": "daiyu",
+    "features": "清瘦长鹅蛋脸；细长含愁眉；眼尾微垂的含露杏眼；窄鼻梁；薄小唇；敏感、克制，眼下轻淡倦意",
+    "seed": 10232000,
+    "faceBox": [
+     135,
+     75,
+     237,
+     249
+    ],
+    "revision": "ca9fb4a75771",
+    "source": "art/identity/daiyu-portrait/request.json"
+   }
+  },
+  "daiyu-portrait-angry": {
+   "image": "/assets/rongguo/daiyu-portrait-angry.png",
+   "width": 311,
+   "height": 720,
+   "anchor": [
+    156.582,
+    720.0
+   ],
+   "source": "/Users/bot/WorkBuddy/tiledMap/art/emotions/daiyu-angry-raw-01.png",
+   "identity": {
+    "character": "daiyu",
+    "features": "清瘦长鹅蛋脸；细长含愁眉；眼尾微垂的含露杏眼；窄鼻梁；薄小唇；敏感、克制，眼下轻淡倦意",
+    "seed": 10232000,
+    "faceBox": [
+     135,
+     75,
+     237,
+     249
+    ],
+    "revision": "ca9fb4a75771",
+    "source": "art/identity/daiyu-portrait/request.json"
+   }
+  },
+  "baoyu-portrait-joy": {
+   "image": "/assets/rongguo/baoyu-portrait-joy.png",
+   "width": 346,
+   "height": 600,
+   "anchor": [
+    172.375,
+    599.376
+   ],
+   "source": "/Users/bot/WorkBuddy/tiledMap/art/emotions/baoyu-joy-raw-01.png",
+   "identity": {
+    "character": "baoyu",
+    "features": "饱满短鹅蛋脸；宽额；浓长平眉；明亮桃花眼；圆润鼻尖；饱满弓唇，喜悦灵动",
+    "seed": 10232002,
+    "faceBox": [
+     90,
+     140,
+     250,
+     285
+    ],
+    "revision": "ab417ba96524",
+    "source": "art/identity/baoyu-portrait/request.json"
+   }
+  },
+  "baoyu-portrait-sad": {
+   "image": "/assets/rongguo/baoyu-portrait-sad.png",
+   "width": 346,
+   "height": 600,
+   "anchor": [
+    172.375,
+    599.376
+   ],
+   "source": "/Users/bot/WorkBuddy/tiledMap/art/emotions/baoyu-sad-raw-01.png",
+   "identity": {
+    "character": "baoyu",
+    "features": "饱满短鹅蛋脸；宽额；浓长平眉；明亮桃花眼；圆润鼻尖；饱满弓唇，喜悦灵动",
+    "seed": 10232002,
+    "faceBox": [
+     90,
+     140,
+     250,
+     285
+    ],
+    "revision": "ab417ba96524",
+    "source": "art/identity/baoyu-portrait/request.json"
+   }
+  },
+  "baoyu-portrait-surprise": {
+   "image": "/assets/rongguo/baoyu-portrait-surprise.png",
+   "width": 346,
+   "height": 600,
+   "anchor": [
+    172.375,
+    599.376
+   ],
+   "source": "/Users/bot/WorkBuddy/tiledMap/art/emotions/baoyu-surprise-raw-01.png",
+   "identity": {
+    "character": "baoyu",
+    "features": "饱满短鹅蛋脸；宽额；浓长平眉；明亮桃花眼；圆润鼻尖；饱满弓唇，喜悦灵动",
+    "seed": 10232002,
+    "faceBox": [
+     90,
+     140,
+     250,
+     285
+    ],
+    "revision": "ab417ba96524",
+    "source": "art/identity/baoyu-portrait/request.json"
+   }
+  },
+  "baoyu-portrait-angry": {
+   "image": "/assets/rongguo/baoyu-portrait-angry.png",
+   "width": 346,
+   "height": 600,
+   "anchor": [
+    172.375,
+    599.376
+   ],
+   "source": "/Users/bot/WorkBuddy/tiledMap/art/emotions/baoyu-angry-raw-01.png",
+   "identity": {
+    "character": "baoyu",
+    "features": "饱满短鹅蛋脸；宽额；浓长平眉；明亮桃花眼；圆润鼻尖；饱满弓唇，喜悦灵动",
+    "seed": 10232002,
+    "faceBox": [
+     90,
+     140,
+     250,
+     285
+    ],
+    "revision": "ab417ba96524",
+    "source": "art/identity/baoyu-portrait/request.json"
+   }
+  },
+  "feng-portrait-joy": {
+   "image": "/assets/rongguo/feng-portrait-joy.png",
+   "width": 190,
+   "height": 600,
+   "anchor": [
+    95.0,
+    598.67
+   ],
+   "source": "/Users/bot/WorkBuddy/tiledMap/art/emotions/feng-joy-raw-01.png",
+   "identity": {
+    "character": "feng",
+    "features": "颧骨鲜明的菱形脸；高挑柳叶眉；细长上挑凤眼；挺直鼻梁；薄唇偏侧笑，锐利干练",
+    "seed": 10232004,
+    "faceBox": [
+     66,
+     45,
+     135,
+     135
+    ],
+    "revision": "0a3a8d0e96c9",
+    "source": "art/identity/feng-portrait/request.json"
+   }
+  },
+  "feng-portrait-sad": {
+   "image": "/assets/rongguo/feng-portrait-sad.png",
+   "width": 190,
+   "height": 600,
+   "anchor": [
+    95.0,
+    598.67
+   ],
+   "source": "/Users/bot/WorkBuddy/tiledMap/art/emotions/feng-sad-raw-01.png",
+   "identity": {
+    "character": "feng",
+    "features": "颧骨鲜明的菱形脸；高挑柳叶眉；细长上挑凤眼；挺直鼻梁；薄唇偏侧笑，锐利干练",
+    "seed": 10232004,
+    "faceBox": [
+     66,
+     45,
+     135,
+     135
+    ],
+    "revision": "0a3a8d0e96c9",
+    "source": "art/identity/feng-portrait/request.json"
+   }
+  },
+  "feng-portrait-surprise": {
+   "image": "/assets/rongguo/feng-portrait-surprise.png",
+   "width": 190,
+   "height": 600,
+   "anchor": [
+    95.0,
+    598.67
+   ],
+   "source": "art/emotions/feng-surprise-raw-01.png",
+   "identity": {
+    "character": "feng",
+    "features": "颧骨鲜明的菱形脸；高挑柳叶眉；细长上挑凤眼；挺直鼻梁；薄唇偏侧笑，锐利干练",
+    "seed": 10232004,
+    "faceBox": [
+     66,
+     45,
+     135,
+     135
+    ],
+    "revision": "0a3a8d0e96c9",
+    "source": "art/identity/feng-portrait/request.json"
+   }
+  },
+  "feng-portrait-angry": {
+   "image": "/assets/rongguo/feng-portrait-angry.png",
+   "width": 190,
+   "height": 600,
+   "anchor": [
+    95.0,
+    598.67
+   ],
+   "source": "/Users/bot/WorkBuddy/tiledMap/art/emotions/feng-angry-raw-01.png",
+   "identity": {
+    "character": "feng",
+    "features": "颧骨鲜明的菱形脸；高挑柳叶眉；细长上挑凤眼；挺直鼻梁；薄唇偏侧笑，锐利干练",
+    "seed": 10232004,
+    "faceBox": [
+     66,
+     45,
+     135,
+     135
+    ],
+    "revision": "0a3a8d0e96c9",
+    "source": "art/identity/feng-portrait/request.json"
+   }
+  },
+  "grandmother-portrait-joy": {
+   "image": "/assets/rongguo/grandmother-portrait-joy.png",
+   "width": 296,
+   "height": 600,
+   "anchor": [
+    148.0,
+    598.598
+   ],
+   "source": "/Users/bot/WorkBuddy/tiledMap/art/emotions/grandmother-joy-raw-01.png",
+   "identity": {
+    "character": "grandmother",
+    "features": "宽阔圆方脸；丰颊重下颌；长寿眉；笑眼但目光有威；宽鼻头；笑纹深而温厚",
+    "seed": 10232006,
+    "faceBox": [
+     99,
+     21,
+     207,
+     174
+    ],
+    "revision": "7b3246af88cf",
+    "source": "art/identity/grandmother-portrait/request.json"
+   }
+  },
+  "grandmother-portrait-sad": {
+   "image": "/assets/rongguo/grandmother-portrait-sad.png",
+   "width": 296,
+   "height": 600,
+   "anchor": [
+    148.0,
+    598.598
+   ],
+   "source": "/Users/bot/WorkBuddy/tiledMap/art/emotions/grandmother-sad-raw-01.png",
+   "identity": {
+    "character": "grandmother",
+    "features": "宽阔圆方脸；丰颊重下颌；长寿眉；笑眼但目光有威；宽鼻头；笑纹深而温厚",
+    "seed": 10232006,
+    "faceBox": [
+     99,
+     21,
+     207,
+     174
+    ],
+    "revision": "7b3246af88cf",
+    "source": "art/identity/grandmother-portrait/request.json"
+   }
+  },
+  "grandmother-portrait-surprise": {
+   "image": "/assets/rongguo/grandmother-portrait-surprise.png",
+   "width": 296,
+   "height": 600,
+   "anchor": [
+    148.0,
+    598.598
+   ],
+   "source": "art/emotions/grandmother-surprise-raw-01.png",
+   "identity": {
+    "character": "grandmother",
+    "features": "宽阔圆方脸；丰颊重下颌；长寿眉；笑眼但目光有威；宽鼻头；笑纹深而温厚",
+    "seed": 10232006,
+    "faceBox": [
+     99,
+     21,
+     207,
+     174
+    ],
+    "revision": "7b3246af88cf",
+    "source": "art/identity/grandmother-portrait/request.json"
+   }
+  },
+  "grandmother-portrait-angry": {
+   "image": "/assets/rongguo/grandmother-portrait-angry.png",
+   "width": 296,
+   "height": 600,
+   "anchor": [
+    148.0,
+    598.598
+   ],
+   "source": "art/emotions/grandmother-angry-raw-01.png",
+   "identity": {
+    "character": "grandmother",
+    "features": "宽阔圆方脸；丰颊重下颌；长寿眉；笑眼但目光有威；宽鼻头；笑纹深而温厚",
+    "seed": 10232006,
+    "faceBox": [
+     99,
+     21,
+     207,
+     174
+    ],
+    "revision": "7b3246af88cf",
+    "source": "art/identity/grandmother-portrait/request.json"
+   }
   }
+ }
 }

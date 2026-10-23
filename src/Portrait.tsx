@@ -1,6 +1,7 @@
 import { artAssets, artImage } from './art.ts';
-import { cast } from './story.ts';
+import { cast, facingRight } from './story.ts';
 import type { ActorId } from './story.ts';
+import type { Emotion } from './emotion.ts';
 
 /** Painted faces arrive over the network; mark them so CSS can fade in instead of flashing an empty box. */
 function painted(key: string, actor: ActorId, style?: React.CSSProperties) {
@@ -16,17 +17,20 @@ function painted(key: string, actor: ActorId, style?: React.CSSProperties) {
   />;
 }
 
-/** Shared painted identity, with a close-up frame for the cast directory. */
-export function Portrait({actor, sad=false, closeup=false}: {actor:ActorId; sad?:boolean; closeup?:boolean}) {
-  const key=`${actor}-portrait`,asset=artAssets[key];
+/** Shared painted identity, with a close-up frame for the cast directory. Emotion variants
+ * fall back to the neutral portrait whenever the pair has not been generated yet. */
+export function Portrait({actor, sad=false, closeup=false, face, emotion}: {actor:ActorId; sad?:boolean; closeup?:boolean; face?:'left'|'right'; emotion?:Emotion}) {
+  const key=emotion&&emotion!=='neutral'&&artAssets[`${actor}-portrait-${emotion}`]?`${actor}-portrait-${emotion}`:`${actor}-portrait`,asset=artAssets[key];
   if(asset){
-    const image=painted(key,actor);
     const box=asset.identity?.faceBox;
+    const base=facingRight.has(actor)?'right':'left';
+    const mirrored=face!==undefined&&face!==base;
     if(closeup&&box){
       const h=(box[3]-box[1])*2.25,top=Math.max(0,box[1]-(box[3]-box[1])*.48),cx=(box[0]+box[2])/2;
-      return <div className="portrait-closeup">{painted(key,actor,{height:`${asset.height/h*100}%`,width:'auto',maxWidth:'none',left:'50%',top:`${-top/h*100}%`,transform:`translateX(${-cx/asset.width*100}%)`})}</div>;
+      const shift=mirrored?-(asset.width-cx)/asset.width*100:-cx/asset.width*100;
+      return <div className="portrait-closeup">{painted(key,actor,{height:`${asset.height/h*100}%`,width:'auto',maxWidth:'none',left:'50%',top:`${-top/h*100}%`,transform:`translateX(${shift}%)${mirrored?' scaleX(-1)':''}`})}</div>;
     }
-    return image;
+    return painted(key,actor,mirrored?{transform:'scaleX(-1)'}:undefined);
   }
   const color=cast[actor].css, elder=actor==='grandmother', hair=elder?'#8b8980':'#3d4842';
   return <svg viewBox="0 50 220 250" role="img" aria-label={`${cast[actor].name}立绘占位`} className="portrait-svg">

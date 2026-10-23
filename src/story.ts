@@ -41,6 +41,8 @@ export const cast = {
   sedan:{name:'轿子',fullName:'入府小轿',color:0xa36557,css:'#a36557',relation:'入府交通',description:'代表入府乘轿；拜访贾赦所乘翠幄青紬车另以转场叙述。'},
 };
 export type ActorId=keyof typeof cast;
+/** Chibi/portrait art is painted facing one side; walking or seating on the other side needs a mirror. Default is left. */
+export const facingRight=new Set<ActorId>(['fengsu','monk','kongkong','oldmonk','leng','xichun','xing','xiren','yucun','zheng']);
 export type Move={type:'move';actor:ActorId;via:string[]};
 export type Action=Move|{type:'parallel';moves:Move[]}|{type:'show';actor:ActorId;at:string}|{type:'hide';actor:ActorId}|{type:'roof';visible:boolean}|{type:'effect';actor:ActorId;kind:'jade'|'greet'|'rest';duration:number};
 export type StoryStep={id:string;chapter:string;scene:string;title:string;place:string;focus:string;speaker:ActorId|'narrator';text:string;mood?:string;offscreen?:boolean;actions:Action[];source:{chapter:number;paragraphLead:string;textKind:string;layer?:string}};
@@ -48,3 +50,28 @@ export const chapter3Story=script as StoryStep[];
 export const story=[...script1,...script2,...script] as StoryStep[];
 export const chapters=[...sections1,...sections2,...sections.map(s=>({...s,book:3}))];
 export const bookNames:Record<number,string>={1:"第一回",2:"第二回",3:"第三回"};
+
+/** Consecutive move actions for different actors describe one shared walk; play them together
+ * so a two-person errand no longer costs twice the stage time. Same-actor neighbours stay
+ * sequential (the engine forbids moving one actor twice in parallel). */
+function parallelize(steps: StoryStep[]): StoryStep[] {
+  const group=(moves: Move[]): Action[] => {
+    const batches: Move[][]=[];
+    for(const move of moves) {
+      const last=batches.at(-1);
+      if(last&&!last.some(m=>m.actor===move.actor))last.push(move); else batches.push([move]);
+    }
+    return batches.map(b=>b.length===1?b[0]:{type:'parallel',moves:b});
+  };
+  return steps.map(step=>{
+    if(!step.actions.some(a=>a.type==='move'))return step;
+    const actions: Action[]=[]; let buffer: Move[]=[];
+    const flush=()=>{if(buffer.length){actions.push(...group(buffer));buffer=[];}};
+    for(const action of step.actions) {
+      if(action.type==='move')buffer.push(action); else {flush();actions.push(action);}
+    }
+    flush();
+    return {...step,actions};
+  });
+}
+export const stagedStory=parallelize(story);

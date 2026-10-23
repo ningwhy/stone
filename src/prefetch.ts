@@ -2,6 +2,7 @@ import { artAssets, artImage } from './art.ts';
 import type { MapData } from './model.ts';
 import type { StoryEngine } from './engine.ts';
 import type { ActorId } from './story.ts';
+import { emotionOf } from './emotion.ts';
 
 /** Scene changes rebuild the Phaser stage, so every asset has to be fetched again before the map appears.
  * Warming the HTTP cache while the reader is still busy with dialogue removes most of that wait.
@@ -83,8 +84,15 @@ export function prefetchCast(engine: StoryEngine, index: number) {
   if (!step) return;
   const needed = sceneAssets(engine, step.scene);
   for (let i = index; i < engine.steps.length && engine.steps[i].scene === step.scene; i++) {
-    for (const action of engine.steps[i].actions) {
+    const current = engine.steps[i];
+    for (const action of current.actions) {
       if (action.type === 'show' || action.type === 'effect') needed.add(`${action.actor}-portrait`);
+    }
+    // The speaker's emotion variant swaps mid-scene; warm it beside the neutral portrait.
+    const emotion = emotionOf(current);
+    if (current.speaker !== 'narrator' && emotion !== 'neutral') {
+      const variant = `${current.speaker}-portrait-${emotion}`;
+      if (artAssets[variant]) needed.add(variant);
     }
   }
   queuePrefetch(needed);

@@ -1,6 +1,6 @@
 import { cellKey, findPath } from './model.ts';
 import type { MapData, Point } from './model.ts';
-import { story, chapter3Story, cast } from './story.ts';
+import { stagedStory, chapter3Story, cast } from './story.ts';
 import type { ActorId, Action, Move, StoryStep } from './story.ts';
 
 export type ActorState = Point & { visible: boolean; moving: boolean; direction: number };
@@ -27,7 +27,7 @@ export class StoryEngine {
   private userPaused = false;
   private overlayPaused = false;
 
-  constructor(maps: Record<string,MapData>|MapData, steps = story) {
+  constructor(maps: Record<string,MapData>|MapData, steps = stagedStory) {
     this.maps=typeof (maps as MapData).id==='string' ? {[(maps as MapData).id]:maps as MapData}:maps as Record<string,MapData>; this.steps = steps;
     this.state = this.initial();
     this.enter(0);
