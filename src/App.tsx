@@ -136,7 +136,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           {inMotion&&<div className="map-action-cue" role="status"><span className="action-orbit"/><span>{state.paused?'行动已暂停':travel?'黛玉正在地点之间移动':'跟随人物 · '+step.title}</span></div>}
           {state.paused&&<div className="paused-label"><Icon name="pause"/>演出已暂停</div>}
         </section>
-        <section className={`dialogue-panel ${inMotion?'action-mode':'conversation-mode'}`} aria-label="剧情对话" data-mode={inMotion?'action':'dialogue'} data-paused={state.paused}>
+        <section className={`dialogue-panel ${inMotion?'action-mode':'conversation-mode'} ${overview||travel?'stage-overview':''}`} aria-label="剧情对话" data-mode={inMotion?'action':'dialogue'} data-paused={state.paused}>
           {!inMotion&&<>
             <div className="speaker-portrait" key={portrait}><Portrait actor={portrait} sad={step.mood==='sad'}/><span className="portrait-role">{step.speaker==='narrator'?'故事视角':'讲话人'}</span></div>
             {listener&&<div className="listener-portraits" aria-label="在场人物立绘">
