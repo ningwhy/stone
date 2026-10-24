@@ -59,6 +59,8 @@
 
 美术阶段增加：`GroundDetail`、`BuildingBase`、`PropsBack`、`PropsFront`、`Roof`；保留运行时角色容器。高大建筑必须拆分，避免把整栋建筑作为单一深度对象。室内使用剖面，进入正房演出时隐藏对应屋顶。
 
+已落地的最小版本：`PlanZones` 对象加 `indoor`（bool）标记室内地面，`Art` 对象加 `interiorZone`（string）声明这栋 `visibility=exterior` 的外观盖住哪个室内地面；有人站上该地面时外观自动隐藏，室内地面与陈设露出，人走开自动恢复。剧本 `roof` 动作仍是显式覆盖。人物立绘与 Q 版的镜像由 `design/character-facing.json` 的实测朝向驱动（`paintedFacing(actor, kind)`），不再使用全局左右集合。
+
 ## 人物与资源
 
 首版角色：黛玉、贾母、邢夫人、王夫人、李纨、迎春、探春、惜春、王熙凤。辅助人物：引路婆子、通报丫鬟、平儿及轿夫群体，辅助人物配置仍需逐段核对。

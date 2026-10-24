@@ -52,7 +52,9 @@ object.height = imageHeight × s
 
 ## Tiled 编辑支持范围
 
-支持 Art 真实位置、显示宽高、asset、visibility、depthOffset；visibility=exterior 跟随屋顶开关。当前不支持对象旋转、gid 翻转位、分组/层偏移、任意多边形碰撞，也不完整解释 layer opacity、普通地砖层碰撞。旋转/翻转已报错，其余缺失能力不会自动实现。编辑器用默认无偏移对象层、无旋转图像。
+支持 Art 真实位置、显示宽高、asset、visibility、depthOffset，以及两个室内外自定义属性：`PlanZones` 对象的 `indoor`（bool，该地面属于建筑内部）与 Art 对象的 `interiorZone`（string，这栋 `visibility=exterior` 的外观盖住哪个室内地面）。`visibility=exterior` 不再只跟随剧本 roof 开关：只要有人站在 `interiorZone` 指向的室内地面上，这栋外观立即隐藏，露出室内地面与室内陈设；人走出来自动恢复。剧本 `roof` 动作仍是显式覆盖（`visible:false` 强制整场室内，`visible:true` 强制看外观）。当前不支持对象旋转、gid 翻转位、分组/层偏移、任意多边形碰撞，也不完整解释 layer opacity、普通地砖层碰撞。旋转/翻转已报错，其余缺失能力不会自动实现。编辑器用默认无偏移对象层、无旋转图像。
+
+两个属性由 `scripts/annotate_interiors.py` 幂等写入已提交的 TMJ（`python3 scripts/annotate_interiors.py`）；新增院落或改室内范围时改脚本里的 `INDOOR_ZONES` / `INTERIOR_OF` 再重跑。室内陈设补齐用 `scripts/furnish_interiors.py`，放置格子先用 `scripts/story_path_cells.py` 确认没有被任何 move 路线占用，避免挡路。`scripts/render_map_preview.py` 可在不起服务的情况下近似渲染地板与 Art 布局，用于快速目检室内外效果。
 
 打开 `maps/rongguo-entry.tmj` 或新局部图，保持相对 TSJ 路径和 asset 属性。移动 Art 后核对关联 Anchors；碰撞另改 ArtFootprints。保存刷新网页，先清理不兼容的测试存档或从段落起点重放。Tiled 中看起来对齐还须网页复核脚下锚点。
 
@@ -68,6 +70,6 @@ object.height = imageHeight × s
 
 ## 地图目检与边界
 
-大地图、局部图、指北针和原文方位保持一致；看人物是否穿门、遮挡是否能读、墙是否留洞、动线是否真实可达。入室时 exterior 整楼隐藏只是原型；当前没有精细前柱/屋顶遮挡系统。新增主题的地板/花坛/水面配置需在对应场景检查。不要以墙画在地板上而声称已自动阻挡。
+大地图、局部图、指北针和原文方位保持一致；看人物是否穿门、遮挡是否能读、墙是否留洞、动线是否真实可达。入室时 exterior 整楼隐藏由室内地面占位自动触发（见上文两个自定义属性），不是只靠剧本 roof 动作；当前没有精细前柱/屋顶遮挡系统。新增主题的地板/花坛/水面配置需在对应场景检查。不要以墙画在地板上而声称已自动阻挡。
 
 修改生成器、校准资产前先看 [覆盖表](architecture.md)，保留手工编辑副本。Tiled 应用未实际打开过，就将其列为待验收，不能用 JSON 检查代替目视结论。

@@ -27,7 +27,14 @@
           "width": 1536,
           "height": 896,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": false,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 2,
@@ -37,7 +44,14 @@
           "width": 1024,
           "height": 768,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": true,
+              "type": "bool"
+            }
+          ]
         }
       ]
     },
@@ -238,6 +252,11 @@
             {
               "name": "visibility",
               "value": "exterior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A1",
               "type": "string"
             }
           ]

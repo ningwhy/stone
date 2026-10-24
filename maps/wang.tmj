@@ -27,7 +27,14 @@
           "width": 1280,
           "height": 768,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": false,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 2,
@@ -37,7 +44,14 @@
           "width": 1024,
           "height": 768,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": true,
+              "type": "bool"
+            }
+          ]
         }
       ]
     },
@@ -255,6 +269,11 @@
               "name": "depthOffset",
               "value": 0,
               "type": "float"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A1",
+              "type": "string"
             }
           ]
         },

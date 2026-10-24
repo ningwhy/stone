@@ -1644,7 +1644,14 @@
           "width": 320,
           "height": 512,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": false,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 2,
@@ -1655,7 +1662,14 @@
           "width": 640,
           "height": 576,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": false,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 3,
@@ -1666,7 +1680,14 @@
           "width": 448,
           "height": 192,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": false,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 4,
@@ -1677,7 +1698,14 @@
           "width": 448,
           "height": 384,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": false,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 5,
@@ -1688,7 +1716,14 @@
           "width": 768,
           "height": 576,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": false,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 6,
@@ -1699,7 +1734,14 @@
           "width": 768,
           "height": 384,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": true,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 7,
@@ -1710,7 +1752,14 @@
           "width": 192,
           "height": 448,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": false,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 8,
@@ -1721,7 +1770,14 @@
           "width": 320,
           "height": 576,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": false,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 9,
@@ -1732,7 +1788,14 @@
           "width": 448,
           "height": 704,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": false,
+              "type": "bool"
+            }
+          ]
         }
       ]
     },
@@ -3054,6 +3117,11 @@
               "name": "depthOffset",
               "type": "float",
               "value": 0
+            },
+            {
+              "name": "interiorZone",
+              "value": "F",
+              "type": "string"
             }
           ]
         },

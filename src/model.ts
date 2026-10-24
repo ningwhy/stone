@@ -1,6 +1,9 @@
 export type Point = { col: number; row: number };
-export type Zone = { id: string; name: string; col: number; row: number; width: number; height: number };
-export type ArtObject = { name:string; asset:string; x:number; y:number; width:number; height:number; visibility:string; depthOffset:number };
+/** `indoor` marks a floor that belongs to a building's interior rather than open ground. */
+export type Zone = { id: string; name: string; col: number; row: number; width: number; height: number; indoor?: boolean };
+/** `interiorZone` on an `exterior` art names the floor it roofs over, so the roof can be
+ *  lifted the moment somebody walks in without any per-scene script bookkeeping. */
+export type ArtObject = { name:string; asset:string; x:number; y:number; width:number; height:number; visibility:string; depthOffset:number; interiorZone?: string };
 export type MapData = {
   width: number; height: number; tilewidth: number; tileheight: number;
   anchors: Record<string, Point>; zones: Zone[]; blockers: Zone[];
@@ -9,6 +12,11 @@ export type MapData = {
   id:string; title:string; theme:string; labels:{text:string;point:Point}[];
 };
 export const cellKey = (col: number, row: number) => `${col},${row}`;
+
+/** The floor region a fractional grid position stands on, if any. */
+export function zoneAt(map: MapData, col: number, row: number): Zone | undefined {
+  return map.zones.find(z => col >= z.col && col < z.col + z.width && row >= z.row && row < z.row + z.height);
+}
 
 type TiledObject = { name: string; x: number; y: number; width: number; height: number; rotation?:number; visible?:boolean; gid?:number; properties?: {name: string; value: unknown}[] };
 type TiledMap = {
@@ -32,7 +40,8 @@ export function parseTiledMap(raw: TiledMap): MapData {
     if (col < 0 || row < 0 || col >= raw.width || row >= raw.height || anchors[o.name]) throw new Error(`地点无效或重复：${o.name}`);
     anchors[o.name] = { col: Math.round(col), row: Math.round(row) };
   }
-  const zones = (layer: string) => objects(layer).map(o => ({ id: o.name.split(' ')[0], name: o.name.slice(2), col: o.x / unit, row: o.y / unit, width: o.width / unit, height: o.height / unit }));
+  const boolProp = (o: TiledObject, name: string) => { const v = o.properties?.find(p => p.name === name)?.value; return v === true || v === 'true'; };
+  const zones = (layer: string) => objects(layer).map(o => ({ id: o.name.split(' ')[0], name: o.name.slice(2), col: o.x / unit, row: o.y / unit, width: o.width / unit, height: o.height / unit, indoor: boolProp(o, 'indoor') || undefined }));
   const map: MapData = { width: raw.width, height: raw.height, tilewidth: raw.tilewidth, tileheight: unit,
     anchors, zones: zones('PlanZones'), blockers: zones('PlanBlockers'), routes: {}, walkable: new Set(), art: [],id:String(raw.properties?.find(p=>p.name==='sceneId')?.value??'entry'),title:String(raw.properties?.find(p=>p.name==='title')?.value??'荣国府 · 贾母院'),theme:String(raw.properties?.find(p=>p.name==='theme')?.value??'garden'),labels:[] };
   for(const o of raw.layers.find(l=>l.name==='Labels')?.objects??[])map.labels.push({text:o.name,point:{col:o.x/unit-.5,row:o.y/unit-.5}});
@@ -42,7 +51,7 @@ export function parseTiledMap(raw: TiledMap): MapData {
     const prop=(name:string)=>o.properties?.find(p=>p.name===name)?.value;
     const asset=prop('asset');
     if(typeof asset!=='string' || o.width<=0 || o.height<=0)throw new Error(`素材 ${o.name} 缺少有效图像与尺寸`);
-    map.art.push({name:o.name,asset,x:o.x-o.y,y:(o.x+o.y)/2,width:o.width,height:o.height,visibility:String(prop('visibility')??'always'),depthOffset:Number(prop('depthOffset')??0)});
+    map.art.push({name:o.name,asset,x:o.x-o.y,y:(o.x+o.y)/2,width:o.width,height:o.height,visibility:String(prop('visibility')??'always'),depthOffset:Number(prop('depthOffset')??0),interiorZone:typeof prop('interiorZone')==='string'?String(prop('interiorZone')):undefined});
   }
   for(const o of raw.layers.find(l=>l.name==='ArtFootprints')?.objects??[])map.blockers.push({id:o.name,name:o.name,col:o.x/unit,row:o.y/unit,width:o.width/unit,height:o.height/unit});
   for (const o of objects('Routes')) {

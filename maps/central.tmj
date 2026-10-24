@@ -27,7 +27,14 @@
           "width": 832,
           "height": 768,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": false,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 2,
@@ -37,7 +44,14 @@
           "width": 1088,
           "height": 768,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": true,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 3,
@@ -47,7 +61,14 @@
           "width": 320,
           "height": 1024,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": true,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 4,
@@ -57,7 +78,14 @@
           "width": 320,
           "height": 1024,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": false,
+              "type": "bool"
+            }
+          ]
         }
       ]
     },
@@ -242,6 +270,11 @@
               "name": "depthOffset",
               "value": 0,
               "type": "float"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A1",
+              "type": "string"
             }
           ]
         },
@@ -271,6 +304,11 @@
               "name": "depthOffset",
               "value": 0,
               "type": "float"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A2",
+              "type": "string"
             }
           ]
         },
@@ -360,6 +398,93 @@
               "type": "float"
             }
           ]
+        },
+        {
+          "id": 20,
+          "name": "wood-screen",
+          "x": 1440.0,
+          "y": 736.0,
+          "width": 171.0,
+          "height": 155.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 38,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "wood-screen",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "tea-table",
+          "x": 1632.0,
+          "y": 1312.0,
+          "width": 104.0,
+          "height": 85.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 39,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "tea-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "name": "tea-table",
+          "x": 1056.0,
+          "y": 1312.0,
+          "width": 104.0,
+          "height": 85.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 40,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "tea-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
         }
       ]
     },
@@ -383,6 +508,39 @@
           "rotation": 0,
           "visible": true,
           "type": "collision"
+        },
+        {
+          "id": 21,
+          "name": "wood-screen",
+          "x": 1408,
+          "y": 704,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": ""
+        },
+        {
+          "id": 23,
+          "name": "tea-table",
+          "x": 1600,
+          "y": 1280,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": ""
+        },
+        {
+          "id": 25,
+          "name": "tea-table",
+          "x": 1024,
+          "y": 1280,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": ""
         }
       ]
     },

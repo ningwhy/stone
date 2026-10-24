@@ -1,5 +1,6 @@
-import script from '../design/chapter03-story.json' with { type:'json' };
+import facingTable from '../design/character-facing.json' with { type:'json' };
 import sections from '../design/chapter03-sections.json' with { type:'json' };
+import script from '../design/chapter03-story.json' with { type:'json' };
 import script1 from '../design/chapter01-story.json' with { type:'json' };
 import script2 from '../design/chapter02-story.json' with { type:'json' };
 import sections1 from '../design/chapter01-sections.json' with { type:'json' };
@@ -48,8 +49,26 @@ export const cast = {
   baochai:{name:'宝钗',fullName:'薛宝钗',color:0x8fb3a6,css:'#8fb3a6',relation:'薛家小姐',description:'乳名宝钗，比薛蟠小两岁。肌骨莹润，举止娴雅，读书识字胜过乃兄。随母兄进京待选，与黛玉、迎春等日日同处。'},
 };
 export type ActorId=keyof typeof cast;
-/** Chibi/portrait art is painted facing one side; walking or seating on the other side needs a mirror. Default is left. */
-export const facingRight=new Set<ActorId>(['fengsu','monk','kongkong','oldmonk','leng','xichun','xing','xiren','yucun','zheng']);
+export type FacingSide='left'|'right';
+export type ArtKind='portrait'|'chibi';
+
+/** Which side each painted head is drawn facing.
+ *
+ * The portraits and the chibi sprites were painted from the same character
+ * reference, so they are expected to agree; the measured direction is recorded
+ * per actor in design/character-facing.json together with the two offsets that
+ * produced it.
+ *
+ * The painted direction decides whether a sprite is mirrored: a speaker stands
+ * on the left of the dialogue panel and has to look towards the text, and a
+ * walker has to look the way it is walking, so a head painted facing the other
+ * way is flipped. Anything absent from the table — a prop such as the sedan
+ * chair — keeps the left default the runtime has always used.
+ */
+const facing=(facingTable as {actors:Record<string,{portrait:FacingSide;chibi:FacingSide}>}).actors;
+export const paintedFacing=(actor:ActorId,kind:ArtKind):FacingSide=>facing[actor]?.[kind]??'left';
+/** True when the painted head already faces the given side, so no mirror is needed. */
+export const facesSide=(actor:ActorId,kind:ArtKind,side:FacingSide)=>paintedFacing(actor,kind)===side;
 export type Move={type:'move';actor:ActorId;via:string[]};
 export type Action=Move|{type:'parallel';moves:Move[]}|{type:'show';actor:ActorId;at:string}|{type:'hide';actor:ActorId}|{type:'roof';visible:boolean}|{type:'effect';actor:ActorId;kind:'jade'|'greet'|'rest';duration:number};
 export type StoryStep={id:string;chapter:string;scene:string;title:string;place:string;focus:string;speaker:ActorId|'narrator';text:string;mood?:string;offscreen?:boolean;actions:Action[];source:{chapter:number;paragraphLead:string;textKind:string;layer?:string}};

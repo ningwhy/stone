@@ -1,8 +1,8 @@
 import Phaser from 'phaser';
 import { artAssets, artGround, artImage } from './art.ts';
-import { project } from './model.ts';
-import type { MapData } from './model.ts';
-import { cast, facingRight } from './story.ts';
+import { project, zoneAt } from './model.ts';
+import type { ArtObject, MapData } from './model.ts';
+import { cast, paintedFacing } from './story.ts';
 import type { ActorId } from './story.ts';
 import type { StoryEngine } from './engine.ts';
 
@@ -12,7 +12,7 @@ export class MapScene extends Phaser.Scene {
   actorViews = new Map<ActorId, Phaser.GameObjects.Container>();
   private actorSprites = new Map<ActorId, Phaser.GameObjects.Image>();
   roof?: Phaser.GameObjects.Graphics;
-  artViews: {view:Phaser.GameObjects.Image;visibility:string}[] = [];
+  artViews: {view:Phaser.GameObjects.Image;object:ArtObject}[] = [];
   grid?: Phaser.GameObjects.Graphics;
   passageRoof?: Phaser.GameObjects.Graphics;
   routeGuide?: Phaser.GameObjects.Graphics;
@@ -57,7 +57,7 @@ export class MapScene extends Phaser.Scene {
       const ground=artGround(object);
       const image=this.add.image(object.x,object.y,object.asset).setOrigin(.5,1)
         .setDisplaySize(object.width,object.height).setDepth(ground.y+object.depthOffset);
-      this.artViews.push({view:image,visibility:object.visibility});
+      this.artViews.push({view:image,object});
       if(object.asset==='garden-tree' || object.asset==='garden-rock') {
         const shadow=this.add.graphics().setDepth(-9990);
         shadow.fillStyle(0x68755a,.12);shadow.fillEllipse(ground.x+12,ground.y+6,object.width*.52,object.width*.18);
@@ -82,7 +82,9 @@ export class MapScene extends Phaser.Scene {
     }
     for(const z of this.mapData.zones) {
       if(['myth','dream','ruins'].includes(this.mapData.theme))continue;
-      const indoor=z.id==='F'||['interior','night'].includes(this.mapData.theme);
+      // Tiled marks the interior floors; older stages without the flag fall back
+      // to the theme so the shipped scenes keep their look.
+      const indoor=z.indoor ?? (z.id==='F'||['interior','night'].includes(this.mapData.theme));
       this.rect(floor,z.col-.18,z.row-.18,z.width+.36,z.height+.36,0xb4ac92);
       this.rect(floor,z.col,z.row,z.width,z.height,indoor?0xd5c5a5:0xe5decb);
       for(let c=z.col;c<z.col+z.width;c++)for(let r=z.row;r<z.row+z.height;r++) {
@@ -204,12 +206,23 @@ export class MapScene extends Phaser.Scene {
     container.on('pointerup',(pointer:Phaser.Input.Pointer)=>{if (pointer.event.target instanceof HTMLCanvasElement && !document.querySelector('dialog[open]') && !this.drag?.moved && this.engine.getSnapshot().actors[id].visible) this.onActor(id);});
     this.actorViews.set(id,container);
   }
+  /** True while anybody stands on the given floor region. */
+  private zoneOccupied(zoneId:string,state:ReturnType<StoryEngine['getSnapshot']>) {
+    for(const actor of Object.values(state.actors)) {
+      if(!actor.visible)continue;
+      if(zoneAt(this.mapData,actor.col,actor.row)?.id===zoneId)return true;
+    }
+    return false;
+  }
   sync() {
     if(!this.cameras?.main)return;
     const state=this.engine.getSnapshot();
     this.roof?.setVisible(state.roofVisible);
-    for(const {view,visibility} of this.artViews) {
-      view.setVisible(visibility!=='exterior' || state.roofVisible);
+    for(const {view,object} of this.artViews) {
+      // A building's roof lifts as soon as somebody stands on the floor it covers,
+      // so the interior paving and furnishings read through instead of a solid wall.
+      const roofOff=object.interiorZone!==undefined && this.zoneOccupied(object.interiorZone,state);
+      view.setVisible(object.visibility!=='exterior' || (state.roofVisible && !roofOff));
       // Until architectural front/back layers are authored, reveal walkers through the gate.
       const nearGate=Math.abs(state.actors.daiyu.col-13)<=1.5 && state.actors.daiyu.row>=22 && state.actors.daiyu.row<=26;
       view.setAlpha(view.texture.key==='flower-gate' && nearGate && this.mapData.id==='entry' ? .28 : 1);
@@ -226,9 +239,10 @@ export class MapScene extends Phaser.Scene {
       const bodyHeight=asset?.height??85;
       const scale=Math.max(1,48/(bodyHeight*zoom));
       view.setScale(scale).setPosition(p.x,p.y+bounce).setVisible(a.visible).setDepth(p.y+1);
-      // Iso walking right means col-row increases; mirror the sprite when that disagrees with its painted facing.
+      // Iso walking right means col-row increases; mirror the sprite when the
+      // painted chibi already faces the way it is walking, or away from it.
       const sprite=this.actorSprites.get(id);
-      if(sprite)sprite.setFlipX(a.moving && (a.direction===1)!==facingRight.has(id));
+      if(sprite)sprite.setFlipX(a.moving && (a.direction===1)!==(paintedFacing(id,'chibi')==='right'));
       this.actorLabels.get(id)!.setScale(1/(zoom*scale)).setPosition(0,7/(zoom*scale));
     }
   }

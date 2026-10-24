@@ -105,7 +105,10 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   },[worldId,state.index]);
   useEffect(()=>{if(!travel||state.paused)return;const timer=setInterval(()=>setTravel(t=>t?(t.progress>=1?null:{...t,progress:Math.min(1,t.progress+.025*state.speed)}):null),50);return ()=>clearInterval(timer);},[!!travel,state.paused,state.speed]);
   const travelRef=useRef(false);travelRef.current=!!travel;
-  const onScene=useCallback((scene:MapScene|null)=>{sceneRef.current=scene;if(scene){scene.presentationPaused=travelRef.current;scene.input.enabled=!document.querySelector('dialog[open]');setLoaded(true);readyRef.current=true;setSceneReady(true);}else{readyRef.current=false;}},[]);
+  const onScene=useCallback((scene:MapScene|null)=>{sceneRef.current=scene;if(scene){scene.presentationPaused=travelRef.current;scene.input.enabled=!document.querySelector('dialog[open]');setLoaded(true);readyRef.current=true;setSceneReady(true);
+    // QA hook: the browser smoke tests read the live stage through this handle.
+    (window as unknown as {__mapScene?:MapScene}).__mapScene=scene;
+  }else{readyRef.current=false;delete (window as unknown as {__mapScene?:MapScene}).__mapScene;}},[]);
   useEffect(()=>{if(sceneRef.current)sceneRef.current.presentationPaused=!!travel;},[travel,state.sceneId]);
   const onActor=useCallback((id:ActorId)=>setModal(id),[]);
   // The first-paint stage and the per-scene card share one loader signal.

@@ -1,0 +1,490 @@
+[
+ {
+  "actor": "baochai",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.3072,
+  "mouthOffset": 0.1718,
+  "confidence": 0.1718
+ },
+ {
+  "actor": "baoyu",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.2467,
+  "mouthOffset": 0.1035,
+  "confidence": 0.1035
+ },
+ {
+  "actor": "daiyu",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.6488,
+  "mouthOffset": 0.2784,
+  "confidence": 0.2784
+ },
+ {
+  "actor": "daiyu",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.3067,
+  "mouthOffset": 0.1211,
+  "confidence": 0.1211
+ },
+ {
+  "actor": "feng",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.5759,
+  "mouthOffset": 0.1179,
+  "confidence": 0.1179
+ },
+ {
+  "actor": "feng",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.099,
+  "mouthOffset": 0.1558,
+  "confidence": 0.099
+ },
+ {
+  "actor": "fengshi",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.6291,
+  "mouthOffset": 0.3159,
+  "confidence": 0.3159
+ },
+ {
+  "actor": "fengshi",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.3446,
+  "mouthOffset": 0.1407,
+  "confidence": 0.1407
+ },
+ {
+  "actor": "fengsu",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.36,
+  "mouthOffset": 0.165,
+  "confidence": 0.165
+ },
+ {
+  "actor": "fengsu",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.5025,
+  "mouthOffset": 0.2264,
+  "confidence": 0.2264
+ },
+ {
+  "actor": "grandmother",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.3587,
+  "mouthOffset": 0.1245,
+  "confidence": 0.1245
+ },
+ {
+  "actor": "grandmother",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0645,
+  "mouthOffset": -0.0331,
+  "confidence": 0.0331
+ },
+ {
+  "actor": "guide",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.5232,
+  "mouthOffset": 0.2922,
+  "confidence": 0.2922
+ },
+ {
+  "actor": "guide",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0489,
+  "mouthOffset": 0.0021,
+  "confidence": 0.0021
+ },
+ {
+  "actor": "huoqi",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.3104,
+  "mouthOffset": 0.1334,
+  "confidence": 0.1334
+ },
+ {
+  "actor": "huoqi",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.4026,
+  "mouthOffset": 0.1715,
+  "confidence": 0.1715
+ },
+ {
+  "actor": "jiaoxing",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.2832,
+  "mouthOffset": 0.0859,
+  "confidence": 0.0859
+ },
+ {
+  "actor": "kongkong",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.3101,
+  "mouthOffset": 0.0107,
+  "confidence": 0.0107
+ },
+ {
+  "actor": "leng",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.3115,
+  "mouthOffset": 0.0889,
+  "confidence": 0.0889
+ },
+ {
+  "actor": "leng",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0237,
+  "mouthOffset": -0.1308,
+  "confidence": 0.0237
+ },
+ {
+  "actor": "liwan",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.3059,
+  "mouthOffset": 0.1675,
+  "confidence": 0.1675
+ },
+ {
+  "actor": "maid",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0689,
+  "mouthOffset": 0.0418,
+  "confidence": 0.0418
+ },
+ {
+  "actor": "menzi",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.8991,
+  "mouthOffset": 0.7264,
+  "confidence": 0.7264
+ },
+ {
+  "actor": "menzi",
+  "kind": "portrait",
+  "facing": "left",
+  "noseOffset": -0.018,
+  "mouthOffset": -0.0222,
+  "confidence": 0.018
+ },
+ {
+  "actor": "messenger",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.1434,
+  "mouthOffset": 0.1521,
+  "confidence": 0.1434
+ },
+ {
+  "actor": "monk",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.4777,
+  "mouthOffset": 0.244,
+  "confidence": 0.244
+ },
+ {
+  "actor": "monk",
+  "kind": "portrait",
+  "facing": "left",
+  "noseOffset": -0.0433,
+  "mouthOffset": -0.1077,
+  "confidence": 0.0433
+ },
+ {
+  "actor": "nurse_li",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.2471,
+  "mouthOffset": 0.0622,
+  "confidence": 0.0622
+ },
+ {
+  "actor": "nurse_li",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.095,
+  "mouthOffset": -0.0384,
+  "confidence": 0.0384
+ },
+ {
+  "actor": "nurse_wang",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.2535,
+  "mouthOffset": -0.0753,
+  "confidence": 0.0753
+ },
+ {
+  "actor": "nurse_wang",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.3048,
+  "mouthOffset": 0.4506,
+  "confidence": 0.3048
+ },
+ {
+  "actor": "oldmonk",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.679,
+  "mouthOffset": 0.2891,
+  "confidence": 0.2891
+ },
+ {
+  "actor": "oldmonk",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.3998,
+  "mouthOffset": 0.0487,
+  "confidence": 0.0487
+ },
+ {
+  "actor": "plaintiff",
+  "kind": "chibi",
+  "facing": "left",
+  "noseOffset": -2.0157,
+  "mouthOffset": -4.6401,
+  "confidence": 2.0157
+ },
+ {
+  "actor": "plaintiff",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.3856,
+  "mouthOffset": 0.6761,
+  "confidence": 0.3856
+ },
+ {
+  "actor": "ruhai",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.68,
+  "mouthOffset": 0.5364,
+  "confidence": 0.5364
+ },
+ {
+  "actor": "ruhai",
+  "kind": "portrait",
+  "facing": "left",
+  "noseOffset": -0.0815,
+  "mouthOffset": -0.1761,
+  "confidence": 0.0815
+ },
+ {
+  "actor": "shiyin",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.4173,
+  "mouthOffset": 0.1574,
+  "confidence": 0.1574
+ },
+ {
+  "actor": "tanchun",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.6231,
+  "mouthOffset": 0.2401,
+  "confidence": 0.2401
+ },
+ {
+  "actor": "tanchun",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.1261,
+  "mouthOffset": 0.1355,
+  "confidence": 0.1261
+ },
+ {
+  "actor": "taoist",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.6096,
+  "mouthOffset": 0.2876,
+  "confidence": 0.2876
+ },
+ {
+  "actor": "taoist",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.562,
+  "mouthOffset": 0.3666,
+  "confidence": 0.3666
+ },
+ {
+  "actor": "wang",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.4297,
+  "mouthOffset": 0.1379,
+  "confidence": 0.1379
+ },
+ {
+  "actor": "wang",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0546,
+  "mouthOffset": 0.0446,
+  "confidence": 0.0446
+ },
+ {
+  "actor": "xichun",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.1532,
+  "mouthOffset": 0.1392,
+  "confidence": 0.1392
+ },
+ {
+  "actor": "xing",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0742,
+  "mouthOffset": 0.0587,
+  "confidence": 0.0587
+ },
+ {
+  "actor": "xiren",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.1933,
+  "mouthOffset": 0.1965,
+  "confidence": 0.1933
+ },
+ {
+  "actor": "xuepan",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.3504,
+  "mouthOffset": 0.1835,
+  "confidence": 0.1835
+ },
+ {
+  "actor": "xuepan",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0052,
+  "mouthOffset": -0.2172,
+  "confidence": 0.0052
+ },
+ {
+  "actor": "xueyan",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.2818,
+  "mouthOffset": 0.1407,
+  "confidence": 0.1407
+ },
+ {
+  "actor": "xueyima",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.8726,
+  "mouthOffset": 0.4062,
+  "confidence": 0.4062
+ },
+ {
+  "actor": "xueyima",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0997,
+  "mouthOffset": 0.0596,
+  "confidence": 0.0596
+ },
+ {
+  "actor": "yingchun",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.1467,
+  "mouthOffset": 0.0791,
+  "confidence": 0.0791
+ },
+ {
+  "actor": "yingge",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.96,
+  "mouthOffset": 0.338,
+  "confidence": 0.338
+ },
+ {
+  "actor": "yingge",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.2978,
+  "mouthOffset": 0.2294,
+  "confidence": 0.2294
+ },
+ {
+  "actor": "yinglian",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.2712,
+  "mouthOffset": 0.1444,
+  "confidence": 0.1444
+ },
+ {
+  "actor": "yucun",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.6719,
+  "mouthOffset": 0.5559,
+  "confidence": 0.5559
+ },
+ {
+  "actor": "yucun",
+  "kind": "portrait",
+  "facing": "left",
+  "noseOffset": -0.0107,
+  "mouthOffset": -0.1018,
+  "confidence": 0.0107
+ },
+ {
+  "actor": "zhang",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0643,
+  "mouthOffset": 0.0915,
+  "confidence": 0.0643
+ },
+ {
+  "actor": "zheng",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.4302,
+  "mouthOffset": 0.144,
+  "confidence": 0.144
+ },
+ {
+  "actor": "zheng",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0585,
+  "mouthOffset": -0.032,
+  "confidence": 0.032
+ }
+]

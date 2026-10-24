@@ -57,6 +57,12 @@ builder 顺序是原 SAM alpha ≥110 二值化 → 恢复道具 → 裁切/清�
 
 `extend_art_calibration.py` 对陌生 ID 可能尺寸字典查不到，且从 jobs 下标 8 开始；`calibrate_missing_art.py`、`calibrate_prequel_art.py` 含既有批次坐标。后续应显式添加经测量的新条目或目标回校准脚本，不把这些当通用向导。
 
+## 人物朝向表
+
+原图脸部朝向并不一致，立绘与 Q 版不能靠同一条全局规则镜像。`design/character-facing.json` 是权威朝向表，每个 actor 分 `portrait` 与 `chibi` 两个字段（`left` / `right`），并附 `evidence`（测量值与方法）。运行时经 `src/story.ts` 的 `paintedFacing(actor, kind)` 查询：对话框立绘按讲话人/听众位置决定是否 `scaleX(-1)`，地图 Q 版在行走时按 `direction` 与表内 `chibi` 值翻转。
+
+朝向由 Apple Vision 语义关键点的几何关系测得（`scripts/facing_vision.swift` 输出鼻尖/嘴部相对双眼中点的偏移，`scripts/facing_measure.py` 批量跑，`scripts/build_facing.py` 生成 JSON）。可信度来自四条独立证据：`leftEye` 质心 x 恒小于 `rightEye` 质心 x（76/76，符号由几何确定，无需参照图）、关键点落位目检、镜像自洽性（38/38）、鼻/嘴双特征互证（55/61）。眼宽差与 Vision yaw 在水彩古风画上均不可用，已明确弃用；暗部质心、肤色/轮廓质心、Q 版头身偏移等自动法也已证伪。新人物补资产后须重跑测量并更新该表，不能沿用默认 `left`。
+
 SAM 与 SDMatte 都保留，但 builder 当前读取 `*-sam.png`。若采用 SDMatte，显式扩展选择契约并留原候选，不把 SDMatte 假装改名为 SAM。
 
 ## 旧人物面部更新
@@ -75,3 +81,4 @@ SAM 与 SDMatte 都保留，但 builder 当前读取 `*-sam.png`。若采用 SDM
 4. 总览用院落外观，书房不能用桌子代表，家具只放局部场景。
 5. 新墙/门要检查等距轴、墙向、通行宽度；要拆层就实际提供后墙/前柱/屋檐，而非文字声称已拆层。
 6. 检查立绘/Q 版同人及灰度脸辨识；资产从生成、入选、校准、运行到截图每一步有记录。
+7. 立绘与 Q 版朝向符合 `design/character-facing.json`：对话框里讲话人朝文本、听众朝讲话人，地图上行走的 Q 版朝行走方向（`node tests/actor-facing.mjs` 可复跑采样）。

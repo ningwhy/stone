@@ -27,7 +27,14 @@
           "width": 960,
           "height": 640,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": true,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 2,
@@ -37,7 +44,14 @@
           "width": 640,
           "height": 768,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": false,
+              "type": "bool"
+            }
+          ]
         },
         {
           "id": 3,
@@ -47,7 +61,14 @@
           "width": 704,
           "height": 512,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": false,
+              "type": "bool"
+            }
+          ]
         }
       ]
     },
@@ -232,6 +253,11 @@
               "name": "depthOffset",
               "value": 0,
               "type": "float"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A0",
+              "type": "string"
             }
           ]
         },

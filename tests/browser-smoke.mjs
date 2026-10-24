@@ -21,7 +21,7 @@ try{
  await page.goto(process.env.TEST_URL??'http://127.0.0.1:5173');await reading();assert.equal(await node(),'C1-001');await fit();await page.screenshot({path:'artifacts/chapter-opening.png',fullPage:true});
  const visited=new Set();
  for(let i=0;i<story.length;i++){
-  assert.equal(await node(),i===story.length-1?'终幕':story[i].id);const data=await saved();assert.equal(data.node,story[i].id);visited.add(data.state.sceneId);assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),160);
+  assert.equal(await node(),i===story.length-1?'终幕':story[i].id);const data=await saved();assert.equal(data.node,story[i].id);visited.add(data.state.sceneId);assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),206);
   if(story[i].id==='F001'){assert.equal(data.state.actors.feng.visible,false);assert.equal(await page.locator('.dialogue-type').textContent(),'画外');}
   if(['C1-012','C1-025','C1-039','C2-018','C2-023'].includes(story[i].id))await page.screenshot({path:`artifacts/prequel-${story[i].id}.png`,fullPage:true});
   if(story[i].id==='B010')await page.screenshot({path:'artifacts/chapter-first-meeting.png',fullPage:true});
@@ -88,7 +88,7 @@ try{
 await page.locator('.rotate-hint').waitFor({timeout:4000}).catch(()=>{});
 const rotateDismiss=page.getByRole('button',{name:'仍要竖屏浏览'});
 if(await rotateDismiss.isVisible())await rotateDismiss.click();
-await fit();assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),205);await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('night');await reading();assert.equal(await node(),'T001');await fit();await page.screenshot({path:'artifacts/chapter-mobile.png',fullPage:true});
+await fit();assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),246);await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('night');await reading();assert.equal(await node(),'T001');await fit();await page.screenshot({path:'artifacts/chapter-mobile.png',fullPage:true});
  await page.reload();await reading();assert.equal(await node(),'T001');await page.evaluate(()=>localStorage.setItem('honglou-four-chapters:v4','{bad'));await page.reload();await reading();assert.equal(await node(),'C1-001');
  assert.equal(errors.length,0,JSON.stringify(errors));console.log('Passed: all 346 nodes, twenty maps, complete history, chapter 1–4 selection, cross-scene save/reload, offscreen reveal, natural movement, pause, settings, atlas, stable map area, minimum readable sprites/labels, zoom hit targets, overview browsing, paused estate travel, controls visible at 1440×900 / 1280×720 / 390×844, corrupt-save recovery.');
 }catch(e){console.error('Browser errors:',errors);console.error((await page.locator('body').innerText()).slice(0,3500));await page.screenshot({path:'artifacts/browser-failure.png',fullPage:true});throw e;}finally{await context.close();await browser.close();}

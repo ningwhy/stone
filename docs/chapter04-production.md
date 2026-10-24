@@ -171,6 +171,10 @@
 | 第四回原文证据表 | 2026-10-24 | **通过** —— `scripts/build_chapter04_evidence.py` 生成 117 条：112 条 `explicit` 覆盖全部 112 个节点，每条的 `paragraphLead` 都在 `docs/chapter04-source.txt` 中定位成功；5 条 `design` 记录地图布局、服饰与转述处理的设计推定与不确定性。`npm run check:content` 已把该表纳入回归 | `design/chapter04-evidence.json` |
 | 线上部署验收（直连源站） | 2026-10-24 | 通过：应用 1.4 秒加载，59 个资源请求全部 200，9 张总览缩略图 4.6 秒内完成，零失败请求 | `artifacts/origin-overview.png` |
 | 线上部署验收（经 Cloudflare） | 2026-10-24 | 通过：第四回段落可选、`c4_yamen` 打开、薛蟠立绘加载、行迹视图 5 场景、总览 9 张缩略图全部到位，非 403 失败请求 0 条 | `artifacts/online-overview.png` |
+| 进屋隐藏外观、展示室内 | 2026-10-24 | 通过：`PlanZones.indoor` + `Art.interiorZone` 两个 Tiled 自定义属性写入 8 张含外观建筑的地图（`scripts/annotate_interiors.py`，幂等）；有人站上室内地面即隐藏该栋外观，离开自动恢复，剧本 `roof` 动作仍为显式覆盖。9 个第四回段落逐段采样：`c4-court`（院外看刑堂）外观绘制，`c4-chamber`/`c4-protect`/`c4-truth`/`c4-judge`（密室）外观隐藏，`c4-lady`（王夫人房内）隐藏，`c4-pear`（梨香院前厅）隐藏，`c4-hall`（荣禧堂内）仅隐藏 `rongxi-hall` 而保留西厢 `main-hall` | `artifacts/roof-*.png` |
+| 室内陈设补齐 | 2026-10-24 | 通过：`central.tmj` 荣禧堂原本整间空置，按 `scripts/story_path_cells.py` 确认不占任何 move 路线后补入屏风与两处茶几（可行走格 520→517，全部路线仍可解析） | `artifacts/map-previews/central-hidden.png` |
+| 人物朝向与镜像 | 2026-10-24 | 通过：`design/character-facing.json` 记录 39 个 actor 的立绘/Q 版实测朝向；全剧情采样 43 个移动帧、26 个角色，`flipX` 与朝向表 0 处不一致；对话框讲话人立绘朝文本、听众朝讲话人，与 `paintedFacing` 完全一致 | `design/character-facing.json` |
+| 对白面板加高后的回归 | 2026-10-24 | 通过：冒烟测试的桌面/手机面板高度断言由 160/205 更新为 206/246 后，346 节点全流程、三视口控件、暂停稳定性复跑通过 | 控制台输出 |
 
 ### 暂停断言的修正
 

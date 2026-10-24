@@ -18,9 +18,13 @@ npm run build
 npm run test:browser
 node tests/asset-scenes.mjs
 node tests/character-identities.mjs
+node tests/interior-roof.mjs      # 外观随室内占位隐藏/恢复、按栋隔离、roof 覆盖
+node tests/actor-facing.mjs       # 全剧情行走帧与对话框立绘的镜像方向
 ```
 
-主浏览器测试支持 `TEST_URL` 和 `CHROME_PATH`；两个聚焦脚本当前写死本地 5173 与 macOS Chrome，换机器先调整，不能声称环境变量对所有脚本都有效。新回接入时，主测试当前手工拼接 1–3 的 story，需要扩展；地图/人物数量与场景截图断言也要按新范围调整，保留前三回回归。
+`interior-roof.mjs` 与 `actor-facing.mjs` 默认连本地 5173，支持 `TEST_URL` / `CHROME_PATH`。地图侧辅助脚本（都不起浏览器）：`python3 scripts/story_path_cells.py <mapId>` 在新增陈设前确认没有挡住 move 路线；`python3 scripts/render_map_preview.py <mapId> "<外观名,...>"` 近似渲染室内外布局用于目检；`python3 scripts/annotate_interiors.py` / `scripts/furnish_interiors.py` 幂等写回 Tiled 自定义属性与室内陈设。
+
+主浏览器测试支持 `TEST_URL` 和 `CHROME_PATH`；聚焦脚本当前写死本地 5173 与 macOS Chrome，换机器先调整，不能声称环境变量对所有脚本都有效。新回接入时，主测试当前手工拼接 1–3 的 story，需要扩展；地图/人物数量与场景截图断言也要按新范围调整，保留前三回回归。
 
 美术面部修改后，使用带 Pillow/numpy 的 Python：
 
@@ -37,6 +41,7 @@ python3 scripts/verify_character_identities.py
 | 纯文档 | 相对链接、文件存在、示例对照实际 API、当前统计、覆盖风险说明 |
 | 新对白/剧情 | 内容检查、全节点引擎、段落 seek、回目顺序、信息时间层、长对白目检 |
 | 地图/碰撞/锚点 | 内容检查、实际 A*、门洞及墙穿越、Tiled↔屏幕往返、自然走路和 skip 一致 |
+| 室内外/朝向 | 内容检查、`node tests/interior-roof.mjs`（外观随室内占位隐藏/恢复、按栋隔离）、`node tests/actor-facing.mjs`（行走帧与立绘镜像一致）、`story_path_cells.py`（新陈设不挡路）、全节点引擎与浏览器回归 |
 | 资产/新人物 | 原图参数/候选留存、透明度报告、暗底接触表、脸部灰度与配对、位置/尺寸、浏览器加载 |
 | 页面/CSS | 三视口、换立绘不跳高、按钮命中、缩放可读性、弹窗暂停、键盘操作 |
 | 新回/存档 | 全流程、新旧中段及旧终幕迁移、坏档恢复、所有演员状态、回看历史无重复 |
