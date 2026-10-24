@@ -44,6 +44,14 @@ npm run build
 npm run test:browser
 node tests/character-identities.mjs
 node tests/asset-scenes.mjs
+node tests/chapter04-scenes.mjs
+```
+
+线上部署验收（默认经 Cloudflare；`ORIGIN_DIRECT=1` 直连源站，绕开 Bot 挑战）：
+
+```sh
+npm run test:online
+ORIGIN_DIRECT=1 npm run test:online
 ```
 
 主浏览器测试可设置 `TEST_URL`、`CHROME_PATH`；聚焦脚本目前使用本机 Chrome 和 5173，详情见验收规范。输出截图在 `artifacts/`。
@@ -52,6 +60,14 @@ node tests/asset-scenes.mjs
 
 ```sh
 python3 scripts/verify_character_identities.py
+```
+
+第四回原文证据表、资产终审对照表与 Tiled 地图目检可分别重跑：
+
+```sh
+npm run chapter04:evidence
+npm run art:audit
+npm run map:inspect        # 需要 Tiled 1.12+，路径可用 TILED_APP 覆盖
 ```
 
 普通开发不需要重建地图、美术或调用 GPU。重建前查 [维护来源和覆盖范围](docs/production/architecture.md)；某些生成器会覆盖 Tiled 手工摆放。当前目录没有 Git 元数据，需先保留文件备份。
@@ -64,10 +80,10 @@ python3 scripts/verify_character_identities.py
 - [人物身份重绘流程](docs/character-identities.md)
 - [主角灰度前后对照](art/identity/main-face-comparison.png)、[全人物面部](art/identity/cast-faces.png)、[立绘/Q 版配对](art/identity/paired-identities.png)
 - [透明素材与锚点接触表](art/asset-contact.png)
-- [第三回剧情](design/chapter03-story.json)、[第四回剧情](design/chapter04-story.json)、[入府 Tiled 地图](maps/rongguo-entry.tmj)、[总览 Tiled 参考](maps/world/rongguo-overview.tmj)
+- [第四回原文证据表](design/chapter04-evidence.json)、[第四回剧情](design/chapter04-story.json)、[第三回剧情](design/chapter03-story.json)、[入府 Tiled 地图](maps/rongguo-entry.tmj)、[总览 Tiled 参考](maps/world/rongguo-overview.tmj)
 
 网页读取 `maps/*.tmj` 的 20 张局部地图；总览读取 `design/rongguo-world.json`，`maps/world` 为单向导出参考。Tiled 中对象实际坐标优先，资产尺寸与锚点由 manifest 校准契约提供。
 
 西角门在西墙是本项目采用的方案；黑油门位于南墙偏东。原文明示去程出西角门、往东过正门、入黑油门，回程经过正门是本版设计选择。原文没有唯一精确总图。
 
-早期 [设计草案](docs/design.md)、[分镜](docs/storyboard.md)、[布局预览](docs/rongguo-layout.png) 保留作历史资料，不能据此推断当前已覆盖回目或全套地图。Tiled JSON 与网页已有验证，Tiled 应用内目视打开仍需单独验收。
+早期 [设计草案](docs/design.md)、[分镜](docs/storyboard.md)、[布局预览](docs/rongguo-layout.png) 保留作历史资料，不能据此推断当前已覆盖回目或全套地图。Tiled JSON 与网页已有验证，第四回两张新图已用 Tiled 1.12.2 官方渲染器完成应用内目视验收（`npm run map:inspect`）。

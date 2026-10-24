@@ -9,8 +9,12 @@
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "test:browser": "node tests/browser-smoke.mjs",
+    "test:online": "node tests/online-verify.mjs",
     "check:content": "node --experimental-strip-types scripts/check_content.mjs",
-    "art:webp": "node scripts/build_webp.mjs"
+    "art:webp": "node scripts/build_webp.mjs",
+    "art:audit": "python3 scripts/asset_audit.py",
+    "map:inspect": "bash scripts/tiled_inspect.sh",
+    "chapter04:evidence": "python3 scripts/build_chapter04_evidence.py"
   },
   "engines": {
     "node": ">=22.18"

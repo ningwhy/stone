@@ -67,6 +67,40 @@ for(const book of books.keys()){
  requireThat(existsSync(resolve(root,`docs/chapter${number}-source.txt`)),`Chapter ${book}: missing local source text`);
 }
 for(const file of readdirSync(resolve(root,'design')).filter(f=>/^chapter\d+-story\.json$/.test(f)))if(!sourceCode.includes(file))warnings.push(`Unregistered chapter draft: design/${file}`);
+// Evidence table: every node needs a source entry whose lead is locatable in the
+// archived base text, otherwise the "original text" claim cannot be checked.
+const evidenceFiles=readdirSync(resolve(root,'design')).filter(f=>/^chapter\d+-evidence\.json$/.test(f));
+const coveredNodes=new Set();
+let evidenceEntries=0;
+for(const file of evidenceFiles){
+  const book=Number(file.match(/chapter(\d+)-/)[1]);
+  const table=read(`design/${file}`);
+  const sourcePath=resolve(root,`docs/chapter${String(book).padStart(2,'0')}-source.txt`);
+  const baseText=existsSync(sourcePath)?readFileSync(sourcePath,'utf8'):'';
+  const strip=text=>text.replace(/[\s，。、；：？！」』“”‘’「」『』（）()…—·《》〈〉\-]/g,'');
+  const strippedBase=strip(baseText);
+  for(const item of table.evidence??[]){
+    evidenceEntries++;
+    requireThat(!!item.id,`${file}: evidence entry without id`);
+    requireThat(['explicit','design'].includes(item.classification),`${file}/${item.id}: invalid classification ${item.classification}`);
+    requireThat(typeof item.paragraphLead==='string'&&item.paragraphLead.trim().length>0,`${file}/${item.id}: missing paragraph lead`);
+    requireThat(['present','reported','recollection','dream'].includes(item.narrativeLayer),`${file}/${item.id}: invalid narrative layer ${item.narrativeLayer}`);
+    requireThat(Array.isArray(item.appliesTo)&&item.appliesTo.length>0,`${file}/${item.id}: empty appliesTo`);
+    if(item.classification==='explicit'){
+      requireThat(!!item.excerpt,`${file}/${item.id}: explicit evidence without excerpt`);
+      requireThat(strippedBase.includes(strip(item.paragraphLead)),`${file}/${item.id}: paragraph lead not found in the base text`);
+      for(const node of item.appliesTo)coveredNodes.add(node);
+    }else{
+      requireThat(!!item.designDecision,`${file}/${item.id}: design entry without designDecision`);
+      requireThat(!!item.uncertainty,`${file}/${item.id}: design entry without uncertainty`);
+    }
+  }
+}
+for(const step of story){
+  const book=String(step.source?.chapter).padStart(2,'0');
+  if(!evidenceFiles.includes(`chapter${book}-evidence.json`))continue;
+  requireThat(coveredNodes.has(step.id),`${step.id}: no explicit evidence entry`);
+}
 // Validate only the maintained entry and production manual, not archived planning documents.
 const docFiles=['README.md','AGENTS.md'];
 function walk(path){for(const entry of readdirSync(path,{withFileTypes:true})){const child=resolve(path,entry.name);if(entry.isDirectory())walk(child);else if(entry.name.endsWith('.md'))docFiles.push(relative(root,child));}}
@@ -81,4 +115,4 @@ for(const file of docFiles){
 }
 for(const warning of warnings)console.warn(`WARN ${warning}`);
 if(errors.length){for(const error of errors)console.error(`ERROR ${error}`);process.exitCode=1;}
-else console.log(`Content passed: ${story.length} nodes, ${chapters.length} sections, ${maps.size} maps, ${Object.keys(cast).length-1} humans, ${Object.keys(manifest).length} assets; chapter counts ${JSON.stringify(Object.fromEntries(books))}; ${docFiles.length} documentation files linked. Original-text interpretation and visuals still require human review.`);
+else console.log(`Content passed: ${story.length} nodes, ${chapters.length} sections, ${maps.size} maps, ${Object.keys(cast).length-1} humans, ${Object.keys(manifest).length} assets; chapter counts ${JSON.stringify(Object.fromEntries(books))}; ${docFiles.length} documentation files linked; ${evidenceEntries} evidence entries in ${evidenceFiles.length} table(s). Original-text interpretation and visuals still require human review.`);

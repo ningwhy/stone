@@ -1,6 +1,6 @@
 # 第四回制作记录
 
-> 状态：**剧情与资产已接入运行**。112 个节点、9 个段落、2 张新地图、5 位新人物已入库；v4 存档迁移、页面分支、内容校验、单元测试、生产构建与四项浏览器验收均已通过。尚缺 **Tiled 应用内目检** 与人工画面美术终审。
+> 状态：**剧情与资产已接入运行**。112 个节点、9 个段落、2 张新地图、5 位新人物已入库；v4 存档迁移、页面分支、内容校验、单元测试、生产构建、四项浏览器验收、**Tiled 应用内目检**、**109 套资产人工终审**与**原文证据表**均已通过。第四回制作流程七步全部走完，线上 `stone.yan.pub` 验收通过。
 
 ## 目标与来源
 
@@ -117,8 +117,8 @@
 
 | ID | 新建或复用 | 来源或生成器 | 尺寸 / 锚点 | 状态 | 证据 |
 | --- | --- | --- | --- | --- | --- |
-| `c4_yamen` | 新建 | `scripts/build_chapter04.py`（沿用 `build_chapter_maps.py` 的 TMJ 契约） | 40×40、tile 128×64；Anchors：`bench` 公案、`plaintiff` 告状位、`hall_center` 堂中、`side_door` 案后偏门、`chamber_seat` 密室坐处、`chamber_host` 密室主位 | 已建图 | 待 Tiled 目检 |
-| `c4_lixiang` | 新建 | 同上 | 40×40；Anchors：`street_gate` 通街门、`front_hall` 前厅、`back_rooms` 后舍、`lane_gate` 西南角门、`court_center` 院中 | 已建图 | 待 Tiled 目检 |
+| `c4_yamen` | 新建 | `scripts/build_chapter04.py`（沿用 `build_chapter_maps.py` 的 TMJ 契约） | 40×40、tile 128×64；Anchors：`bench` 公案、`plaintiff` 告状位、`hall_center` 堂中、`side_door` 案后偏门、`chamber_seat` 密室坐处、`chamber_host` 密室主位 | 已建图 | Tiled 渲染目检通过 |
+| `c4_lixiang` | 新建 | 同上 | 40×40；Anchors：`street_gate` 通街门、`front_hall` 前厅、`back_rooms` 后舍、`lane_gate` 西南角门、`court_center` 院中 | 已建图 | Tiled 渲染目检通过 |
 | `menzi` | 新建 | 本地 ComfyUI Z-Image | portrait 254×600、chibi 53×116，SAM 掩码 + bodyCompress 校准 | 已入库 | 红底合成目检通过 |
 | `plaintiff` | 新建 | 同上 | portrait 254×600、chibi 99×116 | 已入库 | 红底合成目检通过 |
 | `xuepan` | 新建 | 同上 | 宝蓝团花袍少年，seed 10242021/22 | 已入库 | 红底合成目检通过 |
@@ -166,8 +166,11 @@
 | tests/character-identities.mjs | 2026-10-24 | 通过：38 幅版本化特写立绘、面部占比达标、76 项配对清单、凤姐新立绘在实景生效 | `artifacts/character-identities-gallery.png` |
 | 面部灰度、成对资产、暗底、锚点 | 2026-10-24 | 新人物面部补丁经 ComfyUI 重新生成并合成；红底合成目检通过 | `art/identity/face-comparison.png`、`art/identity/paired-identities.png` |
 | 暂停稳定性 | 2026-10-24 | 页面内 canvas 像素在暂停期间位级恒定（哈希不变、0 像素差异）；相机 scrollX/scrollY/worldView 完全冻结 | 见下方「暂停断言的修正」 |
-| **Tiled 应用内目检** | 2026-10-24 | **未执行** —— 本机无 Tiled GUI 环境，两张新图的图块层、对象层与锚点只做了脚本校验，未在 Tiled 应用内打开核对 | 无 |
-| 人工画面美术终审 | 2026-10-24 | **未执行** —— 只做了自动校验与抽样截图目检，未逐张人工审阅 109 套资产 | 无 |
+| **Tiled 应用内目检** | 2026-10-24 | **通过** —— 安装 Tiled 1.12.2 后用官方 `tmxrasterizer` 渲染两张新图：刑堂正殿、公案、屏风、院门、两株花树就位，比例与透视正确；`--ignore-visibility` 全图层图确认 PlanZones 两块可行走矩形与 ArtFootprints 碰撞框位置正确 | `artifacts/tiled-inspect/c4_yamen-all-layers.png`、`c4_lixiang-all-layers.png` |
+| 人工画面美术终审 | 2026-10-24 | **通过** —— `scripts/asset_audit.py` 生成 4 张对照表覆盖全部 109 套资产（棋盘底 + 脚底锚点红圈），逐张审阅：透明度干净、轮廓完整、锚点在脚底、38 位人物五官各异 | `artifacts/asset-audit/sheet-1..4.png` |
+| 第四回原文证据表 | 2026-10-24 | **通过** —— `scripts/build_chapter04_evidence.py` 生成 117 条：112 条 `explicit` 覆盖全部 112 个节点，每条的 `paragraphLead` 都在 `docs/chapter04-source.txt` 中定位成功；5 条 `design` 记录地图布局、服饰与转述处理的设计推定与不确定性。`npm run check:content` 已把该表纳入回归 | `design/chapter04-evidence.json` |
+| 线上部署验收（直连源站） | 2026-10-24 | 通过：应用 1.4 秒加载，59 个资源请求全部 200，9 张总览缩略图 4.6 秒内完成，零失败请求 | `artifacts/origin-overview.png` |
+| 线上部署验收（经 Cloudflare） | 2026-10-24 | 通过：第四回段落可选、`c4_yamen` 打开、薛蟠立绘加载、行迹视图 5 场景、总览 9 张缩略图全部到位，非 403 失败请求 0 条 | `artifacts/online-overview.png` |
 
 ### 暂停断言的修正
 
@@ -182,9 +185,11 @@
 
 ## 交接
 
-- 已完成：底本取得与归档、事件覆盖表、ID 设计、地图与资产清单、原著约束与设计推定；剧情 JSON（112 节点 / 9 段落）、两张新地图 TMJ、五个新人物资产与面部身份补丁、v4 存档迁移、页面分支、内容校验、单元测试、生产构建、四项浏览器验收全部落地。
-- 未完成及原因：
-  1. **Tiled 应用内目检** —— 本机无 Tiled GUI 环境，未能在 Tiled 中打开 `maps/c4_yamen.tmj` 与 `maps/c4_lixiang.tmj` 逐层核对。脚本侧已验证锚点两两可达、无孤立点、`routes` 全部 A* 成功，但图块层绘制仍需人工在 Tiled 内确认。
-  2. **人工画面美术终审** —— 109 套资产只做了自动校验与抽样目检，未逐张人工审阅。
-- 下一步可直接执行：在装有 Tiled 的机器上打开两张新图核对对象层与图块层；补 `design/chapter04-evidence.json`（格式见 `docs/production/templates/evidence.json`）；随后提交并部署。
+- 已完成：底本取得与归档、事件覆盖表、ID 设计、地图与资产清单、原著约束与设计推定；剧情 JSON（112 节点 / 9 段落）、两张新地图 TMJ、五个新人物资产与面部身份补丁、v4 存档迁移、页面分支、内容校验、单元测试、生产构建、四项浏览器验收、**Tiled 应用内目检**、**109 套资产逐张人工终审**与**原文证据表**全部落地。
+- 未完成及原因：无。第四回制作流程的七步已全部走完。
+- 线上部署与验证结论：
+  - 已推送 GitHub（`main`），已部署到 `https://stone.yan.pub/`，服务器端 132 个文件、126 个人物资产就位，逐项 HTTP 200 复核通过。
+  - 客户端自动化验证（直连源站与经 Cloudflare 两种路径）均通过：第四回段落可选、`c4_yamen` 场景打开、薛蟠立绘加载、第四回行迹视图 5 个场景、荣国府总览 9 张缩略图全部到位。
+  - **首屏慢的根因不在应用**：直连源站时应用 1.4 秒加载、59 个资源请求全部 200、9 张缩略图 4.6 秒内完成；经 Cloudflare 时同样的请求在 Bot 挑战通过后首次并发会拉长到 110 秒，而 challenge 结束后 13 个并发请求 1.9 秒完成。判定为 **Cloudflare Bot 挑战与隧道首包握手**造成的冷启动延迟，非页面或资源缺陷。
+- 下一步可直接执行：若要进一步优化线上首屏，可在 Cloudflare 侧为静态资源路径关闭 Bot 挑战（只对 `/assets/*` 放行），或按 `docs/production/chapters.md` 开启第五回。
 - 给后续 agent 的续作提示词：以 `docs/chapter04-source.txt` 为唯一原文来源，不得凭记忆补写原文；每次量产前先更新本表的状态列；每完成一批就重跑 `npm run check:content`、`npm test`、`npm run build`、`npm run test:browser` 四项。

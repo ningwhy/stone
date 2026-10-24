@@ -1,0 +1,1659 @@
+{
+  "schemaVersion": 1,
+  "template": false,
+  "chapter": 4,
+  "source": {
+    "edition": "维基文库《紅樓夢》第 004 回（繁体原文页，古典小说排版模板）",
+    "url": "https://zh.wikisource.org/wiki/紅樓夢/第004回",
+    "retrievedAt": "2026-10-24",
+    "localText": "docs/chapter04-source.txt",
+    "processing": "MediaWiki API action=query&prop=revisions&rvprop=content 取回 wikitext；去除 {{样式:古典小說}}、{{center}}、<poem>、{{清朝作品}} 与文末导航行；保留繁体用字。"
+  },
+  "paragraphCount": 21,
+  "nodeCount": 112,
+  "sectionCount": 9,
+  "mapCount": 5,
+  "evidence": [
+    {
+      "id": "C04-E001",
+      "classification": "explicit",
+      "paragraphLead": "卻說黛玉同姊妹們至王夫人處",
+      "excerpt": "卻說黛玉同姊妹們至王夫人處，見王夫人與兄嫂處的來使計議家務，又說姨母家遭人命官司等語。因見王夫人事情冗雜，姊妹們遂出來，",
+      "claim": "王家来使",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-001"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E002",
+      "classification": "explicit",
+      "paragraphLead": "卻說黛玉同姊妹們至王夫人處",
+      "excerpt": "卻說黛玉同姊妹們至王夫人處，見王夫人與兄嫂處的來使計議家務，又說姨母家遭人命官司等語。因見王夫人事情冗雜，姊妹們遂出來，",
+      "claim": "出来让席",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-002"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E003",
+      "classification": "explicit",
+      "paragraphLead": "至寡嫂李氏房中來了",
+      "excerpt": "至寡嫂李氏房中來了。",
+      "claim": "珠大嫂子",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-003"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E004",
+      "classification": "explicit",
+      "paragraphLead": "至寡嫂李氏房中來了",
+      "excerpt": "至寡嫂李氏房中來了。",
+      "claim": "取名宫裁",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-004"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E005",
+      "classification": "explicit",
+      "paragraphLead": "至寡嫂李氏房中來了",
+      "excerpt": "至寡嫂李氏房中來了。",
+      "claim": "槁木死灰",
+      "narrativeLayer": "present",
+      "speaker": "liwan",
+      "appliesTo": [
+        "C04-005"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E006",
+      "classification": "explicit",
+      "paragraphLead": "至寡嫂李氏房中來了",
+      "excerpt": "至寡嫂李氏房中來了。",
+      "claim": "姐妹相伴",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-006"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E007",
+      "classification": "explicit",
+      "paragraphLead": "如今且說雨村，因補授了應天府",
+      "excerpt": "如今且說雨村，因補授了應天府，一下馬就有一件人命官司詳至案下，乃是兩家爭買一婢，各不相讓，以至毆傷人命。彼時雨村即傳原告",
+      "claim": "到任第一案",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-007"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E008",
+      "classification": "explicit",
+      "paragraphLead": "如今且說雨村，因補授了應天府",
+      "excerpt": "如今且說雨村，因補授了應天府，一下馬就有一件人命官司詳至案下，乃是兩家爭買一婢，各不相讓，以至毆傷人命。彼時雨村即傳原告",
+      "claim": "传原告",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-008"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E009",
+      "classification": "explicit",
+      "paragraphLead": "如今且說雨村，因補授了應天府",
+      "excerpt": "如今且說雨村，因補授了應天府，一下馬就有一件人命官司詳至案下，乃是兩家爭買一婢，各不相讓，以至毆傷人命。彼時雨村即傳原告",
+      "claim": "应天府 · 争买一婢",
+      "narrativeLayer": "present",
+      "speaker": "plaintiff",
+      "appliesTo": [
+        "C04-009"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E010",
+      "classification": "explicit",
+      "paragraphLead": "如今且說雨村，因補授了應天府",
+      "excerpt": "如今且說雨村，因補授了應天府，一下馬就有一件人命官司詳至案下，乃是兩家爭買一婢，各不相讓，以至毆傷人命。彼時雨村即傳原告",
+      "claim": "应天府 · 争买一婢",
+      "narrativeLayer": "present",
+      "speaker": "plaintiff",
+      "appliesTo": [
+        "C04-010"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E011",
+      "classification": "explicit",
+      "paragraphLead": "如今且說雨村，因補授了應天府",
+      "excerpt": "如今且說雨村，因補授了應天府，一下馬就有一件人命官司詳至案下，乃是兩家爭買一婢，各不相讓，以至毆傷人命。彼時雨村即傳原告",
+      "claim": "告了一年的状",
+      "narrativeLayer": "present",
+      "speaker": "plaintiff",
+      "appliesTo": [
+        "C04-011"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E012",
+      "classification": "explicit",
+      "paragraphLead": "如今且說雨村，因補授了應天府",
+      "excerpt": "如今且說雨村，因補授了應天府，一下馬就有一件人命官司詳至案下，乃是兩家爭買一婢，各不相讓，以至毆傷人命。彼時雨村即傳原告",
+      "claim": "应天府 · 争买一婢",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-012"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E013",
+      "classification": "explicit",
+      "paragraphLead": "如今且說雨村，因補授了應天府",
+      "excerpt": "如今且說雨村，因補授了應天府，一下馬就有一件人命官司詳至案下，乃是兩家爭買一婢，各不相讓，以至毆傷人命。彼時雨村即傳原告",
+      "claim": "发签海捕",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-013"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E014",
+      "classification": "explicit",
+      "paragraphLead": "如今且說雨村，因補授了應天府",
+      "excerpt": "如今且說雨村，因補授了應天府，一下馬就有一件人命官司詳至案下，乃是兩家爭買一婢，各不相讓，以至毆傷人命。彼時雨村即傳原告",
+      "claim": "门子使眼色",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-014"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E015",
+      "classification": "explicit",
+      "paragraphLead": "如今且說雨村，因補授了應天府",
+      "excerpt": "如今且說雨村，因補授了應天府，一下馬就有一件人命官司詳至案下，乃是兩家爭買一婢，各不相讓，以至毆傷人命。彼時雨村即傳原告",
+      "claim": "退堂入密室",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-015"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E016",
+      "classification": "explicit",
+      "paragraphLead": "這門子忙上來請安",
+      "excerpt": "這門子忙上來請安，笑問：「老爺一向加官進祿，八九年來就忘了我了？」雨村道：「卻十分面善得緊，只是一時想不起來。」那門子笑",
+      "claim": "葫芦庙旧识",
+      "narrativeLayer": "present",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-016"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E017",
+      "classification": "explicit",
+      "paragraphLead": "這門子忙上來請安",
+      "excerpt": "這門子忙上來請安，笑問：「老爺一向加官進祿，八九年來就忘了我了？」雨村道：「卻十分面善得緊，只是一時想不起來。」那門子笑",
+      "claim": "退堂密室 · 葫芦庙旧识",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-017"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E018",
+      "classification": "explicit",
+      "paragraphLead": "這門子忙上來請安",
+      "excerpt": "這門子忙上來請安，笑問：「老爺一向加官進祿，八九年來就忘了我了？」雨村道：「卻十分面善得緊，只是一時想不起來。」那門子笑",
+      "claim": "葫芦庙旧识",
+      "narrativeLayer": "present",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-018"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E019",
+      "classification": "explicit",
+      "paragraphLead": "這門子忙上來請安",
+      "excerpt": "這門子忙上來請安，笑問：「老爺一向加官進祿，八九年來就忘了我了？」雨村道：「卻十分面善得緊，只是一時想不起來。」那門子笑",
+      "claim": "蓄发充门子",
+      "narrativeLayer": "recollection",
+      "speaker": null,
+      "appliesTo": [
+        "C04-019"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E020",
+      "classification": "explicit",
+      "paragraphLead": "這門子忙上來請安",
+      "excerpt": "這門子忙上來請安，笑問：「老爺一向加官進祿，八九年來就忘了我了？」雨村道：「卻十分面善得緊，只是一時想不起來。」那門子笑",
+      "claim": "原来是故人",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-020"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E021",
+      "classification": "explicit",
+      "paragraphLead": "這門子忙上來請安",
+      "excerpt": "這門子忙上來請安，笑問：「老爺一向加官進祿，八九年來就忘了我了？」雨村道：「卻十分面善得緊，只是一時想不起來。」那門子笑",
+      "claim": "不敢坐",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-021"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E022",
+      "classification": "explicit",
+      "paragraphLead": "這門子忙上來請安",
+      "excerpt": "這門子忙上來請安，笑問：「老爺一向加官進祿，八九年來就忘了我了？」雨村道：「卻十分面善得緊，只是一時想不起來。」那門子笑",
+      "claim": "贫贱之交不可忘",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-022"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E023",
+      "classification": "explicit",
+      "paragraphLead": "這門子忙上來請安",
+      "excerpt": "這門子忙上來請安，笑問：「老爺一向加官進祿，八九年來就忘了我了？」雨村道：「卻十分面善得緊，只是一時想不起來。」那門子笑",
+      "claim": "斜签着坐",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-023"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E024",
+      "classification": "explicit",
+      "paragraphLead": "雨村因問方纔何故有不令發簽之意",
+      "excerpt": "雨村因問方纔何故有不令發簽之意。這門子道：「老爺既榮任到這一省，難道就沒抄一張本省『護官符』來不成？」雨村忙問：「何為『",
+      "claim": "问何以不发签",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-024"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E025",
+      "classification": "explicit",
+      "paragraphLead": "雨村因問方纔何故有不令發簽之意",
+      "excerpt": "雨村因問方纔何故有不令發簽之意。這門子道：「老爺既榮任到這一省，難道就沒抄一張本省『護官符』來不成？」雨村忙問：「何為『",
+      "claim": "护官符",
+      "narrativeLayer": "present",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-025"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E026",
+      "classification": "explicit",
+      "paragraphLead": "雨村因問方纔何故有不令發簽之意",
+      "excerpt": "雨村因問方纔何故有不令發簽之意。這門子道：「老爺既榮任到這一省，難道就沒抄一張本省『護官符』來不成？」雨村忙問：「何為『",
+      "claim": "密室 · 护官符",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-026"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E027",
+      "classification": "explicit",
+      "paragraphLead": "雨村因問方纔何故有不令發簽之意",
+      "excerpt": "雨村因問方纔何故有不令發簽之意。這門子道：「老爺既榮任到這一省，難道就沒抄一張本省『護官符』來不成？」雨村忙問：「何為『",
+      "claim": "何为护官符",
+      "narrativeLayer": "present",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-027"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E028",
+      "classification": "explicit",
+      "paragraphLead": "雨村因問方纔何故有不令發簽之意",
+      "excerpt": "雨村因問方纔何故有不令發簽之意。這門子道：「老爺既榮任到這一省，難道就沒抄一張本省『護官符』來不成？」雨村忙問：「何為『",
+      "claim": "薛家碍着情分",
+      "narrativeLayer": "present",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-028"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E029",
+      "classification": "explicit",
+      "paragraphLead": "雨村因問方纔何故有不令發簽之意",
+      "excerpt": "雨村因問方纔何故有不令發簽之意。這門子道：「老爺既榮任到這一省，難道就沒抄一張本省『護官符』來不成？」雨村忙問：「何為『",
+      "claim": "取出示看",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-029"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E030",
+      "classification": "explicit",
+      "paragraphLead": "雨村因問方纔何故有不令發簽之意",
+      "excerpt": "雨村因問方纔何故有不令發簽之意。這門子道：「老爺既榮任到這一省，難道就沒抄一張本省『護官符』來不成？」雨村忙問：「何為『",
+      "claim": "贾家口碑",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-030"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E031",
+      "classification": "explicit",
+      "paragraphLead": "雨村因問方纔何故有不令發簽之意",
+      "excerpt": "雨村因問方纔何故有不令發簽之意。這門子道：「老爺既榮任到這一省，難道就沒抄一張本省『護官符』來不成？」雨村忙問：「何為『",
+      "claim": "史家口碑",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-031"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E032",
+      "classification": "explicit",
+      "paragraphLead": "雨村因問方纔何故有不令發簽之意",
+      "excerpt": "雨村因問方纔何故有不令發簽之意。這門子道：「老爺既榮任到這一省，難道就沒抄一張本省『護官符』來不成？」雨村忙問：「何為『",
+      "claim": "王家口碑",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-032"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E033",
+      "classification": "explicit",
+      "paragraphLead": "雨村因問方纔何故有不令發簽之意",
+      "excerpt": "雨村因問方纔何故有不令發簽之意。這門子道：「老爺既榮任到這一省，難道就沒抄一張本省『護官符』來不成？」雨村忙問：「何為『",
+      "claim": "薛家口碑",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-033"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E034",
+      "classification": "explicit",
+      "paragraphLead": "雨村因問方纔何故有不令發簽之意",
+      "excerpt": "雨村因問方纔何故有不令發簽之意。這門子道：「老爺既榮任到這一省，難道就沒抄一張本省『護官符』來不成？」雨村忙問：「何為『",
+      "claim": "王老爷来拜",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-034"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E035",
+      "classification": "explicit",
+      "paragraphLead": "雨村因問方纔何故有不令發簽之意",
+      "excerpt": "雨村因問方纔何故有不令發簽之意。這門子道：「老爺既榮任到這一省，難道就沒抄一張本省『護官符』來不成？」雨村忙問：「何為『",
+      "claim": "雪与薛的双关",
+      "narrativeLayer": "present",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-035"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E036",
+      "classification": "explicit",
+      "paragraphLead": "雨村因問方纔何故有不令發簽之意",
+      "excerpt": "雨村因問方纔何故有不令發簽之意。這門子道：「老爺既榮任到這一省，難道就沒抄一張本省『護官符』來不成？」雨村忙問：「何為『",
+      "claim": "问凶犯下落",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-036"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E037",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "我都知道",
+      "narrativeLayer": "present",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-037"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E038",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "冯渊身世",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-038"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E039",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "立誓买妾",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-039"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E040",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "两家拿住拐子",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-040"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E041",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "打死冯渊",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-041"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E042",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "带家眷上京",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-042"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E043",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "被卖之丫头是谁",
+      "narrativeLayer": "present",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-043"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E044",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "密室 · 英莲身世",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-044"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E045",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "英莲身世揭晓",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-045"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E046",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "原来是他",
+      "narrativeLayer": "recollection",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-046"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E047",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "拐子的手法",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-047"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E048",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "十二三岁的模样",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-048"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E049",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "眉心胭脂痣",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-049"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E050",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "认人经过",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-050"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E051",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "我不记得小时之事",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-051"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E052",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "拐子自叹",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-052"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E053",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "内人劝解",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-053"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E054",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "第二日重卖",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-054"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E055",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "呆霸王拖走英莲",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-055"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E056",
+      "classification": "explicit",
+      "paragraphLead": "門子笑道：不瞞老爺說",
+      "excerpt": "門子笑道：「不瞞老爺說，不但這凶犯的方向我知道，一並這拐賣之人我也知道，死鬼買主也深知道。待我細說與老爺聽：這個被打之死",
+      "claim": "空喜一场",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-056"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E057",
+      "classification": "explicit",
+      "paragraphLead": "雨村聽了，亦歎道",
+      "excerpt": "雨村聽了，亦歎道：「這也是他們的孽障遭遇，亦非偶然。不然這馮淵如何偏只看准了這英蓮？這英蓮受了拐子這幾年折磨，纔得了個頭",
+      "claim": "薄命儿女",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-057"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E058",
+      "classification": "explicit",
+      "paragraphLead": "雨村聽了，亦歎道",
+      "excerpt": "雨村聽了，亦歎道：「這也是他們的孽障遭遇，亦非偶然。不然這馮淵如何偏只看准了這英蓮？這英蓮受了拐子這幾年折磨，纔得了個頭",
+      "claim": "梦幻情缘",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-058"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E059",
+      "classification": "explicit",
+      "paragraphLead": "雨村聽了，亦歎道",
+      "excerpt": "雨村聽了，亦歎道：「這也是他們的孽障遭遇，亦非偶然。不然這馮淵如何偏只看准了這英蓮？這英蓮受了拐子這幾年折磨，纔得了個頭",
+      "claim": "问如何断案",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-059"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E060",
+      "classification": "explicit",
+      "paragraphLead": "雨村聽了，亦歎道",
+      "excerpt": "雨村聽了，亦歎道：「這也是他們的孽障遭遇，亦非偶然。不然這馮淵如何偏只看准了這英蓮？這英蓮受了拐子這幾年折磨，纔得了個頭",
+      "claim": "顺水行舟",
+      "narrativeLayer": "present",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-060"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E061",
+      "classification": "explicit",
+      "paragraphLead": "雨村聽了，亦歎道",
+      "excerpt": "雨村聽了，亦歎道：「這也是他們的孽障遭遇，亦非偶然。不然這馮淵如何偏只看准了這英蓮？這英蓮受了拐子這幾年折磨，纔得了個頭",
+      "claim": "岂可因私废法",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-061"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E062",
+      "classification": "explicit",
+      "paragraphLead": "雨村聽了，亦歎道",
+      "excerpt": "雨村聽了，亦歎道：「這也是他們的孽障遭遇，亦非偶然。不然這馮淵如何偏只看准了這英蓮？這英蓮受了拐子這幾年折磨，纔得了個頭",
+      "claim": "相时而动",
+      "narrativeLayer": "reported",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-062"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E063",
+      "classification": "explicit",
+      "paragraphLead": "雨村聽了，亦歎道",
+      "excerpt": "雨村聽了，亦歎道：「這也是他們的孽障遭遇，亦非偶然。不然這馮淵如何偏只看准了這英蓮？這英蓮受了拐子這幾年折磨，纔得了個頭",
+      "claim": "低头问计",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-063"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E064",
+      "classification": "explicit",
+      "paragraphLead": "雨村聽了，亦歎道",
+      "excerpt": "雨村聽了，亦歎道：「這也是他們的孽障遭遇，亦非偶然。不然這馮淵如何偏只看准了這英蓮？這英蓮受了拐子這幾年折磨，纔得了個頭",
+      "claim": "虚张声势",
+      "narrativeLayer": "present",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-064"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E065",
+      "classification": "explicit",
+      "paragraphLead": "雨村聽了，亦歎道",
+      "excerpt": "雨村聽了，亦歎道：「這也是他們的孽障遭遇，亦非偶然。不然這馮淵如何偏只看准了這英蓮？這英蓮受了拐子這幾年折磨，纔得了個頭",
+      "claim": "扶鸾设乩坛",
+      "narrativeLayer": "present",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-065"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E066",
+      "classification": "explicit",
+      "paragraphLead": "雨村聽了，亦歎道",
+      "excerpt": "雨村聽了，亦歎道：「這也是他們的孽障遭遇，亦非偶然。不然這馮淵如何偏只看准了這英蓮？這英蓮受了拐子這幾年折磨，纔得了個頭",
+      "claim": "乩仙批语",
+      "narrativeLayer": "present",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-066"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E067",
+      "classification": "explicit",
+      "paragraphLead": "雨村聽了，亦歎道",
+      "excerpt": "雨村聽了，亦歎道：「這也是他們的孽障遭遇，亦非偶然。不然這馮淵如何偏只看准了這英蓮？這英蓮受了拐子這幾年折磨，纔得了個頭",
+      "claim": "嘱拐子实招",
+      "narrativeLayer": "present",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-067"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E068",
+      "classification": "explicit",
+      "paragraphLead": "雨村聽了，亦歎道",
+      "excerpt": "雨村聽了，亦歎道：「這也是他們的孽障遭遇，亦非偶然。不然這馮淵如何偏只看准了這英蓮？這英蓮受了拐子這幾年折磨，纔得了個頭",
+      "claim": "烧埋之费",
+      "narrativeLayer": "present",
+      "speaker": "menzi",
+      "appliesTo": [
+        "C04-068"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E069",
+      "classification": "explicit",
+      "paragraphLead": "雨村聽了，亦歎道",
+      "excerpt": "雨村聽了，亦歎道：「這也是他們的孽障遭遇，亦非偶然。不然這馮淵如何偏只看准了這英蓮？這英蓮受了拐子這幾年折磨，纔得了個頭",
+      "claim": "我再斟酌",
+      "narrativeLayer": "present",
+      "speaker": "yucun",
+      "appliesTo": [
+        "C04-069"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E070",
+      "classification": "explicit",
+      "paragraphLead": "雨村聽了，亦歎道",
+      "excerpt": "雨村聽了，亦歎道：「這也是他們的孽障遭遇，亦非偶然。不然這馮淵如何偏只看准了這英蓮？這英蓮受了拐子這幾年折磨，纔得了個頭",
+      "claim": "天色已晚",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-070"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E071",
+      "classification": "explicit",
+      "paragraphLead": "至次日坐堂，勾取一應有名人犯",
+      "excerpt": "至次日坐堂，勾取一應有名人犯，雨村詳加審問，果見馮家人口稀疏，不過賴此欲多得些燒埋之費，薛家仗勢倚情，偏不相讓，故致顛倒",
+      "claim": "次日坐堂",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-071"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E072",
+      "classification": "explicit",
+      "paragraphLead": "至次日坐堂，勾取一應有名人犯",
+      "excerpt": "至次日坐堂，勾取一應有名人犯，雨村詳加審問，果見馮家人口稀疏，不過賴此欲多得些燒埋之費，薛家仗勢倚情，偏不相讓，故致顛倒",
+      "claim": "徇情枉法",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-072"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E073",
+      "classification": "explicit",
+      "paragraphLead": "至次日坐堂，勾取一應有名人犯",
+      "excerpt": "至次日坐堂，勾取一應有名人犯，雨村詳加審問，果見馮家人口稀疏，不過賴此欲多得些燒埋之費，薛家仗勢倚情，偏不相讓，故致顛倒",
+      "claim": "两封书信",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-073"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E074",
+      "classification": "explicit",
+      "paragraphLead": "至次日坐堂，勾取一應有名人犯",
+      "excerpt": "至次日坐堂，勾取一應有名人犯，雨村詳加審問，果見馮家人口稀疏，不過賴此欲多得些燒埋之費，薛家仗勢倚情，偏不相讓，故致顛倒",
+      "claim": "充发门子",
+      "narrativeLayer": "reported",
+      "speaker": null,
+      "appliesTo": [
+        "C04-074"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E075",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "薛家来历",
+      "narrativeLayer": "reported",
+      "speaker": null,
+      "appliesTo": [
+        "C04-075"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E076",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "薛蟠其人",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-076"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E077",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "不谙世事",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-077"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E078",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "一母所生的姊妹",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-078"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E079",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "宝钗其人",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-079"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E080",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "分忧解劳",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-080"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E081",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "待选之由",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-081"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E082",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "入京三项目的",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-082"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E083",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "正择日起身",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-083"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E084",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "恃强买人",
+      "narrativeLayer": "reported",
+      "speaker": null,
+      "appliesTo": [
+        "C04-084"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E085",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "视为儿戏",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-085"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E086",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "王子腾升迁",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-086"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E087",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "天从人愿",
+      "narrativeLayer": "present",
+      "speaker": "xuepan",
+      "appliesTo": [
+        "C04-087"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E088",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "先打扫房舍",
+      "narrativeLayer": "present",
+      "speaker": "xuepan",
+      "appliesTo": [
+        "C04-088"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E089",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "何必如此招摇",
+      "narrativeLayer": "present",
+      "speaker": "xueyima",
+      "appliesTo": [
+        "C04-089"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E090",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "岂不没眼色",
+      "narrativeLayer": "present",
+      "speaker": "xuepan",
+      "appliesTo": [
+        "C04-090"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E091",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "还有你姨爹家",
+      "narrativeLayer": "present",
+      "speaker": "xueyima",
+      "appliesTo": [
+        "C04-091"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E092",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "你自去挑宅子",
+      "narrativeLayer": "present",
+      "speaker": "xueyima",
+      "appliesTo": [
+        "C04-092"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E093",
+      "classification": "explicit",
+      "paragraphLead": "且說那買了英蓮打死馮淵的薛公子",
+      "excerpt": "且說那買了英蓮打死馮淵的薛公子，亦係金陵人氏，本是書香繼世之家。只是如今這薛公子幼年喪父，寡母又怜他是個獨根孤种，未免溺",
+      "claim": "奔荣国府来",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-093"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E094",
+      "classification": "explicit",
+      "paragraphLead": "那時王夫人已知薛蟠官司一事",
+      "excerpt": "那時王夫人已知薛蟠官司一事，虧賈雨村維持了結，纔放了心。又見哥哥陞了邊缺，正愁又少了娘家的親戚來往，略加寂寞。過了幾日，",
+      "claim": "王夫人放心",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-094"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E095",
+      "classification": "explicit",
+      "paragraphLead": "那時王夫人已知薛蟠官司一事",
+      "excerpt": "那時王夫人已知薛蟠官司一事，虧賈雨村維持了結，纔放了心。又見哥哥陞了邊缺，正愁又少了娘家的親戚來往，略加寂寞。過了幾日，",
+      "claim": "家人传报",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-095"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E096",
+      "classification": "explicit",
+      "paragraphLead": "那時王夫人已知薛蟠官司一事",
+      "excerpt": "那時王夫人已知薛蟠官司一事，虧賈雨村維持了結，纔放了心。又見哥哥陞了邊缺，正愁又少了娘家的親戚來往，略加寂寞。過了幾日，",
+      "claim": "接出大厅",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-096"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E097",
+      "classification": "explicit",
+      "paragraphLead": "那時王夫人已知薛蟠官司一事",
+      "excerpt": "那時王夫人已知薛蟠官司一事，虧賈雨村維持了結，纔放了心。又見哥哥陞了邊缺，正愁又少了娘家的親戚來往，略加寂寞。過了幾日，",
+      "claim": "拜见贾母",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-097"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E098",
+      "classification": "explicit",
+      "paragraphLead": "那時王夫人已知薛蟠官司一事",
+      "excerpt": "那時王夫人已知薛蟠官司一事，虧賈雨村維持了結，纔放了心。又見哥哥陞了邊缺，正愁又少了娘家的親戚來往，略加寂寞。過了幾日，",
+      "claim": "拜见贾政等",
+      "narrativeLayer": "reported",
+      "speaker": null,
+      "appliesTo": [
+        "C04-098"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E099",
+      "classification": "explicit",
+      "paragraphLead": "那時王夫人已知薛蟠官司一事",
+      "excerpt": "那時王夫人已知薛蟠官司一事，虧賈雨村維持了結，纔放了心。又見哥哥陞了邊缺，正愁又少了娘家的親戚來往，略加寂寞。過了幾日，",
+      "claim": "贾政让梨香院",
+      "narrativeLayer": "reported",
+      "speaker": null,
+      "appliesTo": [
+        "C04-099"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E100",
+      "classification": "explicit",
+      "paragraphLead": "那時王夫人已知薛蟠官司一事",
+      "excerpt": "那時王夫人已知薛蟠官司一事，虧賈雨村維持了結，纔放了心。又見哥哥陞了邊缺，正愁又少了娘家的親戚來往，略加寂寞。過了幾日，",
+      "claim": "贾母也来相邀",
+      "narrativeLayer": "reported",
+      "speaker": null,
+      "appliesTo": [
+        "C04-100"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E101",
+      "classification": "explicit",
+      "paragraphLead": "那時王夫人已知薛蟠官司一事",
+      "excerpt": "那時王夫人已知薛蟠官司一事，虧賈雨村維持了結，纔放了心。又見哥哥陞了邊缺，正愁又少了娘家的親戚來往，略加寂寞。過了幾日，",
+      "claim": "道谢应允",
+      "narrativeLayer": "present",
+      "speaker": "xueyima",
+      "appliesTo": [
+        "C04-101"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E102",
+      "classification": "explicit",
+      "paragraphLead": "那時王夫人已知薛蟠官司一事",
+      "excerpt": "那時王夫人已知薛蟠官司一事，虧賈雨村維持了結，纔放了心。又見哥哥陞了邊缺，正愁又少了娘家的親戚來往，略加寂寞。過了幾日，",
+      "claim": "日用供给一概免却",
+      "narrativeLayer": "present",
+      "speaker": "xueyima",
+      "appliesTo": [
+        "C04-102"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E103",
+      "classification": "explicit",
+      "paragraphLead": "那時王夫人已知薛蟠官司一事",
+      "excerpt": "那時王夫人已知薛蟠官司一事，虧賈雨村維持了結，纔放了心。又見哥哥陞了邊缺，正愁又少了娘家的親戚來往，略加寂寞。過了幾日，",
+      "claim": "住进梨香院",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-103"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E104",
+      "classification": "explicit",
+      "paragraphLead": "原來這梨香院即當日榮公暮年養靜之所",
+      "excerpt": "原來這梨香院即當日榮公暮年養靜之所，小小巧巧，約有十餘間房屋，前廳後舍俱全。另有一門通街，薛蟠家人就走此門出入。西南有一",
+      "claim": "梨香院形制",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-104"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E105",
+      "classification": "explicit",
+      "paragraphLead": "原來這梨香院即當日榮公暮年養靜之所",
+      "excerpt": "原來這梨香院即當日榮公暮年養靜之所，小小巧巧，約有十餘間房屋，前廳後舍俱全。另有一門通街，薛蟠家人就走此門出入。西南有一",
+      "claim": "通街门与西南角门",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-105"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E106",
+      "classification": "explicit",
+      "paragraphLead": "原來這梨香院即當日榮公暮年養靜之所",
+      "excerpt": "原來這梨香院即當日榮公暮年養靜之所，小小巧巧，約有十餘間房屋，前廳後舍俱全。另有一門通街，薛蟠家人就走此門出入。西南有一",
+      "claim": "往来两处",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-106"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E107",
+      "classification": "explicit",
+      "paragraphLead": "原來這梨香院即當日榮公暮年養靜之所",
+      "excerpt": "原來這梨香院即當日榮公暮年養靜之所，小小巧巧，約有十餘間房屋，前廳後舍俱全。另有一門通街，薛蟠家人就走此門出入。西南有一",
+      "claim": "宝钗与姊妹同乐",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-107"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E108",
+      "classification": "explicit",
+      "paragraphLead": "原來這梨香院即當日榮公暮年養靜之所",
+      "excerpt": "原來這梨香院即當日榮公暮年養靜之所，小小巧巧，約有十餘間房屋，前廳後舍俱全。另有一門通街，薛蟠家人就走此門出入。西南有一",
+      "claim": "只得暂且住下",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-108"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E109",
+      "classification": "explicit",
+      "paragraphLead": "原來這梨香院即當日榮公暮年養靜之所",
+      "excerpt": "原來這梨香院即當日榮公暮年養靜之所，小小巧巧，約有十餘間房屋，前廳後舍俱全。另有一門通街，薛蟠家人就走此門出入。西南有一",
+      "claim": "纨绔引诱",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-109"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E110",
+      "classification": "explicit",
+      "paragraphLead": "原來這梨香院即當日榮公暮年養靜之所",
+      "excerpt": "原來這梨香院即當日榮公暮年養靜之所，小小巧巧，約有十餘間房屋，前廳後舍俱全。另有一門通街，薛蟠家人就走此門出入。西南有一",
+      "claim": "比当日更坏十倍",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-110"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E111",
+      "classification": "explicit",
+      "paragraphLead": "原來這梨香院即當日榮公暮年養靜之所",
+      "excerpt": "原來這梨香院即當日榮公暮年養靜之所，小小巧巧，約有十餘間房屋，前廳後舍俱全。另有一門通街，薛蟠家人就走此門出入。西南有一",
+      "claim": "移居之念打灭",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-111"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-E112",
+      "classification": "explicit",
+      "paragraphLead": "原來這梨香院即當日榮公暮年養靜之所",
+      "excerpt": "原來這梨香院即當日榮公暮年養靜之所，小小巧巧，約有十餘間房屋，前廳後舍俱全。另有一門通街，薛蟠家人就走此門出入。西南有一",
+      "claim": "下回分解",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "C04-112"
+      ],
+      "designDecision": null,
+      "uncertainty": null
+    },
+    {
+      "id": "C04-D001",
+      "classification": "design",
+      "paragraphLead": "因見王夫人事情冗雜，姊妹們遂出來，至寡嫂李氏房中來了",
+      "excerpt": null,
+      "claim": "李纨居处与王夫人处的相对位置与移动路径",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "wang"
+      ],
+      "designDecision": "复用第三回的 `wang` 场景并新增 `kang_edge` 等锚点，用一段门洞移动表达「姊妹们遂出來」，不另建新场景。",
+      "uncertainty": "原文只写「出來」，未指明经过哪道门；门洞位置为可读性做的合理推定。"
+    },
+    {
+      "id": "C04-D002",
+      "classification": "design",
+      "paragraphLead": "如今且說雨村，因補授了應天府",
+      "excerpt": null,
+      "claim": "应天府刑堂的空间布局与公案、告状位、密室的相对关系",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "c4_yamen"
+      ],
+      "designDecision": "新建 `c4_yamen` 场景，把「堂中审案」与「退堂密室」放在同一张图的两个 PlanZones 内，用 `side_door` 连接，符合原文「退堂」的空间连贯性。",
+      "uncertainty": "原文未描述应天府衙门的具体格局，平面布局为原创设计。"
+    },
+    {
+      "id": "C04-D003",
+      "classification": "design",
+      "paragraphLead": "正是這薛家少爺",
+      "excerpt": null,
+      "claim": "薛蟠、薛姨妈、宝钗三人的形象与身份差异",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "xuepan",
+        "xueyima",
+        "baochai"
+      ],
+      "designDecision": "按原文只给出的年龄、身份与行事方式反推服饰：薛蟠为宝蓝团花袍少年，薛姨妈为黛色褙子四十上下妇人，宝钗为石青绣蝶褙子少女；三人靠脸型与五官区分，宝钗本回无台词，只以出场动作与叙述出现。",
+      "uncertainty": "原文未描写三人衣着颜色与相貌，以上为工笔淡彩风格下的合理推定。"
+    },
+    {
+      "id": "C04-D004",
+      "classification": "design",
+      "paragraphLead": "那薛家少爺便跳出來",
+      "excerpt": null,
+      "claim": "梨香院的空间与「一门通街、西南有角门通夹道」的院落关系",
+      "narrativeLayer": "present",
+      "speaker": null,
+      "appliesTo": [
+        "c4_lixiang"
+      ],
+      "designDecision": "新建 `c4_lixiang` 场景，锚点 `street_gate` / `lane_gate` / `front_hall` / `back_rooms` / `court_center` 对应原文「前厅后舍俱全，另有一门通街，西南有一角门通夹道」。",
+      "uncertainty": "梨香院「在荣国东北角上」是相对位置，图中未把荣府全图叠在同一坐标系内。"
+    },
+    {
+      "id": "C04-D005",
+      "classification": "design",
+      "paragraphLead": "他眉心中原有米粒大小的一點胭脂痣",
+      "excerpt": null,
+      "claim": "英莲不在本回登台，其身份信息全部以转述与回忆层呈现",
+      "narrativeLayer": "reported",
+      "speaker": null,
+      "appliesTo": [
+        "C04-032",
+        "C04-035"
+      ],
+      "designDecision": "英莲与冯渊全程不出场，不建角色资产；相关信息挂在雨村与门子的对白上，并带「转述／回忆」徽标，与第一回「甄士隐」线不冲突。",
+      "uncertainty": "原文写冯渊「酷爱男风」，此处按史实理解只保留行为描写，不做断章取义。"
+    }
+  ]
+}

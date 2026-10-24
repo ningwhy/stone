@@ -1,0 +1,88 @@
+// Online verification against the deployed site: confirm chapter four is live.
+//
+// Two modes:
+//   default            go through Cloudflare, exactly as a visitor does.
+//   ORIGIN_DIRECT=1    resolve stone.yan.pub to the origin IP, skipping the
+//                      Cloudflare edge. The edge applies a bot challenge to
+//                      automated clients, which makes the run slow and flaky;
+//                      the direct mode checks the deployed bytes themselves.
+//
+// Usage: node tests/online-verify.mjs
+//        ORIGIN_DIRECT=1 node tests/online-verify.mjs
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+import {mkdirSync} from 'node:fs';
+
+const direct=process.env.ORIGIN_DIRECT==='1';
+const profile=process.env.ONLINE_PROFILE??(direct?'/tmp/wb-direct-profile':'/tmp/wb-online-profile');
+const args=['--disable-blink-features=AutomationControlled'];
+if(direct)args.push('--host-resolver-rules=MAP stone.yan.pub 154.8.237.35');
+const context=await chromium.launchPersistentContext(profile,{
+  headless:false,channel:'chrome',viewport:{width:1440,height:900},reducedMotion:'reduce',
+  ignoreHTTPSErrors:direct,args});
+const page=await context.newPage(),errors=[],failed=[];
+page.on('pageerror',e=>errors.push(e.message));
+page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+// Cloudflare serves a challenge page with 403 to suspicious clients, so a failed
+// request is not necessarily a missing asset. Record both to tell them apart.
+page.on('requestfailed',r=>failed.push(`${r.failure()?.errorText??'failed'} ${r.url().slice(0,110)}`));
+page.on('response',r=>{if(r.status()>=400)failed.push(`${r.status()} ${r.url().slice(0,110)}`);});
+mkdirSync('artifacts',{recursive:true});
+
+// A scene loads the map tiles and the standing portraits, so the wait has to
+// tolerate a cold cache behind the tunnel plus the Cloudflare round trip.
+const reading=async()=>{
+  await page.locator('.loading-screen').waitFor({state:'detached',timeout:120000});
+  for(let i=0;i<5;i++){const b=page.getByRole('button',{name:'跳过移动',exact:true});if(await b.isVisible()){await b.click();await page.waitForTimeout(60);}}
+  // waitForFunction takes (fn, arg, options): the options object has to sit in the
+  // third slot or Playwright silently treats it as the function argument and falls
+  // back to the 30 second default timeout.
+  await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim(),undefined,{timeout:60000});
+  await page.locator('.game-map[data-scene-ready]').waitFor({timeout:120000});
+};
+const tag=direct?'origin':'online';
+try{
+ await page.goto('https://stone.yan.pub/',{waitUntil:'commit',timeout:120000});
+ await page.waitForSelector('.chapter-select',{timeout:240000});
+ await reading();
+ console.log(`${tag} node:`,await page.locator('.node-label').textContent());
+ const groups=await page.locator('.chapter-select optgroup').evaluateAll(os=>os.map(o=>o.label));
+ console.log(`${tag} chapter groups:`,JSON.stringify(groups));
+ assert.ok(groups.some(g=>g.includes('第四回')),'chapter four missing from the online selector');
+ await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-court');await reading();
+ assert.equal(await page.locator('.game-map').getAttribute('data-scene-ready'),'c4_yamen');
+ console.log(`${tag} chapter-four stage: c4_yamen`);
+ await page.screenshot({path:`artifacts/${tag}-chapter04.png`,fullPage:true});
+ await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-xue');await reading();
+ for(let i=0;i<20;i++){
+  const src=await page.locator('.speaker-portrait img').getAttribute('src');
+  if(src&&src.includes('xuepan-portrait')){console.log(`${tag} xuepan portrait:`,src);break;}
+  await page.getByRole('button',{name:'继续剧情',exact:true}).click();await reading();
+ }
+ // Chapter four keeps its own journey view; the estate overview belongs to chapter three.
+ await page.getByRole('button',{name:'本回行迹',exact:true}).click();
+ await page.locator('.journey-sites').waitFor({timeout:30000});
+ const journeySites=await page.locator('.journey-site').count();
+ console.log(`${tag} journey sites:`,journeySites);
+ assert.ok(journeySites>=5,'chapter-four journey view is incomplete');
+ await page.screenshot({path:`artifacts/${tag}-journey.png`,fullPage:true});
+ await page.getByRole('button',{name:'当前场景',exact:true}).click();
+ // The estate overview is the chapter-three page; its thumbnails used to 404 in production.
+ await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('reunion');await reading();
+ await page.getByRole('button',{name:'荣国府总览',exact:true}).click();
+ await page.locator('.world-map').waitFor({timeout:60000});
+ await page.waitForFunction(()=>document.querySelectorAll('.world-location image[data-loaded=true]').length===9,undefined,{timeout:120000});
+ console.log(`${tag} overview thumbnails: 9 loaded`);
+ await page.screenshot({path:`artifacts/${tag}-overview.png`,fullPage:true});
+ const realFailures=failed.filter(f=>!f.startsWith('403 '));
+ console.log(`${tag} non-403 failed requests:`,realFailures.length);
+ for(const f of realFailures.slice(0,10))console.log('  ',f);
+ assert.deepEqual(errors,[],JSON.stringify(errors));
+ console.log(`Passed: https://stone.yan.pub/ serves chapter four, the new court stage, the Xue portraits, the chapter-four journey view and the estate overview thumbnails.`);
+}catch(e){
+ console.error('errors',errors);
+ console.error('failed requests',failed.slice(0,20));
+ console.error((await page.locator('body').innerText()).slice(0,2000));
+ await page.screenshot({path:`artifacts/${tag}-failure.png`,fullPage:true});
+ throw e;
+}finally{await context.close();}
