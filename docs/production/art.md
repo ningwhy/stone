@@ -59,9 +59,11 @@ builder 顺序是原 SAM alpha ≥110 二值化 → 恢复道具 → 裁切/清�
 
 ## 人物朝向表
 
-原图脸部朝向并不一致，立绘与 Q 版不能靠同一条全局规则镜像。`design/character-facing.json` 是权威朝向表，每个 actor 分 `portrait` 与 `chibi` 两个字段（`left` / `right`），并附 `evidence`（测量值与方法）。运行时经 `src/story.ts` 的 `paintedFacing(actor, kind)` 查询：对话框立绘按讲话人/听众位置决定是否 `scaleX(-1)`，地图 Q 版在行走时按 `direction` 与表内 `chibi` 值翻转。
+原图脸部朝向并不一致，立绘与 Q 版不能靠同一条全局规则镜像。`design/character-facing.json` 是权威朝向表，每个 actor 分 `portrait` 与 `chibi` 两个字段（`left` / `right`），并附 `evidence`（测量值与方法）。运行时经 `src/story.ts` 的 `paintedFacing(actor, kind)` 查询：对话框立绘按讲话人/听众位置决定是否 `scaleX(-1)`，地图 Q 版整图左右镜像（`setFlipX`，模拟向后转），且镜像条件不再是"只在行走时"——`direction` 停止后、跨场景/跨段落都保持，由引擎在 `show` 与移动到达时按站位写入（见 `docs/design.md` 的朝向演出规则）。
 
 朝向由 Apple Vision 语义关键点的几何关系测得（`scripts/facing_vision.swift` 输出鼻尖/嘴部相对双眼中点的偏移，`scripts/facing_measure.py` 批量跑，`scripts/build_facing.py` 生成 JSON）。可信度来自四条独立证据：`leftEye` 质心 x 恒小于 `rightEye` 质心 x（76/76，符号由几何确定，无需参照图）、关键点落位目检、镜像自洽性（38/38）、鼻/嘴双特征互证（55/61）。眼宽差与 Vision yaw 在水彩古风画上均不可用，已明确弃用；暗部质心、肤色/轮廓质心、Q 版头身偏移等自动法也已证伪。新人物补资产后须重跑测量并更新该表，不能沿用默认 `left`。
+
+例外：原告（plaintiff）。Vision 对其立绘的关键点完全失真（鼻尖落到胸口、唇贴袍面，绿/橙/红质心坐标可复现），测得 `right` 与目视相反——原图与补丁后头部均朝左。`scripts/build_facing.py` 的 `REVIEWED` 表按目视结论改写为 `portrait=left`，`evidence.method` 记为 `visual-review` 并附原因；其 Q 版脸部补丁（mask 仅覆盖脸部窗口 x67-98/y7-30）把原本与身体同向朝左的脸换成了朝右，已用同一 mask 在包围盒内水平镜像改回朝左（`art/identity/plaintiff-chibi/final.png`，`apply_identity` 的遮罩外像素校验仍通过）。`scripts/facing_audit.swift` 可把 Vision 拟合画回图上供这类目检复核。
 
 SAM 与 SDMatte 都保留，但 builder 当前读取 `*-sam.png`。若采用 SDMatte，显式扩展选择契约并留原候选，不把 SDMatte 假装改名为 SAM。
 
@@ -81,4 +83,4 @@ SAM 与 SDMatte 都保留，但 builder 当前读取 `*-sam.png`。若采用 SDM
 4. 总览用院落外观，书房不能用桌子代表，家具只放局部场景。
 5. 新墙/门要检查等距轴、墙向、通行宽度；要拆层就实际提供后墙/前柱/屋檐，而非文字声称已拆层。
 6. 检查立绘/Q 版同人及灰度脸辨识；资产从生成、入选、校准、运行到截图每一步有记录。
-7. 立绘与 Q 版朝向符合 `design/character-facing.json`：对话框里讲话人朝文本、听众朝讲话人，地图上行走的 Q 版朝行走方向（`node tests/actor-facing.mjs` 可复跑采样）。
+7. 立绘与 Q 版朝向符合 `design/character-facing.json`：对话框里讲话人朝文本、听众朝讲话人，地图上 Q 版整图镜像跟随 `direction`——行走时朝行走方向，停下、到达与跨场景后保持最后朝向（`node tests/actor-facing.mjs` 可复跑采样）。

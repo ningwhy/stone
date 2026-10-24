@@ -174,6 +174,7 @@
 | 进屋隐藏外观、展示室内 | 2026-10-24 | 通过：`PlanZones.indoor` + `Art.interiorZone` 两个 Tiled 自定义属性写入 8 张含外观建筑的地图（`scripts/annotate_interiors.py`，幂等）；有人站上室内地面即隐藏该栋外观，离开自动恢复，剧本 `roof` 动作仍为显式覆盖。9 个第四回段落逐段采样：`c4-court`（院外看刑堂）外观绘制，`c4-chamber`/`c4-protect`/`c4-truth`/`c4-judge`（密室）外观隐藏，`c4-lady`（王夫人房内）隐藏，`c4-pear`（梨香院前厅）隐藏，`c4-hall`（荣禧堂内）仅隐藏 `rongxi-hall` 而保留西厢 `main-hall` | `artifacts/roof-*.png` |
 | 室内陈设补齐 | 2026-10-24 | 通过：`central.tmj` 荣禧堂原本整间空置，按 `scripts/story_path_cells.py` 确认不占任何 move 路线后补入屏风与两处茶几（可行走格 520→517，全部路线仍可解析） | `artifacts/map-previews/central-hidden.png` |
 | 人物朝向与镜像 | 2026-10-24 | 通过：`design/character-facing.json` 记录 39 个 actor 的立绘/Q 版实测朝向；全剧情采样 43 个移动帧、26 个角色，`flipX` 与朝向表 0 处不一致；对话框讲话人立绘朝文本、听众朝讲话人，与 `paintedFacing` 完全一致 | `design/character-facing.json` |
+| 整图镜像与场景间朝向（用户反馈修正） | 2026-10-24 | 通过：镜像恒为整张人物图左右翻转（`setFlipX`），不再有"只翻脸"的资产病灶——原告 Q 版脸部补丁已按原审核 mask 在包围盒内镜像回与身体同向（遮罩外像素逐像素不变，`apply_identity` 守卫通过），朝向表 `plaintiff` 改判 `left`（portrait/chibi，Vision 关键点失真已记录为 `visual-review`）。引擎去掉 `moving` 门禁：`direction` 停止后与跨场景/跨段落保持；`show` 与移动到达（含跳过移动）时新人面向场内最近可见者、全场转向新人。实景采样：公堂 `yucun` 朝左、`plaintiff` 朝右互视；密室迁移后两人仍互视；`tests/actor-facing.mjs` 44 行走帧 + 253 立绘行 0 不一致 | `art/identity/plaintiff-chibi/final.png`、`design/character-facing.json`、`src/engine.ts`、`src/MapScene.ts` |
 | 对白面板加高后的回归 | 2026-10-24 | 通过：冒烟测试的桌面/手机面板高度断言由 160/205 更新为 206/246 后，346 节点全流程、三视口控件、暂停稳定性复跑通过 | 控制台输出 |
 
 ### 暂停断言的修正

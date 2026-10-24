@@ -240,9 +240,12 @@ export class MapScene extends Phaser.Scene {
       const scale=Math.max(1,48/(bodyHeight*zoom));
       view.setScale(scale).setPosition(p.x,p.y+bounce).setVisible(a.visible).setDepth(p.y+1);
       // Iso walking right means col-row increases; mirror the sprite when the
-      // painted chibi already faces the way it is walking, or away from it.
+      // painted chibi already faces the way it is looking, or away from it. The
+      // direction survives a stop and a scene change, so a person who walked
+      // left into a room — or was shown there facing someone — stays turned
+      // that way until they move again, like a person turning on the spot.
       const sprite=this.actorSprites.get(id);
-      if(sprite)sprite.setFlipX(a.moving && (a.direction===1)!==(paintedFacing(id,'chibi')==='right'));
+      if(sprite)sprite.setFlipX((a.direction===1)!==(paintedFacing(id,'chibi')==='right'));
       this.actorLabels.get(id)!.setScale(1/(zoom*scale)).setPosition(0,7/(zoom*scale));
     }
   }

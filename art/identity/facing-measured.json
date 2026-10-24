@@ -274,10 +274,11 @@
  {
   "actor": "plaintiff",
   "kind": "portrait",
-  "facing": "right",
+  "facing": "left",
   "noseOffset": 0.3856,
   "mouthOffset": 0.6761,
-  "confidence": 0.3856
+  "confidence": 0.3856,
+  "review": "vision fit lands on the robe (nose tip on the chest); read by eye against the painted body lean"
  },
  {
   "actor": "ruhai",

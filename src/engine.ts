@@ -25,6 +25,10 @@ export class StoryEngine {
   private state: StoryState;
   private listeners = new Set<() => void>();
   private jobs: Job[] = [];
+  // The whole move batch in authored order, kept until the last walker is
+  // home, so arrivals are restaged as one room and a watched walk and a
+  // skipped one end in exactly the same facing.
+  private arrivals: Job[] = [];
   private actionIndex = 0;
   private userPaused = false;
   private overlayPaused = false;
@@ -47,13 +51,13 @@ export class StoryEngine {
   private emit() { this.state = structuredClone(this.state); for (const listener of this.listeners) listener(); }
   private anchor(name: string) { const p = this.map.anchors[name]; if (!p) throw new Error(`地点不存在：${name}`); return p; }
   private fail(error: unknown) {
-    this.jobs = []; this.state.status = 'error';
+    this.jobs = []; this.arrivals = []; this.state.status = 'error';
     this.state.error = `[${this.step?.id ?? 'unknown'}] ${error instanceof Error ? error.message : String(error)}`;
     this.emit();
   }
   private enter(index: number) {
     try {
-      this.state.index=index; this.actionIndex=0; this.jobs=[]; this.state.status='moving';
+      this.state.index=index; this.actionIndex=0; this.jobs=[]; this.arrivals=[]; this.state.status='moving';
       this.state.effect=null;
       if(!this.maps[this.step.scene])throw new Error(`场景不存在：${this.step.scene}`);
       if(this.state.sceneId!==this.step.scene){this.state.sceneId=this.step.scene;this.state.roofVisible=true;for(const actor of Object.values(this.state.actors)){actor.visible=false;actor.moving=false;}}
@@ -73,13 +77,42 @@ export class StoryEngine {
     actor.moving=path.length>1;
     return {actor:action.actor,path,cursor:1};
   }
+  /** Whoever appears somewhere — shown in or walked in — turns to face the
+   *  nearest person already there, and the people already there turn to face
+   *  them: a room looks at whoever just arrived, which is how a standing
+   *  person is staged on the isometric board. The side follows the same
+   *  screen-x convention as walking, col-row increasing being to the right. */
+  private faceTheRoom(actor: ActorId, at: Point) {
+    const side=(from: Point, to: Point)=>(to.col-from.col)-(to.row-from.row)>=0?1:-1;
+    let nearest: ActorId|null=null, nearestD=Infinity;
+    for (const [id,o] of Object.entries(this.state.actors)) {
+      if (id===actor || !o.visible) continue;
+      const d=Math.abs(o.col-at.col)+Math.abs(o.row-at.row);
+      if (d<nearestD) { nearestD=d; nearest=id as ActorId; }
+    }
+    if (nearest) this.state.actors[actor].direction=side(at,this.state.actors[nearest]);
+    for (const [id,o] of Object.entries(this.state.actors)) {
+      if (id===actor || !o.visible) continue;
+      o.direction=side(o,at);
+    }
+  }
+  /** With nobody in the room to face, a walker keeps pointing the way the last
+   *  leg of the walk went — the direction an animated walk ends with, so a
+   *  skipped walk lands the same way. */
+  private legFacing(job: Job) {
+    const p=job.path;
+    if (p.length<2) return;
+    const a=p[p.length-2], b=p[p.length-1];
+    this.state.actors[job.actor].direction=(b.col-a.col)-(b.row-a.row)>=0?1:-1;
+  }
   private execute(action: Action, instant: boolean) {
     if (action.type === 'effect') {if(!instant)this.state.effect={actor:action.actor,kind:action.kind,elapsed:0,duration:action.duration};return;}
     if (action.type === 'roof') {this.state.roofVisible=action.visible; return;}
     if (action.type === 'show') {
       const p = this.anchor(action.at);
       if (!this.map.walkable.has(cellKey(p.col,p.row))) throw new Error(`显示地点不可通行：${action.at}`);
-      Object.assign(this.state.actors[action.actor],p,{visible:true,moving:false}); return;
+      Object.assign(this.state.actors[action.actor],p,{visible:true,moving:false});
+      this.faceTheRoom(action.actor,p); return;
     }
     if (action.type === 'hide') {this.state.actors[action.actor].visible=false; return;}
     const moves = action.type==='parallel' ? action.moves : [action];
@@ -87,7 +120,13 @@ export class StoryEngine {
     const jobs = moves.map(move=>this.makeJob(move));
     if (instant) {
       for (const j of jobs) Object.assign(this.state.actors[j.actor], j.path.at(-1), {moving:false});
-    } else this.jobs=jobs.filter(j=>j.path.length>1);
+      for (const j of jobs) { this.legFacing(j); this.faceTheRoom(j.actor, this.state.actors[j.actor]); }
+    } else {
+      // A move to where the person already stands only turns them to the room.
+      for (const j of jobs) if (j.path.length===1) this.faceTheRoom(j.actor, this.state.actors[j.actor]);
+      this.jobs=jobs.filter(j=>j.path.length>1);
+      this.arrivals=jobs;
+    }
   }
   private pump(instant: boolean) {
     while (this.actionIndex<this.step.actions.length) {
@@ -119,14 +158,24 @@ export class StoryEngine {
         actor.moving=job.cursor<job.path.length;
       }
       this.jobs=this.jobs.filter(j=>this.state.actors[j.actor].moving);
-      if (!this.jobs.length) this.pump(false); else this.emit();
+      if (!this.jobs.length) {
+        // Everyone is home: restage the whole batch once, in authored order and
+        // with every arrival in place, so a watched walk and a skipped one end
+        // in exactly the same facing.
+        for (const job of this.arrivals) { this.legFacing(job); this.faceTheRoom(job.actor, this.state.actors[job.actor]); }
+        this.arrivals=[];
+        this.pump(false);
+      } else this.emit();
     } catch (e) {this.fail(e);}
   }
   skip() {
     if (this.state.paused || this.state.status!=='moving') return;
     try {
       for (const job of this.jobs) Object.assign(this.state.actors[job.actor],job.path.at(-1),{moving:false});
-      this.jobs=[]; this.state.effect=null;this.pump(true);
+      // Restage the whole batch once every arrival is in place, matching the
+      // animated path above move for move.
+      for (const job of this.arrivals) { this.legFacing(job); this.faceTheRoom(job.actor, this.state.actors[job.actor]); }
+      this.jobs=[]; this.arrivals=[]; this.state.effect=null;this.pump(true);
     } catch (e) {this.fail(e);}
   }
   pause(value: boolean) {this.userPaused=value; this.updatePause();}
@@ -138,9 +187,9 @@ export class StoryEngine {
     const replay=new StoryEngine(this.maps,this.steps);
     while(replay.getSnapshot().index<index){replay.skip();if(replay.getSnapshot().status==='error')throw new Error(replay.getSnapshot().error!);replay.advance();}
     replay.skip();if(replay.getSnapshot().status==='error')throw new Error(replay.getSnapshot().error!);
-    this.jobs=[];this.userPaused=false;this.overlayPaused=false;this.actionIndex=this.steps[index].actions.length;this.state=structuredClone(replay.getSnapshot());this.emit();
+    this.jobs=[];this.arrivals=[];this.userPaused=false;this.overlayPaused=false;this.actionIndex=this.steps[index].actions.length;this.state=structuredClone(replay.getSnapshot());this.emit();
   }
-  restart() {this.jobs=[]; this.userPaused=false; this.overlayPaused=false; this.state=this.initial(); this.enter(0);}
+  restart() {this.jobs=[]; this.arrivals=[]; this.userPaused=false; this.overlayPaused=false; this.state=this.initial(); this.enter(0);}
   serialize(): SaveData {
     if (!['reading','ended'].includes(this.state.status)) throw new Error('请等待本段移动结束后保存');
     const state=structuredClone(this.state); state.paused=false;
@@ -172,7 +221,7 @@ export class StoryEngine {
       if (!a || !Number.isInteger(a.col) || !Number.isInteger(a.row) || typeof a.visible!=='boolean' || a.moving!==false || ![-1,1].includes(a.direction)) throw new Error(`存档人物无效：${id}`);
       if (a.visible && !map.walkable.has(cellKey(a.col,a.row))) throw new Error(`存档人物位置不可通行：${id}`);
     }
-    this.jobs=[]; this.actionIndex=this.steps[index].actions.length; this.userPaused=false; this.overlayPaused=false;
+    this.jobs=[]; this.arrivals=[]; this.actionIndex=this.steps[index].actions.length; this.userPaused=false; this.overlayPaused=false;
     this.state=structuredClone(state); this.state.index=index; this.state.status=status; this.state.paused=false; this.state.error=null; this.emit();
   }
 }

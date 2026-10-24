@@ -18,7 +18,10 @@ the centre of the mouth sits. Two things make that reading trustworthy:
   * the landmarks land where they claim to. Drawing the fit back onto the
     picture (scripts/facing_overlay.swift, scripts/facing_rules.swift) shows
     the nose rule passing through the nose and the eye marks on the eyes, on
-    every portrait checked.
+    every portrait checked — except the plaintiff, whose fit lands on the
+    robe (nose tip on the chest, lips on the skirt) and whose facing was
+    therefore read by eye against the painted body lean and recorded as
+    visual-review in REVIEWED below.
 
 Two further checks back it up: flipping a picture flips the reading on all 38
 portraits, and the nose and the mouth — opposite ends of the face — agree on
@@ -43,6 +46,20 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MANIFEST = os.path.join(ROOT, 'public', 'assets', 'rongguo', 'manifest.json')
 MEASURED = os.path.join(ROOT, 'art', 'identity', 'facing-measured.json')
 OUT = os.path.join(ROOT, 'design', 'character-facing.json')
+
+# Readings overturned by an eye check of the painted picture. Vision's
+# landmarks land on the robe for this stylised cast, so where the measured
+# geometry disagrees with the painted head the eye wins and the correction is
+# recorded here, with the reason, so the table stays reproducible.
+REVIEWED = {
+    'plaintiff': {
+        'portrait': 'left',
+        'chibi': 'left',
+        'reason': ('vision fit lands on the robe; head read by eye against the '
+                   'painted body lean, and the chibi face patch was mirrored '
+                   'back inside its reviewed mask to match'),
+    },
+}
 
 
 def main():
@@ -73,6 +90,17 @@ def main():
                               'evidence': {'method': 'default-no-painted-head'}}
             missing.append(actor)
             continue
+        review = REVIEWED.get(actor)
+        if review:
+            entries[actor] = {
+                'portrait': review['portrait'],
+                'chibi': review['chibi'],
+                'evidence': {
+                    'method': 'visual-review',
+                    'reason': review['reason'],
+                },
+            }
+            continue
         entries[actor] = {
             'portrait': row['facing'],
             'chibi': row['facing'],
@@ -92,7 +120,9 @@ def main():
                  'when the side it is shown on disagrees with this. Read from the geometry of '
                  'Apple Vision semantic landmarks: the nose tip and the mouth centre are '
                  'measured against the midpoint of the two eyes, and the sign follows from the '
-                 'naming check rather than from any hand-made label.'),
+                 'naming check rather than from any hand-made label. Entries whose measured '
+                 'geometry disagrees with the painted head carry "method": "visual-review" '
+                 'and the reason instead.'),
         'actors': entries,
     }
     with open(OUT, 'w', encoding='utf-8') as fh:

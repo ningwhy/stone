@@ -14,3 +14,7 @@
 4. 执行 `scripts/verify_character_identities.py`，验证覆盖范围、遮罩外不变、尺寸、锚点和运行素材一致。人物图鉴采用头肩近景；对话与地图分别继续使用完整立绘和 Q 版。图片 URL 带内容版本，避免浏览器继续显示旧脸。
 
 所有旧 PNG 均保存在 `art/identity/originals`；第一轮试稿另存 `art/identity/first-pass`，不覆盖最初的 AI 源图与抠图结果。
+
+## 已知修正：原告 Q 版脸部补丁朝向
+
+原告 Q 版（`plaintiff-chibi`）的脸部补丁把原本与身体同向（朝左下）的脸换成了朝右，与身体垂直，公堂截图里读作"只镜像了脸"。修正方式：沿用同一审核遮罩（`mask-native.png`，脸部窗口 x67-98/y7-30）在包围盒内水平镜像 `final.png` 的脸部区域，遮罩外像素仍与原图逐像素一致（`apply_identity` 的 `np.array_equal` 守卫通过），身份细节保留、朝向与身体一致。修正后 `design/character-facing.json` 的 `plaintiff.chibi` 为 `left`（`visual-review` 证据），`plaintiff.portrait` 同为 `left`——Vision 对原告立绘的关键点拟合失真（鼻尖落在胸口），两处原测量均不可信。视觉证据：`scripts/facing_audit.swift` 的拟合叠加图与前后对比（原图/补丁/镜像后三栏 8 倍放大）。

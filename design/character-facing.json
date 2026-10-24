@@ -1,6 +1,6 @@
 {
  "version": 1,
- "note": "Facing of each painted head, as painted. A portrait or chibi is mirrored when the side it is shown on disagrees with this. Read from the geometry of Apple Vision semantic landmarks: the nose tip and the mouth centre are measured against the midpoint of the two eyes, and the sign follows from the naming check rather than from any hand-made label.",
+ "note": "Facing of each painted head, as painted. A portrait or chibi is mirrored when the side it is shown on disagrees with this. Read from the geometry of Apple Vision semantic landmarks: the nose tip and the mouth centre are measured against the midpoint of the two eyes, and the sign follows from the naming check rather than from any hand-made label. Entries whose measured geometry disagrees with the painted head carry \"method\": \"visual-review\" and the reason instead.",
  "actors": {
   "oldmonk": {
    "portrait": "right",
@@ -316,12 +316,11 @@
    }
   },
   "plaintiff": {
-   "portrait": "right",
-   "chibi": "right",
+   "portrait": "left",
+   "chibi": "left",
    "evidence": {
-    "noseOffset": 0.3856,
-    "mouthOffset": 0.6761,
-    "method": "vision-landmark-geometry"
+    "method": "visual-review",
+    "reason": "vision fit lands on the robe; head read by eye against the painted body lean, and the chibi face patch was mirrored back inside its reviewed mask to match"
    }
   },
   "xuepan": {
