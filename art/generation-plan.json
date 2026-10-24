@@ -709,6 +709,72 @@
       "size": "1024x1024",
       "subject": "ruins",
       "prompt": "A compact heap of burnt rubble, remnants after a devastating fire. ALL ROOFS ARE GONE. Only three short broken plaster wall fragments remain, jagged broken wall tops, black charred timber beams lying horizontally on the ground, piles of broken gray clay roof tiles and fallen bricks, ash stains, sparse weeds. Maximum wall height is half a person. NO standing house, NO intact roofs, NO flames, NO people. Isometric 2:1 orthographic game prop viewed from southeast, exquisite Chinese ink and watercolor with muted gray sage and tan, entire object isolated on pure white, no text. 烧毁后的瓦砾场，房顶全部坍塌，只有低矮残墙、焦黑横木和碎砖瓦。"
+    },
+    {
+      "id": "menzi-portrait",
+      "seed": 10242001,
+      "size": "768x1024",
+      "prompt": "独立单个人物设定，红楼梦原创形象。清代青年衙役门子，青灰皂衫，黑小帽，新蓄短发，腰间挂牌，机敏奉承的市井后生，半身立绘，头顶至腰下完整，人物正面略向左，双手自然拢于身前，四周留白。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。"
+    },
+    {
+      "id": "menzi-chibi",
+      "seed": 10242002,
+      "size": "768x1024",
+      "prompt": "独立单个人物设定，红楼梦原创形象。清代青年衙役门子，青灰皂衫，黑小帽，新蓄短发，腰间挂牌，机敏奉承的市井后生，三头身Q版游戏角色，头部占身体三分之一，全身完整，脚底清楚，轻微俯视等距，朝右下，站立，无地面无投影，四周留白。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。"
+    },
+    {
+      "id": "plaintiff-portrait",
+      "seed": 10242011,
+      "size": "768x1024",
+      "prompt": "独立单个人物设定，红楼梦原创形象。清代老年家仆，褐色粗布短衣，旧毡帽，躬身瘦弱，愁苦悲怆，半身立绘，头顶至腰下完整，人物正面略向左，双手自然拢于身前，四周留白。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。"
+    },
+    {
+      "id": "plaintiff-chibi",
+      "seed": 10242012,
+      "size": "768x1024",
+      "prompt": "独立单个人物设定，红楼梦原创形象。清代老年家仆，褐色粗布短衣，旧毡帽，躬身瘦弱，愁苦悲怆，三头身Q版游戏角色，头部占身体三分之一，全身完整，脚底清楚，轻微俯视等距，朝右下，站立，无地面无投影，四周留白。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。"
+    },
+    {
+      "id": "xuepan-portrait",
+      "seed": 10242021,
+      "size": "768x1024",
+      "prompt": "独立单个人物设定，红楼梦原创形象。清代富家少年公子薛蟠，十五六岁，锦缎宝蓝团花长袍，白玉腰带，体态丰硕敦实，面庞白净无须，眼神带几分骄矜而愚钝，嘴角微撇，半身立绘，头顶至腰下完整，人物正面略向左，双手自然拢于身前，四周留白。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。",
+      "subject": "man in blue brocade robe"
+    },
+    {
+      "id": "xuepan-chibi",
+      "seed": 10242022,
+      "size": "768x1024",
+      "prompt": "独立单个人物设定，红楼梦原创形象。清代富家少年公子薛蟠，十五六岁，锦缎宝蓝团花长袍，白玉腰带，体态丰硕敦实，面庞白净无须，眼神带几分骄矜而愚钝，嘴角微撇，三头身Q版游戏角色，头部占身体三分之一，全身完整，脚底清楚，轻微俯视等距，朝右下，站立，无地面无投影，四周留白。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。",
+      "subject": "chibi boy in blue robe"
+    },
+    {
+      "id": "xueyima-portrait",
+      "seed": 10242023,
+      "size": "768x1024",
+      "prompt": "独立单个人物设定，红楼梦原创形象。清代贵妇薛姨妈，四十上下年纪，保养得宜面容慈和端庄，黛色缠枝纹褙子配暗红马面裙，发髻端正戴一支点翠簪，神情温和中带几分忧虑，半身立绘，头顶至腰下完整，人物正面略向左，双手自然拢于身前，四周留白。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。",
+      "subject": "middle aged noble lady"
+    },
+    {
+      "id": "xueyima-chibi",
+      "seed": 10242024,
+      "size": "768x1024",
+      "prompt": "独立单个人物设定，红楼梦原创形象。清代贵妇薛姨妈，四十上下年纪，保养得宜面容慈和端庄，黛色缠枝纹褙子配暗红马面裙，发髻端正戴一支点翠簪，神情温和中带几分忧虑，三头身Q版游戏角色，头部占身体三分之一，全身完整，脚底清楚，轻微俯视等距，朝右下，站立，无地面无投影，四周留白。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。",
+      "subject": "chibi noble lady"
+    },
+    {
+      "id": "baochai-portrait",
+      "seed": 10242025,
+      "size": "768x1024",
+      "prompt": "独立单个人物设定，红楼梦原创形象。清代贵族少女薛宝钗，约十四岁，肌骨莹润体态匀称鹅蛋脸弯弯柳眉，浅杏色圆领上衣配石青绣蝶褙子，发髻清简簪一朵小绒花，眉眼沉静温婉，举止娴雅，半身立绘，头顶至腰下完整，人物正面略向左，双手交握于身前，四周留白。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。",
+      "subject": "young noble girl"
+    },
+    {
+      "id": "baochai-chibi",
+      "seed": 10242026,
+      "size": "768x1024",
+      "prompt": "独立单个人物设定，红楼梦原创形象。清代贵族少女薛宝钗，约十四岁，肌骨莹润体态匀称鹅蛋脸弯弯柳眉，浅杏色圆领上衣配石青绣蝶褙子，发髻清简簪一朵小绒花，眉眼沉静温婉，举止娴雅，三头身Q版游戏角色，头部占身体三分之一，全身完整，脚底清楚，轻微俯视等距，朝右下，站立，无地面无投影，四周留白。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。",
+      "subject": "chibi noble girl"
     }
   ]
 }

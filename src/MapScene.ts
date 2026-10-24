@@ -307,11 +307,17 @@ export class MapScene extends Phaser.Scene {
   update(time:number,delta:number) {
     this.clock=time;if(!this.engine.getSnapshot().paused&&!this.presentationPaused)this.actionClock+=delta;
     if(!this.presentationPaused)this.engine.tick(delta/1000);this.sync();this.drawActionFocus();this.declutterLabels();
-    if(!this.manual && !this.engine.getSnapshot().paused) {
+    if(!this.manual) {
       const p=this.target(),camera=this.cameras.main;
       const targetX=p.x-camera.width/2,targetY=p.y-camera.height/2;
-      const amount=this.reducedMotion?1:1-Math.exp(-delta/240);
-      camera.scrollX=Phaser.Math.Linear(camera.scrollX,targetX,amount);camera.scrollY=Phaser.Math.Linear(camera.scrollY,targetY,amount);
+      if(this.engine.getSnapshot().paused) {
+        // A paused stage must hold still: snap the camera instead of easing toward the
+        // target, otherwise the view keeps drifting for a few frames after the pause.
+        camera.scrollX=targetX;camera.scrollY=targetY;
+      } else {
+        const amount=this.reducedMotion?1:1-Math.exp(-delta/240);
+        camera.scrollX=Phaser.Math.Linear(camera.scrollX,targetX,amount);camera.scrollY=Phaser.Math.Linear(camera.scrollY,targetY,amount);
+      }
     }
   }
 }

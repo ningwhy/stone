@@ -23,6 +23,16 @@ def prepare(key):
  # Square context includes hair/head, and keeps original feature coordinates in mask.
  side=math.ceil(max(w*1.8,h*1.6));cx=(x0+x1)/2;cy=(y0+y1)/2
  crop=[round(cx-side/2),round(cy-side/2),round(cx+side/2),round(cy+side/2)]
+ # A crop that leaves the canvas pads with black, which silently destroys the head.
+ # Shrink the context until it fits inside the canvas; the face box must stay whole.
+ iw,ih=im.size
+ while (crop[0]<0 or crop[1]<0 or crop[2]>iw or crop[3]>ih) and side>max(x1-x0,y1-y0):
+  side=int(side*.9);cx=min(max(cx,side/2),max(side/2,iw-side/2));cy=min(max(cy,side/2),max(side/2,ih-side/2))
+  crop=[round(cx-side/2),round(cy-side/2),round(cx+side/2),round(cy+side/2)]
+ if crop[0]<0 or crop[1]<0 or crop[2]>iw or crop[3]>ih:
+  raise ValueError(f'{key}: face box {BOXES[key]} does not fit inside image {im.size}')
+ if not (x0>=crop[0] and y0>=crop[1] and x1<=crop[2] and y1<=crop[3]):
+  raise ValueError(f'{key}: face box {BOXES[key]} falls outside its crop {crop}')
  face=im.crop(crop);white=Image.new('RGB',face.size,'white');white.paste(face,mask=face.getchannel('A'));white.resize((512,512),Image.Resampling.LANCZOS).save(directory/'input.png')
  # Face outline may change inside this bounded ellipse; body and placement stay exact.
  bound=Image.new('L',im.size);ImageDraw.Draw(bound).ellipse((x0-w*.20,y0-h*.04,x1+w*.20,y1+h*.03),fill=255)

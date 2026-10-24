@@ -3,7 +3,7 @@
   "server": "http://192.168.4.66:8188",
   "model": "qwen_image_2.1_int8_convrot",
   "method": "Head-detail edit with face-outline freedom, portrait-led identity reference for chibi, pixel-preserving composite outside face mask",
-  "note": "第三回明确外貌描述优先；其余五官为原创设计，不冒充原文规定。只检查头发、衣服、色彩以外的面部差异。",
+  "note": "第三回明确外貌描述优先；其余五官为原创设计，不冒充原文规定。只检查头发、衣服、色彩以外的面部差异。 第四回新增人物另见 docs/chapter04-production.md。",
   "characters": [
     {
       "id": "daiyu",
@@ -235,6 +235,41 @@
       "features": "骨瘦凹陷老脸；垂白眉；深陷半闭眼；长弯鼻；瘪嘴，迟钝衰老",
       "prompt": "an extremely gaunt eighty-year-old face, sharply hollow cheeks, drooping long white eyebrows, deeply recessed half-closed eyes, a long curved drooping nose, a sunken toothless mouth and protruding bony chin; asymmetrical deep wrinkles and frail distracted expression",
       "seed": 10232064
+    },
+    {
+      "id": "menzi",
+      "name": "门子",
+      "features": "瘦长脸；细挑眉；灵活小眼滴溜溜转；尖鼻薄唇，嘴角常带讨好的笑；市侩精明而表面恭谨",
+      "prompt": "a thin narrow face with slightly sunken cheeks, thin high arched eyebrows, small lively darting eyes always reading the room, a pointed nose and thin lips curled in an ingratiating smile, a shrewd self-effacing young yamen runner; clean-shaven, no beard, retain the shaved forehead of a former novice monk",
+      "seed": 10242001
+    },
+    {
+      "id": "plaintiff",
+      "name": "原告 · 冯家仆人",
+      "features": "老瘦脸，深色皱纹；稀疏白眉；浑浊含泪的眼；塌鼻厚唇，瘪嘴无牙，一脸苦相",
+      "prompt": "an old gaunt deeply lined face, sparse white brows, watery bloodshot pleading eyes, a flat broad nose, thick lips over a toothless sunken mouth, an aged domestic servant in grief and fear, thin white stubble beard, weathered dark skin",
+      "seed": 10242002
+    },
+    {
+      "id": "xuepan",
+      "name": "薛蟠",
+      "features": "圆胖脸带横肉；短促浓眉；细眼白多；酒糟鼻头；阔嘴厚唇，骄纵跋扈",
+      "prompt": "a round fleshy face with heavy jowls, short thick blunt eyebrows, small eyes with much white showing, a bulbous red-tinged nose, a wide mouth with thick lips set in a bullying pout, an arrogant spoiled young merchant heir, faint thin mustache, oily flushed complexion",
+      "seed": 10242003
+    },
+    {
+      "id": "xueyima",
+      "name": "薛姨妈",
+      "features": "丰满圆脸；细长弯眉；慈目含愁；直鼻厚唇；四十上下贵妇，温厚有忧色",
+      "prompt": "a full rounded motherly face, fine long gently curved brows, soft kind eyes with faint worry lines, a straight nose and full warm lips, a well-preserved gentle noble widow around forty, hair in a plain dark matron's bun with a single jade pin",
+      "seed": 10242004
+    },
+    {
+      "id": "baochai",
+      "name": "薛宝钗",
+      "features": "丰满鹅蛋脸；修眉；黑白分明的圆眼；鼻腻鹅脂；唇不点而红，约十四岁，娴雅含蓄",
+      "prompt": "a full smooth oval face with soft round cheeks, long slender elegant brows, clear bright round eyes with calm black pupils, a delicate straight nose with soft rounded tip, small naturally red lips, a composed serene girl of fourteen, hair in maiden's double buns with a simple pearl pin",
+      "seed": 10242005
     }
   ]
 }

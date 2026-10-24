@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "xueyima-portrait_s10242023-01",
+  "seed": 10242023,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立单个人物设定，红楼梦原创形象。清代贵妇薛姨妈，四十上下年纪，保养得宜面容慈和端庄，黛色缠枝纹褙子配暗红马面裙，发髻端正戴一支点翠簪，神情温和中带几分忧虑，半身立绘，头顶至腰下完整，人物正面略向左，双手自然拢于身前，四周留白。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "1ae756d4-3afe-4f74-8d02-6860d4956082",
+  "generated_at": "2026-10-24 10:16:17",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x1024"
+}

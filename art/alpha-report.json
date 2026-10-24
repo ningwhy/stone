@@ -691,5 +691,75 @@
     "solidAlpha250Ratio": 0.98512,
     "width": 800,
     "height": 626
+  },
+  {
+    "asset": "menzi-portrait",
+    "visiblePixels": 98756,
+    "solidAlpha250Ratio": 0.99018,
+    "width": 254,
+    "height": 600
+  },
+  {
+    "asset": "menzi-chibi",
+    "visiblePixels": 4123,
+    "solidAlpha250Ratio": 0.93548,
+    "width": 53,
+    "height": 116
+  },
+  {
+    "asset": "plaintiff-portrait",
+    "visiblePixels": 95392,
+    "solidAlpha250Ratio": 0.98681,
+    "width": 254,
+    "height": 600
+  },
+  {
+    "asset": "plaintiff-chibi",
+    "visiblePixels": 6001,
+    "solidAlpha250Ratio": 0.94018,
+    "width": 99,
+    "height": 116
+  },
+  {
+    "asset": "xuepan-portrait",
+    "visiblePixels": 84621,
+    "solidAlpha250Ratio": 0.98539,
+    "width": 206,
+    "height": 600
+  },
+  {
+    "asset": "xuepan-chibi",
+    "visiblePixels": 4891,
+    "solidAlpha250Ratio": 0.936,
+    "width": 64,
+    "height": 116
+  },
+  {
+    "asset": "xueyima-portrait",
+    "visiblePixels": 100621,
+    "solidAlpha250Ratio": 0.98947,
+    "width": 247,
+    "height": 600
+  },
+  {
+    "asset": "xueyima-chibi",
+    "visiblePixels": 3999,
+    "solidAlpha250Ratio": 0.93673,
+    "width": 49,
+    "height": 116
+  },
+  {
+    "asset": "baochai-portrait",
+    "visiblePixels": 126725,
+    "solidAlpha250Ratio": 0.9913,
+    "width": 319,
+    "height": 600
+  },
+  {
+    "asset": "baochai-chibi",
+    "visiblePixels": 3977,
+    "solidAlpha250Ratio": 0.93915,
+    "width": 49,
+    "height": 116
   }
 ]

@@ -4,6 +4,8 @@ import script1 from '../design/chapter01-story.json' with { type:'json' };
 import script2 from '../design/chapter02-story.json' with { type:'json' };
 import sections1 from '../design/chapter01-sections.json' with { type:'json' };
 import sections2 from '../design/chapter02-sections.json' with { type:'json' };
+import script4 from '../design/chapter04-story.json' with { type:'json' };
+import sections4 from '../design/chapter04-sections.json' with { type:'json' };
 export const cast = {
   oldmonk:{"name": "智通寺老僧", "fullName": "智通寺老僧", "color": 8885375, "css": "#87947f", "relation": "寺中煮粥人", "description": "龙钟衰老，回答雨村时答非所问；与癞头和尚分列。"},
   huoqi:{"name": "霍启", "fullName": "霍启", "color": 8885375, "css": "#87947f", "relation": "甄家家人", "description": "带英莲看灯，暂离后失去孩子，惧罪逃走。"},
@@ -39,6 +41,11 @@ export const cast = {
   nurse_wang:{name:'王嬷嬷',fullName:'王嬷嬷',color:0x99907e,css:'#99907e',relation:'黛玉的乳母',description:'年老，随黛玉从扬州入京，夜间在碧纱橱陪侍。'},
   nurse_li:{name:'李嬷嬷',fullName:'李嬷嬷',color:0x9a8a82,css:'#9a8a82',relation:'宝玉的乳母',description:'在外间与袭人照管宝玉。'},
   sedan:{name:'轿子',fullName:'入府小轿',color:0xa36557,css:'#a36557',relation:'入府交通',description:'代表入府乘轿；拜访贾赦所乘翠幄青紬车另以转场叙述。'},
+  menzi:{name:'门子',fullName:'门子',color:0x8d8a72,css:'#8d8a72',relation:'应天府门子',description:'原是葫芦庙里的小沙弥。庙火之后无处安身，蓄了发充作衙门门子，认出任知府的雨村。'},
+  plaintiff:{name:'原告',fullName:'冯家仆人',color:0x8a7f6d,css:'#8a7f6d',relation:'冯家老仆',description:'主人冯渊被薛家豪奴打死，凶身逃逸，他告了一年的状无人作主。'},
+  xuepan:{name:'薛蟠',fullName:'薛蟠',color:0x6d8bab,css:'#6d8bab',relation:'薛家公子',description:'字文起，金陵皇商。五岁上性情奢侈，言语傲慢，终日斗鸡走马。人命官司被他视为儿戏，入京后日日受纨绔引诱，比当日更坏十倍。'},
+  xueyima:{name:'薛姨妈',fullName:'薛姨妈',color:0x9c8ea6,css:'#9c8ea6',relation:'薛家寡母',description:'京营节度使王子腾之妹，与王夫人一母所生。为约束儿子执意住进荣府梨香院，声明日用供给一概免却。'},
+  baochai:{name:'宝钗',fullName:'薛宝钗',color:0x8fb3a6,css:'#8fb3a6',relation:'薛家小姐',description:'乳名宝钗，比薛蟠小两岁。肌骨莹润，举止娴雅，读书识字胜过乃兄。随母兄进京待选，与黛玉、迎春等日日同处。'},
 };
 export type ActorId=keyof typeof cast;
 /** Chibi/portrait art is painted facing one side; walking or seating on the other side needs a mirror. Default is left. */
@@ -47,9 +54,12 @@ export type Move={type:'move';actor:ActorId;via:string[]};
 export type Action=Move|{type:'parallel';moves:Move[]}|{type:'show';actor:ActorId;at:string}|{type:'hide';actor:ActorId}|{type:'roof';visible:boolean}|{type:'effect';actor:ActorId;kind:'jade'|'greet'|'rest';duration:number};
 export type StoryStep={id:string;chapter:string;scene:string;title:string;place:string;focus:string;speaker:ActorId|'narrator';text:string;mood?:string;offscreen?:boolean;actions:Action[];source:{chapter:number;paragraphLead:string;textKind:string;layer?:string}};
 export const chapter3Story=script as StoryStep[];
-export const story=[...script1,...script2,...script] as StoryStep[];
-export const chapters=[...sections1,...sections2,...sections.map(s=>({...s,book:3}))];
-export const bookNames:Record<number,string>={1:"第一回",2:"第二回",3:"第三回"};
+export const story=[...script1,...script2,...script,...script4] as StoryStep[];
+/** Index of the last chapter-three node inside `story`; saves taken before chapter four
+ * end here, and a saved ending at or before it must reopen as an ordinary reading state. */
+export const LAST_LEGACY_INDEX=([...script1,...script2,...script] as StoryStep[]).length-1;
+export const chapters=[...sections1,...sections2,...sections.map(s=>({...s,book:3})),...sections4];
+export const bookNames:Record<number,string>={1:"第一回",2:"第二回",3:"第三回",4:"第四回"};
 
 /** Consecutive move actions for different actors describe one shared walk; play them together
  * so a two-person errand no longer costs twice the stage time. Same-actor neighbours stay

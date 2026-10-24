@@ -12,9 +12,11 @@ export type StoryState = {
   focus: string; history: HistoryEntry[]; error: string | null; speed: number;
 };
 type Job = {actor: ActorId; path: Point[]; cursor: number};
-export type SaveData = {version: 3; chapter: 'first-three'; node: string; state: StoryState};
-export const SAVE_KEY = 'honglou-first-three:v3';
-export const LEGACY_SAVE_KEY='honglou-chapter03:v2';
+/** v4 adds chapter four at the end of the line, so an old finale is no longer the finale. */
+export type SaveData = {version: 4; chapter: 'four'; node: string; state: StoryState};
+export const SAVE_KEY = 'honglou-four-chapters:v4';
+export const LEGACY_SAVE_KEY='honglou-first-three:v3';
+export const LEGACY_V2_KEY='honglou-chapter03:v2';
 
 export class StoryEngine {
   maps:Record<string,MapData>;
@@ -142,27 +144,35 @@ export class StoryEngine {
   serialize(): SaveData {
     if (!['reading','ended'].includes(this.state.status)) throw new Error('请等待本段移动结束后保存');
     const state=structuredClone(this.state); state.paused=false;
-    return {version:3,chapter:'first-three',node:this.step.id,state};
+    return {version:4,chapter:'four',node:this.step.id,state};
   }
   restore(input: unknown) {
     // Validate everything before replacing the live world; malformed saves cannot corrupt it.
     const data=structuredClone(input) as {version?:number;chapter?:string;node?:string;state?:StoryState}|null;
+    const current=data?.version===4&&data.chapter==='four';
+    const recent=data?.version===3&&data.chapter==='first-three';
     const legacy=data?.version===2&&data.chapter==='chapter03';
-    if (!data || (!legacy&&(data.version!==3 || data.chapter!=='first-three')) || !data.state) throw new Error('存档版本不兼容');
+    if (!data || (!current&&!recent&&!legacy) || !data.state) throw new Error('存档版本不兼容');
     const state=data.state, index=this.steps.findIndex(s=>s.id===data.node);
     if (index<0 || (legacy?chapter3Story.findIndex(s=>s.id===data.node):index)!==state.index || !['reading','ended'].includes(state.status)) throw new Error('存档剧情节点无效');
-    if ((index===this.steps.length-1)!==(state.status==='ended')) throw new Error('存档结束状态无效');
+    // Nodes of chapter four were appended after the old finale; a save that ended there must
+    // reopen as ordinary reading so the story can continue instead of pretending to be over.
+    const status=(index===this.steps.length-1)!==(state.status==='ended')?'reading':state.status;
+    if (index===this.steps.length-1&&status!=='ended') throw new Error('存档结束状态无效');
     if (!Array.isArray(state.history) || !state.history.every(h=>h && typeof h.id==='string' && typeof h.text==='string' && typeof h.speaker==='string')) throw new Error('存档记录无效');
     const map=this.maps[state.sceneId];
     if(!map || state.sceneId!==this.steps[index].scene || state.effect!==null)throw new Error('存档场景无效');
     if (!map.anchors[state.focus] || typeof state.roofVisible!=='boolean' || ![.5,1,2].includes(state.speed)) throw new Error('存档场景无效');
+    state.actors=state.actors??{} as StoryState['actors'];
     for (const id of Object.keys(cast) as ActorId[]) {
       if(legacy&&state.actors&&!state.actors[id]&&['shiyin','fengshi','yinglian','jiaoxing','fengsu','monk','taoist','kongkong','huoqi','oldmonk'].includes(id))state.actors[id]={col:13,row:28,visible:false,moving:false,direction:1};
+      // Actors added by a later chapter are missing from older saves; seed them invisible.
+      if(!state.actors[id])state.actors[id]={col:13,row:28,visible:false,moving:false,direction:1};
       const a=state.actors?.[id];
       if (!a || !Number.isInteger(a.col) || !Number.isInteger(a.row) || typeof a.visible!=='boolean' || a.moving!==false || ![-1,1].includes(a.direction)) throw new Error(`存档人物无效：${id}`);
       if (a.visible && !map.walkable.has(cellKey(a.col,a.row))) throw new Error(`存档人物位置不可通行：${id}`);
     }
     this.jobs=[]; this.actionIndex=this.steps[index].actions.length; this.userPaused=false; this.overlayPaused=false;
-    this.state=structuredClone(state); this.state.index=index;this.state.paused=false; this.state.error=null; this.emit();
+    this.state=structuredClone(state); this.state.index=index; this.state.status=status; this.state.paused=false; this.state.error=null; this.emit();
   }
 }

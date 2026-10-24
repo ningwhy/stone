@@ -4,7 +4,7 @@
   "name": "荣国府手绘素材",
   "tilewidth": 1100,
   "tileheight": 931,
-  "tilecount": 99,
+  "tilecount": 109,
   "columns": 0,
   "objectalignment": "bottom",
   "tiles": [
@@ -1292,6 +1292,136 @@
           "name": "asset",
           "type": "string",
           "value": "estate-ruins"
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "image": "../public/assets/rongguo/menzi-portrait.png",
+      "imagewidth": 254,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "menzi-portrait"
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "image": "../public/assets/rongguo/menzi-chibi.png",
+      "imagewidth": 53,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "menzi-chibi"
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "image": "../public/assets/rongguo/plaintiff-portrait.png",
+      "imagewidth": 254,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "plaintiff-portrait"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "image": "../public/assets/rongguo/plaintiff-chibi.png",
+      "imagewidth": 99,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "plaintiff-chibi"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "image": "../public/assets/rongguo/xuepan-portrait.png",
+      "imagewidth": 206,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "xuepan-portrait"
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "image": "../public/assets/rongguo/xuepan-chibi.png",
+      "imagewidth": 64,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "xuepan-chibi"
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "image": "../public/assets/rongguo/xueyima-portrait.png",
+      "imagewidth": 247,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "xueyima-portrait"
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "image": "../public/assets/rongguo/xueyima-chibi.png",
+      "imagewidth": 49,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "xueyima-chibi"
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "image": "../public/assets/rongguo/baochai-portrait.png",
+      "imagewidth": 319,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "baochai-portrait"
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "image": "../public/assets/rongguo/baochai-chibi.png",
+      "imagewidth": 49,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "baochai-chibi"
         }
       ]
     }

@@ -1,0 +1,412 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "PlanZones",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 1,
+          "name": "A0 应天府 · 刑堂与退堂密室",
+          "x": 512,
+          "y": 1152,
+          "width": 1536,
+          "height": 896,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 2,
+          "name": "A1 应天府 · 刑堂与退堂密室",
+          "x": 768,
+          "y": 384,
+          "width": 1024,
+          "height": 768,
+          "rotation": 0,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PlanBlockers",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 3,
+      "name": "Anchors",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 3,
+          "name": "plaintiff",
+          "x": 800.0,
+          "y": 1824.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 4,
+          "name": "hall_center",
+          "x": 1248.0,
+          "y": 1760.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 5,
+          "name": "bench",
+          "x": 1248.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 6,
+          "name": "side_door",
+          "x": 1248.0,
+          "y": 1184.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 7,
+          "name": "chamber_host",
+          "x": 1248.0,
+          "y": 608.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 8,
+          "name": "chamber_seat",
+          "x": 1056.0,
+          "y": 736.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Routes",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 9,
+          "name": "动线 court",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "court",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "plaintiff,hall_center,bench",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "动线 chamber",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "chamber",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "bench,side_door,chamber_host",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "动线 seat",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "seat",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "chamber_host,chamber_seat",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Art",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 12,
+          "name": "main-hall",
+          "x": 1575.622,
+          "y": 893.5980000000002,
+          "width": 1100.0,
+          "height": 888.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 4,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "main-hall",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "exterior",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "tea-table",
+          "x": 1248.93,
+          "y": 1440.93,
+          "width": 130.0,
+          "height": 106.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 43,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "tea-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "tea-table",
+          "x": 1248.6509999999998,
+          "y": 672.651,
+          "width": 91.0,
+          "height": 74.19999999999999,
+          "rotation": 0,
+          "visible": true,
+          "gid": 43,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "tea-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "wood-screen",
+          "x": 1568.416,
+          "y": 800.4159999999999,
+          "width": 152.0,
+          "height": 137.6,
+          "rotation": 0,
+          "visible": true,
+          "gid": 39,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "wood-screen",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ArtFootprints",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 15,
+          "name": "tea-table",
+          "x": 1216,
+          "y": 640,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 17,
+          "name": "wood-screen",
+          "x": 1536,
+          "y": 768,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Labels",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "objects": [
+        {
+          "id": 18,
+          "name": "应天府大堂",
+          "x": 1248.0,
+          "y": 1696.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 19,
+          "name": "退堂密室",
+          "x": 1248.0,
+          "y": 544.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "rongguo-art.tsj"
+    }
+  ],
+  "nextlayerid": 8,
+  "nextobjectid": 20,
+  "properties": [
+    {
+      "name": "sceneId",
+      "type": "string",
+      "value": "c4_yamen"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "value": "应天府 · 刑堂与退堂密室"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "value": "formal"
+    }
+  ]
+}

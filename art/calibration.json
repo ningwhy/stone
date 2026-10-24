@@ -1824,6 +1824,116 @@
       ],
       "width": 800,
       "sourceId": "estate-ruins-v2"
+    },
+    {
+      "id": "menzi-portrait",
+      "seed": 10242001,
+      "anchor": [
+        384.0,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "menzi-chibi",
+      "seed": 10242002,
+      "anchor": [
+        384.0,
+        1022
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "plaintiff-portrait",
+      "seed": 10242011,
+      "anchor": [
+        384.0,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "plaintiff-chibi",
+      "seed": 10242012,
+      "anchor": [
+        384.0,
+        1022
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "xuepan-portrait",
+      "seed": 10242021,
+      "anchor": [
+        384,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "xuepan-chibi",
+      "seed": 10242022,
+      "anchor": [
+        384,
+        1022
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "xueyima-portrait",
+      "seed": 10242023,
+      "anchor": [
+        384,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "xueyima-chibi",
+      "seed": 10242024,
+      "anchor": [
+        384,
+        1022
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "baochai-portrait",
+      "seed": 10242025,
+      "anchor": [
+        384,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "baochai-chibi",
+      "seed": 10242026,
+      "anchor": [
+        384,
+        1022
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
     }
   ],
   "placements": [

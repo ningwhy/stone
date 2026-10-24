@@ -13,6 +13,13 @@ export function artImage(key:string) {
   return asset.identity?`${image}?v=${asset.identity.revision}`:image;
 }
 
+/** The production build prunes PNG originals, so every runtime reference must ask for the
+ * WebP sibling. Callers that already hold an asset record use this instead of `.image`. */
+export function assetImage(asset:{image:string;identity?:{revision:string}}):string {
+  const image=asset.image.replace(/\.png$/,'.webp');
+  return asset.identity?`${image}?v=${asset.identity.revision}`:image;
+}
+
 /** Tiled bottom-centre image objects and Phaser use the same image-bottom point.
  * The gameplay anchor is an independent measured point within the bitmap. */
 export function artGround(object:ArtObject) {

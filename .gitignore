@@ -7,3 +7,8 @@ artifacts/*.png
 __pycache__/
 
 .workbuddy/
+
+# Matting intermediates are large and reproducible from art/source + the calibration file.
+# Files already tracked stay tracked so past commits keep working; new ones are ignored.
+art/matted/*.png
+art/matted/*.webp

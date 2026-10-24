@@ -1,6 +1,20 @@
 {
-  "assets": 66,
+  "assets": 76,
   "checks": [
+    {
+      "asset": "baochai-chibi",
+      "pixelsChangedInMask": 570,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "baochai-portrait",
+      "pixelsChangedInMask": 20103,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
     {
       "asset": "baoyu-chibi",
       "pixelsChangedInMask": 1119,
@@ -184,6 +198,20 @@
       "anchorPreserved": true
     },
     {
+      "asset": "menzi-chibi",
+      "pixelsChangedInMask": 484,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "menzi-portrait",
+      "pixelsChangedInMask": 10437,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
       "asset": "messenger-chibi",
       "pixelsChangedInMask": 590,
       "outsideMaskIdentical": true,
@@ -249,6 +277,20 @@
     {
       "asset": "oldmonk-portrait",
       "pixelsChangedInMask": 49950,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "plaintiff-chibi",
+      "pixelsChangedInMask": 548,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "plaintiff-portrait",
+      "pixelsChangedInMask": 4513,
       "outsideMaskIdentical": true,
       "dimensionsPreserved": true,
       "anchorPreserved": true
@@ -366,6 +408,20 @@
       "anchorPreserved": true
     },
     {
+      "asset": "xuepan-chibi",
+      "pixelsChangedInMask": 593,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "xuepan-portrait",
+      "pixelsChangedInMask": 4692,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
       "asset": "xueyan-chibi",
       "pixelsChangedInMask": 1404,
       "outsideMaskIdentical": true,
@@ -375,6 +431,20 @@
     {
       "asset": "xueyan-portrait",
       "pixelsChangedInMask": 11334,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "xueyima-chibi",
+      "pixelsChangedInMask": 486,
+      "outsideMaskIdentical": true,
+      "dimensionsPreserved": true,
+      "anchorPreserved": true
+    },
+    {
+      "asset": "xueyima-portrait",
+      "pixelsChangedInMask": 13666,
       "outsideMaskIdentical": true,
       "dimensionsPreserved": true,
       "anchorPreserved": true

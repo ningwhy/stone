@@ -1,0 +1,8 @@
+{
+  "id": "xueyima-portrait",
+  "seed": 10242004,
+  "features": "丰满圆脸；细长弯眉；慈目含愁；直鼻厚唇；四十上下贵妇，温厚有忧色",
+  "prompt": "Redesign ONLY the facial features of the person in <image1>. The new distinctive identity is: a full rounded motherly face, fine long gently curved brows, soft kind eyes with faint worry lines, a straight nose and full warm lips, a well-preserved gentle noble widow around forty, hair in a plain dark matron's bun with a single jade pin. Keep the head center and angle, hairline, hairstyle, ornaments, clothing and white background. You MUST change the original facial outline and facial proportions to match the specified new identity; do not retain the original pointed doll face when a broad or square face is requested. Paint the new facial geometry and expression in the SAME delicate Chinese ink and watercolor hand-painted illustration style as image1, with subtle natural skin tones and fine brush lines. Make the specified face shape, eye shape and spacing, eyebrows, nose and lips clearly visible and character-specific. Emphasize the characteristic facial proportions enough to read in a small game portrait. Use natural eyes and lips, not glamorous makeup, dark eyeliner or a generic beauty filter. Avoid generic identical doll faces. This is a single head detail crop, not a character sheet. No text.",
+  "model": "qwen_image_2.1_int8_convrot",
+  "steps": 30
+}

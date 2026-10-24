@@ -132,7 +132,7 @@
       "height": 720,
       "anchor": [
         156.582,
-        720.0
+        720
       ],
       "source": "art/source/daiyu-portrait_s10216617-01.png",
       "matte": "art/matted/daiyu-portrait_s10216617-sam.png",
@@ -171,7 +171,7 @@
       "width": 50,
       "height": 116,
       "anchor": [
-        25.0,
+        25,
         115.21
       ],
       "source": "art/source/baoyu-chibi_s10222001-01.png",
@@ -194,7 +194,7 @@
       "width": 190,
       "height": 600,
       "anchor": [
-        95.0,
+        95,
         598.67
       ],
       "source": "art/source/feng-portrait_s10222002-01.png",
@@ -237,7 +237,7 @@
       "width": 296,
       "height": 600,
       "anchor": [
-        148.0,
+        148,
         598.598
       ],
       "source": "art/source/grandmother-portrait_s10222004-01.png",
@@ -280,7 +280,7 @@
       "width": 248,
       "height": 600,
       "anchor": [
-        124.0,
+        124,
         598.668
       ],
       "source": "art/source/wang-portrait_s10222006-01.png",
@@ -409,7 +409,7 @@
       "width": 216,
       "height": 600,
       "anchor": [
-        108.0,
+        108,
         598.641
       ],
       "source": "art/source/yingchun-portrait_s10222012-01.png",
@@ -429,7 +429,7 @@
       "width": 48,
       "height": 116,
       "anchor": [
-        24.0,
+        24,
         115.164
       ],
       "source": "art/source/yingchun-chibi_s10222013-01.png",
@@ -452,7 +452,7 @@
       "width": 224,
       "height": 600,
       "anchor": [
-        112.0,
+        112,
         598.683
       ],
       "source": "art/source/tanchun-portrait_s10222014-01.png",
@@ -495,7 +495,7 @@
       "width": 204,
       "height": 600,
       "anchor": [
-        102.0,
+        102,
         598.544
       ],
       "source": "art/source/xichun-portrait_s10222016-01.png",
@@ -558,7 +558,7 @@
       "width": 46,
       "height": 116,
       "anchor": [
-        23.0,
+        23,
         114.875
       ],
       "source": "art/source/xiren-chibi_s10222019-01.png",
@@ -601,7 +601,7 @@
       "width": 52,
       "height": 116,
       "anchor": [
-        26.0,
+        26,
         115.259
       ],
       "source": "art/source/xueyan-chibi_s10222021-01.png",
@@ -624,7 +624,7 @@
       "width": 254,
       "height": 600,
       "anchor": [
-        127.0,
+        127,
         598.636
       ],
       "source": "art/source/yingge-portrait_s10222022-01.png",
@@ -710,7 +710,7 @@
       "width": 336,
       "height": 600,
       "anchor": [
-        168.0,
+        168,
         598.962
       ],
       "source": "art/source/ruhai-portrait_s10222026-01.png",
@@ -753,7 +753,7 @@
       "width": 170,
       "height": 146,
       "anchor": [
-        85.0,
+        85,
         145.434
       ],
       "source": "art/source/sedan-chair_s10222100-01.png",
@@ -813,7 +813,7 @@
       "width": 190,
       "height": 172,
       "anchor": [
-        95.0,
+        95,
         171.48
       ],
       "source": "art/source/wood-screen_s10222103-01.png",
@@ -833,7 +833,7 @@
       "width": 230,
       "height": 219,
       "anchor": [
-        115.0,
+        115,
         217.681
       ],
       "source": "art/source/dining-table_s10222104-01.png",
@@ -873,7 +873,7 @@
       "width": 340,
       "height": 201,
       "anchor": [
-        170.0,
+        170,
         199.619
       ],
       "source": "art/source/river-boat_s10222106-01.png",
@@ -893,7 +893,7 @@
       "width": 130,
       "height": 106,
       "anchor": [
-        65.0,
+        65,
         105.07
       ],
       "source": "art/source/tea-table_s10222107-01.png",
@@ -956,7 +956,7 @@
       "width": 362,
       "height": 600,
       "anchor": [
-        181.0,
+        181,
         598.601
       ],
       "source": "art/source/leng-portrait_s10222302-01.png",
@@ -1062,7 +1062,7 @@
       "width": 60,
       "height": 116,
       "anchor": [
-        30.0,
+        30,
         115.294
       ],
       "source": "art/source/guide-chibi_s10222307-01.png",
@@ -1085,7 +1085,7 @@
       "width": 272,
       "height": 600,
       "anchor": [
-        136.0,
+        136,
         598.632
       ],
       "source": "art/source/maid-portrait_s10222308-01.png",
@@ -1128,7 +1128,7 @@
       "width": 288,
       "height": 600,
       "anchor": [
-        144.0,
+        144,
         598.656
       ],
       "source": "art/source/messenger-portrait_s10222310-01.png",
@@ -1191,7 +1191,7 @@
       "width": 72,
       "height": 116,
       "anchor": [
-        36.0,
+        36,
         115.243
       ],
       "source": "art/source/nurse_wang-chibi_s10222313-01.png",
@@ -1257,7 +1257,7 @@
       "width": 800,
       "height": 510,
       "anchor": [
-        400.0,
+        400,
         505.939
       ],
       "source": "art/source/estate-grandmother_s10222400-01.png",
@@ -1277,7 +1277,7 @@
       "width": 800,
       "height": 483,
       "anchor": [
-        400.0,
+        400,
         478.633
       ],
       "source": "art/source/estate-east_s10222401-01.png",
@@ -1297,7 +1297,7 @@
       "width": 800,
       "height": 564,
       "anchor": [
-        400.0,
+        400,
         559.524
       ],
       "source": "art/source/estate-wang_s10222402-01.png",
@@ -1317,7 +1317,7 @@
       "width": 800,
       "height": 583,
       "anchor": [
-        400.0,
+        400,
         578.63
       ],
       "source": "art/source/estate-feng_s10222403-01.png",
@@ -1337,7 +1337,7 @@
       "width": 800,
       "height": 553,
       "anchor": [
-        400.0,
+        400,
         548.766
       ],
       "source": "art/source/estate-rear_s10222404-01.png",
@@ -1357,7 +1357,7 @@
       "width": 800,
       "height": 619,
       "anchor": [
-        400.0,
+        400,
         614.823
       ],
       "source": "art/source/estate-bisha_s10222405-01.png",
@@ -1417,7 +1417,7 @@
       "width": 50,
       "height": 116,
       "anchor": [
-        25.0,
+        25,
         115.28
       ],
       "source": "art/source/shiyin-chibi_s10230101-01.png",
@@ -1440,7 +1440,7 @@
       "width": 396,
       "height": 600,
       "anchor": [
-        198.0,
+        198,
         599.028
       ],
       "source": "art/source/fengshi-portrait_s10230102-01.png",
@@ -1460,7 +1460,7 @@
       "width": 44,
       "height": 116,
       "anchor": [
-        22.0,
+        22,
         115.119
       ],
       "source": "art/source/fengshi-chibi_s10230103-01.png",
@@ -1503,7 +1503,7 @@
       "width": 44,
       "height": 80,
       "anchor": [
-        22.0,
+        22,
         79.31
       ],
       "source": "art/source/yinglian-chibi_s10230105-01.png",
@@ -1546,7 +1546,7 @@
       "width": 52,
       "height": 116,
       "anchor": [
-        26.0,
+        26,
         115.034
       ],
       "source": "art/source/jiaoxing-chibi_s10230107-01.png",
@@ -1589,7 +1589,7 @@
       "width": 68,
       "height": 116,
       "anchor": [
-        34.0,
+        34,
         115.07
       ],
       "source": "art/source/fengsu-chibi_s10230109-01.png",
@@ -1612,7 +1612,7 @@
       "width": 406,
       "height": 600,
       "anchor": [
-        203.0,
+        203,
         598.985
       ],
       "source": "art/source/monk-portrait_s10230110-01.png",
@@ -1741,7 +1741,7 @@
       "width": 426,
       "height": 600,
       "anchor": [
-        213.0,
+        213,
         598.971
       ],
       "source": "art/source/huoqi-portrait_s10230116-01.png",
@@ -1761,7 +1761,7 @@
       "width": 58,
       "height": 116,
       "anchor": [
-        29.0,
+        29,
         115.171
       ],
       "source": "art/source/huoqi-chibi_s10230117-01.png",
@@ -1804,7 +1804,7 @@
       "width": 66,
       "height": 116,
       "anchor": [
-        33.0,
+        33,
         115.239
       ],
       "source": "art/source/oldmonk-chibi_s10230119-01.png",
@@ -1827,7 +1827,7 @@
       "width": 800,
       "height": 633,
       "anchor": [
-        400.0,
+        400,
         628.339
       ],
       "source": "art/source/estate-zhen_s10230200-01.png",
@@ -1847,7 +1847,7 @@
       "width": 800,
       "height": 724,
       "anchor": [
-        400.0,
+        400,
         719.212
       ],
       "source": "art/source/estate-hulu_s10230201-01.png",
@@ -1867,7 +1867,7 @@
       "width": 800,
       "height": 452,
       "anchor": [
-        400.0,
+        400,
         447.728
       ],
       "source": "art/source/estate-farm_s10230202-01.png",
@@ -1887,7 +1887,7 @@
       "width": 800,
       "height": 681,
       "anchor": [
-        400.0,
+        400,
         676.646
       ],
       "source": "art/source/estate-yamen_s10230203-01.png",
@@ -1907,7 +1907,7 @@
       "width": 800,
       "height": 544,
       "anchor": [
-        400.0,
+        400,
         539.16
       ],
       "source": "art/source/estate-zhitong_s10230204-01.png",
@@ -1927,7 +1927,7 @@
       "width": 800,
       "height": 691,
       "anchor": [
-        400.0,
+        400,
         686.35
       ],
       "source": "art/source/estate-tavern_s10230205-01.png",
@@ -1947,7 +1947,7 @@
       "width": 800,
       "height": 551,
       "anchor": [
-        400.0,
+        400,
         546.832
       ],
       "source": "art/source/estate-lantern_s10230206-01.png",
@@ -2081,6 +2081,221 @@
       "shear": 0,
       "mirror": false,
       "bodyCompress": null
+    },
+    "menzi-portrait": {
+      "image": "/assets/rongguo/menzi-portrait.png",
+      "width": 254,
+      "height": 600,
+      "anchor": [
+        115.871,
+        598.689
+      ],
+      "source": "art/source/menzi-portrait_s10242001-01.png",
+      "matte": "art/matted/menzi-portrait_s10242001-sam.png",
+      "crop": [
+        207,
+        109,
+        595,
+        1024
+      ],
+      "shear": 0,
+      "mirror": false,
+      "bodyCompress": null
+    },
+    "menzi-chibi": {
+      "image": "/assets/rongguo/menzi-chibi.png",
+      "width": 53,
+      "height": 116,
+      "anchor": [
+        28.299,
+        125.663
+      ],
+      "source": "art/source/menzi-chibi_s10242002-01.png",
+      "matte": "art/matted/menzi-chibi_s10242002-sam.png",
+      "crop": [
+        266,
+        232,
+        487,
+        717
+      ],
+      "shear": 0,
+      "mirror": false,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
+    },
+    "plaintiff-portrait": {
+      "image": "/assets/rongguo/plaintiff-portrait.png",
+      "width": 254,
+      "height": 600,
+      "anchor": [
+        99.356,
+        628.877
+      ],
+      "source": "art/source/plaintiff-portrait_s10242011-01.png",
+      "matte": "art/matted/plaintiff-portrait_s10242011-sam.png",
+      "crop": [
+        260,
+        238,
+        577,
+        986
+      ],
+      "shear": 0,
+      "mirror": false,
+      "bodyCompress": null
+    },
+    "plaintiff-chibi": {
+      "image": "/assets/rongguo/plaintiff-chibi.png",
+      "width": 99,
+      "height": 116,
+      "anchor": [
+        47.335,
+        130.906
+      ],
+      "source": "art/source/plaintiff-chibi_s10242012-01.png",
+      "matte": "art/matted/plaintiff-chibi_s10242012-sam.png",
+      "crop": [
+        220,
+        306,
+        563,
+        706
+      ],
+      "shear": 0,
+      "mirror": false,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
+    },
+    "xuepan-portrait": {
+      "image": "/assets/rongguo/xuepan-portrait.png",
+      "width": 206,
+      "height": 600,
+      "anchor": [
+        80.954,
+        623.105
+      ],
+      "source": "art/source/xuepan-portrait_s10242021-01.png",
+      "matte": "art/matted/xuepan-portrait_s10242021-sam.png",
+      "crop": [
+        272,
+        159,
+        557,
+        990
+      ],
+      "shear": 0,
+      "mirror": false,
+      "bodyCompress": null
+    },
+    "xuepan-chibi": {
+      "image": "/assets/rongguo/xuepan-chibi.png",
+      "width": 64,
+      "height": 116,
+      "anchor": [
+        34.89,
+        121.692
+      ],
+      "source": "art/source/xuepan-chibi_s10242022-01.png",
+      "matte": "art/matted/xuepan-chibi_s10242022-sam.png",
+      "crop": [
+        221,
+        193,
+        520,
+        731
+      ],
+      "shear": 0,
+      "mirror": false,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
+    },
+    "xueyima-portrait": {
+      "image": "/assets/rongguo/xueyima-portrait.png",
+      "width": 247,
+      "height": 600,
+      "anchor": [
+        69.734,
+        598.696
+      ],
+      "source": "art/source/xueyima-portrait_s10242023-01.png",
+      "matte": "art/matted/xueyima-portrait_s10242023-sam.png",
+      "crop": [
+        277,
+        104,
+        656,
+        1024
+      ],
+      "shear": 0,
+      "mirror": false,
+      "bodyCompress": null
+    },
+    "xueyima-chibi": {
+      "image": "/assets/rongguo/xueyima-chibi.png",
+      "width": 49,
+      "height": 116,
+      "anchor": [
+        22.424,
+        124.339
+      ],
+      "source": "art/source/xueyima-chibi_s10242024-01.png",
+      "matte": "art/matted/xueyima-chibi_s10242024-sam.png",
+      "crop": [
+        276,
+        155,
+        512,
+        717
+      ],
+      "shear": 0,
+      "mirror": false,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
+    },
+    "baochai-portrait": {
+      "image": "/assets/rongguo/baochai-portrait.png",
+      "width": 319,
+      "height": 600,
+      "anchor": [
+        156.907,
+        598.703
+      ],
+      "source": "art/source/baochai-portrait_s10242025-01.png",
+      "matte": "art/matted/baochai-portrait_s10242025-sam.png",
+      "crop": [
+        142,
+        99,
+        634,
+        1024
+      ],
+      "shear": 0,
+      "mirror": false,
+      "bodyCompress": null
+    },
+    "baochai-chibi": {
+      "image": "/assets/rongguo/baochai-chibi.png",
+      "width": 49,
+      "height": 116,
+      "anchor": [
+        24.402,
+        118.826
+      ],
+      "source": "art/source/baochai-chibi_s10242026-01.png",
+      "matte": "art/matted/baochai-chibi_s10242026-sam.png",
+      "crop": [
+        259,
+        152,
+        510,
+        743
+      ],
+      "shear": 0,
+      "mirror": false,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
     }
   }
 }

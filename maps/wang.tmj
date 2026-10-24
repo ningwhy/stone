@@ -171,6 +171,17 @@
           "rotation": 0,
           "visible": true,
           "point": true
+        },
+        {
+          "id": 26,
+          "name": "li_room",
+          "x": 1568.0,
+          "y": 544.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
         }
       ]
     },
@@ -491,7 +502,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 26,
+  "nextobjectid": 27,
   "properties": [
     {
       "name": "sceneId",

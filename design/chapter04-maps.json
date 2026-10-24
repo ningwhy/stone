@@ -1,0 +1,22 @@
+{
+ "wang": {
+  "name": "荣国府 · 王夫人起居处",
+  "props": [["estate-wang", 0, 0, 1]]
+ },
+ "c4_yamen": {
+  "name": "应天府 · 刑堂与密室",
+  "props": [["estate-yamen", 0, 0, 1]]
+ },
+ "capital": {
+  "name": "京城 · 宁荣街",
+  "props": [["manor-main-gate", 0, 0, 1]]
+ },
+ "central": {
+  "name": "荣禧堂 · 大厅",
+  "props": [["estate-bisha", 0, 0, 1]]
+ },
+ "c4_lixiang": {
+  "name": "荣府东北角 · 梨香院",
+  "props": [["estate-rear", 0, 0, 1]]
+ }
+}

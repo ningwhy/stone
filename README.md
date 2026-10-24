@@ -1,6 +1,6 @@
 # 红楼一隅 · 等距叙事地图
 
-《红楼梦》前三回的交互改编原型：234 个剧情节点、23 个段落、18 张 40×40 等距局部地图，配有荣国府总览与前两回行迹。33 名人物有立绘和 Q 版，共 66 张人物图；运行美术资产共 99 张。人物五官已分别设计并重绘，图鉴支持头肩近景。
+《红楼梦》前四回的交互改编原型：346 个剧情节点、32 个段落、20 张 40×40 等距局部地图，配有荣国府总览与各回行迹。38 名人物有立绘和 Q 版，共 76 张人物图；运行美术资产共 109 张。人物五官已分别设计并重绘，图鉴支持头肩近景。
 
 地图为原文关系约束下的叙事舞台，非建筑测绘复原；文字为交互改编，尚需底本逐句校订。人物当前以静态姿态移动，精细建筑遮挡与完整走路帧尚未制作。
 
@@ -28,7 +28,7 @@ npm run dev
 
 默认 `http://127.0.0.1:5173`。点击“继续剧情”或空格推进，移动期间可跳过；拖动/缩放地图，用“回到剧情镜头”恢复跟随。顶部聚合自动、回看、暂停与推进；设置中有存档、地点目录、人物图鉴和来源说明。首次进入有加载页（Q 版人物沿进度条奔跑）；切换场景时保留上一帧并显示同款加载卡，空闲时预取后续场景素材；美术以 WebP 交付（约 3MB）。竖屏手机会收到横屏邀请，也可选择继续竖屏浏览。
 
-浏览总览不改变剧情，明确点击地点定位才跳转。每条稳定对白自动保存，刷新后恢复；弹窗暂停演出并保留手动暂停状态。当前支持旧第三回 v2 存档迁移到前三回 v3，继续扩回时需另做兼容，不能简单改名字。
+浏览总览不改变剧情，明确点击地点定位才跳转。每条稳定对白自动保存，刷新后恢复；弹窗暂停演出并保留手动暂停状态。存档格式为 v4（`honglou-four-chapters:v4`），旧第三回 v2 与前三回 v3 存档按节点 ID 迁移；旧终幕不再算全书终幕，会以阅读态继续第四回。
 
 ## 验证
 
@@ -59,13 +59,14 @@ python3 scripts/verify_character_identities.py
 ## 数据与证据
 
 - [前三回覆盖与存档说明](docs/first-three-chapters.md)
+- [第四回制作记录](docs/chapter04-production.md)
 - [荣国府方位与原文推定](docs/estate-geography.md)
 - [人物身份重绘流程](docs/character-identities.md)
 - [主角灰度前后对照](art/identity/main-face-comparison.png)、[全人物面部](art/identity/cast-faces.png)、[立绘/Q 版配对](art/identity/paired-identities.png)
 - [透明素材与锚点接触表](art/asset-contact.png)
-- [第三回剧情](design/chapter03-story.json)、[入府 Tiled 地图](maps/rongguo-entry.tmj)、[总览 Tiled 参考](maps/world/rongguo-overview.tmj)
+- [第三回剧情](design/chapter03-story.json)、[第四回剧情](design/chapter04-story.json)、[入府 Tiled 地图](maps/rongguo-entry.tmj)、[总览 Tiled 参考](maps/world/rongguo-overview.tmj)
 
-网页读取 `maps/*.tmj` 的 18 张局部地图；总览读取 `design/rongguo-world.json`，`maps/world` 为单向导出参考。Tiled 中对象实际坐标优先，资产尺寸与锚点由 manifest 校准契约提供。
+网页读取 `maps/*.tmj` 的 20 张局部地图；总览读取 `design/rongguo-world.json`，`maps/world` 为单向导出参考。Tiled 中对象实际坐标优先，资产尺寸与锚点由 manifest 校准契约提供。
 
 西角门在西墙是本项目采用的方案；黑油门位于南墙偏东。原文明示去程出西角门、往东过正门、入黑油门，回程经过正门是本版设计选择。原文没有唯一精确总图。
 

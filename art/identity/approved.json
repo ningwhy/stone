@@ -1057,6 +1057,166 @@
       "mask": "art/identity/oldmonk-chibi/mask-native.png",
       "request": "art/identity/oldmonk-chibi/request.json",
       "portraitReference": "art/identity/oldmonk-portrait/reference.png"
+    },
+    "menzi-portrait": {
+      "character": "menzi",
+      "features": "瘦长脸；细挑眉；灵活小眼滴溜溜转；尖鼻薄唇，嘴角常带讨好的笑；市侩精明而表面恭谨",
+      "seed": 10242001,
+      "faceBox": [
+        81,
+        54,
+        159,
+        159
+      ],
+      "original": "art/identity/originals/menzi-portrait.png",
+      "final": "art/identity/menzi-portrait/final.png",
+      "mask": "art/identity/menzi-portrait/mask-native.png",
+      "request": "art/identity/menzi-portrait/request.json",
+      "portraitReference": null
+    },
+    "menzi-chibi": {
+      "character": "menzi",
+      "features": "瘦长脸；细挑眉；灵活小眼滴溜溜转；尖鼻薄唇，嘴角常带讨好的笑；市侩精明而表面恭谨",
+      "seed": 10242002,
+      "faceBox": [
+        22,
+        16,
+        43,
+        31
+      ],
+      "original": "art/identity/originals/menzi-chibi.png",
+      "final": "art/identity/menzi-chibi/final.png",
+      "mask": "art/identity/menzi-chibi/mask-native.png",
+      "request": "art/identity/menzi-chibi/request.json",
+      "portraitReference": "art/identity/menzi-portrait/reference.png"
+    },
+    "plaintiff-portrait": {
+      "character": "plaintiff",
+      "features": "老瘦脸，深色皱纹；稀疏白眉；浑浊含泪的眼；塌鼻厚唇，瘪嘴无牙，一脸苦相",
+      "seed": 10242002,
+      "faceBox": [
+        9,
+        45,
+        66,
+        106
+      ],
+      "original": "art/identity/originals/plaintiff-portrait.png",
+      "final": "art/identity/plaintiff-portrait/final.png",
+      "mask": "art/identity/plaintiff-portrait/mask-native.png",
+      "request": "art/identity/plaintiff-portrait/request.json",
+      "portraitReference": null
+    },
+    "plaintiff-chibi": {
+      "character": "plaintiff",
+      "features": "老瘦脸，深色皱纹；稀疏白眉；浑浊含泪的眼；塌鼻厚唇，瘪嘴无牙，一脸苦相",
+      "seed": 10242003,
+      "faceBox": [
+        72,
+        9,
+        92,
+        28
+      ],
+      "original": "art/identity/originals/plaintiff-chibi.png",
+      "final": "art/identity/plaintiff-chibi/final.png",
+      "mask": "art/identity/plaintiff-chibi/mask-native.png",
+      "request": "art/identity/plaintiff-chibi/request.json",
+      "portraitReference": "art/identity/plaintiff-portrait/reference.png"
+    },
+    "xuepan-portrait": {
+      "character": "xuepan",
+      "features": "圆胖脸带横肉；短促浓眉；细眼白多；酒糟鼻头；阔嘴厚唇，骄纵跋扈",
+      "seed": 10242003,
+      "faceBox": [
+        68,
+        10,
+        124,
+        72
+      ],
+      "original": "art/identity/originals/xuepan-portrait.png",
+      "final": "art/identity/xuepan-portrait/final.png",
+      "mask": "art/identity/xuepan-portrait/mask-native.png",
+      "request": "art/identity/xuepan-portrait/request.json",
+      "portraitReference": null
+    },
+    "xuepan-chibi": {
+      "character": "xuepan",
+      "features": "圆胖脸带横肉；短促浓眉；细眼白多；酒糟鼻头；阔嘴厚唇，骄纵跋扈",
+      "seed": 10242004,
+      "faceBox": [
+        25,
+        3,
+        45,
+        24
+      ],
+      "original": "art/identity/originals/xuepan-chibi.png",
+      "final": "art/identity/xuepan-chibi/final.png",
+      "mask": "art/identity/xuepan-chibi/mask-native.png",
+      "request": "art/identity/xuepan-chibi/request.json",
+      "portraitReference": "art/identity/xuepan-portrait/reference.png"
+    },
+    "xueyima-portrait": {
+      "character": "xueyima",
+      "features": "丰满圆脸；细长弯眉；慈目含愁；直鼻厚唇；四十上下贵妇，温厚有忧色",
+      "seed": 10242004,
+      "faceBox": [
+        78,
+        42,
+        162,
+        171
+      ],
+      "original": "art/identity/originals/xueyima-portrait.png",
+      "final": "art/identity/xueyima-portrait/final.png",
+      "mask": "art/identity/xueyima-portrait/mask-native.png",
+      "request": "art/identity/xueyima-portrait/request.json",
+      "portraitReference": null
+    },
+    "xueyima-chibi": {
+      "character": "xueyima",
+      "features": "丰满圆脸；细长弯眉；慈目含愁；直鼻厚唇；四十上下贵妇，温厚有忧色",
+      "seed": 10242005,
+      "faceBox": [
+        17,
+        13,
+        35,
+        32
+      ],
+      "original": "art/identity/originals/xueyima-chibi.png",
+      "final": "art/identity/xueyima-chibi/final.png",
+      "mask": "art/identity/xueyima-chibi/mask-native.png",
+      "request": "art/identity/xueyima-chibi/request.json",
+      "portraitReference": "art/identity/xueyima-portrait/reference.png"
+    },
+    "baochai-portrait": {
+      "character": "baochai",
+      "features": "丰满鹅蛋脸；修眉；黑白分明的圆眼；鼻腻鹅脂；唇不点而红，约十四岁，娴雅含蓄",
+      "seed": 10242005,
+      "faceBox": [
+        105,
+        72,
+        216,
+        216
+      ],
+      "original": "art/identity/originals/baochai-portrait.png",
+      "final": "art/identity/baochai-portrait/final.png",
+      "mask": "art/identity/baochai-portrait/mask-native.png",
+      "request": "art/identity/baochai-portrait/request.json",
+      "portraitReference": null
+    },
+    "baochai-chibi": {
+      "character": "baochai",
+      "features": "丰满鹅蛋脸；修眉；黑白分明的圆眼；鼻腻鹅脂；唇不点而红，约十四岁，娴雅含蓄",
+      "seed": 10242006,
+      "faceBox": [
+        16,
+        14,
+        38,
+        32
+      ],
+      "original": "art/identity/originals/baochai-chibi.png",
+      "final": "art/identity/baochai-chibi/final.png",
+      "mask": "art/identity/baochai-chibi/mask-native.png",
+      "request": "art/identity/baochai-chibi/request.json",
+      "portraitReference": "art/identity/baochai-portrait/reference.png"
     }
   }
 }

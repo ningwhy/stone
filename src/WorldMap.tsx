@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { artAssets, artImage } from './art.ts';
+import { artAssets, artImage, assetImage } from './art.ts';
 import { worldRouteCells, worldRoadSegments } from './worldRoutes.ts';
 import geography from '../design/rongguo-world.json' with {type:'json'};
 
@@ -31,7 +31,7 @@ export function WorldMap({sceneId,travel,onVisit}:{sceneId:string;travel:Travel|
   const path=(points:{x:number;y:number}[])=>points.map(p=>`${p.x},${p.y}`).join(' ');
   const sites=worldLocations.filter(l=>!l.external).sort((a,b)=>a.col+a.row-b.col-b.row);
   const openSite=(id:string)=>setSelected(id);
-  const imageAt=(asset:string,col:number,row:number,width:number,key:string)=>{const a=artAssets[asset],p=iso(col,row);if(!a)return null;const scale=width/a.width;return <image onLoad={e=>{e.currentTarget.dataset.loaded='true';}} key={key} href={a.image} x={p.x-a.anchor[0]*scale} y={p.y-a.anchor[1]*scale} width={width} height={a.height*scale} pointerEvents="none"/>;};
+  const imageAt=(asset:string,col:number,row:number,width:number,key:string)=>{const a=artAssets[asset],p=iso(col,row);if(!a)return null;const scale=width/a.width;return <image onLoad={e=>{e.currentTarget.dataset.loaded='true';}} key={key} href={assetImage(a)} x={p.x-a.anchor[0]*scale} y={p.y-a.anchor[1]*scale} width={width} height={a.height*scale} pointerEvents="none"/>;};
   const spine=geography.roads.spineCol;
   const roadLines=worldRoadSegments.map(segment=>path(segment.map(p=>iso(p.col,p.row))));
   return <div className="world-map" aria-label="荣国府总览">
@@ -55,7 +55,7 @@ export function WorldMap({sceneId,travel,onVisit}:{sceneId:string;travel:Travel|
         return <g key={l.id} onClick={()=>openSite(l.id)} className={`world-location ${current?'current':''}`} data-asset={l.asset}>
           <polygon points={poly(l.col-l.width/2,l.row-l.height/2,l.width,l.height)} fill={current?'#e4d7b4':'#ded6bf'} stroke={current?'#ab8650':'#b6b79a'} strokeWidth={current?2:1}/>
           <polygon points={poly(l.col-l.width/2+.3,l.row-l.height/2+.3,l.width-.6,l.height-.6)} fill="url(#paving)"/>
-          {a&&<image onLoad={e=>{e.currentTarget.dataset.loaded='true';}} href={a.image} x={p.x-a.anchor[0]*scale} y={p.y-a.anchor[1]*scale} width={width} height={a.height*scale} filter="url(#building-shadow)"/>}
+          {a&&<image onLoad={e=>{e.currentTarget.dataset.loaded='true';}} href={assetImage(a)} x={p.x-a.anchor[0]*scale} y={p.y-a.anchor[1]*scale} width={width} height={a.height*scale} filter="url(#building-shadow)"/>}
 
         </g>;
       })}

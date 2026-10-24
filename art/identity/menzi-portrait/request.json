@@ -1,0 +1,8 @@
+{
+  "id": "menzi-portrait",
+  "seed": 10242001,
+  "features": "瘦长脸；细挑眉；灵活小眼滴溜溜转；尖鼻薄唇，嘴角常带讨好的笑；市侩精明而表面恭谨",
+  "prompt": "Redesign ONLY the facial features of the person in <image1>. The new distinctive identity is: a thin narrow face with slightly sunken cheeks, thin high arched eyebrows, small lively darting eyes always reading the room, a pointed nose and thin lips curled in an ingratiating smile, a shrewd self-effacing young yamen runner; clean-shaven, no beard, retain the shaved forehead of a former novice monk. Keep the head center and angle, hairline, hairstyle, ornaments, clothing and white background. You MUST change the original facial outline and facial proportions to match the specified new identity; do not retain the original pointed doll face when a broad or square face is requested. Paint the new facial geometry and expression in the SAME delicate Chinese ink and watercolor hand-painted illustration style as image1, with subtle natural skin tones and fine brush lines. Make the specified face shape, eye shape and spacing, eyebrows, nose and lips clearly visible and character-specific. Emphasize the characteristic facial proportions enough to read in a small game portrait. Use natural eyes and lips, not glamorous makeup, dark eyeliner or a generic beauty filter. Avoid generic identical doll faces. This is a single head detail crop, not a character sheet. No text.",
+  "model": "qwen_image_2.1_int8_convrot",
+  "steps": 30
+}

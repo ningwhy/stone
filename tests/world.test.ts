@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import geography from '../design/rongguo-world.json' with {type:'json'};
 import { worldRouteCells,worldRoadSegments } from '../src/worldRoutes.ts';
-import { StoryEngine,LEGACY_SAVE_KEY,SAVE_KEY } from '../src/engine.ts';
+import { StoryEngine,LEGACY_SAVE_KEY,LEGACY_V2_KEY,SAVE_KEY } from '../src/engine.ts';
+import { LAST_LEGACY_INDEX } from '../src/story.ts';
 import { story,chapter3Story } from '../src/story.ts';
 import { parseTiledMap } from '../src/model.ts';
 import { readFileSync,readdirSync } from 'node:fs';
@@ -35,7 +36,7 @@ test('original chapter-three v2 save migrates by node and populates new actors s
  const original=new StoryEngine(maps(),chapter3Story);original.seek('B010');const v3=original.serialize();const actors=structuredClone(v3.state.actors);
  for(const id of ['shiyin','fengshi','yinglian','jiaoxing','fengsu','monk','taoist','kongkong','huoqi','oldmonk'])delete (actors as Record<string,unknown>)[id];
  const legacy={version:2,chapter:'chapter03',node:v3.node,state:{...v3.state,actors}};
- const engine=new StoryEngine(maps());engine.restore(legacy);assert.equal(engine.step.id,'B010');assert.equal(engine.getSnapshot().index,story.findIndex(s=>s.id==='B010'));assert.equal(engine.getSnapshot().actors.shiyin.visible,false);assert.equal(engine.serialize().version,3);assert.notEqual(SAVE_KEY,LEGACY_SAVE_KEY);
+ const engine=new StoryEngine(maps());engine.restore(legacy);assert.equal(engine.step.id,'B010');assert.equal(engine.getSnapshot().index,story.findIndex(s=>s.id==='B010'));assert.equal(engine.getSnapshot().actors.shiyin.visible,false);assert.equal(engine.serialize().version,4);assert.notEqual(SAVE_KEY,LEGACY_SAVE_KEY);assert.equal(engine.getSnapshot().actors.menzi.visible,false,'chapter-four actors seeded invisible');
 });
 test('every prequel set piece and human speaker has a deliberate stage appearance',()=>{
  const stageMaps=maps();
@@ -51,4 +52,23 @@ test('Tiled reference exports the same west and south gate coordinates as the ru
  const tiled=JSON.parse(readFileSync(new URL('../maps/world/rongguo-overview.tmj',import.meta.url),'utf8'));
  const gates=tiled.layers.find((l:{name:string})=>l.name==='Gates').objects;
  for(const g of geography.gates){const o=gates.find((o:{properties:{name:string;value:string}[]})=>o.properties.some(p=>p.name==='gateId'&&p.value===g.id));assert.ok(o);assert.equal(o.x,(g.col+.5)*64);assert.equal(o.y,(g.row+.5)*64);}
+});
+
+test('a v3 save taken at the old finale reopens as reading at the same node',()=>{
+ const before=new StoryEngine(maps(),story.slice(0,LAST_LEGACY_INDEX+1));before.seek('END');
+ const legacy={version:3,chapter:'first-three',node:'END',state:{...structuredClone(before.getSnapshot()),status:'ended'}};
+ assert.equal(legacy.state.index,LAST_LEGACY_INDEX,'END must be the last pre-chapter-four node');
+ const engine=new StoryEngine(maps());engine.restore(legacy);
+ assert.equal(engine.step.id,'END');assert.equal(engine.getSnapshot().status,'reading','old finale must reopen for chapter four');
+ engine.advance();let guard=0;while(engine.getSnapshot().status==='moving'&&guard++<500)engine.tick(.1);assert.ok(guard<500);assert.equal(engine.step.source.chapter,4,'advancing past the old finale enters chapter four');
+ assert.equal(engine.serialize().version,4);
+});
+
+test('v4 saves round-trip and unknown versions still fail cleanly',()=>{
+ const e=new StoryEngine(maps());e.seek('C04-006');
+ const saved=e.serialize();assert.equal(saved.version,4);assert.equal(saved.chapter,'four');
+ const r=new StoryEngine(maps());r.restore(JSON.parse(JSON.stringify(saved)));
+ assert.equal(r.step.id,'C04-006');assert.deepEqual(r.getSnapshot(),e.getSnapshot());
+ assert.throws(()=>r.restore({version:9,chapter:'nine',node:'C04-006',state:saved.state}),/存档版本不兼容/);
+ assert.throws(()=>r.restore(null),/存档/);
 });
