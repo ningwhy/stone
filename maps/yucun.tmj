@@ -185,19 +185,19 @@
         },
         {
           "id": 8,
-          "name": "tea-table",
-          "x": 1248.837,
-          "y": 864.837,
-          "width": 117.0,
-          "height": 95.4,
+          "name": "writing-desk",
+          "x": 1248.655,
+          "y": 864.655,
+          "width": 180.0,
+          "height": 147.0,
           "rotation": 0,
           "visible": true,
-          "gid": 43,
+          "gid": 112,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "tea-table",
+              "value": "writing-desk",
               "type": "string"
             },
             {
@@ -269,6 +269,64 @@
               "type": "float"
             }
           ]
+        },
+        {
+          "id": 13,
+          "name": "official-chair",
+          "x": 1312.444,
+          "y": 736.444,
+          "width": 100.0,
+          "height": 138.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 113,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "official-chair"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "cabinet",
+          "x": 1696.592,
+          "y": 1184.592,
+          "width": 130.0,
+          "height": 222.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 116,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "cabinet"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
         }
       ]
     },
@@ -284,11 +342,33 @@
       "objects": [
         {
           "id": 11,
-          "name": "tea-table",
+          "name": "writing-desk",
           "x": 1216,
           "y": 832,
           "width": 64,
           "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 14,
+          "name": "official-chair",
+          "x": 1280,
+          "y": 704,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 16,
+          "name": "cabinet",
+          "x": 1664,
+          "y": 1152,
+          "width": 64.0,
+          "height": 64.0,
           "rotation": 0,
           "visible": true,
           "type": "collision"
@@ -325,7 +405,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 13,
+  "nextobjectid": 17,
   "properties": [
     {
       "name": "sceneId",

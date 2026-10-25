@@ -4,7 +4,7 @@
   "name": "荣国府手绘素材",
   "tilewidth": 1100,
   "tileheight": 931,
-  "tilecount": 109,
+  "tilecount": 118,
   "columns": 0,
   "objectalignment": "bottom",
   "tiles": [
@@ -519,7 +519,7 @@
       "id": 39,
       "image": "../public/assets/rongguo/dining-table.png",
       "imagewidth": 230,
-      "imageheight": 219,
+      "imageheight": 224,
       "properties": [
         {
           "name": "asset",
@@ -558,7 +558,7 @@
       "id": 42,
       "image": "../public/assets/rongguo/tea-table.png",
       "imagewidth": 130,
-      "imageheight": 106,
+      "imageheight": 115,
       "properties": [
         {
           "name": "asset",
@@ -1422,6 +1422,123 @@
           "name": "asset",
           "type": "string",
           "value": "baochai-chibi"
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "image": "../public/assets/rongguo/square-table.png",
+      "imagewidth": 165,
+      "imageheight": 164,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "square-table"
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "image": "../public/assets/rongguo/altar-table.png",
+      "imagewidth": 195,
+      "imageheight": 164,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "altar-table"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "image": "../public/assets/rongguo/writing-desk.png",
+      "imagewidth": 180,
+      "imageheight": 147,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "writing-desk"
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "image": "../public/assets/rongguo/official-chair.png",
+      "imagewidth": 100,
+      "imageheight": 138,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "official-chair"
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "image": "../public/assets/rongguo/round-stool.png",
+      "imagewidth": 70,
+      "imageheight": 93,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "round-stool"
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "image": "../public/assets/rongguo/square-stool.png",
+      "imagewidth": 70,
+      "imageheight": 77,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "square-stool"
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "image": "../public/assets/rongguo/cabinet.png",
+      "imagewidth": 130,
+      "imageheight": 222,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "cabinet"
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "image": "../public/assets/rongguo/brazier.png",
+      "imagewidth": 90,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "brazier"
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "image": "../public/assets/rongguo/vase-stand.png",
+      "imagewidth": 110,
+      "imageheight": 163,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "vase-stand"
         }
       ]
     }

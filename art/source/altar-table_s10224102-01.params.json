@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "altar-table_s10224102-01",
+  "seed": 10224102,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏素材，清代条案一张，长条形厚案面，两头翘头，四条案腿与横枨，案面上同一平面置青花瓷瓶一只与小香炉一座，两件器物都摆放在案面上，无人物。二比一菱形正交等距俯视，无透视消失点，完整居中，四周留白。纯白背景，无地面平台，无周围建筑，无文字牌匾，无签名。\n绝对不要出现房间、墙壁、门窗、窗棂、屋顶、地板、地毯、台阶、平台、庭院或任何建筑环境，主体家具孤立放置，四周围只有纯白背景。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": null,
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "2d151c10-a3fe-4b17-886a-c81b1b3e1558",
+  "generated_at": "2026-10-24 22:59:14",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1k-1k"
+}

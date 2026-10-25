@@ -18,6 +18,16 @@ for(const [key,asset] of Object.entries(manifest)){
  requireThat(existsSync(resolve(root,'public'+asset.image)),`${key}: missing runtime PNG`);
  requireThat(asset.width>0&&asset.height>0&&asset.anchor?.length===2&&asset.anchor.every(Number.isFinite),`${key}: invalid calibrated geometry`);
 }
+// A bitmap on disk that the manifest does not list is unreachable: the
+// runtime looks every asset up by key. A full rebuild of the calibrated
+// assets once dropped the portrait emotion variants this way, and every
+// variant silently fell back to the neutral portrait.
+const assetDir=resolve(root,'public/assets/rongguo');
+for(const file of readdirSync(assetDir)){
+ if(!file.endsWith('.png'))continue;
+ const key=file.replace(/\.png$/,'');
+ requireThat(!!manifest[key],`${key}: PNG on disk is not registered in the manifest`);
+}
 for(const map of maps.values())for(const art of map.art)requireThat(!!manifest[art.asset],`${map.id}: missing art ${art.asset}`);
 const ids=new Set(),sections=new Map();
 for(const section of chapters){
@@ -60,6 +70,18 @@ for(const step of story){
  const book=step.source?.chapter;books.set(book,(books.get(book)??0)+1);
 }
 for(const actor of Object.keys(cast).filter(id=>id!=='sedan'))for(const kind of ['portrait','chibi'])requireThat(!!manifest[`${actor}-${kind}`],`${actor}: missing ${kind}`);
+// The facing table decides whether a sprite is mirrored, so every painted
+// head has to be in it. A bitmap that is not listed would be mirrored by
+// accident or not at all.
+const facingTable=read('design/character-facing.json');
+const facingKeys=new Set([
+ ...Object.entries(facingTable.actors??{}).flatMap(([actor,entry])=>['portrait','chibi'].map(kind=>`${actor}-${kind}`)),
+ ...Object.keys(facingTable.variants??{}),
+]);
+for(const key of Object.keys(manifest)){
+ if(!key.endsWith('-portrait')&&!key.endsWith('-chibi')&&!/-portrait-/.test(key))continue;
+ requireThat(facingKeys.has(key),`${key}: no facing recorded, the sprite would be mirrored by accident`);
+}
 const sourceCode=readFileSync(resolve(root,'src/story.ts'),'utf8');
 for(const book of books.keys()){
  const number=String(book).padStart(2,'0');

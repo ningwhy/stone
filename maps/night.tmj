@@ -352,6 +352,93 @@
               "type": "float"
             }
           ]
+        },
+        {
+          "id": 26,
+          "name": "brazier",
+          "x": 1248.524,
+          "y": 928.5239999999999,
+          "width": 90.0,
+          "height": 116.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 117,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "brazier"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "cabinet",
+          "x": 1696.592,
+          "y": 1312.592,
+          "width": 130.0,
+          "height": 222.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 116,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "cabinet"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "name": "vase-stand",
+          "x": 864.436,
+          "y": 992.436,
+          "width": 110.0,
+          "height": 163.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 118,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "vase-stand"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
         }
       ]
     },
@@ -419,6 +506,39 @@
           "rotation": 0,
           "visible": true,
           "type": "collision"
+        },
+        {
+          "id": 27,
+          "name": "brazier",
+          "x": 1216,
+          "y": 896,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 29,
+          "name": "cabinet",
+          "x": 1664,
+          "y": 1280,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 31,
+          "name": "vase-stand",
+          "x": 832,
+          "y": 960,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
         }
       ]
     },
@@ -474,7 +594,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 26,
+  "nextobjectid": 32,
   "properties": [
     {
       "name": "sceneId",

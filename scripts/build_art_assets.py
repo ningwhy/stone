@@ -49,13 +49,27 @@ for item in config['assets']:
  factor=item['width']/im.width if 'width' in item else item['height']/im.height
  size=(round(im.width*factor),round(im.height*factor));im=im.resize(size,Image.Resampling.LANCZOS)
  ax*=size[0]/(bbox[2]-bbox[0]);ay*=size[1]/(bbox[3]-bbox[1])
- a=np.asarray(im.getchannel('A')).copy();a[a<16]=0;a[a>item.get('solidAlphaThreshold',210)]=255;im.putalpha(Image.fromarray(a))
+ a=np.asarray(im.getchannel('A')).copy();a[a<item.get('alphaFloor',16)]=0;a[a>item.get('solidAlphaThreshold',210)]=255;im.putalpha(Image.fromarray(a))
  assets[key]={'image':f'/assets/rongguo/{key}.png','width':im.width,'height':im.height,'anchor':[round(ax,3),round(ay,3)],'source':f'art/source/{stem}-01.png','matte':str(source.relative_to(ROOT)),'crop':list(bbox),'shear':item.get('targetSlope',0)-item.get('baseSlope',0),'mirror':item.get('mirror',False),'bodyCompress':item.get('bodyCompress')}
  im=apply_identity(ROOT,key,im,assets[key]);im.save(output/f'{key}.png');a=np.asarray(im.getchannel('A'))
  visible=a>0;solid=float((a[visible]>=250).mean()) if visible.any() else 0
  reports.append({'asset':key,'visiblePixels':int(visible.sum()),'solidAlpha250Ratio':round(solid,5),'width':im.width,'height':im.height})
+# The manifest is shared with assets that are not calibrated here: the portrait
+# emotion variants are painted by scripts/build_emotions.py and registered
+# separately. Rebuilding from the calibration alone would silently drop them,
+# so the entries that this run does not produce are carried over.
+existing={}
+manifest_path=output/'manifest.json'
+if manifest_path.exists():
+    try: existing=json.loads(manifest_path.read_text()).get('assets',{})
+    except json.JSONDecodeError: existing={}
+calibrated=set(assets)
+for key,entry in existing.items():
+    if key in calibrated: continue
+    if not (ROOT/'public'/entry.get('image','').lstrip('/')).exists(): continue
+    assets[key]=entry
 manifest={'version':1,'tilewidth':128,'tileheight':64,'assets':assets}
-(output/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 (ROOT/'art/alpha-report.json').write_text(json.dumps(reports,indent=2)+'\n')
 # A collection of images uses standard bottom alignment in Tiled. Gameplay anchors
 # are converted to image-bottom coordinates at export, so no private tileoffset convention.

@@ -430,19 +430,19 @@
         },
         {
           "id": 22,
-          "name": "tea-table",
-          "x": 1632.0,
-          "y": 1312.0,
-          "width": 104.0,
-          "height": 85.0,
+          "name": "altar-table",
+          "x": 1633.167,
+          "y": 1313.167,
+          "width": 195.0,
+          "height": 164.0,
           "rotation": 0,
           "visible": true,
-          "gid": 39,
+          "gid": 111,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "tea-table",
+              "value": "altar-table",
               "type": "string"
             },
             {
@@ -459,19 +459,19 @@
         },
         {
           "id": 24,
-          "name": "tea-table",
-          "x": 1056.0,
-          "y": 1312.0,
-          "width": 104.0,
-          "height": 85.0,
+          "name": "altar-table",
+          "x": 1057.167,
+          "y": 1313.167,
+          "width": 195.0,
+          "height": 164.0,
           "rotation": 0,
           "visible": true,
-          "gid": 40,
+          "gid": 111,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "tea-table",
+              "value": "altar-table",
               "type": "string"
             },
             {
@@ -483,6 +483,122 @@
               "name": "depthOffset",
               "value": 0,
               "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "official-chair-left",
+          "x": 1184.444,
+          "y": 1056.444,
+          "width": 100.0,
+          "height": 138.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 113,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "official-chair"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "official-chair-right",
+          "x": 1440.444,
+          "y": 1056.444,
+          "width": 100.0,
+          "height": 138.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 113,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "official-chair"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "name": "vase-stand-left",
+          "x": 992.4359999999999,
+          "y": 1120.436,
+          "width": 110.0,
+          "height": 163.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 118,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "vase-stand"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "name": "vase-stand-right",
+          "x": 1632.436,
+          "y": 1120.436,
+          "width": 110.0,
+          "height": 163.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 118,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "vase-stand"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
             }
           ]
         }
@@ -522,7 +638,7 @@
         },
         {
           "id": 23,
-          "name": "tea-table",
+          "name": "altar-table",
           "x": 1600,
           "y": 1280,
           "width": 64.0,
@@ -533,7 +649,7 @@
         },
         {
           "id": 25,
-          "name": "tea-table",
+          "name": "altar-table",
           "x": 1024,
           "y": 1280,
           "width": 64.0,
@@ -541,6 +657,50 @@
           "rotation": 0,
           "visible": true,
           "type": ""
+        },
+        {
+          "id": 27,
+          "name": "official-chair-left",
+          "x": 1152,
+          "y": 1024,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 29,
+          "name": "official-chair-right",
+          "x": 1408,
+          "y": 1024,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 31,
+          "name": "vase-stand-left",
+          "x": 960,
+          "y": 1088,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 33,
+          "name": "vase-stand-right",
+          "x": 1600,
+          "y": 1088,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
         }
       ]
     },
@@ -607,7 +767,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 24,
+  "nextobjectid": 34,
   "properties": [
     {
       "name": "sceneId",

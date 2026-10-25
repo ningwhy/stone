@@ -17,6 +17,6 @@ try{
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('feng');await reading();
  for(let i=0;i<8&&(await page.locator('.node-label').textContent())!=='F006';i++){await page.getByRole('button',{name:'继续剧情',exact:true}).click();await reading();}
  assert.equal(await page.locator('.node-label').textContent(),'F006');assert.match(await page.locator('.speaker-portrait img').getAttribute('src'),/feng-portrait\.webp\?v=/);await page.screenshot({path:'artifacts/character-identity-feng.png'});
- const manifest=JSON.parse(readFileSync('public/assets/rongguo/manifest.json'));assert.equal(Object.values(manifest.assets).filter(a=>a.identity).length,76);assert.deepEqual(errors,[]);
- console.log('Passed: 38 versioned close-up portraits, face detail, paired 76-asset manifest, fixed dialogue frame and new Feng portrait in live scene.');
+const manifest=JSON.parse(readFileSync('public/assets/rongguo/manifest.json'));assert.equal(Object.values(manifest.assets).filter(a=>a.identity).length,92);assert.deepEqual(errors,[]);
+console.log('Passed: 38 versioned close-up portraits, face detail, paired 92-asset manifest (76 cast bitmaps plus the 16 portrait emotion variants), fixed dialogue frame and new Feng portrait in live scene.');
 }finally{await browser.close();}

@@ -385,6 +385,325 @@
               "type": "float"
             }
           ]
+        },
+        {
+          "id": 26,
+          "name": "chair-grandmother",
+          "x": 1248.444,
+          "y": 736.444,
+          "width": 100.0,
+          "height": 138.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 113,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "official-chair"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "stool-liwan",
+          "x": 992.419,
+          "y": 800.419,
+          "width": 70.0,
+          "height": 93.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "round-stool"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "name": "stool-yingchun",
+          "x": 992.4190000000001,
+          "y": 1120.419,
+          "width": 70.0,
+          "height": 93.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "round-stool"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "name": "stool-tanchun",
+          "x": 1120.419,
+          "y": 1184.419,
+          "width": 70.0,
+          "height": 93.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "round-stool"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "name": "stool-xichun",
+          "x": 1248.419,
+          "y": 1248.419,
+          "width": 70.0,
+          "height": 93.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "round-stool"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 38,
+          "name": "stool-wang",
+          "x": 1504.419,
+          "y": 864.4190000000001,
+          "width": 70.0,
+          "height": 93.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "round-stool"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 40,
+          "name": "stool-feng",
+          "x": 1568.419,
+          "y": 736.4190000000001,
+          "width": 70.0,
+          "height": 93.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "round-stool"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 42,
+          "name": "square-table",
+          "x": 1056.4744,
+          "y": 1376.4744,
+          "width": 132.0,
+          "height": 131.20000000000002,
+          "rotation": 0,
+          "visible": true,
+          "gid": 110,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "square-table"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 44,
+          "name": "cabinet",
+          "x": 1824.592,
+          "y": 1056.592,
+          "width": 130.0,
+          "height": 222.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 116,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "cabinet"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 46,
+          "name": "vase-stand",
+          "x": 800.436,
+          "y": 736.436,
+          "width": 110.0,
+          "height": 163.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 118,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "vase-stand"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 48,
+          "name": "stool-daiyu",
+          "x": 1376.419,
+          "y": 800.4190000000001,
+          "width": 70.0,
+          "height": 93.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "round-stool"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
         }
       ]
     },
@@ -427,6 +746,127 @@
           "y": 704,
           "width": 64,
           "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 27,
+          "name": "chair-grandmother",
+          "x": 1216,
+          "y": 704,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 29,
+          "name": "stool-liwan",
+          "x": 960,
+          "y": 768,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 31,
+          "name": "stool-yingchun",
+          "x": 960,
+          "y": 1088,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 33,
+          "name": "stool-tanchun",
+          "x": 1088,
+          "y": 1152,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 35,
+          "name": "stool-xichun",
+          "x": 1216,
+          "y": 1216,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 39,
+          "name": "stool-wang",
+          "x": 1472,
+          "y": 832,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 41,
+          "name": "stool-feng",
+          "x": 1536,
+          "y": 704,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 43,
+          "name": "square-table",
+          "x": 1024,
+          "y": 1344,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 45,
+          "name": "cabinet",
+          "x": 1792,
+          "y": 1024,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 47,
+          "name": "vase-stand",
+          "x": 768,
+          "y": 704,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 49,
+          "name": "stool-daiyu",
+          "x": 1344,
+          "y": 768,
+          "width": 64.0,
+          "height": 64.0,
           "rotation": 0,
           "visible": true,
           "type": "collision"
@@ -474,7 +914,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 26,
+  "nextobjectid": 50,
   "properties": [
     {
       "name": "sceneId",

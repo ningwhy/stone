@@ -1,5 +1,5 @@
 import { artAssets, artImage } from './art.ts';
-import { cast, paintedFacing } from './story.ts';
+import { cast, paintedFacingOf } from './story.ts';
 import type { ActorId } from './story.ts';
 import type { Emotion } from './emotion.ts';
 
@@ -25,7 +25,9 @@ export function Portrait({actor, sad=false, closeup=false, face, emotion}: {acto
     const box=asset.identity?.faceBox;
     // The portrait is painted facing one side; showing it on the other side of
     // the panel needs a mirror so it looks towards the speaker or the text.
-    const base=paintedFacing(actor,'portrait');
+    // An emotion variant is a separately painted bitmap, so it is looked up by
+    // its own key — the variants do not all face the same way.
+    const base=paintedFacingOf(key,actor,'portrait');
     const mirrored=face!==undefined&&face!==base;
     if(closeup&&box){
       const h=(box[3]-box[1])*2.25,top=Math.max(0,box[1]-(box[3]-box[1])*.48),cx=(box[0]+box[2])/2;

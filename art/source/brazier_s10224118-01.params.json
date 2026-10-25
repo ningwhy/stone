@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "brazier_s10224118-01",
+  "seed": 10224118,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏道具，一只清代青铜三足火盆，圆形宽厚盆沿，沿上铸双耳，盆内盛红热炭火与微微火焰，三足支架，无人物。画面中只有这一件器物，如商品摄影般孤立呈现，绝对不要出现房间、墙壁、门窗、窗棂、屋顶、地板、地毯、台阶、平台、庭院、虚空或任何建筑环境，四周围只有纯白背景。\n二比一菱形正交等距俯视，无透视消失点，完整居中，四周留白。纯白背景，无地面平台，无周围建筑，无文字牌匾，无签名。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": null,
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "70d45426-17e7-4f3a-a22e-274fbb081f10",
+  "generated_at": "2026-10-24 23:01:59",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1k-1k"
+}

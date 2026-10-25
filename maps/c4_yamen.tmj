@@ -263,19 +263,19 @@
         },
         {
           "id": 13,
-          "name": "tea-table",
-          "x": 1248.93,
-          "y": 1440.93,
-          "width": 130.0,
-          "height": 106.0,
+          "name": "altar-table",
+          "x": 1248.9336,
+          "y": 1440.9336,
+          "width": 156.0,
+          "height": 131.20000000000002,
           "rotation": 0,
           "visible": true,
-          "gid": 43,
+          "gid": 111,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "tea-table",
+              "value": "altar-table",
               "type": "string"
             },
             {
@@ -332,6 +332,35 @@
               "type": "string"
             }
           ]
+        },
+        {
+          "id": 20,
+          "name": "official-chair",
+          "x": 1248.444,
+          "y": 1312.444,
+          "width": 100.0,
+          "height": 138.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 113,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "official-chair"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
         }
       ]
     },
@@ -363,6 +392,17 @@
           "y": 768,
           "width": 64,
           "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 21,
+          "name": "official-chair",
+          "x": 1216,
+          "y": 1280,
+          "width": 64.0,
+          "height": 64.0,
           "rotation": 0,
           "visible": true,
           "type": "collision"
@@ -410,7 +450,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 20,
+  "nextobjectid": 22,
   "properties": [
     {
       "name": "sceneId",

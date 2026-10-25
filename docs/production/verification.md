@@ -19,8 +19,18 @@ npm run test:browser
 node tests/asset-scenes.mjs
 node tests/character-identities.mjs
 node tests/interior-roof.mjs      # 外观随室内占位隐藏/恢复、按栋隔离、roof 覆盖
-node tests/actor-facing.mjs       # 全剧情行走帧与对话框立绘的镜像方向
+node tests/actor-facing.mjs       # 全剧情行走帧与对话框立绘的镜像方向（含表情变体）
 ```
+
+人物位图新增或重画后，朝向表按下面两步重建，再跑 `actor-facing`：
+
+```sh
+python3 scripts/facing_assets.py       # 按资产键多裁切投票测量，写 art/identity/facing-assets.json
+python3 scripts/build_facing.py        # 合并目视裁决，写 design/character-facing.json
+python3 scripts/facing_review_sheet.py # 导出目检表 art/identity/facing-review-sheet.png
+```
+
+`check:content` 会检查两件事：磁盘上每个 PNG 都已在 manifest 内登记（否则运行时查不到），以及每张人物位图都有朝向记录（否则镜像由偶然决定）。
 
 `interior-roof.mjs` 与 `actor-facing.mjs` 默认连本地 5173，支持 `TEST_URL` / `CHROME_PATH`。地图侧辅助脚本（都不起浏览器）：`python3 scripts/story_path_cells.py <mapId>` 在新增陈设前确认没有挡住 move 路线；`python3 scripts/render_map_preview.py <mapId> "<外观名,...>"` 近似渲染室内外布局用于目检；`python3 scripts/annotate_interiors.py` / `scripts/furnish_interiors.py` 幂等写回 Tiled 自定义属性与室内陈设。
 
@@ -41,7 +51,8 @@ python3 scripts/verify_character_identities.py
 | 纯文档 | 相对链接、文件存在、示例对照实际 API、当前统计、覆盖风险说明 |
 | 新对白/剧情 | 内容检查、全节点引擎、段落 seek、回目顺序、信息时间层、长对白目检 |
 | 地图/碰撞/锚点 | 内容检查、实际 A*、门洞及墙穿越、Tiled↔屏幕往返、自然走路和 skip 一致 |
-| 室内外/朝向 | 内容检查、`node tests/interior-roof.mjs`（外观随室内占位隐藏/恢复、按栋隔离）、`node tests/actor-facing.mjs`（行走帧与立绘镜像一致；静止与到达帧的朝向由引擎按站位写入，seek 重放与顺序播放结果一致）、`story_path_cells.py`（新陈设不挡路）、全节点引擎与浏览器回归 |
+| 室内外/朝向 | 内容检查、`node tests/interior-roof.mjs`（外观随室内占位隐藏/恢复、按栋隔离）、`node tests/actor-facing.mjs`（行走帧与立绘镜像一致，含表情变体按自身朝向裁决；静止与到达帧的朝向由引擎按站位写入，seek 重放与顺序播放结果一致）、`story_path_cells.py`（新陈设不挡路）、全节点引擎与浏览器回归 |
+| 新增/重画人物位图 | `python3 scripts/facing_assets.py`（按资产键多裁切投票测量）→ `python3 scripts/build_facing.py`（合并目视裁决，生成 `design/character-facing.json`）→ `node tests/actor-facing.mjs`；`check:content` 会检查每张位图都有朝向记录 |
 | 资产/新人物 | 原图参数/候选留存、透明度报告、暗底接触表、脸部灰度与配对、位置/尺寸、浏览器加载 |
 | 页面/CSS | 三视口、换立绘不跳高、按钮命中、缩放可读性、弹窗暂停、键盘操作 |
 | 新回/存档 | 全流程、新旧中段及旧终幕迁移、坏档恢复、所有演员状态、回看历史无重复 |
@@ -72,6 +83,8 @@ python3 scripts/verify_character_identities.py
 | 新回让旧档无法恢复 | 旧 index/终幕 ended 校验、新演员缺状态、没有版本迁移 |
 | Qwen 图与参考无关 | 官方 API/点分图槽/未删示例槽、prompt 图号、实际保存节点 |
 | ComfyUI 卡住 | 当前队列/服务与网络；不清别人任务、不并行轰炸 |
+| 表情变体不生效 | `manifest.json` 里有没有该 `*-portrait-<emotion>` 条目；`build_art_assets.py` 重建 manifest 会抹掉非校准来源的条目，现已改为合并保留；`check:content` 会检查磁盘上每个 PNG 都已登记 |
+| 某张脸朝向反了 | 该位图在 `design/character-facing.json` 里的记录；先跑 `scripts/facing_assets.py` 重测，再看 `scripts/facing_review_sheet.py` 的目检表；表情变体按自己的键查表，不继承基础立绘 |
 
 ## 交接格式
 

@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import { artAssets, artGround, artImage } from './art.ts';
 import { project, zoneAt } from './model.ts';
 import type { ArtObject, MapData } from './model.ts';
-import { cast, paintedFacing } from './story.ts';
+import { cast, paintedFacingOf } from './story.ts';
 import type { ActorId } from './story.ts';
 import type { StoryEngine } from './engine.ts';
 
@@ -245,7 +245,8 @@ export class MapScene extends Phaser.Scene {
       // left into a room — or was shown there facing someone — stays turned
       // that way until they move again, like a person turning on the spot.
       const sprite=this.actorSprites.get(id);
-      if(sprite)sprite.setFlipX((a.direction===1)!==(paintedFacing(id,'chibi')==='right'));
+      const chibiKey=id==='sedan'?'sedan-chair':`${id}-chibi`;
+      if(sprite)sprite.setFlipX((a.direction===1)!==(paintedFacingOf(chibiKey,id,'chibi')==='right'));
       this.actorLabels.get(id)!.setScale(1/(zoom*scale)).setPosition(0,7/(zoom*scale));
     }
   }

@@ -408,19 +408,19 @@
         },
         {
           "id": 19,
-          "name": "tea-table",
-          "x": 1248.6045,
-          "y": 672.6045,
-          "width": 84.5,
-          "height": 68.9,
+          "name": "square-table",
+          "x": 1248.4151,
+          "y": 672.4150999999999,
+          "width": 115.49999999999999,
+          "height": 114.8,
           "rotation": 0,
           "visible": true,
-          "gid": 43,
+          "gid": 110,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "tea-table",
+              "value": "square-table",
               "type": "string"
             },
             {
@@ -463,6 +463,93 @@
               "type": "float"
             }
           ]
+        },
+        {
+          "id": 26,
+          "name": "official-chair",
+          "x": 1056.444,
+          "y": 672.444,
+          "width": 100.0,
+          "height": 138.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 113,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "official-chair"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "vase-stand",
+          "x": 928.436,
+          "y": 480.43600000000004,
+          "width": 110.0,
+          "height": 163.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 118,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "vase-stand"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "name": "square-stool",
+          "x": 1056.283,
+          "y": 800.283,
+          "width": 70.0,
+          "height": 77.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 115,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "square-stool"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
         }
       ]
     },
@@ -489,11 +576,44 @@
         },
         {
           "id": 22,
-          "name": "tea-table",
+          "name": "square-table",
           "x": 1216,
           "y": 640,
           "width": 64,
           "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 27,
+          "name": "official-chair",
+          "x": 1024,
+          "y": 640,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 29,
+          "name": "vase-stand",
+          "x": 896,
+          "y": 448,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 31,
+          "name": "square-stool",
+          "x": 1024,
+          "y": 768,
+          "width": 64.0,
+          "height": 64.0,
           "rotation": 0,
           "visible": true,
           "type": "collision"
@@ -552,7 +672,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 26,
+  "nextobjectid": 32,
   "properties": [
     {
       "name": "sceneId",

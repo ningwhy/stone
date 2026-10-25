@@ -56,6 +56,19 @@ object.height = imageHeight × s
 
 两个属性由 `scripts/annotate_interiors.py` 幂等写入已提交的 TMJ（`python3 scripts/annotate_interiors.py`）；新增院落或改室内范围时改脚本里的 `INDOOR_ZONES` / `INTERIOR_OF` 再重跑。室内陈设补齐用 `scripts/furnish_interiors.py`，放置格子先用 `scripts/story_path_cells.py` 确认没有被任何 move 路线占用，避免挡路。`scripts/render_map_preview.py` 可在不起服务的情况下近似渲染地板与 Art 布局，用于快速目检室内外效果。
 
+## 室内家具批次摆位（2026-10）
+
+`scripts/furniture_place.py` 用上面的 Bx/By 公式把 9 件新家具写进 11 张室内图，并把 8 处重复的 `tea-table` 换成更合场景的桌子（条案×3、书案×3、八仙桌×2）。计划表在脚本内，幂等：同资产同格的对象已存在就跳过；换装直接改原对象的 asset/gid/宽高并保持地面格不变，关联 ArtFootprints 同步改名。新增对象一律补 64×64 碰撞（与既有家具同约定），`nextobjectid` 取全图最大值递增。
+
+选格规则：
+
+- 家具地面格必须落在某个 `PlanZones` 内（脚本外由 `verify_furniture.py` 复核）。
+- 座位（椅/凳）放在演员身后：该格的 `col+row` 不大于演员格，运行时先绘制，不会盖住人物；西—南向的"背对桌子"方向 col+row 不变，此时凳子与人物同深度并排，同样不遮挡。
+- 大件（条案 195px、顶箱柜 130×222）要预演遮挡：按人物实际 Q 版尺寸逐anchor 估算覆盖率，超过脚部级的擦边就换格；既有场景本来就允许桌子盖住坐姿人物脚边（晚膳圆桌盖贾母约 25%），新家具不高于这个基线。
+- 换装后不挪剧情锚点；`tea-table` 只留在情境需要处（晚膳斟茶、碧纱橱、王夫人茶座、刑堂密室），从 11 张减到 4 张。
+
+`scripts/verify_furniture.py` 复核四件事：每个 Art 的 asset 在 manifest 内、地面格与 Footprints 都在房区内、没有 Art 画在演员前面却盖住演员盒（按剧情 show/move 取真实演员尺寸）、深度用 `artGround` 的地面 y 比较（同格时人物因 +1 在前）。改完跑 `npm test`（全节点 20 图寻路会暴露挡路）与 `node tests/interior-roof.mjs`。
+
 打开 `maps/rongguo-entry.tmj` 或新局部图，保持相对 TSJ 路径和 asset 属性。移动 Art 后核对关联 Anchors；碰撞另改 ArtFootprints。保存刷新网页，先清理不兼容的测试存档或从段落起点重放。Tiled 中看起来对齐还须网页复核脚下锚点。
 
 `build_art_assets.py` 会更新 TSJ 的全部 gid，校准清单顺序变化时需要重导出引用 gid 的地图。网页按 asset 名称读取，但 Tiled 按 gid，不能只让网页看起来对了。

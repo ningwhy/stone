@@ -305,19 +305,19 @@
         },
         {
           "id": 17,
-          "name": "tea-table",
-          "x": 1376.744,
-          "y": 1184.744,
-          "width": 104.0,
-          "height": 84.80000000000001,
+          "name": "square-table",
+          "x": 1376.4744,
+          "y": 1184.4744,
+          "width": 132.0,
+          "height": 131.20000000000002,
           "rotation": 0,
           "visible": true,
-          "gid": 43,
+          "gid": 110,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "tea-table",
+              "value": "square-table",
               "type": "string"
             },
             {
@@ -329,6 +329,122 @@
               "name": "depthOffset",
               "value": 0,
               "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "square-stool-guest",
+          "x": 1120.283,
+          "y": 1120.283,
+          "width": 70.0,
+          "height": 77.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 115,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "square-stool"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "name": "square-stool-host",
+          "x": 1376.283,
+          "y": 992.2829999999999,
+          "width": 70.0,
+          "height": 77.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 115,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "square-stool"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "square-stool-left",
+          "x": 928.2829999999999,
+          "y": 1120.283,
+          "width": 70.0,
+          "height": 77.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 115,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "square-stool"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "square-stool-right",
+          "x": 1632.283,
+          "y": 1184.283,
+          "width": 70.0,
+          "height": 77.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 115,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "square-stool"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "always"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
             }
           ]
         }
@@ -346,11 +462,55 @@
       "objects": [
         {
           "id": 18,
-          "name": "tea-table",
+          "name": "square-table",
           "x": 1344,
           "y": 1152,
           "width": 64,
           "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 23,
+          "name": "square-stool-guest",
+          "x": 1088,
+          "y": 1088,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 25,
+          "name": "square-stool-host",
+          "x": 1344,
+          "y": 960,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 27,
+          "name": "square-stool-left",
+          "x": 896,
+          "y": 1088,
+          "width": 64.0,
+          "height": 64.0,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 29,
+          "name": "square-stool-right",
+          "x": 1600,
+          "y": 1152,
+          "width": 64.0,
+          "height": 64.0,
           "rotation": 0,
           "visible": true,
           "type": "collision"
@@ -409,7 +569,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 22,
+  "nextobjectid": 30,
   "properties": [
     {
       "name": "sceneId",

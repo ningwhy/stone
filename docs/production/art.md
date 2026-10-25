@@ -52,6 +52,7 @@ Qwen 节点需要官方 API JSON，不是 UI 画布导出。图像输入正确�
 | `baseSlope/targetSlope` | 有限竖向剪切校准底边，目标等距轴约 ±0.5 |
 | `mirror` | 固化朝向变体，锚点同步变换 |
 | `solidAlphaThreshold` | 最终 alpha 压实阈值，默认 210；特殊细叶/竹杖按目检调整 |
+| `alphaFloor` | 最终 alpha 透明侧阈值，默认 16；细结构家具（椅枨、凳腿、花架立柱）在 70–110px 输出宽度下 1px 抗锯齿边占轮廓比例过大，会把 ≥90% 实度门槛拖到线下，按 128 压平 |
 
 builder 顺序是原 SAM alpha ≥110 二值化 → 恢复道具 → 裁切/清理 → 身体压缩 → 剪切 → 镜像 → alpha 包围盒裁剪 → 缩放 → alpha 压实 → 应用经检查的新脸。锚点随几何变换，不靠剧情站位补偿错位。
 
@@ -59,13 +60,49 @@ builder 顺序是原 SAM alpha ≥110 二值化 → 恢复道具 → 裁切/清�
 
 ## 人物朝向表
 
-原图脸部朝向并不一致，立绘与 Q 版不能靠同一条全局规则镜像。`design/character-facing.json` 是权威朝向表，每个 actor 分 `portrait` 与 `chibi` 两个字段（`left` / `right`），并附 `evidence`（测量值与方法）。运行时经 `src/story.ts` 的 `paintedFacing(actor, kind)` 查询：对话框立绘按讲话人/听众位置决定是否 `scaleX(-1)`，地图 Q 版整图左右镜像（`setFlipX`，模拟向后转），且镜像条件不再是"只在行走时"——`direction` 停止后、跨场景/跨段落都保持，由引擎在 `show` 与移动到达时按站位写入（见 `docs/design.md` 的朝向演出规则）。
+原图脸部朝向并不一致，立绘与 Q 版不能靠同一条全局规则镜像。`design/character-facing.json` 是权威朝向表，**按资产键**记录（`left` / `right`），并附 `evidence`（测量值与方法）：`actors` 下每个角色分 `portrait` 与 `chibi`，`variants` 下每张表情变体各一条。运行时经 `src/story.ts` 的 `paintedFacingOf(assetKey, actor, kind)` 查询：对话框立绘按讲话人/听众位置决定是否 `scaleX(-1)`，地图 Q 版整图左右镜像（`setFlipX`，模拟向后转），且镜像条件不再是"只在行走时"——`direction` 停止后、跨场景/跨段落都保持，由引擎在 `show` 与移动到达时按站位写入（见 `docs/design.md` 的朝向演出规则）。
 
-朝向由 Apple Vision 语义关键点的几何关系测得（`scripts/facing_vision.swift` 输出鼻尖/嘴部相对双眼中点的偏移，`scripts/facing_measure.py` 批量跑，`scripts/build_facing.py` 生成 JSON）。可信度来自四条独立证据：`leftEye` 质心 x 恒小于 `rightEye` 质心 x（76/76，符号由几何确定，无需参照图）、关键点落位目检、镜像自洽性（38/38）、鼻/嘴双特征互证（55/61）。眼宽差与 Vision yaw 在水彩古风画上均不可用，已明确弃用；暗部质心、肤色/轮廓质心、Q 版头身偏移等自动法也已证伪。新人物补资产后须重跑测量并更新该表，不能沿用默认 `left`。
+### 为什么按资产键而不是按角色
 
-例外：原告（plaintiff）。Vision 对其立绘的关键点完全失真（鼻尖落到胸口、唇贴袍面，绿/橙/红质心坐标可复现），测得 `right` 与目视相反——原图与补丁后头部均朝左。`scripts/build_facing.py` 的 `REVIEWED` 表按目视结论改写为 `portrait=left`，`evidence.method` 记为 `visual-review` 并附原因；其 Q 版脸部补丁（mask 仅覆盖脸部窗口 x67-98/y7-30）把原本与身体同向朝左的脸换成了朝右，已用同一 mask 在包围盒内水平镜像改回朝左（`art/identity/plaintiff-chibi/final.png`，`apply_identity` 的遮罩外像素校验仍通过）。`scripts/facing_audit.swift` 可把 Vision 拟合画回图上供这类目检复核。
+一个角色不是一张图。他有立绘、Q 版图，还有若干张各自重画过的表情变体。**表情变体由图像模型重绘，同一角色的不同变体朝向可以不同**——实测贾母的常态立绘朝左、忧愁变体朝右、惊愕变体朝右、欢喜变体朝右。Q 版图也是独立画的一套，不是立绘缩小。早期版本按角色记一个朝向、Q 版"假定与立绘同向"，实测后发现 9 处与画不符（贾母立绘、门子立绘、癞头和尚 Q 版、李嬷嬷立绘、原告立绘与 Q 版、如海立绘、雨村立绘、贾政立绘），已按实测修正。
+
+### 测量方法
+
+朝向由 Apple Vision 语义关键点的几何关系测得（`scripts/facing_vision.swift` 输出鼻尖/嘴部相对双眼中点的偏移，`scripts/facing_assets.py` 批量跑并投票，`scripts/build_facing.py` 生成 JSON）。可信度来自四条独立证据：`leftEye` 质心 x 恒小于 `rightEye` 质心 x（符号由几何确定，无需参照图）、关键点落位目检、镜像自洽性、鼻/嘴双特征互证。眼宽差与 Vision yaw 在水彩古风画上均不可用，已明确弃用；暗部质心、肤色/轮廓质心、Q 版头身偏移等自动法也已证伪。
+
+**多裁切投票**是这一版的关键。Q 版图只有约 50px 宽、头只占其中一小块，低于检测器能接受的尺寸；裁紧了掉头发和轮廓，裁宽了把身体带进画面、检测器可能认出衣领上的"脸"。因此每张图用多种裁切各测一次并投票（`tight` / `wide` / `wider` / `whole`），三种失败各有判据：
+
+- 检不出脸 → 该裁切无效，不算票。
+- 鼻与嘴方向相反 → 该裁切的拟合没落在它声称的特征上，不算票。
+- `nameCheck` 不是 `ok`（Vision 说的 `leftEye` 没在 `rightEye` 左边）→ 拟合落到的不是脸，偏移的符号毫无意义，不算票。
+
+这条 `nameCheck` 守卫抓到过 `xiren-chibi`：唯一给出读数的裁切返回 `SWAPPED`，测出 `left`，目视是 `right`——没有这道守卫就会写进错误结果。
+
+### 测不出与读不稳的部分
+
+24 张图检测器没能独自定下来（14 张完全测不出，10 张只有一票），由目视裁决并记在 `scripts/build_facing.py` 的 `REVIEWED` 表里，每条附原因，`evidence.method` 记为 `visual-review`，表可复现。目检表由 `scripts/facing_review_sheet.py` 生成（`art/identity/facing-review-sheet.png`）。
+
+**源图不能替代成品图**。`art/identity/<actor>-chibi/edit-01.png` 是 512px 高分辨率源图，Vision 在多数 chibi 上能读出脸——但那是错的图：本项目全部 38 张 Q 版都经过身份系统换脸，换上去的脸可能与身体朝向不一致（旧版就有原告换脸后与身体反向的病灶）。所以测量以出货位图为准，源图只作最后兜底，且读数来源会标为 `vision-landmark-geometry-on-source-bitmap` 以示区别。
+
+例外：原告（plaintiff）。Vision 对其立绘的关键点曾完全失真（鼻尖落到胸口、唇贴袍面），旧表据此按目视改写为 `portrait=left`。本轮用整图与脸窗两种裁切重测，鼻与嘴同向且为 `right`，目视复核（低头、鼻在右）一致，故改回 `right`；其 Q 版同样复核为 `right`。`scripts/facing_audit.swift` 可把 Vision 拟合画回图上供这类目检复核。
 
 SAM 与 SDMatte 都保留，但 builder 当前读取 `*-sam.png`。若采用 SDMatte，显式扩展选择契约并留原候选，不把 SDMatte 假装改名为 SAM。
+
+## 室内家具批次（2026-10）：桌面器皿与家具多样化
+
+问题有两个。其一，SAM/SDMatte 的"仅人物"遮罩把桌面当作深度面，桌上立着的器皿（盖碗、茶盅、饭碗、玉壶春瓶）在桌面高度被整排切断，只留贴桌面的残根，看上去像漏画。其二，11 张室内图反复摆放同一张 `tea-table`，且各图缩放比例 0.6–1.0 不一。
+
+修复与扩充按以下顺序，全部可复跑：
+
+1. `restorePolygons` 从源图补回被切断的器皿：`tea-table` 补盖碗/茶盅/小盅 3 件，`dining-table` 补玉壶春瓶 + 6 碗 7 件（`scripts/furniture_mattes.py`，多边形坐标在源图像素空间，沿物品轮廓留小余量并保持在桌面深色区内）。builder 的"遮罩外逐像素不变"守卫保持通过；`art/alpha-report.json` 只有这两个条目变化。
+2. 新增 9 件家具源图：八仙桌、条案、书案、太师椅、圆凳、方凳、顶箱柜、火盆、花架（`scripts/furniture_sources.py`，同风格模板、1024×1024、固定 seed）。
+3. 抠图改走 Qwen Image 2.1 `bg-removal` 语义分割（`scripts/furniture_bgremoval.py`）：服务端 SAM/SDMatte 路由因 transformers 与 BiRefNet 不兼容已崩；Qwen 语义抠图没有深度切断，桌上器物完整保留。产物重命名为 `<stem>-sam.png` 供 builder 读取。
+4. 条案与火盆两次生成都带出完整房间（墙、窗、屋顶、地板），改用显式"无房间"文案重生成（`scripts/furniture_regen.py`、`furniture_regen_brazier.py`，火盆另换未用 seed）；仍不过关的旧 seed 产物已从仓库清除。
+5. `scripts/furniture_calibrate.py` 按阈值化 matte（alpha ≥110）的不透明包围盒算锚点 `[中心x, 底边-2]`，按设计宽度追加到 `calibration.json` 末尾（不打乱既有 gid）；细结构四件加 `alphaFloor:128`。
+6. 校验用三重数值判据替代不可靠目测：不透明连通域（最大连通域须 ≥99.9%）、6 倍最近邻边缘放大、输出→源图逐像素 diff（坏点集中在轮廓边缘即插值噪声，顶部区域坏点率与整体持平即无背景泄漏）。
+7. 摆位与目检见 `maps.md`；全量回归见 `verification.md`。
+
+教训：生成模板里的"纯白背景、无周围建筑"对场景型主体（正房条案、火盆）不总生效，subject 里要显式写"绝对不要出现房间、墙壁、门窗、屋顶、地板"，并在洋红底接触表上确认只剩主体再入库。
 
 ## 旧人物面部更新
 

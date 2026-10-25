@@ -54,10 +54,12 @@ export type ArtKind='portrait'|'chibi';
 
 /** Which side each painted head is drawn facing.
  *
- * The portraits and the chibi sprites were painted from the same character
- * reference, so they are expected to agree; the measured direction is recorded
- * per actor in design/character-facing.json together with the two offsets that
- * produced it.
+ * A character is not one picture. It is a portrait, a chibi sprite, and a set
+ * of portrait emotion variants, each a separate bitmap that was painted
+ * separately. The emotion variants were repainted by an image model and do
+ * not all face the same way — the same grandmother faces one way in her
+ * neutral portrait and another in her sad variant — so the facing is recorded
+ * per asset, in design/character-facing.json, not per character.
  *
  * The painted direction decides whether a sprite is mirrored: a speaker stands
  * on the left of the dialogue panel and has to look towards the text, and a
@@ -65,8 +67,20 @@ export type ArtKind='portrait'|'chibi';
  * way is flipped. Anything absent from the table — a prop such as the sedan
  * chair — keeps the left default the runtime has always used.
  */
-const facing=(facingTable as {actors:Record<string,{portrait:FacingSide;chibi:FacingSide}>}).actors;
+const facingTableData=facingTable as {actors:Record<string,{portrait?:FacingSide;chibi?:FacingSide}>;variants?:Record<string,{facing:FacingSide}>};
+const facing=facingTableData.actors;
+const variants=facingTableData.variants??{};
 export const paintedFacing=(actor:ActorId,kind:ArtKind):FacingSide=>facing[actor]?.[kind]??'left';
+/** The facing of one exact bitmap, including an emotion variant.
+ *
+ * The variant carries its own painted head, so it is looked up by its own
+ * key. A variant the table does not know falls back to the base portrait,
+ * which is what it was painted from. */
+export const paintedFacingOf=(assetKey:string,actor:ActorId,kind:ArtKind):FacingSide=>{
+  const variant=variants[assetKey];
+  if(variant)return variant.facing;
+  return paintedFacing(actor,kind);
+};
 /** True when the painted head already faces the given side, so no mirror is needed. */
 export const facesSide=(actor:ActorId,kind:ArtKind,side:FacingSide)=>paintedFacing(actor,kind)===side;
 export type Move={type:'move';actor:ActorId;via:string[]};
