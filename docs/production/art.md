@@ -44,25 +44,72 @@ Qwen 节点需要官方 API JSON，不是 UI 画布导出。图像输入正确�
 
 ## 音效与音乐
 
-声音全部由 `scripts/build_audio.py` 在本地合成（numpy 振荡器 + 滤波噪声 → WAV → ffmpeg libopus → ogg），不依赖采样库：四首 BGM 共 2.9MB、七个音效共 170KB。生成命令 `npm run art:audio`。
+声音全部由 `scripts/build_audio.py` 在本地合成（numpy 振荡器 + 滤波噪声 → WAV → ffmpeg libopus → ogg），不依赖采样库：十首 BGM 共 4.7MB、九个音效共 75KB。生成命令 `npm run art:audio`；`scripts/check_audio.py` 重新测量成品。
+
+这两个脚本需要 numpy（以及 `check_audio.py` 需要的 `ffmpeg`）。PATH 上的 python3 未必装了它，本机可用的是 `/Users/bot/.workbuddy/binaries/python/envs/default/bin/python` 或系统 `/usr/bin/python3`——缺 numpy 时表现为 `ModuleNotFoundError`，换一个解释器即可。
+
+## 十首曲子为什么不一样
+
+第一版是四个场景共用一套 D 宫五声音阶，彼此响度差不到 2dB，其中三首的音高重心都落在同一个音级上——听上去就是一首曲子到处放。现在每一首都规定了调式、主音、速度、主奏乐器和音区，`scripts/check_audio.py` 把「主音级、起音密度、谱心」三项测出来并要求互不相同，防止再次趋同。
+
+**六首场景曲**（跟着地点走）：
+
+| 文件 | 场景 / 调式 | 主音 | 起音密度 | 谱心 |
+| --- | --- | --- | --- | --- |
+| `bgm-garden.ogg` | 园林白天（宫·D，默认） | D | 2.62/s | 1345Hz |
+| `bgm-street.ogg` | 京城街市（宫·G） | G | 2.16/s | 2361Hz |
+| `bgm-water.ogg` | 运河舟行北上（羽·B） | B | 2.63/s | 1022Hz |
+| `bgm-night.ogg` | 夜（商·E） | E | 0.35/s | 394Hz |
+| `bgm-interior.ogg` | 室内正堂（徵·A） | A | 0.83/s | 1966Hz |
+| `bgm-myth.ogg` | 太虚 / 梦境 / 废墟（角·F#） | F# | 0.52/s | 659Hz |
+
+**四首回目曲**（跟着回目走，一回一首）：
+
+| 文件 | 回目 / 调式 | 主音 | 起音密度 | 谱心 |
+| --- | --- | --- | --- | --- |
+| `bgm-book-one.ogg` | 第一回 · 石头与还泪（羽·Bb） | Bb | 0.66/s | 650Hz |
+| `bgm-book-two.ogg` | 第二回 · 仕途与冷暖（徵·C） | C | 2.43/s | 2080Hz |
+| `bgm-book-three.ogg` | 第三回 · 入府与初见（宫·Db） | Db | 0.88/s | 1229Hz |
+| `bgm-book-four.ogg` | 第四回 · 判案与安顿（商·Eb） | Eb | 0.63/s | 349Hz |
+
+十首的主音互不相同（场景曲占去 D/G/B/E/A/F#，回目曲正好落在 Bb/C/Db/Eb），密度跨度 7.5 倍，谱心从 349Hz 到 2361Hz。门禁脚本断言的就是这三件事。
+
+**选曲优先级**（`src/audio.ts` 的 `setTheme(theme, sceneId, book)`）：
+
+1. **场景专属曲**——运河、街市、夜、太虚/梦境/废墟自带一首；
+2. **回目曲**——园林、室内、正堂、衙署这类「无场景专属曲」的地方，取当前回目那一首；
+3. **兜底**——`bgm-garden`。
+
+例外：`SCENE_WITHOUT_OWN_PIECE = ['lin']`。林如海家因为院中有水而用了 river 主题，但它的内容是父女对话与托付，不是舟行，因此不吃运河的急流曲，落回第三回的 `bgm-book-three`。
 
 | 文件 | 用途 | 时长 |
 | --- | --- | --- |
-| `bgm-garden.ogg` | 园林/街/河/白天（默认） | 76.8s 循环 |
-| `bgm-night.ogg` | 夜（灯市、碧纱橱） | 66.6s 循环 |
-| `bgm-interior.ogg` | 室内正堂（荣禧堂、衙署、王夫人院） | 70.0s 循环 |
-| `bgm-myth.ogg` | 太虚/梦境/废墟（开场大荒山即此曲） | 65.0s 循环 |
-| `sfx-step-a/b.ogg` | 脚步（木板/石板，交替避免机枪感） | 0.16s |
+| `bgm-garden.ogg` | 园林、扬州、郭外（默认） | 69.2s 循环 |
+| `bgm-street.ogg` | 京城街市 | 53.1s 循环 |
+| `bgm-water.ogg` | 运河 · 舟行北上 | 54.3s 循环 |
+| `bgm-night.ogg` | 夜（灯市、碧纱橱） | 73.6s 循环 |
+| `bgm-interior.ogg` | 室内正堂（荣禧堂、衙署、王夫人院） | 61.8s 循环 |
+| `bgm-myth.ogg` | 太虚/梦境/废墟（开场大荒山即此曲） | 71.7s 循环 |
+| `bgm-book-one.ogg` | 第一回底乐（甄宅、姑苏、大如州一带） | 62.2s 循环 |
+| `bgm-book-two.ogg` | 第二回底乐（雨村仕途、扬州郭外） | 52.6s 循环 |
+| `bgm-book-three.ogg` | 第三回底乐（扬州入京、荣府内院） | 58.0s 循环 |
+| `bgm-book-four.ogg` | 第四回底乐（应天府、梨香院） | 67.0s 循环 |
+| `sfx-step-board.ogg` | 脚步 · 室内木地板 | 0.17s |
+| `sfx-step-stone.ogg` | 脚步 · 室外石板（默认） | 0.15s |
+| `sfx-step-earth.ogg` | 脚步 · 郭外土路 | 0.18s |
+| `sfx-oar.ogg` | 运河上的篙/桨（代替脚步） | 0.55s |
 | `sfx-tap.ogg` | UI 与点选人物（小磬） | 1.6s |
 | `sfx-page.ogg` | 推进对白（纸页） | 0.42s |
-| `sfx-door.ogg` | 木门（吱呀 + 闷响） | 1.5s |
+| `sfx-door.ogg` | 进入室内场景（木门吱呀 + 闷响） | 1.5s |
 | `sfx-bell.ogg` | 场景开启（远钟） | 6.0s |
 | `sfx-chair.ogg` | 轿子移动（轿杆吱呀） | 1.1s |
 
+脚步声按地表选取，判定在 `MapScene.ts` 的 `stepSurface()`：室内为木地板，郭外为土路，运河没有地面、用篙声。每次播放再把 sample 随机变速 ±7%，所以连着走不会像节拍器。
+
 设计约束，改动时保持：
 
-- **五声音阶（D 宫）+ 慢板**：每首 40–52 BPM，旋律以级进为主并刻意留白（近静音占比 12–16%），红楼是安静的宅院。
-- **RMS 约 -30dBFS**，这是「淡」的来源；不要为了「听得见」抬高整体音量，那是把 BG M 变成噪音。
+- **五声音阶 + 慢板**，但十首各有调式（宫/商/角/徵/羽各一），每首 40–52 BPM，旋律以级进为主并刻意留白（近静音占比 12–16%），红楼是安静的宅院。
+- **RMS 约 -25dBFS**，这是「淡」的来源；不要为了「听得见」抬高整体音量，那是把 BGM 变成噪音。音效比最响的一首乐曲高 5.7dB——再高就会盖住对白。
 - **乐器是少量泛音的加法/减法合成**：古筝 18 个泛音 1/n 衰减、箫带 5.3Hz 颤音与气噪声、磬用非谐波分音比（1, 2.76, 5.40, 8.93…）。加新乐器优先加泛音，不要加采样。
 - **循环无缝**：`loop_seam()` 把开头两小节以 0.55 音量在结尾重述，首尾能量对齐；fade 只用 0.15s 消爆音，长 fade 会让循环周期性「呼吸」。
 - **纸底类素材混响 wet 0.30，音效 0.12–0.20**；IR 是合成的小厅（2.6s 指数衰减噪声 + 5 个早期反射 + 18ms 前延迟）。
@@ -70,12 +117,13 @@ Qwen 节点需要官方 API JSON，不是 UI 画布导出。图像输入正确�
 运行时是 `src/audio.ts` 的单例（原生 Web Audio，**不挂 Phaser sound**——GameMap 每换地图重建 Phaser.Game，会把音频反复重新解码）。要点：
 
 - AudioContext 在读者首次手势时创建（自动播放策略），`unlock()` 由 App 的一次性 pointerdown/keydown 触发。
-- `setTheme(theme)` 按 `BGM_BY_THEME` 选曲，1.4s crossfade；同曲重复调用是 no-op，屋内走动不会重启音乐。**`wantedTheme` 永远存曲名而不是主题名**，否则把音乐关掉再打开会经一次主题映射落到默认曲（这个 bug 曾让测试超时）。
+- `setTheme(theme, sceneId, book)` 三级优先级选曲，1.4s crossfade；同曲重复调用是 no-op，屋内走动不会重启音乐。**`wantedTheme` 永远存曲名而不是主题名**，否则把音乐关掉再打开会经一次主题映射落到默认曲（这个 bug 曾让测试超时）。
 - `warm()` 在 stage preload 时排队，context 不存在就先入队，unlock 后补加载——否则第一次脚步会有延迟。
 - 音量（bgm 0.5 / sfx 0.75 默认）存 `localStorage['honglou.audio.v1']`，设置面板两个滑块实时写 GainNode；bgm 拨到 0 会淡出停止而不是静音一个运行中的 source。
+- **总开关** `setMuted()` 把 master 增益降到 0（0.06s 淡出，不是硬切），状态存 `localStorage['honglou.audio.muted.v1']`。**滑杆位置不受它影响**——关掉再打开，平衡原样回来。静音时滑杆被 disable，避免看起来还能调。
 - `check_content.mjs` 守卫：引擎引用的每个文件必须已构建；地图声明的每个 theme 必须有映射（新增 theme 忘了配曲会直接报错）；构建了却没人引用的文件给 WARN。
 
-测试：`node tests/audio.mjs`（连 dev server）验证 context 解锁、8 个文件实际请求、主题切换、滑块与持久化。
+测试：`node tests/audio.mjs`（连 dev server）验证 context 解锁、19 个文件实际请求、十首曲子的选曲优先级、四种地表脚步、总开关与滑块的持久化。
 
 ## 原图 → 校准契约
 

@@ -13,6 +13,7 @@
     "check:content": "node --experimental-strip-types scripts/check_content.mjs",
     "art:webp": "node scripts/build_webp.mjs",
     "art:audio": "python3 scripts/build_audio.py",
+    "audio:check": "python3 scripts/check_audio.py",
     "art:audit": "python3 scripts/asset_audit.py",
     "map:inspect": "bash scripts/tiled_inspect.sh",
     "chapter04:evidence": "python3 scripts/build_chapter04_evidence.py"

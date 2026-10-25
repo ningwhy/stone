@@ -4,6 +4,8 @@ import { project, zoneAt } from './model.ts';
 import type { ArtObject, MapData } from './model.ts';
 import { cast, paintedFacingOf } from './story.ts';
 import { audio } from './audio.ts';
+import { STEP_FILE } from './audio.ts';
+import type { StepSurface } from './audio.ts';
 import type { ActorId } from './story.ts';
 import type { StoryEngine } from './engine.ts';
 
@@ -15,6 +17,17 @@ import type { StoryEngine } from './engine.ts';
 const ACTOR_DEPTH = 5000;
 const HALO_DEPTH = 5001;
 const PLACE_LABEL_DEPTH = 5002;
+
+/** What the walkers on this stage are standing on. Only the canal has no ground: `lin`
+ *  shares the river theme with it because there is water in the Lin courtyard, and its
+ *  residents quite reasonably walk on stone. The lane outside the wall is dust, whatever
+ *  its garden theme says. */
+export function stepSurface(map: MapData): StepSurface {
+  if (map.id === 'canal') return 'oar';
+  if (map.id === 'guowai') return 'earth';
+  if (map.theme === 'interior' || map.theme === 'formal') return 'board';
+  return 'stone';
+}
 
 export class MapScene extends Phaser.Scene {
   engine: StoryEngine;
@@ -64,7 +77,10 @@ export class MapScene extends Phaser.Scene {
     // Warm the effects this stage will use so the first footfall is not late. The theme
     // piece itself is requested by App; here we only queue, because the context does not
     // exist until the reader's first gesture.
-    for(const effect of ['sfx-step-a','sfx-step-b','sfx-tap','sfx-page','sfx-door','sfx-bell','sfx-chair'])audio.warm(effect);
+    // Warm the effects this stage will use so the first footfall is not late. The stage
+    // only ever asks for the one footfall its own surface has, but the UI chime and the
+    // page are wanted everywhere.
+    for(const effect of [STEP_FILE[stepSurface(this.mapData)],'sfx-tap','sfx-page','sfx-door','sfx-bell','sfx-chair'])audio.warm(effect);
   }
   private artwork() {
     for(const object of this.mapData.art) {
@@ -273,7 +289,7 @@ export class MapScene extends Phaser.Scene {
       // repeats, and the sedan gets the wood rub instead of a footstep.
       if(a.moving && !state.paused && !this.presentationPaused) {
         if(id==='sedan')audio.play('sfx-chair',0.9);
-        else audio.step((this.clock>>6)%2 as 0|1);
+        else audio.step(stepSurface(this.mapData));
       }
       // Iso walking right means col-row increases; mirror the sprite when the
       // painted chibi already faces the way it is looking, or away from it. The

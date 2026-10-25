@@ -10,6 +10,9 @@ export type StoryState = {
   index: number; status: 'moving'|'reading'|'ended'|'error'; paused: boolean;
   actors: Record<ActorId, ActorState>; roofVisible: boolean;
   focus: string; history: HistoryEntry[]; error: string | null; speed: number;
+  /** Every line reached so far, kept across a jump so the log of what has been read is
+   *  not cut short when the reader goes back to look at an earlier passage. */
+  readLog?: string[];
 };
 type Job = {actor: ActorId; path: Point[]; cursor: number};
 /** v4 adds chapter four at the end of the line, so an old finale is no longer the finale. */
@@ -41,7 +44,7 @@ export class StoryEngine {
   private initial(): StoryState {
     const actors = {} as Record<ActorId, ActorState>;
     for (const id of Object.keys(cast) as ActorId[]) actors[id] = {col:13,row:28,visible:false,moving:false,direction:1};
-    return {sceneId:this.steps[0].scene,effect:null,index:0,status:'moving',paused:false,actors,roofVisible:true,focus:this.steps[0].focus,history:[],error:null,speed:1};
+    return {sceneId:this.steps[0].scene,effect:null,index:0,status:'moving',paused:false,actors,roofVisible:true,focus:this.steps[0].focus,history:[],readLog:[],error:null,speed:1};
   }
   subscribe = (listener: () => void) => { this.listeners.add(listener); return () => { this.listeners.delete(listener); }; };
   getSnapshot = () => this.state;
@@ -135,6 +138,8 @@ export class StoryEngine {
     }
     this.state.status=this.state.index===this.steps.length-1 ? 'ended' : 'reading';
     if (!this.state.history.some(h=>h.id===this.step.id)) this.state.history.push({id:this.step.id,speaker:this.step.speaker==='narrator'?'旁白':cast[this.step.speaker].fullName,text:this.step.text});
+    const log=this.state.readLog??(this.state.readLog=[]);
+    if(!log.includes(this.step.id))log.push(this.step.id);
     this.emit();
   }
   advance() {
@@ -180,6 +185,10 @@ export class StoryEngine {
   }
   pause(value: boolean) {this.userPaused=value; this.updatePause();}
   overlay(value: boolean) {this.overlayPaused=value; this.updatePause();}
+  /** Whether the reader froze the performance on purpose. The overlay (an open panel)
+   *  also pauses it, but that one is not the reader's doing and must not be shown
+   *  as a button state. */
+  get stagePaused() {return this.userPaused;}
   private updatePause() {this.state.paused=this.userPaused||this.overlayPaused; this.emit();}
   setSpeed(value: number) {if ([.5,1,2].includes(value)) {this.state.speed=value; this.emit();}}
   seek(nodeId:string) {
@@ -187,7 +196,23 @@ export class StoryEngine {
     const replay=new StoryEngine(this.maps,this.steps);
     while(replay.getSnapshot().index<index){replay.skip();if(replay.getSnapshot().status==='error')throw new Error(replay.getSnapshot().error!);replay.advance();}
     replay.skip();if(replay.getSnapshot().status==='error')throw new Error(replay.getSnapshot().error!);
-    this.jobs=[];this.arrivals=[];this.userPaused=false;this.overlayPaused=false;this.actionIndex=this.steps[index].actions.length;this.state=structuredClone(replay.getSnapshot());this.emit();
+    // Jumping back to an earlier line must not erase what has been read: the panel called
+    // 回看 is a log of the whole reading, not only of the stretch since the last jump.
+    const read=[...new Set([...(this.state.readLog??[]),...replay.getSnapshot().history.map(h=>h.id)])];
+    this.jobs=[];this.arrivals=[];this.userPaused=false;this.overlayPaused=false;this.actionIndex=this.steps[index].actions.length;this.state=structuredClone(replay.getSnapshot());this.state.readLog=read;this.emit();
+  }
+
+  /** Every line the reader has reached, oldest first, with the text as it was read. */
+  readHistory(): HistoryEntry[] {
+    const byId=new Map<string,HistoryEntry>();
+    for(const entry of this.state.history)byId.set(entry.id,entry);
+    for(const id of this.state.readLog??[]){
+      if(byId.has(id))continue;
+      const step=this.steps.find(s=>s.id===id);
+      if(!step)continue;
+      byId.set(id,{id,speaker:step.speaker==='narrator'?'旁白':cast[step.speaker].fullName,text:step.text});
+    }
+    return [...byId.values()].sort((a,b)=>this.steps.findIndex(s=>s.id===a.id)-this.steps.findIndex(s=>s.id===b.id));
   }
   restart() {this.jobs=[]; this.arrivals=[]; this.userPaused=false; this.overlayPaused=false; this.state=this.initial(); this.enter(0);}
   serialize(): SaveData {
@@ -209,6 +234,9 @@ export class StoryEngine {
     const status=(index===this.steps.length-1)!==(state.status==='ended')?'reading':state.status;
     if (index===this.steps.length-1&&status!=='ended') throw new Error('存档结束状态无效');
     if (!Array.isArray(state.history) || !state.history.every(h=>h && typeof h.id==='string' && typeof h.text==='string' && typeof h.speaker==='string')) throw new Error('存档记录无效');
+    // The read log is optional in an old save; without it the log of what has been read
+    // simply starts again from the lines the save itself carries.
+    if(state.readLog!==undefined&&(!Array.isArray(state.readLog)||state.readLog.some(id=>typeof id!=='string')))throw new Error('存档记录无效');
     const map=this.maps[state.sceneId];
     if(!map || state.sceneId!==this.steps[index].scene || state.effect!==null)throw new Error('存档场景无效');
     if (!map.anchors[state.focus] || typeof state.roofVisible!=='boolean' || ![.5,1,2].includes(state.speed)) throw new Error('存档场景无效');

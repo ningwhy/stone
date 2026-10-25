@@ -561,10 +561,11 @@
    "chibi": "right"
   },
   "sedan": {
-   "portrait": "left",
-   "chibi": "left",
+   "portrait": "right",
+   "chibi": "right",
    "evidence": {
-    "method": "default-vehicle-group"
+    "method": "visual-review",
+    "reason": "four bearers repainted walking right in the 2026-10-25 redraw; read on the matted bitmap and in game at the entry gate, where the chair always travels east"
    }
   },
   "menzi": {

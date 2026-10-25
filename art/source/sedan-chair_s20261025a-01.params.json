@@ -1,0 +1,10 @@
+{
+  "route": "generate",
+  "name": "sedan-chair_s20261025a-01",
+  "seed": "20261025a",
+  "prompt": "Four bearers carrying a traditional Chinese sedan chair, all four men walking to the right and facing right in profile, two bearers at the front end of the poles and two at the back end, all holding two long horizontal wooden poles over their shoulders. The sedan chair has a dark green tiled roof canopy, red fabric curtains, and a wooden cabin with a small window. The bearers wear simple Qing dynasty servant clothes in muted teal, brown and beige tones with black caps, white cloth shoes. Isometric three-quarter view seen from above, like a video game sprite on a stage. Traditional Chinese gongbi fine-brush painting style, muted elegant colors, delicate linework. Plain off-white rice paper background with no ground shadow, no architecture, no other people, no text, no frame.",
+  "model": "workbuddy-imagegen",
+  "server": "cloud",
+  "generated_at": "2026-10-25 23:15:00",
+  "note": "重生成替换 seed 10225102：旧图四位轿夫朝向自相矛盾（外侧二人朝外、内侧二人朝内），镜像后必有一侧倒行。新图四人全部明确朝右，与 chibi 惯例（84/92 朝右）及轿子东行路线一致。"
+}

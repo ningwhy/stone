@@ -56,7 +56,13 @@ for item in config['assets']:
  assets[key]={'image':f'/assets/rongguo/{key}.png','width':im.width,'height':im.height,'anchor':[round(ax,3),round(ay,3)],'source':f'art/source/{stem}-01.png','matte':str(source.relative_to(ROOT)),'crop':list(bbox),'shear':item.get('targetSlope',0)-item.get('baseSlope',0),'mirror':item.get('mirror',False),'bodyCompress':item.get('bodyCompress')}
  im=apply_identity(ROOT,key,im,assets[key]);im.save(output/f'{key}.png');a=np.asarray(im.getchannel('A'))
  visible=a>0;solid=float((a[visible]>=250).mean()) if visible.any() else 0
- reports.append({'asset':key,'visiblePixels':int(visible.sum()),'solidAlpha250Ratio':round(solid,5),'width':im.width,'height':im.height})
+ # How opaque an asset looks overall depends on how broken its silhouette is: four bearers,
+ # their poles and the gaps between them have far more edge than a tea table, and every
+ # one of those edge pixels comes out of the downscale antialiased. So the ratio above is
+ # not by itself proof of a clean matte. A failed one leaves a broad low-alpha haze instead,
+ # and that is what `faintAlphaRatio` measures.
+ faint=float((a[visible]<90).mean()) if visible.any() else 0
+ reports.append({'asset':key,'visiblePixels':int(visible.sum()),'solidAlpha250Ratio':round(solid,5),'faintAlphaRatio':round(faint,5),'width':im.width,'height':im.height})
 # The manifest is shared with assets that are not calibrated here: the portrait
 # emotion variants are painted by scripts/build_emotions.py and registered
 # separately. Rebuilding from the calibration alone would silently drop them,

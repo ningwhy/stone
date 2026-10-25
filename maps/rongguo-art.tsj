@@ -467,7 +467,7 @@
       "id": 35,
       "image": "../public/assets/rongguo/sedan-chair.png",
       "imagewidth": 230,
-      "imageheight": 195,
+      "imageheight": 163,
       "properties": [
         {
           "name": "asset",

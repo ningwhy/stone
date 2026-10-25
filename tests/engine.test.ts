@@ -27,3 +27,44 @@ test('all cast members appear; Zhang Rugui and Leng Zixing are visible in their 
  for(const id of Object.keys(e.getSnapshot().actors))assert.ok(seen.has(id),`${id} never appears`);
  for(const [node,id] of [['P002','zhang'],['P004','leng'],['N005','guide'],['N009','maid']] as const){e.seek(node);assert.equal(e.step.speaker,id);assert.equal(e.getSnapshot().actors[id].visible,true);}
 });
+
+test('the read log survives a jump backwards, so 回看 is the whole reading and not only the last stretch',()=>{
+ const e=new StoryEngine(maps());
+ e.seek('N005');
+ for(let i=0;i<6;i++){e.skip();e.advance();}
+ const read=e.readHistory();
+ assert.ok(read.length>=6,`only ${read.length} lines were read`);
+ const firstId=read[0].id;
+ // Jump back to the very beginning of the chapter: the lines already read must not vanish.
+ e.seek('P001');
+ const after=e.readHistory();
+ assert.ok(after.length>=read.length,`the log shrank from ${read.length} to ${after.length}`);
+ assert.ok(after.some(entry=>entry.id===firstId),'the first line read is still in the log');
+ // The log is ordered by the story, not by the order the reader happened to read in.
+ const order=after.map(entry=>story.findIndex(s=>s.id===entry.id));
+ assert.deepEqual(order,[...order].sort((a,b)=>a-b),'the log is out of order');
+ // And the entries carry the text as it was read, not a bare id.
+ for(const entry of after){assert.ok(entry.text.length>0);assert.ok(entry.speaker.length>0);}
+});
+
+test('a jump backwards keeps the log and the engine reports a reader freeze separately from a panel pause',()=>{
+ const e=new StoryEngine(maps());
+ e.seek('N005');e.skip();e.advance();
+ const before=e.readHistory().length;
+ e.seek('P001');
+ assert.ok(e.readHistory().length>=before);
+ // An open panel pauses the performance but is not the reader's freeze.
+ e.overlay(true);
+ assert.equal(e.getSnapshot().paused,true);
+ assert.equal(e.stagePaused,false,'a panel pause must not look like a reader freeze');
+ e.overlay(false);
+ assert.equal(e.getSnapshot().paused,false);
+ // The reader's own freeze does show as one, and clears only when the reader says so.
+ e.pause(true);
+ assert.equal(e.getSnapshot().paused,true);
+ assert.equal(e.stagePaused,true);
+ e.overlay(true);e.overlay(false);
+ assert.equal(e.stagePaused,true,'an open panel must not clear the reader freeze');
+ e.pause(false);
+ assert.equal(e.getSnapshot().paused,false);
+});

@@ -1,0 +1,18 @@
+{
+  "source": "art/source/sedan-chair_s20261025a-01.png",
+  "config": {
+    "threshold": 36,
+    "minArea": 2000,
+    "softLow": 14,
+    "softHigh": 40,
+    "edgeBand": 20
+  },
+  "droppedBorderComponents": [],
+  "bbox": [
+    130,
+    37,
+    1433,
+    960
+  ],
+  "solidAlpha250Ratio": 0.91615
+}

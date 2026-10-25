@@ -38,7 +38,7 @@ try{
  assert.equal(visited.size,22);assert.equal((await saved()).state.history.length,242);await page.reload();await reading();assert.equal(await node(),'END');await page.getByRole('button',{name:'继续剧情',exact:true}).waitFor();
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(chapters[2].id);await reading();assert.equal(await node(),'N005');const height=(await page.locator('.map-panel').boundingBox()).height;
  await page.getByRole('button',{name:'继续剧情',exact:true}).click();await page.getByRole('button',{name:'跳过移动',exact:true}).waitFor();assert.equal((await page.locator('.map-panel').boundingBox()).height,height);await page.locator('.map-action-cue').waitFor();await page.screenshot({path:'artifacts/chapter-action.png',fullPage:true});
- await page.getByRole('button',{name:'暂停',exact:true}).click();await page.waitForTimeout(120);const paused=await canvasPixels();await page.waitForTimeout(200);assert.equal(await canvasPixels(),paused);await page.getByRole('button',{name:'继续演出',exact:true}).click();await reading();assert.equal(await node(),'N006');
+ await page.getByRole('button',{name:'暂停演出',exact:true}).click();await page.waitForTimeout(120);const paused=await canvasPixels();await page.waitForTimeout(200);assert.equal(await canvasPixels(),paused);await page.getByRole('button',{name:'继续演出',exact:true}).click();await reading();assert.equal(await node(),'N006');
 
  // Map dominates the viewport; toolbar stays clickable with both portrait groups present.
  const mapBox=await page.locator('.map-panel').boundingBox();assert.ok(mapBox.height>780&&mapBox.width>1380);
@@ -59,10 +59,43 @@ try{
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(chapters[3].id);await reading();
  while(await node()!=='F015')await next();
  await page.getByRole('button',{name:'继续剧情',exact:true}).click();await page.locator('[data-testid=world-travel-route]').waitFor();
- await page.getByRole('button',{name:'暂停',exact:true}).click();const travelPosition=await page.locator('.world-traveler').getAttribute('transform');await page.waitForTimeout(200);assert.equal(await page.locator('.world-traveler').getAttribute('transform'),travelPosition);
+ await page.getByRole('button',{name:'暂停演出',exact:true}).click();const travelPosition=await page.locator('.world-traveler').getAttribute('transform');await page.waitForTimeout(200);assert.equal(await page.locator('.world-traveler').getAttribute('transform'),travelPosition);
  await page.screenshot({path:'artifacts/rongguo-travel.png',fullPage:true});
  await page.getByRole('button',{name:'继续演出',exact:true}).click();await page.waitForFunction(()=>!document.querySelector('[data-testid=world-travel-route]'));await reading();assert.equal(await node(),'U001');
- await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('checkbox').check();assert.equal(await page.locator('dialog h2').textContent(),'阅读设置');await page.locator('dialog').getByRole('combobox').selectOption('2');await page.getByRole('checkbox').uncheck();await page.keyboard.press('Escape');
+ await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('checkbox',{name:'显示地图上的引导路线'}).check();assert.equal(await page.locator('dialog h2').textContent(),'阅读设置');await page.locator('dialog').getByRole('combobox').selectOption('2');await page.getByRole('checkbox',{name:'显示地图上的引导路线'}).uncheck();await page.keyboard.press('Escape');
+
+ // One switch, two readings: the button reads 自动 while the reader drives and 暂停 while
+ // the story drives itself. There is no second button that looks live and does nothing.
+ await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c1-home');await reading();
+ const auto=page.getByRole('button',{name:'自动',exact:true});
+ assert.equal(await page.getByRole('button',{name:'暂停',exact:true}).count(),0,'there is no separate pause button in the toolbar');
+ await auto.click();
+ await page.waitForTimeout(300);
+ assert.equal(await page.getByRole('button',{name:'暂停',exact:true}).count(),1,'the same button now reads 暂停');
+ const autoNode=await node();
+ await page.waitForFunction(id=>document.querySelector('.node-label')?.textContent!==id,autoNode,{timeout:12000});
+ assert.notEqual(await node(),autoNode,'auto-play actually advanced the story');
+ await page.getByRole('button',{name:'暂停',exact:true}).click();
+ const stopped=await node();
+ await page.waitForTimeout(1200);
+ assert.equal(await node(),stopped,'pressing 暂停 stops the story');
+ assert.equal(await page.getByRole('button',{name:'自动',exact:true}).count(),1,'the button reads 自动 again');
+
+ // 回看 is a log of the whole reading, and every line in it can be jumped back to.
+ await page.getByRole('button',{name:'回看',exact:true}).click();
+ await page.locator('.history-list').waitFor();
+ const readCount=await page.locator('.history-list article').count();
+ assert.ok(readCount>=3,`only ${readCount} lines in the log`);
+ const jumpTo=page.locator('.history-list article').first().locator('button');
+ const jumpId=await page.locator('.history-list article').first().locator('small').textContent();
+ await jumpTo.click();
+ await reading();
+ assert.equal(await node(),jumpId,'the reader landed on the line they chose');
+ await page.getByRole('button',{name:'回看',exact:true}).click();
+ await page.locator('.history-list').waitFor();
+ assert.ok(await page.locator('.history-list article').count()>=readCount,'the log did not shrink after a jump backwards');
+ await page.getByRole('button',{name:'关闭弹窗'}).click();
+
  await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'地图地点',exact:true}).click();assert.equal(await page.locator('.atlas-body article').count(),22);await page.keyboard.press('Escape');
 
  // A complete painted cast directory makes early characters discoverable after resuming.

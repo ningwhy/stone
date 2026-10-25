@@ -14,16 +14,54 @@
 export type AudioPrefs = { bgm: number; sfx: number };
 
 const PREFS_KEY = 'honglou.audio.v1';
+const MUTE_KEY = 'honglou.audio.muted.v1';
 const DEFAULTS: AudioPrefs = { bgm: 0.5, sfx: 0.75 };
 
-/** Map a stage theme onto one of the four pieces. Anything unlisted gets the garden. */
+/** The master switch is remembered separately from the levels, so a reader who silenced
+ *  the game and came back still finds it silent -- and the sliders are untouched by it. */
+function readMuted(): boolean {
+  try { return localStorage.getItem(MUTE_KEY) === '1'; } catch { return false; }
+}
+/** What someone is walking on. It changes which effect is used, and nothing else:
+ *  boards ring under a foot, stone does not, the lane past the wall only whispers, and on
+ *  water there are no feet at all -- there is a pole going into the canal. */
+export type StepSurface = 'board' | 'stone' | 'earth' | 'oar';
+
+export const STEP_FILE: Record<StepSurface, string> = {
+  board: 'sfx-step-board',
+  stone: 'sfx-step-stone',
+  earth: 'sfx-step-earth',
+  oar: 'sfx-oar',
+};
+
+/** Two stages are painted with a theme whose music is wrong for them. `lin`, the Lin estate,
+ *  is themed river because there is water in its courtyard -- but it is a parlour
+ *  conversation, not a boat on a canal, so it does not take the canal's piece. */
+const SCENE_WITHOUT_OWN_PIECE = new Set(['lin']);
+
+/** One piece for each of the four books. The chapter is the larger question -- what kind
+ *  of story this is -- and the theme is the smaller one, where you happen to be standing.
+ *  A place with its own character (a canal, a street at night, the world before the world)
+ *  speaks for itself; a courtyard or a parlour does not, and takes the chapter's piece. */
+const BGM_BY_BOOK: Record<number, string> = {
+  1: 'bgm-book-one',
+  2: 'bgm-book-two',
+  3: 'bgm-book-three',
+  4: 'bgm-book-four',
+};
+
+/** The themes that own a piece. Everything else falls through to the chapter. */
+const THEMES_WITH_OWN_PIECE = new Set(['night', 'myth', 'dream', 'ruins', 'river', 'street']);
+/** Each stage theme maps onto one of the six pieces. Every one of them is its own tuning,
+ *  tempo and instrument (see scripts/build_audio.py), so a theme that has no piece of its
+ *  own borrows the nearest daylight rather than collapsing into one generic loop. */
 const BGM_BY_THEME: Record<string, string> = {
   garden: 'bgm-garden',
-  river: 'bgm-garden',
-  // the street reuses the garden piece on purpose: it is the same daylight, and a fifth
-  // track would only thin the ones that matter
-  street: 'bgm-garden',
   day: 'bgm-garden',
+  // the canal and the lane outside the wall used to borrow the garden piece, so the voyage
+  // north and the walk to the temple were scored as though they happened in a courtyard
+  river: 'bgm-water',
+  street: 'bgm-street',
   night: 'bgm-night',
   interior: 'bgm-interior',
   formal: 'bgm-interior',
@@ -59,6 +97,8 @@ class AudioEngine {
   private current: { name: string; gain: GainNode; source: AudioBufferSourceNode } | null = null;
   private prefs: AudioPrefs = readPrefs();
   private unlocked = false;
+  private mutedFlag = readMuted();
+  private masterLevel = 0.9;
   private wantedTheme: string | null = null;
   private warmQueue: string[] = [];
   private lastStep = 0;
@@ -70,7 +110,7 @@ class AudioEngine {
     try {
       const ctx = new AudioContext();
       const master = ctx.createGain();
-      master.gain.value = 0.9;
+      master.gain.value = this.mutedFlag ? 0 : this.masterLevel;
       master.connect(ctx.destination);
       const bgmBus = ctx.createGain();
       bgmBus.gain.value = this.prefs.bgm;
@@ -111,9 +151,17 @@ class AudioEngine {
     return job;
   }
 
-  /** Crossfade to the piece that belongs to this theme. Same theme is a no-op. */
-  setTheme(theme: string) {
-    const name = BGM_BY_THEME[theme] ?? BGM_BY_THEME.garden;
+  /** Crossfade to the piece that belongs to this stage. Same piece is a no-op.
+   *  The order of preference: a stage with a piece of its own, then the theme's own piece
+   *  (night, the world before the world, the canal, the street), then the chapter's piece,
+   *  and finally the garden, which is the daylight every other piece sits inside. */
+  setTheme(theme: string, sceneId?: string, book?: number) {
+    const scene=sceneId??'';
+    const name = (THEMES_WITH_OWN_PIECE.has(theme) && !SCENE_WITHOUT_OWN_PIECE.has(scene))
+      ? BGM_BY_THEME[theme]
+      : (book ? BGM_BY_BOOK[book] : undefined)
+        ?? BGM_BY_THEME[theme]
+        ?? BGM_BY_THEME.garden;
     this.wantedTheme = name;
     this.startBgm(name);
   }
@@ -191,9 +239,26 @@ class AudioEngine {
     }).catch(() => { /* silent is an acceptable outcome for an effect */ });
   }
 
-  /** A footfall, alternating boards and stone so a walk does not machine-gun. */
-  step(variant: 0 | 1) {
-    this.play(variant ? 'sfx-step-b' : 'sfx-step-a', MIN_STEP_GAP);
+  /** A footfall on `surface`. Successive steps are detuned a few per cent either way: two
+   *  identical samples in a row is what makes a walk sound like a machine, while a real
+   *  footfall is never quite the same twice. */
+  step(surface: StepSurface = 'stone') {
+    const name = STEP_FILE[surface];
+    if (!this.ready || this.prefs.sfx <= 0) return;
+    const now = this.ctx!.currentTime;
+    if (now - this.lastStep < MIN_STEP_GAP) return;
+    this.lastStep = now;
+    const job = this.load(name);
+    if (!job) return;
+    const rate = 0.93 + Math.random() * 0.14;
+    job.then(buffer => {
+      if (!this.ctx || !this.sfxBus) return;
+      const source = this.ctx.createBufferSource();
+      source.buffer = buffer;
+      source.playbackRate.value = rate;
+      source.connect(this.sfxBus);
+      source.start();
+    }).catch(() => { /* a missing step must never stop the walker */ });
   }
 
   setPrefs(next: Partial<AudioPrefs>) {
@@ -211,6 +276,21 @@ class AudioEngine {
   }
 
   getPrefs(): AudioPrefs { return { ...this.prefs }; }
+
+  /** Silence everything without forgetting the levels: the master bus drops to zero, so a
+   *  piece that is already running fades out instead of stopping dead, and no effect can
+   *  sound until the master comes back. The sliders keep their positions, so switching the
+   *  sound off and on again returns exactly the balance the reader had set. */
+  setMuted(muted: boolean) {
+    this.mutedFlag = muted;
+    const now = this.ctx?.currentTime ?? 0;
+    try { localStorage.setItem(MUTE_KEY, muted ? '1' : '0'); } catch { /* private mode */ }
+    if (this.master) this.master.gain.setTargetAtTime(muted ? 0 : this.masterLevel, now, 0.06);
+    if (muted) this.stopBgm();
+    else if (this.prefs.bgm > 0 && this.wantedTheme) this.startBgm(this.wantedTheme);
+  }
+
+  get muted() { return this.mutedFlag; }
 }
 
 export const audio = new AudioEngine();

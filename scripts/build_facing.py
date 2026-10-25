@@ -115,11 +115,17 @@ REVIEWED = {
     'zheng-chibi': ('right', 'single crop read; confirmed by eye'),
 }
 
-# Vehicles are cast members but not a face: the sedan is carried by four bearers
-# whose heads turn inward towards the chair, so the group has no single painted
-# side. It keeps the left default and the runtime flips it with the direction of
-# travel, which is what a symmetric load should do.
-VEHICLE = {'sedan'}
+# Vehicles are cast members but not a single face: the sedan is carried by four
+# bearers. The first casting had the outer pair looking outward and the inner
+# pair inward, so no mirror could march the whole group forwards — whichever
+# way the sprite was flipped, half the bearers walked backwards. The 2026-10-25
+# redraw repaints all four bearers walking right, so the group now reads like
+# any other bitmap and may carry a real facing instead of a default.
+VEHICLE = {
+    'sedan': ('right', 'four bearers repainted walking right in the 2026-10-25 '
+                       'redraw; read on the matted bitmap and in game at the entry '
+                       'gate, where the chair always travels east'),
+}
 
 
 def main():
@@ -139,9 +145,10 @@ def main():
     missing = []
     for actor in cast_ids:
         if actor in VEHICLE:
-            entries[actor] = {'portrait': 'left', 'chibi': 'left',
-                              'evidence': {'method': 'default-vehicle-group'}}
-            missing.append(actor)
+            side, reason = VEHICLE[actor]
+            entries[actor] = {'portrait': side, 'chibi': side,
+                              'evidence': {'method': 'visual-review',
+                                           'reason': reason}}
             continue
         for kind in ('portrait', 'chibi'):
             key = f'{actor}-{kind}'

@@ -3,6 +3,7 @@
     "asset": "flower-gate",
     "visiblePixels": 229447,
     "solidAlpha250Ratio": 0.99046,
+    "faintAlphaRatio": 0.00443,
     "width": 600,
     "height": 631
   },
@@ -10,6 +11,7 @@
     "asset": "courtyard-wall",
     "visiblePixels": 113088,
     "solidAlpha250Ratio": 0.98712,
+    "faintAlphaRatio": 0.00485,
     "width": 540,
     "height": 439
   },
@@ -17,6 +19,7 @@
     "asset": "garden-tree",
     "visiblePixels": 30311,
     "solidAlpha250Ratio": 0.92033,
+    "faintAlphaRatio": 0.03415,
     "width": 290,
     "height": 252
   },
@@ -24,6 +27,7 @@
     "asset": "main-hall",
     "visiblePixels": 566033,
     "solidAlpha250Ratio": 0.99406,
+    "faintAlphaRatio": 0.00257,
     "width": 1100,
     "height": 888
   },
@@ -31,6 +35,7 @@
     "asset": "garden-rock",
     "visiblePixels": 20960,
     "solidAlpha250Ratio": 0.94995,
+    "faintAlphaRatio": 0.02233,
     "width": 190,
     "height": 209
   },
@@ -38,6 +43,7 @@
     "asset": "daiyu-chibi",
     "visiblePixels": 4454,
     "solidAlpha250Ratio": 0.94365,
+    "faintAlphaRatio": 0.02357,
     "width": 54,
     "height": 118
   },
@@ -45,6 +51,7 @@
     "asset": "daiyu-portrait",
     "visiblePixels": 157417,
     "solidAlpha250Ratio": 0.99125,
+    "faintAlphaRatio": 0.00386,
     "width": 311,
     "height": 720
   },
@@ -52,6 +59,7 @@
     "asset": "baoyu-portrait",
     "visiblePixels": 120595,
     "solidAlpha250Ratio": 0.99036,
+    "faintAlphaRatio": 0.00431,
     "width": 346,
     "height": 600
   },
@@ -59,6 +67,7 @@
     "asset": "baoyu-chibi",
     "visiblePixels": 3992,
     "solidAlpha250Ratio": 0.93863,
+    "faintAlphaRatio": 0.0273,
     "width": 50,
     "height": 116
   },
@@ -66,6 +75,7 @@
     "asset": "feng-portrait",
     "visiblePixels": 80921,
     "solidAlpha250Ratio": 0.98605,
+    "faintAlphaRatio": 0.00524,
     "width": 190,
     "height": 600
   },
@@ -73,6 +83,7 @@
     "asset": "feng-chibi",
     "visiblePixels": 3597,
     "solidAlpha250Ratio": 0.93272,
+    "faintAlphaRatio": 0.02919,
     "width": 45,
     "height": 116
   },
@@ -80,6 +91,7 @@
     "asset": "grandmother-portrait",
     "visiblePixels": 121423,
     "solidAlpha250Ratio": 0.99204,
+    "faintAlphaRatio": 0.00332,
     "width": 296,
     "height": 600
   },
@@ -87,6 +99,7 @@
     "asset": "grandmother-chibi",
     "visiblePixels": 4287,
     "solidAlpha250Ratio": 0.94915,
+    "faintAlphaRatio": 0.02029,
     "width": 52,
     "height": 116
   },
@@ -94,6 +107,7 @@
     "asset": "wang-portrait",
     "visiblePixels": 102911,
     "solidAlpha250Ratio": 0.98953,
+    "faintAlphaRatio": 0.00427,
     "width": 248,
     "height": 600
   },
@@ -101,6 +115,7 @@
     "asset": "wang-chibi",
     "visiblePixels": 3778,
     "solidAlpha250Ratio": 0.93965,
+    "faintAlphaRatio": 0.027,
     "width": 45,
     "height": 116
   },
@@ -108,6 +123,7 @@
     "asset": "xing-portrait",
     "visiblePixels": 97568,
     "solidAlpha250Ratio": 0.98825,
+    "faintAlphaRatio": 0.00511,
     "width": 231,
     "height": 600
   },
@@ -115,6 +131,7 @@
     "asset": "xing-chibi",
     "visiblePixels": 3864,
     "solidAlpha250Ratio": 0.93815,
+    "faintAlphaRatio": 0.02899,
     "width": 47,
     "height": 116
   },
@@ -122,6 +139,7 @@
     "asset": "liwan-portrait",
     "visiblePixels": 104132,
     "solidAlpha250Ratio": 0.98998,
+    "faintAlphaRatio": 0.0044,
     "width": 258,
     "height": 600
   },
@@ -129,6 +147,7 @@
     "asset": "liwan-chibi",
     "visiblePixels": 3546,
     "solidAlpha250Ratio": 0.93683,
+    "faintAlphaRatio": 0.02623,
     "width": 43,
     "height": 116
   },
@@ -136,6 +155,7 @@
     "asset": "yingchun-portrait",
     "visiblePixels": 90254,
     "solidAlpha250Ratio": 0.98809,
+    "faintAlphaRatio": 0.00557,
     "width": 216,
     "height": 600
   },
@@ -143,6 +163,7 @@
     "asset": "yingchun-chibi",
     "visiblePixels": 3944,
     "solidAlpha250Ratio": 0.94143,
+    "faintAlphaRatio": 0.02612,
     "width": 48,
     "height": 116
   },
@@ -150,6 +171,7 @@
     "asset": "tanchun-portrait",
     "visiblePixels": 94893,
     "solidAlpha250Ratio": 0.98856,
+    "faintAlphaRatio": 0.00455,
     "width": 224,
     "height": 600
   },
@@ -157,6 +179,7 @@
     "asset": "tanchun-chibi",
     "visiblePixels": 3652,
     "solidAlpha250Ratio": 0.93729,
+    "faintAlphaRatio": 0.02519,
     "width": 45,
     "height": 116
   },
@@ -164,6 +187,7 @@
     "asset": "xichun-portrait",
     "visiblePixels": 86834,
     "solidAlpha250Ratio": 0.9881,
+    "faintAlphaRatio": 0.0054,
     "width": 204,
     "height": 600
   },
@@ -171,6 +195,7 @@
     "asset": "xichun-chibi",
     "visiblePixels": 2917,
     "solidAlpha250Ratio": 0.93349,
+    "faintAlphaRatio": 0.02743,
     "width": 41,
     "height": 98
   },
@@ -178,6 +203,7 @@
     "asset": "xiren-portrait",
     "visiblePixels": 97122,
     "solidAlpha250Ratio": 0.98918,
+    "faintAlphaRatio": 0.0051,
     "width": 241,
     "height": 600
   },
@@ -185,6 +211,7 @@
     "asset": "xiren-chibi",
     "visiblePixels": 3641,
     "solidAlpha250Ratio": 0.93353,
+    "faintAlphaRatio": 0.02994,
     "width": 46,
     "height": 116
   },
@@ -192,6 +219,7 @@
     "asset": "xueyan-portrait",
     "visiblePixels": 86789,
     "solidAlpha250Ratio": 0.98839,
+    "faintAlphaRatio": 0.00507,
     "width": 203,
     "height": 600
   },
@@ -199,6 +227,7 @@
     "asset": "xueyan-chibi",
     "visiblePixels": 4332,
     "solidAlpha250Ratio": 0.94552,
+    "faintAlphaRatio": 0.0217,
     "width": 52,
     "height": 116
   },
@@ -206,6 +235,7 @@
     "asset": "yingge-portrait",
     "visiblePixels": 104926,
     "solidAlpha250Ratio": 0.99036,
+    "faintAlphaRatio": 0.00443,
     "width": 254,
     "height": 600
   },
@@ -213,6 +243,7 @@
     "asset": "yingge-chibi",
     "visiblePixels": 3609,
     "solidAlpha250Ratio": 0.93793,
+    "faintAlphaRatio": 0.02272,
     "width": 45,
     "height": 116
   },
@@ -220,6 +251,7 @@
     "asset": "yucun-portrait",
     "visiblePixels": 124820,
     "solidAlpha250Ratio": 0.99247,
+    "faintAlphaRatio": 0.00259,
     "width": 317,
     "height": 600
   },
@@ -227,6 +259,7 @@
     "asset": "yucun-chibi",
     "visiblePixels": 3837,
     "solidAlpha250Ratio": 0.93589,
+    "faintAlphaRatio": 0.02997,
     "width": 49,
     "height": 116
   },
@@ -234,6 +267,7 @@
     "asset": "ruhai-portrait",
     "visiblePixels": 127867,
     "solidAlpha250Ratio": 0.9928,
+    "faintAlphaRatio": 0.00305,
     "width": 336,
     "height": 600
   },
@@ -241,20 +275,23 @@
     "asset": "ruhai-chibi",
     "visiblePixels": 4094,
     "solidAlpha250Ratio": 0.94358,
+    "faintAlphaRatio": 0.02418,
     "width": 53,
     "height": 116
   },
   {
     "asset": "sedan-chair",
-    "visiblePixels": 20636,
-    "solidAlpha250Ratio": 0.92096,
+    "visiblePixels": 18216,
+    "solidAlpha250Ratio": 0.89872,
+    "faintAlphaRatio": 0.04123,
     "width": 230,
-    "height": 195
+    "height": 163
   },
   {
     "asset": "rongxi-hall",
     "visiblePixels": 595890,
     "solidAlpha250Ratio": 0.9937,
+    "faintAlphaRatio": 0.00277,
     "width": 1100,
     "height": 931
   },
@@ -262,6 +299,7 @@
     "asset": "bamboo-gate",
     "visiblePixels": 49953,
     "solidAlpha250Ratio": 0.96603,
+    "faintAlphaRatio": 0.01457,
     "width": 430,
     "height": 292
   },
@@ -269,6 +307,7 @@
     "asset": "wood-screen",
     "visiblePixels": 22356,
     "solidAlpha250Ratio": 0.97267,
+    "faintAlphaRatio": 0.00948,
     "width": 190,
     "height": 172
   },
@@ -276,6 +315,7 @@
     "asset": "dining-table",
     "visiblePixels": 28721,
     "solidAlpha250Ratio": 0.95383,
+    "faintAlphaRatio": 0.01995,
     "width": 230,
     "height": 224
   },
@@ -283,6 +323,7 @@
     "asset": "canopy-bed",
     "visiblePixels": 83963,
     "solidAlpha250Ratio": 0.9881,
+    "faintAlphaRatio": 0.00544,
     "width": 300,
     "height": 367
   },
@@ -290,6 +331,7 @@
     "asset": "river-boat",
     "visiblePixels": 37112,
     "solidAlpha250Ratio": 0.98073,
+    "faintAlphaRatio": 0.00787,
     "width": 340,
     "height": 201
   },
@@ -297,6 +339,7 @@
     "asset": "tea-table",
     "visiblePixels": 7694,
     "solidAlpha250Ratio": 0.92072,
+    "faintAlphaRatio": 0.03158,
     "width": 130,
     "height": 115
   },
@@ -304,6 +347,7 @@
     "asset": "zhang-portrait",
     "visiblePixels": 127192,
     "solidAlpha250Ratio": 0.98935,
+    "faintAlphaRatio": 0.00423,
     "width": 381,
     "height": 600
   },
@@ -311,6 +355,7 @@
     "asset": "zhang-chibi",
     "visiblePixels": 4245,
     "solidAlpha250Ratio": 0.9298,
+    "faintAlphaRatio": 0.02709,
     "width": 66,
     "height": 116
   },
@@ -318,6 +363,7 @@
     "asset": "leng-portrait",
     "visiblePixels": 139851,
     "solidAlpha250Ratio": 0.99173,
+    "faintAlphaRatio": 0.00347,
     "width": 362,
     "height": 600
   },
@@ -325,6 +371,7 @@
     "asset": "leng-chibi",
     "visiblePixels": 4555,
     "solidAlpha250Ratio": 0.93568,
+    "faintAlphaRatio": 0.02744,
     "width": 59,
     "height": 116
   },
@@ -332,6 +379,7 @@
     "asset": "zheng-portrait",
     "visiblePixels": 138018,
     "solidAlpha250Ratio": 0.99224,
+    "faintAlphaRatio": 0.00319,
     "width": 349,
     "height": 600
   },
@@ -339,6 +387,7 @@
     "asset": "zheng-chibi",
     "visiblePixels": 4433,
     "solidAlpha250Ratio": 0.95082,
+    "faintAlphaRatio": 0.01985,
     "width": 57,
     "height": 116
   },
@@ -346,6 +395,7 @@
     "asset": "guide-portrait",
     "visiblePixels": 130711,
     "solidAlpha250Ratio": 0.99005,
+    "faintAlphaRatio": 0.00433,
     "width": 423,
     "height": 600
   },
@@ -353,6 +403,7 @@
     "asset": "guide-chibi",
     "visiblePixels": 4396,
     "solidAlpha250Ratio": 0.93039,
+    "faintAlphaRatio": 0.02889,
     "width": 60,
     "height": 116
   },
@@ -360,6 +411,7 @@
     "asset": "maid-portrait",
     "visiblePixels": 109602,
     "solidAlpha250Ratio": 0.9903,
+    "faintAlphaRatio": 0.00453,
     "width": 272,
     "height": 600
   },
@@ -367,6 +419,7 @@
     "asset": "maid-chibi",
     "visiblePixels": 3807,
     "solidAlpha250Ratio": 0.92461,
+    "faintAlphaRatio": 0.02784,
     "width": 47,
     "height": 116
   },
@@ -374,6 +427,7 @@
     "asset": "messenger-portrait",
     "visiblePixels": 117360,
     "solidAlpha250Ratio": 0.99111,
+    "faintAlphaRatio": 0.00407,
     "width": 288,
     "height": 600
   },
@@ -381,6 +435,7 @@
     "asset": "messenger-chibi",
     "visiblePixels": 3997,
     "solidAlpha250Ratio": 0.93295,
+    "faintAlphaRatio": 0.02727,
     "width": 51,
     "height": 116
   },
@@ -388,6 +443,7 @@
     "asset": "nurse_wang-portrait",
     "visiblePixels": 120097,
     "solidAlpha250Ratio": 0.99055,
+    "faintAlphaRatio": 0.00403,
     "width": 291,
     "height": 600
   },
@@ -395,6 +451,7 @@
     "asset": "nurse_wang-chibi",
     "visiblePixels": 4780,
     "solidAlpha250Ratio": 0.95063,
+    "faintAlphaRatio": 0.02238,
     "width": 72,
     "height": 116
   },
@@ -402,6 +459,7 @@
     "asset": "nurse_li-portrait",
     "visiblePixels": 125228,
     "solidAlpha250Ratio": 0.99205,
+    "faintAlphaRatio": 0.00341,
     "width": 291,
     "height": 600
   },
@@ -409,6 +467,7 @@
     "asset": "nurse_li-chibi",
     "visiblePixels": 4451,
     "solidAlpha250Ratio": 0.9499,
+    "faintAlphaRatio": 0.02179,
     "width": 55,
     "height": 116
   },
@@ -416,6 +475,7 @@
     "asset": "estate-grandmother",
     "visiblePixels": 248759,
     "solidAlpha250Ratio": 0.99267,
+    "faintAlphaRatio": 0.00316,
     "width": 800,
     "height": 510
   },
@@ -423,6 +483,7 @@
     "asset": "estate-east",
     "visiblePixels": 239999,
     "solidAlpha250Ratio": 0.99229,
+    "faintAlphaRatio": 0.00306,
     "width": 800,
     "height": 483
   },
@@ -430,6 +491,7 @@
     "asset": "estate-wang",
     "visiblePixels": 283342,
     "solidAlpha250Ratio": 0.9935,
+    "faintAlphaRatio": 0.00256,
     "width": 800,
     "height": 564
   },
@@ -437,6 +499,7 @@
     "asset": "estate-feng",
     "visiblePixels": 292309,
     "solidAlpha250Ratio": 0.99327,
+    "faintAlphaRatio": 0.00281,
     "width": 800,
     "height": 583
   },
@@ -444,6 +507,7 @@
     "asset": "estate-rear",
     "visiblePixels": 273323,
     "solidAlpha250Ratio": 0.99334,
+    "faintAlphaRatio": 0.00306,
     "width": 800,
     "height": 553
   },
@@ -451,6 +515,7 @@
     "asset": "estate-bisha",
     "visiblePixels": 307440,
     "solidAlpha250Ratio": 0.99413,
+    "faintAlphaRatio": 0.00262,
     "width": 800,
     "height": 619
   },
@@ -458,6 +523,7 @@
     "asset": "estate-study",
     "visiblePixels": 264239,
     "solidAlpha250Ratio": 0.99304,
+    "faintAlphaRatio": 0.00302,
     "width": 800,
     "height": 532
   },
@@ -465,6 +531,7 @@
     "asset": "shiyin-portrait",
     "visiblePixels": 157099,
     "solidAlpha250Ratio": 0.99301,
+    "faintAlphaRatio": 0.00357,
     "width": 411,
     "height": 600
   },
@@ -472,6 +539,7 @@
     "asset": "shiyin-chibi",
     "visiblePixels": 4092,
     "solidAlpha250Ratio": 0.9411,
+    "faintAlphaRatio": 0.02468,
     "width": 50,
     "height": 116
   },
@@ -479,6 +547,7 @@
     "asset": "fengshi-portrait",
     "visiblePixels": 149267,
     "solidAlpha250Ratio": 0.99329,
+    "faintAlphaRatio": 0.00322,
     "width": 396,
     "height": 600
   },
@@ -486,6 +555,7 @@
     "asset": "fengshi-chibi",
     "visiblePixels": 3580,
     "solidAlpha250Ratio": 0.93492,
+    "faintAlphaRatio": 0.02737,
     "width": 44,
     "height": 116
   },
@@ -493,6 +563,7 @@
     "asset": "yinglian-portrait",
     "visiblePixels": 128301,
     "solidAlpha250Ratio": 0.99136,
+    "faintAlphaRatio": 0.00348,
     "width": 301,
     "height": 600
   },
@@ -500,6 +571,7 @@
     "asset": "yinglian-chibi",
     "visiblePixels": 2504,
     "solidAlpha250Ratio": 0.9365,
+    "faintAlphaRatio": 0.02875,
     "width": 44,
     "height": 80
   },
@@ -507,6 +579,7 @@
     "asset": "jiaoxing-portrait",
     "visiblePixels": 132179,
     "solidAlpha250Ratio": 0.99253,
+    "faintAlphaRatio": 0.00414,
     "width": 347,
     "height": 600
   },
@@ -514,6 +587,7 @@
     "asset": "jiaoxing-chibi",
     "visiblePixels": 4035,
     "solidAlpha250Ratio": 0.93656,
+    "faintAlphaRatio": 0.02652,
     "width": 52,
     "height": 116
   },
@@ -521,6 +595,7 @@
     "asset": "fengsu-portrait",
     "visiblePixels": 192081,
     "solidAlpha250Ratio": 0.99506,
+    "faintAlphaRatio": 0.0019,
     "width": 497,
     "height": 600
   },
@@ -528,6 +603,7 @@
     "asset": "fengsu-chibi",
     "visiblePixels": 5305,
     "solidAlpha250Ratio": 0.95174,
+    "faintAlphaRatio": 0.02149,
     "width": 68,
     "height": 116
   },
@@ -535,6 +611,7 @@
     "asset": "monk-portrait",
     "visiblePixels": 173885,
     "solidAlpha250Ratio": 0.99499,
+    "faintAlphaRatio": 0.00133,
     "width": 406,
     "height": 600
   },
@@ -542,6 +619,7 @@
     "asset": "monk-chibi",
     "visiblePixels": 5121,
     "solidAlpha250Ratio": 0.95372,
+    "faintAlphaRatio": 0.0207,
     "width": 71,
     "height": 116
   },
@@ -549,6 +627,7 @@
     "asset": "taoist-portrait",
     "visiblePixels": 133684,
     "solidAlpha250Ratio": 0.98324,
+    "faintAlphaRatio": 0.00645,
     "width": 367,
     "height": 600
   },
@@ -556,6 +635,7 @@
     "asset": "taoist-chibi",
     "visiblePixels": 4305,
     "solidAlpha250Ratio": 0.92218,
+    "faintAlphaRatio": 0.04646,
     "width": 71,
     "height": 116
   },
@@ -563,6 +643,7 @@
     "asset": "kongkong-portrait",
     "visiblePixels": 179895,
     "solidAlpha250Ratio": 0.99248,
+    "faintAlphaRatio": 0.00198,
     "width": 547,
     "height": 600
   },
@@ -570,6 +651,7 @@
     "asset": "kongkong-chibi",
     "visiblePixels": 4961,
     "solidAlpha250Ratio": 0.94255,
+    "faintAlphaRatio": 0.0252,
     "width": 72,
     "height": 116
   },
@@ -577,6 +659,7 @@
     "asset": "huoqi-portrait",
     "visiblePixels": 166042,
     "solidAlpha250Ratio": 0.99496,
+    "faintAlphaRatio": 0.00202,
     "width": 426,
     "height": 600
   },
@@ -584,6 +667,7 @@
     "asset": "huoqi-chibi",
     "visiblePixels": 4783,
     "solidAlpha250Ratio": 0.94669,
+    "faintAlphaRatio": 0.02258,
     "width": 58,
     "height": 116
   },
@@ -591,6 +675,7 @@
     "asset": "oldmonk-portrait",
     "visiblePixels": 194462,
     "solidAlpha250Ratio": 0.99358,
+    "faintAlphaRatio": 0.0024,
     "width": 505,
     "height": 600
   },
@@ -598,6 +683,7 @@
     "asset": "oldmonk-chibi",
     "visiblePixels": 4975,
     "solidAlpha250Ratio": 0.95136,
+    "faintAlphaRatio": 0.02151,
     "width": 66,
     "height": 116
   },
@@ -605,6 +691,7 @@
     "asset": "estate-zhen",
     "visiblePixels": 341243,
     "solidAlpha250Ratio": 0.993,
+    "faintAlphaRatio": 0.00246,
     "width": 800,
     "height": 633
   },
@@ -612,6 +699,7 @@
     "asset": "estate-hulu",
     "visiblePixels": 360858,
     "solidAlpha250Ratio": 0.9927,
+    "faintAlphaRatio": 0.00355,
     "width": 800,
     "height": 724
   },
@@ -619,6 +707,7 @@
     "asset": "estate-farm",
     "visiblePixels": 215150,
     "solidAlpha250Ratio": 0.9903,
+    "faintAlphaRatio": 0.00438,
     "width": 800,
     "height": 452
   },
@@ -626,6 +715,7 @@
     "asset": "estate-yamen",
     "visiblePixels": 336815,
     "solidAlpha250Ratio": 0.99322,
+    "faintAlphaRatio": 0.00314,
     "width": 800,
     "height": 681
   },
@@ -633,6 +723,7 @@
     "asset": "estate-zhitong",
     "visiblePixels": 282704,
     "solidAlpha250Ratio": 0.99288,
+    "faintAlphaRatio": 0.00281,
     "width": 800,
     "height": 544
   },
@@ -640,6 +731,7 @@
     "asset": "estate-tavern",
     "visiblePixels": 297317,
     "solidAlpha250Ratio": 0.99165,
+    "faintAlphaRatio": 0.0038,
     "width": 800,
     "height": 691
   },
@@ -647,6 +739,7 @@
     "asset": "estate-lantern",
     "visiblePixels": 267565,
     "solidAlpha250Ratio": 0.99124,
+    "faintAlphaRatio": 0.0038,
     "width": 800,
     "height": 551
   },
@@ -654,6 +747,7 @@
     "asset": "black-oil-gate",
     "visiblePixels": 98995,
     "solidAlpha250Ratio": 0.98603,
+    "faintAlphaRatio": 0.00536,
     "width": 450,
     "height": 373
   },
@@ -661,6 +755,7 @@
     "asset": "west-wall-gate",
     "visiblePixels": 84066,
     "solidAlpha250Ratio": 0.98826,
+    "faintAlphaRatio": 0.00529,
     "width": 390,
     "height": 325
   },
@@ -668,6 +763,7 @@
     "asset": "spirit-stone",
     "visiblePixels": 57530,
     "solidAlpha250Ratio": 0.98347,
+    "faintAlphaRatio": 0.00758,
     "width": 260,
     "height": 334
   },
@@ -675,6 +771,7 @@
     "asset": "crimson-pearl",
     "visiblePixels": 7254,
     "solidAlpha250Ratio": 0.93397,
+    "faintAlphaRatio": 0.06603,
     "width": 200,
     "height": 197
   },
@@ -682,6 +779,7 @@
     "asset": "manor-main-gate",
     "visiblePixels": 190053,
     "solidAlpha250Ratio": 0.98859,
+    "faintAlphaRatio": 0.00538,
     "width": 650,
     "height": 528
   },
@@ -689,6 +787,7 @@
     "asset": "estate-ruins",
     "visiblePixels": 316059,
     "solidAlpha250Ratio": 0.98512,
+    "faintAlphaRatio": 0.0062,
     "width": 800,
     "height": 626
   },
@@ -696,6 +795,7 @@
     "asset": "menzi-portrait",
     "visiblePixels": 98756,
     "solidAlpha250Ratio": 0.99018,
+    "faintAlphaRatio": 0.00444,
     "width": 254,
     "height": 600
   },
@@ -703,6 +803,7 @@
     "asset": "menzi-chibi",
     "visiblePixels": 4123,
     "solidAlpha250Ratio": 0.93548,
+    "faintAlphaRatio": 0.03105,
     "width": 53,
     "height": 116
   },
@@ -710,6 +811,7 @@
     "asset": "plaintiff-portrait",
     "visiblePixels": 95392,
     "solidAlpha250Ratio": 0.98681,
+    "faintAlphaRatio": 0.00626,
     "width": 254,
     "height": 600
   },
@@ -717,6 +819,7 @@
     "asset": "plaintiff-chibi",
     "visiblePixels": 6020,
     "solidAlpha250Ratio": 0.93272,
+    "faintAlphaRatio": 0.02907,
     "width": 99,
     "height": 116
   },
@@ -724,6 +827,7 @@
     "asset": "xuepan-portrait",
     "visiblePixels": 84621,
     "solidAlpha250Ratio": 0.98539,
+    "faintAlphaRatio": 0.00623,
     "width": 206,
     "height": 600
   },
@@ -731,6 +835,7 @@
     "asset": "xuepan-chibi",
     "visiblePixels": 4891,
     "solidAlpha250Ratio": 0.936,
+    "faintAlphaRatio": 0.02944,
     "width": 64,
     "height": 116
   },
@@ -738,6 +843,7 @@
     "asset": "xueyima-portrait",
     "visiblePixels": 100621,
     "solidAlpha250Ratio": 0.98947,
+    "faintAlphaRatio": 0.0045,
     "width": 247,
     "height": 600
   },
@@ -745,6 +851,7 @@
     "asset": "xueyima-chibi",
     "visiblePixels": 3999,
     "solidAlpha250Ratio": 0.93673,
+    "faintAlphaRatio": 0.02701,
     "width": 49,
     "height": 116
   },
@@ -752,6 +859,7 @@
     "asset": "baochai-portrait",
     "visiblePixels": 126725,
     "solidAlpha250Ratio": 0.9913,
+    "faintAlphaRatio": 0.00371,
     "width": 319,
     "height": 600
   },
@@ -759,6 +867,7 @@
     "asset": "baochai-chibi",
     "visiblePixels": 3977,
     "solidAlpha250Ratio": 0.93915,
+    "faintAlphaRatio": 0.02816,
     "width": 49,
     "height": 116
   },
@@ -766,6 +875,7 @@
     "asset": "square-table",
     "visiblePixels": 13649,
     "solidAlpha250Ratio": 0.95861,
+    "faintAlphaRatio": 0.01619,
     "width": 165,
     "height": 164
   },
@@ -773,6 +883,7 @@
     "asset": "altar-table",
     "visiblePixels": 10896,
     "solidAlpha250Ratio": 0.93924,
+    "faintAlphaRatio": 0.02322,
     "width": 195,
     "height": 164
   },
@@ -780,6 +891,7 @@
     "asset": "writing-desk",
     "visiblePixels": 13081,
     "solidAlpha250Ratio": 0.91706,
+    "faintAlphaRatio": 0.02844,
     "width": 180,
     "height": 147
   },
@@ -787,6 +899,7 @@
     "asset": "official-chair",
     "visiblePixels": 6966,
     "solidAlpha250Ratio": 0.942,
+    "faintAlphaRatio": 0.0,
     "width": 100,
     "height": 138
   },
@@ -794,6 +907,7 @@
     "asset": "round-stool",
     "visiblePixels": 3687,
     "solidAlpha250Ratio": 0.9463,
+    "faintAlphaRatio": 0.0,
     "width": 70,
     "height": 93
   },
@@ -801,6 +915,7 @@
     "asset": "square-stool",
     "visiblePixels": 2840,
     "solidAlpha250Ratio": 0.93627,
+    "faintAlphaRatio": 0.0,
     "width": 70,
     "height": 77
   },
@@ -808,6 +923,7 @@
     "asset": "cabinet",
     "visiblePixels": 22540,
     "solidAlpha250Ratio": 0.97649,
+    "faintAlphaRatio": 0.01473,
     "width": 130,
     "height": 222
   },
@@ -815,6 +931,7 @@
     "asset": "brazier",
     "visiblePixels": 6712,
     "solidAlpha250Ratio": 0.94338,
+    "faintAlphaRatio": 0.02279,
     "width": 90,
     "height": 116
   },
@@ -822,6 +939,7 @@
     "asset": "vase-stand",
     "visiblePixels": 9156,
     "solidAlpha250Ratio": 0.94648,
+    "faintAlphaRatio": 0.0,
     "width": 110,
     "height": 163
   }
