@@ -136,5 +136,13 @@ for(const file of docFiles){
  }
 }
 for(const warning of warnings)console.warn(`WARN ${warning}`);
+// The facing list is generated from the authoritative table; keep them in step.
+{
+ const listPath=resolve(root,'docs/production/facing-list.md');
+ requireThat(existsSync(listPath),'docs/production/facing-list.md: missing; run scripts/build_facing_doc.py');
+ const {spawnSync}=await import('node:child_process');
+ const check=spawnSync('python3',[resolve(root,'scripts/build_facing_doc.py'),'--check'],{encoding:'utf8'});
+ requireThat(check.status===0,`facing-list.md is out of date with design/character-facing.json: ${(check.stdout||'').trim()||(check.stderr||'').trim()}`);
+}
 if(errors.length){for(const error of errors)console.error(`ERROR ${error}`);process.exitCode=1;}
 else console.log(`Content passed: ${story.length} nodes, ${chapters.length} sections, ${maps.size} maps, ${Object.keys(cast).length-1} humans, ${Object.keys(manifest).length} assets; chapter counts ${JSON.stringify(Object.fromEntries(books))}; ${docFiles.length} documentation files linked; ${evidenceEntries} evidence entries in ${evidenceFiles.length} table(s). Original-text interpretation and visuals still require human review.`);
