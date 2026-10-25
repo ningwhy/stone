@@ -78,7 +78,58 @@ try{
  console.log(`${tag} non-403 failed requests:`,realFailures.length);
  for(const f of realFailures.slice(0,10))console.log('  ',f);
  assert.deepEqual(errors,[],JSON.stringify(errors));
- console.log(`Passed: https://stone.yan.pub/ serves chapter four, the new court stage, the Xue portraits, the chapter-four journey view and the estate overview thumbnails.`);
+
+ // The new playback controls: one switch that reads 自动 while the reader drives and
+ // 暂停 while the story drives itself, and the master sound switch beside it.
+ await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c1-home');await reading();
+ assert.equal(await page.getByRole('button',{name:'暂停',exact:true}).count(),0,'a separate pause button is still in the toolbar');
+ await page.getByRole('button',{name:'自动',exact:true}).click();
+ await page.waitForTimeout(300);
+ assert.equal(await page.getByRole('button',{name:'暂停',exact:true}).count(),1,'the same button now reads 暂停');
+ const autoNode=await page.locator('.node-label').textContent();
+ await page.waitForFunction(id=>document.querySelector('.node-label')?.textContent!==id,autoNode,{timeout:30000});
+ await page.getByRole('button',{name:'暂停',exact:true}).click();
+ console.log(`${tag} auto/pause switch: one button, two readings, the story advanced and stopped`);
+
+ // The sound master switch is one click from the story, and it is remembered.
+ await page.locator('.dialogue-text').click();
+ await page.waitForFunction(()=>window.__audio&&window.__audio.ready===true,null,{timeout:20000});
+ await page.getByRole('button',{name:'关闭声音'}).click();
+ await page.waitForTimeout(400);
+ assert.equal(await page.evaluate(()=>window.__audio.muted),true,'the toolbar switch silences the game');
+ await page.getByRole('button',{name:'开启声音'}).click();
+ await page.waitForTimeout(300);
+ assert.equal(await page.evaluate(()=>window.__audio.muted),false,'the toolbar switch brings the sound back');
+ console.log(`${tag} master sound switch: silences and restores`);
+
+ // 回看 can send the reader back to any line they have read.
+ await page.getByRole('button',{name:'回看',exact:true}).click();
+ await page.locator('.history-list').waitFor({timeout:20000});
+ const readCount=await page.locator('.history-list article').count();
+ assert.ok(readCount>=1,'the log of what has been read is empty');
+ const jumpId=await page.locator('.history-list article').first().locator('small').textContent();
+ await page.locator('.history-list article').first().getByRole('button').click();
+ await reading();
+ assert.equal(await page.locator('.node-label').textContent(),jumpId,'the reader landed on the line they chose');
+ await page.getByRole('button',{name:'回看',exact:true}).click();
+ await page.locator('.history-list').waitFor({timeout:20000});
+ assert.ok(await page.locator('.history-list article').count()>=readCount,'the log did not shrink after a jump backwards');
+ await page.getByRole('button',{name:'关闭弹窗'}).click();
+ console.log(`${tag} 回看: ${readCount} lines, jumpable, and the log survives the jump`);
+
+ // Each of the four books has a piece of its own, and the stage still overrides it.
+ const piece=async(section,expected)=>{
+  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(section);await reading();
+  await page.waitForFunction(name=>window.__audio&&window.__audio.current&&window.__audio.current.name===name,expected,{timeout:30000});
+  console.log(`${tag} piece ${section}:`,expected);
+ };
+ await piece('c1-home','bgm-book-one');
+ await piece('c2-dismissal','bgm-book-two');
+ await piece('prologue','bgm-book-three');
+ await piece('c4-court','bgm-book-four');
+ await piece('arrival','bgm-street');
+ await page.screenshot({path:`artifacts/${tag}-playback.png`,fullPage:true});
+ console.log(`Passed: https://stone.yan.pub/ serves chapter four, the new court stage, the Xue portraits, the chapter-four journey view and the estate overview thumbnails, plus the merged auto/pause switch, the master sound switch, the jumpable 回看 log and the per-book pieces.`);
 }catch(e){
  console.error('errors',errors);
  console.error('failed requests',failed.slice(0,20));
