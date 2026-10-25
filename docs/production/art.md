@@ -24,6 +24,7 @@
 
 - `generate_art.py`：按 plan 用 Z-Image 生成新建筑/道具/初始人物；可 `--only ASSET_ID` 只生成目标。已有成功源图跳过。
 - `matte_art.py`：`--only ASSET_ID` 对目标做 SAM/SDMatte 双路分割，保留候选及工作流。
+- `matte_paper_key.py`：`--only ASSET_ID` 走宣纸底键控，见下节「一群人抬着的东西怎么抠」。
 - `redesign_character_faces.py`：Qwen 2.1 edit，先 portrait 再 chibi，30 步、cfg 1，512×512 头部参考；按 `--ids ACTOR_ID` 选择人物，可断点续跑。
 - `review_character_identities.py`：输出全人物彩色脸、灰度主角对照；只有目检完成才加 `--record` 写 approved。
 
@@ -53,16 +54,37 @@ Qwen 节点需要官方 API JSON，不是 UI 画布导出。图像输入正确�
 | `mirror` | 固化朝向变体，锚点同步变换 |
 | `solidAlphaThreshold` | 最终 alpha 压实阈值，默认 210；特殊细叶/竹杖按目检调整 |
 | `alphaFloor` | 最终 alpha 透明侧阈值，默认 16；细结构家具（椅枨、凳腿、花架立柱）在 70–110px 输出宽度下 1px 抗锯齿边占轮廓比例过大，会把 ≥90% 实度门槛拖到线下，按 128 压平 |
+| `matteKind` | 取哪一路抠图，默认 `sam`；成群人物改用 `paper-key`（见下节） |
 
 builder 顺序是原 SAM alpha ≥110 二值化 → 恢复道具 → 裁切/清理 → 身体压缩 → 剪切 → 镜像 → alpha 包围盒裁剪 → 缩放 → alpha 压实 → 应用经检查的新脸。锚点随几何变换，不靠剧情站位补偿错位。
 
 `extend_art_calibration.py` 对陌生 ID 可能尺寸字典查不到，且从 jobs 下标 8 开始；`calibrate_missing_art.py`、`calibrate_prequel_art.py` 含既有批次坐标。后续应显式添加经测量的新条目或目标回校准脚本，不把这些当通用向导。
+
+## 一群人抬着的东西怎么抠（2026-10，轿子加轿夫）
+
+轿子原本是「无人抬轿」的单独一顶，2026-10 改成四名轿夫抬着走。这打破了两条既有假设，值得记下来。
+
+**SAM 处理不了成群的人。** `subject` 写 `people` 只抠出四个轿夫、轿身整个丢掉；写 `people, sedan chair` 会把人和轿子分别成多个实例，合成后人身上出现空洞——躯干是半透明的，棋盘底能透出来。SDMatte 那一路方向相反，把背景建筑一起留下了。原因是 GroundingDINO 按文本找实例，而这里的语义单元是「一整套正在移动的载具」，不是一个可枚举的物体。
+
+改用**宣纸底键控**（`scripts/matte_paper_key.py`）。这批画都画在均匀的宣纸底上，按离底色的距离切比按语义切可靠。三个要点：
+
+- **底色要实测**：取四边各 20px 的中位色，纸纹和暖调都在里面，不要假设纯白。
+- **只留大块连通域**：纸纹自身的起伏会过阈值、散落整幅，按面积（默认 2000px）滤掉碎点。连通域用闭运算 + 填洞收一下，避免人物轮廓被纹理切断。
+- **贴边的连通域一律丢弃**：模型爱在角落补一段墙或檐，那块一定连着画布边缘；真实主体四周留白、碰不到边。这条规则比逐图量坐标干净，也不会切到人。轿子那张因此自动丢掉了左上角的门楼和墙帽各一块。
+
+产出 `art/matted/<stem>-paper-key.png`，同时写一份 `-paper-key.json` 记录底色、阈值、被丢弃的贴边块和包围盒。`build_art_assets.py` 按 calibration 的 `matteKind` 取对应那一路。实测轿子这套的 alpha 实心率 0.968（门槛 0.90）。
+
+**摆位要跟着改。** 成品从 170×146 变成 230×195。地图里的美术对象由 `build_chapter_maps.py` 用 `manifest 尺寸 × scale` 算，手工放的那份 `maps/yamen.tmj` 要按同一公式同步宽高与落位——`setDisplaySize` 直接吃 Tiled 宽高，不改就会被拉伸。锚点仍取包围盒水平中心与底边，与其它资产一致。
+
+尺度参照：Q 版人物高 116–118px，新图里的轿夫约 95px，轿顶仍在人头之上，比例可接受。
 
 ## 人物朝向表
 
 原图脸部朝向并不一致，立绘与 Q 版不能靠同一条全局规则镜像。`design/character-facing.json` 是权威朝向表，**按资产键**记录（`left` / `right`），并附 `evidence`（测量值与方法）：`actors` 下每个角色分 `portrait` 与 `chibi`，`variants` 下每张表情变体各一条。运行时经 `src/story.ts` 的 `paintedFacingOf(assetKey, actor, kind)` 查询：对话框立绘按讲话人/听众位置决定是否 `scaleX(-1)`，地图 Q 版整图左右镜像（`setFlipX`，模拟向后转），且镜像条件不再是"只在行走时"——`direction` 停止后、跨场景/跨段落都保持，由引擎在 `show` 与移动到达时按站位写入（见 `docs/design.md` 的朝向演出规则）。
 
 **逐张清单见 [facing-list.md](./facing-list.md)**——那是由 `scripts/build_facing_doc.py` 从权威 JSON 自动展开的 92 张位图逐行清单（38 立绘 + 38 Q 版 + 16 表情变体），可直接核对哪张朝左、依据是实测还是目视。
+
+载具是唯一不按人脸记的条目：轿子由四名轿夫抬着，轿夫的脸都朝内对着轿身，整组没有单一朝向，所以 `sedan` 记 `evidence.method = default-vehicle-group`、取左为默认，运行时按行进方向整图翻转。它不计入那 92 张。
 
 ### 为什么按资产键而不是按角色
 

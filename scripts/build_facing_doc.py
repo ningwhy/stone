@@ -40,7 +40,7 @@ METHOD_ZH = {
     'vision-landmark-geometry': '实测',
     'vision-landmark-geometry-on-source-bitmap': '实测(源图)',
     'visual-review': '目视',
-    'default-no-painted-head': '默认',
+    'default-vehicle-group': '载具',
 }
 
 
@@ -70,8 +70,8 @@ def main() -> int:
             method = e.get('method') or ev.get('method', '')
             votes = e.get('votes')
             basis = METHOD_ZH.get(method, method or '-') + (f'·{votes}票' if votes else '')
-            # 无人物头的道具（轿子）不参与朝向判定，也不计入人物位图统计
-            if method == 'default-no-painted-head':
+            # 载具（轿子）由四名轿夫抬着，轿夫的脸朝内、没有统一朝向，不计入人物位图统计
+            if method == 'default-vehicle-group':
                 props.append((f'{actor}-{kind}', NAMES.get(actor, actor), kind_cn, side_cn(side), basis))
                 continue
             rows.append((f'{actor}-{kind}', NAMES.get(actor, actor), kind_cn, side_cn(side), basis))
@@ -127,9 +127,9 @@ def main() -> int:
             out.append(f'| `{key}` | {name} | {kind} | {basis} |')
     out.append('')
     if props:
-        out.append('## 不参与朝向判定的道具')
+        out.append('## 不参与朝向判定的载具')
         out.append('')
-        out.append('这些是场景道具，没有人物头，朝向无意义；运行时走各自的绘制分支。')
+        out.append('这些是载具，图里的轿夫朝内、没有单一朝向；运行时按行进方向整图翻转。')
         out.append('')
         out.append('| 资产键 | 名称 | 类别 | 取值 |')
         out.append('| --- | --- | --- | --- |')

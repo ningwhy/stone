@@ -115,9 +115,11 @@ REVIEWED = {
     'zheng-chibi': ('right', 'single crop read; confirmed by eye'),
 }
 
-# The props that are cast members but have no painted head. They keep the
-# default the runtime has always used.
-NO_HEAD = {'sedan'}
+# Vehicles are cast members but not a face: the sedan is carried by four bearers
+# whose heads turn inward towards the chair, so the group has no single painted
+# side. It keeps the left default and the runtime flips it with the direction of
+# travel, which is what a symmetric load should do.
+VEHICLE = {'sedan'}
 
 
 def main():
@@ -136,9 +138,9 @@ def main():
     entries = {}
     missing = []
     for actor in cast_ids:
-        if actor in NO_HEAD:
+        if actor in VEHICLE:
             entries[actor] = {'portrait': 'left', 'chibi': 'left',
-                              'evidence': {'method': 'default-no-painted-head'}}
+                              'evidence': {'method': 'default-vehicle-group'}}
             missing.append(actor)
             continue
         for kind in ('portrait', 'chibi'):
@@ -189,7 +191,7 @@ def main():
             missing.append(key)
 
     if missing:
-        print('no painted head read, defaulted to left:', ', '.join(missing),
+        print('no single painted side, defaulted to left:', ', '.join(missing),
               file=sys.stderr)
 
     out = {

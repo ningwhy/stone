@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "sedan-chair_s10225102-01",
+  "seed": 10225102,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏素材，一顶清代小巧朱红布帘轿子，木框、青灰顶、两根长轿杆，由四名轿夫抬着前行：两根轿杆左右并列，前面两人、后面两人，每人用肩膀抬住一根轿杆的一端，双手扶稳，脚步一致。轿夫是清代仆役装束，低饱和青灰与赭石色短褐、布腰带、青布鞋、深色包头巾，体态端正写实，不夸张。二比一菱形正交等距俯视，无透视消失点，整顶轿子和四名轿夫完整居中，四周留白。纯白背景，无地面平台，无周围建筑，无文字牌匾，无签名，画面中只有这一顶轿子和四名轿夫。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "b890ab1e-89f4-4add-a892-ae0427a7c7e1",
+  "generated_at": "2026-10-25 15:00:36",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1536x1024"
+}

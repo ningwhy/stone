@@ -564,7 +564,7 @@
    "portrait": "left",
    "chibi": "left",
    "evidence": {
-    "method": "default-no-painted-head"
+    "method": "default-vehicle-group"
    }
   },
   "menzi": {

@@ -1140,19 +1140,19 @@
   },
   "sedan-chair": {
    "image": "/assets/rongguo/sedan-chair.png",
-   "width": 170,
-   "height": 146,
+   "width": 230,
+   "height": 195,
    "anchor": [
-    85.0,
-    145.434
+    114.87,
+    194.219
    ],
-   "source": "art/source/sedan-chair_s10222100-01.png",
-   "matte": "art/matted/sedan-chair_s10222100-sam.png",
+   "source": "art/source/sedan-chair_s10225102-01.png",
+   "matte": "art/matted/sedan-chair_s10225102-paper-key.png",
    "crop": [
-    231,
-    336,
-    831,
-    852
+    380,
+    202,
+    1264,
+    951
    ],
    "shear": 0,
    "mirror": false,

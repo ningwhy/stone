@@ -426,12 +426,13 @@
     },
     {
       "id": "sedan-chair",
-      "seed": 10222100,
+      "seed": 10225102,
       "anchor": [
-        531.0,
-        850
+        821.5,
+        948
       ],
-      "width": 170
+      "width": 230,
+      "matteKind": "paper-key"
     },
     {
       "id": "rongxi-hall",

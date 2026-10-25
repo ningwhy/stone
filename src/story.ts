@@ -64,8 +64,9 @@ export type ArtKind='portrait'|'chibi';
  * The painted direction decides whether a sprite is mirrored: a speaker stands
  * on the left of the dialogue panel and has to look towards the text, and a
  * walker has to look the way it is walking, so a head painted facing the other
- * way is flipped. Anything absent from the table — a prop such as the sedan
- * chair — keeps the left default the runtime has always used.
+ * way is flipped. The sedan is the exception: it is a vehicle carried by four
+ * bearers whose heads turn inward, so the group has no single painted side and
+ * keeps the left default, flipped with the direction of travel.
  */
 const facingTableData=facingTable as {actors:Record<string,{portrait?:FacingSide;chibi?:FacingSide}>;variants?:Record<string,{facing:FacingSide}>};
 const facing=facingTableData.actors;

@@ -12,7 +12,10 @@ config=json.loads((ROOT/'art/calibration.json').read_text())
 output=ROOT/'public/assets/rongguo';output.mkdir(parents=True,exist_ok=True)
 assets={};reports=[]
 for item in config['assets']:
- key=item['id'];stem=f"{item.get('sourceId',key)}_s{item['seed']}";source=ROOT/f'art/matted/{stem}-sam.png'
+ key=item['id'];stem=f"{item.get('sourceId',key)}_s{item['seed']}"
+ # Most assets are cut by SAM. A group of overlapping figures defeats it, so those
+ # entries ask for the paper-key matte instead (see scripts/matte_paper_key.py).
+ source=ROOT/f"art/matted/{stem}-{item.get('matteKind','sam')}.png"
  im=Image.open(source).convert('RGBA');a=np.asarray(im.getchannel('A')).copy()
  # Keep solid painted interiors. Only the final edge is antialiased at output size.
  a=np.where(a>=110,255,0).astype('uint8');im.putalpha(Image.fromarray(a))
@@ -69,7 +72,10 @@ for key,entry in existing.items():
     if not (ROOT/'public'/entry.get('image','').lstrip('/')).exists(): continue
     assets[key]=entry
 manifest={'version':1,'tilewidth':128,'tileheight':64,'assets':assets}
-manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+# indent=1 matches build_emotions.py and restore_emotion_manifest.py, so whichever
+# of the three writers runs last the file keeps the same shape and the diff stays
+# about content instead of being a full reindent.
+manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=1)+'\n')
 (ROOT/'art/alpha-report.json').write_text(json.dumps(reports,indent=2)+'\n')
 # A collection of images uses standard bottom alignment in Tiled. Gameplay anchors
 # are converted to image-bottom coordinates at export, so no private tileoffset convention.
