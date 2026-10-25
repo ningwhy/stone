@@ -35,7 +35,7 @@ try{
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('letter');await reading();while(await node()!=='END')await next();
  // The walk stops at the old chapter-three finale, so its history stops there too.
  // That finale is no longer the end of the book: reloading offers to continue, not restart.
- assert.equal(visited.size,20);assert.equal((await saved()).state.history.length,234);await page.reload();await reading();assert.equal(await node(),'END');await page.getByRole('button',{name:'继续剧情',exact:true}).waitFor();
+ assert.equal(visited.size,22);assert.equal((await saved()).state.history.length,242);await page.reload();await reading();assert.equal(await node(),'END');await page.getByRole('button',{name:'继续剧情',exact:true}).waitFor();
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(chapters[2].id);await reading();assert.equal(await node(),'N005');const height=(await page.locator('.map-panel').boundingBox()).height;
  await page.getByRole('button',{name:'继续剧情',exact:true}).click();await page.getByRole('button',{name:'跳过移动',exact:true}).waitFor();assert.equal((await page.locator('.map-panel').boundingBox()).height,height);await page.locator('.map-action-cue').waitFor();await page.screenshot({path:'artifacts/chapter-action.png',fullPage:true});
  await page.getByRole('button',{name:'暂停',exact:true}).click();await page.waitForTimeout(120);const paused=await canvasPixels();await page.waitForTimeout(200);assert.equal(await canvasPixels(),paused);await page.getByRole('button',{name:'继续演出',exact:true}).click();await reading();assert.equal(await node(),'N006');
@@ -63,7 +63,7 @@ try{
  await page.screenshot({path:'artifacts/rongguo-travel.png',fullPage:true});
  await page.getByRole('button',{name:'继续演出',exact:true}).click();await page.waitForFunction(()=>!document.querySelector('[data-testid=world-travel-route]'));await reading();assert.equal(await node(),'U001');
  await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('checkbox').check();assert.equal(await page.locator('dialog h2').textContent(),'阅读设置');await page.locator('dialog').getByRole('combobox').selectOption('2');await page.getByRole('checkbox').uncheck();await page.keyboard.press('Escape');
- await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'地图地点',exact:true}).click();assert.equal(await page.locator('.atlas-body article').count(),20);await page.keyboard.press('Escape');
+ await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'地图地点',exact:true}).click();assert.equal(await page.locator('.atlas-body article').count(),22);await page.keyboard.press('Escape');
 
  // A complete painted cast directory makes early characters discoverable after resuming.
  await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'人物图鉴',exact:true}).click();
@@ -90,5 +90,5 @@ const rotateDismiss=page.getByRole('button',{name:'仍要竖屏浏览'});
 if(await rotateDismiss.isVisible())await rotateDismiss.click();
 await fit();assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),246);await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('night');await reading();assert.equal(await node(),'T001');await fit();await page.screenshot({path:'artifacts/chapter-mobile.png',fullPage:true});
  await page.reload();await reading();assert.equal(await node(),'T001');await page.evaluate(()=>localStorage.setItem('honglou-four-chapters:v4','{bad'));await page.reload();await reading();assert.equal(await node(),'C1-001');
- assert.equal(errors.length,0,JSON.stringify(errors));console.log('Passed: all 346 nodes, twenty maps, complete history, chapter 1–4 selection, cross-scene save/reload, offscreen reveal, natural movement, pause, settings, atlas, stable map area, minimum readable sprites/labels, zoom hit targets, overview browsing, paused estate travel, controls visible at 1440×900 / 1280×720 / 390×844, corrupt-save recovery.');
+ assert.equal(errors.length,0,JSON.stringify(errors));console.log('Passed: all 354 nodes, twenty-two maps, complete history, chapter 1–4 selection, cross-scene save/reload, offscreen reveal, natural movement, pause, settings, atlas, stable map area, minimum readable sprites/labels, zoom hit targets, overview browsing, paused estate travel, controls visible at 1440×900 / 1280×720 / 390×844, corrupt-save recovery.');
 }catch(e){console.error('Browser errors:',errors);console.error((await page.locator('body').innerText()).slice(0,3500));await page.screenshot({path:'artifacts/browser-failure.png',fullPage:true});throw e;}finally{await context.close();await browser.close();}

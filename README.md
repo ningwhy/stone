@@ -45,6 +45,7 @@ npm run test:browser
 node tests/character-identities.mjs
 node tests/asset-scenes.mjs
 node tests/chapter04-scenes.mjs
+node tests/travel-stages.mjs
 ```
 
 线上部署验收（默认经 Cloudflare；`ORIGIN_DIRECT=1` 直连源站，绕开 Bot 挑战）：

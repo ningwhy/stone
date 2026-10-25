@@ -1,0 +1,101 @@
+{
+ "canal": {
+  "name": "运河 · 舟行北上",
+  "theme": "river",
+  "note": "第三回扬州赴京的水路：运河水带横贯舞台，纤道沿南岸东去，西端为扬州渡口与客船，东端为京城水门。人物在纤道上行走，代表舟行旅途。",
+  "water": "3,14,34,11",
+  "flowerbeds": false,
+  "zones": [
+   [6, 25, 15, 5],
+   [20, 25, 14, 3]
+  ],
+  "anchors": {
+   "quay_west": [6, 27],
+   "quay_west_b": [6, 28],
+   "quay_west_c": [6, 29],
+   "reed_bend": [20, 27],
+   "reed_bend_b": [20, 28],
+   "reed_bend_c": [20, 29],
+   "bank_near": [20, 25],
+   "bank_mid": [20, 26],
+   "bank_far": [20, 27],
+   "quay_east": [33, 25],
+   "quay_east_b": [33, 26],
+   "quay_east_c": [33, 27]
+  },
+  "labels": [
+   ["扬州渡口", 5, 30],
+   ["运河东流", 18, 19],
+   ["京城水门", 33, 24]
+  ],
+  "props": [
+   ["river-boat", 4, 21, 0.8],
+   ["manor-main-gate", 34, 19, 0.8],
+   ["garden-tree", 8, 12, 1.15],
+   ["garden-tree", 15, 11, 1.2],
+   ["garden-tree", 23, 11, 1.1],
+   ["garden-tree", 31, 12, 1.05],
+   ["garden-rock", 12, 13, 0.8],
+   ["garden-rock", 27, 12, 0.75],
+   ["garden-tree", 9, 30, 1.2],
+   ["garden-tree", 17, 31, 1.05],
+   ["garden-tree", 25, 30, 1.15],
+   ["garden-tree", 32, 31, 1.0],
+   ["garden-rock", 14, 32, 0.85],
+   ["garden-rock", 29, 32, 0.8]
+  ]
+ },
+ "guowai": {
+  "name": "扬州郭外 · 出城山道",
+  "theme": "garden",
+  "note": "第二回雨村出郭闲步、前往智通寺的城外山道，兼作第二回末暮色回城的路。南端为城门与田垄，北端为智通寺，东南为村肆方向的归路。",
+  "zones": [
+   [15, 28, 7, 6],
+   [16, 24, 6, 5],
+   [16, 20, 6, 4],
+   [20, 12, 3, 8],
+   [22, 29, 10, 3]
+  ],
+  "anchors": {
+   "city_gate": [15, 33],
+   "field_cross": [21, 33],
+   "grove_entry": [21, 28],
+   "hill_bend": [16, 28],
+   "hill_top": [16, 22],
+   "stream_cross": [21, 22],
+   "temple_path": [21, 16],
+   "temple_gate": [21, 12],
+   "tavern_lane": [31, 30],
+   "dusk_field": [24, 31]
+  },
+  "routes": [
+   {"id": "main", "anchors": ["city_gate", "field_cross", "grove_entry", "hill_bend", "hill_top", "stream_cross", "temple_path", "temple_gate"]},
+   {"id": "return", "anchors": ["tavern_lane", "dusk_field", "city_gate"]}
+  ],
+  "labels": [
+   ["扬州城郭", 14, 34],
+   ["田垄", 18, 30],
+   ["竹林柴门", 20, 27],
+   ["山道", 15, 21],
+   ["智通寺", 21, 13],
+   ["村肆之路", 30, 32]
+  ],
+  "props": [
+   ["west-wall-gate", 15, 33, 0.75],
+   ["estate-zhitong", 21, 8, 0.9],
+   ["bamboo-gate", 21, 28, 0.7],
+   ["garden-tree", 13, 31, 1.2],
+   ["garden-tree", 24, 32, 1.1],
+   ["garden-tree", 13, 27, 1.3],
+   ["garden-tree", 24, 25, 1.15],
+   ["garden-tree", 12, 22, 1.25],
+   ["garden-tree", 25, 21, 1.0],
+   ["garden-tree", 11, 17, 1.2],
+   ["garden-tree", 26, 16, 1.1],
+   ["garden-rock", 17, 26, 1.0],
+   ["garden-rock", 24, 19, 0.9],
+   ["garden-rock", 18, 17, 0.8],
+   ["garden-rock", 15, 13, 1.1]
+  ]
+ }
+}

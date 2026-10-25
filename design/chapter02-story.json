@@ -345,6 +345,83 @@
     }
   },
   {
+    "id": "C2-013a",
+    "chapter": "c2-guowai",
+    "scene": "guowai",
+    "title": "出城郭",
+    "place": "扬州郭外 · 出城山道",
+    "focus": "city_gate",
+    "speaker": "narrator",
+    "text": "这日饭后，雨村又起兴出郭。出了城门，一条土路沿着田垄往山脚去，四野无人，蝉声正盛。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "yucun",
+        "at": "city_gate"
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这日，偶至郭外",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-013b",
+    "chapter": "c2-guowai",
+    "scene": "guowai",
+    "title": "过田垄",
+    "place": "扬州郭外 · 出城山道",
+    "focus": "grove_entry",
+    "speaker": "narrator",
+    "text": "他顺着田垄慢慢走，过了一片打麦场，进了一道柴门。两旁竹林密密，日影都淡了下来。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "field_cross",
+          "grove_entry"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这日，偶至郭外",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-013c",
+    "chapter": "c2-guowai",
+    "scene": "guowai",
+    "title": "入山道",
+    "place": "扬州郭外 · 出城山道",
+    "focus": "temple_gate",
+    "speaker": "narrator",
+    "text": "山路绕着山溪盘旋而上，水声越来越响。转过最后一道弯，一座庙宇的山门就在眼前。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "hill_bend",
+          "hill_top",
+          "stream_cross",
+          "temple_gate"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "这日，偶至郭外",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
     "id": "C2-014",
     "chapter": "c2-temple",
     "scene": "zhitong",
@@ -1089,8 +1166,63 @@
     "place": "扬州郭外 · 村肆",
     "focus": "guest",
     "speaker": "narrator",
-    "text": "雨村回头。来人是谁，又有什么喜信？下一回由张如圭说明起复旧员之事，接上黛玉进京的行程。",
+    "text": "雨村回头，认出是旧日同僚张如圭。二人别了子兴，趁着暮色回城，喜信还得到寓中细说。",
     "actions": [],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "雨村向窗外看道：天也晚了",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-053a",
+    "chapter": "c2-bridge",
+    "scene": "guowai",
+    "title": "暮色出村",
+    "place": "扬州郭外 · 出城山道",
+    "focus": "dusk_field",
+    "speaker": "narrator",
+    "text": "二人出了村肆，沿着田垄间的老路西行。暮色从山那边压过来，蛙声渐起，远处的灯火连成一线。",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "yucun",
+        "at": "tavern_lane"
+      },
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "dusk_field"
+        ]
+      }
+    ],
+    "source": {
+      "chapter": 2,
+      "paragraphLead": "雨村向窗外看道：天也晚了",
+      "textKind": "adaptation",
+      "layer": "present"
+    }
+  },
+  {
+    "id": "C2-053b",
+    "chapter": "c2-bridge",
+    "scene": "guowai",
+    "title": "夜进城",
+    "place": "扬州郭外 · 出城山道",
+    "focus": "city_gate",
+    "speaker": "narrator",
+    "text": "进了城门，街上的灯次第亮起。雨村回到客寓，张如圭的喜信还压在心头。",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "yucun",
+        "via": [
+          "city_gate"
+        ]
+      }
+    ],
     "source": {
       "chapter": 2,
       "paragraphLead": "雨村向窗外看道：天也晚了",

@@ -20,16 +20,17 @@ stage('zhitong','扬州郭外 · 智通寺',[['estate-zhitong',22,15,1.1],['gard
 stage('tavern','扬州郭外 · 村肆',[['estate-tavern',22,15,1.15],['tea-table',20,19,1],['garden-tree',8,20,1.2],['garden-tree',30,25,1.3]],[['酒肆',22,14],['入城之路',18,30]])
 dump('design/prequel-maps.json',maps)
 allsteps=[];sections=[];book=1;counter=0;current={}
-def section(id,title,scene,lead):
+def section(id,title,scene,lead,start=None):
  global current
- current=dict(id=id,title=title,scene=scene,lead=lead);sections.append(dict(id=id,title=title,scene=scene,start=f'C{book}-{counter+1:03}',book=book))
+ current=dict(id=id,title=title,scene=scene,lead=lead);sections.append(dict(id=id,title=title,scene=scene,start=start or f'C{book}-{counter+1:03}',book=book))
 def show(actor,at='guest'):return dict(type='show',actor=actor,at=at)
 def move(actor,*via):return dict(type='move',actor=actor,via=list(via))
 def hide(actor):return dict(type='hide',actor=actor)
-def node(speaker,text,*actions,title=None,focus='guest',scene=None,layer='present'):
+def node(speaker,text,*actions,title=None,focus='guest',scene=None,layer='present',id=None,place=None):
  global counter
- counter+=1
- allsteps.append(dict(id=f'C{book}-{counter:03}',chapter=current['id'],scene=scene or current['scene'],title=title or current['title'],place=maps.get(scene or current['scene'],{}).get('name','扬州 · 林府与江岸')+({'dream':' · 梦境','recollection':' · 回忆','reported':' · 转述'}.get(layer,'')),focus=focus,speaker=speaker,text=text,actions=list(actions),source=dict(chapter=book,paragraphLead=current['lead'],textKind='adaptation',layer=layer)))
+ if id is None:
+  counter+=1;id=f'C{book}-{counter:03}'
+ allsteps.append(dict(id=id,chapter=current['id'],scene=scene or current['scene'],title=title or current['title'],place=place or maps.get(scene or current['scene'],{}).get('name','扬州 · 林府与江岸')+({'dream':' · 梦境','recollection':' · 回忆','reported':' · 转述'}.get(layer,'')),focus=focus,speaker=speaker,text=text,actions=list(actions),source=dict(chapter=book,paragraphLead=current['lead'],textKind='adaptation',layer=layer)))
 section('c1-stone','石头来历 · 无材补天','myth','列位看官，你道此书从何而来')
 node('narrator','这部书借通灵之说，把往日闺阁中的人、事与悲欢写下来。故事的来历，要从一块未能补天的石头说起。',show('monk','entry'),show('taoist','path'))
 node('narrator','女娲炼石补天，独剩下一块，弃在青埂峰下。石头通了灵性，因无材入选，日夜自叹。',move('monk','guest'),move('taoist','right'))
@@ -107,6 +108,11 @@ node('narrator','雨村托旧友谋得西席，在林家教黛玉与两个伴读
 node('ruhai','小女读书，贵在识字明理。她身体怯弱，功课不必太重。',focus='study_host')
 node('narrator','又过一年，贾敏一病而终。黛玉侍药尽哀，本就体弱，悲痛又触旧症，连日停课。',focus='daiyu_wait',title='母逝停课')
 node('narrator','雨村原欲辞馆，林如海为女儿守制读书，仍将他留下。学生养病，他常在饭后出郭闲步。',move('yucun','door','garden'),focus='garden')
+# The walk out of the city is its own outdoor stage instead of a cut to the temple.
+section('c2-guowai','郭外山道 · 出城闲步','guowai','这日，偶至郭外',start='C2-013a')
+node('narrator','这日饭后，雨村又起兴出郭。出了城门，一条土路沿着田垄往山脚去，四野无人，蝉声正盛。',show('yucun','city_gate'),title='出城郭',focus='city_gate',id='C2-013a',place='扬州郭外 · 出城山道')
+node('narrator','他顺着田垄慢慢走，过了一片打麦场，进了一道柴门。两旁竹林密密，日影都淡了下来。',move('yucun','field_cross','grove_entry'),title='过田垄',focus='grove_entry',id='C2-013b',place='扬州郭外 · 出城山道')
+node('narrator','山路绕着山溪盘旋而上，水声越来越响。转过最后一道弯，一座庙宇的山门就在眼前。',move('yucun','hill_bend','hill_top','stream_cross','temple_gate'),title='入山道',focus='temple_gate',id='C2-013c',place='扬州郭外 · 出城山道')
 section('c2-temple','郭外闲步 · 智通寺联','zhitong','这日，偶至郭外')
 node('narrator','雨村走到山环水绕、茂林深竹之处，看见一座破败寺院，门额写着智通寺。',show('yucun','entry'),show('oldmonk','host'),move('yucun','path','guest'))
 node('yucun','身后有馀忘缩手，眼前无路想回头。这副联语浅近，意味却深，里头莫非住着有阅历的人？')
@@ -151,7 +157,10 @@ node('leng','只顾替别人家算账，你也吃杯酒。正邪也好，闲话�
 node('yucun','天色晚了，当心城门要关。我们慢慢进城，路上再说。')
 node('narrator','二人结清酒账，起身欲走。身后忽有人呼唤雨村，说特来报喜。',move('yucun','path'),move('leng','entry'),show('zhang','exit'))
 node('zhang','雨村兄，恭喜了！我特地来报个喜信。',move('zhang','guest'))
-node('narrator','雨村回头。来人是谁，又有什么喜信？下一回由张如圭说明起复旧员之事，接上黛玉进京的行程。')
+node('narrator','雨村回头，认出是旧日同僚张如圭。二人别了子兴，趁着暮色回城，喜信还得到寓中细说。')
+# The road back to the city closes the same loop the morning walk opened.
+node('narrator','二人出了村肆，沿着田垄间的老路西行。暮色从山那边压过来，蛙声渐起，远处的灯火连成一线。',show('yucun','tavern_lane'),move('yucun','dusk_field'),title='暮色出村',focus='dusk_field',id='C2-053a',scene='guowai',place='扬州郭外 · 出城山道')
+node('narrator','进了城门，街上的灯次第亮起。雨村回到客寓，张如圭的喜信还压在心头。',move('yucun','city_gate'),title='夜进城',focus='city_gate',id='C2-053b',scene='guowai',place='扬州郭外 · 出城山道')
 for n in (1,2):
  dump(f'design/chapter{n:02}-story.json',[s for s in allsteps if s['source']['chapter']==n]);dump(f'design/chapter{n:02}-sections.json',[s for s in sections if s['book']==n])
 print(f'Authored {len(allsteps)} prequel nodes, {len(sections)} sections, {len(maps)} maps')

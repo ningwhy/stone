@@ -82,9 +82,18 @@ export class MapScene extends Phaser.Scene {
     const floor=this.add.graphics().setDepth(-10000);
     this.rect(floor,0,0,40,40,this.mapData.theme==='night'?0xc7c9c5:this.mapData.theme==='myth'?0xd4d9c7:this.mapData.theme==='dream'?0xd9e5df:this.mapData.theme==='ruins'?0xd3cbbd:0xeee8d7);
     if(this.mapData.theme==='river') {
-      this.rect(floor,20,22,18,15,0xa8c5c2);
-      floor.lineStyle(1,0xe1eee7,.4);
-      for(let i=0;i<55;i++){const p=this.p(21+i%16,23+Math.floor(i/16)*3);floor.lineBetween(p.x,p.y,p.x+35,p.y+3);}
+      // A stage declares its own canal rectangles; the historic garden pond stays the default.
+      if(this.mapData.water.length){
+        for(const [c,r,w,h] of this.mapData.water){
+          this.rect(floor,c,r,w,h,0xa8c5c2);
+          floor.lineStyle(1,0xe1eee7,.4);
+          for(let cc=c+1;cc<c+w-1;cc++)for(let rr=r+1;rr<r+h-1;rr+=3){const p=this.p(cc,rr);floor.lineBetween(p.x,p.y,p.x+35,p.y+3);}
+        }
+      } else {
+        this.rect(floor,20,22,18,15,0xa8c5c2);
+        floor.lineStyle(1,0xe1eee7,.4);
+        for(let i=0;i<55;i++){const p=this.p(21+i%16,23+Math.floor(i/16)*3);floor.lineBetween(p.x,p.y,p.x+35,p.y+3);}
+      }
     }
 
     // Seeded paper grain, garden islands and inset paving avoid a uniform debug grid.
@@ -111,7 +120,11 @@ export class MapScene extends Phaser.Scene {
       }
     }
     if(this.mapData.id==='entry')for(let c=11;c<=16;c++)this.rect(floor,c,17,1,1,0xe6deca);
-    for(const [c,r,w,h] of (['interior','night','street','myth','dream','ruins'].includes(this.mapData.theme)?[]:[[6,24,3,6],[6,15,3,5],[27,16,3,6],[29,5,4,4],[15,10,2,3],[24,19,4,2],[6,6,5,4]])) {
+    // The estate flowerbeds stay off for the indoor, street and dreamlike themes, and a stage
+    // whose floor they would paint over (the canal) opts out through its own property.
+    const beds=this.mapData.flowerbeds&&!['interior','night','street','myth','dream','ruins'].includes(this.mapData.theme)
+      ?[[6,24,3,6],[6,15,3,5],[27,16,3,6],[29,5,4,4],[15,10,2,3],[24,19,4,2],[6,6,5,4]]:[];
+    for(const [c,r,w,h] of beds) {
       this.rect(floor,c,r,w,h,0xbfc6a6);this.rect(floor,c+.15,r+.15,w-.3,h-.3,0xcbd0b2);
       for(let i=0;i<90;i++) {
         const p=this.p(c+random()*w,r+random()*h);floor.fillStyle(i%3?0x899779:0xf3d8ce,.38);floor.fillEllipse(p.x,p.y,3+random()*6,2);

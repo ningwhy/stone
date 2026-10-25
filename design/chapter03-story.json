@@ -278,6 +278,117 @@
   },
   {
     "chapter": "prologue",
+    "scene": "canal",
+    "place": "运河 · 舟行北上",
+    "focus": "quay_west",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "那女學生黛玉，身体方愈",
+      "textKind": "adaptation"
+    },
+    "id": "P011a",
+    "speaker": "narrator",
+    "text": "船出了扬州地界，转入运河。桅影落在水面上，两岸垂杨一直往后退去。",
+    "title": "舟行运河",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "daiyu",
+        "at": "quay_west"
+      },
+      {
+        "type": "show",
+        "actor": "xueyan",
+        "at": "quay_west_b"
+      },
+      {
+        "type": "show",
+        "actor": "nurse_wang",
+        "at": "quay_west_c"
+      }
+    ]
+  },
+  {
+    "chapter": "prologue",
+    "scene": "canal",
+    "place": "运河 · 舟行北上",
+    "focus": "bank_near",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "且說黛玉自那日棄舟登岸時",
+      "textKind": "adaptation"
+    },
+    "id": "P011b",
+    "speaker": "narrator",
+    "text": "运河中流，水声汩汩。过了一片芦苇湾，来往的漕船都朝着京城去，桅帆连着桅帆。",
+    "title": "运河中流",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "reed_bend",
+          "bank_near"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "xueyan",
+        "via": [
+          "reed_bend_b",
+          "bank_mid"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "nurse_wang",
+        "via": [
+          "reed_bend_c",
+          "bank_far"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "prologue",
+    "scene": "canal",
+    "place": "运河 · 舟行北上",
+    "focus": "quay_east",
+    "source": {
+      "chapter": 3,
+      "paragraphLead": "且說黛玉自那日棄舟登岸時",
+      "textKind": "adaptation"
+    },
+    "id": "P011c",
+    "speaker": "narrator",
+    "text": "行了一日，远处水门在望，城墙接着漕船的航道。荣府的轿马早已备在岸上，只等船泊。",
+    "title": "遥望水门",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "quay_east"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "xueyan",
+        "via": [
+          "quay_east_b"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "nurse_wang",
+        "via": [
+          "quay_east_c"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "prologue",
     "scene": "yucun",
     "place": "京城 · 贾政书房",
     "focus": "guest",

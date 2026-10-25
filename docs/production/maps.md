@@ -8,7 +8,7 @@
 
 ## TMJ 契约
 
-根属性 `sceneId` 唯一，另外有 title/theme；40×40 普通等距地图放 `maps/` 顶层自动加载。必要的对象层如下，大小写不可变：
+根属性 `sceneId` 唯一，另外有 title/theme；40×40 普通等距地图放 `maps/` 顶层自动加载。可选的根属性 `water`（字符串 `"col,row,w,h;…"`，river 主题的水带矩形列表）与 `flowerbeds`（bool，是否画默认花坛，缺省 `true`）只影响地板表现，不改变可走集合：写了 `water` 的 river 舞台按矩形画水面与波纹，取代旧版固定水塘；`flowerbeds=false` 的舞台（如运河纤道）不画花坛。两者都不写时保持旧外观。必要的对象层如下，大小写不可变：
 
 | 层 | 运行作用 |
 | --- | --- |
@@ -80,6 +80,15 @@ object.height = imageHeight × s
 当前西墙 c=4，西角门 (4,30)；南墙 r=36，正门 (23,36)，黑油门 (35,36)。去贾赦院经过西角门—府外道路—正门外—黑油门；回程按本版选择走正门。墙段在门洞留开口，网络边四邻轴向，检查只在门洞穿墙。新增院落同时改道路、墙、门、地点说明和测试，不能画一条直线越过建筑。
 
 总览院落要用建筑外观；点击标签查看地点，点“从此处剧情开始”才 seek。透明屋顶整块包围盒不能覆盖邻院标签的可点击范围，标签最后绘制并提供可访问名称。外地或梦境场景用行迹目录，不勉强套进荣国府道路。
+
+## 旅行舞台：运河与郭外（2026-10）
+
+地点之间不再硬切场景：扬州→京城的水路、郭外↔智通寺的步行都做成可走舞台，人物在地图上真实走完一段路再进下一场。
+
+- `maps/canal.tmj`（sceneId `canal`，theme river）：第三回黛玉赴京的水路。水带 `water=3,14,34,11` 横贯舞台北侧，纤道沿南岸三列并行东去——黛玉/雪雁/王嬷嬷各走一排（rows 25/26/27），西端 `river-boat` 是扬州渡口，东端 `manor-main-gate` 是京城水门；`flowerbeds=false`，纤道边不画花坛。
+- `maps/guowai.tmj`（sceneId `guowai`，theme garden）：第二回雨村出郭闲步与暮色回城。去程一条之字山道（city_gate→field_cross→grove_entry→hill_bend→hill_top→stream_cross→temple_path→temple_gate），东南另有一条归路（tavern_lane→dusk_field→city_gate）；两条路线分列 `Routes` 的 `route_id`，避免运行器补出幽灵走廊。北端 `estate-zhitong` 作智通寺外景，与室内图 `zhitong` 衔接。
+
+两份设计稿在 `design/travel-maps.json`（name/theme/zones/anchors/labels/props，canal 另带 water/flowerbeds），由 `scripts/build_travel_maps.py` 生成 TMJ——只写这两个新文件，不触碰已提交地图，也不会丢室内图的手工属性。回归测试 `node tests/travel-stages.mjs`：逐个 seek 新节点，断言场景 ID、每个可见角色的落点锚点、canal 的 water 带，并核对段落下拉、行迹视图与地图地点表（40×40、锚点数）。
 
 ## 地图目检与边界
 

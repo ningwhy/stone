@@ -21,6 +21,13 @@
     "book": 2
   },
   {
+    "id": "c2-guowai",
+    "title": "郭外山道 · 出城闲步",
+    "scene": "guowai",
+    "start": "C2-013a",
+    "book": 2
+  },
+  {
     "id": "c2-temple",
     "title": "郭外闲步 · 智通寺联",
     "scene": "zhitong",

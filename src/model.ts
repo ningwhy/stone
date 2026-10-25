@@ -10,6 +10,12 @@ export type MapData = {
   routes: Record<string, string[]>; walkable: Set<string>;
   art: ArtObject[];
   id:string; title:string; theme:string; labels:{text:string;point:Point}[];
+  /** `water` lists the canal or pond rectangles (col,row,w,h in grid units) a river stage
+   *  paints over the floor. A stage without it keeps the historic garden pond rectangle. */
+  water: [number,number,number,number][];
+  /** The estate flowerbeds are a Rongguo-garden ornament; a stage whose floor they would
+   *  paint over (a canal, say) turns them off instead of moving them per scene. */
+  flowerbeds: boolean;
 };
 export const cellKey = (col: number, row: number) => `${col},${row}`;
 
@@ -42,8 +48,16 @@ export function parseTiledMap(raw: TiledMap): MapData {
   }
   const boolProp = (o: TiledObject, name: string) => { const v = o.properties?.find(p => p.name === name)?.value; return v === true || v === 'true'; };
   const zones = (layer: string) => objects(layer).map(o => ({ id: o.name.split(' ')[0], name: o.name.slice(2), col: o.x / unit, row: o.y / unit, width: o.width / unit, height: o.height / unit, indoor: boolProp(o, 'indoor') || undefined }));
+  // A stage may declare its own water rectangles as "col,row,w,h;col,row,w,h" and switch the
+  // estate flowerbeds off; both fall back to the historic garden look when the property is absent.
+  const waterProp = raw.properties?.find(p => p.name === 'water')?.value;
+  const water: [number,number,number,number][] = typeof waterProp === 'string' && waterProp.trim()
+    ? waterProp.split(';').map(part => part.split(',').map(Number) as [number,number,number,number])
+    : [];
+  const flowerProp = raw.properties?.find(p => p.name === 'flowerbeds')?.value;
+  const flowerbeds = !(flowerProp === false || flowerProp === 'false');
   const map: MapData = { width: raw.width, height: raw.height, tilewidth: raw.tilewidth, tileheight: unit,
-    anchors, zones: zones('PlanZones'), blockers: zones('PlanBlockers'), routes: {}, walkable: new Set(), art: [],id:String(raw.properties?.find(p=>p.name==='sceneId')?.value??'entry'),title:String(raw.properties?.find(p=>p.name==='title')?.value??'荣国府 · 贾母院'),theme:String(raw.properties?.find(p=>p.name==='theme')?.value??'garden'),labels:[] };
+    anchors, zones: zones('PlanZones'), blockers: zones('PlanBlockers'), routes: {}, walkable: new Set(), art: [],id:String(raw.properties?.find(p=>p.name==='sceneId')?.value??'entry'),title:String(raw.properties?.find(p=>p.name==='title')?.value??'荣国府 · 贾母院'),theme:String(raw.properties?.find(p=>p.name==='theme')?.value??'garden'),labels:[],water,flowerbeds };
   for(const o of raw.layers.find(l=>l.name==='Labels')?.objects??[])map.labels.push({text:o.name,point:{col:o.x/unit-.5,row:o.y/unit-.5}});
   for(const o of raw.layers.find(l=>l.name==='Art')?.objects??[]) {
     if(o.visible===false)continue;

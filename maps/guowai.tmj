@@ -1,0 +1,870 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "PlanZones",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 1,
+          "name": "A0 扬州郭外 · 出城山道",
+          "x": 960,
+          "y": 1792,
+          "width": 448,
+          "height": 384,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 2,
+          "name": "A1 扬州郭外 · 出城山道",
+          "x": 1024,
+          "y": 1536,
+          "width": 384,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 3,
+          "name": "A2 扬州郭外 · 出城山道",
+          "x": 1024,
+          "y": 1280,
+          "width": 384,
+          "height": 256,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 4,
+          "name": "A3 扬州郭外 · 出城山道",
+          "x": 1280,
+          "y": 768,
+          "width": 192,
+          "height": 512,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 5,
+          "name": "A4 扬州郭外 · 出城山道",
+          "x": 1408,
+          "y": 1856,
+          "width": 640,
+          "height": 192,
+          "rotation": 0,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PlanBlockers",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 3,
+      "name": "Anchors",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 6,
+          "name": "city_gate",
+          "x": 992.0,
+          "y": 2144.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 7,
+          "name": "field_cross",
+          "x": 1376.0,
+          "y": 2144.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 8,
+          "name": "grove_entry",
+          "x": 1376.0,
+          "y": 1824.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 9,
+          "name": "hill_bend",
+          "x": 1056.0,
+          "y": 1824.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 10,
+          "name": "hill_top",
+          "x": 1056.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 11,
+          "name": "stream_cross",
+          "x": 1376.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 12,
+          "name": "temple_path",
+          "x": 1376.0,
+          "y": 1056.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 13,
+          "name": "temple_gate",
+          "x": 1376.0,
+          "y": 800.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 14,
+          "name": "tavern_lane",
+          "x": 2016.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 15,
+          "name": "dusk_field",
+          "x": 1568.0,
+          "y": 2016.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Routes",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 16,
+          "name": "场景动线",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "main",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "city_gate,field_cross,grove_entry,hill_bend,hill_top,stream_cross,temple_path,temple_gate",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "场景动线",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "return",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "tavern_lane,dusk_field,city_gate",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Art",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 18,
+          "name": "west-wall-gate",
+          "x": 1009.20125,
+          "y": 2177.68025,
+          "width": 292.5,
+          "height": 243.75,
+          "rotation": 0,
+          "visible": true,
+          "gid": 95,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "west-wall-gate",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "estate-zhitong",
+          "x": 1380.356,
+          "y": 548.356,
+          "width": 720.0,
+          "height": 489.6,
+          "rotation": 0,
+          "visible": true,
+          "gid": 91,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "estate-zhitong",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "bamboo-gate",
+          "x": 1390.4711,
+          "y": 1831.8826999999999,
+          "width": 301.0,
+          "height": 204.39999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 38,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "bamboo-gate",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "garden-tree",
+          "x": 871.7850000000001,
+          "y": 2025.5622,
+          "width": 348.0,
+          "height": 302.4,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "garden-tree",
+          "x": 1575.13625,
+          "y": 2088.76535,
+          "width": 319.0,
+          "height": 277.20000000000005,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "garden-tree",
+          "x": 872.4337500000001,
+          "y": 1770.35905,
+          "width": 377.0,
+          "height": 327.6,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "name": "garden-tree",
+          "x": 1575.4606250000002,
+          "y": 1641.163775,
+          "width": 333.5,
+          "height": 289.79999999999995,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "name": "garden-tree",
+          "x": 808.1093750000001,
+          "y": 1449.9606250000002,
+          "width": 362.5,
+          "height": 315.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "garden-tree",
+          "x": 1638.4875000000002,
+          "y": 1383.9685,
+          "width": 290.0,
+          "height": 252.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "name": "garden-tree",
+          "x": 743.785,
+          "y": 1129.5621999999998,
+          "width": 348.0,
+          "height": 302.4,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "garden-tree",
+          "x": 1703.13625,
+          "y": 1064.7653500000001,
+          "width": 319.0,
+          "height": 277.20000000000005,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "name": "garden-rock",
+          "x": 1127.7185,
+          "y": 1706.5794999999998,
+          "width": 190.0,
+          "height": 209.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "name": "garden-rock",
+          "x": 1574.9466499999999,
+          "y": 1257.52155,
+          "width": 171.0,
+          "height": 188.1,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "name": "garden-rock",
+          "x": 1190.1748,
+          "y": 1128.4635999999998,
+          "width": 152.0,
+          "height": 167.20000000000002,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "name": "garden-rock",
+          "x": 1000.49035,
+          "y": 875.63745,
+          "width": 209.00000000000003,
+          "height": 229.9,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ArtFootprints",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 33,
+          "name": "garden-rock",
+          "x": 1088,
+          "y": 1664,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 34,
+          "name": "garden-rock",
+          "x": 1536,
+          "y": 1216,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 35,
+          "name": "garden-rock",
+          "x": 1152,
+          "y": 1088,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 36,
+          "name": "garden-rock",
+          "x": 960,
+          "y": 832,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Labels",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 37,
+          "name": "扬州城郭",
+          "x": 928.0,
+          "y": 2208.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 38,
+          "name": "田垄",
+          "x": 1184.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 39,
+          "name": "竹林柴门",
+          "x": 1312.0,
+          "y": 1760.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 40,
+          "name": "山道",
+          "x": 992.0,
+          "y": 1376.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 41,
+          "name": "智通寺",
+          "x": 1376.0,
+          "y": 864.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 42,
+          "name": "村肆之路",
+          "x": 1952.0,
+          "y": 2080.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "rongguo-art.tsj"
+    }
+  ],
+  "nextlayerid": 8,
+  "nextobjectid": 43,
+  "properties": [
+    {
+      "name": "sceneId",
+      "type": "string",
+      "value": "guowai"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "value": "扬州郭外 · 出城山道"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "value": "garden"
+    }
+  ]
+}

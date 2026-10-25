@@ -9,13 +9,14 @@ steps=[];current={};idx=0
 def section(ch,scene,place,focus,lead):
  global current
  current={'chapter':ch,'scene':scene,'place':place,'focus':focus,'source':{'chapter':3,'paragraphLead':lead,'textKind':'adaptation'}}
-def say(id,speaker,text,title=None,actions=None,focus=None,scene=None,place=None,mood=None,offscreen=False):
+def say(id,speaker,text,title=None,actions=None,focus=None,scene=None,place=None,mood=None,offscreen=False,lead=None):
  s={**current,'id':id,'speaker':speaker,'text':text,'title':title or next(c[1] for c in chapters if c[0]==current['chapter']).split(' · ')[0],'actions':actions or []}
  if focus:s['focus']=focus
  if scene:s['scene']=scene
  if place:s['place']=place
  if mood:s['mood']=mood
  if offscreen:s['offscreen']=True
+ if lead:s['source']={**s['source'],'paragraphLead':lead}
  steps.append(s)
 def show(a,p):return {'type':'show','actor':a,'at':p}
 def hide(a):return {'type':'hide','actor':a}
@@ -38,6 +39,11 @@ say('P008','narrator','黛玉身体才好，不忍弃父远行。林如海想到
 say('P009','ruhai','你去外祖母与舅氏姊妹身边，也能减轻我的牵挂。莫再说不去了。','辞父',mood='sad')
 say('P010','narrator','黛玉洒泪拜别，随奶娘王嬷嬷和荣府老妪来到江岸。雨村另有一船，带着两个小童随行。','登舟北上',[show('nurse_wang','door'),show('xueyan','garden'),parallel(move('daiyu','door','garden','quay'),move('ruhai','door','garden')),show('yucun','boat')],focus='quay',place='扬州 · 江岸')
 say('P011','narrator','船离江岸，父亲的身影渐远。此去京城，黛玉将走进母亲口中那个与别家不同的外祖家。','离岸',[move('daiyu','boat','departure')],focus='departure',mood='sad')
+# The elided water journey becomes its own outdoor stage: the canal runs west to east,
+# the party walks the towpath three abreast, and the water gate closes the trip.
+say('P011a','narrator','船出了扬州地界，转入运河。桅影落在水面上，两岸垂杨一直往后退去。','舟行运河',[show('daiyu','quay_west'),show('xueyan','quay_west_b'),show('nurse_wang','quay_west_c')],focus='quay_west',scene='canal',place='运河 · 舟行北上')
+say('P011b','narrator','运河中流，水声汩汩。过了一片芦苇湾，来往的漕船都朝着京城去，桅帆连着桅帆。','运河中流',[move('daiyu','reed_bend','bank_near'),move('xueyan','reed_bend_b','bank_mid'),move('nurse_wang','reed_bend_c','bank_far')],focus='bank_near',scene='canal',place='运河 · 舟行北上',lead='且說黛玉自那日棄舟登岸時')
+say('P011c','narrator','行了一日，远处水门在望，城墙接着漕船的航道。荣府的轿马早已备在岸上，只等船泊。','遥望水门',[move('daiyu','quay_east'),move('xueyan','quay_east_b'),move('nurse_wang','quay_east_c')],focus='quay_east',scene='canal',place='运河 · 舟行北上',lead='且說黛玉自那日棄舟登岸時')
 section('prologue','yucun','京城 · 贾政书房','guest','有日到了都中，進入神京')
 say('P012','narrator','叙事先交代雨村的仕途：到京后，他持名帖求见贾政。如海的书信先已送到，贾政见他言谈不俗，便优礼相待。','荐书入京',[roof(False),show('yucun','visitor'),show('zheng','host'),move('yucun','guest')])
 say('P013','narrator','贾政竭力相助，雨村获准复职候缺。不到两个月，便补授金陵应天府，择日赴任。这里暂按下仕途，回看黛玉进京当日。','复职候缺')
