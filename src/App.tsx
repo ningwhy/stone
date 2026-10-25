@@ -12,6 +12,7 @@ import { WorldMap, worldLocations, travelRoute, worldLocationFor } from './World
 import type { Travel } from './WorldMap.tsx';
 import { actionNarration } from './narration.ts';
 import { emotionOf } from './emotion.ts';
+import { audio } from './audio.ts';
 
 type Modal = 'history'|'settings'|'source'|'atlas'|'cast'|ActorId|null;
 function Icon({name}: {name:string}) {
@@ -74,7 +75,19 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   const [loadProgress,setLoadProgress]=useState(0),[loaded,setLoaded]=useState(false),[overlay,setOverlay]=useState(true);
   const [sceneProgress,setSceneProgress]=useState(0),[sceneReady,setSceneReady]=useState(false),[sceneSlow,setSceneSlow]=useState(false);
   const [snapshot,setSnapshot]=useState('');
+  const [audioPrefs,setAudioPrefs]=useState(()=>audio.getPrefs());
   const readyRef=useRef(false);
+  // Browsers keep an AudioContext suspended until the reader touches something, so the
+  // soundtrack starts on the first gesture rather than silently failing to start at all.
+  useEffect(()=>{
+    const start=()=>audio.unlock();
+    window.addEventListener('pointerdown',start,{once:true});
+    window.addEventListener('keydown',start,{once:true});
+    return()=>{window.removeEventListener('pointerdown',start);window.removeEventListener('keydown',start);};
+  },[]);
+  // The piece follows the stage: garden by day, quieter indoors, bowls for the mythic
+  // scenes. Same-theme moves are a no-op, so walking between rooms does not restart it.
+  useEffect(()=>{audio.setTheme(engine.maps[state.sceneId]?.theme??'garden');},[state.sceneId,engine]);
   // Reset the per-scene stage whenever the story moves to another map. The card only shows if loading is slow,
   // so a cached scene never flashes one.
   useEffect(()=>{
@@ -132,7 +145,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   useEffect(()=>{
     const handler=(event:KeyboardEvent)=>{
       if(event.code!=='Space'||event.repeat||modal||travel||['BUTTON','INPUT','SELECT','TEXTAREA'].includes((event.target as HTMLElement)?.tagName))return;
-      event.preventDefault();engine.advance();
+      event.preventDefault();audio.play('sfx-page');engine.advance();
     };
     window.addEventListener('keydown',handler);return ()=>window.removeEventListener('keydown',handler);
   },[engine,modal,travel]);
@@ -163,7 +176,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
         <button className={automatic?'text-button selected':'text-button'} aria-pressed={automatic} onClick={()=>setAutomatic(!automatic)}><Icon name="play"/>自动</button>
         <button className="text-button" onClick={()=>setModal('history')}><Icon name="book"/>回看</button>
         <button className="text-button" onClick={()=>engine.pause(!state.paused)} disabled={state.status==='error'}><Icon name={state.paused?'play':'pause'}/>{state.paused?'继续演出':'暂停'}</button>
-        {ended?<button className="next-button" onClick={restart}>再走一回 <Icon name="reset"/></button>:inMotion?<button className="next-button secondary" disabled={state.paused} onClick={()=>{if(travel)setTravel(null);else engine.skip();}}>跳过移动 <Icon name="chevron"/></button>:<button className="next-button" disabled={state.paused||state.status==='error'} onClick={()=>engine.advance()}>继续剧情 <Icon name="arrow"/></button>}
+        {ended?<button className="next-button" onClick={restart}>再走一回 <Icon name="reset"/></button>:inMotion?<button className="next-button secondary" disabled={state.paused} onClick={()=>{if(travel)setTravel(null);else engine.skip();}}>跳过移动 <Icon name="chevron"/></button>:<button className="next-button" disabled={state.paused||state.status==='error'} onClick={()=>{audio.play('sfx-page');engine.advance();}}>继续剧情 <Icon name="arrow"/></button>}
         <button className="icon-button" aria-label="设置" onClick={()=>setModal('settings')}><Icon name="settings"/></button>
       </nav>
     </header>
@@ -204,7 +217,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
     <dialog ref={dialog} onCancel={event=>{event.preventDefault();setModal(null);}} onClick={event=>{if(event.target===dialog.current)setModal(null);}}>
       <div className="modal-header"><h2>{modal==='history'?'对白回看':modal==='settings'?'阅读设置':modal==='source'?'原文与改编':modal==='atlas'?'前四回 · 地图地点':modal==='cast'?'前四回 · 人物图鉴':character?.fullName}</h2><button className="icon-button" aria-label="关闭弹窗" onClick={()=>setModal(null)}><Icon name="close"/></button></div>
       {modal==='history'&&<div className="history-list">{state.history.map(entry=><article key={entry.id}><span>{entry.speaker}<small>{entry.id}</small></span><p>{entry.text}</p></article>)}</div>}
-      {modal==='settings'&&<div className="settings-body"><p>{storageError||savedLabel}</p><div className="save-actions"><button className="text-button" onClick={save} disabled={inMotion}>保存</button><button className="text-button" onClick={()=>{setModal(null);load();}}>读取</button><button className="text-button" onClick={()=>{setModal(null);restart();}}>重玩</button><button className="text-button" onClick={()=>setModal('source')}>原文与改编</button><button className="text-button" onClick={()=>setModal('atlas')}>地图地点</button><button className="text-button" onClick={()=>setModal('cast')}>人物图鉴</button></div><label>人物行走速度<select value={state.speed} onChange={e=>engine.setSpeed(Number(e.target.value))}><option value="0.5">慢行 · 0.5 倍</option><option value="1">常速 · 1 倍</option><option value="2">快行 · 2 倍</option></select></label><label className="check-label"><input type="checkbox" checked={showGuides} onChange={e=>{setShowGuides(e.target.checked);sceneRef.current?.guides(e.target.checked);}}/>显示地图上的引导路线</label><p>打开设置、人物信息或对白记录时，演出会暂停。关闭后保留之前的暂停状态。</p><p>进度在每条对白到达后自动保存，刷新页面会恢复。隐私浏览或存储限制可能使保存失败。</p></div>}
+      {modal==='settings'&&<div className="settings-body"><p>{storageError||savedLabel}</p><div className="save-actions"><button className="text-button" onClick={save} disabled={inMotion}>保存</button><button className="text-button" onClick={()=>{setModal(null);load();}}>读取</button><button className="text-button" onClick={()=>{setModal(null);restart();}}>重玩</button><button className="text-button" onClick={()=>setModal('source')}>原文与改编</button><button className="text-button" onClick={()=>setModal('atlas')}>地图地点</button><button className="text-button" onClick={()=>setModal('cast')}>人物图鉴</button></div><label>人物行走速度<select value={state.speed} onChange={e=>engine.setSpeed(Number(e.target.value))}><option value="0.5">慢行 · 0.5 倍</option><option value="1">常速 · 1 倍</option><option value="2">快行 · 2 倍</option></select></label><label className="check-label"><input type="checkbox" checked={showGuides} onChange={e=>{setShowGuides(e.target.checked);sceneRef.current?.guides(e.target.checked);}}/>显示地图上的引导路线</label><div className="audio-settings"><span className="audio-settings-title">声音</span><label>背景音乐<input type="range" min="0" max="100" value={Math.round(audioPrefs.bgm*100)} onChange={e=>{const v=Number(e.target.value)/100;setAudioPrefs(p=>({...p,bgm:v}));audio.setPrefs({bgm:v});}}/></label><label>音效<input type="range" min="0" max="100" value={Math.round(audioPrefs.sfx*100)} onChange={e=>{const v=Number(e.target.value)/100;setAudioPrefs(p=>({...p,sfx:v}));audio.setPrefs({sfx:v});}}/></label><p className="audio-hint">音乐随场景变换：园林、夜、室内、太虚各一曲，均为五声音阶的慢板。首次点击页面后开始播放。</p></div><p>打开设置、人物信息或对白记录时，演出会暂停。关闭后保留之前的暂停状态。</p><p>进度在每条对白到达后自动保存，刷新页面会恢复。隐私浏览或存储限制可能使保存失败。</p></div>}
       {modal==='source'&&<div className="source-body"><span className="source-badge">{bookNames[step.source.chapter]} · 完整剧情改编</span><p>前四回覆盖石头来历、绛珠还泪、甄家兴衰、雨村仕途、冷子兴演说、黛玉入府全程，以及第四回雨村判案、薛家入京住进梨香院。第四回 112 个节点已全部接入：应天府大堂与退堂密室、薛家入京路上、荣禧堂接风、梨香院安顿。梦境、回忆和转述均另作标识，人物不会因此出现在当下场景。</p><p>底本参考维基文库《红楼梦》第一至四回，正文已存入项目资料。除诗词和少量短句，页面文字为便于交互阅读的改写；空间布局、尺度与演出为设计补充。</p><p>当前节点：{step.id}；对应原文段落起句：“{step.source.paragraphLead}”。</p><p>地图均为 40×40 等距舞台。总览以列增为东、行增为南；西角门按西墙方案布置，黑油大门开在南墙偏东。西角门具体墙面是设计选择，原文明确的是去程出西角门、往东过正门、入黑油大门的顺序；回程门名未明示，本版选择由正门进入。原文中仅被提及、没有实际到访的地点不安排人物进入；第三回宝玉庙里还愿与贾政斋戒只作叙述。</p><p>美术由本地 ComfyUI 生成，经抠图与定位校准接入。服饰与建筑为原创视觉演绎，有形出场的人物均配有立绘与 Q 版图像；只在谈话中提及的家族成员保留为转述。</p></div>}
       {modal==='atlas'&&<div className="atlas-body">{Object.values(engine.maps).map(map=><article key={map.id}><h3>{map.title}</h3><p>{map.labels.length?map.labels.map(l=>l.text).join(' · '):'西角门 · 换轿处 · 垂花门 · 穿堂插屏 · 贾母正房 · 后房门'}</p><small>40×40 格 · {Object.keys(map.anchors).length} 个剧情地点</small></article>)}<p className="atlas-note">金陵应天府、还愿庙宇、斋戒处为叙述提及，不是本回黛玉实际到访的场景。</p></div>}
 

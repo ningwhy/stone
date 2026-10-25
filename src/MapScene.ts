@@ -3,8 +3,18 @@ import { artAssets, artGround, artImage } from './art.ts';
 import { project, zoneAt } from './model.ts';
 import type { ArtObject, MapData } from './model.ts';
 import { cast, paintedFacingOf } from './story.ts';
+import { audio } from './audio.ts';
 import type { ActorId } from './story.ts';
 import type { StoryEngine } from './engine.ts';
+
+/** Buildings sort by their isometric ground point, so a wall standing nearer the camera
+ * than a walker covers them. Walkers are lifted onto a constant layer above every
+ * building instead: the player must always see the person they are moving, and the
+ * roof-lift logic keys off visibility, not depth, so nothing indoors depends on the
+ * old ordering. Halo sits just above the walkers, place labels above that. */
+const ACTOR_DEPTH = 5000;
+const HALO_DEPTH = 5001;
+const PLACE_LABEL_DEPTH = 5002;
 
 export class MapScene extends Phaser.Scene {
   engine: StoryEngine;
@@ -51,6 +61,10 @@ export class MapScene extends Phaser.Scene {
       if(action.type==='show')used.add(action.actor==='sedan'?'sedan-chair':`${action.actor}-chibi`);
     }
     for(const key of used){const asset=artAssets[key];if(asset)this.load.image(key,artImage(key));}
+    // Warm the effects this stage will use so the first footfall is not late. The theme
+    // piece itself is requested by App; here we only queue, because the context does not
+    // exist until the reader's first gesture.
+    for(const effect of ['sfx-step-a','sfx-step-b','sfx-tap','sfx-page','sfx-door','sfx-bell','sfx-chair'])audio.warm(effect);
   }
   private artwork() {
     for(const object of this.mapData.art) {
@@ -135,7 +149,7 @@ export class MapScene extends Phaser.Scene {
     const labels=this.mapData.id==='entry' ? [['flower_gate','垂花门'],['passage_exit','穿堂'],['courtyard_center','贾母院落'],['grandmother_seat','贾母正房']].map(([anchor,text])=>({text,point:this.mapData.anchors[anchor]})) : this.mapData.labels;
     for(const {text,point} of labels) {
       const p=project(point,this.mapData);
-      const label=this.add.text(p.x,p.y+80,text,{fontFamily:'"Songti SC", SimSun, serif',fontSize:'13px',color:'#6c6451',backgroundColor:'#f4eddd',padding:{x:13,y:6}}).setOrigin(.5).setAlpha(.9).setDepth(5000);this.placeLabels.push(label);
+      const label=this.add.text(p.x,p.y+80,text,{fontFamily:'"Songti SC", SimSun, serif',fontSize:'13px',color:'#6c6451',backgroundColor:'#f4eddd',padding:{x:13,y:6}}).setOrigin(.5).setAlpha(.9).setDepth(PLACE_LABEL_DEPTH);this.placeLabels.push(label);
     }
     const guide=this.add.graphics().setDepth(-10).setVisible(false); this.routeGuide=guide;
     const route=this.mapData.routes.arrival ?? [];
@@ -147,7 +161,7 @@ export class MapScene extends Phaser.Scene {
       for (let at=0;at<distance;at+=24) guide.fillCircle(a.x+(b.x-a.x)*at/distance,a.y+(b.y-a.y)*at/distance,2.5);
     }
     this.actionTrail=this.add.graphics().setDepth(-4);
-    this.actionHalo=this.add.graphics().setDepth(4500);
+    this.actionHalo=this.add.graphics().setDepth(HALO_DEPTH);
     for (const id of Object.keys(cast) as ActorId[]) this.makeActor(id);
     this.input.on('pointerdown',(pointer:Phaser.Input.Pointer)=>{if (pointer.downElement?.tagName==='CANVAS') this.drag={x:pointer.x,y:pointer.y,scrollX:this.cameras.main.scrollX,scrollY:this.cameras.main.scrollY,moved:false};});
     this.input.on('pointermove',(pointer:Phaser.Input.Pointer)=>{
@@ -162,6 +176,9 @@ export class MapScene extends Phaser.Scene {
     this.unsubscribe=this.engine.subscribe(()=>this.sync());
     this.events.once('shutdown',()=>this.unsubscribe?.());
     this.fit();this.sync();
+    // One bell as the stage settles. It is silent until the reader has touched the page,
+    // which is also when every other sound starts.
+    audio.play('sfx-bell');
     const center=this.target();this.cameras.main.centerOn(center.x,center.y);
     this.onReady?.(this);
   }
@@ -203,7 +220,7 @@ export class MapScene extends Phaser.Scene {
     }
     const label=this.add.text(0,16,actor.name,{fontFamily:'"PingFang SC", sans-serif',fontSize:'12px',color:'#475e51',backgroundColor:'#f4efdf',padding:{x:9,y:4}}).setOrigin(.5,0);container.add(label);this.actorLabels.set(id,label);
     container.setSize(75,110).setInteractive(new Phaser.Geom.Rectangle(-38,-85,76,125),Phaser.Geom.Rectangle.Contains);
-    container.on('pointerup',(pointer:Phaser.Input.Pointer)=>{if (pointer.event.target instanceof HTMLCanvasElement && !document.querySelector('dialog[open]') && !this.drag?.moved && this.engine.getSnapshot().actors[id].visible) this.onActor(id);});
+    container.on('pointerup',(pointer:Phaser.Input.Pointer)=>{if (pointer.event.target instanceof HTMLCanvasElement && !document.querySelector('dialog[open]') && !this.drag?.moved && this.engine.getSnapshot().actors[id].visible){audio.play('sfx-tap');this.onActor(id);}});
     this.actorViews.set(id,container);
   }
   /** True while anybody stands on the given floor region. */
@@ -238,7 +255,13 @@ export class MapScene extends Phaser.Scene {
       const asset=artAssets[id==='sedan'?'sedan-chair':`${id}-chibi`];
       const bodyHeight=asset?.height??85;
       const scale=Math.max(1,48/(bodyHeight*zoom));
-      view.setScale(scale).setPosition(p.x,p.y+bounce).setVisible(a.visible).setDepth(p.y+1);
+      view.setScale(scale).setPosition(p.x,p.y+bounce).setVisible(a.visible).setDepth(ACTOR_DEPTH);
+      // Footfalls and creaking poles ride on the movement itself; audio.step throttles
+      // repeats, and the sedan gets the wood rub instead of a footstep.
+      if(a.moving && !state.paused && !this.presentationPaused) {
+        if(id==='sedan')audio.play('sfx-chair',0.9);
+        else audio.step((this.clock>>6)%2 as 0|1);
+      }
       // Iso walking right means col-row increases; mirror the sprite when the
       // painted chibi already faces the way it is looking, or away from it. The
       // direction survives a stop and a scene change, so a person who walked

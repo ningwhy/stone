@@ -21,7 +21,8 @@
    ],
    "shear": -0.24,
    "mirror": true,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "513b11c034c3"
   },
   "courtyard-wall": {
    "image": "/assets/rongguo/courtyard-wall.png",
@@ -41,7 +42,8 @@
    ],
    "shear": 0.04999999999999999,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "0595f934cc23"
   },
   "garden-tree": {
    "image": "/assets/rongguo/garden-tree.png",
@@ -61,7 +63,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "6454120af164"
   },
   "main-hall": {
    "image": "/assets/rongguo/main-hall.png",
@@ -81,7 +84,8 @@
    ],
    "shear": 0.25,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "256c76e7837c"
   },
   "garden-rock": {
    "image": "/assets/rongguo/garden-rock.png",
@@ -101,7 +105,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "77bc3abc92e5"
   },
   "daiyu-chibi": {
    "image": "/assets/rongguo/daiyu-chibi.png",
@@ -137,7 +142,8 @@
     ],
     "revision": "c5ff876838d9",
     "source": "art/identity/daiyu-chibi/request.json"
-   }
+   },
+   "hash": "690438dc434a"
   },
   "daiyu-portrait": {
    "image": "/assets/rongguo/daiyu-portrait.png",
@@ -145,7 +151,7 @@
    "height": 720,
    "anchor": [
     156.582,
-    720.0
+    720
    ],
    "source": "art/source/daiyu-portrait_s10216617-01.png",
    "matte": "art/matted/daiyu-portrait_s10216617-sam.png",
@@ -170,7 +176,8 @@
     ],
     "revision": "ca9fb4a75771",
     "source": "art/identity/daiyu-portrait/request.json"
-   }
+   },
+   "hash": "6579fe0a8db6"
   },
   "baoyu-portrait": {
    "image": "/assets/rongguo/baoyu-portrait.png",
@@ -203,14 +210,15 @@
     ],
     "revision": "ab417ba96524",
     "source": "art/identity/baoyu-portrait/request.json"
-   }
+   },
+   "hash": "375f25338102"
   },
   "baoyu-chibi": {
    "image": "/assets/rongguo/baoyu-chibi.png",
    "width": 50,
    "height": 116,
    "anchor": [
-    25.0,
+    25,
     115.21
    ],
    "source": "art/source/baoyu-chibi_s10222001-01.png",
@@ -239,14 +247,15 @@
     ],
     "revision": "809243255d0f",
     "source": "art/identity/baoyu-chibi/request.json"
-   }
+   },
+   "hash": "2099bc9d88f1"
   },
   "feng-portrait": {
    "image": "/assets/rongguo/feng-portrait.png",
    "width": 190,
    "height": 600,
    "anchor": [
-    95.0,
+    95,
     598.67
    ],
    "source": "art/source/feng-portrait_s10222002-01.png",
@@ -272,7 +281,8 @@
     ],
     "revision": "0a3a8d0e96c9",
     "source": "art/identity/feng-portrait/request.json"
-   }
+   },
+   "hash": "51ef8a3ab557"
   },
   "feng-chibi": {
    "image": "/assets/rongguo/feng-chibi.png",
@@ -308,14 +318,15 @@
     ],
     "revision": "2183e4431d0d",
     "source": "art/identity/feng-chibi/request.json"
-   }
+   },
+   "hash": "a19411724dfc"
   },
   "grandmother-portrait": {
    "image": "/assets/rongguo/grandmother-portrait.png",
    "width": 296,
    "height": 600,
    "anchor": [
-    148.0,
+    148,
     598.598
    ],
    "source": "art/source/grandmother-portrait_s10222004-01.png",
@@ -341,7 +352,8 @@
     ],
     "revision": "7b3246af88cf",
     "source": "art/identity/grandmother-portrait/request.json"
-   }
+   },
+   "hash": "bb5509b94a1d"
   },
   "grandmother-chibi": {
    "image": "/assets/rongguo/grandmother-chibi.png",
@@ -377,14 +389,15 @@
     ],
     "revision": "ca8b517e4bb5",
     "source": "art/identity/grandmother-chibi/request.json"
-   }
+   },
+   "hash": "98b24eaac192"
   },
   "wang-portrait": {
    "image": "/assets/rongguo/wang-portrait.png",
    "width": 248,
    "height": 600,
    "anchor": [
-    124.0,
+    124,
     598.668
    ],
    "source": "art/source/wang-portrait_s10222006-01.png",
@@ -410,7 +423,8 @@
     ],
     "revision": "705378d3b9cc",
     "source": "art/identity/wang-portrait/request.json"
-   }
+   },
+   "hash": "b2c71be9a99e"
   },
   "wang-chibi": {
    "image": "/assets/rongguo/wang-chibi.png",
@@ -446,7 +460,8 @@
     ],
     "revision": "f11879911182",
     "source": "art/identity/wang-chibi/request.json"
-   }
+   },
+   "hash": "d72cbe8607de"
   },
   "xing-portrait": {
    "image": "/assets/rongguo/xing-portrait.png",
@@ -479,7 +494,8 @@
     ],
     "revision": "bf30a5643364",
     "source": "art/identity/xing-portrait/request.json"
-   }
+   },
+   "hash": "53002caa7204"
   },
   "xing-chibi": {
    "image": "/assets/rongguo/xing-chibi.png",
@@ -515,7 +531,8 @@
     ],
     "revision": "f693af9f15c9",
     "source": "art/identity/xing-chibi/request.json"
-   }
+   },
+   "hash": "d087ed50b949"
   },
   "liwan-portrait": {
    "image": "/assets/rongguo/liwan-portrait.png",
@@ -548,7 +565,8 @@
     ],
     "revision": "120ab52d482f",
     "source": "art/identity/liwan-portrait/request.json"
-   }
+   },
+   "hash": "137a409f4333"
   },
   "liwan-chibi": {
    "image": "/assets/rongguo/liwan-chibi.png",
@@ -584,14 +602,15 @@
     ],
     "revision": "25b4746c5723",
     "source": "art/identity/liwan-chibi/request.json"
-   }
+   },
+   "hash": "224ed70ab298"
   },
   "yingchun-portrait": {
    "image": "/assets/rongguo/yingchun-portrait.png",
    "width": 216,
    "height": 600,
    "anchor": [
-    108.0,
+    108,
     598.641
    ],
    "source": "art/source/yingchun-portrait_s10222012-01.png",
@@ -617,14 +636,15 @@
     ],
     "revision": "84edbabb2792",
     "source": "art/identity/yingchun-portrait/request.json"
-   }
+   },
+   "hash": "83bfc88a27b3"
   },
   "yingchun-chibi": {
    "image": "/assets/rongguo/yingchun-chibi.png",
    "width": 48,
    "height": 116,
    "anchor": [
-    24.0,
+    24,
     115.164
    ],
    "source": "art/source/yingchun-chibi_s10222013-01.png",
@@ -653,14 +673,15 @@
     ],
     "revision": "483fbe8a0bb0",
     "source": "art/identity/yingchun-chibi/request.json"
-   }
+   },
+   "hash": "72e2b345d2de"
   },
   "tanchun-portrait": {
    "image": "/assets/rongguo/tanchun-portrait.png",
    "width": 224,
    "height": 600,
    "anchor": [
-    112.0,
+    112,
     598.683
    ],
    "source": "art/source/tanchun-portrait_s10222014-01.png",
@@ -686,7 +707,8 @@
     ],
     "revision": "53635d5f1d41",
     "source": "art/identity/tanchun-portrait/request.json"
-   }
+   },
+   "hash": "b182bcedbac1"
   },
   "tanchun-chibi": {
    "image": "/assets/rongguo/tanchun-chibi.png",
@@ -722,14 +744,15 @@
     ],
     "revision": "13f73eeb0138",
     "source": "art/identity/tanchun-chibi/request.json"
-   }
+   },
+   "hash": "ff2acdeacfbc"
   },
   "xichun-portrait": {
    "image": "/assets/rongguo/xichun-portrait.png",
    "width": 204,
    "height": 600,
    "anchor": [
-    102.0,
+    102,
     598.544
    ],
    "source": "art/source/xichun-portrait_s10222016-01.png",
@@ -755,7 +778,8 @@
     ],
     "revision": "da4affdea6e8",
     "source": "art/identity/xichun-portrait/request.json"
-   }
+   },
+   "hash": "adb7dc869c45"
   },
   "xichun-chibi": {
    "image": "/assets/rongguo/xichun-chibi.png",
@@ -791,7 +815,8 @@
     ],
     "revision": "a7dae561bd64",
     "source": "art/identity/xichun-chibi/request.json"
-   }
+   },
+   "hash": "ce5b81379341"
   },
   "xiren-portrait": {
    "image": "/assets/rongguo/xiren-portrait.png",
@@ -824,14 +849,15 @@
     ],
     "revision": "fdd3f2d0c008",
     "source": "art/identity/xiren-portrait/request.json"
-   }
+   },
+   "hash": "620d8031703e"
   },
   "xiren-chibi": {
    "image": "/assets/rongguo/xiren-chibi.png",
    "width": 46,
    "height": 116,
    "anchor": [
-    23.0,
+    23,
     114.875
    ],
    "source": "art/source/xiren-chibi_s10222019-01.png",
@@ -860,7 +886,8 @@
     ],
     "revision": "0e34ac050cba",
     "source": "art/identity/xiren-chibi/request.json"
-   }
+   },
+   "hash": "d7bd64f8b175"
   },
   "xueyan-portrait": {
    "image": "/assets/rongguo/xueyan-portrait.png",
@@ -893,14 +920,15 @@
     ],
     "revision": "20838ada85b6",
     "source": "art/identity/xueyan-portrait/request.json"
-   }
+   },
+   "hash": "5784283dad81"
   },
   "xueyan-chibi": {
    "image": "/assets/rongguo/xueyan-chibi.png",
    "width": 52,
    "height": 116,
    "anchor": [
-    26.0,
+    26,
     115.259
    ],
    "source": "art/source/xueyan-chibi_s10222021-01.png",
@@ -929,14 +957,15 @@
     ],
     "revision": "26e977d3f5b5",
     "source": "art/identity/xueyan-chibi/request.json"
-   }
+   },
+   "hash": "affd4a4b7fed"
   },
   "yingge-portrait": {
    "image": "/assets/rongguo/yingge-portrait.png",
    "width": 254,
    "height": 600,
    "anchor": [
-    127.0,
+    127,
     598.636
    ],
    "source": "art/source/yingge-portrait_s10222022-01.png",
@@ -962,7 +991,8 @@
     ],
     "revision": "c2f823a8552b",
     "source": "art/identity/yingge-portrait/request.json"
-   }
+   },
+   "hash": "c091b24b61a6"
   },
   "yingge-chibi": {
    "image": "/assets/rongguo/yingge-chibi.png",
@@ -998,7 +1028,8 @@
     ],
     "revision": "de093760ba65",
     "source": "art/identity/yingge-chibi/request.json"
-   }
+   },
+   "hash": "0c8449d1d2a1"
   },
   "yucun-portrait": {
    "image": "/assets/rongguo/yucun-portrait.png",
@@ -1031,7 +1062,8 @@
     ],
     "revision": "e753121b9a83",
     "source": "art/identity/yucun-portrait/request.json"
-   }
+   },
+   "hash": "d0fefefeed99"
   },
   "yucun-chibi": {
    "image": "/assets/rongguo/yucun-chibi.png",
@@ -1067,14 +1099,15 @@
     ],
     "revision": "8fb1ffcf3bb5",
     "source": "art/identity/yucun-chibi/request.json"
-   }
+   },
+   "hash": "65774a07d3df"
   },
   "ruhai-portrait": {
    "image": "/assets/rongguo/ruhai-portrait.png",
    "width": 336,
    "height": 600,
    "anchor": [
-    168.0,
+    168,
     598.962
    ],
    "source": "art/source/ruhai-portrait_s10222026-01.png",
@@ -1100,7 +1133,8 @@
     ],
     "revision": "0e7c3ac84f76",
     "source": "art/identity/ruhai-portrait/request.json"
-   }
+   },
+   "hash": "3c8b95270b7e"
   },
   "ruhai-chibi": {
    "image": "/assets/rongguo/ruhai-chibi.png",
@@ -1136,7 +1170,8 @@
     ],
     "revision": "88c673fb6113",
     "source": "art/identity/ruhai-chibi/request.json"
-   }
+   },
+   "hash": "a6c2c79e41dc"
   },
   "sedan-chair": {
    "image": "/assets/rongguo/sedan-chair.png",
@@ -1156,7 +1191,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "76f41cc9b82e"
   },
   "rongxi-hall": {
    "image": "/assets/rongguo/rongxi-hall.png",
@@ -1176,7 +1212,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "2a1fa85fdd9a"
   },
   "bamboo-gate": {
    "image": "/assets/rongguo/bamboo-gate.png",
@@ -1196,14 +1233,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "13e1199359aa"
   },
   "wood-screen": {
    "image": "/assets/rongguo/wood-screen.png",
    "width": 190,
    "height": 172,
    "anchor": [
-    95.0,
+    95,
     171.48
    ],
    "source": "art/source/wood-screen_s10222103-01.png",
@@ -1216,14 +1254,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "c7b7006da5df"
   },
   "dining-table": {
    "image": "/assets/rongguo/dining-table.png",
    "width": 230,
    "height": 224,
    "anchor": [
-    115.0,
+    115,
     222.678
    ],
    "source": "art/source/dining-table_s10222104-01.png",
@@ -1236,7 +1275,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "f14b7dbddfc5"
   },
   "canopy-bed": {
    "image": "/assets/rongguo/canopy-bed.png",
@@ -1256,14 +1296,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "f392b34a943c"
   },
   "river-boat": {
    "image": "/assets/rongguo/river-boat.png",
    "width": 340,
    "height": 201,
    "anchor": [
-    170.0,
+    170,
     199.619
    ],
    "source": "art/source/river-boat_s10222106-01.png",
@@ -1276,14 +1317,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "20bae13c1ed1"
   },
   "tea-table": {
    "image": "/assets/rongguo/tea-table.png",
    "width": 130,
    "height": 115,
    "anchor": [
-    65.0,
+    65,
     114.073
    ],
    "source": "art/source/tea-table_s10222107-01.png",
@@ -1296,7 +1338,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "c061c6ec35a5"
   },
   "zhang-portrait": {
    "image": "/assets/rongguo/zhang-portrait.png",
@@ -1329,7 +1372,8 @@
     ],
     "revision": "6b6b8d62418d",
     "source": "art/identity/zhang-portrait/request.json"
-   }
+   },
+   "hash": "9fc8caa6075b"
   },
   "zhang-chibi": {
    "image": "/assets/rongguo/zhang-chibi.png",
@@ -1365,14 +1409,15 @@
     ],
     "revision": "280637388b8a",
     "source": "art/identity/zhang-chibi/request.json"
-   }
+   },
+   "hash": "de8c0aa0df1c"
   },
   "leng-portrait": {
    "image": "/assets/rongguo/leng-portrait.png",
    "width": 362,
    "height": 600,
    "anchor": [
-    181.0,
+    181,
     598.601
    ],
    "source": "art/source/leng-portrait_s10222302-01.png",
@@ -1398,7 +1443,8 @@
     ],
     "revision": "ed628e148c3c",
     "source": "art/identity/leng-portrait/request.json"
-   }
+   },
+   "hash": "cd9ed29cb93c"
   },
   "leng-chibi": {
    "image": "/assets/rongguo/leng-chibi.png",
@@ -1434,7 +1480,8 @@
     ],
     "revision": "092274122a94",
     "source": "art/identity/leng-chibi/request.json"
-   }
+   },
+   "hash": "18f7e3f75ed9"
   },
   "zheng-portrait": {
    "image": "/assets/rongguo/zheng-portrait.png",
@@ -1467,7 +1514,8 @@
     ],
     "revision": "5c3289163026",
     "source": "art/identity/zheng-portrait/request.json"
-   }
+   },
+   "hash": "ee39cd7396a4"
   },
   "zheng-chibi": {
    "image": "/assets/rongguo/zheng-chibi.png",
@@ -1503,7 +1551,8 @@
     ],
     "revision": "38ba4a7e2513",
     "source": "art/identity/zheng-chibi/request.json"
-   }
+   },
+   "hash": "d2ac37957947"
   },
   "guide-portrait": {
    "image": "/assets/rongguo/guide-portrait.png",
@@ -1536,14 +1585,15 @@
     ],
     "revision": "5b512be8a7d7",
     "source": "art/identity/guide-portrait/request.json"
-   }
+   },
+   "hash": "58219d3a3aa8"
   },
   "guide-chibi": {
    "image": "/assets/rongguo/guide-chibi.png",
    "width": 60,
    "height": 116,
    "anchor": [
-    30.0,
+    30,
     115.294
    ],
    "source": "art/source/guide-chibi_s10222307-01.png",
@@ -1572,14 +1622,15 @@
     ],
     "revision": "7d9a35fec166",
     "source": "art/identity/guide-chibi/request.json"
-   }
+   },
+   "hash": "6526696dd911"
   },
   "maid-portrait": {
    "image": "/assets/rongguo/maid-portrait.png",
    "width": 272,
    "height": 600,
    "anchor": [
-    136.0,
+    136,
     598.632
    ],
    "source": "art/source/maid-portrait_s10222308-01.png",
@@ -1605,7 +1656,8 @@
     ],
     "revision": "225b1aa1d3de",
     "source": "art/identity/maid-portrait/request.json"
-   }
+   },
+   "hash": "d13dc892e486"
   },
   "maid-chibi": {
    "image": "/assets/rongguo/maid-chibi.png",
@@ -1641,14 +1693,15 @@
     ],
     "revision": "ba8e2e6e55cd",
     "source": "art/identity/maid-chibi/request.json"
-   }
+   },
+   "hash": "aec4875ae09d"
   },
   "messenger-portrait": {
    "image": "/assets/rongguo/messenger-portrait.png",
    "width": 288,
    "height": 600,
    "anchor": [
-    144.0,
+    144,
     598.656
    ],
    "source": "art/source/messenger-portrait_s10222310-01.png",
@@ -1674,7 +1727,8 @@
     ],
     "revision": "1b75410f312f",
     "source": "art/identity/messenger-portrait/request.json"
-   }
+   },
+   "hash": "3b83b9b277bf"
   },
   "messenger-chibi": {
    "image": "/assets/rongguo/messenger-chibi.png",
@@ -1710,7 +1764,8 @@
     ],
     "revision": "2efcfe71f215",
     "source": "art/identity/messenger-chibi/request.json"
-   }
+   },
+   "hash": "561c776ad822"
   },
   "nurse_wang-portrait": {
    "image": "/assets/rongguo/nurse_wang-portrait.png",
@@ -1743,14 +1798,15 @@
     ],
     "revision": "ec190156aa24",
     "source": "art/identity/nurse_wang-portrait/request.json"
-   }
+   },
+   "hash": "555a286b2b6d"
   },
   "nurse_wang-chibi": {
    "image": "/assets/rongguo/nurse_wang-chibi.png",
    "width": 72,
    "height": 116,
    "anchor": [
-    36.0,
+    36,
     115.243
    ],
    "source": "art/source/nurse_wang-chibi_s10222313-01.png",
@@ -1779,7 +1835,8 @@
     ],
     "revision": "0c52f8589e8b",
     "source": "art/identity/nurse_wang-chibi/request.json"
-   }
+   },
+   "hash": "d42be328f02f"
   },
   "nurse_li-portrait": {
    "image": "/assets/rongguo/nurse_li-portrait.png",
@@ -1812,7 +1869,8 @@
     ],
     "revision": "8e29d071d23f",
     "source": "art/identity/nurse_li-portrait/request.json"
-   }
+   },
+   "hash": "6f3dfb85929a"
   },
   "nurse_li-chibi": {
    "image": "/assets/rongguo/nurse_li-chibi.png",
@@ -1848,14 +1906,15 @@
     ],
     "revision": "2650a197cb0c",
     "source": "art/identity/nurse_li-chibi/request.json"
-   }
+   },
+   "hash": "4a2015f04ea0"
   },
   "estate-grandmother": {
    "image": "/assets/rongguo/estate-grandmother.png",
    "width": 800,
    "height": 510,
    "anchor": [
-    400.0,
+    400,
     505.939
    ],
    "source": "art/source/estate-grandmother_s10222400-01.png",
@@ -1868,14 +1927,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "12f299e718a6"
   },
   "estate-east": {
    "image": "/assets/rongguo/estate-east.png",
    "width": 800,
    "height": 483,
    "anchor": [
-    400.0,
+    400,
     478.633
    ],
    "source": "art/source/estate-east_s10222401-01.png",
@@ -1888,14 +1948,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "f712911e0419"
   },
   "estate-wang": {
    "image": "/assets/rongguo/estate-wang.png",
    "width": 800,
    "height": 564,
    "anchor": [
-    400.0,
+    400,
     559.524
    ],
    "source": "art/source/estate-wang_s10222402-01.png",
@@ -1908,14 +1969,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "d1e934cdc9ef"
   },
   "estate-feng": {
    "image": "/assets/rongguo/estate-feng.png",
    "width": 800,
    "height": 583,
    "anchor": [
-    400.0,
+    400,
     578.63
    ],
    "source": "art/source/estate-feng_s10222403-01.png",
@@ -1928,14 +1990,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "d1298c25f20f"
   },
   "estate-rear": {
    "image": "/assets/rongguo/estate-rear.png",
    "width": 800,
    "height": 553,
    "anchor": [
-    400.0,
+    400,
     548.766
    ],
    "source": "art/source/estate-rear_s10222404-01.png",
@@ -1948,14 +2011,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "f9bf5a0eb229"
   },
   "estate-bisha": {
    "image": "/assets/rongguo/estate-bisha.png",
    "width": 800,
    "height": 619,
    "anchor": [
-    400.0,
+    400,
     614.823
    ],
    "source": "art/source/estate-bisha_s10222405-01.png",
@@ -1968,7 +2032,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "bd73c21e17cf"
   },
   "estate-study": {
    "image": "/assets/rongguo/estate-study.png",
@@ -1988,7 +2053,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "ecbf2f9d7830"
   },
   "shiyin-portrait": {
    "image": "/assets/rongguo/shiyin-portrait.png",
@@ -2021,14 +2087,15 @@
     ],
     "revision": "5836753f2f05",
     "source": "art/identity/shiyin-portrait/request.json"
-   }
+   },
+   "hash": "15280a32972c"
   },
   "shiyin-chibi": {
    "image": "/assets/rongguo/shiyin-chibi.png",
    "width": 50,
    "height": 116,
    "anchor": [
-    25.0,
+    25,
     115.28
    ],
    "source": "art/source/shiyin-chibi_s10230101-01.png",
@@ -2057,14 +2124,15 @@
     ],
     "revision": "da60ff66aaeb",
     "source": "art/identity/shiyin-chibi/request.json"
-   }
+   },
+   "hash": "ac4b0372ac40"
   },
   "fengshi-portrait": {
    "image": "/assets/rongguo/fengshi-portrait.png",
    "width": 396,
    "height": 600,
    "anchor": [
-    198.0,
+    198,
     599.028
    ],
    "source": "art/source/fengshi-portrait_s10230102-01.png",
@@ -2090,14 +2158,15 @@
     ],
     "revision": "ca6f8043b06c",
     "source": "art/identity/fengshi-portrait/request.json"
-   }
+   },
+   "hash": "4fab0cfb846d"
   },
   "fengshi-chibi": {
    "image": "/assets/rongguo/fengshi-chibi.png",
    "width": 44,
    "height": 116,
    "anchor": [
-    22.0,
+    22,
     115.119
    ],
    "source": "art/source/fengshi-chibi_s10230103-01.png",
@@ -2126,7 +2195,8 @@
     ],
     "revision": "aae753e7c321",
     "source": "art/identity/fengshi-chibi/request.json"
-   }
+   },
+   "hash": "77e1c83c6194"
   },
   "yinglian-portrait": {
    "image": "/assets/rongguo/yinglian-portrait.png",
@@ -2159,14 +2229,15 @@
     ],
     "revision": "cb6665ca9b3e",
     "source": "art/identity/yinglian-portrait/request.json"
-   }
+   },
+   "hash": "6347117edec9"
   },
   "yinglian-chibi": {
    "image": "/assets/rongguo/yinglian-chibi.png",
    "width": 44,
    "height": 80,
    "anchor": [
-    22.0,
+    22,
     79.31
    ],
    "source": "art/source/yinglian-chibi_s10230105-01.png",
@@ -2195,7 +2266,8 @@
     ],
     "revision": "873f76d0d7cc",
     "source": "art/identity/yinglian-chibi/request.json"
-   }
+   },
+   "hash": "61c52438a576"
   },
   "jiaoxing-portrait": {
    "image": "/assets/rongguo/jiaoxing-portrait.png",
@@ -2228,14 +2300,15 @@
     ],
     "revision": "9f2fb3920018",
     "source": "art/identity/jiaoxing-portrait/request.json"
-   }
+   },
+   "hash": "2db34b258a6e"
   },
   "jiaoxing-chibi": {
    "image": "/assets/rongguo/jiaoxing-chibi.png",
    "width": 52,
    "height": 116,
    "anchor": [
-    26.0,
+    26,
     115.034
    ],
    "source": "art/source/jiaoxing-chibi_s10230107-01.png",
@@ -2264,7 +2337,8 @@
     ],
     "revision": "e252fa481996",
     "source": "art/identity/jiaoxing-chibi/request.json"
-   }
+   },
+   "hash": "24e020a86106"
   },
   "fengsu-portrait": {
    "image": "/assets/rongguo/fengsu-portrait.png",
@@ -2297,14 +2371,15 @@
     ],
     "revision": "de68a8ff4af3",
     "source": "art/identity/fengsu-portrait/request.json"
-   }
+   },
+   "hash": "6bd671bf780f"
   },
   "fengsu-chibi": {
    "image": "/assets/rongguo/fengsu-chibi.png",
    "width": 68,
    "height": 116,
    "anchor": [
-    34.0,
+    34,
     115.07
    ],
    "source": "art/source/fengsu-chibi_s10230109-01.png",
@@ -2333,14 +2408,15 @@
     ],
     "revision": "e6f66c099ba0",
     "source": "art/identity/fengsu-chibi/request.json"
-   }
+   },
+   "hash": "f0ca07f95512"
   },
   "monk-portrait": {
    "image": "/assets/rongguo/monk-portrait.png",
    "width": 406,
    "height": 600,
    "anchor": [
-    203.0,
+    203,
     598.985
    ],
    "source": "art/source/monk-portrait_s10230110-01.png",
@@ -2366,7 +2442,8 @@
     ],
     "revision": "9a31fef62317",
     "source": "art/identity/monk-portrait/request.json"
-   }
+   },
+   "hash": "f0364ebc8b32"
   },
   "monk-chibi": {
    "image": "/assets/rongguo/monk-chibi.png",
@@ -2402,7 +2479,8 @@
     ],
     "revision": "97b5b2afefc6",
     "source": "art/identity/monk-chibi/request.json"
-   }
+   },
+   "hash": "98ea6e2f1021"
   },
   "taoist-portrait": {
    "image": "/assets/rongguo/taoist-portrait.png",
@@ -2435,7 +2513,8 @@
     ],
     "revision": "f5b7f2e01bf1",
     "source": "art/identity/taoist-portrait/request.json"
-   }
+   },
+   "hash": "1fc45409fe3e"
   },
   "taoist-chibi": {
    "image": "/assets/rongguo/taoist-chibi.png",
@@ -2471,7 +2550,8 @@
     ],
     "revision": "756abc0dba41",
     "source": "art/identity/taoist-chibi/request.json"
-   }
+   },
+   "hash": "895a042d0268"
   },
   "kongkong-portrait": {
    "image": "/assets/rongguo/kongkong-portrait.png",
@@ -2504,7 +2584,8 @@
     ],
     "revision": "4f65bbe74c4a",
     "source": "art/identity/kongkong-portrait/request.json"
-   }
+   },
+   "hash": "2a4a0550e269"
   },
   "kongkong-chibi": {
    "image": "/assets/rongguo/kongkong-chibi.png",
@@ -2540,14 +2621,15 @@
     ],
     "revision": "ae0f80a07343",
     "source": "art/identity/kongkong-chibi/request.json"
-   }
+   },
+   "hash": "29d9342dad82"
   },
   "huoqi-portrait": {
    "image": "/assets/rongguo/huoqi-portrait.png",
    "width": 426,
    "height": 600,
    "anchor": [
-    213.0,
+    213,
     598.971
    ],
    "source": "art/source/huoqi-portrait_s10230116-01.png",
@@ -2573,14 +2655,15 @@
     ],
     "revision": "f65160b11b56",
     "source": "art/identity/huoqi-portrait/request.json"
-   }
+   },
+   "hash": "aa699d30a3fe"
   },
   "huoqi-chibi": {
    "image": "/assets/rongguo/huoqi-chibi.png",
    "width": 58,
    "height": 116,
    "anchor": [
-    29.0,
+    29,
     115.171
    ],
    "source": "art/source/huoqi-chibi_s10230117-01.png",
@@ -2609,7 +2692,8 @@
     ],
     "revision": "e70216790258",
     "source": "art/identity/huoqi-chibi/request.json"
-   }
+   },
+   "hash": "f5647cfe71be"
   },
   "oldmonk-portrait": {
    "image": "/assets/rongguo/oldmonk-portrait.png",
@@ -2642,14 +2726,15 @@
     ],
     "revision": "def017f9cb2e",
     "source": "art/identity/oldmonk-portrait/request.json"
-   }
+   },
+   "hash": "62c00613b56a"
   },
   "oldmonk-chibi": {
    "image": "/assets/rongguo/oldmonk-chibi.png",
    "width": 66,
    "height": 116,
    "anchor": [
-    33.0,
+    33,
     115.239
    ],
    "source": "art/source/oldmonk-chibi_s10230119-01.png",
@@ -2678,14 +2763,15 @@
     ],
     "revision": "a269377dbda4",
     "source": "art/identity/oldmonk-chibi/request.json"
-   }
+   },
+   "hash": "00881b02848e"
   },
   "estate-zhen": {
    "image": "/assets/rongguo/estate-zhen.png",
    "width": 800,
    "height": 633,
    "anchor": [
-    400.0,
+    400,
     628.339
    ],
    "source": "art/source/estate-zhen_s10230200-01.png",
@@ -2698,14 +2784,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "7268b49000f3"
   },
   "estate-hulu": {
    "image": "/assets/rongguo/estate-hulu.png",
    "width": 800,
    "height": 724,
    "anchor": [
-    400.0,
+    400,
     719.212
    ],
    "source": "art/source/estate-hulu_s10230201-01.png",
@@ -2718,14 +2805,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "04c01afcd1ea"
   },
   "estate-farm": {
    "image": "/assets/rongguo/estate-farm.png",
    "width": 800,
    "height": 452,
    "anchor": [
-    400.0,
+    400,
     447.728
    ],
    "source": "art/source/estate-farm_s10230202-01.png",
@@ -2738,14 +2826,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "4ef272db4c52"
   },
   "estate-yamen": {
    "image": "/assets/rongguo/estate-yamen.png",
    "width": 800,
    "height": 681,
    "anchor": [
-    400.0,
+    400,
     676.646
    ],
    "source": "art/source/estate-yamen_s10230203-01.png",
@@ -2758,14 +2847,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "9b6a2a5ace25"
   },
   "estate-zhitong": {
    "image": "/assets/rongguo/estate-zhitong.png",
    "width": 800,
    "height": 544,
    "anchor": [
-    400.0,
+    400,
     539.16
    ],
    "source": "art/source/estate-zhitong_s10230204-01.png",
@@ -2778,14 +2868,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "d31f7e71a423"
   },
   "estate-tavern": {
    "image": "/assets/rongguo/estate-tavern.png",
    "width": 800,
    "height": 691,
    "anchor": [
-    400.0,
+    400,
     686.35
    ],
    "source": "art/source/estate-tavern_s10230205-01.png",
@@ -2798,14 +2889,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "c120fd3b4323"
   },
   "estate-lantern": {
    "image": "/assets/rongguo/estate-lantern.png",
    "width": 800,
    "height": 551,
    "anchor": [
-    400.0,
+    400,
     546.832
    ],
    "source": "art/source/estate-lantern_s10230206-01.png",
@@ -2818,7 +2910,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "acad6ae0939e"
   },
   "black-oil-gate": {
    "image": "/assets/rongguo/black-oil-gate.png",
@@ -2838,7 +2931,8 @@
    ],
    "shear": 0,
    "mirror": true,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "b29c0fd04d51"
   },
   "west-wall-gate": {
    "image": "/assets/rongguo/west-wall-gate.png",
@@ -2858,7 +2952,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "490c57f27d53"
   },
   "spirit-stone": {
    "image": "/assets/rongguo/spirit-stone.png",
@@ -2878,7 +2973,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "a7afef99ac01"
   },
   "crimson-pearl": {
    "image": "/assets/rongguo/crimson-pearl.png",
@@ -2898,7 +2994,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "4561bf5805f4"
   },
   "manor-main-gate": {
    "image": "/assets/rongguo/manor-main-gate.png",
@@ -2918,7 +3015,8 @@
    ],
    "shear": -0.2,
    "mirror": true,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "a01571aaf988"
   },
   "estate-ruins": {
    "image": "/assets/rongguo/estate-ruins.png",
@@ -2938,7 +3036,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "d365c769e3cc"
   },
   "menzi-portrait": {
    "image": "/assets/rongguo/menzi-portrait.png",
@@ -2971,7 +3070,8 @@
     ],
     "revision": "bcb7feb5bfc8",
     "source": "art/identity/menzi-portrait/request.json"
-   }
+   },
+   "hash": "fa20b44ead64"
   },
   "menzi-chibi": {
    "image": "/assets/rongguo/menzi-chibi.png",
@@ -3007,7 +3107,8 @@
     ],
     "revision": "fd56440458b0",
     "source": "art/identity/menzi-chibi/request.json"
-   }
+   },
+   "hash": "bfcf63b78fe9"
   },
   "plaintiff-portrait": {
    "image": "/assets/rongguo/plaintiff-portrait.png",
@@ -3040,7 +3141,8 @@
     ],
     "revision": "1112dc04cd0b",
     "source": "art/identity/plaintiff-portrait/request.json"
-   }
+   },
+   "hash": "c3869461172b"
   },
   "plaintiff-chibi": {
    "image": "/assets/rongguo/plaintiff-chibi.png",
@@ -3076,7 +3178,8 @@
     ],
     "revision": "6327721a32e4",
     "source": "art/identity/plaintiff-chibi/request.json"
-   }
+   },
+   "hash": "821c042447b4"
   },
   "xuepan-portrait": {
    "image": "/assets/rongguo/xuepan-portrait.png",
@@ -3109,7 +3212,8 @@
     ],
     "revision": "24ac505600bd",
     "source": "art/identity/xuepan-portrait/request.json"
-   }
+   },
+   "hash": "d5a640b594cd"
   },
   "xuepan-chibi": {
    "image": "/assets/rongguo/xuepan-chibi.png",
@@ -3145,7 +3249,8 @@
     ],
     "revision": "46c5d82aaf4e",
     "source": "art/identity/xuepan-chibi/request.json"
-   }
+   },
+   "hash": "316e26092375"
   },
   "xueyima-portrait": {
    "image": "/assets/rongguo/xueyima-portrait.png",
@@ -3178,7 +3283,8 @@
     ],
     "revision": "d1a96c490c17",
     "source": "art/identity/xueyima-portrait/request.json"
-   }
+   },
+   "hash": "ef7cda7b8d90"
   },
   "xueyima-chibi": {
    "image": "/assets/rongguo/xueyima-chibi.png",
@@ -3214,7 +3320,8 @@
     ],
     "revision": "f985e50bb14f",
     "source": "art/identity/xueyima-chibi/request.json"
-   }
+   },
+   "hash": "55319ffbbdbe"
   },
   "baochai-portrait": {
    "image": "/assets/rongguo/baochai-portrait.png",
@@ -3247,7 +3354,8 @@
     ],
     "revision": "f094896849ba",
     "source": "art/identity/baochai-portrait/request.json"
-   }
+   },
+   "hash": "6897f16a5d2c"
   },
   "baochai-chibi": {
    "image": "/assets/rongguo/baochai-chibi.png",
@@ -3283,7 +3391,8 @@
     ],
     "revision": "e71413d4880a",
     "source": "art/identity/baochai-chibi/request.json"
-   }
+   },
+   "hash": "3a2d406b0009"
   },
   "square-table": {
    "image": "/assets/rongguo/square-table.png",
@@ -3303,7 +3412,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "1619d42e7c6e"
   },
   "altar-table": {
    "image": "/assets/rongguo/altar-table.png",
@@ -3323,14 +3433,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "ae722958a969"
   },
   "writing-desk": {
    "image": "/assets/rongguo/writing-desk.png",
    "width": 180,
    "height": 147,
    "anchor": [
-    90.0,
+    90,
     146.345
    ],
    "source": "art/source/writing-desk_s10224103-01.png",
@@ -3343,14 +3454,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "7ccb9091cb1f"
   },
   "official-chair": {
    "image": "/assets/rongguo/official-chair.png",
    "width": 100,
    "height": 138,
    "anchor": [
-    50.0,
+    50,
     137.556
    ],
    "source": "art/source/official-chair_s10224104-01.png",
@@ -3363,14 +3475,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "e487ddc07a05"
   },
   "round-stool": {
    "image": "/assets/rongguo/round-stool.png",
    "width": 70,
    "height": 93,
    "anchor": [
-    35.0,
+    35,
     92.581
    ],
    "source": "art/source/round-stool_s10224105-01.png",
@@ -3383,14 +3496,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "f994c24bc852"
   },
   "square-stool": {
    "image": "/assets/rongguo/square-stool.png",
    "width": 70,
    "height": 77,
    "anchor": [
-    35.0,
+    35,
     76.717
    ],
    "source": "art/source/square-stool_s10224106-01.png",
@@ -3403,14 +3517,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "f091f1380292"
   },
   "cabinet": {
    "image": "/assets/rongguo/cabinet.png",
    "width": 130,
    "height": 222,
    "anchor": [
-    65.0,
+    65,
     221.408
    ],
    "source": "art/source/cabinet_s10224107-01.png",
@@ -3423,14 +3538,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "ca4b003e59e9"
   },
   "brazier": {
    "image": "/assets/rongguo/brazier.png",
    "width": 90,
    "height": 116,
    "anchor": [
-    45.0,
+    45,
     115.476
    ],
    "source": "art/source/brazier_s10224118-01.png",
@@ -3443,14 +3559,15 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "625708211067"
   },
   "vase-stand": {
    "image": "/assets/rongguo/vase-stand.png",
    "width": 110,
    "height": 163,
    "anchor": [
-    55.0,
+    55,
     162.564
    ],
    "source": "art/source/vase-stand_s10224109-01.png",
@@ -3463,7 +3580,8 @@
    ],
    "shear": 0,
    "mirror": false,
-   "bodyCompress": null
+   "bodyCompress": null,
+   "hash": "135d55760688"
   },
   "baoyu-portrait-angry": {
    "image": "/assets/rongguo/baoyu-portrait-angry.png",
@@ -3486,7 +3604,8 @@
     ],
     "revision": "ab417ba96524",
     "source": "art/identity/baoyu-portrait/request.json"
-   }
+   },
+   "hash": "e9f3f81250d2"
   },
   "baoyu-portrait-joy": {
    "image": "/assets/rongguo/baoyu-portrait-joy.png",
@@ -3509,7 +3628,8 @@
     ],
     "revision": "ab417ba96524",
     "source": "art/identity/baoyu-portrait/request.json"
-   }
+   },
+   "hash": "cdc221cc3610"
   },
   "baoyu-portrait-sad": {
    "image": "/assets/rongguo/baoyu-portrait-sad.png",
@@ -3532,7 +3652,8 @@
     ],
     "revision": "ab417ba96524",
     "source": "art/identity/baoyu-portrait/request.json"
-   }
+   },
+   "hash": "863f1bed54b6"
   },
   "baoyu-portrait-surprise": {
    "image": "/assets/rongguo/baoyu-portrait-surprise.png",
@@ -3555,7 +3676,8 @@
     ],
     "revision": "ab417ba96524",
     "source": "art/identity/baoyu-portrait/request.json"
-   }
+   },
+   "hash": "58c88895b9cd"
   },
   "daiyu-portrait-angry": {
    "image": "/assets/rongguo/daiyu-portrait-angry.png",
@@ -3563,7 +3685,7 @@
    "height": 720,
    "anchor": [
     156.582,
-    720.0
+    720
    ],
    "source": "art/source/daiyu-portrait_s10216617-01.png",
    "identity": {
@@ -3578,7 +3700,8 @@
     ],
     "revision": "ca9fb4a75771",
     "source": "art/identity/daiyu-portrait/request.json"
-   }
+   },
+   "hash": "3f501a6a4c9f"
   },
   "daiyu-portrait-joy": {
    "image": "/assets/rongguo/daiyu-portrait-joy.png",
@@ -3586,7 +3709,7 @@
    "height": 720,
    "anchor": [
     156.582,
-    720.0
+    720
    ],
    "source": "art/source/daiyu-portrait_s10216617-01.png",
    "identity": {
@@ -3601,7 +3724,8 @@
     ],
     "revision": "ca9fb4a75771",
     "source": "art/identity/daiyu-portrait/request.json"
-   }
+   },
+   "hash": "7b8e42026c6a"
   },
   "daiyu-portrait-sad": {
    "image": "/assets/rongguo/daiyu-portrait-sad.png",
@@ -3609,7 +3733,7 @@
    "height": 720,
    "anchor": [
     156.582,
-    720.0
+    720
    ],
    "source": "art/source/daiyu-portrait_s10216617-01.png",
    "identity": {
@@ -3624,7 +3748,8 @@
     ],
     "revision": "ca9fb4a75771",
     "source": "art/identity/daiyu-portrait/request.json"
-   }
+   },
+   "hash": "a6b79569599c"
   },
   "daiyu-portrait-surprise": {
    "image": "/assets/rongguo/daiyu-portrait-surprise.png",
@@ -3632,7 +3757,7 @@
    "height": 720,
    "anchor": [
     156.582,
-    720.0
+    720
    ],
    "source": "art/source/daiyu-portrait_s10216617-01.png",
    "identity": {
@@ -3647,14 +3772,15 @@
     ],
     "revision": "ca9fb4a75771",
     "source": "art/identity/daiyu-portrait/request.json"
-   }
+   },
+   "hash": "7a94ea9d4911"
   },
   "feng-portrait-angry": {
    "image": "/assets/rongguo/feng-portrait-angry.png",
    "width": 190,
    "height": 600,
    "anchor": [
-    95.0,
+    95,
     598.67
    ],
    "source": "art/source/feng-portrait_s10222002-01.png",
@@ -3670,14 +3796,15 @@
     ],
     "revision": "0a3a8d0e96c9",
     "source": "art/identity/feng-portrait/request.json"
-   }
+   },
+   "hash": "3eb8b10d6b33"
   },
   "feng-portrait-joy": {
    "image": "/assets/rongguo/feng-portrait-joy.png",
    "width": 190,
    "height": 600,
    "anchor": [
-    95.0,
+    95,
     598.67
    ],
    "source": "art/source/feng-portrait_s10222002-01.png",
@@ -3693,14 +3820,15 @@
     ],
     "revision": "0a3a8d0e96c9",
     "source": "art/identity/feng-portrait/request.json"
-   }
+   },
+   "hash": "a798d4bd1bf6"
   },
   "feng-portrait-sad": {
    "image": "/assets/rongguo/feng-portrait-sad.png",
    "width": 190,
    "height": 600,
    "anchor": [
-    95.0,
+    95,
     598.67
    ],
    "source": "art/source/feng-portrait_s10222002-01.png",
@@ -3716,14 +3844,15 @@
     ],
     "revision": "0a3a8d0e96c9",
     "source": "art/identity/feng-portrait/request.json"
-   }
+   },
+   "hash": "3eb850e10cef"
   },
   "feng-portrait-surprise": {
    "image": "/assets/rongguo/feng-portrait-surprise.png",
    "width": 190,
    "height": 600,
    "anchor": [
-    95.0,
+    95,
     598.67
    ],
    "source": "art/source/feng-portrait_s10222002-01.png",
@@ -3739,14 +3868,15 @@
     ],
     "revision": "0a3a8d0e96c9",
     "source": "art/identity/feng-portrait/request.json"
-   }
+   },
+   "hash": "da24e0a476f2"
   },
   "grandmother-portrait-angry": {
    "image": "/assets/rongguo/grandmother-portrait-angry.png",
    "width": 296,
    "height": 600,
    "anchor": [
-    148.0,
+    148,
     598.598
    ],
    "source": "art/source/grandmother-portrait_s10222004-01.png",
@@ -3762,14 +3892,15 @@
     ],
     "revision": "7b3246af88cf",
     "source": "art/identity/grandmother-portrait/request.json"
-   }
+   },
+   "hash": "2750d6430794"
   },
   "grandmother-portrait-joy": {
    "image": "/assets/rongguo/grandmother-portrait-joy.png",
    "width": 296,
    "height": 600,
    "anchor": [
-    148.0,
+    148,
     598.598
    ],
    "source": "art/source/grandmother-portrait_s10222004-01.png",
@@ -3785,14 +3916,15 @@
     ],
     "revision": "7b3246af88cf",
     "source": "art/identity/grandmother-portrait/request.json"
-   }
+   },
+   "hash": "1f1e0161eb36"
   },
   "grandmother-portrait-sad": {
    "image": "/assets/rongguo/grandmother-portrait-sad.png",
    "width": 296,
    "height": 600,
    "anchor": [
-    148.0,
+    148,
     598.598
    ],
    "source": "art/source/grandmother-portrait_s10222004-01.png",
@@ -3808,14 +3940,15 @@
     ],
     "revision": "7b3246af88cf",
     "source": "art/identity/grandmother-portrait/request.json"
-   }
+   },
+   "hash": "c32f8e00966c"
   },
   "grandmother-portrait-surprise": {
    "image": "/assets/rongguo/grandmother-portrait-surprise.png",
    "width": 296,
    "height": 600,
    "anchor": [
-    148.0,
+    148,
     598.598
    ],
    "source": "art/source/grandmother-portrait_s10222004-01.png",
@@ -3831,7 +3964,8 @@
     ],
     "revision": "7b3246af88cf",
     "source": "art/identity/grandmother-portrait/request.json"
-   }
+   },
+   "hash": "03323089684f"
   }
  }
 }

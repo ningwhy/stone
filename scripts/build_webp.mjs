@@ -4,7 +4,8 @@
  * calibration and content checks); the runtime prefers WebP via src/art.ts.
  * Incremental: a WebP is rebuilt only when its PNG is newer. */
 import {execFileSync} from 'node:child_process';
-import {readdirSync, statSync, existsSync, rmSync} from 'node:fs';
+import {readdirSync, statSync, existsSync, rmSync, readFileSync, writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {join, resolve} from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
@@ -47,3 +48,21 @@ for (const file of readdirSync(dir)) {
 
 const mb = (n) => (n / 1024 / 1024).toFixed(1);
 console.log(`build_webp: ${made} converted, ${skipped} up-to-date; PNG ${mb(before)}MB -> WebP ${mb(after)}MB (${Math.round(after / before * 100)}%)`);
+
+// Stamp every manifest entry with its WebP's content digest. The runtime appends it as a
+// query string, so a rebuilt asset gets a fresh URL and browsers stop serving the previous
+// bitmap from cache. Before this existed only identity portraits carried a version, and a
+// redrawn prop (the sedan growing four bearers) kept its old URL forever.
+const manifestPath = join(dir, 'manifest.json');
+if (existsSync(manifestPath)) {
+  const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
+  let hashed = 0;
+  for (const [key, entry] of Object.entries(manifest.assets)) {
+    const webp = join(dir, String(entry.image ?? '').split('/').pop()?.replace(/\.png$/, '.webp') ?? '');
+    if (!existsSync(webp)) continue;
+    const hash = createHash('md5').update(readFileSync(webp)).digest("hex").slice(0, 12);
+    if (entry.hash !== hash) { manifest.assets[key].hash = hash; hashed++; }
+  }
+  if (hashed) writeFileSync(manifestPath, JSON.stringify(manifest, null, 1) + '\n');
+  console.log(`build_webp: ${hashed} manifest entries stamped with a content hash`);
+}

@@ -144,5 +144,28 @@ for(const warning of warnings)console.warn(`WARN ${warning}`);
  const check=spawnSync('python3',[resolve(root,'scripts/build_facing_doc.py'),'--check'],{encoding:'utf8'});
  requireThat(check.status===0,`facing-list.md is out of date with design/character-facing.json: ${(check.stdout||'').trim()||(check.stderr||'').trim()}`);
 }
+// The soundtrack: every file the engine asks for must exist, and the theme table in
+// src/audio.ts may only name pieces that were actually built. A piece that fails to
+// decode would leave a stage silent with nothing in the build to say so.
+{
+ const audioDir=resolve(root,'public/assets/audio');
+ const shipped=new Set(readdirSync(audioDir).filter(f=>f.endsWith('.ogg')).map(f=>f.replace(/\.ogg$/,'')));
+ const engine=readFileSync(resolve(root,'src/audio.ts'),'utf8');
+ const wanted=new Set([...engine.matchAll(/'(bgm-[a-z]+|sfx-[a-z-]+)'/g)].map(m=>m[1]));
+ const missing=[...wanted].filter(name=>!shipped.has(name));
+ requireThat(missing.length===0,`audio: ${missing.join(', ')} referenced by src/audio.ts but not built; run npm run art:audio`);
+ const unused=[...shipped].filter(name=>!wanted.has(name));
+ for(const name of unused)warnings.push(`audio: ${name}.ogg is built but not referenced by the engine`);
+ // the engine must keep a piece for every theme a map actually declares. Tiled stores
+ // map properties as {"name":"theme","value":"garden"} objects, so read them from JSON
+ // rather than pattern-matching the file.
+ const themes=new Set(readdirSync(resolve(root,'maps')).filter(f=>f.endsWith('.tmj'))
+   .flatMap(f=>{const map=JSON.parse(readFileSync(resolve(root,'maps',f),'utf8'));
+     return (map.properties??[]).filter(p=>p.name==='theme'&&typeof p.value==='string').map(p=>p.value);}));
+ const table=engine.slice(engine.indexOf('BGM_BY_THEME'),engine.indexOf('};',engine.indexOf('BGM_BY_THEME')));
+ const mapped=new Set([...table.matchAll(/^\s*([a-z]+):\s*'/gm)].map(m=>m[1]));
+ const unmapped=[...themes].filter(t=>!mapped.has(t));
+ requireThat(unmapped.length===0,`audio: map themes with no piece: ${unmapped.join(', ')} (they fall back to the garden piece)`);
+}
 if(errors.length){for(const error of errors)console.error(`ERROR ${error}`);process.exitCode=1;}
 else console.log(`Content passed: ${story.length} nodes, ${chapters.length} sections, ${maps.size} maps, ${Object.keys(cast).length-1} humans, ${Object.keys(manifest).length} assets; chapter counts ${JSON.stringify(Object.fromEntries(books))}; ${docFiles.length} documentation files linked; ${evidenceEntries} evidence entries in ${evidenceFiles.length} table(s). Original-text interpretation and visuals still require human review.`);

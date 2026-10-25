@@ -38,6 +38,45 @@ Qwen 节点需要官方 API JSON，不是 UI 画布导出。图像输入正确�
 
 运行时通过 `src/art.ts` 统一取素材 URL：manifest 中的 PNG 原图是唯一权威来源（校准、`check:content` 都以它为准），`npm run art:webp`（scripts/build_webp.mjs，需 cwebp）生成同名 `.webp` 并入仓，运行时只请求 WebP；`npm run build` 末尾的 prune_dist 会删除 dist 中未被引用的 PNG。重生成美术后必须重跑 `npm run art:webp`，否则线上请求不到新图。
 
+### 缓存版本号：URL 必须随内容变
+
+`build_webp.mjs` 给每个 manifest 条目写入 WebP 自身的 md5 前 12 位（`hash` 字段），`src/art.ts` 的 `artImage()` / `assetImage()` 把它拼成 `?v=<hash>`。此前只有带 `identity` 的人物资产有版本号（用 `identity.revision`），道具与家具的 URL 永远不变——轿子重画成四轿夫后，线上文件已是新的，浏览器却一直展示缓存的旧图，就是这个原因。**教训：凡是会被重绘的资产，URL 都要带内容摘要**，nginx 对 `.webp` 是 30d 长缓存，没有版本号就只能等读者手动强刷。
+
+## 音效与音乐
+
+声音全部由 `scripts/build_audio.py` 在本地合成（numpy 振荡器 + 滤波噪声 → WAV → ffmpeg libopus → ogg），不依赖采样库：四首 BGM 共 2.9MB、七个音效共 170KB。生成命令 `npm run art:audio`。
+
+| 文件 | 用途 | 时长 |
+| --- | --- | --- |
+| `bgm-garden.ogg` | 园林/街/河/白天（默认） | 76.8s 循环 |
+| `bgm-night.ogg` | 夜（灯市、碧纱橱） | 66.6s 循环 |
+| `bgm-interior.ogg` | 室内正堂（荣禧堂、衙署、王夫人院） | 70.0s 循环 |
+| `bgm-myth.ogg` | 太虚/梦境/废墟（开场大荒山即此曲） | 65.0s 循环 |
+| `sfx-step-a/b.ogg` | 脚步（木板/石板，交替避免机枪感） | 0.16s |
+| `sfx-tap.ogg` | UI 与点选人物（小磬） | 1.6s |
+| `sfx-page.ogg` | 推进对白（纸页） | 0.42s |
+| `sfx-door.ogg` | 木门（吱呀 + 闷响） | 1.5s |
+| `sfx-bell.ogg` | 场景开启（远钟） | 6.0s |
+| `sfx-chair.ogg` | 轿子移动（轿杆吱呀） | 1.1s |
+
+设计约束，改动时保持：
+
+- **五声音阶（D 宫）+ 慢板**：每首 40–52 BPM，旋律以级进为主并刻意留白（近静音占比 12–16%），红楼是安静的宅院。
+- **RMS 约 -30dBFS**，这是「淡」的来源；不要为了「听得见」抬高整体音量，那是把 BG M 变成噪音。
+- **乐器是少量泛音的加法/减法合成**：古筝 18 个泛音 1/n 衰减、箫带 5.3Hz 颤音与气噪声、磬用非谐波分音比（1, 2.76, 5.40, 8.93…）。加新乐器优先加泛音，不要加采样。
+- **循环无缝**：`loop_seam()` 把开头两小节以 0.55 音量在结尾重述，首尾能量对齐；fade 只用 0.15s 消爆音，长 fade 会让循环周期性「呼吸」。
+- **纸底类素材混响 wet 0.30，音效 0.12–0.20**；IR 是合成的小厅（2.6s 指数衰减噪声 + 5 个早期反射 + 18ms 前延迟）。
+
+运行时是 `src/audio.ts` 的单例（原生 Web Audio，**不挂 Phaser sound**——GameMap 每换地图重建 Phaser.Game，会把音频反复重新解码）。要点：
+
+- AudioContext 在读者首次手势时创建（自动播放策略），`unlock()` 由 App 的一次性 pointerdown/keydown 触发。
+- `setTheme(theme)` 按 `BGM_BY_THEME` 选曲，1.4s crossfade；同曲重复调用是 no-op，屋内走动不会重启音乐。**`wantedTheme` 永远存曲名而不是主题名**，否则把音乐关掉再打开会经一次主题映射落到默认曲（这个 bug 曾让测试超时）。
+- `warm()` 在 stage preload 时排队，context 不存在就先入队，unlock 后补加载——否则第一次脚步会有延迟。
+- 音量（bgm 0.5 / sfx 0.75 默认）存 `localStorage['honglou.audio.v1']`，设置面板两个滑块实时写 GainNode；bgm 拨到 0 会淡出停止而不是静音一个运行中的 source。
+- `check_content.mjs` 守卫：引擎引用的每个文件必须已构建；地图声明的每个 theme 必须有映射（新增 theme 忘了配曲会直接报错）；构建了却没人引用的文件给 WARN。
+
+测试：`node tests/audio.mjs`（连 dev server）验证 context 解锁、8 个文件实际请求、主题切换、滑块与持久化。
+
 ## 原图 → 校准契约
 
 新增 `art/generation-plan.json.jobs` 项：`id`、唯一 `seed`、`size`、`prompt`、用于分割的 `subject`。同风格前缀加精确主体，明确建筑视角、门向、完整轮廓、纯白背景、接地点、无附属平台；实际纯白与几何都要检查。
