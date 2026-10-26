@@ -1,17 +1,19 @@
 import cardData from '../design/collection-cards.json' with { type: 'json' };
 
-export type CardKind = 'place' | 'line';
+export type CardKind = 'place' | 'line' | 'token';
 export interface CardDef {
   id: string;
   kind: CardKind;
   book: number;
-  /** place 卡所属场景；line 卡没有 */
+  /** place 卡所属场景；line / token 卡没有 */
   scene?: string;
   name: string;
   subtitle: string;
   quote?: string;
   attribution?: string;
   node?: string;
+  /** 信物卡的原文依据（繁体引文），用于卡面落款 */
+  source?: string;
   unlock: { type: 'read_scene'; scene: string } | { type: 'read'; node: string };
 }
 
@@ -72,13 +74,19 @@ export function saveStored(ids: Iterable<string>): void {
   }
 }
 
-/** 按回目分组（册页面板的展示顺序）。 */
+/** 按回目分组（册页面板的展示顺序）。信物卡单列一组，不进回目分组。 */
 export function cardsByBook(): Map<number, CardDef[]> {
   const groups = new Map<number, CardDef[]>();
   for (const card of cards) {
+    if (card.kind === 'token') continue;
     const list = groups.get(card.book) ?? [];
     list.push(card);
     groups.set(card.book, list);
   }
   return groups;
+}
+
+/** 信物卡：原文写明「交到手上」的东西，单列一组。 */
+export function tokenCards(): CardDef[] {
+  return cards.filter(card => card.kind === 'token');
 }

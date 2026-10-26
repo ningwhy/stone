@@ -194,10 +194,22 @@ for(const warning of warnings)console.warn(`WARN ${warning}`);
  const seen=new Set();
  for(const card of cardData.cards){
   if(seen.has(card.id))warnings.push(`collection: duplicate card id ${card.id}`);seen.add(card.id);
-  if(!['place','line'].includes(card.kind))warnings.push(`collection: ${card.id} has unknown kind ${card.kind}`);
+  if(!['place','line','token'].includes(card.kind))warnings.push(`collection: ${card.id} has unknown kind ${card.kind}`);
   const scene=card.unlock.type==='read_scene'?card.unlock.scene:null;
   if(scene&&!maps.has(scene))warnings.push(`collection: ${card.id} references unknown scene ${scene}`);
   if(card.unlock.type==='read'&&!nodeIds.has(card.unlock.node))warnings.push(`collection: ${card.id} references unknown node ${card.unlock.node}`);
+  // 信物卡声称的原文依据必须逐字出现在底本里。信物是「原文写明交到手上」的
+  // 东西，一旦引文与底本脱节，卡面就在替原文说话——这正是最不能悄悄腐烂的地方。
+  if(card.kind==='token'&&card.source){
+   const chapter=String(card.book).padStart(2,'0');
+   const file=resolve(root,`docs/chapter${chapter}-source.txt`);
+   if(!existsSync(file))warnings.push(`collection: ${card.id} has no source text for chapter ${card.book}`);
+   else{
+    const text=readFileSync(file,'utf8').replace(/\s+/g,'');
+    const claim=card.source.replace(/\s+/g,'');
+    if(!text.includes(claim))warnings.push(`collection: ${card.id} quotes text not found in docs/chapter${chapter}-source.txt`);
+   }
+  }
  }
 }
 if(errors.length){for(const error of errors)console.error(`ERROR ${error}`);process.exitCode=1;}

@@ -106,3 +106,12 @@ dialog{border:1px solid #d0d8c2;border-radius:10px;width:min(600px,calc(100% - 3
 .card-item footer strong{font-family:"Songti SC",serif;font-weight:500;font-size:13px;color:#50634e}
 .card-item.locked footer strong{color:#9aa58f}
 .card-item footer small{font-size:10px;color:#a5ac98}
+/* 信物卡：护官符是抄本，竖排四行 + 朱印，纸色比地志卡更旧。 */
+.card-item.token .card-face{background:linear-gradient(160deg,#f3ecd8,#e9dfc4);border-color:#c2b48f;padding:12px 14px 30px;min-height:196px;justify-content:flex-start}
+.card-item.token .card-scroll{margin:6px 0 0}
+.card-scroll{margin:6px 0 4px;display:flex;flex-direction:column;gap:4px;font-family:"Songti SC",SimSun,serif;font-size:10px;line-height:1.6;letter-spacing:.3px;color:#4c4636}
+.card-scroll span{display:block}
+.card-item.token .card-name{font-size:13px;letter-spacing:2px;color:#4c4636;margin:0}
+.card-item.token .card-subtitle{font-size:9px;color:#8b8168;margin-top:8px}
+.card-item.token .card-seal{background:#9c3b28;right:10px;bottom:9px;padding:2px 6px}
+.card-source{display:block;margin-top:3px;font-size:9px;line-height:1.5;color:#a5ac98}

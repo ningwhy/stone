@@ -342,6 +342,63 @@
     "type": "read",
     "node": "C04-033"
    }
+  },
+  {
+   "id": "token.huguanfu",
+   "kind": "token",
+   "book": 4,
+   "name": "护官符",
+   "subtitle": "一张抄写的本省大族名宦口碑单",
+   "quote": "贾不假，白玉为堂金作马。\n阿房宫，三百里，住不下金陵一个史。\n东海缺少白玉床，龙王来请金陵王。\n丰年好大雪，珍珠如土金如铁。",
+   "attribution": "应天府门子 呈与贾雨村",
+   "node": "C04-029",
+   "unlock": {
+    "type": "read",
+    "node": "C04-029"
+   },
+   "source": "從順袋中取出一張抄寫的「護官符」來，遞與雨村"
+  },
+  {
+   "id": "token.yincun-mishu",
+   "kind": "token",
+   "book": 2,
+   "name": "雨村寄封肃的密书",
+   "subtitle": "托问甄家娘子要那娇杏作二房",
+   "attribution": "贾雨村 遣人送至",
+   "node": "C2-004",
+   "unlock": {
+    "type": "read",
+    "node": "C2-004"
+   },
+   "source": "又寄一封密書與封肅，轉托問甄家娘子要那嬌杏作二房"
+  },
+  {
+   "id": "token.huazhang",
+   "kind": "token",
+   "book": 3,
+   "name": "藕合色花帐与锦被缎褥",
+   "subtitle": "凤姐遣人送至碧纱橱",
+   "attribution": "凤姐 遣人送去",
+   "node": "T003",
+   "unlock": {
+    "type": "read",
+    "node": "T003"
+   },
+   "source": "熙鳳命人送了一頂藕合色花帳，並幾件錦被緞褥之類"
+  },
+  {
+   "id": "token.yinbi",
+   "kind": "token",
+   "book": 1,
+   "name": "甄士隐所赠银两",
+   "subtitle": "资助雨村进京赶考的路费",
+   "attribution": "甄士隐",
+   "node": "C1-033",
+   "unlock": {
+    "type": "read",
+    "node": "C1-033"
+   },
+   "source": "我贈五十兩銀子、兩套冬衣，路費由我相助"
   }
  ]
 }

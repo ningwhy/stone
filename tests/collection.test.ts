@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { cards, loadStored, saveStored, sceneIndex, unlockedCards } from '../src/collection.ts';
+import { cards, cardsByBook, loadStored, saveStored, sceneIndex, tokenCards, unlockedCards } from '../src/collection.ts';
 
 const steps = [
   { id: 'C1-002', scene: 'myth' },
@@ -11,12 +11,28 @@ const steps = [
 const index = sceneIndex(steps);
 
 test('卡片数据自洽：解锁节点与场景真实存在', () => {
-  assert.equal(cards.length, 28, '首期 22 地志卡 + 6 金句卡');
+  assert.equal(cards.length, 32, '首期 22 地志卡 + 6 金句卡 + 4 信物卡');
   const scenes = new Set(steps.map(s => s.scene));
   for (const card of cards) {
     if (card.unlock.type === 'read') assert.equal(typeof card.unlock.node, 'string');
     else scenes.add(card.unlock.scene);
   }
+});
+
+test('信物卡只在原文写明「交到手上」的节点入册', () => {
+  const tokens = cards.filter(c => c.kind === 'token');
+  assert.equal(tokens.length, 4);
+  // 每件信物都必须带着原文依据，且解锁节点就是那个依据所在的节点
+  for (const token of tokens) {
+    assert.ok(token.source, `${token.id} lacks its original-text basis`);
+    assert.equal(token.unlock.type, 'read');
+    assert.equal(token.unlock.node, token.node);
+  }
+  // 护官符在 C04-029「从顺袋中取出一张抄写的护官符来，递与雨村」时才到手
+  const got = unlockedCards(['C04-029'], index);
+  assert.ok(got.has('token.huguanfu'), '护官符在递与雨村时入册');
+  assert.ok(!got.has('token.huazhang'), '未读到第三回则无花帐');
+  assert.ok(!got.has('token.yinbi'), '未读到第一回则无银两');
 });
 
 test('读到某场景任意节点即解锁该地志卡', () => {
@@ -40,6 +56,17 @@ test('同一场景多节点只解锁一次，幂等', () => {
   const twice = unlockedCards(['C1-045', 'C1-046'], index);
   assert.deepEqual([...once].sort(), [...once].sort());
   assert.ok(twice.has('place.farm'));
+});
+
+test('信物卡单列一组，不在回目分组里重复出现', () => {
+  const tokens = tokenCards();
+  assert.equal(tokens.length, 4);
+  const inBooks = [...cardsByBook().values()].flat();
+  for (const token of tokens) {
+    assert.ok(!inBooks.includes(token), `${token.id} would be drawn twice`);
+  }
+  // 回目分组里的每一张都必须是地志或金句
+  for (const card of inBooks) assert.notEqual(card.kind, 'token');
 });
 
 test('localStorage 存取容错：坏数据不致命', () => {

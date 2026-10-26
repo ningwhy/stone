@@ -13,7 +13,7 @@ import type { Travel } from './WorldMap.tsx';
 import { actionNarration } from './narration.ts';
 import { emotionOf } from './emotion.ts';
 import { audio } from './audio.ts';
-import { cards, cardsByBook, loadStored, saveStored, sceneIndex, unlockedCards } from './collection.ts';
+import { cards, cardsByBook, loadStored, saveStored, sceneIndex, tokenCards, unlockedCards } from './collection.ts';
 
 type Modal = 'history'|'settings'|'source'|'atlas'|'cast'|ActorId|null;
 function Icon({name}: {name:string}) {
@@ -85,6 +85,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   const sceneIdx=useMemo(()=>sceneIndex(engine.steps),[engine]);
   const storedCards=useMemo(()=>loadStored(),[]);
   const unlocked=useMemo(()=>unlockedCards(state.readLog??[],sceneIdx,storedCards),[state.readLog,sceneIdx,storedCards]);
+  const tokens=useMemo(()=>tokenCards(),[]);
   useEffect(()=>{saveStored(unlocked);},[unlocked.size]); // 只在收集增长时写盘
   const [overview,setOverview]=useState(false),[travel,setTravel]=useState<Travel|null>(null);
   const [loadProgress,setLoadProgress]=useState(0),[loaded,setLoaded]=useState(false),[overlay,setOverlay]=useState(true);
@@ -289,7 +290,26 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           {Object.values(engine.maps).map(map=><article key={map.id}><h3>{map.title}</h3><p>{map.labels.length?map.labels.map(l=>l.text).join(' · '):'西角门 · 换轿处 · 垂花门 · 穿堂插屏 · 贾母正房 · 后房门'}</p><small>40×40 格 · {Object.keys(map.anchors).length} 个剧情地点</small></article>)}
           <p className="atlas-note">金陵应天府、还愿庙宇、斋戒处为叙述提及，不是本回黛玉实际到访的场景。</p>
         </>:<>
-          <p className="atlas-note">地志卡随剧情读到即收入；金句卡在读到对应段落时入册。收集的反馈都在这里，阅读时不会弹出打扰。</p>
+          <p className="atlas-note">地志卡随剧情读到即收入；金句卡在读到对应段落时入册；信物只在原文写明「交到手上」那一刻入册。收集的反馈都在这里，阅读时不会弹出打扰。</p>
+          {tokens.length>0&&<section className="card-book">
+            <h3 className="card-book-title">信物</h3>
+            <div className="card-gallery">
+              {tokens.map(card=>{
+                const got=unlocked.has(card.id);
+                return <article key={card.id} className={`card-item token ${got?'unlocked':'locked'}`} aria-label={got?card.name:'未解锁的信物'}>
+                  <div className="card-face">
+                    {got?<>
+                      <strong className="card-name">{card.name}</strong>
+                      {card.quote&&<p className="card-scroll">{card.quote.split('\n').map((line,i)=><span key={i}>{line}</span>)}</p>}
+                      <small className="card-subtitle">{card.subtitle}</small>
+                      <span className="card-seal">{card.attribution}</span>
+                    </>:<span className="card-mark">？</span>}
+                  </div>
+                  <footer>{got?<><strong>{card.name}</strong><small>信物{card.source&&<span className="card-source">· 原文：{card.source}</span>}</small></>:<strong>？？？？</strong>}</footer>
+                </article>;
+              })}
+            </div>
+          </section>}
           {[...cardsByBook().entries()].map(([book,list])=><section key={book} className="card-book">
             <h3 className="card-book-title">{bookNames[book]??`第${book}回`}</h3>
             <div className="card-gallery">

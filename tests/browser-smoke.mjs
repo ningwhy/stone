@@ -97,12 +97,14 @@ try{
  await page.getByRole('button',{name:'关闭弹窗'}).click();
 
  await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'册页',exact:true}).click();assert.equal(await page.locator('.atlas-body article').count(),22);
- // 见闻标签：28 张卡（22 地志 + 6 金句），读过的部分已入册，收集数与页签一致。
+ // 见闻标签：32 张卡（22 地志 + 6 金句 + 4 信物），读过的部分已入册，收集数与页签一致。
  await page.getByRole('tab',{name:/见闻/}).click();
- assert.equal(await page.locator('.card-gallery .card-item').count(),28,'the album must list every phase-one card');
+ assert.equal(await page.locator('.card-gallery .card-item').count(),32,'the album must list every card');
+ // 信物单列一组，四件不与回目分组重复。
+ assert.equal(await page.locator('.card-item.token').count(),4,'the four tokens must be listed once each');
  const unlockedCount=await page.locator('.card-gallery .card-item.unlocked').count();
  assert.ok(unlockedCount>=1,'reading some nodes must already fill the album');
- assert.match(await page.getByRole('tab',{name:/见闻/}).textContent(),new RegExp(`${unlockedCount}/28`));
+ assert.match(await page.getByRole('tab',{name:/见闻/}).textContent(),new RegExp(`${unlockedCount}/32`));
  await page.getByRole('tab',{name:'地图'}).click();assert.equal(await page.locator('.atlas-body article').count(),22);
  await page.keyboard.press('Escape');
 
