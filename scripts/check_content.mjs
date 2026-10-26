@@ -167,5 +167,24 @@ for(const warning of warnings)console.warn(`WARN ${warning}`);
  const unmapped=[...themes].filter(t=>!mapped.has(t));
  requireThat(unmapped.length===0,`audio: map themes with no piece: ${unmapped.join(', ')} (they fall back to the garden piece)`);
 }
+// The runtime requests WebP exclusively (src/art.ts), so a PNG rebuilt without its
+// WebP sibling ships the old bitmap forever — the sedan grew four bearers and the
+// page kept showing the empty chair. Three gates: the sibling must exist, it must
+// be at least as fresh as its PNG, and every manifest entry needs a version (the
+// WebP content hash, or an identity revision) so a rebuilt asset gets a new URL.
+{
+ const {statSync}=await import('node:fs');
+ const dir=resolve(root,'public/assets/rongguo');
+ for(const file of readdirSync(dir).filter(f=>f.endsWith('.png'))){
+  const webp=resolve(dir,file.replace(/\.png$/,'.webp'));
+  if(!existsSync(webp)){errors.push(`${file}: no WebP sibling; run npm run art:webp`);continue;}
+  if(statSync(webp).mtimeMs<statSync(resolve(dir,file)).mtimeMs)
+   errors.push(`${file}: WebP sibling is older than the PNG; run npm run art:webp`);
+ }
+ const unversioned=Object.entries(manifest)
+  .filter(([,a])=>!a.hash&&!a.identity?.revision).map(([k])=>k);
+ requireThat(unversioned.length===0,
+  `manifest entries with no cache version (no hash, no identity revision): ${unversioned.join(', ')}; run npm run art:webp`);
+}
 if(errors.length){for(const error of errors)console.error(`ERROR ${error}`);process.exitCode=1;}
 else console.log(`Content passed: ${story.length} nodes, ${chapters.length} sections, ${maps.size} maps, ${Object.keys(cast).length-1} humans, ${Object.keys(manifest).length} assets; chapter counts ${JSON.stringify(Object.fromEntries(books))}; ${docFiles.length} documentation files linked; ${evidenceEntries} evidence entries in ${evidenceFiles.length} table(s). Original-text interpretation and visuals still require human review.`);
