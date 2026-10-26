@@ -115,3 +115,15 @@ dialog{border:1px solid #d0d8c2;border-radius:10px;width:min(600px,calc(100% - 3
 .card-item.token .card-subtitle{font-size:9px;color:#8b8168;margin-top:8px}
 .card-item.token .card-seal{background:#9c3b28;right:10px;bottom:9px;padding:2px 6px}
 .card-source{display:block;margin-top:3px;font-size:9px;line-height:1.5;color:#a5ac98}
+/* 归属卡：那个年代人也可以是「给」的。卡面是从谁那里来、到谁那里去。 */
+.card-item.bond .card-face{background:linear-gradient(160deg,#f6f2e6,#ebe6d4);border-color:#c3bda4;padding:12px 14px 30px;min-height:186px;justify-content:flex-start}
+.bond-mode{position:absolute;top:9px;right:10px;font-size:10px;letter-spacing:2px;padding:2px 7px;border-radius:2px;color:#fdf6e3}
+.bond-mode.granted{background:#0f6e56}
+.bond-mode.sold{background:#854f0b}
+.bond-mode.taken{background:#a32d2d}
+.bond-row{display:flex;align-items:center;gap:7px;margin:26px 0 8px;font-family:"Songti SC",serif}
+.bond-side{font-size:13px;letter-spacing:1px;color:#4c4636;line-height:1.35}
+.bond-arrow{color:#9a927a;font-size:13px}
+.bond-note{margin:0;font-size:10px;line-height:1.7;color:#7a7360;flex:1;overflow:hidden}
+.card-item.bond .card-seal{right:10px;bottom:9px;background:#6b6a4e;padding:2px 6px}
+.card-item.bond footer small{font-size:9px;color:#a5ac98;line-height:1.5}

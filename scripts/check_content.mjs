@@ -194,13 +194,23 @@ for(const warning of warnings)console.warn(`WARN ${warning}`);
  const seen=new Set();
  for(const card of cardData.cards){
   if(seen.has(card.id))warnings.push(`collection: duplicate card id ${card.id}`);seen.add(card.id);
-  if(!['place','line','token'].includes(card.kind))warnings.push(`collection: ${card.id} has unknown kind ${card.kind}`);
+  if(!['place','line','token','bond'].includes(card.kind))warnings.push(`collection: ${card.id} has unknown kind ${card.kind}`);
   const scene=card.unlock.type==='read_scene'?card.unlock.scene:null;
   if(scene&&!maps.has(scene))warnings.push(`collection: ${card.id} references unknown scene ${scene}`);
   if(card.unlock.type==='read'&&!nodeIds.has(card.unlock.node))warnings.push(`collection: ${card.id} references unknown node ${card.unlock.node}`);
-  // 信物卡声称的原文依据必须逐字出现在底本里。信物是「原文写明交到手上」的
-  // 东西，一旦引文与底本脱节，卡面就在替原文说话——这正是最不能悄悄腐烂的地方。
-  if(card.kind==='token'&&card.source){
+  // 归属卡必须指向真实存在的人物，且写明归属的方向；不能凭名字造人。
+  if(card.kind==='bond'){
+   if(!card.bond)warnings.push(`collection: ${card.id} has no bond relation`);
+   else{
+    if(!['granted','sold','taken'].includes(card.bond.mode))warnings.push(`collection: ${card.id} has unknown bond mode ${card.bond.mode}`);
+    if(!card.bond.from||!card.bond.to)warnings.push(`collection: ${card.id} has an incomplete bond relation`);
+   }
+   if(card.actor&&!cast[card.actor])warnings.push(`collection: ${card.id} references unknown actor ${card.actor}`);
+  }
+  // 信物卡与归属卡声称的原文依据必须逐字出现在底本里。信物是「原文写明交到手上」
+  // 的东西，归属是「原文写明这个人归了谁」——一旦引文与底本脱节，卡面就在替原文
+  // 说话，这正是最不能悄悄腐烂的地方。
+  if((card.kind==='token'||card.kind==='bond')&&card.source){
    const chapter=String(card.book).padStart(2,'0');
    const file=resolve(root,`docs/chapter${chapter}-source.txt`);
    if(!existsSync(file))warnings.push(`collection: ${card.id} has no source text for chapter ${card.book}`);

@@ -13,7 +13,7 @@ import type { Travel } from './WorldMap.tsx';
 import { actionNarration } from './narration.ts';
 import { emotionOf } from './emotion.ts';
 import { audio } from './audio.ts';
-import { cards, cardsByBook, loadStored, saveStored, sceneIndex, tokenCards, unlockedCards } from './collection.ts';
+import { cards, cardsByBook, loadStored, saveStored, sceneIndex, bondCards, tokenCards, unlockedCards } from './collection.ts';
 
 type Modal = 'history'|'settings'|'source'|'atlas'|'cast'|ActorId|null;
 function Icon({name}: {name:string}) {
@@ -86,6 +86,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   const storedCards=useMemo(()=>loadStored(),[]);
   const unlocked=useMemo(()=>unlockedCards(state.readLog??[],sceneIdx,storedCards),[state.readLog,sceneIdx,storedCards]);
   const tokens=useMemo(()=>tokenCards(),[]);
+  const bonds=useMemo(()=>bondCards(),[]);
   useEffect(()=>{saveStored(unlocked);},[unlocked.size]); // 只在收集增长时写盘
   const [overview,setOverview]=useState(false),[travel,setTravel]=useState<Travel|null>(null);
   const [loadProgress,setLoadProgress]=useState(0),[loaded,setLoaded]=useState(false),[overlay,setOverlay]=useState(true);
@@ -306,6 +307,31 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
                     </>:<span className="card-mark">？</span>}
                   </div>
                   <footer>{got?<><strong>{card.name}</strong><small>信物{card.source&&<span className="card-source">· 原文：{card.source}</span>}</small></>:<strong>？？？？</strong>}</footer>
+                </article>;
+              })}
+            </div>
+          </section>}
+          {bonds.length>0&&<section className="card-book">
+            <h3 className="card-book-title">归属</h3>
+            <p className="atlas-note">那个年代，人也可以是「给」的。卡上标出这个人从哪里来、到了谁那里去，以及是赏给、买卖还是被夺。</p>
+            <div className="card-gallery">
+              {bonds.map(card=>{
+                const got=unlocked.has(card.id);
+                const bond=card.bond!;
+                return <article key={card.id} className={`card-item bond ${got?'unlocked':'locked'}`} aria-label={got?`${card.name}的归属`:'未解锁的归属卡'}>
+                  <div className="card-face">
+                    {got?<>
+                      <span className={`bond-mode ${bond.mode}`}>{({granted:'赏给',sold:'买卖',taken:'被夺'})[bond.mode]}</span>
+                      <div className="bond-row">
+                        <span className="bond-side">{bond.from}</span>
+                        <span className="bond-arrow" aria-hidden="true">→</span>
+                        <span className="bond-side">{bond.to}</span>
+                      </div>
+                      <p className="bond-note">{bond.note}</p>
+                      <span className="card-seal">{bookNames[card.book]??`第${card.book}回`}</span>
+                    </>:<span className="card-mark">？</span>}
+                  </div>
+                  <footer>{got?<><strong>{card.name}</strong><small>{card.subtitle}</small></>:<strong>？？？？</strong>}</footer>
                 </article>;
               })}
             </div>

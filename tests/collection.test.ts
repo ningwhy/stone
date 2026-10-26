@@ -1,17 +1,20 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { cards, cardsByBook, loadStored, saveStored, sceneIndex, tokenCards, unlockedCards } from '../src/collection.ts';
+import { bondCards, cards, cardsByBook, loadStored, saveStored, sceneIndex, tokenCards, unlockedCards } from '../src/collection.ts';
 
 const steps = [
   { id: 'C1-002', scene: 'myth' },
   { id: 'C1-045', scene: 'farm' },
   { id: 'C2-030', scene: 'tavern' },
   { id: 'C04-033', scene: 'c4_yamen' },
+  { id: 'T006', scene: 'night' },
+  { id: 'T004', scene: 'night' },
+  { id: 'C04-055', scene: 'c4_yamen' },
 ];
 const index = sceneIndex(steps);
 
 test('卡片数据自洽：解锁节点与场景真实存在', () => {
-  assert.equal(cards.length, 32, '首期 22 地志卡 + 6 金句卡 + 4 信物卡');
+  assert.equal(cards.length, 36, '22 地志卡 + 6 金句卡 + 4 信物卡 + 4 归属卡');
   const scenes = new Set(steps.map(s => s.scene));
   for (const card of cards) {
     if (card.unlock.type === 'read') assert.equal(typeof card.unlock.node, 'string');
@@ -67,6 +70,31 @@ test('信物卡单列一组，不在回目分组里重复出现', () => {
   }
   // 回目分组里的每一张都必须是地志或金句
   for (const card of inBooks) assert.notEqual(card.kind, 'token');
+});
+
+test('归属卡：方向三选一，人物必须真实存在', () => {
+  const bonds = bondCards();
+  assert.equal(bonds.length, 4, '前四回原文写明归属关系的共四人');
+  const inBooks = [...cardsByBook().values()].flat();
+  for (const bond of bonds) {
+    assert.ok(!inBooks.includes(bond), `${bond.id} would be drawn twice`);
+    assert.ok(bond.bond, `${bond.id} lacks its relation`);
+    assert.ok(['granted', 'sold', 'taken'].includes(bond.bond!.mode));
+    assert.ok(bond.bond!.from && bond.bond!.to);
+    assert.ok(bond.source, `${bond.id} lacks its original-text basis`);
+    assert.equal(bond.unlock.type, 'read');
+  }
+  // 三种方向都要有样本：赏给（袭人鹦哥）/ 买卖（娇杏）/ 被夺（英莲）
+  const modes = new Set(bonds.map(b => b.bond!.mode));
+  assert.deepEqual([...modes].sort(), ['granted', 'sold', 'taken']);
+});
+
+test('归属卡随对应节点解锁', () => {
+  const got = unlockedCards(['T006'], index);
+  assert.ok(got.has('bond.xiren'), '读到 T006 则袭人的归属入册');
+  assert.ok(!got.has('bond.yingge'), '未读到 T004 则鹦哥不入册');
+  const got2 = unlockedCards(['C04-055'], index);
+  assert.ok(got2.has('bond.yinglian'), '英莲被夺入册');
 });
 
 test('localStorage 存取容错：坏数据不致命', () => {
