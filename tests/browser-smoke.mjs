@@ -119,7 +119,7 @@ try{
  // Xue family courtyard is a place on the map with its own path into the lane spine.
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-pear');await reading();
  await page.getByRole('button',{name:'荣国府总览',exact:true}).click();await page.locator('.world-map').waitFor();
- await page.waitForFunction(()=>document.querySelector('.world-location.current')?.getAttribute('data-asset')==='estate-study',undefined,{timeout:30000});
+ await page.waitForFunction(()=>document.querySelector('.world-location.current')?.getAttribute('data-asset')==='estate-lixiang',undefined,{timeout:30000});
  await page.getByRole('button',{name:'查看梨香院地点',exact:true}).click();
  assert.ok((await page.locator('.world-detail').textContent()).includes('薛姨妈'));
  await page.getByRole('button',{name:'从此处剧情开始 →',exact:true}).click();await reading();assert.equal(await node(),'C04-104');

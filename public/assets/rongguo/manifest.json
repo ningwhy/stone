@@ -3583,6 +3583,27 @@
    "bodyCompress": null,
    "hash": "135d55760688"
   },
+  "estate-lixiang": {
+   "image": "/assets/rongguo/estate-lixiang.png",
+   "width": 800,
+   "height": 482,
+   "anchor": [
+    404.329,
+    477.673
+   ],
+   "source": "art/source/estate-lixiang_s10226202-01.png",
+   "matte": "art/matted/estate-lixiang_s10226202-sam.png",
+   "crop": [
+    52,
+    325,
+    976,
+    882
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "b94844816753"
+  },
   "baoyu-portrait-angry": {
    "image": "/assets/rongguo/baoyu-portrait-angry.png",
    "width": 346,

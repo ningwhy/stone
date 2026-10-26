@@ -942,5 +942,13 @@
     "faintAlphaRatio": 0.0,
     "width": 110,
     "height": 163
+  },
+  {
+    "asset": "estate-lixiang",
+    "visiblePixels": 227427,
+    "solidAlpha250Ratio": 0.98924,
+    "faintAlphaRatio": 0.00464,
+    "width": 800,
+    "height": 482
   }
 ]

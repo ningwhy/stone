@@ -9,12 +9,11 @@ import type { StepSurface } from './audio.ts';
 import type { ActorId } from './story.ts';
 import type { StoryEngine } from './engine.ts';
 
-/** Buildings sort by their isometric ground point, so a wall standing nearer the camera
- * than a walker covers them. Walkers are lifted onto a constant layer above every
- * building instead: the player must always see the person they are moving, and the
- * roof-lift logic keys off visibility, not depth, so nothing indoors depends on the
- * old ordering. Halo sits just above the walkers, place labels above that. */
-const ACTOR_DEPTH = 5000;
+/** Everything on the stage sorts by its isometric ground line — buildings by their
+ * calibrated anchor, walkers by their feet — so a wall standing nearer the camera
+ * covers a person behind it. The player must still always see the person they are
+ * moving, so anything occluding a walker goes translucent instead of hiding them.
+ * Halo sits above the walkers, place labels above that. */
 const HALO_DEPTH = 5001;
 const PLACE_LABEL_DEPTH = 5002;
 
@@ -269,9 +268,6 @@ export class MapScene extends Phaser.Scene {
       // so the interior paving and furnishings read through instead of a solid wall.
       const roofOff=object.interiorZone!==undefined && this.zoneOccupied(object.interiorZone,state);
       view.setVisible(object.visibility!=='exterior' || (state.roofVisible && !roofOff));
-      // Until architectural front/back layers are authored, reveal walkers through the gate.
-      const nearGate=Math.abs(state.actors.daiyu.col-13)<=1.5 && state.actors.daiyu.row>=22 && state.actors.daiyu.row<=26;
-      view.setAlpha(view.texture.key==='flower-gate' && nearGate && this.mapData.id==='entry' ? .28 : 1);
     }
     const zoom=this.cameras.main.zoom;
     for(const label of this.placeLabels)label.setScale(1/zoom);
@@ -284,7 +280,10 @@ export class MapScene extends Phaser.Scene {
       const asset=artAssets[id==='sedan'?'sedan-chair':`${id}-chibi`];
       const bodyHeight=asset?.height??85;
       const scale=Math.max(1,48/(bodyHeight*zoom));
-      view.setScale(scale).setPosition(p.x,p.y+bounce).setVisible(a.visible).setDepth(ACTOR_DEPTH);
+      // Walkers sort against buildings and furniture by their isometric ground point,
+      // like the artwork does, so a person north of a table stands behind it instead
+      // of riding on top of it.
+      view.setScale(scale).setPosition(p.x,p.y+bounce).setVisible(a.visible).setDepth(p.y);
       // Footfalls and creaking poles ride on the movement itself; audio.step throttles
       // repeats, and the sedan gets the wood rub instead of a footstep.
       if(a.moving && !state.paused && !this.presentationPaused) {
@@ -300,6 +299,25 @@ export class MapScene extends Phaser.Scene {
       const chibiKey=id==='sedan'?'sedan-chair':`${id}-chibi`;
       if(sprite)sprite.setFlipX((a.direction===1)!==(paintedFacingOf(chibiKey,id,'chibi')==='right'));
       this.actorLabels.get(id)!.setScale(1/(zoom*scale)).setPosition(0,7/(zoom*scale));
+    }
+    // A building, gate or piece of furniture goes translucent while a walker stands
+    // behind it — the same treatment the chapter-three flower gate used to hardcode,
+    // generalized: the person stays visible, the obstacle reads as an obstacle. The
+    // test is purely the drawn sprite's rectangle: calibrated anchors lift the sort
+    // line above the bitmap's bottom edge, so a depth comparison would miss the
+    // threshold band where a walker visibly overlaps the artwork.
+    for(const {view,object} of this.artViews) {
+      if(!view.visible){view.setAlpha(1);continue;}
+      const half=object.width/2,top=object.y-object.height;
+      let behind=false;
+      for(const actor of Object.values(state.actors)) {
+        if(!actor.visible)continue;
+        const p=project(actor,this.mapData);
+        if(p.x<object.x-half||p.x>object.x+half)continue;
+        if(p.y<=top||p.y>=object.y)continue;            // outside the sprite's reach
+        behind=true;break;
+      }
+      view.setAlpha(behind?.45:1);
     }
   }
   private declutterLabels(){

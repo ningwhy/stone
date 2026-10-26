@@ -16,6 +16,6 @@ try{
  await page.waitForFunction(()=>[...document.querySelectorAll('image[href*="manor-main-gate"]')].some(n=>n.dataset.loaded==='true'));
  await page.getByRole('button',{name:'查看王熙凤院地点',exact:true}).click();assert.ok((await page.locator('.world-detail').textContent()).includes('粉油'));await page.getByRole('button',{name:'关闭地点详情'}).click();
  await page.screenshot({path:'artifacts/rongguo-geography-corrected.png'});
-assert.deepEqual(errors,[]);const manifest=JSON.parse(readFileSync('public/assets/rongguo/manifest.json'));assert.equal(Object.keys(manifest.assets).length,134);
-console.log('Passed: final main-gate, west-gate, black-oil-gate and fire-ruins artwork; accessible estate labels; 134 runtime assets.');
+assert.deepEqual(errors,[]);const manifest=JSON.parse(readFileSync('public/assets/rongguo/manifest.json'));assert.equal(Object.keys(manifest.assets).length,135);
+console.log('Passed: final main-gate, west-gate, black-oil-gate and fire-ruins artwork; accessible estate labels; 135 runtime assets.');
 }finally{await browser.close();}

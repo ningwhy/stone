@@ -2576,6 +2576,15 @@
    ],
    "width": 110,
    "alphaFloor": 128
+  },
+  {
+   "id": "estate-lixiang",
+   "seed": 10226202,
+   "anchor": [
+    519,
+    877
+   ],
+   "width": 800
   }
  ],
  "placements": [
