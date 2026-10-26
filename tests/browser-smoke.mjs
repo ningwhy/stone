@@ -120,18 +120,16 @@ try{
  const unlockedCount=await page.locator('.card-gallery .card-item.unlocked').count();
  assert.ok(unlockedCount>=1,'reading some nodes must already fill the album');
  assert.match(await page.getByRole('tab',{name:/见闻/}).textContent(),new RegExp(`${unlockedCount}/36`));
- // 卡格整齐：同一类卡的卡面高度必须一致，缩略图高度也要一致。
- const faceHeights=await page.locator('.card-face').evaluateAll(els=>{
-   const out={};
-   for(const el of els){const kind=[...el.closest('.card-item').classList].find(c=>['place','line','token','bond'].includes(c));
-     const h=Math.round(el.getBoundingClientRect().height);(out[kind]=out[kind]??new Set()).add(h);}
-   return Object.fromEntries(Object.entries(out).map(([k,v])=>[k,[...v]]));
- });
- for(const [kind,heights] of Object.entries(faceHeights))assert.equal(heights.length,1,`${kind} cards must share one height, got ${heights.join('/')}`);
- // 册页卡格的缩略图必须统一高度。账簿的贴图尺寸不同（索引图小于主角卡），
- // 所以断言只取册页画框里的那一种。
- const thumbHeights=await page.locator('.card-gallery .card-thumb').evaluateAll(els=>[...new Set(els.map(e=>Math.round(e.getBoundingClientRect().height)))]);
- assert.equal(thumbHeights.length,1,'every thumbnail must share one height');
+ // 卡格整齐：旧版四类卡各定一个高度（150/170/186px），看着大的大小的小。
+ // 新版所有卡面写死同一高度，四列横向纵向都齐平——断言整个画廊只存在一种高度。
+ const faceHeights=await page.locator('.card-gallery .card-face').evaluateAll(els=>[...new Set(els.map(e=>Math.round(e.getBoundingClientRect().height)))]);
+ assert.equal(faceHeights.length,1,`every card face must share one height, got ${faceHeights.join('/')}`);
+ // 贴图铺满卡面、不再套一层独立小图框：解锁卡里画框尺寸应与卡面一致（差只在 1px 边框内）。
+ const fillRatios=await page.locator('.card-gallery .card-item.unlocked .card-thumb').evaluateAll(els=>els.map(e=>{
+   const t=e.getBoundingClientRect(),f=e.closest('.card-face').getBoundingClientRect();
+   return Math.max(Math.abs(t.width-f.width),Math.abs(t.height-f.height));
+ }));
+ assert.ok(fillRatios.every(d=>d<=2),`the art must fill the card face, max gap ${Math.max(...fillRatios)}px`);
  // 卡图按可见性才加载：册页一次 36 张大图同屏解码会卡死页面。
  // 断言口径是「已挂上 src 的图」——没进视口的卡只有占位，没有 src。
  const loadedPics=await page.locator('.card-gallery .card-art[src]').count();

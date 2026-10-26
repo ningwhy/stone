@@ -59,13 +59,27 @@ function CardArt({src,alt,size='card',fit='cover'}:{src:string;alt:string;size?:
   return <span className={`card-thumb ${size}`} ref={ref}>
     {visible?<img className={`card-art ${loaded?'is-loaded':''} ${fit==='contain'?'fit-contain':''}`} src={src} alt={alt} decoding="async" onLoad={()=>setLoaded(true)}/>:<span className="card-art-placeholder" aria-hidden="true"/>}
   </span>;
+
 }
 
+/** 册页的卡片：贴图就是卡片本身。
+ *  原来是把画缩成 140px 的小图框、再在下面另接一块文字卡面——两块各带边框，
+ * 画面就碎成上下两截，图也小得看不清。现在图铺满整张卡，文字以浮层压在下缘，
+ * 卡片只有一层框，像一张真正的画片。 */
 function CardTile({card,got}:{card:CardDef;got:boolean}) {
   const seal=card.kind==='line'||card.kind==='token'?(card.attribution??''):(bookNames[card.book]??`第${card.book}回`);
+  // 卡名为落款：地志/信物卡的名字已经压在画上了，框外不再重复；
+  // 金句卡与归属卡的卡面只画引文或「谁→谁」，没有名字，名字必须落到框外落款。
+  const kindLabel=({place:'地志卡',line:'金句卡',token:'信物卡',bond:'归属卡'})[card.kind];
+  const showNameInFooter=card.kind==='bond'||card.kind==='line';
+  // 落款补卡面上没有的信息：信物与归属给出原文依据。
+  const origin=(card.kind==='token'||card.kind==='bond')&&card.source?`原文：${card.source}`:'';
+  // 归属卡的附注有 41~72 字，压在画上要占掉半张卡、字还得缩到看不清。
+  // 挪到框外落款里：画上只留「谁 → 谁」这一层关系，文字说明交给框外。
+  const note=card.kind==='bond'&&card.bond?card.bond.note:'';
   return <article className={`card-item ${card.kind} ${got?'unlocked':'locked'}`} aria-label={got?card.name:'未解锁的卡片'}>
-    {got&&card.image?<CardArt src={card.image} alt={card.name}/>:<span className="card-thumb"><span className="card-mark">？</span></span>}
     <div className="card-face">
+      {got&&card.image?<CardArt src={card.image} alt={card.name}/>:<span className="card-blank"><span className="card-mark">？</span></span>}
       {got?<>
         {card.kind==='line'&&<p className="card-quote">{card.quote}</p>}
         {card.kind==='token'&&<>
@@ -80,16 +94,23 @@ function CardTile({card,got}:{card:CardDef;got:boolean}) {
             <span className="bond-arrow" aria-hidden="true">→</span>
             <span className="bond-side">{card.bond.to}</span>
           </div>
-          <p className="bond-note">{card.bond.note}</p>
         </>}
         {card.kind==='place'&&<>
           <strong className="card-name">{card.name}</strong>
           <small className="card-subtitle">{card.subtitle}</small>
         </>}
-        <span className="card-seal">{seal}</span>
       </>:<small className="card-hint">读到对应剧情后入册</small>}
     </div>
-    <footer>{got?<><strong>{card.name}</strong><small>{card.kind==='line'?'金句卡':card.kind==='place'?'地志卡':card.kind==='token'?<>信物{card.source&&<span className="card-source">· 原文：{card.source}</span>}</>:card.subtitle}</small></>:<strong>？？？？</strong>}</footer>
+    {/* 印章移到框外：压在画上会盖住浮层里的字，看着像一块补丁。 */}
+    <footer>{got?<>
+      <span className="card-meta">
+        {showNameInFooter&&<><strong>{card.name}</strong> <small>{kindLabel}</small></>}
+        {!showNameInFooter&&<small>{kindLabel}</small>}
+        {note&&<small className="card-note">{note}</small>}
+        {origin&&<small>{origin}</small>}
+      </span>
+      <span className="card-seal">{seal}</span>
+    </>:<span className="card-meta"><strong>？？？？</strong><small>读到对应剧情后入册</small></span>}</footer>
   </article>;
 }
 
@@ -415,7 +436,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
         </div>
       </section>
     </div>}
-    <dialog ref={dialog} onCancel={event=>{event.preventDefault();setModal(null);}} onClick={event=>{if(event.target===dialog.current)setModal(null);}}>
+    <dialog ref={dialog} className={modal==='atlas'?'is-atlas':''} onCancel={event=>{event.preventDefault();setModal(null);}} onClick={event=>{if(event.target===dialog.current)setModal(null);}}>
       <div className="modal-header"><h2>{modal==='history'?'对白回看':modal==='settings'?'阅读设置':modal==='source'?'原文与改编':modal==='atlas'?'前四回 · 册页':modal==='cast'?'前四回 · 人物图鉴':character?.fullName}</h2><button className="icon-button" aria-label="关闭弹窗" onClick={()=>setModal(null)}><Icon name="close"/></button></div>
       {modal==='history'&&<div className="history-list">{engine.readHistory().map(entry=><article key={entry.id}><span>{entry.speaker}<small>{entry.id}</small></span><p>{entry.text}</p><button className="text-button" onClick={()=>{setModal(null);setAutomatic(false);engine.seek(entry.id);}}><Icon name="reset"/>回到此处</button></article>)}</div>}
       {modal==='settings'&&<div className="settings-body"><p>{storageError||savedLabel}</p><div className="save-actions"><button className="text-button" onClick={save} disabled={inMotion}>保存</button><button className="text-button" onClick={()=>{setModal(null);load();}}>读取</button><button className="text-button" onClick={()=>{setModal(null);restart();}}>重玩</button><button className="text-button" onClick={()=>setModal('source')}>原文与改编</button><button className="text-button" onClick={()=>setModal('atlas')}>册页</button><button className="text-button" onClick={()=>setModal('cast')}>人物图鉴</button></div><label>人物行走速度<select value={state.speed} onChange={e=>engine.setSpeed(Number(e.target.value))}><option value="0.5">慢行 · 0.5 倍</option><option value="1">常速 · 1 倍</option><option value="2">快行 · 2 倍</option></select></label><label className="check-label"><input type="checkbox" checked={showGuides} onChange={e=>{setShowGuides(e.target.checked);sceneRef.current?.guides(e.target.checked);}}/>显示地图上的引导路线</label><div className="audio-settings"><span className="audio-settings-title">声音</span><label className="check-label"><input type="checkbox" checked={!muted} onChange={e=>{const on=e.target.checked;setMuted(!on);audio.setMuted(!on);}}/>开启全部声音</label><label>背景音乐<input type="range" min="0" max="100" disabled={muted} value={Math.round(audioPrefs.bgm*100)} onChange={e=>{const v=Number(e.target.value)/100;setAudioPrefs(p=>({...p,bgm:v}));audio.setPrefs({bgm:v});}}/></label><label>音效<input type="range" min="0" max="100" disabled={muted} value={Math.round(audioPrefs.sfx*100)} onChange={e=>{const v=Number(e.target.value)/100;setAudioPrefs(p=>({...p,sfx:v}));audio.setPrefs({sfx:v});}}/></label><p className="audio-hint">关掉总开关后音乐与音效同时静默，两个滑杆仍记住原来的音量；重新打开即恢复。音乐随场景变换：园林、街市、运河、夜、室内、太虚各一曲，每一回另有专属的底乐。首次点击页面后开始播放。</p></div><p>打开设置、人物信息或对白记录时，演出会暂停；关掉弹窗后继续。标题栏的「自动」按钮同时管着自动播放：点它开始自动往下读，再点它停下来。</p><p>进度在每条对白到达后自动保存，刷新页面会恢复。隐私浏览或存储限制可能使保存失败。</p></div>}

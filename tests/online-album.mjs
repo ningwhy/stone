@@ -70,7 +70,8 @@ try{
     assert.equal(await face.count(),1,`${c.id} must render exactly one unlocked bond card`);
     const tag=(await face.locator('.bond-mode').textContent()).trim();
     const row=(await face.locator('.bond-row').textContent()).replace(/\s+/g,'');
-    const note=(await face.locator('.bond-note').textContent()).trim();
+    // 归属卡的附注本批挪到了卡框外的落款（.card-note），画上只留「谁 → 谁」。
+    const note=(await face.locator('.card-note').textContent()).trim();
     assert.equal(tag,c.mode,'a bond must name its direction');
     assert.ok(row.includes(c.from)&&row.includes(c.to)&&row.includes('→'),`a bond must show ${c.from} -> ${c.to}`);
     assert.ok(note.length>4,'a bond must carry its note');
