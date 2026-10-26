@@ -63,6 +63,9 @@ export class StoryEngine {
     this.stageLocked=locked;
     if(!locked&&this.pendingLocked){this.pendingLocked=false;this.pump(false);}
   }
+  /** Whether the stage is currently held shut. Exposed for the browser tests:
+   *  a walk that starts before the board is up is only observable from here. */
+  get stageIsLocked() { return this.stageLocked; }
   /** Remaining A* path for presentation only; does not alter movement state. */
   movementPaths() {return this.jobs.map(job=>({actor:job.actor,points:[{col:this.state.actors[job.actor].col,row:this.state.actors[job.actor].row},...job.path.slice(job.cursor).map(point=>({...point}))]}));}
   get step() { return this.steps[this.state.index]; }
