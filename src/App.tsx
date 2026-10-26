@@ -436,7 +436,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
         </div>
       </section>
     </div>}
-    <dialog ref={dialog} className={modal==='atlas'?'is-atlas':''} onCancel={event=>{event.preventDefault();setModal(null);}} onClick={event=>{if(event.target===dialog.current)setModal(null);}}>
+    <dialog ref={dialog} className={modal==='atlas'?(atlasTab==='ledger'?'is-ledger':'is-atlas'):''} onCancel={event=>{event.preventDefault();setModal(null);}} onClick={event=>{if(event.target===dialog.current)setModal(null);}}>
       <div className="modal-header"><h2>{modal==='history'?'对白回看':modal==='settings'?'阅读设置':modal==='source'?'原文与改编':modal==='atlas'?'前四回 · 册页':modal==='cast'?'前四回 · 人物图鉴':character?.fullName}</h2><button className="icon-button" aria-label="关闭弹窗" onClick={()=>setModal(null)}><Icon name="close"/></button></div>
       {modal==='history'&&<div className="history-list">{engine.readHistory().map(entry=><article key={entry.id}><span>{entry.speaker}<small>{entry.id}</small></span><p>{entry.text}</p><button className="text-button" onClick={()=>{setModal(null);setAutomatic(false);engine.seek(entry.id);}}><Icon name="reset"/>回到此处</button></article>)}</div>}
       {modal==='settings'&&<div className="settings-body"><p>{storageError||savedLabel}</p><div className="save-actions"><button className="text-button" onClick={save} disabled={inMotion}>保存</button><button className="text-button" onClick={()=>{setModal(null);load();}}>读取</button><button className="text-button" onClick={()=>{setModal(null);restart();}}>重玩</button><button className="text-button" onClick={()=>setModal('source')}>原文与改编</button><button className="text-button" onClick={()=>setModal('atlas')}>册页</button><button className="text-button" onClick={()=>setModal('cast')}>人物图鉴</button></div><label>人物行走速度<select value={state.speed} onChange={e=>engine.setSpeed(Number(e.target.value))}><option value="0.5">慢行 · 0.5 倍</option><option value="1">常速 · 1 倍</option><option value="2">快行 · 2 倍</option></select></label><label className="check-label"><input type="checkbox" checked={showGuides} onChange={e=>{setShowGuides(e.target.checked);sceneRef.current?.guides(e.target.checked);}}/>显示地图上的引导路线</label><div className="audio-settings"><span className="audio-settings-title">声音</span><label className="check-label"><input type="checkbox" checked={!muted} onChange={e=>{const on=e.target.checked;setMuted(!on);audio.setMuted(!on);}}/>开启全部声音</label><label>背景音乐<input type="range" min="0" max="100" disabled={muted} value={Math.round(audioPrefs.bgm*100)} onChange={e=>{const v=Number(e.target.value)/100;setAudioPrefs(p=>({...p,bgm:v}));audio.setPrefs({bgm:v});}}/></label><label>音效<input type="range" min="0" max="100" disabled={muted} value={Math.round(audioPrefs.sfx*100)} onChange={e=>{const v=Number(e.target.value)/100;setAudioPrefs(p=>({...p,sfx:v}));audio.setPrefs({sfx:v});}}/></label><p className="audio-hint">关掉总开关后音乐与音效同时静默，两个滑杆仍记住原来的音量；重新打开即恢复。音乐随场景变换：园林、街市、运河、夜、室内、太虚各一曲，每一回另有专属的底乐。首次点击页面后开始播放。</p></div><p>打开设置、人物信息或对白记录时，演出会暂停；关掉弹窗后继续。标题栏的「自动」按钮同时管着自动播放：点它开始自动往下读，再点它停下来。</p><p>进度在每条对白到达后自动保存，刷新页面会恢复。隐私浏览或存储限制可能使保存失败。</p></div>}
@@ -481,11 +481,12 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
             {ledgerPeople.map(p=>{
               const n=p.got.length+p.given.length;
               const portrait=ledgerPortrait(p.name);
-              return <button key={p.name} role="option" aria-selected={ledgerPerson===p.name} className={ledgerPerson===p.name?'active':''} onClick={()=>setLedgerPerson(ledgerPerson===p.name?null:p.name)}>
+              const nameClass=p.name.length>3?'long-name':'';
+              return <button key={p.name} role="option" aria-selected={ledgerPerson===p.name} className={`cat-person ${ledgerPerson===p.name?'active':''}`} onClick={()=>setLedgerPerson(ledgerPerson===p.name?null:p.name)}>
                 {/* 立绘是竖版的（宽高比 0.34～0.83），方形框里若用 cover 会把脸裁掉，
                     所以按 contain 缩放并贴着框顶，好让头完整露出来。 */}
-                {portrait?<CardArt src={artImage(portrait)} alt={`${p.name}的立绘`} size="ledger" fit="contain"/>:<span className="ledger-thumb-empty" aria-hidden="true"/>}
-                <strong>{p.name}</strong>
+                {portrait?<CardArt src={artImage(portrait)} alt={`${p.name}的立绘`} size="ledger" fit="contain"/>:<span className="ledger-thumb-empty" aria-hidden="true"><span className="mono">{p.name[0]}</span></span>}
+                <strong className={nameClass}>{p.name}</strong>
                 <small>{n} 笔{p.net!==0?` · ${p.net>0?'赚':'花'} ${Math.abs(p.net)} 两`:''}</small>
               </button>;
             })}
@@ -512,9 +513,10 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
               const hit=t.entries.find(e=>ledgerUnlocked.has(e.id)&&ledgerEntryArt(e));
               const art=hit?ledgerEntryArt(hit):undefined;
               const src=hit?(hit.art??artImage(art!)):undefined;
-              return <button key={t.key} role="option" aria-selected={ledgerItem===t.key} className={ledgerItem===t.key?'active':''} onClick={()=>setLedgerItem(ledgerItem===t.key?null:t.key)}>
-                {src?<CardArt src={src} alt={`${t.label}的货品图`} size="ledger" fit={hit?.category==='person'?'contain':'cover'}/>:<span className="ledger-thumb-empty" aria-hidden="true"/>}
-                <strong>{t.label}</strong>
+              const nameClass=t.label.length>6?'long-name':'';
+              return <button key={t.key} role="option" aria-selected={ledgerItem===t.key} className={`cat-${t.category} ${ledgerItem===t.key?'active':''}`} onClick={()=>setLedgerItem(ledgerItem===t.key?null:t.key)}>
+                {src?<CardArt src={src} alt={`${t.label}的货品图`} size="ledger" fit={hit?.category==='person'?'contain':'cover'}/>:<span className="ledger-thumb-empty" aria-hidden="true"><span className="mono">{t.label[0]}</span></span>}
+                <strong className={nameClass}>{t.label}</strong>
                 <small>{categoryNames[t.category]} · {got}/{t.entries.length} 笔</small>
               </button>;
             })}

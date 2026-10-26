@@ -92,6 +92,11 @@ dialog{border:1px solid #d0d8c2;border-radius:10px;width:min(600px,calc(100% - 3
    root 就不再是滚动祖先，rootMargin 失效，贴图会永远停在占位符状态。 */
 dialog.is-atlas{width:min(1000px,calc(100% - 30px))}
 dialog.is-atlas .atlas-body{padding:14px 25px 26px}
+/* 账簿是索引式卡片（按人/按物），不像册页那样要摊开大画。
+   沿用 atlas 的 1000px 会把卡片网格撑成 6 列 132px 的碎卡，
+   所以账本单独用 720px，卡片落到 3 列、每张都舒展。 */
+dialog.is-ledger{width:min(720px,calc(100% - 30px))}
+dialog.is-ledger .atlas-body{padding:14px 25px 26px}
 .atlas-tabs{display:flex;gap:8px;margin:4px 0 14px;border-bottom:1px solid #dce1d0;padding-bottom:10px}
 .atlas-tabs button{border:1px solid #d1dbc3;background:#f4f4e9;border-radius:4px;padding:6px 16px;font-size:13px;color:#89947a;cursor:pointer}
 .atlas-tabs button[aria-selected="true"]{background:#e3ead8;color:#546b4d;border-color:#a9b997}
@@ -208,17 +213,24 @@ dialog.is-atlas .atlas-body{padding:14px 25px 26px}
   display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;text-shadow:0 1px 3px rgba(0,0,0,.45)}
 
 /* ---- 账簿：前四回里每一笔「给」——银两、衣物、物件、人、人情。 ---- */
-/* 人物/物品选择器：统一尺寸的网格卡片。名字长短不该改变按钮的大小，
-   所以每个人占一格，副题固定一行，超出省略。 */
-.ledger-people{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:8px;margin:10px 0 4px}
-.ledger-people button{display:flex;flex-direction:column;gap:3px;align-items:flex-start;justify-content:flex-start;min-height:52px;background:#f6f1df;border:1px solid #cdc6a8;border-radius:8px;padding:8px 10px;cursor:pointer;font:inherit;color:#3d3826;overflow:hidden}
+/* 人物/物品选择器：左图右文的「账页」行样式。
+   账本是索引，不该像册页那样摊大画；每行一张小账页，图在左、名字与统计在右，整齐也密实。
+   固定卡高 78px，名字不论一两行整张卡都齐平——这正是要修的「大的大小的小」。 */
+.ledger-people{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:9px;margin:12px 0 4px}
+.ledger-people button{display:grid;grid-template-columns:auto 1fr;grid-template-rows:1fr 1fr;column-gap:11px;
+  align-items:center;height:78px;background:#f6f1df;border:1px solid #cdc6a8;border-radius:9px;
+  padding:9px 11px;cursor:pointer;font:inherit;color:#3d3826;overflow:hidden;text-align:left}
 .ledger-people button:hover{background:#efe8cf}
 .ledger-people button.active{background:#506b58;border-color:#506b58;color:#fdf8e6}
 .ledger-people button.active small{color:#dfe6d3}
-.ledger-people strong{font-family:"Songti SC",serif;font-size:13px;font-weight:500;letter-spacing:.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
-.ledger-people small{font-size:10px;color:#8a8266;letter-spacing:.2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
-/* 物品名偶尔很长，允许占两行，行数固定后高度仍然一致。 */
-.ledger-people button strong{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.35;min-height:35px}
+.ledger-people button > .card-thumb.ledger,
+.ledger-people button > .ledger-thumb-empty{grid-row:1 / 3;align-self:center}
+.ledger-people strong{grid-column:2;grid-row:1;font-family:"Songti SC",serif;font-size:14.5px;font-weight:500;
+  letter-spacing:.5px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.ledger-people small{grid-column:2;grid-row:2;font-size:10.5px;color:#8a8266;letter-spacing:.2px;line-height:1.4;
+  display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+/* 物品名偶尔很长，名字放两行；行数固定后整张卡高度仍然一致。 */
+.ledger-people strong.long-name{-webkit-line-clamp:2}
 .ledger-summary{margin:8px 2px;font-size:12px;color:#6b6450;line-height:1.8}
 .ledger-book{margin:14px 0}
 .ledger-row{display:flex;gap:10px;align-items:flex-start;border:1px solid #cdc6a8;border-radius:8px;background:linear-gradient(165deg,#faf5e4,#f1ead2);padding:10px 12px;margin-bottom:8px}
@@ -245,18 +257,25 @@ dialog.is-atlas .atlas-body{padding:14px 25px 26px}
 
 /* ---- 账簿贴图：账上的人与物都该有脸 ----
    账簿里的图比册页卡片小一号：册页是主角，账簿是索引。
-   统一 56px 方框，保证网格里的按钮仍然一样高。 */
-.card-thumb.ledger{width:56px;height:56px;flex:0 0 56px;border-radius:5px;margin-bottom:5px}
-.card-thumb.ledger .card-art{width:100%;height:100%;object-fit:cover}
-/* 立绘是竖版的：按 contain 缩放时贴着框顶，头才不会被裁掉也不会浮在中间。
-   选择器要比 .card-thumb.ledger .card-art 更具体，否则 object-fit 会被它盖回 cover。 */
+   竖版立绘按 contain 收在竖框里（不浮在中间也不裁脸），方形器物图按 cover 铺满，
+   两者都收进一个 54×66 的「账页角」小框。 */
+.card-thumb.ledger{position:static;width:54px;height:66px;flex:0 0 54px;border-radius:6px;margin:0;overflow:hidden}
+.card-thumb.ledger .card-art{width:100%;height:100%;object-fit:cover;border-radius:6px}
+/* 立绘竖版：contain 收在框内、贴着框顶，头完整。 */
 .card-thumb .card-art.fit-contain{object-fit:contain;object-position:top center}
-.ledger-people button{align-items:center;text-align:center;padding:8px 6px}
-.ledger-people button strong{text-align:center}
-.ledger-people button small{text-align:center}
-/* 没有立绘或还没入账的人：留一个同尺寸的空位，网格才不会参差。 */
-.ledger-thumb-empty{display:block;width:56px;height:56px;flex:0 0 56px;border-radius:5px;margin-bottom:5px;background:linear-gradient(160deg,#e8e2cd,#ddd5ba);border:1px dashed #c4bb9c}
-.ledger-people button.active .ledger-thumb-empty{background:rgba(253,248,230,.18);border-color:rgba(253,248,230,.45)}
+/* 没画出来的账页：用姓氏/物名首字落一方朱印式花押，
+   比虚线空框体面——像账本上留的暗记，而不是没加载完。 */
+.ledger-thumb-empty{display:flex;align-items:center;justify-content:center;width:54px;height:66px;flex:0 0 54px;border-radius:6px;
+  background:linear-gradient(160deg,#efe9d6,#e6dfca);border:1px solid #d3cab0;color:#9a8f6f;
+  font-family:"Songti SC",serif;font-size:24px;font-weight:500;line-height:1}
+.ledger-thumb-empty .mono{display:block}
+.ledger-people button.active .ledger-thumb-empty{background:rgba(253,248,230,.16);border-color:rgba(253,248,230,.4);color:#f3ecd6}
+/* 按类别给花押一点颜色：银两金、衣物绯、物件赭、人朱、人情青。 */
+.ledger-people button.cat-money .ledger-thumb-empty{color:#9a7b2e;border-color:#d8c79a}
+.ledger-people button.cat-clothing .ledger-thumb-empty{color:#9a5a52;border-color:#d8bdb6}
+.ledger-people button.cat-item .ledger-thumb-empty{color:#7a6a44;border-color:#cfc4a2}
+.ledger-people button.cat-person .ledger-thumb-empty{color:#9a3b2e;border-color:#d8b3a8}
+.ledger-people button.cat-favor .ledger-thumb-empty{color:#4f7a5e;border-color:#bcd0bf}
 /* 流水行里的货品图：贴在行首，像账本上贴的一张小样。 */
 .ledger-row .card-thumb.ledger{width:48px;height:48px;flex:0 0 48px;margin-bottom:0;border-radius:4px}
 .ledger-row .ledger-thumb-empty{width:48px;height:48px;flex:0 0 48px;margin-bottom:0}
