@@ -180,6 +180,38 @@ dialog{border:1px solid #d0d8c2;border-radius:10px;width:min(600px,calc(100% - 3
 .ledger-switch button[aria-selected='true']{background:#506b58;border-color:#506b58;color:#fdf8e6}
 .ledger-art{display:block;width:200px;height:200px;object-fit:cover;border:1px solid #c2b48f;border-radius:6px;margin:10px auto 2px;box-shadow:0 2px 8px rgba(60,50,30,.18)}
 
+/* ---- 账簿贴图：账上的人与物都该有脸 ----
+   账簿里的图比册页卡片小一号：册页是主角，账簿是索引。
+   统一 56px 方框，保证网格里的按钮仍然一样高。 */
+.card-thumb.ledger{width:56px;height:56px;flex:0 0 56px;border-radius:5px;margin-bottom:5px}
+.card-thumb.ledger .card-art{width:100%;height:100%;object-fit:cover}
+/* 立绘是竖版的：按 contain 缩放时贴着框顶，头才不会被裁掉也不会浮在中间。
+   选择器要比 .card-thumb.ledger .card-art 更具体，否则 object-fit 会被它盖回 cover。 */
+.card-thumb .card-art.fit-contain{object-fit:contain;object-position:top center}
+.ledger-people button{align-items:center;text-align:center;padding:8px 6px}
+.ledger-people button strong{text-align:center}
+.ledger-people button small{text-align:center}
+/* 没有立绘或还没入账的人：留一个同尺寸的空位，网格才不会参差。 */
+.ledger-thumb-empty{display:block;width:56px;height:56px;flex:0 0 56px;border-radius:5px;margin-bottom:5px;background:linear-gradient(160deg,#e8e2cd,#ddd5ba);border:1px dashed #c4bb9c}
+.ledger-people button.active .ledger-thumb-empty{background:rgba(253,248,230,.18);border-color:rgba(253,248,230,.45)}
+/* 流水行里的货品图：贴在行首，像账本上贴的一张小样。 */
+.ledger-row .card-thumb.ledger{width:48px;height:48px;flex:0 0 48px;margin-bottom:0;border-radius:4px}
+.ledger-row .ledger-thumb-empty{width:48px;height:48px;flex:0 0 48px;margin-bottom:0}
+
+/* 流水行要等高：情形文字长短不一（16～46 字），行高原本跟着字走，
+   实测出现过 70 / 95 / 117 三种高度，列表看上去参差不齐。
+   做法是给情形一个**固定**的两行高（不是 min-height——min-height 只会把短文
+   撑高，长文仍按自然高度溢出），行本身也用固定高度，两条路径都对齐。 */
+.ledger-row{height:88px}
+.ledger-row.locked{height:56px}
+.ledger-circ{margin:5px 0 0;font-size:11px;line-height:1.75;color:#7a7360;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;height:2lh}
+@supports not (-webkit-line-clamp:2){
+  /* 不支持 line-clamp 的浏览器：给一个等价的固定高度 */
+  .ledger-circ{height:calc(2 * 1.75em);display:block}
+}
+
 /* ---- 获得弹窗：像捡道具一样，读到「交到手上」的节点时展示货品 ---- */
 .pickup-overlay{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;background:rgba(30,26,18,.55);backdrop-filter:blur(2px);animation:pickup-in .28s ease-out}
 @keyframes pickup-in{from{opacity:0}to{opacity:1}}

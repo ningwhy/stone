@@ -107,3 +107,37 @@ export function ledgerItemTraces(): ItemTrace[] {
   }
   return order.map(key => byKey.get(key)!);
 }
+
+/** 账上人物的手绘立绘：账簿里的人也要有脸。
+ *  键是 art 资产名（`<actor>-portrait`）；只有画过立绘的人才有，
+ *  甄家娘子、拐子、冯渊、冯家、王子腾等未出场者留空。 */
+const LEDGER_PORTRAITS: Record<string, string> = {
+  '贾雨村': 'yucun-portrait', '甄士隐': 'shiyin-portrait', '封肃': 'fengsu-portrait',
+  '林如海': 'ruhai-portrait', '贾政': 'zheng-portrait', '黛玉': 'daiyu-portrait',
+  '熙凤': 'feng-portrait', '贾母': 'grandmother-portrait', '宝玉': 'baoyu-portrait',
+  '门子': 'menzi-portrait', '薛蟠': 'xuepan-portrait',
+};
+
+/** 一个人在账上有没有立绘；没有就返回 undefined，界面上只留空位。 */
+export function ledgerPortrait(name: string): string | undefined {
+  return LEDGER_PORTRAITS[name];
+}
+
+/** 人物类的账目挂谁的脸。
+ *  账上的人也是被转手的一方：英莲被卖、娇杏被送、鹦哥与袭人被给了出去，
+ *  所以这类账目的货品图就是那个人本身的立绘——账簿里人也得有脸。 */
+const LEDGER_PERSON_ART: Record<string, string> = {
+  'ledger.jiaoxing-sale': 'jiaoxing-portrait',
+  'ledger.grandmother-yingge': 'yingge-portrait',
+  'ledger.grandmother-xiren': 'xiren-portrait',
+  'ledger.yinglian-first-sale': 'yinglian-portrait',
+  'ledger.yinglian-second-sale': 'yinglian-portrait',
+  'ledger.yinglian-taken': 'yinglian-portrait',
+};
+
+/** 一笔账的货品图：器物走 entry.art，人物走被转手那个人的立绘。 */
+export function ledgerEntryArt(entry: LedgerEntry): string | undefined {
+  return entry.art ?? (entry.category === 'person'
+    ? LEDGER_PERSON_ART[entry.id]
+    : undefined);
+}

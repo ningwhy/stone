@@ -12,3 +12,11 @@ __pycache__/
 # Files already tracked stay tracked so past commits keep working; new ones are ignored.
 art/matted/*.png
 art/matted/*.webp
+
+# Rejected/archived generations stay on disk (zero-delete regen keeps every old take),
+# but they are iteration leftovers, not sources of truth: only the current take ships.
+# The current take may be the plain `-01.png` or the `_new.png` a --keep-old regen left,
+# so both stay tracked; only the `_v{n}` archives are ignored.
+art/cards/source/*_v[0-9]*.png
+art/cards/source/_rejected-*/
+art/cards/gen_*.log

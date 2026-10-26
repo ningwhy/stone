@@ -25,7 +25,8 @@
       "mode": "granted",
       "amount": null,
       "circumstance": "与五十两白银同封，一路北上的冬衣。雨村收了银衣，略谢一语。",
-      "source": "当下即命小童进去，速封五十两白银，并两套冬衣。"
+      "source": "当下即命小童进去，速封五十两白银，并两套冬衣。",
+      "art": "/assets/cards/ledger_yucun-winter-clothes.webp"
     },
     {
       "id": "ledger.fengsu-land-money",
@@ -38,7 +39,8 @@
       "mode": "sold",
       "amount": null,
       "circumstance": "士隐托岳丈随分就价置办房地，封肃却半哄半赚，只给了些薄田朽屋。",
-      "source": "拿出来托他随分就价薄置些须房地，为后日衣食之计。那封肃便半哄半赚，些须与他些薄田朽屋。"
+      "source": "拿出来托他随分就价薄置些须房地，为后日衣食之计。那封肃便半哄半赚，些须与他些薄田朽屋。",
+      "art": "/assets/cards/ledger_fengsu-land-money.webp"
     },
     {
       "id": "ledger.shiyin-poor-land",
@@ -51,7 +53,8 @@
       "mode": "sold",
       "amount": null,
       "circumstance": "半哄半赚之下的对价：名为置办，实是敷衍。士隐不惯稼穑，一二年间越发穷了。",
-      "source": "拿出来托他随分就价薄置些须房地，为后日衣食之计。那封肃便半哄半赚，些须与他些薄田朽屋。"
+      "source": "拿出来托他随分就价薄置些须房地，为后日衣食之计。那封肃便半哄半赚，些须与他些薄田朽屋。",
+      "art": "/assets/cards/ledger_shiyin-poor-land.webp"
     },
     {
       "id": "ledger.yucun-fengsu-2liang",
@@ -64,7 +67,8 @@
       "mode": "granted",
       "amount": 2,
       "circumstance": "新任知府路过封家门前，问明士隐遭际后临走所赠，并许诺寻访英莲。",
-      "source": "临走倒送了我二两银子。"
+      "source": "临走倒送了我二两银子。",
+      "art": "/assets/cards/ledger_yucun-fengsu-2liang.webp"
     },
     {
       "id": "ledger.zhen-silver",
@@ -77,7 +81,8 @@
       "mode": "granted",
       "amount": null,
       "circumstance": "答谢甄家娘子，兼报士隐旧日赠银之恩。",
-      "source": "早有雨村遣人送了两封银子，四匹锦缎，答谢甄家娘子，又寄一封密书与封肃，转托问甄家娘子要那娇杏作二房。"
+      "source": "早有雨村遣人送了两封银子，四匹锦缎，答谢甄家娘子，又寄一封密书与封肃，转托问甄家娘子要那娇杏作二房。",
+      "art": "/assets/cards/ledger_zhen-silver.webp"
     },
     {
       "id": "ledger.zhen-brocade",
@@ -90,7 +95,8 @@
       "mode": "granted",
       "amount": null,
       "circumstance": "与两封银子同遣人送去，答谢甄家。",
-      "source": "早有雨村遣人送了两封银子，四匹锦缎，答谢甄家娘子，又寄一封密书与封肃，转托问甄家娘子要那娇杏作二房。"
+      "source": "早有雨村遣人送了两封银子，四匹锦缎，答谢甄家娘子，又寄一封密书与封肃，转托问甄家娘子要那娇杏作二房。",
+      "art": "/assets/cards/ledger_zhen-brocade.webp"
     },
     {
       "id": "ledger.fengsu-secret-letter",
@@ -130,7 +136,8 @@
       "mode": "sold",
       "amount": 100,
       "circumstance": "娶娇杏作二房所封的聘资（按一金折一两银的通行记法计作百两）。",
-      "source": "雨村欢喜，自不必说，乃封百金赠封肃，外谢甄家娘子许多物事，令其好生养赡，以待寻访女儿下落。"
+      "source": "雨村欢喜，自不必说，乃封百金赠封肃，外谢甄家娘子许多物事，令其好生养赡，以待寻访女儿下落。",
+      "art": "/assets/cards/ledger_fengsu-baijin.webp"
     },
     {
       "id": "ledger.zhen-thanks-goods",
@@ -143,7 +150,8 @@
       "mode": "granted",
       "amount": null,
       "circumstance": "外谢甄家娘子，令其好生养赡，以待寻访英莲下落。",
-      "source": "雨村欢喜，自不必说，乃封百金赠封肃，外谢甄家娘子许多物事，令其好生养赡，以待寻访女儿下落。"
+      "source": "雨村欢喜，自不必说，乃封百金赠封肃，外谢甄家娘子许多物事，令其好生养赡，以待寻访女儿下落。",
+      "art": "/assets/cards/ledger_zhen-thanks-goods.webp"
     },
     {
       "id": "ledger.ruhai-recommendation",
@@ -156,7 +164,8 @@
       "mode": "granted",
       "amount": null,
       "circumstance": "如海已写好荐书托内兄贾政协助雨村起复，雨村携书进京。",
-      "source": "我已寫好薦書，托內兄協助，正可酬答先生教女之誼。"
+      "source": "我已寫好薦書，托內兄協助，正可酬答先生教女之誼。",
+      "art": "/assets/cards/ledger_ruhai-recommendation.webp"
     },
     {
       "id": "ledger.zheng-restoration",
@@ -169,7 +178,8 @@
       "mode": "granted",
       "amount": null,
       "circumstance": "贾政看了妹丈之书，竭力内中协助，轻轻谋了复职候缺，不上两月补授应天府。",
-      "source": "因此优待雨村，更又不同，便竭力內中協助，題奏之日，輕輕謀了一個复職候缺，不上兩個月，金陵應天府缺出，便謀補了此缺。"
+      "source": "因此优待雨村，更又不同，便竭力內中協助，題奏之日，輕輕謀了一個复職候缺，不上兩個月，金陵應天府缺出，便謀補了此缺。",
+      "art": "/assets/cards/ledger_zheng-restoration.webp"
     },
     {
       "id": "ledger.xifeng-cloth",
@@ -182,7 +192,8 @@
       "mode": "granted",
       "amount": null,
       "circumstance": "王夫人吩咐拿缎子给黛玉裁衣裳，熙凤说早料着已备下，等太太过目好送来。",
-      "source": "我已預備下了，等太太回去過了目好送來。"
+      "source": "我已預備下了，等太太回去過了目好送來。",
+      "art": "/assets/cards/ledger_xifeng-cloth.webp"
     },
     {
       "id": "ledger.grandmother-yingge",
@@ -249,7 +260,8 @@
       "mode": "sold",
       "amount": null,
       "circumstance": "冯渊相看英莲后兑了银子，约定三日过门——银已付而人未接。",
-      "source": "這拐子先已得了我家的銀子，我家小爺原說第三日方是好日子，再接入門。"
+      "source": "這拐子先已得了我家的銀子，我家小爺原說第三日方是好日子，再接入門。",
+      "art": "/assets/cards/ledger_fengyuan-silver.webp"
     },
     {
       "id": "ledger.yinglian-first-sale",
@@ -301,7 +313,8 @@
       "mode": "paid",
       "amount": null,
       "circumstance": "雨村徇情枉法胡乱断案：薛家出许多烧埋银子与冯家，冯家得了银子也就无甚话说了。",
-      "source": "雨村便徇情枉法，胡亂判斷了此案。馮家得了許多燒埋銀子，也就無甚話說了。"
+      "source": "雨村便徇情枉法，胡亂判斷了此案。馮家得了許多燒埋銀子，也就無甚話說了。",
+      "art": "/assets/cards/ledger_feng-burial-silver.webp"
     },
     {
       "id": "ledger.yucun-letters",
@@ -314,7 +327,8 @@
       "mode": "granted",
       "amount": null,
       "circumstance": "断案之后急忙作书与贾政并京营节度使王子腾：令甥之事已完，不必过虑。",
-      "source": "雨村斷了此案，急忙作書信二封，與賈政並京營節度使王子騰，不過說「令甥之事已完，不必過慮」等語。"
+      "source": "雨村斷了此案，急忙作書信二封，與賈政並京營節度使王子騰，不過說「令甥之事已完，不必過慮」等語。",
+      "art": "/assets/cards/ledger_yucun-letters.webp"
     }
   ]
 }

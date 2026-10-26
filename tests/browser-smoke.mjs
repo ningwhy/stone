@@ -128,14 +128,16 @@ try{
    return Object.fromEntries(Object.entries(out).map(([k,v])=>[k,[...v]]));
  });
  for(const [kind,heights] of Object.entries(faceHeights))assert.equal(heights.length,1,`${kind} cards must share one height, got ${heights.join('/')}`);
- const thumbHeights=await page.locator('.card-thumb').evaluateAll(els=>[...new Set(els.map(e=>Math.round(e.getBoundingClientRect().height)))]);
+ // 册页卡格的缩略图必须统一高度。账簿的贴图尺寸不同（索引图小于主角卡），
+ // 所以断言只取册页画框里的那一种。
+ const thumbHeights=await page.locator('.card-gallery .card-thumb').evaluateAll(els=>[...new Set(els.map(e=>Math.round(e.getBoundingClientRect().height)))]);
  assert.equal(thumbHeights.length,1,'every thumbnail must share one height');
  // 卡图按可见性才加载：册页一次 36 张大图同屏解码会卡死页面。
  // 断言口径是「已挂上 src 的图」——没进视口的卡只有占位，没有 src。
- const loadedPics=await page.locator('.card-art[src]').count();
+ const loadedPics=await page.locator('.card-gallery .card-art[src]').count();
  assert.ok(loadedPics>=1,'the pictures in view must still load');
  assert.ok(loadedPics<36,`the album must not load all 36 pictures at once, got ${loadedPics}`);
- const pendingPics=await page.locator('.card-thumb .card-art-placeholder').count();
+ const pendingPics=await page.locator('.card-gallery .card-thumb .card-art-placeholder').count();
  assert.ok(pendingPics>0,'the pictures outside the view must wait for their turn');
  // 账簿标签：24 笔流转（银两、衣物、物件、人、人情），页签计数与实际入账一致。
  await page.getByRole('tab',{name:/账簿/}).click();
@@ -145,6 +147,33 @@ try{
  assert.ok(await page.locator('.ledger-people button').count()>=8,'the ledger must name everyone with a balance');
  await page.locator('.ledger-people button').filter({hasText:'贾雨村'}).click();
  assert.match(await page.locator('.ledger-summary').textContent(),/贾雨村/);
+ // 账簿也要有贴图：账上的人和物都得有脸，不能只是一行行字。
+ // 人物按钮里画过立绘的人要挂上立绘，画框尺寸统一。
+ const ledgerThumbs=await page.locator('.ledger-people .card-thumb').evaluateAll(els=>[...new Set(els.map(e=>Math.round(e.getBoundingClientRect().height)))]);
+ assert.equal(ledgerThumbs.length,1,`the ledger thumbnails must share one height, got ${ledgerThumbs.join('/')}`);
+ assert.ok(await page.locator('.ledger-people .card-thumb').count()>=6,'the ledger must show portraits for the people who have one');
+ // 已入账的流水行要带货品图，尺寸同样统一。
+ const rowThumbs=await page.locator('.ledger-row .card-thumb').evaluateAll(els=>[...new Set(els.map(e=>Math.round(e.getBoundingClientRect().height)))]);
+ assert.equal(rowThumbs.length,1,`the ledger row thumbnails must share one height, got ${rowThumbs.join('/')}`);
+ assert.ok(await page.locator('.ledger-row .card-thumb').count()>=1,'the unlocked ledger rows must show their goods');
+ // 流水行要等高：情形文字从 16 字到 46 字不等，行高原本跟着字走
+ // （实测过 70/95/117 三种高度），列表看上去参差不齐。
+ const rowHeights=await page.locator('.ledger-row.unlocked').evaluateAll(els=>[...new Set(els.map(e=>Math.round(e.getBoundingClientRect().height)))]);
+ assert.equal(rowHeights.length,1,`the unlocked ledger rows must share one height, got ${rowHeights.join('/')}`);
+ const circHeights=await page.locator('.ledger-circ').evaluateAll(els=>[...new Set(els.map(e=>Math.round(e.getBoundingClientRect().height)))]);
+ assert.equal(circHeights.length,1,`the circumstances must share one height, got ${circHeights.join('/')}`);
+ // 每一笔已入账的账目都要有货品图，不能留空位。
+ // 判据看行首有没有画框（有框即已配图），不看 img：贴图按可见性才加载，
+ // 视口外的行只有占位符、还没有 img 节点，用 img 判会把懒加载误判成缺图。
+ const unlockedRows=await page.locator('.ledger-row.unlocked').count();
+ const rowsWithArt=await page.locator('.ledger-row.unlocked:has(.card-thumb)').count();
+ assert.equal(rowsWithArt,unlockedRows,`every unlocked transfer needs its goods picture, ${unlockedRows-rowsWithArt} rows are blank`);
+ // 贴图要真的能加载出来（不只是在 DOM 里挂了标签）。
+ // 得先把流水行滚进视口：贴图按可见性才加载，视口外的行只有占位符。
+ await page.locator('.ledger-row.unlocked').first().scrollIntoViewIfNeeded();
+ await page.waitForTimeout(600);
+ const loadedGoods=await page.locator('.ledger-row .card-art[src]').count();
+ assert.ok(loadedGoods>=1,'the ledger pictures in view must load');
  // 按物视角：英莲的三笔（卖冯渊/偷卖薛家/被夺）合成一条流转链。
  await page.getByRole('tab',{name:/按物/}).click();
  await page.locator('.ledger-people button').filter({hasText:'英莲'}).click();

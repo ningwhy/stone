@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { ledgerEntries, unlockedLedger, ledgerFor, ledgerActors, ledgerItemTraces, loadStoredLedger, saveStoredLedger, LEDGER_STORE_KEY } from '../src/ledger.ts';
+import { ledgerEntries, unlockedLedger, ledgerFor, ledgerActors, ledgerItemTraces, ledgerEntryArt, loadStoredLedger, saveStoredLedger, LEDGER_STORE_KEY } from '../src/ledger.ts';
 import { story } from '../src/story.ts';
 
 const nodeIds = new Set(story.map(s => s.id));
@@ -105,9 +105,16 @@ test('按物追踪：括注不拆链，单笔物品也有完整去向', () => {
   assert.equal(silver!.entries[0].to, '贾雨村');
 });
 
-test('货品图只挂在有信物图的账上，路径指向已存在的卡图', () => {
-  const withArt = ledgerEntries.filter(e => e.art);
-  assert.equal(withArt.length, 4, '护官符、密书、花帐、银两四件挂图');
-  for (const e of withArt) assert.match(e.art!, /^\/assets\/cards\/.+\.webp$/);
-  for (const e of withArt) assert.ok(e.source, '挂图的账必须同时有原文引文');
+test('每一笔账都挂着货品图，路径指向已存在的贴图', () => {
+  // 账簿是索引，但索引也该有脸：每一笔账都要配一张贴图，不能只有四件信物有。
+  // 器物账挂器物图，人物账（人被转手）挂那个人的立绘，所以用 ledgerEntryArt 判定。
+  const missing = ledgerEntries.filter(e => !ledgerEntryArt(e));
+  assert.equal(missing.length, 0,
+    `每一笔账都要有贴图，缺 ${missing.length} 笔：${missing.map(e => e.id).join(', ')}`);
+  for (const e of ledgerEntries) {
+    const art = ledgerEntryArt(e)!;
+    if (e.art) assert.match(e.art, /^\/assets\/cards\/.+\.webp$/);
+    else assert.match(art, /^[a-z0-9-]+-portrait$/, `${e.id} must hang a portrait`);
+    assert.ok(e.source, '挂图的账必须同时有原文引文');
+  }
 });

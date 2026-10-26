@@ -15,28 +15,32 @@ import { emotionOf } from './emotion.ts';
 import { audio } from './audio.ts';
 import { cards, cardsByBook, loadStored, saveStored, sceneIndex, bondCards, tokenCards, unlockedCards } from './collection.ts';
 import type { CardDef } from './collection.ts';
-import { ledgerEntries, loadStoredLedger, saveStoredLedger, unlockedLedger, ledgerActors, ledgerFor, ledgerItemTraces, modeNames, categoryNames } from './ledger.ts';
+import { ledgerEntries, loadStoredLedger, saveStoredLedger, unlockedLedger, ledgerActors, ledgerFor, ledgerItemTraces, ledgerPortrait, ledgerEntryArt, modeNames, categoryNames } from './ledger.ts';
 import type { LedgerEntry } from './ledger.ts';
+import { artImage } from './art.ts';
 
 type Modal = 'history'|'settings'|'source'|'atlas'|'cast'|ActorId|null;
 function LedgerRow({entry,got,label}:{entry:LedgerEntry;got:boolean;label:string}) {
   const seal=bookNames[entry.book]??`第${entry.book}回`;
+  // 器物账挂器物图，人物账挂那个被转手的人的立绘——账簿里人也得有脸。
+  const art=ledgerEntryArt(entry);
   return <article className={`ledger-row mode-${entry.mode} ${got?'unlocked':'locked'}`} aria-label={got?label:'未入账的一笔'}>
     {got?<>
       <span className={`ledger-mode ${entry.mode}`}>{modeNames[entry.mode]}</span>
+      {art?<CardArt src={entry.art??artImage(art)} alt={`${entry.what}的货品图`} size="ledger" fit={entry.category==='person'?'contain':'cover'}/>:<span className="ledger-thumb-empty" aria-hidden="true"/>}
       <div className="ledger-main">
         <strong>{entry.what}</strong>
         <small className="ledger-flow">{label}{entry.amount!=null?` · ${entry.amount} 两`:''}</small>
-        <p className="ledger-circ">{entry.circumstance}</p>
+        <p className="ledger-circ" title={entry.circumstance}>{entry.circumstance}</p>
       </div>
       <span className="card-seal">{seal}</span>
-    </>:<><span className="ledger-mode muted">？</span><div className="ledger-main"><strong>？？？</strong><small>读到这一笔的剧情后入账</small></div></>}
+    </>:<><span className="ledger-mode muted">？</span><span className="ledger-thumb-empty" aria-hidden="true"/><div className="ledger-main"><strong>？？？</strong><small>读到这一笔的剧情后入账</small></div></>}
   </article>;
 }
 /** 册页的统一卡格：画框缩略图 + 卡面 + 落款，四种卡共用一个骨架，
  * 解锁与否只换内容不换尺寸——列表不再「大的大小的小」。
  * 缩略图按可见性才加载：册页一次 36 张大图同屏解码会把页面卡死。 */
-function CardArt({src,alt}:{src:string;alt:string}) {
+function CardArt({src,alt,size='card',fit='cover'}:{src:string;alt:string;size?:'card'|'ledger';fit?:'cover'|'contain'}) {
   const ref=useRef<HTMLImageElement>(null);
   const [visible,setVisible]=useState(false);
   const [loaded,setLoaded]=useState(false);
@@ -52,8 +56,8 @@ function CardArt({src,alt}:{src:string;alt:string}) {
     observer.observe(node);
     return()=>observer.disconnect();
   },[]);
-  return <span className="card-thumb" ref={ref}>
-    {visible?<img className={`card-art ${loaded?'is-loaded':''}`} src={src} alt={alt} decoding="async" onLoad={()=>setLoaded(true)}/>:<span className="card-art-placeholder" aria-hidden="true"/>}
+  return <span className={`card-thumb ${size}`} ref={ref}>
+    {visible?<img className={`card-art ${loaded?'is-loaded':''} ${fit==='contain'?'fit-contain':''}`} src={src} alt={alt} decoding="async" onLoad={()=>setLoaded(true)}/>:<span className="card-art-placeholder" aria-hidden="true"/>}
   </span>;
 }
 
@@ -455,7 +459,11 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           <div className="ledger-people" role="listbox" aria-label="有账目的人物">
             {ledgerPeople.map(p=>{
               const n=p.got.length+p.given.length;
+              const portrait=ledgerPortrait(p.name);
               return <button key={p.name} role="option" aria-selected={ledgerPerson===p.name} className={ledgerPerson===p.name?'active':''} onClick={()=>setLedgerPerson(ledgerPerson===p.name?null:p.name)}>
+                {/* 立绘是竖版的（宽高比 0.34～0.83），方形框里若用 cover 会把脸裁掉，
+                    所以按 contain 缩放并贴着框顶，好让头完整露出来。 */}
+                {portrait?<CardArt src={artImage(portrait)} alt={`${p.name}的立绘`} size="ledger" fit="contain"/>:<span className="ledger-thumb-empty" aria-hidden="true"/>}
                 <strong>{p.name}</strong>
                 <small>{n} 笔{p.net!==0?` · ${p.net>0?'赚':'花'} ${Math.abs(p.net)} 两`:''}</small>
               </button>;
@@ -477,7 +485,14 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           <div className="ledger-people" role="listbox" aria-label="账上的物品">
             {ledgerItems.map(t=>{
               const got=t.entries.filter(e=>ledgerUnlocked.has(e.id)).length;
+              // 物品贴图取这条流转链上已入账那一笔的货品图；未入账时只留空位，
+              // 不提前泄露这张画对应的是什么东西。
+              // 人被转手也算「物」，挂的是那个被转手的人的立绘。
+              const hit=t.entries.find(e=>ledgerUnlocked.has(e.id)&&ledgerEntryArt(e));
+              const art=hit?ledgerEntryArt(hit):undefined;
+              const src=hit?(hit.art??artImage(art!)):undefined;
               return <button key={t.key} role="option" aria-selected={ledgerItem===t.key} className={ledgerItem===t.key?'active':''} onClick={()=>setLedgerItem(ledgerItem===t.key?null:t.key)}>
+                {src?<CardArt src={src} alt={`${t.label}的货品图`} size="ledger" fit={hit?.category==='person'?'contain':'cover'}/>:<span className="ledger-thumb-empty" aria-hidden="true"/>}
                 <strong>{t.label}</strong>
                 <small>{categoryNames[t.category]} · {got}/{t.entries.length} 笔</small>
               </button>;
@@ -486,8 +501,9 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           {itemBook&&<section className="ledger-book">
             <h3 className="card-book-title">{itemBook.label}的流转链 · 共 {itemBook.entries.length} 笔</h3>
             {itemBook.entries.map(entry=><LedgerRow key={entry.id} entry={entry} got={ledgerUnlocked.has(entry.id)} label={`${entry.from} → ${entry.to}`}/>)}
-            {itemBook.entries.some(e=>e.art&&ledgerUnlocked.has(e.id))&&
-              <img className="ledger-art" src={itemBook.entries.find(e=>e.art&&ledgerUnlocked.has(e.id))!.art} alt={`${itemBook.label}的货品图`} loading="lazy" decoding="async"/>}
+            {(()=>{const hit=itemBook.entries.find(e=>ledgerUnlocked.has(e.id)&&ledgerEntryArt(e));
+              if(!hit)return null;const art=ledgerEntryArt(hit)!;
+              return <img className="ledger-art" src={hit.art??artImage(art)} alt={`${itemBook.label}的货品图`} loading="lazy" decoding="async"/>;})()}
           </section>}
           </>}
         </>}
