@@ -298,7 +298,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
               {tokens.map(card=>{
                 const got=unlocked.has(card.id);
                 return <article key={card.id} className={`card-item token ${got?'unlocked':'locked'}`} aria-label={got?card.name:'未解锁的信物'}>
-                  {got&&card.image&&<img className="card-art" src={card.image} alt={card.name} loading="lazy"/>}
+                  {got&&card.image&&<img className="card-art" src={card.image} alt={card.name}/>}
                   <div className="card-face">
                     {got?<>
                       <strong className="card-name">{card.name}</strong>
@@ -320,7 +320,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
                 const got=unlocked.has(card.id);
                 const bond=card.bond!;
                 return <article key={card.id} className={`card-item bond ${got?'unlocked':'locked'}`} aria-label={got?`${card.name}的归属`:'未解锁的归属卡'}>
-                  {got&&card.image&&<img className="card-art" src={card.image} alt={card.name} loading="lazy"/>}
+                  {got&&card.image&&<img className="card-art" src={card.image} alt={card.name}/>}
                   <div className="card-face">
                     {got?<>
                       <span className={`bond-mode ${bond.mode}`}>{({granted:'赏给',sold:'买卖',taken:'被夺'})[bond.mode]}</span>
@@ -344,7 +344,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
               {list.map(card=>{
                 const got=unlocked.has(card.id);
                 return <article key={card.id} className={`card-item ${card.kind} ${got?'unlocked':'locked'}`} aria-label={got?card.name:'未解锁的卡片'}>
-                  {got&&card.image&&<img className="card-art" src={card.image} alt={card.name} loading="lazy"/>}
+                  {got&&card.image&&<img className="card-art" src={card.image} alt={card.name}/>}
                   <div className="card-face">
                     {got?(card.kind==='line'
                       ?<><p className="card-quote">{card.quote}</p><span className="card-seal">{card.attribution}</span></>
