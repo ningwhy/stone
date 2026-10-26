@@ -106,6 +106,14 @@ try{
  const unlockedCount=await page.locator('.card-gallery .card-item.unlocked').count();
  assert.ok(unlockedCount>=1,'reading some nodes must already fill the album');
  assert.match(await page.getByRole('tab',{name:/见闻/}).textContent(),new RegExp(`${unlockedCount}/36`));
+ // 账簿标签：24 笔流转（银两、衣物、物件、人、人情），页签计数与实际入账一致。
+ await page.getByRole('tab',{name:/账簿/}).click();
+ assert.equal(await page.locator('.ledger-book .ledger-row').count(),24,'the ledger must list every transfer');
+ const ledgerShown=Number((await page.getByRole('tab',{name:/账簿/}).textContent()).match(/(\d+)\/24/)[1]);
+ assert.equal(await page.locator('.ledger-book .ledger-row.unlocked').count(),ledgerShown,'the ledger tab count must equal its unlocked rows');
+ assert.ok(await page.locator('.ledger-people button').count()>=8,'the ledger must name everyone with a balance');
+ await page.locator('.ledger-people button').filter({hasText:'贾雨村'}).click();
+ assert.match(await page.locator('.ledger-summary').textContent(),/贾雨村/);
  await page.getByRole('tab',{name:'地图'}).click();assert.equal(await page.locator('.atlas-body article').count(),22);
  await page.keyboard.press('Escape');
 

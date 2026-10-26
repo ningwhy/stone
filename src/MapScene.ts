@@ -177,7 +177,7 @@ export class MapScene extends Phaser.Scene {
     const labels=this.mapData.id==='entry' ? [['flower_gate','垂花门'],['passage_exit','穿堂'],['courtyard_center','贾母院落'],['grandmother_seat','贾母正房']].map(([anchor,text])=>({text,point:this.mapData.anchors[anchor]})) : this.mapData.labels;
     for(const {text,point} of labels) {
       const p=project(point,this.mapData);
-      const label=this.add.text(p.x,p.y+80,text,{fontFamily:'"Songti SC", SimSun, serif',fontSize:'13px',color:'#6c6451',backgroundColor:'#f4eddd',padding:{x:13,y:6}}).setOrigin(.5).setAlpha(.9).setDepth(PLACE_LABEL_DEPTH);this.placeLabels.push(label);
+      const label=this.add.text(p.x,p.y+80,text,{fontFamily:'"Songti SC", SimSun, serif',fontSize:'15px',color:'#332d1d',backgroundColor:'#fdf7e4',padding:{x:13,y:6}}).setOrigin(.5).setAlpha(.97).setShadow(0,1,'rgba(70,60,34,.45)',2,true,true).setDepth(PLACE_LABEL_DEPTH);this.placeLabels.push(label);
     }
     const guide=this.add.graphics().setDepth(-10).setVisible(false); this.routeGuide=guide;
     const route=this.mapData.routes.arrival ?? [];
@@ -246,7 +246,7 @@ export class MapScene extends Phaser.Scene {
       g.lineStyle(1,0xb38c7a,.8);g.lineBetween(-3,-45,3,-45);
       g.fillStyle(0xe8c994);g.fillCircle(12,-68,3);
     }
-    const label=this.add.text(0,16,actor.name,{fontFamily:'"PingFang SC", sans-serif',fontSize:'12px',color:'#475e51',backgroundColor:'#f4efdf',padding:{x:9,y:4}}).setOrigin(.5,0);container.add(label);this.actorLabels.set(id,label);
+    const label=this.add.text(0,16,actor.name,{fontFamily:'"PingFang SC", sans-serif',fontSize:'13px',color:'#1f2e25',backgroundColor:'#fdf8e6',padding:{x:10,y:5}}).setOrigin(.5,0).setShadow(0,1,'rgba(52,64,50,.5)',2,true,true);container.add(label);this.actorLabels.set(id,label);
     container.setSize(75,110).setInteractive(new Phaser.Geom.Rectangle(-38,-85,76,125),Phaser.Geom.Rectangle.Contains);
     container.on('pointerup',(pointer:Phaser.Input.Pointer)=>{if (pointer.event.target instanceof HTMLCanvasElement && !document.querySelector('dialog[open]') && !this.drag?.moved && this.engine.getSnapshot().actors[id].visible){audio.play('sfx-tap');this.onActor(id);}});
     this.actorViews.set(id,container);
@@ -343,7 +343,7 @@ export class MapScene extends Phaser.Scene {
     if(host){
       const sizes=[...this.actorViews].filter(([,v])=>v.visible).map(([id,v])=>(artAssets[id==='sedan'?'sedan-chair':`${id}-chibi`]?.height??85)*v.scaleY*zoom);
       host.dataset.minActorPixels=String(sizes.length?Math.min(...sizes):0);
-      host.dataset.labelPixels=String(Math.min(...[...this.actorLabels].filter(([id,l])=>state.actors[id].visible&&l.visible).map(([id,l])=>12*l.scaleY*this.actorViews.get(id)!.scaleY*zoom)));
+      host.dataset.labelPixels=String(Math.min(...[...this.actorLabels].filter(([id,l])=>state.actors[id].visible&&l.visible).map(([id,l])=>{const size=typeof l.style.fontSize==='number'?l.style.fontSize:parseFloat(String(l.style.fontSize))||13;return size*l.scaleY*this.actorViews.get(id)!.scaleY*zoom;})));
     }
   }
   private drawActionFocus() {

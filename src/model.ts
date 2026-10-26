@@ -94,6 +94,31 @@ export function parseTiledMap(raw: TiledMap): MapData {
 }
 
 /** Cardinal A*: no diagonal corner cutting through walls or the screen. */
+/** Nearest walkable cell to `target` that nobody stands on. Two script anchors
+ *  sometimes name the same floor tile, and two people cannot share one: the
+ *  later arrival steps aside to the closest free tile instead. The search is a
+ *  breadth-first ring over the four walking neighbours, so the pick is the
+ *  shortest detour, and ties fall to the smaller row then column so the result
+ *  is deterministic for both a watched walk and a skipped one. */
+export function nearestFreeCell(map: MapData, target: Point, occupied: Set<string>): Point | null {
+  if (!occupied.has(cellKey(target.col, target.row))) return target;
+  const seen = new Set([cellKey(target.col, target.row)]);
+  let ring: Point[] = [target];
+  while (ring.length) {
+    const next: Point[] = [];
+    for (const point of ring) {
+      for (const [dc, dr] of [[0,-1],[-1,0],[1,0],[0,1]] as const) {
+        const candidate = {col: point.col+dc, row: point.row+dr}, key = cellKey(candidate.col, candidate.row);
+        if (seen.has(key) || !map.walkable.has(key)) continue;
+        if (!occupied.has(key)) return candidate;
+        seen.add(key); next.push(candidate);
+      }
+    }
+    ring = next;
+  }
+  return null;
+}
+
 export function findPath(map: MapData, start: Point, end: Point): Point[] {
   const from = { col: Math.round(start.col), row: Math.round(start.row) };
   const target = cellKey(end.col, end.row), first = cellKey(from.col, from.row);

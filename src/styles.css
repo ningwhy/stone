@@ -133,3 +133,28 @@ dialog{border:1px solid #d0d8c2;border-radius:10px;width:min(600px,calc(100% - 3
 .bond-note{margin:0;font-size:11px;line-height:1.75;color:#7a7360;flex:1;overflow:hidden}
 .card-item.bond .card-seal{right:10px;bottom:9px;background:#6b6a4e;padding:2px 6px}
 .card-item.bond footer small{font-size:9px;color:#a5ac98;line-height:1.5}
+
+/* ---- 账簿：前四回里每一笔「给」——银两、衣物、物件、人、人情。 ---- */
+.ledger-people{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.ledger-people button{display:flex;flex-direction:column;gap:2px;align-items:flex-start;background:#f6f1df;border:1px solid #cdc6a8;border-radius:8px;padding:7px 12px;cursor:pointer;font:inherit;color:#3d3826}
+.ledger-people button:hover{background:#efe8cf}
+.ledger-people button.active{background:#506b58;border-color:#506b58;color:#fdf8e6}
+.ledger-people button.active small{color:#dfe6d3}
+.ledger-people small{font-size:10px;color:#8a8266;letter-spacing:.3px}
+.ledger-summary{margin:8px 2px;font-size:12px;color:#6b6450;line-height:1.8}
+.ledger-book{margin:14px 0}
+.ledger-row{display:flex;gap:10px;align-items:flex-start;border:1px solid #cdc6a8;border-radius:8px;background:linear-gradient(165deg,#faf5e4,#f1ead2);padding:10px 12px;margin-bottom:8px}
+.ledger-row.locked{background:#e9e4d2;border-style:dashed;min-height:52px}
+.ledger-row.locked .ledger-main strong{color:#a8a189;letter-spacing:3px}
+.ledger-row.locked .ledger-main small{color:#b3ac93}
+.ledger-mode{flex:0 0 auto;font-size:10px;letter-spacing:2px;color:#fdf6e3;border-radius:3px;padding:3px 7px;margin-top:2px}
+.ledger-mode.granted{background:#0f6e56}
+.ledger-mode.sold{background:#854f0b}
+.ledger-mode.taken{background:#a32d2d}
+.ledger-mode.paid{background:#5b6b85}
+.ledger-mode.muted{background:#b6ae94}
+.ledger-main{flex:1;min-width:0}
+.ledger-main strong{font-size:13px;color:#3b3524;letter-spacing:.5px}
+.ledger-flow{display:block;font-size:11px;color:#7d6f4d;margin-top:3px}
+.ledger-circ{margin:5px 0 0;font-size:11px;line-height:1.75;color:#7a7360}
+.ledger-row .card-seal{position:static;flex:0 0 auto;align-self:flex-start;margin-top:2px;background:#6b6a4e}

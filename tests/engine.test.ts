@@ -68,3 +68,19 @@ test('a jump backwards keeps the log and the engine reports a reader freeze sepa
  e.pause(false);
  assert.equal(e.getSnapshot().paused,false);
 });
+
+test('两个人不能共占一块地板：剧本把他们排进同一锚点时，后到者让到最近空格',()=>{
+ const e=new StoryEngine(maps());
+ for(let i=0;i<story.length;i++){
+  settle(e);
+  const byCell=new Map<string,string[]>();
+  for(const [id,a] of Object.entries(e.getSnapshot().actors)){
+   if(!a.visible)continue;
+   const k=cellKey(a.col,a.row);
+   if(!byCell.has(k))byCell.set(k,[]);
+   byCell.get(k)!.push(id);
+  }
+  for(const [k,ids] of byCell)assert.equal(ids.length,1,`${e.step.id} stages ${ids.join(' + ')} on tile ${k}`);
+  if(i<story.length-1)e.advance();
+ }
+});

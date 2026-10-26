@@ -1,4 +1,4 @@
-import { cellKey, findPath } from './model.ts';
+import { cellKey, findPath, nearestFreeCell } from './model.ts';
 import type { MapData, Point } from './model.ts';
 import { stagedStory, chapter3Story, cast } from './story.ts';
 import type { ActorId, Action, Move, StoryStep } from './story.ts';
@@ -108,19 +108,49 @@ export class StoryEngine {
     const a=p[p.length-2], b=p[p.length-1];
     this.state.actors[job.actor].direction=(b.col-a.col)-(b.row-a.row)>=0?1:-1;
   }
+  /** The script sometimes stages two people on one anchor tile. Nobody can share
+   *  a floor tile: the first arrival keeps the authored cell and everyone after
+   *  steps to the closest free tile. `jobs` are resolved in authored order, so
+   *  a watched walk and a skipped one land identically. */
+  private resolveDestinations(jobs: Job[]) {
+    const occupied = new Set<string>();
+    for (const [id, actor] of Object.entries(this.state.actors)) {
+      if (!actor.visible || jobs.some(j=>j.actor===id)) continue;
+      occupied.add(cellKey(Math.round(actor.col), Math.round(actor.row)));
+    }
+    for (const job of jobs) {
+      const actor = this.state.actors[job.actor];
+      if (!actor.visible) continue;
+      const dest = job.path.at(-1)!;
+      const free = nearestFreeCell(this.map, dest, occupied) ?? dest;
+      occupied.add(cellKey(free.col, free.row));
+      if (free.col===dest.col && free.row===dest.row) continue;
+      // Replace the final leg with a real walk to the free tile so an animated
+      // arrival and a skipped one end on the same tile without a teleport.
+      const prev = job.path.at(-2)!;
+      const leg = findPath(this.map, prev, free);
+      job.path = [...job.path.slice(0,-1), ...leg.slice(1)];
+    }
+  }
   private execute(action: Action, instant: boolean) {
     if (action.type === 'effect') {if(!instant)this.state.effect={actor:action.actor,kind:action.kind,elapsed:0,duration:action.duration};return;}
     if (action.type === 'roof') {this.state.roofVisible=action.visible; return;}
     if (action.type === 'show') {
       const p = this.anchor(action.at);
       if (!this.map.walkable.has(cellKey(p.col,p.row))) throw new Error(`显示地点不可通行：${action.at}`);
-      Object.assign(this.state.actors[action.actor],p,{visible:true,moving:false});
-      this.faceTheRoom(action.actor,p); return;
+      const occupied = new Set<string>();
+      for (const [id, actor] of Object.entries(this.state.actors)) {
+        if (id!==action.actor && actor.visible) occupied.add(cellKey(actor.col, actor.row));
+      }
+      const spot = nearestFreeCell(this.map, p, occupied) ?? p;
+      Object.assign(this.state.actors[action.actor],spot,{visible:true,moving:false});
+      this.faceTheRoom(action.actor,spot); return;
     }
     if (action.type === 'hide') {this.state.actors[action.actor].visible=false; return;}
     const moves = action.type==='parallel' ? action.moves : [action];
     if (new Set(moves.map(m=>m.actor)).size !== moves.length) throw new Error('同一角色不能同时移动两次');
     const jobs = moves.map(move=>this.makeJob(move));
+    this.resolveDestinations(jobs);
     if (instant) {
       for (const j of jobs) Object.assign(this.state.actors[j.actor], j.path.at(-1), {moving:false});
       for (const j of jobs) { this.legFacing(j); this.faceTheRoom(j.actor, this.state.actors[j.actor]); }

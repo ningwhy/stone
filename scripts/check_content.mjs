@@ -222,5 +222,29 @@ for(const warning of warnings)console.warn(`WARN ${warning}`);
   }
  }
 }
+// 流转账簿：与卡片同一门禁原则——先 WARN 后 FAIL。账面是最不能悄悄腐烂的：
+// 引文必须逐字对底本，转手双方不能是空名，节点必须真实存在。
+{
+ const nodeIds=new Set(story.map(s=>s.id));
+ const seen=new Set();
+ for(const entry of read('design/ledger.json').entries){
+  if(seen.has(entry.id))warnings.push(`ledger: duplicate entry id ${entry.id}`);seen.add(entry.id);
+  if(!['granted','sold','taken','paid'].includes(entry.mode))warnings.push(`ledger: ${entry.id} has unknown mode ${entry.mode}`);
+  if(!['money','clothing','item','person','favor'].includes(entry.category))warnings.push(`ledger: ${entry.id} has unknown category ${entry.category}`);
+  if(!entry.from||!entry.to)warnings.push(`ledger: ${entry.id} has an incomplete transfer`);
+  if(!nodeIds.has(entry.node))warnings.push(`ledger: ${entry.id} references unknown node ${entry.node}`);
+  if(entry.amount!=null&&(typeof entry.amount!=='number'||!Number.isFinite(entry.amount)||entry.amount<=0))warnings.push(`ledger: ${entry.id} has an invalid amount ${entry.amount}`);
+  if(entry.source){
+   const chapter=String(entry.book).padStart(2,'0');
+   const file=resolve(root,`docs/chapter${chapter}-source.txt`);
+   if(!existsSync(file))warnings.push(`ledger: ${entry.id} has no source text for chapter ${entry.book}`);
+   else{
+    const text=readFileSync(file,'utf8').replace(/\s+/g,'');
+    const claim=entry.source.replace(/\s+/g,'');
+    if(!text.includes(claim))warnings.push(`ledger: ${entry.id} quotes text not found in docs/chapter${chapter}-source.txt`);
+   }
+  }
+ }
+}
 if(errors.length){for(const error of errors)console.error(`ERROR ${error}`);process.exitCode=1;}
 else console.log(`Content passed: ${story.length} nodes, ${chapters.length} sections, ${maps.size} maps, ${Object.keys(cast).length-1} humans, ${Object.keys(manifest).length} assets; chapter counts ${JSON.stringify(Object.fromEntries(books))}; ${docFiles.length} documentation files linked; ${evidenceEntries} evidence entries in ${evidenceFiles.length} table(s). Original-text interpretation and visuals still require human review.`);

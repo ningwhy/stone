@@ -14,8 +14,24 @@ import { actionNarration } from './narration.ts';
 import { emotionOf } from './emotion.ts';
 import { audio } from './audio.ts';
 import { cards, cardsByBook, loadStored, saveStored, sceneIndex, bondCards, tokenCards, unlockedCards } from './collection.ts';
+import { ledgerEntries, loadStoredLedger, saveStoredLedger, unlockedLedger, ledgerActors, ledgerFor, modeNames } from './ledger.ts';
+import type { LedgerEntry } from './ledger.ts';
 
 type Modal = 'history'|'settings'|'source'|'atlas'|'cast'|ActorId|null;
+function LedgerRow({entry,got,label}:{entry:LedgerEntry;got:boolean;label:string}) {
+  const seal=bookNames[entry.book]??`第${entry.book}回`;
+  return <article className={`ledger-row mode-${entry.mode} ${got?'unlocked':'locked'}`} aria-label={got?label:'未入账的一笔'}>
+    {got?<>
+      <span className={`ledger-mode ${entry.mode}`}>{modeNames[entry.mode]}</span>
+      <div className="ledger-main">
+        <strong>{entry.what}</strong>
+        <small className="ledger-flow">{label}{entry.amount!=null?` · ${entry.amount} 两`:''}</small>
+        <p className="ledger-circ">{entry.circumstance}</p>
+      </div>
+      <span className="card-seal">{seal}</span>
+    </>:<><span className="ledger-mode muted">？</span><div className="ledger-main"><strong>？？？</strong><small>读到这一笔的剧情后入账</small></div></>}
+  </article>;
+}
 function Icon({name}: {name:string}) {
   const shapes:Record<string,string>={
     map:'M3 5 9 3l6 2 6-2v16l-6 2-6-2-6 2V5Zm6-2v16m6-14v16',
@@ -81,13 +97,20 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   const [savedLabel,setSavedLabel]=useState('');
   // 册页（收集）是引擎的旁挂：解锁只从 readLog 推导，另外单独存一份
   // 「我在这部书里见过什么」——换存档重读时收集记录仍在。
-  const [atlasTab,setAtlasTab]=useState<'maps'|'cards'>('maps');
+  const [atlasTab,setAtlasTab]=useState<'maps'|'cards'|'ledger'>('maps');
   const sceneIdx=useMemo(()=>sceneIndex(engine.steps),[engine]);
   const storedCards=useMemo(()=>loadStored(),[]);
   const unlocked=useMemo(()=>unlockedCards(state.readLog??[],sceneIdx,storedCards),[state.readLog,sceneIdx,storedCards]);
   const tokens=useMemo(()=>tokenCards(),[]);
   const bonds=useMemo(()=>bondCards(),[]);
   useEffect(()=>{saveStored(unlocked);},[unlocked.size]); // 只在收集增长时写盘
+  // 账簿与卡片同源：读到节点即入账，另有自己的「见过的账」存档。
+  const [ledgerPerson,setLedgerPerson]=useState<string|null>(null);
+  const storedLedger=useMemo(()=>loadStoredLedger(),[]);
+  const ledgerUnlocked=useMemo(()=>unlockedLedger(state.readLog??[],storedLedger),[state.readLog,storedLedger]);
+  const ledgerPeople=useMemo(()=>ledgerActors(),[]);
+  const personBook=useMemo(()=>ledgerPerson?ledgerFor(ledgerPerson):null,[ledgerPerson]);
+  useEffect(()=>{saveStoredLedger(ledgerUnlocked);},[ledgerUnlocked.size]);
   const [overview,setOverview]=useState(false),[travel,setTravel]=useState<Travel|null>(null);
   const [loadProgress,setLoadProgress]=useState(0),[loaded,setLoaded]=useState(false),[overlay,setOverlay]=useState(true);
   const [sceneProgress,setSceneProgress]=useState(0),[sceneReady,setSceneReady]=useState(false),[sceneSlow,setSceneSlow]=useState(false);
@@ -286,11 +309,11 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
         <div className="atlas-tabs" role="tablist" aria-label="册页视图">
           <button role="tab" aria-selected={atlasTab==='maps'} onClick={()=>setAtlasTab('maps')}>地图</button>
           <button role="tab" aria-selected={atlasTab==='cards'} onClick={()=>setAtlasTab('cards')}>见闻 · {unlocked.size}/{cards.length}</button>
+          <button role="tab" aria-selected={atlasTab==='ledger'} onClick={()=>setAtlasTab('ledger')}>账簿 · {ledgerUnlocked.size}/{ledgerEntries.length}</button>
         </div>
-        {atlasTab==='maps'?<>
-          {Object.values(engine.maps).map(map=><article key={map.id}><h3>{map.title}</h3><p>{map.labels.length?map.labels.map(l=>l.text).join(' · '):'西角门 · 换轿处 · 垂花门 · 穿堂插屏 · 贾母正房 · 后房门'}</p><small>40×40 格 · {Object.keys(map.anchors).length} 个剧情地点</small></article>)}
+        {atlasTab==='maps'?<>          {Object.values(engine.maps).map(map=><article key={map.id}><h3>{map.title}</h3><p>{map.labels.length?map.labels.map(l=>l.text).join(' · '):'西角门 · 换轿处 · 垂花门 · 穿堂插屏 · 贾母正房 · 后房门'}</p><small>40×40 格 · {Object.keys(map.anchors).length} 个剧情地点</small></article>)}
           <p className="atlas-note">金陵应天府、还愿庙宇、斋戒处为叙述提及，不是本回黛玉实际到访的场景。</p>
-        </>:<>
+        </>:atlasTab==='cards'?<>
           <p className="atlas-note">地志卡随剧情读到即收入；金句卡在读到对应段落时入册；信物只在原文写明「交到手上」那一刻入册。收集的反馈都在这里，阅读时不会弹出打扰。</p>
           {tokens.length>0&&<section className="card-book">
             <h3 className="card-book-title">信物</h3>
@@ -356,6 +379,28 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
               })}
             </div>
           </section>)}
+        </>:<>
+          <p className="atlas-note">银两、衣物、物件、人：凡原文写明的「获得」与「给出」，都在这本账上——谁在赚钱，谁在花钱，什么东西在什么情形下、以什么价钱在谁手里转了一道。读到对应剧情，这一笔才入账。</p>
+          <div className="ledger-people" role="listbox" aria-label="有账目的人物">
+            {ledgerPeople.map(p=>{
+              const n=p.got.length+p.given.length;
+              return <button key={p.name} role="option" aria-selected={ledgerPerson===p.name} className={ledgerPerson===p.name?'active':''} onClick={()=>setLedgerPerson(ledgerPerson===p.name?null:p.name)}>
+                <strong>{p.name}</strong>
+                <small>{n} 笔{p.net!==0?` · ${p.net>0?'赚':'花'} ${Math.abs(p.net)} 两`:''}</small>
+              </button>;
+            })}
+          </div>
+          {personBook?<>
+            <p className="ledger-summary">{personBook.name}：得 {personBook.got.length} 笔 · 出 {personBook.given.length} 笔{personBook.pricedIn>0?` · 入 ${personBook.pricedIn} 两`:''}{personBook.pricedOut>0?` · 支 ${personBook.pricedOut} 两`:''}{personBook.net!==0?` · 净${personBook.net>0?'赚':'花'} ${Math.abs(personBook.net)} 两`:' · 未写价的账不计净额'}</p>
+            <section className="ledger-book"><h3 className="card-book-title">得到</h3>
+              {personBook.got.map(({entry})=><LedgerRow key={entry.id} entry={entry} got={ledgerUnlocked.has(entry.id)} label={`${entry.from} → ${personBook.name}`}/>)}
+            </section>
+            <section className="ledger-book"><h3 className="card-book-title">给出</h3>
+              {personBook.given.map(({entry})=><LedgerRow key={entry.id} entry={entry} got={ledgerUnlocked.has(entry.id)} label={`${personBook.name} → ${entry.to}`}/>)}
+            </section>
+          </>:<section className="ledger-book"><h3 className="card-book-title">全部流转 · 按剧情先后</h3>
+            {ledgerEntries.map(entry=><LedgerRow key={entry.id} entry={entry} got={ledgerUnlocked.has(entry.id)} label={`${entry.from} → ${entry.to}`}/>)}
+          </section>}
         </>}
       </div>}
 
