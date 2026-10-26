@@ -4,7 +4,7 @@
   "name": "荣国府手绘素材",
   "tilewidth": 1100,
   "tileheight": 931,
-  "tilecount": 135,
+  "tilecount": 136,
   "columns": 0,
   "objectalignment": "bottom",
   "tiles": [
@@ -1557,6 +1557,19 @@
     },
     {
       "id": 119,
+      "image": "../public/assets/rongguo/lixiang-hall.png",
+      "imagewidth": 935,
+      "imageheight": 637,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "lixiang-hall"
+        }
+      ]
+    },
+    {
+      "id": 120,
       "image": "../public/assets/rongguo/baoyu-portrait-angry.png",
       "imagewidth": 346,
       "imageheight": 600,
@@ -1569,7 +1582,7 @@
       ]
     },
     {
-      "id": 120,
+      "id": 121,
       "image": "../public/assets/rongguo/baoyu-portrait-joy.png",
       "imagewidth": 346,
       "imageheight": 600,
@@ -1582,7 +1595,7 @@
       ]
     },
     {
-      "id": 121,
+      "id": 122,
       "image": "../public/assets/rongguo/baoyu-portrait-sad.png",
       "imagewidth": 346,
       "imageheight": 600,
@@ -1595,7 +1608,7 @@
       ]
     },
     {
-      "id": 122,
+      "id": 123,
       "image": "../public/assets/rongguo/baoyu-portrait-surprise.png",
       "imagewidth": 346,
       "imageheight": 600,
@@ -1608,7 +1621,7 @@
       ]
     },
     {
-      "id": 123,
+      "id": 124,
       "image": "../public/assets/rongguo/daiyu-portrait-angry.png",
       "imagewidth": 311,
       "imageheight": 720,
@@ -1621,7 +1634,7 @@
       ]
     },
     {
-      "id": 124,
+      "id": 125,
       "image": "../public/assets/rongguo/daiyu-portrait-joy.png",
       "imagewidth": 311,
       "imageheight": 720,
@@ -1634,7 +1647,7 @@
       ]
     },
     {
-      "id": 125,
+      "id": 126,
       "image": "../public/assets/rongguo/daiyu-portrait-sad.png",
       "imagewidth": 311,
       "imageheight": 720,
@@ -1647,7 +1660,7 @@
       ]
     },
     {
-      "id": 126,
+      "id": 127,
       "image": "../public/assets/rongguo/daiyu-portrait-surprise.png",
       "imagewidth": 311,
       "imageheight": 720,
@@ -1660,7 +1673,7 @@
       ]
     },
     {
-      "id": 127,
+      "id": 128,
       "image": "../public/assets/rongguo/feng-portrait-angry.png",
       "imagewidth": 190,
       "imageheight": 600,
@@ -1673,7 +1686,7 @@
       ]
     },
     {
-      "id": 128,
+      "id": 129,
       "image": "../public/assets/rongguo/feng-portrait-joy.png",
       "imagewidth": 190,
       "imageheight": 600,
@@ -1686,7 +1699,7 @@
       ]
     },
     {
-      "id": 129,
+      "id": 130,
       "image": "../public/assets/rongguo/feng-portrait-sad.png",
       "imagewidth": 190,
       "imageheight": 600,
@@ -1699,7 +1712,7 @@
       ]
     },
     {
-      "id": 130,
+      "id": 131,
       "image": "../public/assets/rongguo/feng-portrait-surprise.png",
       "imagewidth": 190,
       "imageheight": 600,
@@ -1712,7 +1725,7 @@
       ]
     },
     {
-      "id": 131,
+      "id": 132,
       "image": "../public/assets/rongguo/grandmother-portrait-angry.png",
       "imagewidth": 296,
       "imageheight": 600,
@@ -1725,7 +1738,7 @@
       ]
     },
     {
-      "id": 132,
+      "id": 133,
       "image": "../public/assets/rongguo/grandmother-portrait-joy.png",
       "imagewidth": 296,
       "imageheight": 600,
@@ -1738,7 +1751,7 @@
       ]
     },
     {
-      "id": 133,
+      "id": 134,
       "image": "../public/assets/rongguo/grandmother-portrait-sad.png",
       "imagewidth": 296,
       "imageheight": 600,
@@ -1751,7 +1764,7 @@
       ]
     },
     {
-      "id": 134,
+      "id": 135,
       "image": "../public/assets/rongguo/grandmother-portrait-surprise.png",
       "imagewidth": 296,
       "imageheight": 600,

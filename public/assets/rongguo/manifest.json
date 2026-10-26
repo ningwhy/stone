@@ -3604,6 +3604,27 @@
    "bodyCompress": null,
    "hash": "b94844816753"
   },
+  "lixiang-hall": {
+   "image": "/assets/rongguo/lixiang-hall.png",
+   "width": 935,
+   "height": 637,
+   "anchor": [
+    319.052,
+    631.461
+   ],
+   "source": "art/source/lixiang-hall_s10226210-01.png",
+   "matte": "art/matted/lixiang-hall_s10226210-sam.png",
+   "crop": [
+    78,
+    249,
+    922,
+    824
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "b5332f6f0883"
+  },
   "baoyu-portrait-angry": {
    "image": "/assets/rongguo/baoyu-portrait-angry.png",
    "width": 346,

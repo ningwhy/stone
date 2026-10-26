@@ -950,5 +950,13 @@
     "faintAlphaRatio": 0.00464,
     "width": 800,
     "height": 482
+  },
+  {
+    "asset": "lixiang-hall",
+    "visiblePixels": 357765,
+    "solidAlpha250Ratio": 0.99382,
+    "faintAlphaRatio": 0.00252,
+    "width": 935,
+    "height": 637
   }
 ]

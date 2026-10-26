@@ -1,2752 +1,2761 @@
 {
- "version": 1,
- "assets": [
-  {
-   "id": "flower-gate",
-   "seed": 10216611,
-   "anchor": [
-    520,
-    852
-   ],
-   "width": 600,
-   "mirror": true,
-   "baseSlope": -0.26,
-   "targetSlope": -0.5,
-   "clearPolygons": [
-    [
-     [
-      434,
-      550
-     ],
-     [
-      543,
-      531
-     ],
-     [
-      543,
-      717
-     ],
-     [
-      437,
-      700
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "courtyard-wall",
-   "seed": 10216612,
-   "anchor": [
-    514,
-    565
-   ],
-   "width": 540,
-   "baseSlope": 0.45,
-   "targetSlope": 0.5
-  },
-  {
-   "id": "garden-tree",
-   "seed": 10216613,
-   "anchor": [
-    514,
-    866
-   ],
-   "width": 290
-  },
-  {
-   "id": "main-hall",
-   "seed": 10216614,
-   "anchor": [
-    655,
-    807
-   ],
-   "width": 1100,
-   "baseSlope": 0.25,
-   "targetSlope": 0.5
-  },
-  {
-   "id": "garden-rock",
-   "seed": 10216615,
-   "anchor": [
-    524,
-    837
-   ],
-   "width": 190
-  },
-  {
-   "id": "daiyu-chibi",
-   "seed": 10216616,
-   "anchor": [
-    391,
-    969
-   ],
-   "height": 118,
-   "bodyCompress": {
-    "split": 410,
-    "factor": 0.55
-   }
-  },
-  {
-   "id": "daiyu-portrait",
-   "seed": 10216617,
-   "anchor": [
-    390,
-    1152
-   ],
-   "height": 720,
-   "clearRectangles": [
-    [
-     0,
-     0,
-     125,
-     1152
-    ]
-   ]
-  },
-  {
-   "id": "baoyu-portrait",
-   "seed": 10222200,
-   "anchor": [
-    390,
-    1023
-   ],
-   "height": 600,
-   "sourceId": "baoyu-portrait-v2"
-  },
-  {
-   "id": "baoyu-chibi",
-   "seed": 10222001,
-   "anchor": [
-    396.5,
-    958
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 363,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "feng-portrait",
-   "seed": 10222002,
-   "anchor": [
-    373.0,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "feng-chibi",
-   "seed": 10222003,
-   "anchor": [
-    391.5,
-    971
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 380,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "grandmother-portrait",
-   "seed": 10222004,
-   "anchor": [
-    423.5,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "grandmother-chibi",
-   "seed": 10222005,
-   "anchor": [
-    378.0,
-    958
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 390,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "wang-portrait",
-   "seed": 10222006,
-   "anchor": [
-    422.5,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "wang-chibi",
-   "seed": 10222007,
-   "anchor": [
-    388.0,
-    962
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 441,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "xing-portrait",
-   "seed": 10222008,
-   "anchor": [
-    407.5,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "xing-chibi",
-   "seed": 10222009,
-   "anchor": [
-    383.5,
-    967
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 430,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "liwan-portrait",
-   "seed": 10222010,
-   "anchor": [
-    382.0,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "liwan-chibi",
-   "seed": 10222011,
-   "anchor": [
-    383.0,
-    957
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 393,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "yingchun-portrait",
-   "seed": 10222012,
-   "anchor": [
-    381.0,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "yingchun-chibi",
-   "seed": 10222013,
-   "anchor": [
-    380.5,
-    957
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 401,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "tanchun-portrait",
-   "seed": 10222014,
-   "anchor": [
-    400.0,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "tanchun-chibi",
-   "seed": 10222015,
-   "anchor": [
-    396.5,
-    962
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 405,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "xichun-portrait",
-   "seed": 10222016,
-   "anchor": [
-    480.0,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "xichun-chibi",
-   "seed": 10222017,
-   "anchor": [
-    387.5,
-    930
-   ],
-   "height": 98,
-   "bodyCompress": {
-    "split": 445,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "xiren-portrait",
-   "seed": 10222018,
-   "anchor": [
-    394.5,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "xiren-chibi",
-   "seed": 10222019,
-   "anchor": [
-    398.5,
-    940
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 437,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "xueyan-portrait",
-   "seed": 10222020,
-   "anchor": [
-    393.0,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "xueyan-chibi",
-   "seed": 10222021,
-   "anchor": [
-    379.0,
-    943
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 411,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "yingge-portrait",
-   "seed": 10222022,
-   "anchor": [
-    382.5,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "yingge-chibi",
-   "seed": 10222023,
-   "anchor": [
-    389.0,
-    960
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 408,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "yucun-portrait",
-   "seed": 10222024,
-   "anchor": [
-    428.5,
-    691
-   ],
-   "height": 600,
-   "clipRect": [
-    0,
-    0,
-    768,
-    691
-   ]
-  },
-  {
-   "id": "yucun-chibi",
-   "seed": 10222025,
-   "anchor": [
-    379.5,
-    944
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 400,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "ruhai-portrait",
-   "seed": 10222026,
-   "anchor": [
-    403.0,
-    698
-   ],
-   "height": 600,
-   "clipRect": [
-    0,
-    0,
-    768,
-    698
-   ]
-  },
-  {
-   "id": "ruhai-chibi",
-   "seed": 10222027,
-   "anchor": [
-    371.0,
-    960
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 398,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "sedan-chair",
-   "seed": "20261025a",
-   "anchor": [
-    781,
-    958
-   ],
-   "width": 230,
-   "matteKind": "paper-key"
-  },
-  {
-   "id": "rongxi-hall",
-   "seed": 10222101,
-   "anchor": [
-    481.28,
-    829.44
-   ],
-   "width": 1100
-  },
-  {
-   "id": "bamboo-gate",
-   "seed": 10222102,
-   "anchor": [
-    481.28,
-    829.44
-   ],
-   "width": 430
-  },
-  {
-   "id": "wood-screen",
-   "seed": 10222103,
-   "anchor": [
-    512.0,
-    788
-   ],
-   "width": 190
-  },
-  {
-   "id": "dining-table",
-   "seed": 10222104,
-   "anchor": [
-    510.0,
-    814
-   ],
-   "width": 230,
-   "restorePolygons": [
-    [
-     [
-      521,
-      477
-     ],
-     [
-      547,
-      478
-     ],
-     [
-      550,
-      485
-     ],
-     [
-      549,
-      495
-     ],
-     [
-      554,
-      505
-     ],
-     [
-      560,
-      518
-     ],
-     [
-      563,
-      533
-     ],
-     [
-      562,
-      548
-     ],
-     [
-      557,
-      560
-     ],
-     [
-      549,
-      568
-     ],
-     [
-      538,
-      572
-     ],
-     [
-      524,
-      570
-     ],
-     [
-      513,
-      563
-     ],
-     [
-      507,
-      550
-     ],
-     [
-      505,
-      535
-     ],
-     [
-      508,
-      520
-     ],
-     [
-      514,
-      508
-     ],
-     [
-      518,
-      498
-     ],
-     [
-      519,
-      487
-     ]
-    ],
-    [
-     [
-      429.6,
-      491.7
-     ],
-     [
-      449,
-      490
-     ],
-     [
-      468.4,
-      491.7
-     ],
-     [
-      476,
-      496
-     ],
-     [
-      475.5,
-      500.8
-     ],
-     [
-      471.1,
-      544
-     ],
-     [
-      463.9,
-      553
-     ],
-     [
-      449,
-      556
-     ],
-     [
-      434.1,
-      553
-     ],
-     [
-      426.9,
-      544
-     ],
-     [
-      422.5,
-      500.8
-     ],
-     [
-      422,
-      496
-     ]
-    ],
-    [
-     [
-      552.6,
-      501.7
-     ],
-     [
-      572,
-      500
-     ],
-     [
-      591.4,
-      501.7
-     ],
-     [
-      599,
-      506
-     ],
-     [
-      598.5,
-      510.8
-     ],
-     [
-      594.1,
-      554
-     ],
-     [
-      586.9,
-      563
-     ],
-     [
-      572,
-      566
-     ],
-     [
-      557.1,
-      563
-     ],
-     [
-      549.9,
-      554
-     ],
-     [
-      545.5,
-      510.8
-     ],
-     [
-      545,
-      506
-     ]
-    ],
-    [
-     [
-      366.3,
-      558.7
-     ],
-     [
-      385,
-      557
-     ],
-     [
-      403.7,
-      558.7
-     ],
-     [
-      411,
-      563
-     ],
-     [
-      410.5,
-      567.8
-     ],
-     [
-      406.3,
-      609
-     ],
-     [
-      399.3,
-      618
-     ],
-     [
-      385,
-      621
-     ],
-     [
-      370.7,
-      618
-     ],
-     [
-      363.7,
-      609
-     ],
-     [
-      359.5,
-      567.8
-     ],
-     [
-      359,
-      563
-     ]
-    ],
-    [
-     [
-      611.3,
-      558.7
-     ],
-     [
-      630,
-      557
-     ],
-     [
-      648.7,
-      558.7
-     ],
-     [
-      656,
-      563
-     ],
-     [
-      655.5,
-      567.8
-     ],
-     [
-      651.3,
-      609
-     ],
-     [
-      644.3,
-      618
-     ],
-     [
-      630,
-      621
-     ],
-     [
-      615.7,
-      618
-     ],
-     [
-      608.7,
-      609
-     ],
-     [
-      604.5,
-      567.8
-     ],
-     [
-      604,
-      563
-     ]
-    ],
-    [
-     [
-      425.6,
-      621.7
-     ],
-     [
-      445,
-      620
-     ],
-     [
-      464.4,
-      621.7
-     ],
-     [
-      472,
-      626
-     ],
-     [
-      471.5,
-      630.8
-     ],
-     [
-      467.1,
-      674
-     ],
-     [
-      459.9,
-      683
-     ],
-     [
-      445,
-      686
-     ],
-     [
-      430.1,
-      683
-     ],
-     [
-      422.9,
-      674
-     ],
-     [
-      418.5,
-      630.8
-     ],
-     [
-      418,
-      626
-     ]
-    ],
-    [
-     [
-      575.6,
-      621.7
-     ],
-     [
-      595,
-      620
-     ],
-     [
-      614.4,
-      621.7
-     ],
-     [
-      622,
-      626
-     ],
-     [
-      621.5,
-      630.8
-     ],
-     [
-      617.1,
-      674
-     ],
-     [
-      609.9,
-      683
-     ],
-     [
-      595,
-      686
-     ],
-     [
-      580.1,
-      683
-     ],
-     [
-      572.9,
-      674
-     ],
-     [
-      568.5,
-      630.8
-     ],
-     [
-      568,
-      626
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "canopy-bed",
-   "seed": 10222105,
-   "anchor": [
-    512.0,
-    936
-   ],
-   "width": 300
-  },
-  {
-   "id": "river-boat",
-   "seed": 10222106,
-   "anchor": [
-    531.5,
-    868
-   ],
-   "width": 340
-  },
-  {
-   "id": "tea-table",
-   "seed": 10222107,
-   "anchor": [
-    559.0,
-    773
-   ],
-   "width": 130,
-   "restorePolygons": [
-    [
-     [
-      558,
-      527
-     ],
-     [
-      580,
-      527
-     ],
-     [
-      585,
-      533
-     ],
-     [
-      596,
-      538
-     ],
-     [
-      606,
-      544
-     ],
-     [
-      611,
-      556
-     ],
-     [
-      612,
-      572
-     ],
-     [
-      611,
-      588
-     ],
-     [
-      606,
-      596
-     ],
-     [
-      597,
-      601
-     ],
-     [
-      583,
-      603
-     ],
-     [
-      568,
-      601
-     ],
-     [
-      556,
-      596
-     ],
-     [
-      549,
-      588
-     ],
-     [
-      545,
-      572
-     ],
-     [
-      545,
-      556
-     ],
-     [
-      549,
-      544
-     ],
-     [
-      552,
-      538
-     ]
-    ],
-    [
-     [
-      501.1,
-      562.0
-     ],
-     [
-      522,
-      560
-     ],
-     [
-      542.9,
-      562.0
-     ],
-     [
-      551,
-      567
-     ],
-     [
-      550.4,
-      572.6
-     ],
-     [
-      545.8,
-      632
-     ],
-     [
-      538.0,
-      641
-     ],
-     [
-      522,
-      644
-     ],
-     [
-      506.1,
-      641
-     ],
-     [
-      498.2,
-      632
-     ],
-     [
-      493.6,
-      572.6
-     ],
-     [
-      493,
-      567
-     ]
-    ],
-    [
-     [
-      587.6,
-      616.7
-     ],
-     [
-      602,
-      615
-     ],
-     [
-      616.4,
-      616.7
-     ],
-     [
-      622,
-      621
-     ],
-     [
-      621.6,
-      625.8
-     ],
-     [
-      618.4,
-      640
-     ],
-     [
-      613.0,
-      649
-     ],
-     [
-      602,
-      652
-     ],
-     [
-      591.0,
-      649
-     ],
-     [
-      585.6,
-      640
-     ],
-     [
-      582.4,
-      625.8
-     ],
-     [
-      582,
-      621
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "zhang-portrait",
-   "seed": 10222300,
-   "anchor": [
-    387.5,
-    1022
-   ],
-   "height": 600,
-   "restorePolygons": [
-    [
-     [
-      69,
-      479
-     ],
-     [
-      77,
-      469
-     ],
-     [
-      92,
-      465
-     ],
-     [
-      108,
-      473
-     ],
-     [
-      116,
-      496
-     ],
-     [
-      181,
-      500
-     ],
-     [
-      249,
-      494
-     ],
-     [
-      252,
-      485
-     ],
-     [
-      266,
-      483
-     ],
-     [
-      278,
-      489
-     ],
-     [
-      286,
-      520
-     ],
-     [
-      321,
-      612
-     ],
-     [
-      348,
-      666
-     ],
-     [
-      383,
-      727
-     ],
-     [
-      379,
-      735
-     ],
-     [
-      337,
-      730
-     ],
-     [
-      243,
-      718
-     ],
-     [
-      198,
-      724
-     ],
-     [
-      161,
-      644
-     ],
-     [
-      130,
-      597
-     ],
-     [
-      101,
-      548
-     ],
-     [
-      80,
-      508
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "zhang-chibi",
-   "seed": 10222301,
-   "anchor": [
-    408.0,
-    962
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 396,
-    "factor": 0.64
-   },
-   "restorePolygons": [
-    [
-     [
-      385,
-      565
-     ],
-     [
-      429,
-      443
-     ],
-     [
-      440,
-      408
-     ],
-     [
-      476,
-      412
-     ],
-     [
-      528,
-      423
-     ],
-     [
-      556,
-      415
-     ],
-     [
-      561,
-      408
-     ],
-     [
-      569,
-      402
-     ],
-     [
-      580,
-      405
-     ],
-     [
-      590,
-      413
-     ],
-     [
-      588,
-      421
-     ],
-     [
-      559,
-      450
-     ],
-     [
-      521,
-      568
-     ],
-     [
-      478,
-      574
-     ],
-     [
-      422,
-      565
-     ],
-     [
-      400,
-      571
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "leng-portrait",
-   "seed": 10222302,
-   "anchor": [
-    406.5,
-    1022
-   ],
-   "height": 600,
-   "restorePolygons": [
-    [
-     [
-      350,
-      809
-     ],
-     [
-      414,
-      739
-     ],
-     [
-      544,
-      624
-     ],
-     [
-      554,
-      630
-     ],
-     [
-      559,
-      646
-     ],
-     [
-      565,
-      649
-     ],
-     [
-      575,
-      660
-     ],
-     [
-      577,
-      677
-     ],
-     [
-      586,
-      680
-     ],
-     [
-      454,
-      750
-     ],
-     [
-      422,
-      767
-     ],
-     [
-      360,
-      816
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "leng-chibi",
-   "seed": 10222303,
-   "anchor": [
-    368.5,
-    951
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 397,
-    "factor": 0.64
-   },
-   "restorePolygons": [
-    [
-     [
-      335,
-      656
-     ],
-     [
-      374,
-      602
-     ],
-     [
-      422,
-      509
-     ],
-     [
-      433,
-      516
-     ],
-     [
-      439,
-      517
-     ],
-     [
-      446,
-      529
-     ],
-     [
-      454,
-      528
-     ],
-     [
-      464,
-      539
-     ],
-     [
-      466,
-      548
-     ],
-     [
-      475,
-      552
-     ],
-     [
-      477,
-      561
-     ],
-     [
-      485,
-      568
-     ],
-     [
-      488,
-      576
-     ],
-     [
-      387,
-      621
-     ],
-     [
-      342,
-      659
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "zheng-portrait",
-   "seed": 10222304,
-   "anchor": [
-    393.5,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "zheng-chibi",
-   "seed": 10222305,
-   "anchor": [
-    411.0,
-    969
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 376,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "guide-portrait",
-   "seed": 10222306,
-   "anchor": [
-    391.0,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "guide-chibi",
-   "seed": 10222307,
-   "anchor": [
-    389.5,
-    959
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 402,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "maid-portrait",
-   "seed": 10222308,
-   "anchor": [
-    397.5,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "maid-chibi",
-   "seed": 10222309,
-   "anchor": [
-    381.0,
-    952
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 423,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "messenger-portrait",
-   "seed": 10222310,
-   "anchor": [
-    437.0,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "messenger-chibi",
-   "seed": 10222311,
-   "anchor": [
-    391.5,
-    966
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 443,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "nurse_wang-portrait",
-   "seed": 10222312,
-   "anchor": [
-    412.0,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "nurse_wang-chibi",
-   "seed": 10222313,
-   "anchor": [
-    373.0,
-    958
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 372,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "nurse_li-portrait",
-   "seed": 10222314,
-   "anchor": [
-    466.0,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "nurse_li-chibi",
-   "seed": 10222315,
-   "anchor": [
-    393.0,
-    970
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 368,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "estate-grandmother",
-   "seed": 10222400,
-   "anchor": [
-    512.5,
-    893
-   ],
-   "width": 800
-  },
-  {
-   "id": "estate-east",
-   "seed": 10222401,
-   "anchor": [
-    513.5,
-    848
-   ],
-   "width": 800
-  },
-  {
-   "id": "estate-wang",
-   "seed": 10222402,
-   "anchor": [
-    509.5,
-    886
-   ],
-   "width": 800
-  },
-  {
-   "id": "estate-feng",
-   "seed": 10222403,
-   "anchor": [
-    505.5,
-    910
-   ],
-   "width": 800
-  },
-  {
-   "id": "estate-rear",
-   "seed": 10222404,
-   "anchor": [
-    506.5,
-    894
-   ],
-   "width": 800
-  },
-  {
-   "id": "estate-bisha",
-   "seed": 10222405,
-   "anchor": [
-    508.0,
-    904
-   ],
-   "width": 800
-  },
-  {
-   "id": "estate-study",
-   "seed": 10222406,
-   "anchor": [
-    512.5,
-    895
-   ],
-   "width": 800
-  },
-  {
-   "id": "shiyin-portrait",
-   "seed": 10230100,
-   "anchor": [
-    354.5,
-    723
-   ],
-   "height": 600,
-   "clipRect": [
-    0,
-    0,
-    768,
-    723
-   ]
-  },
-  {
-   "id": "shiyin-chibi",
-   "seed": 10230101,
-   "anchor": [
-    378.0,
-    956
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 396,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "fengshi-portrait",
-   "seed": 10230102,
-   "anchor": [
-    390.5,
-    720
-   ],
-   "height": 600,
-   "clipRect": [
-    0,
-    0,
-    768,
-    720
-   ]
-  },
-  {
-   "id": "fengshi-chibi",
-   "seed": 10230103,
-   "anchor": [
-    394.0,
-    974
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 406,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "yinglian-portrait",
-   "seed": 10230104,
-   "anchor": [
-    429.5,
-    741
-   ],
-   "height": 600,
-   "clipRect": [
-    0,
-    0,
-    768,
-    741
-   ]
-  },
-  {
-   "id": "yinglian-chibi",
-   "seed": 10230105,
-   "anchor": [
-    386.5,
-    957
-   ],
-   "height": 80,
-   "bodyCompress": {
-    "split": 524,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "jiaoxing-portrait",
-   "seed": 10230106,
-   "anchor": [
-    389.5,
-    727
-   ],
-   "height": 600,
-   "clipRect": [
-    0,
-    0,
-    768,
-    727
-   ]
-  },
-  {
-   "id": "jiaoxing-chibi",
-   "seed": 10230107,
-   "anchor": [
-    390.5,
-    958
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 440,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "fengsu-portrait",
-   "seed": 10230108,
-   "anchor": [
-    381.0,
-    743
-   ],
-   "height": 600,
-   "clipRect": [
-    0,
-    0,
-    768,
-    743
-   ]
-  },
-  {
-   "id": "fengsu-chibi",
-   "seed": 10230109,
-   "anchor": [
-    425.0,
-    940
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 431,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "monk-portrait",
-   "seed": 10230110,
-   "anchor": [
-    440.0,
-    703
-   ],
-   "height": 600,
-   "clipRect": [
-    0,
-    0,
-    768,
-    703
-   ],
-   "restorePolygons": [
-    [
-     [
-      250,
-      279
-     ],
-     [
-      260,
-      275
-     ],
-     [
-      271,
-      283
-     ],
-     [
-      277,
-      299
-     ],
-     [
-      270,
-      306
-     ],
-     [
-      257,
-      305
-     ],
-     [
-      249,
-      294
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "monk-chibi",
-   "seed": 10230111,
-   "anchor": [
-    430.5,
-    959
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 418,
-    "factor": 0.64
-   },
-   "restorePolygons": [
-    [
-     [
-      550,
-      477
-     ],
-     [
-      555,
-      469
-     ],
-     [
-      565,
-      466
-     ],
-     [
-      573,
-      461
-     ],
-     [
-      585,
-      463
-     ],
-     [
-      591,
-      468
-     ],
-     [
-      591,
-      480
-     ],
-     [
-      578,
-      489
-     ],
-     [
-      569,
-      495
-     ],
-     [
-      558,
-      489
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "taoist-portrait",
-   "seed": 10230112,
-   "anchor": [
-    396.5,
-    691
-   ],
-   "height": 600,
-   "clipRect": [
-    0,
-    0,
-    768,
-    691
-   ],
-   "restorePolygons": [
-    [
-     [
-      236,
-      190
-     ],
-     [
-      245,
-      194
-     ],
-     [
-      244,
-      221
-     ],
-     [
-      229,
-      236
-     ],
-     [
-      221,
-      235
-     ],
-     [
-      234,
-      219
-     ]
-    ],
-    [
-     [
-      239,
-      218
-     ],
-     [
-      246,
-      223
-     ],
-     [
-      246,
-      258
-     ],
-     [
-      256,
-      274
-     ],
-     [
-      254,
-      292
-     ],
-     [
-      244,
-      309
-     ],
-     [
-      251,
-      351
-     ],
-     [
-      255,
-      387
-     ],
-     [
-      245,
-      396
-     ],
-     [
-      239,
-      354
-     ],
-     [
-      236,
-      310
-     ],
-     [
-      241,
-      291
-     ],
-     [
-      243,
-      269
-     ]
-    ],
-    [
-     [
-      246,
-      426
-     ],
-     [
-      256,
-      426
-     ],
-     [
-      280,
-      964
-     ],
-     [
-      270,
-      967
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "taoist-chibi",
-   "seed": 10230113,
-   "anchor": [
-    405.5,
-    935
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 428,
-    "factor": 0.64
-   },
-   "restorePolygons": [
-    [
-     [
-      565,
-      303
-     ],
-     [
-      573,
-      304
-     ],
-     [
-      577,
-      311
-     ],
-     [
-      568,
-      324
-     ],
-     [
-      563,
-      346
-     ],
-     [
-      557,
-      376
-     ],
-     [
-      548,
-      400
-     ],
-     [
-      540,
-      496
-     ],
-     [
-      532,
-      496
-     ],
-     [
-      538,
-      398
-     ],
-     [
-      548,
-      374
-     ],
-     [
-      553,
-      343
-     ]
-    ],
-    [
-     [
-      529,
-      529
-     ],
-     [
-      540,
-      531
-     ],
-     [
-      501,
-      904
-     ],
-     [
-      489,
-      906
-     ]
-    ]
-   ],
-   "solidAlphaThreshold": 160
-  },
-  {
-   "id": "kongkong-portrait",
-   "seed": 10230114,
-   "anchor": [
-    388.5,
-    730
-   ],
-   "height": 600,
-   "clipRect": [
-    0,
-    0,
-    768,
-    730
-   ],
-   "restorePolygons": [
-    [
-     [
-      536,
-      498
-     ],
-     [
-      547,
-      498
-     ],
-     [
-      551,
-      505
-     ],
-     [
-      648,
-      510
-     ],
-     [
-      659,
-      497
-     ],
-     [
-      669,
-      497
-     ],
-     [
-      672,
-      502
-     ],
-     [
-      558,
-      695
-     ],
-     [
-      466,
-      698
-     ],
-     [
-      459,
-      692
-     ],
-     [
-      482,
-      608
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "kongkong-chibi",
-   "seed": 10230115,
-   "anchor": [
-    427.5,
-    948
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 460,
-    "factor": 0.64
-   },
-   "restorePolygons": [
-    [
-     [
-      505,
-      483
-     ],
-     [
-      517,
-      483
-     ],
-     [
-      580,
-      492
-     ],
-     [
-      586,
-      477
-     ],
-     [
-      594,
-      476
-     ],
-     [
-      598,
-      481
-     ],
-     [
-      530,
-      600
-     ],
-     [
-      505,
-      610
-     ],
-     [
-      449,
-      605
-     ],
-     [
-      444,
-      600
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "huoqi-portrait",
-   "seed": 10230116,
-   "anchor": [
-    388.0,
-    736
-   ],
-   "height": 600,
-   "clipRect": [
-    0,
-    0,
-    768,
-    736
-   ]
-  },
-  {
-   "id": "huoqi-chibi",
-   "seed": 10230117,
-   "anchor": [
-    413.0,
-    940
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 455,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "oldmonk-portrait",
-   "seed": 10230118,
-   "anchor": [
-    393.0,
-    753
-   ],
-   "height": 600,
-   "clipRect": [
-    0,
-    0,
-    768,
-    753
-   ],
-   "restorePolygons": [
-    [
-     [
-      341,
-      566
-     ],
-     [
-      350,
-      562
-     ],
-     [
-      497,
-      677
-     ],
-     [
-      513,
-      661
-     ],
-     [
-      521,
-      660
-     ],
-     [
-      522,
-      679
-     ],
-     [
-      510,
-      695
-     ],
-     [
-      482,
-      699
-     ],
-     [
-      463,
-      688
-     ],
-     [
-      464,
-      680
-     ],
-     [
-      479,
-      672
-     ],
-     [
-      345,
-      575
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "oldmonk-chibi",
-   "seed": 10230119,
-   "anchor": [
-    356.5,
-    956
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 486,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "estate-zhen",
-   "seed": 10230200,
-   "anchor": [
-    502.0,
-    893
-   ],
-   "width": 800
-  },
-  {
-   "id": "estate-hulu",
-   "seed": 10230201,
-   "anchor": [
-    505.5,
-    909
-   ],
-   "width": 800
-  },
-  {
-   "id": "estate-farm",
-   "seed": 10230202,
-   "anchor": [
-    513.0,
-    871
-   ],
-   "width": 800
-  },
-  {
-   "id": "estate-yamen",
-   "seed": 10230203,
-   "anchor": [
-    513.0,
-    902
-   ],
-   "width": 800
-  },
-  {
-   "id": "estate-zhitong",
-   "seed": 10230204,
-   "anchor": [
-    510.5,
-    846
-   ],
-   "width": 800
-  },
-  {
-   "id": "estate-tavern",
-   "seed": 10230205,
-   "anchor": [
-    519.0,
-    891
-   ],
-   "width": 800
-  },
-  {
-   "id": "estate-lantern",
-   "seed": 10230206,
-   "anchor": [
-    516.0,
-    917
-   ],
-   "width": 800
-  },
-  {
-   "id": "black-oil-gate",
-   "seed": 10230207,
-   "anchor": [
-    529,
-    836
-   ],
-   "width": 450,
-   "mirror": true,
-   "clearPolygons": [
-    [
-     [
-      495,
-      586
-     ],
-     [
-      561,
-      559
-     ],
-     [
-      561,
-      780
-     ],
-     [
-      495,
-      806
-     ]
-    ]
-   ]
-  },
-  {
-   "id": "west-wall-gate",
-   "seed": 10230208,
-   "anchor": [
-    560,
-    805
-   ],
-   "width": 390
-  },
-  {
-   "id": "spirit-stone",
-   "seed": 10230300,
-   "anchor": [
-    512.0,
-    846
-   ],
-   "width": 260
-  },
-  {
-   "id": "crimson-pearl",
-   "seed": 10230301,
-   "anchor": [
-    519.5,
-    914
-   ],
-   "width": 200,
-   "solidAlphaThreshold": 70
-  },
-  {
-   "id": "manor-main-gate",
-   "seed": 10230400,
-   "anchor": [
-    553,
-    834
-   ],
-   "width": 650,
-   "mirror": true,
-   "baseSlope": -0.3,
-   "targetSlope": -0.5
-  },
-  {
-   "id": "estate-ruins",
-   "seed": 10230402,
-   "anchor": [
-    513.0,
-    867
-   ],
-   "width": 800,
-   "sourceId": "estate-ruins-v2"
-  },
-  {
-   "id": "menzi-portrait",
-   "seed": 10242001,
-   "anchor": [
-    384.0,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "menzi-chibi",
-   "seed": 10242002,
-   "anchor": [
-    384.0,
-    1022
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 287,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "plaintiff-portrait",
-   "seed": 10242011,
-   "anchor": [
-    384.0,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "plaintiff-chibi",
-   "seed": 10242012,
-   "anchor": [
-    384.0,
-    1022
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 287,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "xuepan-portrait",
-   "seed": 10242021,
-   "anchor": [
-    384,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "xuepan-chibi",
-   "seed": 10242022,
-   "anchor": [
-    384,
-    1022
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 287,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "xueyima-portrait",
-   "seed": 10242023,
-   "anchor": [
-    384,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "xueyima-chibi",
-   "seed": 10242024,
-   "anchor": [
-    384,
-    1022
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 287,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "baochai-portrait",
-   "seed": 10242025,
-   "anchor": [
-    384,
-    1022
-   ],
-   "height": 600
-  },
-  {
-   "id": "baochai-chibi",
-   "seed": 10242026,
-   "anchor": [
-    384,
-    1022
-   ],
-   "height": 116,
-   "bodyCompress": {
-    "split": 287,
-    "factor": 0.64
-   }
-  },
-  {
-   "id": "square-table",
-   "seed": 10224101,
-   "anchor": [
-    498.5,
-    823
-   ],
-   "width": 165
-  },
-  {
-   "id": "altar-table",
-   "seed": 10224102,
-   "anchor": [
-    480.5,
-    775
-   ],
-   "width": 195
-  },
-  {
-   "id": "writing-desk",
-   "seed": 10224103,
-   "anchor": [
-    468.0,
-    821
-   ],
-   "width": 180
-  },
-  {
-   "id": "official-chair",
-   "seed": 10224104,
-   "anchor": [
-    518.0,
-    901
-   ],
-   "width": 100,
-   "alphaFloor": 128
-  },
-  {
-   "id": "round-stool",
-   "seed": 10224105,
-   "anchor": [
-    496.5,
-    795
-   ],
-   "width": 70,
-   "alphaFloor": 128
-  },
-  {
-   "id": "square-stool",
-   "seed": 10224106,
-   "anchor": [
-    502.0,
-    854
-   ],
-   "width": 70,
-   "alphaFloor": 128
-  },
-  {
-   "id": "cabinet",
-   "seed": 10224107,
-   "anchor": [
-    526.5,
-    870
-   ],
-   "width": 130
-  },
-  {
-   "id": "brazier",
-   "seed": 10224118,
-   "anchor": [
-    497.0,
-    800
-   ],
-   "width": 90
-  },
-  {
-   "id": "vase-stand",
-   "seed": 10224109,
-   "anchor": [
-    507.0,
-    829
-   ],
-   "width": 110,
-   "alphaFloor": 128
-  },
-  {
-   "id": "estate-lixiang",
-   "seed": 10226202,
-   "anchor": [
-    519,
-    877
-   ],
-   "width": 800
-  }
- ],
- "placements": [
-  {
-   "name": "垂花门",
-   "asset": "flower-gate",
-   "col": 13,
-   "row": 25,
-   "depthOffset": -30
-  },
-  {
-   "name": "贾母正房外观",
-   "asset": "main-hall",
-   "col": 19,
-   "row": 9,
-   "visibility": "exterior"
-  },
-  {
-   "name": "东厢房",
-   "asset": "main-hall",
-   "col": 30,
-   "row": 11,
-   "scale": 0.68
-  },
-  {
-   "name": "西厢房",
-   "asset": "main-hall",
-   "col": 9,
-   "row": 12,
-   "scale": 0.62
-  },
-  {
-   "name": "海棠01",
-   "asset": "garden-tree",
-   "col": 9,
-   "row": 27,
-   "scale": 1.1
-  },
-  {
-   "name": "海棠02",
-   "asset": "garden-tree",
-   "col": 7,
-   "row": 22,
-   "scale": 1.2
-  },
-  {
-   "name": "海棠03",
-   "asset": "garden-tree",
-   "col": 8,
-   "row": 17,
-   "scale": 1.3
-  },
-  {
-   "name": "海棠04",
-   "asset": "garden-tree",
-   "col": 16,
-   "row": 10,
-   "scale": 0.85
-  },
-  {
-   "name": "海棠05",
-   "asset": "garden-tree",
-   "col": 28,
-   "row": 19,
-   "scale": 1.1
-  },
-  {
-   "name": "海棠06",
-   "asset": "garden-tree",
-   "col": 30,
-   "row": 7,
-   "scale": 1.2
-  },
-  {
-   "name": "海棠07",
-   "asset": "garden-tree",
-   "col": 26,
-   "row": 20,
-   "scale": 0.8
-  },
-  {
-   "name": "海棠08",
-   "asset": "garden-tree",
-   "col": 16,
-   "row": 21,
-   "scale": 0.85
-  },
-  {
-   "name": "海棠09",
-   "asset": "garden-tree",
-   "col": 5,
-   "row": 30,
-   "scale": 1.25
-  },
-  {
-   "name": "海棠10",
-   "asset": "garden-tree",
-   "col": 33,
-   "row": 16,
-   "scale": 1.3
-  },
-  {
-   "name": "海棠11",
-   "asset": "garden-tree",
-   "col": 8,
-   "row": 8,
-   "scale": 1.2
-  },
-  {
-   "name": "海棠12",
-   "asset": "garden-tree",
-   "col": 24,
-   "row": 3,
-   "scale": 1
-  },
-  {
-   "name": "太湖石01",
-   "asset": "garden-rock",
-   "col": 26,
-   "row": 18,
-   "collision": [
-    26,
-    18,
-    1,
-    1
-   ]
-  },
-  {
-   "name": "太湖石02",
-   "asset": "garden-rock",
-   "col": 10,
-   "row": 27,
-   "scale": 0.8
-  },
-  {
-   "name": "太湖石03",
-   "asset": "garden-rock",
-   "col": 17,
-   "row": 11,
-   "scale": 0.8
-  },
-  {
-   "name": "门西院墙",
-   "asset": "courtyard-wall",
-   "col": 5,
-   "row": 25,
-   "scale": 0.75
-  },
-  {
-   "name": "门东院墙",
-   "asset": "courtyard-wall",
-   "col": 21,
-   "row": 25,
-   "scale": 0.75
-  },
-  {
-   "name": "西墙角门",
-   "asset": "west-wall-gate",
-   "col": 3,
-   "row": 32,
-   "scale": 0.8,
-   "depthOffset": -10
-  }
- ]
+  "version": 1,
+  "assets": [
+    {
+      "id": "flower-gate",
+      "seed": 10216611,
+      "anchor": [
+        520,
+        852
+      ],
+      "width": 600,
+      "mirror": true,
+      "baseSlope": -0.26,
+      "targetSlope": -0.5,
+      "clearPolygons": [
+        [
+          [
+            434,
+            550
+          ],
+          [
+            543,
+            531
+          ],
+          [
+            543,
+            717
+          ],
+          [
+            437,
+            700
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "courtyard-wall",
+      "seed": 10216612,
+      "anchor": [
+        514,
+        565
+      ],
+      "width": 540,
+      "baseSlope": 0.45,
+      "targetSlope": 0.5
+    },
+    {
+      "id": "garden-tree",
+      "seed": 10216613,
+      "anchor": [
+        514,
+        866
+      ],
+      "width": 290
+    },
+    {
+      "id": "main-hall",
+      "seed": 10216614,
+      "anchor": [
+        655,
+        807
+      ],
+      "width": 1100,
+      "baseSlope": 0.25,
+      "targetSlope": 0.5
+    },
+    {
+      "id": "garden-rock",
+      "seed": 10216615,
+      "anchor": [
+        524,
+        837
+      ],
+      "width": 190
+    },
+    {
+      "id": "daiyu-chibi",
+      "seed": 10216616,
+      "anchor": [
+        391,
+        969
+      ],
+      "height": 118,
+      "bodyCompress": {
+        "split": 410,
+        "factor": 0.55
+      }
+    },
+    {
+      "id": "daiyu-portrait",
+      "seed": 10216617,
+      "anchor": [
+        390,
+        1152
+      ],
+      "height": 720,
+      "clearRectangles": [
+        [
+          0,
+          0,
+          125,
+          1152
+        ]
+      ]
+    },
+    {
+      "id": "baoyu-portrait",
+      "seed": 10222200,
+      "anchor": [
+        390,
+        1023
+      ],
+      "height": 600,
+      "sourceId": "baoyu-portrait-v2"
+    },
+    {
+      "id": "baoyu-chibi",
+      "seed": 10222001,
+      "anchor": [
+        396.5,
+        958
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 363,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "feng-portrait",
+      "seed": 10222002,
+      "anchor": [
+        373.0,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "feng-chibi",
+      "seed": 10222003,
+      "anchor": [
+        391.5,
+        971
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 380,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "grandmother-portrait",
+      "seed": 10222004,
+      "anchor": [
+        423.5,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "grandmother-chibi",
+      "seed": 10222005,
+      "anchor": [
+        378.0,
+        958
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 390,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "wang-portrait",
+      "seed": 10222006,
+      "anchor": [
+        422.5,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "wang-chibi",
+      "seed": 10222007,
+      "anchor": [
+        388.0,
+        962
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 441,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "xing-portrait",
+      "seed": 10222008,
+      "anchor": [
+        407.5,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "xing-chibi",
+      "seed": 10222009,
+      "anchor": [
+        383.5,
+        967
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 430,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "liwan-portrait",
+      "seed": 10222010,
+      "anchor": [
+        382.0,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "liwan-chibi",
+      "seed": 10222011,
+      "anchor": [
+        383.0,
+        957
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 393,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "yingchun-portrait",
+      "seed": 10222012,
+      "anchor": [
+        381.0,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "yingchun-chibi",
+      "seed": 10222013,
+      "anchor": [
+        380.5,
+        957
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 401,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "tanchun-portrait",
+      "seed": 10222014,
+      "anchor": [
+        400.0,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "tanchun-chibi",
+      "seed": 10222015,
+      "anchor": [
+        396.5,
+        962
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 405,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "xichun-portrait",
+      "seed": 10222016,
+      "anchor": [
+        480.0,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "xichun-chibi",
+      "seed": 10222017,
+      "anchor": [
+        387.5,
+        930
+      ],
+      "height": 98,
+      "bodyCompress": {
+        "split": 445,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "xiren-portrait",
+      "seed": 10222018,
+      "anchor": [
+        394.5,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "xiren-chibi",
+      "seed": 10222019,
+      "anchor": [
+        398.5,
+        940
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 437,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "xueyan-portrait",
+      "seed": 10222020,
+      "anchor": [
+        393.0,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "xueyan-chibi",
+      "seed": 10222021,
+      "anchor": [
+        379.0,
+        943
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 411,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "yingge-portrait",
+      "seed": 10222022,
+      "anchor": [
+        382.5,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "yingge-chibi",
+      "seed": 10222023,
+      "anchor": [
+        389.0,
+        960
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 408,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "yucun-portrait",
+      "seed": 10222024,
+      "anchor": [
+        428.5,
+        691
+      ],
+      "height": 600,
+      "clipRect": [
+        0,
+        0,
+        768,
+        691
+      ]
+    },
+    {
+      "id": "yucun-chibi",
+      "seed": 10222025,
+      "anchor": [
+        379.5,
+        944
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 400,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "ruhai-portrait",
+      "seed": 10222026,
+      "anchor": [
+        403.0,
+        698
+      ],
+      "height": 600,
+      "clipRect": [
+        0,
+        0,
+        768,
+        698
+      ]
+    },
+    {
+      "id": "ruhai-chibi",
+      "seed": 10222027,
+      "anchor": [
+        371.0,
+        960
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 398,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "sedan-chair",
+      "seed": "20261025a",
+      "anchor": [
+        781,
+        958
+      ],
+      "width": 230,
+      "matteKind": "paper-key"
+    },
+    {
+      "id": "rongxi-hall",
+      "seed": 10222101,
+      "anchor": [
+        481.28,
+        829.44
+      ],
+      "width": 1100
+    },
+    {
+      "id": "bamboo-gate",
+      "seed": 10222102,
+      "anchor": [
+        481.28,
+        829.44
+      ],
+      "width": 430
+    },
+    {
+      "id": "wood-screen",
+      "seed": 10222103,
+      "anchor": [
+        512.0,
+        788
+      ],
+      "width": 190
+    },
+    {
+      "id": "dining-table",
+      "seed": 10222104,
+      "anchor": [
+        510.0,
+        814
+      ],
+      "width": 230,
+      "restorePolygons": [
+        [
+          [
+            521,
+            477
+          ],
+          [
+            547,
+            478
+          ],
+          [
+            550,
+            485
+          ],
+          [
+            549,
+            495
+          ],
+          [
+            554,
+            505
+          ],
+          [
+            560,
+            518
+          ],
+          [
+            563,
+            533
+          ],
+          [
+            562,
+            548
+          ],
+          [
+            557,
+            560
+          ],
+          [
+            549,
+            568
+          ],
+          [
+            538,
+            572
+          ],
+          [
+            524,
+            570
+          ],
+          [
+            513,
+            563
+          ],
+          [
+            507,
+            550
+          ],
+          [
+            505,
+            535
+          ],
+          [
+            508,
+            520
+          ],
+          [
+            514,
+            508
+          ],
+          [
+            518,
+            498
+          ],
+          [
+            519,
+            487
+          ]
+        ],
+        [
+          [
+            429.6,
+            491.7
+          ],
+          [
+            449,
+            490
+          ],
+          [
+            468.4,
+            491.7
+          ],
+          [
+            476,
+            496
+          ],
+          [
+            475.5,
+            500.8
+          ],
+          [
+            471.1,
+            544
+          ],
+          [
+            463.9,
+            553
+          ],
+          [
+            449,
+            556
+          ],
+          [
+            434.1,
+            553
+          ],
+          [
+            426.9,
+            544
+          ],
+          [
+            422.5,
+            500.8
+          ],
+          [
+            422,
+            496
+          ]
+        ],
+        [
+          [
+            552.6,
+            501.7
+          ],
+          [
+            572,
+            500
+          ],
+          [
+            591.4,
+            501.7
+          ],
+          [
+            599,
+            506
+          ],
+          [
+            598.5,
+            510.8
+          ],
+          [
+            594.1,
+            554
+          ],
+          [
+            586.9,
+            563
+          ],
+          [
+            572,
+            566
+          ],
+          [
+            557.1,
+            563
+          ],
+          [
+            549.9,
+            554
+          ],
+          [
+            545.5,
+            510.8
+          ],
+          [
+            545,
+            506
+          ]
+        ],
+        [
+          [
+            366.3,
+            558.7
+          ],
+          [
+            385,
+            557
+          ],
+          [
+            403.7,
+            558.7
+          ],
+          [
+            411,
+            563
+          ],
+          [
+            410.5,
+            567.8
+          ],
+          [
+            406.3,
+            609
+          ],
+          [
+            399.3,
+            618
+          ],
+          [
+            385,
+            621
+          ],
+          [
+            370.7,
+            618
+          ],
+          [
+            363.7,
+            609
+          ],
+          [
+            359.5,
+            567.8
+          ],
+          [
+            359,
+            563
+          ]
+        ],
+        [
+          [
+            611.3,
+            558.7
+          ],
+          [
+            630,
+            557
+          ],
+          [
+            648.7,
+            558.7
+          ],
+          [
+            656,
+            563
+          ],
+          [
+            655.5,
+            567.8
+          ],
+          [
+            651.3,
+            609
+          ],
+          [
+            644.3,
+            618
+          ],
+          [
+            630,
+            621
+          ],
+          [
+            615.7,
+            618
+          ],
+          [
+            608.7,
+            609
+          ],
+          [
+            604.5,
+            567.8
+          ],
+          [
+            604,
+            563
+          ]
+        ],
+        [
+          [
+            425.6,
+            621.7
+          ],
+          [
+            445,
+            620
+          ],
+          [
+            464.4,
+            621.7
+          ],
+          [
+            472,
+            626
+          ],
+          [
+            471.5,
+            630.8
+          ],
+          [
+            467.1,
+            674
+          ],
+          [
+            459.9,
+            683
+          ],
+          [
+            445,
+            686
+          ],
+          [
+            430.1,
+            683
+          ],
+          [
+            422.9,
+            674
+          ],
+          [
+            418.5,
+            630.8
+          ],
+          [
+            418,
+            626
+          ]
+        ],
+        [
+          [
+            575.6,
+            621.7
+          ],
+          [
+            595,
+            620
+          ],
+          [
+            614.4,
+            621.7
+          ],
+          [
+            622,
+            626
+          ],
+          [
+            621.5,
+            630.8
+          ],
+          [
+            617.1,
+            674
+          ],
+          [
+            609.9,
+            683
+          ],
+          [
+            595,
+            686
+          ],
+          [
+            580.1,
+            683
+          ],
+          [
+            572.9,
+            674
+          ],
+          [
+            568.5,
+            630.8
+          ],
+          [
+            568,
+            626
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "canopy-bed",
+      "seed": 10222105,
+      "anchor": [
+        512.0,
+        936
+      ],
+      "width": 300
+    },
+    {
+      "id": "river-boat",
+      "seed": 10222106,
+      "anchor": [
+        531.5,
+        868
+      ],
+      "width": 340
+    },
+    {
+      "id": "tea-table",
+      "seed": 10222107,
+      "anchor": [
+        559.0,
+        773
+      ],
+      "width": 130,
+      "restorePolygons": [
+        [
+          [
+            558,
+            527
+          ],
+          [
+            580,
+            527
+          ],
+          [
+            585,
+            533
+          ],
+          [
+            596,
+            538
+          ],
+          [
+            606,
+            544
+          ],
+          [
+            611,
+            556
+          ],
+          [
+            612,
+            572
+          ],
+          [
+            611,
+            588
+          ],
+          [
+            606,
+            596
+          ],
+          [
+            597,
+            601
+          ],
+          [
+            583,
+            603
+          ],
+          [
+            568,
+            601
+          ],
+          [
+            556,
+            596
+          ],
+          [
+            549,
+            588
+          ],
+          [
+            545,
+            572
+          ],
+          [
+            545,
+            556
+          ],
+          [
+            549,
+            544
+          ],
+          [
+            552,
+            538
+          ]
+        ],
+        [
+          [
+            501.1,
+            562.0
+          ],
+          [
+            522,
+            560
+          ],
+          [
+            542.9,
+            562.0
+          ],
+          [
+            551,
+            567
+          ],
+          [
+            550.4,
+            572.6
+          ],
+          [
+            545.8,
+            632
+          ],
+          [
+            538.0,
+            641
+          ],
+          [
+            522,
+            644
+          ],
+          [
+            506.1,
+            641
+          ],
+          [
+            498.2,
+            632
+          ],
+          [
+            493.6,
+            572.6
+          ],
+          [
+            493,
+            567
+          ]
+        ],
+        [
+          [
+            587.6,
+            616.7
+          ],
+          [
+            602,
+            615
+          ],
+          [
+            616.4,
+            616.7
+          ],
+          [
+            622,
+            621
+          ],
+          [
+            621.6,
+            625.8
+          ],
+          [
+            618.4,
+            640
+          ],
+          [
+            613.0,
+            649
+          ],
+          [
+            602,
+            652
+          ],
+          [
+            591.0,
+            649
+          ],
+          [
+            585.6,
+            640
+          ],
+          [
+            582.4,
+            625.8
+          ],
+          [
+            582,
+            621
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "zhang-portrait",
+      "seed": 10222300,
+      "anchor": [
+        387.5,
+        1022
+      ],
+      "height": 600,
+      "restorePolygons": [
+        [
+          [
+            69,
+            479
+          ],
+          [
+            77,
+            469
+          ],
+          [
+            92,
+            465
+          ],
+          [
+            108,
+            473
+          ],
+          [
+            116,
+            496
+          ],
+          [
+            181,
+            500
+          ],
+          [
+            249,
+            494
+          ],
+          [
+            252,
+            485
+          ],
+          [
+            266,
+            483
+          ],
+          [
+            278,
+            489
+          ],
+          [
+            286,
+            520
+          ],
+          [
+            321,
+            612
+          ],
+          [
+            348,
+            666
+          ],
+          [
+            383,
+            727
+          ],
+          [
+            379,
+            735
+          ],
+          [
+            337,
+            730
+          ],
+          [
+            243,
+            718
+          ],
+          [
+            198,
+            724
+          ],
+          [
+            161,
+            644
+          ],
+          [
+            130,
+            597
+          ],
+          [
+            101,
+            548
+          ],
+          [
+            80,
+            508
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "zhang-chibi",
+      "seed": 10222301,
+      "anchor": [
+        408.0,
+        962
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 396,
+        "factor": 0.64
+      },
+      "restorePolygons": [
+        [
+          [
+            385,
+            565
+          ],
+          [
+            429,
+            443
+          ],
+          [
+            440,
+            408
+          ],
+          [
+            476,
+            412
+          ],
+          [
+            528,
+            423
+          ],
+          [
+            556,
+            415
+          ],
+          [
+            561,
+            408
+          ],
+          [
+            569,
+            402
+          ],
+          [
+            580,
+            405
+          ],
+          [
+            590,
+            413
+          ],
+          [
+            588,
+            421
+          ],
+          [
+            559,
+            450
+          ],
+          [
+            521,
+            568
+          ],
+          [
+            478,
+            574
+          ],
+          [
+            422,
+            565
+          ],
+          [
+            400,
+            571
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "leng-portrait",
+      "seed": 10222302,
+      "anchor": [
+        406.5,
+        1022
+      ],
+      "height": 600,
+      "restorePolygons": [
+        [
+          [
+            350,
+            809
+          ],
+          [
+            414,
+            739
+          ],
+          [
+            544,
+            624
+          ],
+          [
+            554,
+            630
+          ],
+          [
+            559,
+            646
+          ],
+          [
+            565,
+            649
+          ],
+          [
+            575,
+            660
+          ],
+          [
+            577,
+            677
+          ],
+          [
+            586,
+            680
+          ],
+          [
+            454,
+            750
+          ],
+          [
+            422,
+            767
+          ],
+          [
+            360,
+            816
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "leng-chibi",
+      "seed": 10222303,
+      "anchor": [
+        368.5,
+        951
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 397,
+        "factor": 0.64
+      },
+      "restorePolygons": [
+        [
+          [
+            335,
+            656
+          ],
+          [
+            374,
+            602
+          ],
+          [
+            422,
+            509
+          ],
+          [
+            433,
+            516
+          ],
+          [
+            439,
+            517
+          ],
+          [
+            446,
+            529
+          ],
+          [
+            454,
+            528
+          ],
+          [
+            464,
+            539
+          ],
+          [
+            466,
+            548
+          ],
+          [
+            475,
+            552
+          ],
+          [
+            477,
+            561
+          ],
+          [
+            485,
+            568
+          ],
+          [
+            488,
+            576
+          ],
+          [
+            387,
+            621
+          ],
+          [
+            342,
+            659
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "zheng-portrait",
+      "seed": 10222304,
+      "anchor": [
+        393.5,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "zheng-chibi",
+      "seed": 10222305,
+      "anchor": [
+        411.0,
+        969
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 376,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "guide-portrait",
+      "seed": 10222306,
+      "anchor": [
+        391.0,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "guide-chibi",
+      "seed": 10222307,
+      "anchor": [
+        389.5,
+        959
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 402,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "maid-portrait",
+      "seed": 10222308,
+      "anchor": [
+        397.5,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "maid-chibi",
+      "seed": 10222309,
+      "anchor": [
+        381.0,
+        952
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 423,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "messenger-portrait",
+      "seed": 10222310,
+      "anchor": [
+        437.0,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "messenger-chibi",
+      "seed": 10222311,
+      "anchor": [
+        391.5,
+        966
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 443,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "nurse_wang-portrait",
+      "seed": 10222312,
+      "anchor": [
+        412.0,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "nurse_wang-chibi",
+      "seed": 10222313,
+      "anchor": [
+        373.0,
+        958
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 372,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "nurse_li-portrait",
+      "seed": 10222314,
+      "anchor": [
+        466.0,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "nurse_li-chibi",
+      "seed": 10222315,
+      "anchor": [
+        393.0,
+        970
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 368,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "estate-grandmother",
+      "seed": 10222400,
+      "anchor": [
+        512.5,
+        893
+      ],
+      "width": 800
+    },
+    {
+      "id": "estate-east",
+      "seed": 10222401,
+      "anchor": [
+        513.5,
+        848
+      ],
+      "width": 800
+    },
+    {
+      "id": "estate-wang",
+      "seed": 10222402,
+      "anchor": [
+        509.5,
+        886
+      ],
+      "width": 800
+    },
+    {
+      "id": "estate-feng",
+      "seed": 10222403,
+      "anchor": [
+        505.5,
+        910
+      ],
+      "width": 800
+    },
+    {
+      "id": "estate-rear",
+      "seed": 10222404,
+      "anchor": [
+        506.5,
+        894
+      ],
+      "width": 800
+    },
+    {
+      "id": "estate-bisha",
+      "seed": 10222405,
+      "anchor": [
+        508.0,
+        904
+      ],
+      "width": 800
+    },
+    {
+      "id": "estate-study",
+      "seed": 10222406,
+      "anchor": [
+        512.5,
+        895
+      ],
+      "width": 800
+    },
+    {
+      "id": "shiyin-portrait",
+      "seed": 10230100,
+      "anchor": [
+        354.5,
+        723
+      ],
+      "height": 600,
+      "clipRect": [
+        0,
+        0,
+        768,
+        723
+      ]
+    },
+    {
+      "id": "shiyin-chibi",
+      "seed": 10230101,
+      "anchor": [
+        378.0,
+        956
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 396,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "fengshi-portrait",
+      "seed": 10230102,
+      "anchor": [
+        390.5,
+        720
+      ],
+      "height": 600,
+      "clipRect": [
+        0,
+        0,
+        768,
+        720
+      ]
+    },
+    {
+      "id": "fengshi-chibi",
+      "seed": 10230103,
+      "anchor": [
+        394.0,
+        974
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 406,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "yinglian-portrait",
+      "seed": 10230104,
+      "anchor": [
+        429.5,
+        741
+      ],
+      "height": 600,
+      "clipRect": [
+        0,
+        0,
+        768,
+        741
+      ]
+    },
+    {
+      "id": "yinglian-chibi",
+      "seed": 10230105,
+      "anchor": [
+        386.5,
+        957
+      ],
+      "height": 80,
+      "bodyCompress": {
+        "split": 524,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "jiaoxing-portrait",
+      "seed": 10230106,
+      "anchor": [
+        389.5,
+        727
+      ],
+      "height": 600,
+      "clipRect": [
+        0,
+        0,
+        768,
+        727
+      ]
+    },
+    {
+      "id": "jiaoxing-chibi",
+      "seed": 10230107,
+      "anchor": [
+        390.5,
+        958
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 440,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "fengsu-portrait",
+      "seed": 10230108,
+      "anchor": [
+        381.0,
+        743
+      ],
+      "height": 600,
+      "clipRect": [
+        0,
+        0,
+        768,
+        743
+      ]
+    },
+    {
+      "id": "fengsu-chibi",
+      "seed": 10230109,
+      "anchor": [
+        425.0,
+        940
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 431,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "monk-portrait",
+      "seed": 10230110,
+      "anchor": [
+        440.0,
+        703
+      ],
+      "height": 600,
+      "clipRect": [
+        0,
+        0,
+        768,
+        703
+      ],
+      "restorePolygons": [
+        [
+          [
+            250,
+            279
+          ],
+          [
+            260,
+            275
+          ],
+          [
+            271,
+            283
+          ],
+          [
+            277,
+            299
+          ],
+          [
+            270,
+            306
+          ],
+          [
+            257,
+            305
+          ],
+          [
+            249,
+            294
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "monk-chibi",
+      "seed": 10230111,
+      "anchor": [
+        430.5,
+        959
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 418,
+        "factor": 0.64
+      },
+      "restorePolygons": [
+        [
+          [
+            550,
+            477
+          ],
+          [
+            555,
+            469
+          ],
+          [
+            565,
+            466
+          ],
+          [
+            573,
+            461
+          ],
+          [
+            585,
+            463
+          ],
+          [
+            591,
+            468
+          ],
+          [
+            591,
+            480
+          ],
+          [
+            578,
+            489
+          ],
+          [
+            569,
+            495
+          ],
+          [
+            558,
+            489
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "taoist-portrait",
+      "seed": 10230112,
+      "anchor": [
+        396.5,
+        691
+      ],
+      "height": 600,
+      "clipRect": [
+        0,
+        0,
+        768,
+        691
+      ],
+      "restorePolygons": [
+        [
+          [
+            236,
+            190
+          ],
+          [
+            245,
+            194
+          ],
+          [
+            244,
+            221
+          ],
+          [
+            229,
+            236
+          ],
+          [
+            221,
+            235
+          ],
+          [
+            234,
+            219
+          ]
+        ],
+        [
+          [
+            239,
+            218
+          ],
+          [
+            246,
+            223
+          ],
+          [
+            246,
+            258
+          ],
+          [
+            256,
+            274
+          ],
+          [
+            254,
+            292
+          ],
+          [
+            244,
+            309
+          ],
+          [
+            251,
+            351
+          ],
+          [
+            255,
+            387
+          ],
+          [
+            245,
+            396
+          ],
+          [
+            239,
+            354
+          ],
+          [
+            236,
+            310
+          ],
+          [
+            241,
+            291
+          ],
+          [
+            243,
+            269
+          ]
+        ],
+        [
+          [
+            246,
+            426
+          ],
+          [
+            256,
+            426
+          ],
+          [
+            280,
+            964
+          ],
+          [
+            270,
+            967
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "taoist-chibi",
+      "seed": 10230113,
+      "anchor": [
+        405.5,
+        935
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 428,
+        "factor": 0.64
+      },
+      "restorePolygons": [
+        [
+          [
+            565,
+            303
+          ],
+          [
+            573,
+            304
+          ],
+          [
+            577,
+            311
+          ],
+          [
+            568,
+            324
+          ],
+          [
+            563,
+            346
+          ],
+          [
+            557,
+            376
+          ],
+          [
+            548,
+            400
+          ],
+          [
+            540,
+            496
+          ],
+          [
+            532,
+            496
+          ],
+          [
+            538,
+            398
+          ],
+          [
+            548,
+            374
+          ],
+          [
+            553,
+            343
+          ]
+        ],
+        [
+          [
+            529,
+            529
+          ],
+          [
+            540,
+            531
+          ],
+          [
+            501,
+            904
+          ],
+          [
+            489,
+            906
+          ]
+        ]
+      ],
+      "solidAlphaThreshold": 160
+    },
+    {
+      "id": "kongkong-portrait",
+      "seed": 10230114,
+      "anchor": [
+        388.5,
+        730
+      ],
+      "height": 600,
+      "clipRect": [
+        0,
+        0,
+        768,
+        730
+      ],
+      "restorePolygons": [
+        [
+          [
+            536,
+            498
+          ],
+          [
+            547,
+            498
+          ],
+          [
+            551,
+            505
+          ],
+          [
+            648,
+            510
+          ],
+          [
+            659,
+            497
+          ],
+          [
+            669,
+            497
+          ],
+          [
+            672,
+            502
+          ],
+          [
+            558,
+            695
+          ],
+          [
+            466,
+            698
+          ],
+          [
+            459,
+            692
+          ],
+          [
+            482,
+            608
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "kongkong-chibi",
+      "seed": 10230115,
+      "anchor": [
+        427.5,
+        948
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 460,
+        "factor": 0.64
+      },
+      "restorePolygons": [
+        [
+          [
+            505,
+            483
+          ],
+          [
+            517,
+            483
+          ],
+          [
+            580,
+            492
+          ],
+          [
+            586,
+            477
+          ],
+          [
+            594,
+            476
+          ],
+          [
+            598,
+            481
+          ],
+          [
+            530,
+            600
+          ],
+          [
+            505,
+            610
+          ],
+          [
+            449,
+            605
+          ],
+          [
+            444,
+            600
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "huoqi-portrait",
+      "seed": 10230116,
+      "anchor": [
+        388.0,
+        736
+      ],
+      "height": 600,
+      "clipRect": [
+        0,
+        0,
+        768,
+        736
+      ]
+    },
+    {
+      "id": "huoqi-chibi",
+      "seed": 10230117,
+      "anchor": [
+        413.0,
+        940
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 455,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "oldmonk-portrait",
+      "seed": 10230118,
+      "anchor": [
+        393.0,
+        753
+      ],
+      "height": 600,
+      "clipRect": [
+        0,
+        0,
+        768,
+        753
+      ],
+      "restorePolygons": [
+        [
+          [
+            341,
+            566
+          ],
+          [
+            350,
+            562
+          ],
+          [
+            497,
+            677
+          ],
+          [
+            513,
+            661
+          ],
+          [
+            521,
+            660
+          ],
+          [
+            522,
+            679
+          ],
+          [
+            510,
+            695
+          ],
+          [
+            482,
+            699
+          ],
+          [
+            463,
+            688
+          ],
+          [
+            464,
+            680
+          ],
+          [
+            479,
+            672
+          ],
+          [
+            345,
+            575
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "oldmonk-chibi",
+      "seed": 10230119,
+      "anchor": [
+        356.5,
+        956
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 486,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "estate-zhen",
+      "seed": 10230200,
+      "anchor": [
+        502.0,
+        893
+      ],
+      "width": 800
+    },
+    {
+      "id": "estate-hulu",
+      "seed": 10230201,
+      "anchor": [
+        505.5,
+        909
+      ],
+      "width": 800
+    },
+    {
+      "id": "estate-farm",
+      "seed": 10230202,
+      "anchor": [
+        513.0,
+        871
+      ],
+      "width": 800
+    },
+    {
+      "id": "estate-yamen",
+      "seed": 10230203,
+      "anchor": [
+        513.0,
+        902
+      ],
+      "width": 800
+    },
+    {
+      "id": "estate-zhitong",
+      "seed": 10230204,
+      "anchor": [
+        510.5,
+        846
+      ],
+      "width": 800
+    },
+    {
+      "id": "estate-tavern",
+      "seed": 10230205,
+      "anchor": [
+        519.0,
+        891
+      ],
+      "width": 800
+    },
+    {
+      "id": "estate-lantern",
+      "seed": 10230206,
+      "anchor": [
+        516.0,
+        917
+      ],
+      "width": 800
+    },
+    {
+      "id": "black-oil-gate",
+      "seed": 10230207,
+      "anchor": [
+        529,
+        836
+      ],
+      "width": 450,
+      "mirror": true,
+      "clearPolygons": [
+        [
+          [
+            495,
+            586
+          ],
+          [
+            561,
+            559
+          ],
+          [
+            561,
+            780
+          ],
+          [
+            495,
+            806
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "west-wall-gate",
+      "seed": 10230208,
+      "anchor": [
+        560,
+        805
+      ],
+      "width": 390
+    },
+    {
+      "id": "spirit-stone",
+      "seed": 10230300,
+      "anchor": [
+        512.0,
+        846
+      ],
+      "width": 260
+    },
+    {
+      "id": "crimson-pearl",
+      "seed": 10230301,
+      "anchor": [
+        519.5,
+        914
+      ],
+      "width": 200,
+      "solidAlphaThreshold": 70
+    },
+    {
+      "id": "manor-main-gate",
+      "seed": 10230400,
+      "anchor": [
+        553,
+        834
+      ],
+      "width": 650,
+      "mirror": true,
+      "baseSlope": -0.3,
+      "targetSlope": -0.5
+    },
+    {
+      "id": "estate-ruins",
+      "seed": 10230402,
+      "anchor": [
+        513.0,
+        867
+      ],
+      "width": 800,
+      "sourceId": "estate-ruins-v2"
+    },
+    {
+      "id": "menzi-portrait",
+      "seed": 10242001,
+      "anchor": [
+        384.0,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "menzi-chibi",
+      "seed": 10242002,
+      "anchor": [
+        384.0,
+        1022
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "plaintiff-portrait",
+      "seed": 10242011,
+      "anchor": [
+        384.0,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "plaintiff-chibi",
+      "seed": 10242012,
+      "anchor": [
+        384.0,
+        1022
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "xuepan-portrait",
+      "seed": 10242021,
+      "anchor": [
+        384,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "xuepan-chibi",
+      "seed": 10242022,
+      "anchor": [
+        384,
+        1022
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "xueyima-portrait",
+      "seed": 10242023,
+      "anchor": [
+        384,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "xueyima-chibi",
+      "seed": 10242024,
+      "anchor": [
+        384,
+        1022
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "baochai-portrait",
+      "seed": 10242025,
+      "anchor": [
+        384,
+        1022
+      ],
+      "height": 600
+    },
+    {
+      "id": "baochai-chibi",
+      "seed": 10242026,
+      "anchor": [
+        384,
+        1022
+      ],
+      "height": 116,
+      "bodyCompress": {
+        "split": 287,
+        "factor": 0.64
+      }
+    },
+    {
+      "id": "square-table",
+      "seed": 10224101,
+      "anchor": [
+        498.5,
+        823
+      ],
+      "width": 165
+    },
+    {
+      "id": "altar-table",
+      "seed": 10224102,
+      "anchor": [
+        480.5,
+        775
+      ],
+      "width": 195
+    },
+    {
+      "id": "writing-desk",
+      "seed": 10224103,
+      "anchor": [
+        468.0,
+        821
+      ],
+      "width": 180
+    },
+    {
+      "id": "official-chair",
+      "seed": 10224104,
+      "anchor": [
+        518.0,
+        901
+      ],
+      "width": 100,
+      "alphaFloor": 128
+    },
+    {
+      "id": "round-stool",
+      "seed": 10224105,
+      "anchor": [
+        496.5,
+        795
+      ],
+      "width": 70,
+      "alphaFloor": 128
+    },
+    {
+      "id": "square-stool",
+      "seed": 10224106,
+      "anchor": [
+        502.0,
+        854
+      ],
+      "width": 70,
+      "alphaFloor": 128
+    },
+    {
+      "id": "cabinet",
+      "seed": 10224107,
+      "anchor": [
+        526.5,
+        870
+      ],
+      "width": 130
+    },
+    {
+      "id": "brazier",
+      "seed": 10224118,
+      "anchor": [
+        497.0,
+        800
+      ],
+      "width": 90
+    },
+    {
+      "id": "vase-stand",
+      "seed": 10224109,
+      "anchor": [
+        507.0,
+        829
+      ],
+      "width": 110,
+      "alphaFloor": 128
+    },
+    {
+      "id": "estate-lixiang",
+      "seed": 10226202,
+      "anchor": [
+        519,
+        877
+      ],
+      "width": 800
+    },
+    {
+      "id": "lixiang-hall",
+      "seed": 10226210,
+      "anchor": [
+        366,
+        819
+      ],
+      "width": 935
+    }
+  ],
+  "placements": [
+    {
+      "name": "垂花门",
+      "asset": "flower-gate",
+      "col": 13,
+      "row": 25,
+      "depthOffset": -30
+    },
+    {
+      "name": "贾母正房外观",
+      "asset": "main-hall",
+      "col": 19,
+      "row": 9,
+      "visibility": "exterior"
+    },
+    {
+      "name": "东厢房",
+      "asset": "main-hall",
+      "col": 30,
+      "row": 11,
+      "scale": 0.68
+    },
+    {
+      "name": "西厢房",
+      "asset": "main-hall",
+      "col": 9,
+      "row": 12,
+      "scale": 0.62
+    },
+    {
+      "name": "海棠01",
+      "asset": "garden-tree",
+      "col": 9,
+      "row": 27,
+      "scale": 1.1
+    },
+    {
+      "name": "海棠02",
+      "asset": "garden-tree",
+      "col": 7,
+      "row": 22,
+      "scale": 1.2
+    },
+    {
+      "name": "海棠03",
+      "asset": "garden-tree",
+      "col": 8,
+      "row": 17,
+      "scale": 1.3
+    },
+    {
+      "name": "海棠04",
+      "asset": "garden-tree",
+      "col": 16,
+      "row": 10,
+      "scale": 0.85
+    },
+    {
+      "name": "海棠05",
+      "asset": "garden-tree",
+      "col": 28,
+      "row": 19,
+      "scale": 1.1
+    },
+    {
+      "name": "海棠06",
+      "asset": "garden-tree",
+      "col": 30,
+      "row": 7,
+      "scale": 1.2
+    },
+    {
+      "name": "海棠07",
+      "asset": "garden-tree",
+      "col": 26,
+      "row": 20,
+      "scale": 0.8
+    },
+    {
+      "name": "海棠08",
+      "asset": "garden-tree",
+      "col": 16,
+      "row": 21,
+      "scale": 0.85
+    },
+    {
+      "name": "海棠09",
+      "asset": "garden-tree",
+      "col": 5,
+      "row": 30,
+      "scale": 1.25
+    },
+    {
+      "name": "海棠10",
+      "asset": "garden-tree",
+      "col": 33,
+      "row": 16,
+      "scale": 1.3
+    },
+    {
+      "name": "海棠11",
+      "asset": "garden-tree",
+      "col": 8,
+      "row": 8,
+      "scale": 1.2
+    },
+    {
+      "name": "海棠12",
+      "asset": "garden-tree",
+      "col": 24,
+      "row": 3,
+      "scale": 1
+    },
+    {
+      "name": "太湖石01",
+      "asset": "garden-rock",
+      "col": 26,
+      "row": 18,
+      "collision": [
+        26,
+        18,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "太湖石02",
+      "asset": "garden-rock",
+      "col": 10,
+      "row": 27,
+      "scale": 0.8
+    },
+    {
+      "name": "太湖石03",
+      "asset": "garden-rock",
+      "col": 17,
+      "row": 11,
+      "scale": 0.8
+    },
+    {
+      "name": "门西院墙",
+      "asset": "courtyard-wall",
+      "col": 5,
+      "row": 25,
+      "scale": 0.75
+    },
+    {
+      "name": "门东院墙",
+      "asset": "courtyard-wall",
+      "col": 21,
+      "row": 25,
+      "scale": 0.75
+    },
+    {
+      "name": "西墙角门",
+      "asset": "west-wall-gate",
+      "col": 3,
+      "row": 32,
+      "scale": 0.8,
+      "depthOffset": -10
+    }
+  ]
 }
