@@ -98,6 +98,13 @@ try{
  assert.ok(await page.locator('.history-list article').count()>=readCount,'the log did not shrink after a jump backwards');
  await page.getByRole('button',{name:'关闭弹窗'}).click();
 
+ // 背包直达：顶栏「背包」按钮一步打开账簿页签，不必再穿设置与册页三层。
+ await page.getByRole('button',{name:'背包',exact:true}).click();
+ await page.locator('.ledger-switch').waitFor();
+ assert.equal(await page.getByRole('tab',{name:/账簿/}).getAttribute('aria-selected'),'true','the backpack button lands on the ledger tab');
+ await page.getByRole('tab',{name:'地图'}).click(); // 复位页签，后面的册页断言默认从地图起
+ await page.keyboard.press('Escape');
+
  await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'册页',exact:true}).click();assert.equal(await page.locator('.atlas-body article').count(),22);
  // 见闻标签：32 张卡（22 地志 + 6 金句 + 4 信物），读过的部分已入册，收集数与页签一致。
  await page.getByRole('tab',{name:/见闻/}).click();

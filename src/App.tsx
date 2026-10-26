@@ -46,6 +46,7 @@ function Icon({name}: {name:string}) {
     close:'m6 6 12 12M6 18 18 6',
     chevron:'m9 5 7 7-7 7',
     sound:'M4 9v6h4l5 4V5L8 9H4Zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4Zm-2.5-7.7v2.1a7 7 0 0 1 0 13.2v2.1a9 9 0 0 0 0-17.4Z',
+    bag:'M6 8V6a6 6 0 0 1 12 0v2m-15 0h18l-1.2 11.1a2 2 0 0 1-2 1.9H6.2a2 2 0 0 1-2-1.9L3 8Zm6 4a3 3 0 0 0 6 0',
     mute:'M4 9v6h4l5 4V5L8 9H4Zm15.5 0L17 11.5 15.5 13l1.5 1.5L18.5 13 20 14.5 21.5 13 19.5 11.5 21 10 19.5 8.5 18.5 10 17 8.5Z',
   };
   return <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={shapes[name]??shapes.compass}/></svg>;
@@ -268,6 +269,9 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           <Icon name={automatic?'pause':'play'}/>{automatic?'暂停':'自动'}
         </button>
         <button className="text-button" onClick={()=>setModal('history')}><Icon name="book"/>回看</button>
+        {/* The ledger is the reader's backpack: one tap from the header, straight to the
+            balance tab, instead of three layers down through settings and the atlas. */}
+        <button className="text-button" onClick={()=>{setAtlasTab('ledger');setModal('atlas');}}><Icon name="bag"/>背包</button>
         <button className="icon-button" aria-label={muted?'开启声音':'关闭声音'} aria-pressed={muted}
           onClick={()=>{const next=!muted;setMuted(next);audio.setMuted(next);}}>
           <Icon name={muted?'mute':'sound'}/>
@@ -335,7 +339,10 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
             </div>
           </article>)}
         </div>
-        <button className="next-button pickup-confirm" onClick={takePickup} autoFocus>收下</button>
+        <div className="pickup-actions">
+          <button className="text-button" onClick={()=>{takePickup();setAtlasTab('ledger');setModal('atlas');}}>收下并打开背包</button>
+          <button className="next-button pickup-confirm" onClick={takePickup} autoFocus>收下</button>
+        </div>
       </section>
     </div>}
     <dialog ref={dialog} onCancel={event=>{event.preventDefault();setModal(null);}} onClick={event=>{if(event.target===dialog.current)setModal(null);}}>

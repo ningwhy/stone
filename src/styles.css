@@ -179,5 +179,7 @@ dialog{border:1px solid #d0d8c2;border-radius:10px;width:min(600px,calc(100% - 3
 .pickup-info strong{font-size:15px;color:#3b3524;letter-spacing:1px}
 .pickup-flow{font-size:11px;color:#7d6f4d}
 .pickup-info p{margin:0;font-size:11px;line-height:1.7;color:#7a7360}
-.pickup-confirm{width:100%;justify-content:center;margin-top:14px}
+.pickup-actions{display:flex;gap:8px;margin-top:14px}
+.pickup-actions .text-button{flex:1;justify-content:center}
+.pickup-confirm{flex:1.4;width:100%;justify-content:center;margin-top:0}
 .pickup-overlay .pickup-confirm:focus-visible{outline:2px solid #506b58;outline-offset:2px}
