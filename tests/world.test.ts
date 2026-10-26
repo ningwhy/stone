@@ -26,6 +26,17 @@ test('Jia She visit exits west corner, passes main gate on street, enters black 
   if(a.row===b.row&&p[0]===q[0])assert.ok(!(p[0]>Math.min(a.col,b.col)&&p[0]<Math.max(a.col,b.col)&&a.row>Math.min(p[1],q[1])&&a.row<Math.max(p[1],q[1])),'road crosses vertical wall');
  }
 });
+test('book four joins the estate map: the Xue courtyard walks the lanes, the yamen stays outside',()=>{
+ const lixiang=geography.locations.find(l=>l.id==='c4_lixiang')!;
+ assert.equal(lixiang.external,false);assert.ok(geography.daiyuScenes.includes('c4_lixiang'));
+ const walk=worldRouteCells('central','c4_lixiang');
+ assert.ok(walk.length>=3,'no lane path from Rongxi Hall to the Xue courtyard');
+ for(let i=0;i<walk.length-1;i++)assert.ok(walk[i].col===walk[i+1].col||walk[i].row===walk[i+1].row,'the courtyard path must be cardinal');
+ const yamen=geography.locations.find(l=>l.id==='c4_yamen')!;
+ assert.equal(yamen.external,true);
+ assert.ok(story.some(s=>s.id===yamen.start),'the yamen start node must exist');
+ assert.ok(story.some(s=>s.id===lixiang.start),'the courtyard start node must exist');
+});
 test('first two books connect to chapter three and never end early',()=>{
  const engine=new StoryEngine(maps());
  for(const chapter of [1,2]){const last=story.filter(s=>s.source.chapter===chapter).at(-1)!;engine.seek(last.id);assert.equal(engine.getSnapshot().status,'reading');engine.advance();engine.skip();assert.equal(engine.step.source.chapter,chapter+1);}

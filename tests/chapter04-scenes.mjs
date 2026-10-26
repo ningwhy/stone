@@ -62,17 +62,16 @@ try{
  }
  assert.ok(seen.includes('yucun'),'the magistrate has no painted portrait');
  assert.ok(seen.includes('plaintiff'),'the plaintiff has no painted portrait');
- // The chapter-four journey view lists exactly the stages this chapter visits.
- await page.getByRole('button',{name:'本回行迹',exact:true}).click();await page.locator('.journey-sites').waitFor();
- const visited=[...new Set(story.map(s=>s.scene))];
- assert.equal(await page.locator('.journey-site').count(),visited.length);
- for(const scene of visited){assert.ok(await page.locator('.journey-site strong').filter({hasText:new RegExp('.')}).count()>=visited.length);}
- await page.screenshot({path:'artifacts/chapter04-journey.png',fullPage:true});
+ // Book four unfolds inside the estate, so its overview tab opens the estate map
+ // rather than a journey list; the Xue courtyard is one of its places.
+ await page.getByRole('button',{name:'荣国府总览',exact:true}).click();await page.locator('.world-map').waitFor();
+ assert.equal(await page.locator('.world-location').count(),10);
+ await page.screenshot({path:'artifacts/chapter04-overview.png',fullPage:true});
  await page.getByRole('button',{name:'当前场景',exact:true}).click();
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-pear');await read();
  await page.screenshot({path:'artifacts/chapter04-lixiang.png',fullPage:true});
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-court');await read();
  await page.screenshot({path:'artifacts/chapter04-yamen.png',fullPage:true});
  assert.equal(errors.length,0,JSON.stringify(errors));
- console.log(`Passed: chapter four opens ${visited.length} stages (${visited.join(', ')}); the Xue family and the two court parties show painted portraits; the journey view lists every stage.`);
+ console.log(`Passed: chapter four opens the court, the street, Rongxi Hall and the Xue courtyard; the Xue family and the two court parties show painted portraits; the estate overview serves as this book's map tab.`);
 }catch(e){console.error('Browser errors:',errors);console.error((await page.locator('body').innerText()).slice(0,3000));await page.screenshot({path:'artifacts/chapter04-failure.png',fullPage:true});throw e;}finally{await context.close();await browser.close();}

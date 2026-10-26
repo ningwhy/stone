@@ -59,20 +59,17 @@ try{
   if(src&&src.includes('xuepan-portrait')){console.log(`${tag} xuepan portrait:`,src);break;}
   await page.getByRole('button',{name:'继续剧情',exact:true}).click();await reading();
  }
- // Chapter four keeps its own journey view; the estate overview belongs to chapter three.
- await page.getByRole('button',{name:'本回行迹',exact:true}).click();
- await page.locator('.journey-sites').waitFor({timeout:30000});
- const journeySites=await page.locator('.journey-site').count();
- console.log(`${tag} journey sites:`,journeySites);
- assert.ok(journeySites>=5,'chapter-four journey view is incomplete');
- await page.screenshot({path:`artifacts/${tag}-journey.png`,fullPage:true});
+ // Book four unfolds inside the estate too: the same overview tab opens there.
+ await page.getByRole('button',{name:'荣国府总览',exact:true}).click();
+ await page.locator('.world-map').waitFor({timeout:30000});
+ console.log(`${tag} chapter-four overview: estate map opens`);
  await page.getByRole('button',{name:'当前场景',exact:true}).click();
  // The estate overview is the chapter-three page; its thumbnails used to 404 in production.
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('reunion');await reading();
  await page.getByRole('button',{name:'荣国府总览',exact:true}).click();
  await page.locator('.world-map').waitFor({timeout:60000});
- await page.waitForFunction(()=>document.querySelectorAll('.world-location image[data-loaded=true]').length===9,undefined,{timeout:120000});
- console.log(`${tag} overview thumbnails: 9 loaded`);
+ await page.waitForFunction(()=>document.querySelectorAll('.world-location image[data-loaded=true]').length===10,undefined,{timeout:120000});
+ console.log(`${tag} overview thumbnails: 10 loaded`);
  await page.screenshot({path:`artifacts/${tag}-overview.png`,fullPage:true});
  const realFailures=failed.filter(f=>!f.startsWith('403 '));
  console.log(`${tag} non-403 failed requests:`,realFailures.length);

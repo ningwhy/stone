@@ -11,7 +11,8 @@
     "wang",
     "dinner",
     "night",
-    "feng"
+    "feng",
+    "c4_lixiang"
   ],
   "locations": [
     {
@@ -153,6 +154,32 @@
       "asset": "estate-feng",
       "external": false,
       "description": "贾琏、王熙凤居住的小院，粉油大影壁后为院门。王夫人领黛玉经过夹道时指认此处；本回只到门前，不虚构入室剧情。"
+    },
+    {
+      "id": "c4_lixiang",
+      "scene": "c4_lixiang",
+      "start": "C04-104",
+      "name": "梨香院",
+      "col": 25,
+      "row": 6,
+      "width": 7,
+      "height": 7,
+      "asset": "estate-study",
+      "external": false,
+      "description": "荣府东北角的小院，薛姨妈一家进京后的住处，「小巧别致，十余间房舍」。院内暂借外观与贾政书房同款，待专绘后替换。"
+    },
+    {
+      "id": "c4_yamen",
+      "scene": "c4_yamen",
+      "start": "C04-007",
+      "name": "应天府衙署",
+      "asset": "estate-yamen",
+      "external": true,
+      "description": "金陵应天府衙门，贾雨村在此判断薛蟠纵仆行凶一案；府外行程。",
+      "col": 1,
+      "row": 31,
+      "width": 7,
+      "height": 7
     }
   ],
   "roads": {
@@ -370,6 +397,14 @@
       "west_approach": [
         6,
         26
+      ],
+      "lane_lixiang": [
+        25,
+        8
+      ],
+      "c4_lixiang": [
+        25,
+        6
       ]
     },
     "edges": [
@@ -468,6 +503,14 @@
       [
         "west_approach",
         "entry"
+      ],
+      [
+        "c4_lixiang",
+        "lane_lixiang"
+      ],
+      [
+        "lane_lixiang",
+        "lane_feng"
       ]
     ]
   }

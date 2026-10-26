@@ -229,9 +229,12 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
             <GameMap sceneId={state.sceneId} engine={engine} onScene={onScene} onActor={onActor} onProgress={onMapProgress} onSnapshot={setSnapshot}/>
             {!sceneReady&&sceneSlow&&<SceneLoadingCard title={engine.maps[state.sceneId]?.title??step.place} progress={sceneProgress}/>}
           </div>
-          {overview&&step.source.chapter!==3?<JourneyMap chapter={step.source.chapter} sceneId={state.sceneId} onVisit={node=>{setOverview(false);setAutomatic(false);engine.seek(node);}}/>:(overview||travel)&&<WorldMap sceneId={worldId} travel={travel} onVisit={id=>{const place=worldLocations.find(l=>l.id===id);const target=place?.start?story.find(s=>s.id===place.start):story.find(s=>s.source.chapter===3&&s.scene===(place?.scene??id));if(target){setTravel(null);setOverview(false);setAutomatic(false);engine.seek(target.id);}}}/>}
+          {/* Books 3–4 take place inside the estate, so their overview tab opens the
+              estate map; books 1–2 happen in Yangzhou before the family is reached,
+              and get the ordered trail of that book's stages instead. */}
+          {overview&&(step.source.chapter<3)?<JourneyMap chapter={step.source.chapter} sceneId={state.sceneId} onVisit={node=>{setOverview(false);setAutomatic(false);engine.seek(node);}}/>:(overview||travel)&&<WorldMap sceneId={worldId} travel={travel} onVisit={id=>{const place=worldLocations.find(l=>l.id===id);const scene=place?.scene??id;const target=place?.start?story.find(s=>s.id===place.start):story.find(s=>s.source.chapter===step.source.chapter&&s.scene===scene)??story.find(s=>s.source.chapter===3&&s.scene===scene);if(target){setTravel(null);setOverview(false);setAutomatic(false);engine.seek(target.id);}}}/>}
           <div className="map-navigation">
-            <div className="view-switch" aria-label="地图视图"><button aria-pressed={!overview&&!travel} onClick={()=>{setTravel(null);setOverview(false);}}>当前场景</button><button aria-pressed={overview||!!travel} onClick={()=>setOverview(true)}>{step.source.chapter===3?'荣国府总览':'本回行迹'}</button></div>
+            <div className="view-switch" aria-label="地图视图"><button aria-pressed={!overview&&!travel} onClick={()=>{setTravel(null);setOverview(false);}}>当前场景</button><button aria-pressed={overview||!!travel} onClick={()=>setOverview(true)}>{step.source.chapter<3?'本回行迹':'荣国府总览'}</button></div>
             <span className="current-place">{travel?`${worldLocations.find(l=>l.id===travel.from)?.name} → ${worldLocations.find(l=>l.id===travel.to)?.name}`:step.place}</span>
           </div>
           {/* The freeze control stays available in every view, because the walk between

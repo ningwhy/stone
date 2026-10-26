@@ -12,7 +12,7 @@ try{
  assert.equal(await page.locator('.game-map').getAttribute('data-scene-ready'),'ruins');await page.screenshot({path:'artifacts/prequel-fire-ruins.png'});
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('arrival');await read();await page.screenshot({path:'artifacts/ning-rong-street.png'});
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('uncles');await read();await page.screenshot({path:'artifacts/black-oil-gate.png'});
- await page.getByRole('button',{name:'荣国府总览',exact:true}).click();await page.waitForFunction(()=>document.querySelectorAll('.world-location image[data-loaded=true]').length===9);
+ await page.getByRole('button',{name:'荣国府总览',exact:true}).click();await page.waitForFunction(()=>document.querySelectorAll('.world-location image[data-loaded=true]').length===10);
  await page.waitForFunction(()=>[...document.querySelectorAll('image[href*="manor-main-gate"]')].some(n=>n.dataset.loaded==='true'));
  await page.getByRole('button',{name:'查看王熙凤院地点',exact:true}).click();assert.ok((await page.locator('.world-detail').textContent()).includes('粉油'));await page.getByRole('button',{name:'关闭地点详情'}).click();
  await page.screenshot({path:'artifacts/rongguo-geography-corrected.png'});
