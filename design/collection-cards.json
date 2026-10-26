@@ -1,484 +1,488 @@
 {
- "version": 1,
- "cards": [
-  {
-   "id": "place.myth",
-   "kind": "place",
-   "book": 1,
-   "scene": "myth",
-   "name": "大荒山 · 青埂峰（神话）",
-   "subtitle": "青埂峰 · 入世之路",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "myth"
-   }
-  },
-  {
-   "id": "place.suzhou",
-   "kind": "place",
-   "book": 1,
-   "scene": "suzhou",
-   "name": "姑苏 · 仁清巷与甄宅",
-   "subtitle": "甄宅书斋 · 葫芦庙 · 仁清巷",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "suzhou"
-   }
-  },
-  {
-   "id": "place.lantern",
-   "kind": "place",
-   "book": 1,
-   "scene": "lantern",
-   "name": "姑苏 · 元宵灯市",
-   "subtitle": "社火花灯 · 失散处",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "lantern"
-   }
-  },
-  {
-   "id": "place.ruins",
-   "kind": "place",
-   "book": 1,
-   "scene": "ruins",
-   "name": "姑苏 · 葫芦庙火后",
-   "subtitle": "甄宅废墟 · 葫芦庙遗址",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "ruins"
-   }
-  },
-  {
-   "id": "place.farm",
-   "kind": "place",
-   "book": 1,
-   "scene": "farm",
-   "name": "大如州 · 封家田庄",
-   "subtitle": "封家 · 田庄小路",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "farm"
-   }
-  },
-  {
-   "id": "place.dream",
-   "kind": "place",
-   "book": 1,
-   "scene": "dream",
-   "name": "太虚幻境 · 灵河（梦中）",
-   "subtitle": "太虚幻境 · 绛珠仙草 · 因缘转述",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "dream"
-   }
-  },
-  {
-   "id": "place.tavern",
-   "kind": "place",
-   "book": 2,
-   "scene": "tavern",
-   "name": "扬州郭外 · 村肆",
-   "subtitle": "酒肆 · 入城之路",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "tavern"
-   }
-  },
-  {
-   "id": "place.zhitong",
-   "kind": "place",
-   "book": 2,
-   "scene": "zhitong",
-   "name": "扬州郭外 · 智通寺",
-   "subtitle": "通往村肆",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "zhitong"
-   }
-  },
-  {
-   "id": "place.guowai",
-   "kind": "place",
-   "book": 2,
-   "scene": "guowai",
-   "name": "扬州郭外 · 出城山道",
-   "subtitle": "扬州城郭 · 田垄 · 竹林柴门 · 山道",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "guowai"
-   }
-  },
-  {
-   "id": "place.yamen",
-   "kind": "place",
-   "book": 2,
-   "scene": "yamen",
-   "name": "知府衙署 · 雨村仕途",
-   "subtitle": "公堂 · 府衙外",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "yamen"
-   }
-  },
-  {
-   "id": "place.lin",
-   "kind": "place",
-   "book": 2,
-   "scene": "lin",
-   "name": "扬州 · 林府与江岸",
-   "subtitle": "书斋 · 林府 · 江岸",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "lin"
-   }
-  },
-  {
-   "id": "place.canal",
-   "kind": "place",
-   "book": 2,
-   "scene": "canal",
-   "name": "运河 · 舟行北上",
-   "subtitle": "扬州渡口 · 运河东流 · 京城水门",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "canal"
-   }
-  },
-  {
-   "id": "place.yucun",
-   "kind": "place",
-   "book": 3,
-   "scene": "yucun",
-   "name": "京城 · 贾政书房",
-   "subtitle": "本回行迹",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "yucun"
-   }
-  },
-  {
-   "id": "place.capital",
-   "kind": "place",
-   "book": 3,
-   "scene": "capital",
-   "name": "京城 · 宁荣街",
-   "subtitle": "宁国府 · 东 · 荣国府 · 西 · 西墙角门",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "capital"
-   }
-  },
-  {
-   "id": "place.entry",
-   "kind": "place",
-   "book": 3,
-   "scene": "entry",
-   "name": "荣国府 · 贾母院",
-   "subtitle": "本回行迹",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "entry"
-   }
-  },
-  {
-   "id": "place.east",
-   "kind": "place",
-   "book": 3,
-   "scene": "east",
-   "name": "贾赦院 · 东路小院",
-   "subtitle": "南墙黑油大门 · 三层仪门 · 邢夫人房",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "east"
-   }
-  },
-  {
-   "id": "place.dinner",
-   "kind": "place",
-   "book": 3,
-   "scene": "dinner",
-   "name": "贾母院 · 后房与晚膳",
-   "subtitle": "后房 · 贾母房 · 晚膳",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "dinner"
-   }
-  },
-  {
-   "id": "place.night",
-   "kind": "place",
-   "book": 3,
-   "scene": "night",
-   "name": "贾母院 · 碧纱橱与外间",
-   "subtitle": "贾母套间 · 碧纱橱 · 外间暖阁",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "night"
-   }
-  },
-  {
-   "id": "place.central",
-   "kind": "place",
-   "book": 3,
-   "scene": "central",
-   "name": "荣府中轴 · 荣禧堂",
-   "subtitle": "内仪门 · 西耳房 · 东角门",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "central"
-   }
-  },
-  {
-   "id": "place.wang",
-   "kind": "place",
-   "book": 3,
-   "scene": "wang",
-   "name": "王夫人院 · 东廊三间",
-   "subtitle": "王夫人起居处 · 东廊 · 夹道 · 凤姐院门",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "wang"
-   }
-  },
-  {
-   "id": "place.c4_yamen",
-   "kind": "place",
-   "book": 4,
-   "scene": "c4_yamen",
-   "name": "应天府 · 刑堂与退堂密室",
-   "subtitle": "应天府大堂 · 退堂密室",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "c4_yamen"
-   }
-  },
-  {
-   "id": "place.c4_lixiang",
-   "kind": "place",
-   "book": 4,
-   "scene": "c4_lixiang",
-   "name": "荣府东北角 · 梨香院",
-   "subtitle": "前厅 · 后舍 · 通街门 · 西南角门",
-   "unlock": {
-    "type": "read_scene",
-    "scene": "c4_lixiang"
-   }
-  },
-  {
-   "id": "line.stone",
-   "kind": "line",
-   "book": 1,
-   "name": "无材补天",
-   "quote": "女娲炼石补天，独剩下一块，弃在青埂峰下。石头通了灵性，因无材入选，日夜自叹。",
-   "attribution": "开篇",
-   "node": "C1-002",
-   "unlock": {
-    "type": "read",
-    "node": "C1-002"
-   }
-  },
-  {
-   "id": "line.haoliao",
-   "kind": "line",
-   "book": 1,
-   "name": "好了歌",
-   "quote": "世人都晓神仙好，却放不下功名、金银、娇妻和儿孙。到头来，富贵恩情，哪样能长留？",
-   "attribution": "跛足道人",
-   "node": "C1-045",
-   "unlock": {
-    "type": "read",
-    "node": "C1-045"
-   }
-  },
-  {
-   "id": "line.haoliao-note",
-   "kind": "line",
-   "book": 1,
-   "name": "好了歌注",
-   "quote": "陋室空堂，曾经笏满床；衰草枯杨，也曾是歌舞场。金银满箱终成乞丐，嫌官位小反戴枷锁，都是荣枯转眼。",
-   "attribution": "甄士隐",
-   "node": "C1-048",
-   "unlock": {
-    "type": "read",
-    "node": "C1-048"
-   }
-  },
-  {
-   "id": "line.jade",
-   "kind": "line",
-   "book": 2,
-   "name": "衔玉而生",
-   "quote": "次生一子，落胎便口衔有字的美玉，便叫宝玉。",
-   "attribution": "冷子兴演说",
-   "node": "C2-027",
-   "unlock": {
-    "type": "read",
-    "node": "C2-027"
-   }
-  },
-  {
-   "id": "line.water",
-   "kind": "line",
-   "book": 2,
-   "name": "女儿是水作的骨肉",
-   "quote": "他说女儿的骨肉是水做的，男子是泥做的；见女儿清爽，见男子便觉浊臭。",
-   "attribution": "冷子兴转述",
-   "node": "C2-030",
-   "unlock": {
-    "type": "read",
-    "node": "C2-030"
-   }
-  },
-  {
-   "id": "line.huguanfu",
-   "kind": "line",
-   "book": 4,
-   "name": "护官符",
-   "quote": "贾不假，白玉为堂金作马。阿房宫，三百里，住不下金陵一个史。东海缺少白玉床，龙王来请金陵王。丰年好大雪，珍珠如土金如铁。",
-   "attribution": "应天府门子",
-   "node": "C04-033",
-   "unlock": {
-    "type": "read",
-    "node": "C04-033"
-   }
-  },
-  {
-   "id": "token.huguanfu",
-   "kind": "token",
-   "book": 4,
-   "name": "护官符",
-   "subtitle": "一张抄写的本省大族名宦口碑单",
-   "quote": "贾不假，白玉为堂金作马。\n阿房宫，三百里，住不下金陵一个史。\n东海缺少白玉床，龙王来请金陵王。\n丰年好大雪，珍珠如土金如铁。",
-   "attribution": "应天府门子 呈与贾雨村",
-   "node": "C04-029",
-   "unlock": {
-    "type": "read",
-    "node": "C04-029"
-   },
-   "source": "從順袋中取出一張抄寫的「護官符」來，遞與雨村"
-  },
-  {
-   "id": "token.yincun-mishu",
-   "kind": "token",
-   "book": 2,
-   "name": "雨村寄封肃的密书",
-   "subtitle": "托问甄家娘子要那娇杏作二房",
-   "attribution": "贾雨村 遣人送至",
-   "node": "C2-004",
-   "unlock": {
-    "type": "read",
-    "node": "C2-004"
-   },
-   "source": "又寄一封密書與封肅，轉托問甄家娘子要那嬌杏作二房"
-  },
-  {
-   "id": "token.huazhang",
-   "kind": "token",
-   "book": 3,
-   "name": "藕合色花帐与锦被缎褥",
-   "subtitle": "凤姐遣人送至碧纱橱",
-   "attribution": "凤姐 遣人送去",
-   "node": "T003",
-   "unlock": {
-    "type": "read",
-    "node": "T003"
-   },
-   "source": "熙鳳命人送了一頂藕合色花帳，並幾件錦被緞褥之類"
-  },
-  {
-   "id": "token.yinbi",
-   "kind": "token",
-   "book": 1,
-   "name": "甄士隐所赠银两",
-   "subtitle": "资助雨村进京赶考的路费",
-   "attribution": "甄士隐",
-   "node": "C1-033",
-   "unlock": {
-    "type": "read",
-    "node": "C1-033"
-   },
-   "source": "我贈五十兩銀子、兩套冬衣，路費由我相助"
-  },
-  {
-   "id": "bond.xiren",
-   "kind": "bond",
-   "book": 3,
-   "name": "袭人",
-   "subtitle": "贾母的丫鬟 → 宝玉的贴身丫鬟",
-   "bond": {
-    "from": "贾母",
-    "to": "宝玉",
-    "mode": "granted",
-    "note": "原名珍珠，因心地纯良、克尽职任，贾母遂与了宝玉；宝玉取「花气袭人」之意，为她改名。"
-   },
-   "actor": "xiren",
-   "node": "T006",
-   "unlock": {
-    "type": "read",
-    "node": "T006"
-   },
-   "source": "賈母因溺愛寶玉，生恐寶玉之婢無竭力盡忠之人，素喜襲人心地純良，克盡職任，遂與了寶玉。寶玉因知他本姓花，又曾見舊人詩句上有「花氣襲人」之句，遂回明賈母，更名襲人。"
-  },
-  {
-   "id": "bond.yingge",
-   "kind": "bond",
-   "book": 3,
-   "name": "鹦哥",
-   "subtitle": "贾母身边的二等丫头 → 黛玉的贴身丫鬟",
-   "bond": {
-    "from": "贾母",
-    "to": "黛玉",
-    "mode": "granted",
-    "note": "黛玉只带来年老的王嬷嬷和十岁的小丫鬟雪雁，贾母怕她们照料不周，便把身边的二等丫鬟鹦哥给她。"
-   },
-   "actor": "yingge",
-   "node": "T004",
-   "unlock": {
-    "type": "read",
-    "node": "T004"
-   },
-   "source": "賈母見雪雁甚小，一團孩氣，王嬤嬤又极老，料黛玉皆不遂心省力的，便將自己身邊的一個二等丫頭，名喚鸚哥者與了黛玉。"
-  },
-  {
-   "id": "bond.jiaoxing",
-   "kind": "bond",
-   "book": 2,
-   "name": "娇杏",
-   "subtitle": "甄家丫鬟 → 贾雨村二房 → 正室夫人",
-   "bond": {
-    "from": "封肃",
-    "to": "贾雨村",
-    "mode": "sold",
-    "note": "雨村遣人送银缎答谢封氏，又寄密书托问甄家娘子要那娇杏作二房；封肃一力撺掇成，一乘小轿夜里送去。一年后生子，又半载原配病故，雨村便扶她作正室夫人。"
-   },
-   "actor": "jiaoxing",
-   "node": "C2-004",
-   "unlock": {
-    "type": "read",
-    "node": "C2-004"
-   },
-   "source": "又寄一封密書與封肅，轉托問甄家娘子要那嬌杏作二房。封肅喜的屁忙尿痛，巴不得去奉承，便在女兒前一力攙掇成了，乘夜只用一乘小轎，便把嬌杏送進去了。"
-  },
-  {
-   "id": "bond.yinglian",
-   "kind": "bond",
-   "book": 4,
-   "name": "甄英莲",
-   "subtitle": "甄家小姐 → 拐子手中 → 冯家 → 薛家",
-   "bond": {
-    "from": "甄士隐",
-    "to": "薛蟠",
-    "mode": "taken",
-    "note": "三岁元宵灯市被拐子拐走，养至十二三岁，两度转卖：先为冯渊看中，薛蟠恃强夺人、打死冯渊，遂拖了去。眉心有米粒大小一点胭脂痣，熟人易认。"
-   },
-   "actor": "yinglian",
-   "node": "C04-055",
-   "unlock": {
-    "type": "read",
-    "node": "C04-055"
-   },
-   "source": "誰曉這拐子又偷賣與薛家，他意欲卷了兩家的銀子，再逃往他省。誰知又不曾走脫，兩家拿住，打了個臭死，都不肯收銀，只要領人。"
-  }
- ]
+  "version": 1,
+  "cards": [
+    {
+      "id": "place.myth",
+      "kind": "place",
+      "book": 1,
+      "scene": "myth",
+      "name": "大荒山 · 青埂峰（神话）",
+      "subtitle": "青埂峰 · 入世之路",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "myth"
+      }
+    },
+    {
+      "id": "place.suzhou",
+      "kind": "place",
+      "book": 1,
+      "scene": "suzhou",
+      "name": "姑苏 · 仁清巷与甄宅",
+      "subtitle": "甄宅书斋 · 葫芦庙 · 仁清巷",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "suzhou"
+      }
+    },
+    {
+      "id": "place.lantern",
+      "kind": "place",
+      "book": 1,
+      "scene": "lantern",
+      "name": "姑苏 · 元宵灯市",
+      "subtitle": "社火花灯 · 失散处",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "lantern"
+      }
+    },
+    {
+      "id": "place.ruins",
+      "kind": "place",
+      "book": 1,
+      "scene": "ruins",
+      "name": "姑苏 · 葫芦庙火后",
+      "subtitle": "甄宅废墟 · 葫芦庙遗址",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "ruins"
+      }
+    },
+    {
+      "id": "place.farm",
+      "kind": "place",
+      "book": 1,
+      "scene": "farm",
+      "name": "大如州 · 封家田庄",
+      "subtitle": "封家 · 田庄小路",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "farm"
+      }
+    },
+    {
+      "id": "place.dream",
+      "kind": "place",
+      "book": 1,
+      "scene": "dream",
+      "name": "太虚幻境 · 灵河（梦中）",
+      "subtitle": "太虚幻境 · 绛珠仙草 · 因缘转述",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "dream"
+      }
+    },
+    {
+      "id": "place.tavern",
+      "kind": "place",
+      "book": 2,
+      "scene": "tavern",
+      "name": "扬州郭外 · 村肆",
+      "subtitle": "酒肆 · 入城之路",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "tavern"
+      }
+    },
+    {
+      "id": "place.zhitong",
+      "kind": "place",
+      "book": 2,
+      "scene": "zhitong",
+      "name": "扬州郭外 · 智通寺",
+      "subtitle": "通往村肆",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "zhitong"
+      }
+    },
+    {
+      "id": "place.guowai",
+      "kind": "place",
+      "book": 2,
+      "scene": "guowai",
+      "name": "扬州郭外 · 出城山道",
+      "subtitle": "扬州城郭 · 田垄 · 竹林柴门 · 山道",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "guowai"
+      }
+    },
+    {
+      "id": "place.yamen",
+      "kind": "place",
+      "book": 2,
+      "scene": "yamen",
+      "name": "知府衙署 · 雨村仕途",
+      "subtitle": "公堂 · 府衙外",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "yamen"
+      }
+    },
+    {
+      "id": "place.lin",
+      "kind": "place",
+      "book": 2,
+      "scene": "lin",
+      "name": "扬州 · 林府与江岸",
+      "subtitle": "书斋 · 林府 · 江岸",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "lin"
+      }
+    },
+    {
+      "id": "place.canal",
+      "kind": "place",
+      "book": 2,
+      "scene": "canal",
+      "name": "运河 · 舟行北上",
+      "subtitle": "扬州渡口 · 运河东流 · 京城水门",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "canal"
+      }
+    },
+    {
+      "id": "place.yucun",
+      "kind": "place",
+      "book": 3,
+      "scene": "yucun",
+      "name": "京城 · 贾政书房",
+      "subtitle": "本回行迹",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "yucun"
+      }
+    },
+    {
+      "id": "place.capital",
+      "kind": "place",
+      "book": 3,
+      "scene": "capital",
+      "name": "京城 · 宁荣街",
+      "subtitle": "宁国府 · 东 · 荣国府 · 西 · 西墙角门",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "capital"
+      }
+    },
+    {
+      "id": "place.entry",
+      "kind": "place",
+      "book": 3,
+      "scene": "entry",
+      "name": "荣国府 · 贾母院",
+      "subtitle": "本回行迹",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "entry"
+      }
+    },
+    {
+      "id": "place.east",
+      "kind": "place",
+      "book": 3,
+      "scene": "east",
+      "name": "贾赦院 · 东路小院",
+      "subtitle": "南墙黑油大门 · 三层仪门 · 邢夫人房",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "east"
+      }
+    },
+    {
+      "id": "place.dinner",
+      "kind": "place",
+      "book": 3,
+      "scene": "dinner",
+      "name": "贾母院 · 后房与晚膳",
+      "subtitle": "后房 · 贾母房 · 晚膳",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "dinner"
+      }
+    },
+    {
+      "id": "place.night",
+      "kind": "place",
+      "book": 3,
+      "scene": "night",
+      "name": "贾母院 · 碧纱橱与外间",
+      "subtitle": "贾母套间 · 碧纱橱 · 外间暖阁",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "night"
+      }
+    },
+    {
+      "id": "place.central",
+      "kind": "place",
+      "book": 3,
+      "scene": "central",
+      "name": "荣府中轴 · 荣禧堂",
+      "subtitle": "内仪门 · 西耳房 · 东角门",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "central"
+      },
+      "image": "/assets/cards/place_central.webp"
+    },
+    {
+      "id": "place.wang",
+      "kind": "place",
+      "book": 3,
+      "scene": "wang",
+      "name": "王夫人院 · 东廊三间",
+      "subtitle": "王夫人起居处 · 东廊 · 夹道 · 凤姐院门",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "wang"
+      }
+    },
+    {
+      "id": "place.c4_yamen",
+      "kind": "place",
+      "book": 4,
+      "scene": "c4_yamen",
+      "name": "应天府 · 刑堂与退堂密室",
+      "subtitle": "应天府大堂 · 退堂密室",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "c4_yamen"
+      }
+    },
+    {
+      "id": "place.c4_lixiang",
+      "kind": "place",
+      "book": 4,
+      "scene": "c4_lixiang",
+      "name": "荣府东北角 · 梨香院",
+      "subtitle": "前厅 · 后舍 · 通街门 · 西南角门",
+      "unlock": {
+        "type": "read_scene",
+        "scene": "c4_lixiang"
+      }
+    },
+    {
+      "id": "line.stone",
+      "kind": "line",
+      "book": 1,
+      "name": "无材补天",
+      "quote": "女娲炼石补天，独剩下一块，弃在青埂峰下。石头通了灵性，因无材入选，日夜自叹。",
+      "attribution": "开篇",
+      "node": "C1-002",
+      "unlock": {
+        "type": "read",
+        "node": "C1-002"
+      }
+    },
+    {
+      "id": "line.haoliao",
+      "kind": "line",
+      "book": 1,
+      "name": "好了歌",
+      "quote": "世人都晓神仙好，却放不下功名、金银、娇妻和儿孙。到头来，富贵恩情，哪样能长留？",
+      "attribution": "跛足道人",
+      "node": "C1-045",
+      "unlock": {
+        "type": "read",
+        "node": "C1-045"
+      }
+    },
+    {
+      "id": "line.haoliao-note",
+      "kind": "line",
+      "book": 1,
+      "name": "好了歌注",
+      "quote": "陋室空堂，曾经笏满床；衰草枯杨，也曾是歌舞场。金银满箱终成乞丐，嫌官位小反戴枷锁，都是荣枯转眼。",
+      "attribution": "甄士隐",
+      "node": "C1-048",
+      "unlock": {
+        "type": "read",
+        "node": "C1-048"
+      }
+    },
+    {
+      "id": "line.jade",
+      "kind": "line",
+      "book": 2,
+      "name": "衔玉而生",
+      "quote": "次生一子，落胎便口衔有字的美玉，便叫宝玉。",
+      "attribution": "冷子兴演说",
+      "node": "C2-027",
+      "unlock": {
+        "type": "read",
+        "node": "C2-027"
+      },
+      "image": "/assets/cards/line_jade.webp"
+    },
+    {
+      "id": "line.water",
+      "kind": "line",
+      "book": 2,
+      "name": "女儿是水作的骨肉",
+      "quote": "他说女儿的骨肉是水做的，男子是泥做的；见女儿清爽，见男子便觉浊臭。",
+      "attribution": "冷子兴转述",
+      "node": "C2-030",
+      "unlock": {
+        "type": "read",
+        "node": "C2-030"
+      }
+    },
+    {
+      "id": "line.huguanfu",
+      "kind": "line",
+      "book": 4,
+      "name": "护官符",
+      "quote": "贾不假，白玉为堂金作马。阿房宫，三百里，住不下金陵一个史。东海缺少白玉床，龙王来请金陵王。丰年好大雪，珍珠如土金如铁。",
+      "attribution": "应天府门子",
+      "node": "C04-033",
+      "unlock": {
+        "type": "read",
+        "node": "C04-033"
+      }
+    },
+    {
+      "id": "token.huguanfu",
+      "kind": "token",
+      "book": 4,
+      "name": "护官符",
+      "subtitle": "一张抄写的本省大族名宦口碑单",
+      "quote": "贾不假，白玉为堂金作马。\n阿房宫，三百里，住不下金陵一个史。\n东海缺少白玉床，龙王来请金陵王。\n丰年好大雪，珍珠如土金如铁。",
+      "attribution": "应天府门子 呈与贾雨村",
+      "node": "C04-029",
+      "unlock": {
+        "type": "read",
+        "node": "C04-029"
+      },
+      "source": "從順袋中取出一張抄寫的「護官符」來，遞與雨村",
+      "image": "/assets/cards/token_huguanfu.webp"
+    },
+    {
+      "id": "token.yincun-mishu",
+      "kind": "token",
+      "book": 2,
+      "name": "雨村寄封肃的密书",
+      "subtitle": "托问甄家娘子要那娇杏作二房",
+      "attribution": "贾雨村 遣人送至",
+      "node": "C2-004",
+      "unlock": {
+        "type": "read",
+        "node": "C2-004"
+      },
+      "source": "又寄一封密書與封肅，轉托問甄家娘子要那嬌杏作二房"
+    },
+    {
+      "id": "token.huazhang",
+      "kind": "token",
+      "book": 3,
+      "name": "藕合色花帐与锦被缎褥",
+      "subtitle": "凤姐遣人送至碧纱橱",
+      "attribution": "凤姐 遣人送去",
+      "node": "T003",
+      "unlock": {
+        "type": "read",
+        "node": "T003"
+      },
+      "source": "熙鳳命人送了一頂藕合色花帳，並幾件錦被緞褥之類"
+    },
+    {
+      "id": "token.yinbi",
+      "kind": "token",
+      "book": 1,
+      "name": "甄士隐所赠银两",
+      "subtitle": "资助雨村进京赶考的路费",
+      "attribution": "甄士隐",
+      "node": "C1-033",
+      "unlock": {
+        "type": "read",
+        "node": "C1-033"
+      },
+      "source": "我贈五十兩銀子、兩套冬衣，路費由我相助"
+    },
+    {
+      "id": "bond.xiren",
+      "kind": "bond",
+      "book": 3,
+      "name": "袭人",
+      "subtitle": "贾母的丫鬟 → 宝玉的贴身丫鬟",
+      "bond": {
+        "from": "贾母",
+        "to": "宝玉",
+        "mode": "granted",
+        "note": "原名珍珠，因心地纯良、克尽职任，贾母遂与了宝玉；宝玉取「花气袭人」之意，为她改名。"
+      },
+      "actor": "xiren",
+      "node": "T006",
+      "unlock": {
+        "type": "read",
+        "node": "T006"
+      },
+      "source": "賈母因溺愛寶玉，生恐寶玉之婢無竭力盡忠之人，素喜襲人心地純良，克盡職任，遂與了寶玉。寶玉因知他本姓花，又曾見舊人詩句上有「花氣襲人」之句，遂回明賈母，更名襲人。",
+      "image": "/assets/cards/bond_xiren.webp"
+    },
+    {
+      "id": "bond.yingge",
+      "kind": "bond",
+      "book": 3,
+      "name": "鹦哥",
+      "subtitle": "贾母身边的二等丫头 → 黛玉的贴身丫鬟",
+      "bond": {
+        "from": "贾母",
+        "to": "黛玉",
+        "mode": "granted",
+        "note": "黛玉只带来年老的王嬷嬷和十岁的小丫鬟雪雁，贾母怕她们照料不周，便把身边的二等丫鬟鹦哥给她。"
+      },
+      "actor": "yingge",
+      "node": "T004",
+      "unlock": {
+        "type": "read",
+        "node": "T004"
+      },
+      "source": "賈母見雪雁甚小，一團孩氣，王嬤嬤又极老，料黛玉皆不遂心省力的，便將自己身邊的一個二等丫頭，名喚鸚哥者與了黛玉。"
+    },
+    {
+      "id": "bond.jiaoxing",
+      "kind": "bond",
+      "book": 2,
+      "name": "娇杏",
+      "subtitle": "甄家丫鬟 → 贾雨村二房 → 正室夫人",
+      "bond": {
+        "from": "封肃",
+        "to": "贾雨村",
+        "mode": "sold",
+        "note": "雨村遣人送银缎答谢封氏，又寄密书托问甄家娘子要那娇杏作二房；封肃一力撺掇成，一乘小轿夜里送去。一年后生子，又半载原配病故，雨村便扶她作正室夫人。"
+      },
+      "actor": "jiaoxing",
+      "node": "C2-004",
+      "unlock": {
+        "type": "read",
+        "node": "C2-004"
+      },
+      "source": "又寄一封密書與封肅，轉托問甄家娘子要那嬌杏作二房。封肅喜的屁忙尿痛，巴不得去奉承，便在女兒前一力攙掇成了，乘夜只用一乘小轎，便把嬌杏送進去了。"
+    },
+    {
+      "id": "bond.yinglian",
+      "kind": "bond",
+      "book": 4,
+      "name": "甄英莲",
+      "subtitle": "甄家小姐 → 拐子手中 → 冯家 → 薛家",
+      "bond": {
+        "from": "甄士隐",
+        "to": "薛蟠",
+        "mode": "taken",
+        "note": "三岁元宵灯市被拐子拐走，养至十二三岁，两度转卖：先为冯渊看中，薛蟠恃强夺人、打死冯渊，遂拖了去。眉心有米粒大小一点胭脂痣，熟人易认。"
+      },
+      "actor": "yinglian",
+      "node": "C04-055",
+      "unlock": {
+        "type": "read",
+        "node": "C04-055"
+      },
+      "source": "誰曉這拐子又偷賣與薛家，他意欲卷了兩家的銀子，再逃往他省。誰知又不曾走脫，兩家拿住，打了個臭死，都不肯收銀，只要領人。"
+    }
+  ]
 }

@@ -93,8 +93,12 @@ dialog{border:1px solid #d0d8c2;border-radius:10px;width:min(600px,calc(100% - 3
 .card-book{margin:14px 0}
 .card-book-title{font-family:"Songti SC",serif;font-weight:500;font-size:15px;color:#7c886e;letter-spacing:2px;margin:0 0 8px}
 .card-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+/* 信物与归属各四张，密排成 2×2 方阵：四张若按三列排会留下半行空档。 */
+.card-gallery.pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .card-item{margin:0;border:0;padding:0;display:flex;flex-direction:column;gap:6px}
-.card-face{position:relative;height:170px;border:1px solid #c8d2bb;border-radius:6px;background:linear-gradient(160deg,#f7f5e8,#ede9d5);padding:14px;overflow:hidden;display:flex;flex-direction:column}
+/* 卡片插画：ComfyUI 生成的专属图，作为纸面上的画框缩略图置于文字之上。 */
+.card-art{display:block;width:100%;height:108px;object-fit:cover;border:1px solid #c8d2bb;border-radius:6px;background:#ece7d6}
+.card-face{position:relative;min-height:170px;border:1px solid #c8d2bb;border-radius:6px;background:linear-gradient(160deg,#f7f5e8,#ede9d5);padding:14px;overflow:hidden;display:flex;flex-direction:column}
 .card-item.locked .card-face{background:#3d4438;border-color:#3d4438}
 .card-item.locked .card-mark{margin:auto;font-size:34px;color:#f4efdf;opacity:.55}
 .card-item.unlocked .card-face{box-shadow:0 3px 14px #42553d1c}
@@ -107,16 +111,18 @@ dialog{border:1px solid #d0d8c2;border-radius:10px;width:min(600px,calc(100% - 3
 .card-item.locked footer strong{color:#9aa58f}
 .card-item footer small{font-size:10px;color:#a5ac98}
 /* 信物卡：护官符是抄本，竖排四行 + 朱印，纸色比地志卡更旧。 */
-.card-item.token .card-face{background:linear-gradient(160deg,#f3ecd8,#e9dfc4);border-color:#c2b48f;padding:12px 14px 30px;min-height:196px;justify-content:flex-start}
+.card-item.token .card-face{background:linear-gradient(160deg,#f3ecd8,#e9dfc4);border-color:#c2b48f;padding:12px 14px 14px;min-height:196px;justify-content:flex-start}
+/* 符文区自己撑开高度，朱印另起一行，两者在卡内不再抢位。 */
 .card-item.token .card-scroll{margin:6px 0 0}
-.card-scroll{margin:6px 0 4px;display:flex;flex-direction:column;gap:4px;font-family:"Songti SC",SimSun,serif;font-size:10px;line-height:1.6;letter-spacing:.3px;color:#4c4636}
+.card-scroll{margin:6px 0 4px;display:flex;flex-direction:column;gap:5px;font-family:"Songti SC",SimSun,serif;font-size:11px;line-height:1.7;letter-spacing:.4px;color:#4c4636}
 .card-scroll span{display:block}
 .card-item.token .card-name{font-size:13px;letter-spacing:2px;color:#4c4636;margin:0}
+/* 副题在符文下方，朱印另起一行右对齐，两者不再抢位。 */
 .card-item.token .card-subtitle{font-size:9px;color:#8b8168;margin-top:8px}
-.card-item.token .card-seal{background:#9c3b28;right:10px;bottom:9px;padding:2px 6px}
+.card-item.token .card-seal{background:#9c3b28;position:static;align-self:flex-end;margin-top:8px;padding:2px 7px;max-width:100%;line-height:1.45;text-align:center}
 .card-source{display:block;margin-top:3px;font-size:9px;line-height:1.5;color:#a5ac98}
 /* 归属卡：那个年代人也可以是「给」的。卡面是从谁那里来、到谁那里去。 */
-.card-item.bond .card-face{background:linear-gradient(160deg,#f6f2e6,#ebe6d4);border-color:#c3bda4;padding:12px 14px 30px;min-height:186px;justify-content:flex-start}
+.card-item.bond .card-face{background:linear-gradient(160deg,#f6f2e6,#ebe6d4);border-color:#c3bda4;padding:12px 14px 30px;min-height:196px;justify-content:flex-start}
 .bond-mode{position:absolute;top:9px;right:10px;font-size:10px;letter-spacing:2px;padding:2px 7px;border-radius:2px;color:#fdf6e3}
 .bond-mode.granted{background:#0f6e56}
 .bond-mode.sold{background:#854f0b}
@@ -124,6 +130,6 @@ dialog{border:1px solid #d0d8c2;border-radius:10px;width:min(600px,calc(100% - 3
 .bond-row{display:flex;align-items:center;gap:7px;margin:26px 0 8px;font-family:"Songti SC",serif}
 .bond-side{font-size:13px;letter-spacing:1px;color:#4c4636;line-height:1.35}
 .bond-arrow{color:#9a927a;font-size:13px}
-.bond-note{margin:0;font-size:10px;line-height:1.7;color:#7a7360;flex:1;overflow:hidden}
+.bond-note{margin:0;font-size:11px;line-height:1.75;color:#7a7360;flex:1;overflow:hidden}
 .card-item.bond .card-seal{right:10px;bottom:9px;background:#6b6a4e;padding:2px 6px}
 .card-item.bond footer small{font-size:9px;color:#a5ac98;line-height:1.5}

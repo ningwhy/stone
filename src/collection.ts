@@ -20,6 +20,8 @@ export interface CardDef {
   bond?: { from: string; to: string; mode: BondMode; note: string };
   /** 归属卡：对应的 cast 人物 id，用于取立绘 */
   actor?: string;
+  /** 卡片插画：ComfyUI 生成的专属图，落盘于 public/assets/cards/{id 的 . 换 _}.webp */
+  image?: string;
   unlock: { type: 'read_scene'; scene: string } | { type: 'read'; node: string };
 }
 

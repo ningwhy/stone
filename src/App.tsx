@@ -294,10 +294,11 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           <p className="atlas-note">地志卡随剧情读到即收入；金句卡在读到对应段落时入册；信物只在原文写明「交到手上」那一刻入册。收集的反馈都在这里，阅读时不会弹出打扰。</p>
           {tokens.length>0&&<section className="card-book">
             <h3 className="card-book-title">信物</h3>
-            <div className="card-gallery">
+            <div className="card-gallery pair">
               {tokens.map(card=>{
                 const got=unlocked.has(card.id);
                 return <article key={card.id} className={`card-item token ${got?'unlocked':'locked'}`} aria-label={got?card.name:'未解锁的信物'}>
+                  {got&&card.image&&<img className="card-art" src={card.image} alt={card.name} loading="lazy"/>}
                   <div className="card-face">
                     {got?<>
                       <strong className="card-name">{card.name}</strong>
@@ -314,11 +315,12 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           {bonds.length>0&&<section className="card-book">
             <h3 className="card-book-title">归属</h3>
             <p className="atlas-note">那个年代，人也可以是「给」的。卡上标出这个人从哪里来、到了谁那里去，以及是赏给、买卖还是被夺。</p>
-            <div className="card-gallery">
+            <div className="card-gallery pair">
               {bonds.map(card=>{
                 const got=unlocked.has(card.id);
                 const bond=card.bond!;
                 return <article key={card.id} className={`card-item bond ${got?'unlocked':'locked'}`} aria-label={got?`${card.name}的归属`:'未解锁的归属卡'}>
+                  {got&&card.image&&<img className="card-art" src={card.image} alt={card.name} loading="lazy"/>}
                   <div className="card-face">
                     {got?<>
                       <span className={`bond-mode ${bond.mode}`}>{({granted:'赏给',sold:'买卖',taken:'被夺'})[bond.mode]}</span>
@@ -342,6 +344,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
               {list.map(card=>{
                 const got=unlocked.has(card.id);
                 return <article key={card.id} className={`card-item ${card.kind} ${got?'unlocked':'locked'}`} aria-label={got?card.name:'未解锁的卡片'}>
+                  {got&&card.image&&<img className="card-art" src={card.image} alt={card.name} loading="lazy"/>}
                   <div className="card-face">
                     {got?(card.kind==='line'
                       ?<><p className="card-quote">{card.quote}</p><span className="card-seal">{card.attribution}</span></>
