@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "line_haoliao-01",
+  "seed": 2074176574,
+  "prompt": "手绘插画风格：水墨人物、古风衣袂、潇洒笔触、大面积留白；保留明显手绘笔压、停顿与轻微不齐整感，让轮廓产生真实纸上绘制的节奏；上色保留透明叠染、柔软边缘和纸纹，允许轻微颜色不均与留白。画面中不要出现任何文字、拉丁字母、水印、签名或标语。 画面主题：破足道人疯跛而行，张口吟唱、衣衫褴褛，市井背景，水墨写意人物。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": null,
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "489b1c6e-5414-4fba-8e59-9b0c41d270e8",
+  "generated_at": "2026-10-26 16:42:43",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1k-1k"
+}

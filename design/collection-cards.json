@@ -11,7 +11,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "myth"
-      }
+      },
+      "image": "/assets/cards/place_myth.webp"
     },
     {
       "id": "place.suzhou",
@@ -23,7 +24,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "suzhou"
-      }
+      },
+      "image": "/assets/cards/place_suzhou.webp"
     },
     {
       "id": "place.lantern",
@@ -35,7 +37,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "lantern"
-      }
+      },
+      "image": "/assets/cards/place_lantern.webp"
     },
     {
       "id": "place.ruins",
@@ -47,7 +50,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "ruins"
-      }
+      },
+      "image": "/assets/cards/place_ruins.webp"
     },
     {
       "id": "place.farm",
@@ -59,7 +63,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "farm"
-      }
+      },
+      "image": "/assets/cards/place_farm.webp"
     },
     {
       "id": "place.dream",
@@ -71,7 +76,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "dream"
-      }
+      },
+      "image": "/assets/cards/place_dream.webp"
     },
     {
       "id": "place.tavern",
@@ -83,7 +89,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "tavern"
-      }
+      },
+      "image": "/assets/cards/place_tavern.webp"
     },
     {
       "id": "place.zhitong",
@@ -95,7 +102,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "zhitong"
-      }
+      },
+      "image": "/assets/cards/place_zhitong.webp"
     },
     {
       "id": "place.guowai",
@@ -107,7 +115,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "guowai"
-      }
+      },
+      "image": "/assets/cards/place_guowai.webp"
     },
     {
       "id": "place.yamen",
@@ -119,7 +128,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "yamen"
-      }
+      },
+      "image": "/assets/cards/place_yamen.webp"
     },
     {
       "id": "place.lin",
@@ -131,7 +141,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "lin"
-      }
+      },
+      "image": "/assets/cards/place_lin.webp"
     },
     {
       "id": "place.canal",
@@ -143,7 +154,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "canal"
-      }
+      },
+      "image": "/assets/cards/place_canal.webp"
     },
     {
       "id": "place.yucun",
@@ -155,7 +167,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "yucun"
-      }
+      },
+      "image": "/assets/cards/place_yucun.webp"
     },
     {
       "id": "place.capital",
@@ -167,7 +180,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "capital"
-      }
+      },
+      "image": "/assets/cards/place_capital.webp"
     },
     {
       "id": "place.entry",
@@ -179,7 +193,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "entry"
-      }
+      },
+      "image": "/assets/cards/place_entry.webp"
     },
     {
       "id": "place.east",
@@ -191,7 +206,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "east"
-      }
+      },
+      "image": "/assets/cards/place_east.webp"
     },
     {
       "id": "place.dinner",
@@ -203,7 +219,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "dinner"
-      }
+      },
+      "image": "/assets/cards/place_dinner.webp"
     },
     {
       "id": "place.night",
@@ -215,7 +232,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "night"
-      }
+      },
+      "image": "/assets/cards/place_night.webp"
     },
     {
       "id": "place.central",
@@ -240,7 +258,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "wang"
-      }
+      },
+      "image": "/assets/cards/place_wang.webp"
     },
     {
       "id": "place.c4_yamen",
@@ -252,7 +271,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "c4_yamen"
-      }
+      },
+      "image": "/assets/cards/place_c4_yamen.webp"
     },
     {
       "id": "place.c4_lixiang",
@@ -264,7 +284,8 @@
       "unlock": {
         "type": "read_scene",
         "scene": "c4_lixiang"
-      }
+      },
+      "image": "/assets/cards/place_c4_lixiang.webp"
     },
     {
       "id": "line.stone",
@@ -277,7 +298,8 @@
       "unlock": {
         "type": "read",
         "node": "C1-002"
-      }
+      },
+      "image": "/assets/cards/line_stone.webp"
     },
     {
       "id": "line.haoliao",
@@ -290,7 +312,8 @@
       "unlock": {
         "type": "read",
         "node": "C1-045"
-      }
+      },
+      "image": "/assets/cards/line_haoliao.webp"
     },
     {
       "id": "line.haoliao-note",
@@ -303,7 +326,8 @@
       "unlock": {
         "type": "read",
         "node": "C1-048"
-      }
+      },
+      "image": "/assets/cards/line_haoliao-note.webp"
     },
     {
       "id": "line.jade",
@@ -330,7 +354,8 @@
       "unlock": {
         "type": "read",
         "node": "C2-030"
-      }
+      },
+      "image": "/assets/cards/line_water.webp"
     },
     {
       "id": "line.huguanfu",
@@ -343,7 +368,8 @@
       "unlock": {
         "type": "read",
         "node": "C04-033"
-      }
+      },
+      "image": "/assets/cards/line_huguanfu.webp"
     },
     {
       "id": "token.huguanfu",
@@ -373,7 +399,8 @@
         "type": "read",
         "node": "C2-004"
       },
-      "source": "又寄一封密書與封肅，轉托問甄家娘子要那嬌杏作二房"
+      "source": "又寄一封密書與封肅，轉托問甄家娘子要那嬌杏作二房",
+      "image": "/assets/cards/token_yincun-mishu.webp"
     },
     {
       "id": "token.huazhang",
@@ -387,7 +414,8 @@
         "type": "read",
         "node": "T003"
       },
-      "source": "熙鳳命人送了一頂藕合色花帳，並幾件錦被緞褥之類"
+      "source": "熙鳳命人送了一頂藕合色花帳，並幾件錦被緞褥之類",
+      "image": "/assets/cards/token_huazhang.webp"
     },
     {
       "id": "token.yinbi",
@@ -401,7 +429,8 @@
         "type": "read",
         "node": "C1-033"
       },
-      "source": "我贈五十兩銀子、兩套冬衣，路費由我相助"
+      "source": "我贈五十兩銀子、兩套冬衣，路費由我相助",
+      "image": "/assets/cards/token_yinbi.webp"
     },
     {
       "id": "bond.xiren",
@@ -442,7 +471,8 @@
         "type": "read",
         "node": "T004"
       },
-      "source": "賈母見雪雁甚小，一團孩氣，王嬤嬤又极老，料黛玉皆不遂心省力的，便將自己身邊的一個二等丫頭，名喚鸚哥者與了黛玉。"
+      "source": "賈母見雪雁甚小，一團孩氣，王嬤嬤又极老，料黛玉皆不遂心省力的，便將自己身邊的一個二等丫頭，名喚鸚哥者與了黛玉。",
+      "image": "/assets/cards/bond_yingge.webp"
     },
     {
       "id": "bond.jiaoxing",
@@ -462,7 +492,8 @@
         "type": "read",
         "node": "C2-004"
       },
-      "source": "又寄一封密書與封肅，轉托問甄家娘子要那嬌杏作二房。封肅喜的屁忙尿痛，巴不得去奉承，便在女兒前一力攙掇成了，乘夜只用一乘小轎，便把嬌杏送進去了。"
+      "source": "又寄一封密書與封肅，轉托問甄家娘子要那嬌杏作二房。封肅喜的屁忙尿痛，巴不得去奉承，便在女兒前一力攙掇成了，乘夜只用一乘小轎，便把嬌杏送進去了。",
+      "image": "/assets/cards/bond_jiaoxing.webp"
     },
     {
       "id": "bond.yinglian",
@@ -482,7 +513,8 @@
         "type": "read",
         "node": "C04-055"
       },
-      "source": "誰曉這拐子又偷賣與薛家，他意欲卷了兩家的銀子，再逃往他省。誰知又不曾走脫，兩家拿住，打了個臭死，都不肯收銀，只要領人。"
+      "source": "誰曉這拐子又偷賣與薛家，他意欲卷了兩家的銀子，再逃往他省。誰知又不曾走脫，兩家拿住，打了個臭死，都不肯收銀，只要領人。",
+      "image": "/assets/cards/bond_yinglian.webp"
     }
   ]
 }

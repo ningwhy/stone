@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "token_huazhang-01",
+  "seed": 1725255475,
+  "prompt": "手绘插画风格：水墨人物、古风衣袂、潇洒笔触、大面积留白；保留明显手绘笔压、停顿与轻微不齐整感，让轮廓产生真实纸上绘制的节奏；上色保留透明叠染、柔软边缘和纸纹，允许轻微颜色不均与留白。画面中不要出现任何文字、拉丁字母、水印、签名或标语。 画面主题：藕合色花帐与锦被缎褥并陈，绫罗堆叠、色泽温润，水墨古风。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": null,
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "e7c3d664-17bf-48d7-85a4-36a780f4d440",
+  "generated_at": "2026-10-26 16:43:30",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1k-1k"
+}

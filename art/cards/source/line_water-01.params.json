@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "line_water-01",
+  "seed": 792956600,
+  "prompt": "手绘插画风格：水墨人物、古风衣袂、潇洒笔触、大面积留白；保留明显手绘笔压、停顿与轻微不齐整感，让轮廓产生真实纸上绘制的节奏；上色保留透明叠染、柔软边缘和纸纹，允许轻微颜色不均与留白。画面中不要出现任何文字、拉丁字母、水印、签名或标语。 画面主题：一位贵族少年立于阶前，环侍数名丫鬟，眉眼温润，水墨写意人物。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": null,
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "883ad394-d0d8-4e76-9ea2-85809fba17e9",
+  "generated_at": "2026-10-26 16:43:02",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1k-1k"
+}

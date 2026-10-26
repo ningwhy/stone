@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "place_c4_lixiang-01",
+  "seed": 1169685072,
+  "prompt": "手绘插画风格：水墨人物、古风衣袂、潇洒笔触、大面积留白；保留明显手绘笔压、停顿与轻微不齐整感，让轮廓产生真实纸上绘制的节奏；上色保留透明叠染、柔软边缘和纸纹，允许轻微颜色不均与留白。画面中不要出现任何文字、拉丁字母、水印、签名或标语。 画面主题：荣府东北角梨香院，梨花满庭、清幽小院，水墨写意。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": null,
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "c7d73db3-ddb7-4369-b13d-5a72cc2cf10b",
+  "generated_at": "2026-10-26 16:42:24",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1k-1k"
+}

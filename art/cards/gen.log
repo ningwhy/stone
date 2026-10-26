@@ -1,0 +1,32 @@
+计划生成 36 张；已存在 webp 的将跳过。
+[gen] place.zhitong -> place_zhitong
+  FAIL: 3.12/lib/python3.13/pathlib/_local.py", line 515, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/bot/WorkBuddy/tiledMap/art/cards/source/place_zhitong-01.png'
+
+[gen] place.guowai -> place_guowai
+[gen] place.yamen -> place_yamen
+[gen] place.lin -> place_lin
+[gen] place.canal -> place_canal
+[gen] place.yucun -> place_yucun
+[gen] place.capital -> place_capital
+[gen] place.entry -> place_entry
+[gen] place.east -> place_east
+[gen] place.dinner -> place_dinner
+[gen] place.night -> place_night
+[gen] place.wang -> place_wang
+[gen] place.c4_yamen -> place_c4_yamen
+[gen] place.c4_lixiang -> place_c4_lixiang
+[gen] line.stone -> line_stone
+[gen] line.haoliao -> line_haoliao
+[gen] line.haoliao-note -> line_haoliao-note
+[gen] line.water -> line_water
+[gen] line.huguanfu -> line_huguanfu
+[gen] token.yincun-mishu -> token_yincun-mishu
+[gen] token.huazhang -> token_huazhang
+[gen] token.yinbi -> token_yinbi
+[gen] bond.yingge -> bond_yingge
+[gen] bond.jiaoxing -> bond_jiaoxing
+[gen] bond.yinglian -> bond_yinglian
+完成：新增生成 24，跳过已存在 11，回写 image 字段 31 张。

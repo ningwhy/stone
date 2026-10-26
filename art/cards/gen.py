@@ -84,10 +84,18 @@ def run(cmd):
 def latest_source(name):
     cands = sorted(glob.glob(os.path.join(SRC, f"{name}*.png")),
                    key=os.path.getmtime, reverse=True)
+    # --keep-old 下新图落 _new、旧图归档为 _v{n}；优先取 _new，其次普通名，跳过 _v 归档。
     for c in cands:
-        base = os.path.basename(c)
-        if "_v" not in base and "_new" not in base:  # 跳过归档版本
+        b = os.path.basename(c)
+        if "_v" in b:
+            continue
+        if b.endswith("_new.png"):
             return c
+    for c in cands:
+        b = os.path.basename(c)
+        if "_v" in b or "_new" in b:
+            continue
+        return c
     return cands[0] if cands else None
 
 def convert(name, src_png):
