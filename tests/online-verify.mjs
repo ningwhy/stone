@@ -71,6 +71,7 @@ try{
  await page.waitForFunction(()=>document.querySelectorAll('.world-location image[data-loaded=true]').length===10,undefined,{timeout:120000});
  console.log(`${tag} overview thumbnails: 10 loaded`);
  await page.screenshot({path:`artifacts/${tag}-overview.png`,fullPage:true});
+ await page.getByRole('button',{name:'当前场景',exact:true}).click();
  const realFailures=failed.filter(f=>!f.startsWith('403 '));
  console.log(`${tag} non-403 failed requests:`,realFailures.length);
  for(const f of realFailures.slice(0,10))console.log('  ',f);
