@@ -85,3 +85,24 @@ dialog{border:1px solid #d0d8c2;border-radius:10px;width:min(600px,calc(100% - 3
   .world-map{bottom:190px}
   .journey-map{padding:60px 14px 196px}
 }
+/* 册页 · 见闻卡（地志卡 + 金句卡）。收集反馈只在面板里，阅读中不打扰。 */
+.atlas-tabs{display:flex;gap:8px;margin:4px 0 14px;border-bottom:1px solid #dce1d0;padding-bottom:10px}
+.atlas-tabs button{border:1px solid #d1dbc3;background:#f4f4e9;border-radius:4px;padding:6px 16px;font-size:13px;color:#89947a;cursor:pointer}
+.atlas-tabs button[aria-selected="true"]{background:#e3ead8;color:#546b4d;border-color:#a9b997}
+.atlas-tabs small{font-size:10px;margin-left:4px}
+.card-book{margin:14px 0}
+.card-book-title{font-family:"Songti SC",serif;font-weight:500;font-size:15px;color:#7c886e;letter-spacing:2px;margin:0 0 8px}
+.card-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.card-item{margin:0;border:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.card-face{position:relative;height:170px;border:1px solid #c8d2bb;border-radius:6px;background:linear-gradient(160deg,#f7f5e8,#ede9d5);padding:14px;overflow:hidden;display:flex;flex-direction:column}
+.card-item.locked .card-face{background:#3d4438;border-color:#3d4438}
+.card-item.locked .card-mark{margin:auto;font-size:34px;color:#f4efdf;opacity:.55}
+.card-item.unlocked .card-face{box-shadow:0 3px 14px #42553d1c}
+.card-name{font-family:"Songti SC",serif;font-weight:500;font-size:16px;letter-spacing:1px;color:#50634e;margin:2px 0 6px}
+.card-subtitle{font-size:11px;line-height:1.7;color:#8c987f}
+.card-quote{font-family:"Songti SC",SimSun,serif;font-size:12px;line-height:1.9;letter-spacing:.4px;color:#50634e;margin:0;flex:1;overflow:hidden}
+.card-seal{position:absolute;right:10px;bottom:10px;max-width:80%;background:#a3452f;color:#fdf6e3;font-size:10px;line-height:1.5;padding:3px 7px;border-radius:3px;letter-spacing:1px}
+.card-item footer{display:flex;flex-direction:column;gap:2px}
+.card-item footer strong{font-family:"Songti SC",serif;font-weight:500;font-size:13px;color:#50634e}
+.card-item.locked footer strong{color:#9aa58f}
+.card-item footer small{font-size:10px;color:#a5ac98}

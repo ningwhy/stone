@@ -80,7 +80,7 @@ try{
  assert.equal(await page.evaluate(()=>window.__mapScene.engine.steps[window.__mapScene.engine.getSnapshot().index].id),'C2-013a');
  // The atlas knows both new scenes, on the 40x40 stage contract.
  await page.getByRole('button',{name:'设置',exact:true}).click();
- await page.getByRole('button',{name:'地图地点',exact:true}).click();
+ await page.getByRole('button',{name:'册页',exact:true}).click();
  await page.locator('.atlas-body').waitFor();
  assert.equal(await page.locator('.atlas-body article').count(),22,'the atlas must list every scene');
  for(const [title,anchors] of [['运河 · 舟行北上',12],['扬州郭外 · 出城山道',10]]){

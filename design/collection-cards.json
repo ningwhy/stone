@@ -1,0 +1,347 @@
+{
+ "version": 1,
+ "cards": [
+  {
+   "id": "place.myth",
+   "kind": "place",
+   "book": 1,
+   "scene": "myth",
+   "name": "大荒山 · 青埂峰（神话）",
+   "subtitle": "青埂峰 · 入世之路",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "myth"
+   }
+  },
+  {
+   "id": "place.suzhou",
+   "kind": "place",
+   "book": 1,
+   "scene": "suzhou",
+   "name": "姑苏 · 仁清巷与甄宅",
+   "subtitle": "甄宅书斋 · 葫芦庙 · 仁清巷",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "suzhou"
+   }
+  },
+  {
+   "id": "place.lantern",
+   "kind": "place",
+   "book": 1,
+   "scene": "lantern",
+   "name": "姑苏 · 元宵灯市",
+   "subtitle": "社火花灯 · 失散处",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "lantern"
+   }
+  },
+  {
+   "id": "place.ruins",
+   "kind": "place",
+   "book": 1,
+   "scene": "ruins",
+   "name": "姑苏 · 葫芦庙火后",
+   "subtitle": "甄宅废墟 · 葫芦庙遗址",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "ruins"
+   }
+  },
+  {
+   "id": "place.farm",
+   "kind": "place",
+   "book": 1,
+   "scene": "farm",
+   "name": "大如州 · 封家田庄",
+   "subtitle": "封家 · 田庄小路",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "farm"
+   }
+  },
+  {
+   "id": "place.dream",
+   "kind": "place",
+   "book": 1,
+   "scene": "dream",
+   "name": "太虚幻境 · 灵河（梦中）",
+   "subtitle": "太虚幻境 · 绛珠仙草 · 因缘转述",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "dream"
+   }
+  },
+  {
+   "id": "place.tavern",
+   "kind": "place",
+   "book": 2,
+   "scene": "tavern",
+   "name": "扬州郭外 · 村肆",
+   "subtitle": "酒肆 · 入城之路",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "tavern"
+   }
+  },
+  {
+   "id": "place.zhitong",
+   "kind": "place",
+   "book": 2,
+   "scene": "zhitong",
+   "name": "扬州郭外 · 智通寺",
+   "subtitle": "通往村肆",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "zhitong"
+   }
+  },
+  {
+   "id": "place.guowai",
+   "kind": "place",
+   "book": 2,
+   "scene": "guowai",
+   "name": "扬州郭外 · 出城山道",
+   "subtitle": "扬州城郭 · 田垄 · 竹林柴门 · 山道",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "guowai"
+   }
+  },
+  {
+   "id": "place.yamen",
+   "kind": "place",
+   "book": 2,
+   "scene": "yamen",
+   "name": "知府衙署 · 雨村仕途",
+   "subtitle": "公堂 · 府衙外",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "yamen"
+   }
+  },
+  {
+   "id": "place.lin",
+   "kind": "place",
+   "book": 2,
+   "scene": "lin",
+   "name": "扬州 · 林府与江岸",
+   "subtitle": "书斋 · 林府 · 江岸",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "lin"
+   }
+  },
+  {
+   "id": "place.canal",
+   "kind": "place",
+   "book": 2,
+   "scene": "canal",
+   "name": "运河 · 舟行北上",
+   "subtitle": "扬州渡口 · 运河东流 · 京城水门",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "canal"
+   }
+  },
+  {
+   "id": "place.yucun",
+   "kind": "place",
+   "book": 3,
+   "scene": "yucun",
+   "name": "京城 · 贾政书房",
+   "subtitle": "本回行迹",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "yucun"
+   }
+  },
+  {
+   "id": "place.capital",
+   "kind": "place",
+   "book": 3,
+   "scene": "capital",
+   "name": "京城 · 宁荣街",
+   "subtitle": "宁国府 · 东 · 荣国府 · 西 · 西墙角门",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "capital"
+   }
+  },
+  {
+   "id": "place.entry",
+   "kind": "place",
+   "book": 3,
+   "scene": "entry",
+   "name": "荣国府 · 贾母院",
+   "subtitle": "本回行迹",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "entry"
+   }
+  },
+  {
+   "id": "place.east",
+   "kind": "place",
+   "book": 3,
+   "scene": "east",
+   "name": "贾赦院 · 东路小院",
+   "subtitle": "南墙黑油大门 · 三层仪门 · 邢夫人房",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "east"
+   }
+  },
+  {
+   "id": "place.dinner",
+   "kind": "place",
+   "book": 3,
+   "scene": "dinner",
+   "name": "贾母院 · 后房与晚膳",
+   "subtitle": "后房 · 贾母房 · 晚膳",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "dinner"
+   }
+  },
+  {
+   "id": "place.night",
+   "kind": "place",
+   "book": 3,
+   "scene": "night",
+   "name": "贾母院 · 碧纱橱与外间",
+   "subtitle": "贾母套间 · 碧纱橱 · 外间暖阁",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "night"
+   }
+  },
+  {
+   "id": "place.central",
+   "kind": "place",
+   "book": 3,
+   "scene": "central",
+   "name": "荣府中轴 · 荣禧堂",
+   "subtitle": "内仪门 · 西耳房 · 东角门",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "central"
+   }
+  },
+  {
+   "id": "place.wang",
+   "kind": "place",
+   "book": 3,
+   "scene": "wang",
+   "name": "王夫人院 · 东廊三间",
+   "subtitle": "王夫人起居处 · 东廊 · 夹道 · 凤姐院门",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "wang"
+   }
+  },
+  {
+   "id": "place.c4_yamen",
+   "kind": "place",
+   "book": 4,
+   "scene": "c4_yamen",
+   "name": "应天府 · 刑堂与退堂密室",
+   "subtitle": "应天府大堂 · 退堂密室",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "c4_yamen"
+   }
+  },
+  {
+   "id": "place.c4_lixiang",
+   "kind": "place",
+   "book": 4,
+   "scene": "c4_lixiang",
+   "name": "荣府东北角 · 梨香院",
+   "subtitle": "前厅 · 后舍 · 通街门 · 西南角门",
+   "unlock": {
+    "type": "read_scene",
+    "scene": "c4_lixiang"
+   }
+  },
+  {
+   "id": "line.stone",
+   "kind": "line",
+   "book": 1,
+   "name": "无材补天",
+   "quote": "女娲炼石补天，独剩下一块，弃在青埂峰下。石头通了灵性，因无材入选，日夜自叹。",
+   "attribution": "开篇",
+   "node": "C1-002",
+   "unlock": {
+    "type": "read",
+    "node": "C1-002"
+   }
+  },
+  {
+   "id": "line.haoliao",
+   "kind": "line",
+   "book": 1,
+   "name": "好了歌",
+   "quote": "世人都晓神仙好，却放不下功名、金银、娇妻和儿孙。到头来，富贵恩情，哪样能长留？",
+   "attribution": "跛足道人",
+   "node": "C1-045",
+   "unlock": {
+    "type": "read",
+    "node": "C1-045"
+   }
+  },
+  {
+   "id": "line.haoliao-note",
+   "kind": "line",
+   "book": 1,
+   "name": "好了歌注",
+   "quote": "陋室空堂，曾经笏满床；衰草枯杨，也曾是歌舞场。金银满箱终成乞丐，嫌官位小反戴枷锁，都是荣枯转眼。",
+   "attribution": "甄士隐",
+   "node": "C1-048",
+   "unlock": {
+    "type": "read",
+    "node": "C1-048"
+   }
+  },
+  {
+   "id": "line.jade",
+   "kind": "line",
+   "book": 2,
+   "name": "衔玉而生",
+   "quote": "次生一子，落胎便口衔有字的美玉，便叫宝玉。",
+   "attribution": "冷子兴演说",
+   "node": "C2-027",
+   "unlock": {
+    "type": "read",
+    "node": "C2-027"
+   }
+  },
+  {
+   "id": "line.water",
+   "kind": "line",
+   "book": 2,
+   "name": "女儿是水作的骨肉",
+   "quote": "他说女儿的骨肉是水做的，男子是泥做的；见女儿清爽，见男子便觉浊臭。",
+   "attribution": "冷子兴转述",
+   "node": "C2-030",
+   "unlock": {
+    "type": "read",
+    "node": "C2-030"
+   }
+  },
+  {
+   "id": "line.huguanfu",
+   "kind": "line",
+   "book": 4,
+   "name": "护官符",
+   "quote": "贾不假，白玉为堂金作马。阿房宫，三百里，住不下金陵一个史。东海缺少白玉床，龙王来请金陵王。丰年好大雪，珍珠如土金如铁。",
+   "attribution": "应天府门子",
+   "node": "C04-033",
+   "unlock": {
+    "type": "read",
+    "node": "C04-033"
+   }
+  }
+ ]
+}

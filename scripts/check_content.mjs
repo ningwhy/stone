@@ -186,5 +186,19 @@ for(const warning of warnings)console.warn(`WARN ${warning}`);
  requireThat(unversioned.length===0,
   `manifest entries with no cache version (no hash, no identity revision): ${unversioned.join(', ')}; run npm run art:webp`);
 }
+// 收集卡片：先 WARN 后 FAIL（设计稿 collection.md 第七节）——第一期只提示数据
+// 漂移（引用了不存在的节点/场景、重复 id），不作为硬失败阻断上线。
+{
+ const cardData=read('design/collection-cards.json');
+ const nodeIds=new Set(story.map(s=>s.id));
+ const seen=new Set();
+ for(const card of cardData.cards){
+  if(seen.has(card.id))warnings.push(`collection: duplicate card id ${card.id}`);seen.add(card.id);
+  if(!['place','line'].includes(card.kind))warnings.push(`collection: ${card.id} has unknown kind ${card.kind}`);
+  const scene=card.unlock.type==='read_scene'?card.unlock.scene:null;
+  if(scene&&!maps.has(scene))warnings.push(`collection: ${card.id} references unknown scene ${scene}`);
+  if(card.unlock.type==='read'&&!nodeIds.has(card.unlock.node))warnings.push(`collection: ${card.id} references unknown node ${card.unlock.node}`);
+ }
+}
 if(errors.length){for(const error of errors)console.error(`ERROR ${error}`);process.exitCode=1;}
 else console.log(`Content passed: ${story.length} nodes, ${chapters.length} sections, ${maps.size} maps, ${Object.keys(cast).length-1} humans, ${Object.keys(manifest).length} assets; chapter counts ${JSON.stringify(Object.fromEntries(books))}; ${docFiles.length} documentation files linked; ${evidenceEntries} evidence entries in ${evidenceFiles.length} table(s). Original-text interpretation and visuals still require human review.`);

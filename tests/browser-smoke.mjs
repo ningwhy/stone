@@ -96,7 +96,15 @@ try{
  assert.ok(await page.locator('.history-list article').count()>=readCount,'the log did not shrink after a jump backwards');
  await page.getByRole('button',{name:'关闭弹窗'}).click();
 
- await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'地图地点',exact:true}).click();assert.equal(await page.locator('.atlas-body article').count(),22);await page.keyboard.press('Escape');
+ await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'册页',exact:true}).click();assert.equal(await page.locator('.atlas-body article').count(),22);
+ // 见闻标签：28 张卡（22 地志 + 6 金句），读过的部分已入册，收集数与页签一致。
+ await page.getByRole('tab',{name:/见闻/}).click();
+ assert.equal(await page.locator('.card-gallery .card-item').count(),28,'the album must list every phase-one card');
+ const unlockedCount=await page.locator('.card-gallery .card-item.unlocked').count();
+ assert.ok(unlockedCount>=1,'reading some nodes must already fill the album');
+ assert.match(await page.getByRole('tab',{name:/见闻/}).textContent(),new RegExp(`${unlockedCount}/28`));
+ await page.getByRole('tab',{name:'地图'}).click();assert.equal(await page.locator('.atlas-body article').count(),22);
+ await page.keyboard.press('Escape');
 
  // A complete painted cast directory makes early characters discoverable after resuming.
  await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'人物图鉴',exact:true}).click();

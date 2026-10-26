@@ -1,6 +1,6 @@
 # 养成 / 探索 与 搜集 / 卡片系统 · 设计方案
 
-> 状态：**设计稿，未实施**。本文只定义玩法与数据形状，代码尚未落地。
+> 状态：**第 0 期 + 金句卡已实施**（2026-10-26）：22 张地志卡 + 6 张金句卡 + 册页面板（设置 → 册页 → 见闻），解锁判定在 `src/collection.ts`，数据在 `design/collection-cards.json`，收集记录存 `localStorage['honglou.collection.v1']`。探索寻访（第四节）与册页拼合（第五节）仍未实施。本文继续作为后续分期的设计依据。
 > 落点：`src/collection.ts`（新）、`design/collection-cards.json`（新）、`src/App.tsx`（新面板）。
 > 前置：本文所有数字都来自当前仓库实测，引用处标了来源，便于复核。
 
