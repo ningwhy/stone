@@ -35,6 +35,14 @@ export class StoryEngine {
   private actionIndex = 0;
   private userPaused = false;
   private overlayPaused = false;
+  // The stage the story is on has to be painted before anybody walks on it.
+  // A scene swap tears the old Phaser game down and builds a new one; until the
+  // new artwork exists, the walk would be staged over an empty board. The
+  // renderer holds the board shut while it loads and releases it when the map
+  // is up. The engine is usable without a renderer (unit tests, replays), so
+  // the gate is open unless somebody explicitly locks it.
+  private stageLocked = false;
+  private pendingLocked = false;
 
   constructor(maps: Record<string,MapData>|MapData, steps = stagedStory) {
     this.maps=typeof (maps as MapData).id==='string' ? {[(maps as MapData).id]:maps as MapData}:maps as Record<string,MapData>; this.steps = steps;
@@ -48,6 +56,13 @@ export class StoryEngine {
   }
   subscribe = (listener: () => void) => { this.listeners.add(listener); return () => { this.listeners.delete(listener); }; };
   getSnapshot = () => this.state;
+  /** Hold the stage shut while its map is still loading. The renderer locks the
+   *  board when a scene starts and releases it once the artwork is on screen;
+   *  until then nobody moves, so a walk is never staged over an empty stage. */
+  lockStage(locked: boolean) {
+    this.stageLocked=locked;
+    if(!locked&&this.pendingLocked){this.pendingLocked=false;this.pump(false);}
+  }
   /** Remaining A* path for presentation only; does not alter movement state. */
   movementPaths() {return this.jobs.map(job=>({actor:job.actor,points:[{col:this.state.actors[job.actor].col,row:this.state.actors[job.actor].row},...job.path.slice(job.cursor).map(point=>({...point}))]}));}
   get step() { return this.steps[this.state.index]; }
@@ -162,6 +177,13 @@ export class StoryEngine {
     }
   }
   private pump(instant: boolean) {
+    // A fresh scene waits for its board. The move that brings the reader there is
+    // held back until the renderer reports the map is up, so nobody walks across
+    // an empty stage. Everything else on the step is staged as authored.
+    if(this.stageLocked&&!instant&&this.jobs.length===0&&this.state.effect===null){
+      const next=this.step.actions[this.actionIndex];
+      if(next&&(next.type==='move'||next.type==='parallel')){this.pendingLocked=true;return;}
+    }
     while (this.actionIndex<this.step.actions.length) {
       this.execute(this.step.actions[this.actionIndex++],instant);
       if (this.jobs.length || this.state.effect) {this.emit(); return;}
@@ -178,6 +200,9 @@ export class StoryEngine {
   }
   tick(seconds: number) {
     if (this.state.paused || this.state.status!=='moving') return;
+    // A locked stage means the board is still being painted: nobody walks and
+    // nothing plays out until the renderer releases it.
+    if(this.stageLocked)return;
     if(this.state.effect){this.state.effect.elapsed+=Math.min(Math.max(seconds,0),.1);if(this.state.effect.elapsed>=this.state.effect.duration){this.state.effect=null;this.pump(false);}else this.emit();return;}
     if(!this.jobs.length)return;
     try {
@@ -205,6 +230,11 @@ export class StoryEngine {
   }
   skip() {
     if (this.state.paused || this.state.status!=='moving') return;
+    // Skipping is a reader's own decision and must work even while the board is
+    // still loading: it drops the walk and stages the arrival in place. It does
+    // not unlock the stage — the renderer owns that, so the next walk still
+    // waits for the board.
+    this.pendingLocked=false;
     try {
       for (const job of this.jobs) Object.assign(this.state.actors[job.actor],job.path.at(-1),{moving:false});
       // Restage the whole batch once every arrival is in place, matching the

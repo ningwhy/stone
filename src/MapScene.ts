@@ -394,7 +394,11 @@ export class MapScene extends Phaser.Scene {
   guides(show:boolean) {this.routeGuide?.setVisible(show);this.grid?.setVisible(show);}
   update(time:number,delta:number) {
     this.clock=time;if(!this.engine.getSnapshot().paused&&!this.presentationPaused)this.actionClock+=delta;
-    if(!this.presentationPaused)this.engine.tick(delta/1000);this.sync();this.drawActionFocus();this.declutterLabels();
+    // Only the stage the story is currently on may drive the engine. When the story
+    // moves to another map, the old scene lives a few frames longer until React swaps
+    // the Phaser game — without this guard it would keep simulating the new stage's
+    // walk, so characters were already moving before the new map ever loaded.
+    if(!this.presentationPaused&&this.engine.getSnapshot().sceneId===this.mapData.id)this.engine.tick(delta/1000);this.sync();this.drawActionFocus();this.declutterLabels();
     if(!this.manual) {
       const p=this.target(),camera=this.cameras.main;
       const targetX=p.x-camera.width/2,targetY=p.y-camera.height/2;

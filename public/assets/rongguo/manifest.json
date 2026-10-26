@@ -1218,23 +1218,23 @@
   "bamboo-gate": {
    "image": "/assets/rongguo/bamboo-gate.png",
    "width": 430,
-   "height": 292,
+   "height": 293,
    "anchor": [
-    205.588,
-    276.033
+    194.511,
+    270.219
    ],
    "source": "art/source/bamboo-gate_s10222102-01.png",
    "matte": "art/matted/bamboo-gate_s10222102-sam.png",
    "crop": [
-    127,
-    353,
-    868,
-    857
+    33,
+    206,
+    1024,
+    882
    ],
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "13e1199359aa"
+   "hash": "bd697ea03003"
   },
   "wood-screen": {
    "image": "/assets/rongguo/wood-screen.png",

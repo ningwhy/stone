@@ -14,6 +14,7 @@ import { actionNarration } from './narration.ts';
 import { emotionOf } from './emotion.ts';
 import { audio } from './audio.ts';
 import { cards, cardsByBook, loadStored, saveStored, sceneIndex, bondCards, tokenCards, unlockedCards } from './collection.ts';
+import type { CardDef } from './collection.ts';
 import { ledgerEntries, loadStoredLedger, saveStoredLedger, unlockedLedger, ledgerActors, ledgerFor, ledgerItemTraces, modeNames, categoryNames } from './ledger.ts';
 import type { LedgerEntry } from './ledger.ts';
 
@@ -32,8 +33,63 @@ function LedgerRow({entry,got,label}:{entry:LedgerEntry;got:boolean;label:string
     </>:<><span className="ledger-mode muted">？</span><div className="ledger-main"><strong>？？？</strong><small>读到这一笔的剧情后入账</small></div></>}
   </article>;
 }
-function Icon({name}: {name:string}) {
-  const shapes:Record<string,string>={
+/** 册页的统一卡格：画框缩略图 + 卡面 + 落款，四种卡共用一个骨架，
+ * 解锁与否只换内容不换尺寸——列表不再「大的大小的小」。
+ * 缩略图按可见性才加载：册页一次 36 张大图同屏解码会把页面卡死。 */
+function CardArt({src,alt}:{src:string;alt:string}) {
+  const ref=useRef<HTMLImageElement>(null);
+  const [visible,setVisible]=useState(false);
+  const [loaded,setLoaded]=useState(false);
+  useEffect(()=>{
+    const node=ref.current;if(!node)return;
+    // The album lives inside a scrolling dialog. `loading=lazy` alone is not
+    // enough there, because the whole panel is laid out at once, so the image
+    // is only fetched once its frame actually reaches the viewport.
+    if(!('IntersectionObserver' in window)){setVisible(true);return;}
+    const observer=new IntersectionObserver(entries=>{
+      for(const entry of entries)if(entry.isIntersecting){setVisible(true);observer.disconnect();}
+    },{root:node.closest('dialog')??null,rootMargin:'300px 0px'});
+    observer.observe(node);
+    return()=>observer.disconnect();
+  },[]);
+  return <span className="card-thumb" ref={ref}>
+    {visible?<img className={`card-art ${loaded?'is-loaded':''}`} src={src} alt={alt} decoding="async" onLoad={()=>setLoaded(true)}/>:<span className="card-art-placeholder" aria-hidden="true"/>}
+  </span>;
+}
+
+function CardTile({card,got}:{card:CardDef;got:boolean}) {
+  const seal=card.kind==='line'||card.kind==='token'?(card.attribution??''):(bookNames[card.book]??`第${card.book}回`);
+  return <article className={`card-item ${card.kind} ${got?'unlocked':'locked'}`} aria-label={got?card.name:'未解锁的卡片'}>
+    {got&&card.image?<CardArt src={card.image} alt={card.name}/>:<span className="card-thumb"><span className="card-mark">？</span></span>}
+    <div className="card-face">
+      {got?<>
+        {card.kind==='line'&&<p className="card-quote">{card.quote}</p>}
+        {card.kind==='token'&&<>
+          <strong className="card-name">{card.name}</strong>
+          {card.quote&&<p className="card-scroll">{card.quote.split('\n').map((line,i)=><span key={i}>{line}</span>)}</p>}
+          <small className="card-subtitle">{card.subtitle}</small>
+        </>}
+        {card.kind==='bond'&&card.bond&&<>
+          <span className={`bond-mode ${card.bond.mode}`}>{({granted:'赏给',sold:'买卖',taken:'被夺'})[card.bond.mode]}</span>
+          <div className="bond-row">
+            <span className="bond-side">{card.bond.from}</span>
+            <span className="bond-arrow" aria-hidden="true">→</span>
+            <span className="bond-side">{card.bond.to}</span>
+          </div>
+          <p className="bond-note">{card.bond.note}</p>
+        </>}
+        {card.kind==='place'&&<>
+          <strong className="card-name">{card.name}</strong>
+          <small className="card-subtitle">{card.subtitle}</small>
+        </>}
+        <span className="card-seal">{seal}</span>
+      </>:<small className="card-hint">读到对应剧情后入册</small>}
+    </div>
+    <footer>{got?<><strong>{card.name}</strong><small>{card.kind==='line'?'金句卡':card.kind==='place'?'地志卡':card.kind==='token'?<>信物{card.source&&<span className="card-source">· 原文：{card.source}</span>}</>:card.subtitle}</small></>:<strong>？？？？</strong>}</footer>
+  </article>;
+}
+
+function Icon({name}: {name:string}) {  const shapes:Record<string,string>={
     map:'M3 5 9 3l6 2 6-2v16l-6 2-6-2-6 2V5Zm6-2v16m6-14v16',
     book:'M4 4h6c2 0 2 1 2 2v15c0-2-1-3-3-3H4V4Zm16 0h-6c-2 0-2 1-2 2v15c0-2 1-3 3-3h5V4Z',
     compass:'m16 8-3 5-5 3 3-5 5-3Zm5 4a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z',
@@ -58,7 +114,14 @@ function GameMap({engine,onScene,onActor,onProgress,onSnapshot,sceneId}: {sceneI
   useEffect(()=>{
     if(!host.current)return;
     const scene=new MapScene(engine,onActor);
-    scene.onReady=ready=>{if(host.current)host.current.dataset.sceneReady=sceneId;onScene(ready);};
+    // Hold the walk until this stage has actually drawn: the story may already be in
+    // its moving state while the map's artwork is still loading, and characters
+    // walking over an empty stage read as a bug.
+    scene.presentationPaused=true;
+    // The engine's gate keeps the walkers on their marks until the board is up.
+    engine.lockStage(true);
+    const failSafe=setTimeout(()=>{scene.presentationPaused=false;engine.lockStage(false);},15000); // a stuck loader must not freeze the story forever
+    scene.onReady=ready=>{clearTimeout(failSafe);scene.presentationPaused=false;engine.lockStage(false);if(host.current)host.current.dataset.sceneReady=sceneId;onScene(ready);};
     scene.onProgress=onProgress;
     const game=new Phaser.Game({type:Phaser.CANVAS,parent:host.current,width:host.current.clientWidth,height:host.current.clientHeight,
       backgroundColor:'#eee8d7',antialias:true,scene:[scene],audio:{noAudio:true},
@@ -78,7 +141,7 @@ function GameMap({engine,onScene,onActor,onProgress,onSnapshot,sceneId}: {sceneI
           if(context){context.drawImage(canvas,0,0,small.width,small.height);snapshotRef.current(small.toDataURL('image/jpeg',.72));}
         }catch{/* canvas already recycled: fall back to the plain stage */ }
       }
-      observer.disconnect();if(host.current)delete host.current.dataset.sceneReady;onScene(null);game.destroy(true);
+      observer.disconnect();clearTimeout(failSafe);engine.lockStage(false);if(host.current)delete host.current.dataset.sceneReady;onScene(null);game.destroy(true);
     };
   },[engine,onActor,onScene,sceneId]);
   return <div className="game-map" ref={host} role="img" aria-label="40×40 格红楼梦等距场景，人物随剧情移动"/>;
@@ -231,6 +294,9 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   };
   const restart=()=>{setAutomatic(false);engine.restart();sceneRef.current?.recenter();setNotice('已回到第一回开篇');};
   const portrait:ActorId=step.speaker==='narrator'?(state.actors.daiyu.visible?'daiyu':(Object.keys(cast) as ActorId[]).find(id=>state.actors[id].visible&&id!=='sedan')??'daiyu'):step.speaker;
+  // 章回列表的已读标注：○ 没读过、◐ 读了一部分、● 读完。读过的节点数直接从 readLog 数出来。
+  const readSet=useMemo(()=>new Set(state.readLog??[]),[state.readLog]);
+  const chapterMarks=useMemo(()=>{const marks=new Map<string,string>();for(const c of chapters){const nodes=story.filter(s=>s.chapter===c.id);const read=nodes.filter(s=>readSet.has(s.id)).length;marks.set(c.id,read===0?'○ 没读':read>=nodes.length?'● 已读':`◐ ${read}/${nodes.length}`);}return marks;},[readSet]);
   const progress=Math.round(state.index/(story.length-1)*100);
   const inMotion=state.status==='moving'||!!travel,ended=state.status==='ended';
   // The reader's own freeze of the stage. An open panel also pauses the performance,
@@ -248,7 +314,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
     <RotateHint/>
     <header className="app-header">
       <a className="brand" href="./" aria-label="红楼一隅首页"><span className="brand-seal">红</span><span>红楼一隅</span></a>
-      <select className="chapter-select" aria-label="选择剧情段落" value={step.chapter} onChange={e=>{const chapter=chapters.find(c=>c.id===e.target.value)!;setAutomatic(false);setTravel(null);engine.seek(chapter.start);}}>{[1,2,3,4].map(book=><optgroup label={bookNames[book]} key={book}>{chapters.filter(c=>c.book===book).map(c=><option value={c.id} key={c.id}>{bookNames[book]} · {c.title}</option>)}</optgroup>)}</select>
+      <select className="chapter-select" aria-label="选择剧情段落" value={step.chapter} onChange={e=>{const chapter=chapters.find(c=>c.id===e.target.value)!;setAutomatic(false);setTravel(null);engine.seek(chapter.start);}}>{[1,2,3,4].map(book=><optgroup label={bookNames[book]} key={book}>{chapters.filter(c=>c.book===book).map(c=><option value={c.id} key={c.id}>{chapterMarks.get(c.id)} {bookNames[book]} · {c.title}</option>)}</optgroup>)}</select>
       <span className="reading-progress" title={`${state.index+1} / ${story.length}`}>{progress}%<progress max="100" value={progress} aria-label="前四回剧情进度"/></span>
       <nav className="playback-controls" aria-label="演出控制">
         {/* One switch, not three. It reads 自动 while the story is waiting for the reader
@@ -330,7 +396,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
         <header className="pickup-header"><span className="pickup-title">获得</span><small>{bookNames[pickup[0].book]??`第${pickup[0].book}回`} · {pickup.length} 件</small></header>
         <div className="pickup-goods">
           {pickup.map(entry=><article key={entry.id} className="pickup-item">
-            {entry.art&&<img src={entry.art} alt={entry.what}/>}
+            {entry.art&&<img src={entry.art} alt={entry.what} loading="lazy" decoding="async"/>}
             <div className="pickup-info">
               <strong>{entry.what}</strong>
               <span className={`ledger-mode ${entry.mode}`}>{modeNames[entry.mode]}</span>
@@ -363,65 +429,20 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           {tokens.length>0&&<section className="card-book">
             <h3 className="card-book-title">信物</h3>
             <div className="card-gallery pair">
-              {tokens.map(card=>{
-                const got=unlocked.has(card.id);
-                return <article key={card.id} className={`card-item token ${got?'unlocked':'locked'}`} aria-label={got?card.name:'未解锁的信物'}>
-                  {got&&card.image&&<img className="card-art" src={card.image} alt={card.name}/>}
-                  <div className="card-face">
-                    {got?<>
-                      <strong className="card-name">{card.name}</strong>
-                      {card.quote&&<p className="card-scroll">{card.quote.split('\n').map((line,i)=><span key={i}>{line}</span>)}</p>}
-                      <small className="card-subtitle">{card.subtitle}</small>
-                      <span className="card-seal">{card.attribution}</span>
-                    </>:<span className="card-mark">？</span>}
-                  </div>
-                  <footer>{got?<><strong>{card.name}</strong><small>信物{card.source&&<span className="card-source">· 原文：{card.source}</span>}</small></>:<strong>？？？？</strong>}</footer>
-                </article>;
-              })}
+              {tokens.map(card=><CardTile key={card.id} card={card} got={unlocked.has(card.id)}/>)}
             </div>
           </section>}
           {bonds.length>0&&<section className="card-book">
             <h3 className="card-book-title">归属</h3>
             <p className="atlas-note">那个年代，人也可以是「给」的。卡上标出这个人从哪里来、到了谁那里去，以及是赏给、买卖还是被夺。</p>
             <div className="card-gallery pair">
-              {bonds.map(card=>{
-                const got=unlocked.has(card.id);
-                const bond=card.bond!;
-                return <article key={card.id} className={`card-item bond ${got?'unlocked':'locked'}`} aria-label={got?`${card.name}的归属`:'未解锁的归属卡'}>
-                  {got&&card.image&&<img className="card-art" src={card.image} alt={card.name}/>}
-                  <div className="card-face">
-                    {got?<>
-                      <span className={`bond-mode ${bond.mode}`}>{({granted:'赏给',sold:'买卖',taken:'被夺'})[bond.mode]}</span>
-                      <div className="bond-row">
-                        <span className="bond-side">{bond.from}</span>
-                        <span className="bond-arrow" aria-hidden="true">→</span>
-                        <span className="bond-side">{bond.to}</span>
-                      </div>
-                      <p className="bond-note">{bond.note}</p>
-                      <span className="card-seal">{bookNames[card.book]??`第${card.book}回`}</span>
-                    </>:<span className="card-mark">？</span>}
-                  </div>
-                  <footer>{got?<><strong>{card.name}</strong><small>{card.subtitle}</small></>:<strong>？？？？</strong>}</footer>
-                </article>;
-              })}
+              {bonds.map(card=><CardTile key={card.id} card={card} got={unlocked.has(card.id)}/>)}
             </div>
           </section>}
           {[...cardsByBook().entries()].map(([book,list])=><section key={book} className="card-book">
             <h3 className="card-book-title">{bookNames[book]??`第${book}回`}</h3>
             <div className="card-gallery">
-              {list.map(card=>{
-                const got=unlocked.has(card.id);
-                return <article key={card.id} className={`card-item ${card.kind} ${got?'unlocked':'locked'}`} aria-label={got?card.name:'未解锁的卡片'}>
-                  {got&&card.image&&<img className="card-art" src={card.image} alt={card.name}/>}
-                  <div className="card-face">
-                    {got?(card.kind==='line'
-                      ?<><p className="card-quote">{card.quote}</p><span className="card-seal">{card.attribution}</span></>
-                      :<><strong className="card-name">{card.name}</strong><small className="card-subtitle">{card.subtitle}</small><span className="card-seal">{bookNames[card.book]??`第${card.book}回`}</span></>)
-                      :<span className="card-mark">？</span>}
-                  </div>
-                  <footer>{got?<><strong>{card.name}</strong><small>{card.kind==='line'?'金句卡':'地志卡'}</small></>:<strong>？？？？</strong>}</footer>
-                </article>;
-              })}
+              {list.map(card=><CardTile key={card.id} card={card} got={unlocked.has(card.id)}/>)}
             </div>
           </section>)}
         </>:<>
@@ -466,7 +487,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
             <h3 className="card-book-title">{itemBook.label}的流转链 · 共 {itemBook.entries.length} 笔</h3>
             {itemBook.entries.map(entry=><LedgerRow key={entry.id} entry={entry} got={ledgerUnlocked.has(entry.id)} label={`${entry.from} → ${entry.to}`}/>)}
             {itemBook.entries.some(e=>e.art&&ledgerUnlocked.has(e.id))&&
-              <img className="ledger-art" src={itemBook.entries.find(e=>e.art&&ledgerUnlocked.has(e.id))!.art} alt={`${itemBook.label}的货品图`}/>}
+              <img className="ledger-art" src={itemBook.entries.find(e=>e.art&&ledgerUnlocked.has(e.id))!.art} alt={`${itemBook.label}的货品图`} loading="lazy" decoding="async"/>}
           </section>}
           </>}
         </>}

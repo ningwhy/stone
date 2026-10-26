@@ -21,6 +21,12 @@ async function fit(){const control=await page.getByRole('button',{name:'继续�
 async function next(skip=true){await dismissPickup(page);const before=await node();await page.getByRole('button',{name:'继续剧情',exact:true}).click();await page.waitForFunction(id=>document.querySelector('.node-label')?.textContent!==id,before);const arrived=await node();await dismissPickup(page,ledgerNodes.has(arrived));const b=page.getByRole('button',{name:'跳过移动',exact:true});if(skip&&await b.isVisible())await b.click();await reading();}
 try{
  await page.goto(process.env.TEST_URL??'http://127.0.0.1:5173');await reading();assert.equal(await node(),'C1-001');await fit();await page.screenshot({path:'artifacts/chapter-opening.png',fullPage:true});
+ // 章回下拉标注已读：读过的那段带 ◐ 或 ●，没读过的带 ○。
+ // 这条检查必须在读完之前——读完一部书之后所有段落都已读，就再也看不到未读标记了。
+ const marks=await page.locator('.chapter-select option').allTextContents();
+ assert.ok(marks.every(m=>/[○◐●]/.test(m)),'every chapter must carry a read mark');
+ assert.ok(marks.some(m=>/[◐●]/.test(m)),'the chapters already read must be marked as read');
+ assert.ok(marks.some(m=>/○/.test(m)),'the chapters not read yet must be marked as unread');
  const visited=new Set();
  for(let i=0;i<story.length;i++){
   assert.equal(await node(),i===story.length-1?'终幕':story[i].id);const data=await saved();assert.equal(data.node,story[i].id);visited.add(data.state.sceneId);assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),206);
@@ -33,8 +39,7 @@ try{
   if(i<story.length-1)await next();
  }
  // The prequel gets its own scene atlas and every section can be selected.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c1-home');await reading();await page.getByRole('button',{name:'本回行迹',exact:true}).click();await page.locator('.journey-sites').waitFor();assert.equal(await page.locator('.journey-site').count(),6);await page.screenshot({path:'artifacts/prequel-journey.png',fullPage:true});await page.getByRole('button',{name:'当前场景',exact:true}).click();
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('letter');await reading();while(await node()!=='END')await next();
+ await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c1-home');await reading();await page.getByRole('button',{name:'本回行迹',exact:true}).click();await page.locator('.journey-sites').waitFor();assert.equal(await page.locator('.journey-site').count(),6);await page.screenshot({path:'artifacts/prequel-journey.png',fullPage:true});await page.getByRole('button',{name:'当前场景',exact:true}).click(); await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('letter');await reading();while(await node()!=='END')await next();
  // The walk stops at the old chapter-three finale, so its history stops there too.
  // That finale is no longer the end of the book: reloading offers to continue, not restart.
  assert.equal(visited.size,22);assert.equal((await saved()).state.history.length,242);await page.reload();await reading();assert.equal(await node(),'END');await page.getByRole('button',{name:'继续剧情',exact:true}).waitFor();
@@ -115,6 +120,23 @@ try{
  const unlockedCount=await page.locator('.card-gallery .card-item.unlocked').count();
  assert.ok(unlockedCount>=1,'reading some nodes must already fill the album');
  assert.match(await page.getByRole('tab',{name:/见闻/}).textContent(),new RegExp(`${unlockedCount}/36`));
+ // 卡格整齐：同一类卡的卡面高度必须一致，缩略图高度也要一致。
+ const faceHeights=await page.locator('.card-face').evaluateAll(els=>{
+   const out={};
+   for(const el of els){const kind=[...el.closest('.card-item').classList].find(c=>['place','line','token','bond'].includes(c));
+     const h=Math.round(el.getBoundingClientRect().height);(out[kind]=out[kind]??new Set()).add(h);}
+   return Object.fromEntries(Object.entries(out).map(([k,v])=>[k,[...v]]));
+ });
+ for(const [kind,heights] of Object.entries(faceHeights))assert.equal(heights.length,1,`${kind} cards must share one height, got ${heights.join('/')}`);
+ const thumbHeights=await page.locator('.card-thumb').evaluateAll(els=>[...new Set(els.map(e=>Math.round(e.getBoundingClientRect().height)))]);
+ assert.equal(thumbHeights.length,1,'every thumbnail must share one height');
+ // 卡图按可见性才加载：册页一次 36 张大图同屏解码会卡死页面。
+ // 断言口径是「已挂上 src 的图」——没进视口的卡只有占位，没有 src。
+ const loadedPics=await page.locator('.card-art[src]').count();
+ assert.ok(loadedPics>=1,'the pictures in view must still load');
+ assert.ok(loadedPics<36,`the album must not load all 36 pictures at once, got ${loadedPics}`);
+ const pendingPics=await page.locator('.card-thumb .card-art-placeholder').count();
+ assert.ok(pendingPics>0,'the pictures outside the view must wait for their turn');
  // 账簿标签：24 笔流转（银两、衣物、物件、人、人情），页签计数与实际入账一致。
  await page.getByRole('tab',{name:/账簿/}).click();
  assert.equal(await page.locator('.ledger-book .ledger-row').count(),24,'the ledger must list every transfer');

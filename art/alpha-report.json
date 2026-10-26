@@ -297,11 +297,11 @@
   },
   {
     "asset": "bamboo-gate",
-    "visiblePixels": 49953,
-    "solidAlpha250Ratio": 0.96603,
-    "faintAlphaRatio": 0.01457,
+    "visiblePixels": 67714,
+    "solidAlpha250Ratio": 0.93814,
+    "faintAlphaRatio": 0.02516,
     "width": 430,
-    "height": 292
+    "height": 293
   },
   {
     "asset": "wood-screen",

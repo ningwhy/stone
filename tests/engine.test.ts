@@ -84,3 +84,29 @@ test('两个人不能共占一块地板：剧本把他们排进同一锚点时�
   if(i<story.length-1)e.advance();
  }
 });
+
+test('a locked stage holds the walk until the board is up, and releasing it starts the walk',()=>{
+  // The renderer locks the stage while a scene's artwork loads. The story may
+  // already be in its moving state, but nobody may walk over an empty board.
+  const e=new StoryEngine(maps());
+  e.seek('U001');               // 黛玉随邢夫人出垂花门，先走到南墙黑油大门
+  e.advance();
+  assert.equal(e.getSnapshot().status,'moving');
+  const before=structuredClone(e.getSnapshot().actors.daiyu);
+  e.lockStage(true);
+  for(let i=0;i<60;i++)e.tick(.1);
+  assert.deepEqual(e.getSnapshot().actors.daiyu,before,'a locked stage must not move anybody');
+  assert.equal(e.getSnapshot().status,'moving');
+  e.lockStage(false);
+  let left=2000;while(e.getSnapshot().status==='moving'&&left-->0)e.tick(.1);
+  assert.notEqual(e.getSnapshot().status,'error',e.getSnapshot().error??'');
+  assert.notDeepEqual(e.getSnapshot().actors.daiyu,before,'releasing the stage must let the walk run');
+});
+test('skip works even while the stage is locked, so the reader is never stuck',()=>{
+  const e=new StoryEngine(maps());
+  e.seek('U001');e.advance();
+  e.lockStage(true);
+  e.skip();
+  assert.notEqual(e.getSnapshot().status,'moving','skip must complete the walk even on a locked stage');
+  assert.notEqual(e.getSnapshot().status,'error',e.getSnapshot().error??'');
+});
