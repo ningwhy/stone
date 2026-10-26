@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { ledgerEntries, unlockedLedger, ledgerFor, ledgerActors, loadStoredLedger, saveStoredLedger, LEDGER_STORE_KEY } from '../src/ledger.ts';
+import { ledgerEntries, unlockedLedger, ledgerFor, ledgerActors, ledgerItemTraces, loadStoredLedger, saveStoredLedger, LEDGER_STORE_KEY } from '../src/ledger.ts';
 import { story } from '../src/story.ts';
 
 const nodeIds = new Set(story.map(s => s.id));
@@ -85,4 +85,29 @@ test('localStorage 存取容错：坏数据不致命', () => {
   assert.deepEqual(loadStoredLedger(), ['ok'], '非字符串项过滤');
   delete (globalThis as Record<string, unknown>).localStorage;
   assert.deepEqual(loadStoredLedger(), [], '无 localStorage 环境不抛错');
+});
+
+test('按物追踪：英莲三笔同链，链序即剧情序', () => {
+  const traces = ledgerItemTraces();
+  const yinglian = traces.find(t => t.key === '英莲');
+  assert.ok(yinglian, '英莲必须有流转链');
+  assert.equal(yinglian!.entries.length, 3, '卖冯渊、偷卖薛家、被薛蟠夺走三笔同链');
+  assert.deepEqual(yinglian!.entries.map(e => e.mode), ['sold', 'sold', 'taken']);
+  assert.ok(yinglian!.entries[0].node !== yinglian!.entries[2].node, '链上节点按剧情先后');
+});
+
+test('按物追踪：括注不拆链，单笔物品也有完整去向', () => {
+  const traces = ledgerItemTraces();
+  assert.ok(traces.length < ledgerEntries.length, '分组必须真的合并了同名条目');
+  const silver = traces.find(t => t.key === '白银五十两');
+  assert.ok(silver && silver.entries.length === 1, '五十两自成一条链');
+  assert.equal(silver!.entries[0].from, '甄士隐');
+  assert.equal(silver!.entries[0].to, '贾雨村');
+});
+
+test('货品图只挂在有信物图的账上，路径指向已存在的卡图', () => {
+  const withArt = ledgerEntries.filter(e => e.art);
+  assert.equal(withArt.length, 4, '护官符、密书、花帐、银两四件挂图');
+  for (const e of withArt) assert.match(e.art!, /^\/assets\/cards\/.+\.webp$/);
+  for (const e of withArt) assert.ok(e.source, '挂图的账必须同时有原文引文');
 });

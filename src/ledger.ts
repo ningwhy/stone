@@ -18,6 +18,8 @@ export interface LedgerEntry {
   amount: number | null;
   circumstance: string;
   source?: string;
+  /** 货品图（与信物卡共用美术）；大多数账没有，展示时退回字面。 */
+  art?: string;
 }
 
 export const ledgerEntries: LedgerEntry[] = (ledgerData as {entries: LedgerEntry[]}).entries;
@@ -84,4 +86,24 @@ export function ledgerActors(): PersonLedger[] {
     for (const n of e.from.split('、')) names.add(n);
   }
   return [...names].map(ledgerFor).sort((a, b) => b.net - a.net || (b.got.length + b.given.length) - (a.got.length + a.given.length));
+}
+
+/** 一件东西（或一个人）的转手链：它在各回、各角色之间的完整流转史。 */
+export interface ItemTrace {
+  /** 分组键：品名去掉括注后的本体（「英莲（偷卖薛家）」与「英莲」同链）。 */
+  key: string;
+  label: string;
+  category: LedgerCategory;
+  entries: LedgerEntry[];
+}
+export function ledgerItemTraces(): ItemTrace[] {
+  const order: string[] = [];
+  const byKey = new Map<string, ItemTrace>();
+  for (const entry of ledgerEntries) {
+    const key = entry.what.split('（')[0];
+    let trace = byKey.get(key);
+    if (!trace) { trace = {key, label: key, category: entry.category, entries: []}; byKey.set(key, trace); order.push(key); }
+    trace.entries.push(entry);
+  }
+  return order.map(key => byKey.get(key)!);
 }

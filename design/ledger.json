@@ -11,7 +11,8 @@
       "mode": "granted",
       "amount": 50,
       "circumstance": "中秋夜雨村吐露盘费无措，士隐当即命小童封银相赠，助他进京赶考。",
-      "source": "当下即命小童进去，速封五十两白银，并两套冬衣。"
+      "source": "当下即命小童进去，速封五十两白银，并两套冬衣。",
+      "art": "/assets/cards/token_yinbi.webp"
     },
     {
       "id": "ledger.yucun-winter-clothes",
@@ -102,7 +103,8 @@
       "mode": "granted",
       "amount": null,
       "circumstance": "转托封肃向甄家娘子讨娇杏作二房的私信。",
-      "source": "早有雨村遣人送了两封银子，四匹锦缎，答谢甄家娘子，又寄一封密书与封肃，转托问甄家娘子要那娇杏作二房。"
+      "source": "早有雨村遣人送了两封银子，四匹锦缎，答谢甄家娘子，又寄一封密书与封肃，转托问甄家娘子要那娇杏作二房。",
+      "art": "/assets/cards/token_yincun-mishu.webp"
     },
     {
       "id": "ledger.jiaoxing-sale",
@@ -206,7 +208,8 @@
       "mode": "granted",
       "amount": null,
       "circumstance": "黛玉安置碧纱橱的当夜，熙凤命人送来帐幔被褥。",
-      "source": "一面早有熙鳳命人送了一頂藕合色花帳，並幾件錦被緞褥之類。"
+      "source": "一面早有熙鳳命人送了一頂藕合色花帳，並幾件錦被緞褥之類。",
+      "art": "/assets/cards/token_huazhang.webp"
     },
     {
       "id": "ledger.grandmother-xiren",
@@ -232,7 +235,8 @@
       "mode": "granted",
       "amount": null,
       "circumstance": "门子从顺袋中取出抄写的护官符递与雨村：本省大族名宦的私单，为官者不可不知。",
-      "source": "一面說，一面從順袋中取出一張抄寫的「护官符」來，遞與雨村。"
+      "source": "一面說，一面從順袋中取出一張抄寫的「护官符」來，遞與雨村。",
+      "art": "/assets/cards/token_huguanfu.webp"
     },
     {
       "id": "ledger.fengyuan-silver",

@@ -1,6 +1,7 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdirSync, readFileSync} from 'node:fs';
+import {dismissPickup} from './lib/pickup.mjs';
 /**
  * Character facing: painted portraits and chibi sprites are not mirrored by a
  * global rule. `design/character-facing.json` records the measured side each
@@ -62,6 +63,7 @@ try{
 const portraits=[];
 let variantSamples=0;
 for(let i=0;i<900;i++){
+   await dismissPickup(page);
    const speaker=await page.locator('.dialogue-line h2, .speaker-line h2').first().textContent().catch(()=>null);
    const node=await page.locator('.node-label').textContent().catch(()=>null);
    const row=await page.evaluate(()=>{

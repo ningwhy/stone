@@ -1,7 +1,9 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {existsSync,mkdirSync,readFileSync} from 'node:fs';
+import {dismissPickup} from './lib/pickup.mjs';
 const story=[1,2,3,4].flatMap(n=>JSON.parse(readFileSync(`design/chapter0${n}-story.json`,'utf8')));
+const ledgerNodes=new Set(JSON.parse(readFileSync('design/ledger.json','utf8')).entries.map(e=>e.node));
 const chapters=[...JSON.parse(readFileSync('design/chapter03-sections.json','utf8')),...JSON.parse(readFileSync('design/chapter04-sections.json','utf8'))];
 const chrome='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||(existsSync(chrome)?chrome:undefined)});
@@ -14,9 +16,9 @@ const node=()=>page.locator('.node-label').textContent();
 // the canvas layer, and that re-rasterisation shows GPU rounding noise even when the
 // painted frame is byte-identical, so it would report a false difference.
 const canvasPixels=()=>page.evaluate(()=>{const canvas=document.querySelector('canvas');const data=canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data;let hash=2166136261;for(let i=0;i<data.length;i++){hash^=data[i];hash=Math.imul(hash,16777619);}return hash>>>0;});
-const reading=async()=>{await page.locator('.loading-screen').waitFor({state:'detached',timeout:20000});for(let i=0;i<4;i++){const skip=page.getByRole('button',{name:'跳过移动',exact:true});if(await skip.isVisible()){await skip.click();await page.waitForTimeout(60);}}await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim());await page.locator('.game-map[data-scene-ready]').waitFor();};
+const reading=async()=>{await dismissPickup(page);await page.locator('.loading-screen').waitFor({state:'detached',timeout:20000});for(let i=0;i<4;i++){const skip=page.getByRole('button',{name:'跳过移动',exact:true});if(await skip.isVisible()){await skip.click();await page.waitForTimeout(60);}}await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim());await page.locator('.game-map[data-scene-ready]').waitFor();};
 async function fit(){const control=await page.getByRole('button',{name:'继续剧情',exact:true}).boundingBox();assert.ok(control);const viewport=page.viewportSize();assert.ok(control.y+control.height<=viewport.height,`controls below screen: ${control.y+control.height}>${viewport.height}`);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
-async function next(skip=true){const before=await node();await page.getByRole('button',{name:'继续剧情',exact:true}).click();await page.waitForFunction(id=>document.querySelector('.node-label')?.textContent!==id,before);const b=page.getByRole('button',{name:'跳过移动',exact:true});if(skip&&await b.isVisible())await b.click();await reading();}
+async function next(skip=true){await dismissPickup(page);const before=await node();await page.getByRole('button',{name:'继续剧情',exact:true}).click();await page.waitForFunction(id=>document.querySelector('.node-label')?.textContent!==id,before);const arrived=await node();await dismissPickup(page,ledgerNodes.has(arrived));const b=page.getByRole('button',{name:'跳过移动',exact:true});if(skip&&await b.isVisible())await b.click();await reading();}
 try{
  await page.goto(process.env.TEST_URL??'http://127.0.0.1:5173');await reading();assert.equal(await node(),'C1-001');await fit();await page.screenshot({path:'artifacts/chapter-opening.png',fullPage:true});
  const visited=new Set();
@@ -114,6 +116,11 @@ try{
  assert.ok(await page.locator('.ledger-people button').count()>=8,'the ledger must name everyone with a balance');
  await page.locator('.ledger-people button').filter({hasText:'贾雨村'}).click();
  assert.match(await page.locator('.ledger-summary').textContent(),/贾雨村/);
+ // 按物视角：英莲的三笔（卖冯渊/偷卖薛家/被夺）合成一条流转链。
+ await page.getByRole('tab',{name:/按物/}).click();
+ await page.locator('.ledger-people button').filter({hasText:'英莲'}).click();
+ assert.match(await page.locator('.ledger-book h3').textContent(),/英莲的流转链/);
+ assert.equal(await page.locator('.ledger-book .ledger-row').count(),3,'the chain lists every transfer of one item');
  await page.getByRole('tab',{name:'地图'}).click();assert.equal(await page.locator('.atlas-body article').count(),22);
  await page.keyboard.press('Escape');
 
@@ -151,6 +158,23 @@ await page.locator('.rotate-hint').waitFor({timeout:4000}).catch(()=>{});
 const rotateDismiss=page.getByRole('button',{name:'仍要竖屏浏览'});
 if(await rotateDismiss.isVisible())await rotateDismiss.click();
 await fit();assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),246);await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('night');await reading();assert.equal(await node(),'T001');await fit();await page.screenshot({path:'artifacts/chapter-mobile.png',fullPage:true});
- await page.reload();await reading();assert.equal(await node(),'T001');await page.evaluate(()=>localStorage.setItem('honglou-four-chapters:v4','{bad'));await page.reload();await reading();assert.equal(await node(),'C1-001');
+ await page.reload();await reading();assert.equal(await node(),'T001');
+// 获得弹窗：清掉账簿存档后重读「交到手上」的节点，货品卡像捡道具一样弹出；
+// 收下后写入存档，回头再读同一段不再弹第二次。
+await page.evaluate(()=>localStorage.removeItem('honglou.ledger.v1'));
+await page.reload();await reading();
+await page.evaluate(()=>window.__mapScene.engine.seek('C1-033'));
+await page.locator('.pickup-overlay').waitFor({timeout:8000});
+assert.equal(await page.locator('.pickup-item').count(),2,'C1-033 hands over silver and winter clothes');
+assert.match(await page.locator('.pickup-item img').first().getAttribute('src'),/token_yinbi/,'the goods show their art');
+await page.getByRole('button',{name:'收下',exact:true}).click();
+await page.locator('.pickup-overlay').waitFor({state:'detached',timeout:5000});
+assert.ok((await page.evaluate(()=>JSON.parse(localStorage.getItem('honglou.ledger.v1')??'[]'))).includes('ledger.yucun-silver-50'),'taking the goods stores them');
+await page.evaluate(()=>window.__mapScene.engine.seek('C1-042'));
+await dismissPickup(page,true);
+await page.evaluate(()=>window.__mapScene.engine.seek('C1-033'));
+await page.waitForTimeout(500);
+assert.equal(await page.locator('.pickup-overlay').count(),0,'collected goods do not pop twice');
+await page.evaluate(()=>localStorage.setItem('honglou-four-chapters:v4','{bad'));await page.reload();await reading();assert.equal(await node(),'C1-001');
  assert.equal(errors.length,0,JSON.stringify(errors));console.log('Passed: all 354 nodes, twenty-two maps, complete history, chapter 1–4 selection, cross-scene save/reload, offscreen reveal, natural movement, pause, settings, atlas, stable map area, minimum readable sprites/labels, zoom hit targets, overview browsing, paused estate travel, controls visible at 1440×900 / 1280×720 / 390×844, corrupt-save recovery.');
 }catch(e){console.error('Browser errors:',errors);console.error((await page.locator('body').innerText()).slice(0,3500));await page.screenshot({path:'artifacts/browser-failure.png',fullPage:true});throw e;}finally{await context.close();await browser.close();}

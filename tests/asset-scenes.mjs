@@ -1,10 +1,11 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {dismissPickup} from './lib/pickup.mjs';
 const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
 const page=await browser.newPage({viewport:{width:1440,height:900},reducedMotion:'reduce'}),errors=[];
 page.on('pageerror',e=>errors.push(e.message));
-const read=async()=>{for(let i=0;i<5;i++){const b=page.getByRole('button',{name:'跳过移动',exact:true});if(await b.isVisible()){await b.click();await page.waitForTimeout(60);}}await page.locator('.dialogue-text').waitFor();await page.locator('.game-map[data-scene-ready]').waitFor();};
+const read=async()=>{await dismissPickup(page);for(let i=0;i<5;i++){const b=page.getByRole('button',{name:'跳过移动',exact:true});if(await b.isVisible()){await b.click();await page.waitForTimeout(60);}}await page.locator('.dialogue-text').waitFor();await page.locator('.game-map[data-scene-ready]').waitFor();await dismissPickup(page);};
 try{
  await page.goto('http://127.0.0.1:5173');await read();
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c1-disaster');await read();

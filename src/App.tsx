@@ -14,7 +14,7 @@ import { actionNarration } from './narration.ts';
 import { emotionOf } from './emotion.ts';
 import { audio } from './audio.ts';
 import { cards, cardsByBook, loadStored, saveStored, sceneIndex, bondCards, tokenCards, unlockedCards } from './collection.ts';
-import { ledgerEntries, loadStoredLedger, saveStoredLedger, unlockedLedger, ledgerActors, ledgerFor, modeNames } from './ledger.ts';
+import { ledgerEntries, loadStoredLedger, saveStoredLedger, unlockedLedger, ledgerActors, ledgerFor, ledgerItemTraces, modeNames, categoryNames } from './ledger.ts';
 import type { LedgerEntry } from './ledger.ts';
 
 type Modal = 'history'|'settings'|'source'|'atlas'|'cast'|ActorId|null;
@@ -106,11 +106,32 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   useEffect(()=>{saveStored(unlocked);},[unlocked.size]); // 只在收集增长时写盘
   // 账簿与卡片同源：读到节点即入账，另有自己的「见过的账」存档。
   const [ledgerPerson,setLedgerPerson]=useState<string|null>(null);
-  const storedLedger=useMemo(()=>loadStoredLedger(),[]);
+  const [ledgerView,setLedgerView]=useState<'people'|'items'>('people');
+  const [ledgerItem,setLedgerItem]=useState<string|null>(null);
+  const [storedLedger,setStoredLedger]=useState<string[]>(()=>loadStoredLedger());
   const ledgerUnlocked=useMemo(()=>unlockedLedger(state.readLog??[],storedLedger),[state.readLog,storedLedger]);
   const ledgerPeople=useMemo(()=>ledgerActors(),[]);
+  const ledgerItems=useMemo(()=>ledgerItemTraces(),[]);
   const personBook=useMemo(()=>ledgerPerson?ledgerFor(ledgerPerson):null,[ledgerPerson]);
+  const itemBook=useMemo(()=>ledgerItem?ledgerItems.find(t=>t.key===ledgerItem)??null:null,[ledgerItem,ledgerItems]);
   useEffect(()=>{saveStoredLedger(ledgerUnlocked);},[ledgerUnlocked.size]);
+  // 获得弹窗：读到有「交到手上」的节点时，像游戏捡道具一样展示货品并请读者收下。
+  // 只认存档里还没见过的账；确认后写入存档，重读、跳回、刷新都不会再弹。
+  const [pickup,setPickup]=useState<LedgerEntry[]|null>(null);
+  const storedLedgerRef=useRef(storedLedger);storedLedgerRef.current=storedLedger;
+  useEffect(()=>{
+    const fresh=ledgerEntries.filter(e=>e.node===step.id&&!storedLedgerRef.current.includes(e.id));
+    if(fresh.length)setPickup(fresh);
+  },[step.id]); // 故意只盯节点变化：存档在确认时才更新，避免二次触发
+  const takePickup=()=>{
+    if(pickup){
+      const ids=pickup.map(e=>e.id);
+      setStoredLedger(prev=>[...new Set([...prev,...ids])]);
+      saveStoredLedger(new Set([...loadStoredLedger(),...ids]));
+      audio.play('sfx-page',1);
+    }
+    setPickup(null);
+  };
   const [overview,setOverview]=useState(false),[travel,setTravel]=useState<Travel|null>(null);
   const [loadProgress,setLoadProgress]=useState(0),[loaded,setLoaded]=useState(false),[overlay,setOverlay]=useState(true);
   const [sceneProgress,setSceneProgress]=useState(0),[sceneReady,setSceneReady]=useState(false),[sceneSlow,setSceneSlow]=useState(false);
@@ -182,22 +203,22 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   },[engine]);
   useEffect(()=>{if(state.status==='reading'||state.status==='ended')save();},[state.index,state.status,save]);
   useEffect(()=>{
-    engine.overlay(modal!==null);
-    if(sceneRef.current)sceneRef.current.input.enabled=modal===null;
+    engine.overlay(modal!==null||pickup!==null);
+    if(sceneRef.current)sceneRef.current.input.enabled=modal===null&&pickup===null;
     if(modal && dialog.current && !dialog.current.open)dialog.current.showModal();
     if(!modal && dialog.current?.open)dialog.current.close();
-  },[modal,engine]);
+  },[modal,pickup,engine]);
   useEffect(()=>{
     // Opening a panel pauses the performance through the engine's overlay flag, which
     // would otherwise switch the auto-play off as a side effect of looking at the
     // settings. The reader's own choice is kept: auto resumes when the panel closes.
-    if(!automatic||travel||state.paused||state.status!=='reading')return;
+    if(!automatic||travel||state.paused||state.status!=='reading'||pickup)return;
     const timer=setTimeout(()=>engine.advance(),Math.max(3800,step.text.length*130));
     return ()=>clearTimeout(timer);
-  },[automatic,state.paused,state.status,state.index,step.text,engine,travel]);
+  },[automatic,state.paused,state.status,state.index,step.text,engine,travel,pickup]);
   useEffect(()=>{
     const handler=(event:KeyboardEvent)=>{
-      if(event.code!=='Space'||event.repeat||modal||travel||['BUTTON','INPUT','SELECT','TEXTAREA'].includes((event.target as HTMLElement)?.tagName))return;
+      if(event.code!=='Space'||event.repeat||modal||pickup||travel||['BUTTON','INPUT','SELECT','TEXTAREA'].includes((event.target as HTMLElement)?.tagName))return;
       event.preventDefault();audio.play('sfx-page');engine.advance();
     };
     window.addEventListener('keydown',handler);return ()=>window.removeEventListener('keydown',handler);
@@ -300,6 +321,23 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
         </section>
     </div>
     {notice&&<div className="toast" role="status">{notice}</div>}
+    {pickup&&<div className="pickup-overlay" role="dialog" aria-modal="true" aria-label="获得物品">
+      <section className="pickup-card">
+        <header className="pickup-header"><span className="pickup-title">获得</span><small>{bookNames[pickup[0].book]??`第${pickup[0].book}回`} · {pickup.length} 件</small></header>
+        <div className="pickup-goods">
+          {pickup.map(entry=><article key={entry.id} className="pickup-item">
+            {entry.art&&<img src={entry.art} alt={entry.what}/>}
+            <div className="pickup-info">
+              <strong>{entry.what}</strong>
+              <span className={`ledger-mode ${entry.mode}`}>{modeNames[entry.mode]}</span>
+              <small className="pickup-flow">{entry.from} → {entry.to}{entry.amount!=null?` · ${entry.amount} 两`:''}</small>
+              <p>{entry.circumstance}</p>
+            </div>
+          </article>)}
+        </div>
+        <button className="next-button pickup-confirm" onClick={takePickup} autoFocus>收下</button>
+      </section>
+    </div>}
     <dialog ref={dialog} onCancel={event=>{event.preventDefault();setModal(null);}} onClick={event=>{if(event.target===dialog.current)setModal(null);}}>
       <div className="modal-header"><h2>{modal==='history'?'对白回看':modal==='settings'?'阅读设置':modal==='source'?'原文与改编':modal==='atlas'?'前四回 · 册页':modal==='cast'?'前四回 · 人物图鉴':character?.fullName}</h2><button className="icon-button" aria-label="关闭弹窗" onClick={()=>setModal(null)}><Icon name="close"/></button></div>
       {modal==='history'&&<div className="history-list">{engine.readHistory().map(entry=><article key={entry.id}><span>{entry.speaker}<small>{entry.id}</small></span><p>{entry.text}</p><button className="text-button" onClick={()=>{setModal(null);setAutomatic(false);engine.seek(entry.id);}}><Icon name="reset"/>回到此处</button></article>)}</div>}
@@ -381,6 +419,11 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           </section>)}
         </>:<>
           <p className="atlas-note">银两、衣物、物件、人：凡原文写明的「获得」与「给出」，都在这本账上——谁在赚钱，谁在花钱，什么东西在什么情形下、以什么价钱在谁手里转了一道。读到对应剧情，这一笔才入账。</p>
+          <div className="ledger-switch" role="tablist" aria-label="账簿视角">
+            <button role="tab" aria-selected={ledgerView==='people'} onClick={()=>setLedgerView('people')}>按人 · 谁赚谁花</button>
+            <button role="tab" aria-selected={ledgerView==='items'} onClick={()=>setLedgerView('items')}>按物 · 流转去向</button>
+          </div>
+          {ledgerView==='people'?<>
           <div className="ledger-people" role="listbox" aria-label="有账目的人物">
             {ledgerPeople.map(p=>{
               const n=p.got.length+p.given.length;
@@ -401,6 +444,24 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           </>:<section className="ledger-book"><h3 className="card-book-title">全部流转 · 按剧情先后</h3>
             {ledgerEntries.map(entry=><LedgerRow key={entry.id} entry={entry} got={ledgerUnlocked.has(entry.id)} label={`${entry.from} → ${entry.to}`}/>)}
           </section>}
+          </>:<>
+          <p className="atlas-note">挑一样东西，看它从哪里来、经过谁的手、最后落在谁那里——什么时候、哪一回、什么情形、价格几何。在这个年代，人在账上也是被转手的一方。</p>
+          <div className="ledger-people" role="listbox" aria-label="账上的物品">
+            {ledgerItems.map(t=>{
+              const got=t.entries.filter(e=>ledgerUnlocked.has(e.id)).length;
+              return <button key={t.key} role="option" aria-selected={ledgerItem===t.key} className={ledgerItem===t.key?'active':''} onClick={()=>setLedgerItem(ledgerItem===t.key?null:t.key)}>
+                <strong>{t.label}</strong>
+                <small>{categoryNames[t.category]} · {got}/{t.entries.length} 笔</small>
+              </button>;
+            })}
+          </div>
+          {itemBook&&<section className="ledger-book">
+            <h3 className="card-book-title">{itemBook.label}的流转链 · 共 {itemBook.entries.length} 笔</h3>
+            {itemBook.entries.map(entry=><LedgerRow key={entry.id} entry={entry} got={ledgerUnlocked.has(entry.id)} label={`${entry.from} → ${entry.to}`}/>)}
+            {itemBook.entries.some(e=>e.art&&ledgerUnlocked.has(e.id))&&
+              <img className="ledger-art" src={itemBook.entries.find(e=>e.art&&ledgerUnlocked.has(e.id))!.art} alt={`${itemBook.label}的货品图`}/>}
+          </section>}
+          </>}
         </>}
       </div>}
 

@@ -234,6 +234,7 @@ for(const warning of warnings)console.warn(`WARN ${warning}`);
   if(!entry.from||!entry.to)warnings.push(`ledger: ${entry.id} has an incomplete transfer`);
   if(!nodeIds.has(entry.node))warnings.push(`ledger: ${entry.id} references unknown node ${entry.node}`);
   if(entry.amount!=null&&(typeof entry.amount!=='number'||!Number.isFinite(entry.amount)||entry.amount<=0))warnings.push(`ledger: ${entry.id} has an invalid amount ${entry.amount}`);
+  if(entry.art&&!existsSync(resolve(root,'public',entry.art.replace(/^\//,''))))warnings.push(`ledger: ${entry.id} art file missing: ${entry.art}`);
   if(entry.source){
    const chapter=String(entry.book).padStart(2,'0');
    const file=resolve(root,`docs/chapter${chapter}-source.txt`);

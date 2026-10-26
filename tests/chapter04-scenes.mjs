@@ -1,6 +1,7 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {readFileSync,mkdirSync} from 'node:fs';
+import {dismissPickup} from './lib/pickup.mjs';
 /**
  * Chapter-four visual acceptance: the two new stages must render, the three new
  * Xue-family characters must appear with painted portraits, and the chapter-four
@@ -15,7 +16,7 @@ const page=await context.newPage(),errors=[];
 page.on('pageerror',e=>errors.push(e.message));
 page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
 mkdirSync('artifacts',{recursive:true});
-const read=async()=>{await page.locator('.loading-screen').waitFor({state:'detached',timeout:20000});for(let i=0;i<5;i++){const b=page.getByRole('button',{name:'跳过移动',exact:true});if(await b.isVisible()){await b.click();await page.waitForTimeout(60);}}await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim());await page.locator('.game-map[data-scene-ready]').waitFor();};
+const read=async()=>{await dismissPickup(page);await page.locator('.loading-screen').waitFor({state:'detached',timeout:20000});for(let i=0;i<5;i++){const b=page.getByRole('button',{name:'跳过移动',exact:true});if(await b.isVisible()){await b.click();await page.waitForTimeout(60);}}await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim());await page.locator('.game-map[data-scene-ready]').waitFor();await dismissPickup(page);};
 const node=()=>page.locator('.node-label').textContent();
 try{
  await page.goto(process.env.TEST_URL??'http://127.0.0.1:4173');await read();
