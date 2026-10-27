@@ -54,7 +54,7 @@ python3 scripts/verify_character_identities.py
 | 室内外/朝向 | 内容检查、`node tests/interior-roof.mjs`（外观随室内占位隐藏/恢复、按栋隔离）、`node tests/actor-facing.mjs`（行走帧与立绘镜像一致，含表情变体按自身朝向裁决；静止与到达帧的朝向由引擎按站位写入，seek 重放与顺序播放结果一致）、`story_path_cells.py`（新陈设不挡路）、全节点引擎与浏览器回归 |
 | 新增/重画人物位图 | `python3 scripts/facing_assets.py`（按资产键多裁切投票测量）→ `python3 scripts/build_facing.py`（合并目视裁决，生成 `design/character-facing.json`）→ `node tests/actor-facing.mjs`；`check:content` 会检查每张位图都有朝向记录 |
 | 资产/新人物 | 原图参数/候选留存、透明度报告、暗底接触表、脸部灰度与配对、位置/尺寸、浏览器加载 |
-| 页面/CSS | 三视口、换立绘不跳高、按钮命中、缩放可读性、弹窗暂停、键盘操作 |
+| 页面/CSS | 三视口、换立绘不跳高、按钮命中、缩放可读性、弹窗暂停、键盘操作；尺寸类问题加 DOM 实测（`getBoundingClientRect`），详见 [UI 改造的诊断纪律](ui-diagnosis.md) |
 | 新回/存档 | 全流程、新旧中段及旧终幕迁移、坏档恢复、所有演员状态、回看历史无重复 |
 
 不能为了通过测试而把“必须有废墟建筑”改成任意占位；也不能把每张图都必须有两个道具当成美术质量标准。测试应验证实际语义与不变量。截图用于人工判断，新运行成功证据与旧基线截图分别记录。
@@ -85,6 +85,10 @@ python3 scripts/verify_character_identities.py
 | ComfyUI 卡住 | 当前队列/服务与网络；不清别人任务、不并行轰炸 |
 | 表情变体不生效 | `manifest.json` 里有没有该 `*-portrait-<emotion>` 条目；`build_art_assets.py` 重建 manifest 会抹掉非校准来源的条目，现已改为合并保留；`check:content` 会检查磁盘上每个 PNG 都已登记 |
 | 某张脸朝向反了 | 该位图在 `design/character-facing.json` 里的记录；先跑 `scripts/facing_assets.py` 重测，再看 `scripts/facing_review_sheet.py` 的目检表；表情变体按自己的键查表，不继承基础立绘 |
+| 改完样式别的界面乱了 | 改了全局选择器却漏了使用点；`grep -rn "\.xxx" src/` 查全使用方，优先加限定而非改基类 |
+| 贴图一直不加载 | 给 `IntersectionObserver` 的 root（`dialog`）或其祖先加了 `overflow`；视口内外各验一次 |
+| 文字排版看着都一样大 | 祖先的通用规则特异性更高（`.atlas-body p` 0,1,1 压过 `.bond-note` 0,1,0）；补同等特异度，改后实测计算字号 |
+| 卡片大小不一 | 内容字数不同导致外框变化；同类卡片外框尺寸必须唯一，文字折行数固定 |
 
 ## 交接格式
 
