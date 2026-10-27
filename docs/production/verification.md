@@ -54,6 +54,7 @@ python3 scripts/verify_character_identities.py
 | 室内外/朝向 | 内容检查、`node tests/interior-roof.mjs`（外观随室内占位隐藏/恢复、按栋隔离）、`node tests/actor-facing.mjs`（行走帧与立绘镜像一致，含表情变体按自身朝向裁决；静止与到达帧的朝向由引擎按站位写入，seek 重放与顺序播放结果一致）、`story_path_cells.py`（新陈设不挡路）、全节点引擎与浏览器回归 |
 | 新增/重画人物位图 | `python3 scripts/facing_assets.py`（按资产键多裁切投票测量）→ `python3 scripts/build_facing.py`（合并目视裁决，生成 `design/character-facing.json`）→ `node tests/actor-facing.mjs`；`check:content` 会检查每张位图都有朝向记录 |
 | 资产/新人物 | 原图参数/候选留存、透明度报告、暗底接触表、脸部灰度与配对、位置/尺寸、浏览器加载 |
+| AI 生图贴图 | 逐条对照母题验收（画面里每件东西都能在母题找到出处）、拼图审图、webp 与生效源图 MSE 对齐，见 [生图纪律](art-prompting.md) |
 | 页面/CSS | 三视口、换立绘不跳高、按钮命中、缩放可读性、弹窗暂停、键盘操作；尺寸类问题加 DOM 实测（`getBoundingClientRect`），详见 [UI 改造的诊断纪律](ui-diagnosis.md) |
 | 新回/存档 | 全流程、新旧中段及旧终幕迁移、坏档恢复、所有演员状态、回看历史无重复 |
 
@@ -89,6 +90,9 @@ python3 scripts/verify_character_identities.py
 | 贴图一直不加载 | 给 `IntersectionObserver` 的 root（`dialog`）或其祖先加了 `overflow`；视口内外各验一次 |
 | 文字排版看着都一样大 | 祖先的通用规则特异性更高（`.atlas-body p` 0,1,1 压过 `.bond-note` 0,1,0）；补同等特异度，改后实测计算字号 |
 | 卡片大小不一 | 内容字数不同导致外框变化；同类卡片外框尺寸必须唯一，文字折行数固定 |
+| 生图里多了没要的器物 | 母题里写了它（托盘/碟子/灯/陪衬）；**从母题删掉**，加否定句无效 |
+| 生成了但图没变 | `latest_source` 只认 `_new` 取错图；按 mtime 取并排除 `_v` 归档 |
+| webp 与源图对不上 | webp 是有损压缩，MD5 不可用；用 64×64 灰度 MSE（阈值 d<5）判定 |
 
 ## 交接格式
 

@@ -34,6 +34,8 @@ Qwen 节点需要官方 API JSON，不是 UI 画布导出。图像输入正确�
 
 服务不可达先 health/queue 判断，区分权限、网络和服务停机，不冒称生成完成。不要并行增加作业尝试“加速”。当前人物图不应为文档编辑重复生成。
 
+母题怎么写、生成后怎么验、`--keep-old` 怎么落盘与归一化，见 [生图纪律：母题、验收与落盘](art-prompting.md)。一句话：**母题里出现的任何名词都会被画出来，风格基底里的否定句救不了你。**
+
 ## WebP 运行副本
 
 运行时通过 `src/art.ts` 统一取素材 URL：manifest 中的 PNG 原图是唯一权威来源（校准、`check:content` 都以它为准），`npm run art:webp`（scripts/build_webp.mjs，需 cwebp）生成同名 `.webp` 并入仓，运行时只请求 WebP；`npm run build` 末尾的 prune_dist 会删除 dist 中未被引用的 PNG。重生成美术后必须重跑 `npm run art:webp`，否则线上请求不到新图。

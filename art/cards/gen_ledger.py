@@ -37,6 +37,12 @@ os.makedirs(PUB, exist_ok=True)
 #    甚至在荒田朽屋这种绝不该有瓶子的场景里立一只巨瓶。
 #    —— 故把风格基底拆成两套：器物用「只有母题那一两件东西、其余全空」，
 #    风景用「只有自然景物、没有任何器物」，并且不再出现会召唤瓶罐的品类词。
+# 4) 【最关键的一条】母题是唯一被真正渲染的正文，风格基底里的否定句权重很低。
+#    母题写了「静置托盘之上」「置于粗陶碟中」「旁边一盏孤灯」「什物杂陈」，
+#    模型就把托盘/碟子/灯/茶罐画了出来——哪怕 STYLE_OBJECT 明写「不要画盘子托着它」。
+#    推论：**母题里出现的任何名词都会被画出来**，所以母题只准包含该笔账目
+#    真正涉及的东西，连「陪衬」都不行；承托物（盘、碟、案、桌）同样是多出来的。
+#    验收清单也必须逐条查「器物是否属于这一笔」，只查「零人物/无文字」会漏。
 STYLE_BASE = ("手绘插画风格：写意水墨、潇洒笔触、大面积留白；"
               "保留明显手绘笔压、停顿与轻微不齐整感，让轮廓产生真实纸上绘制的节奏；"
               "上色保留透明叠染、柔软边缘和纸纹，允许轻微颜色不均与留白。"
@@ -68,22 +74,22 @@ STYLE_LAND = (STYLE_BASE +
 SUBJECTS = {
     # --- 银两 money ---
     "ledger.yucun-winter-clothes": ("两件厚实的旧棉冬衣平铺叠放，灰蓝布面、絮棉微露、针脚粗朴，占据画面中央", STYLE_OBJECT),
-    "ledger.fengsu-land-money": ("一锭白银与几枚散碎银角静置托盘之上，金属泛冷光、边缘磨损，占据画面中央", STYLE_OBJECT),
+    "ledger.fengsu-land-money": ("一锭白银与几枚散碎银角并排散在画面中央，金属泛冷光、边缘磨损，四周一片空白", STYLE_OBJECT),
     "ledger.shiyin-poor-land": ("一片荒薄田地，远处几间歪斜朽屋，茅草零落、篱笆残破，空旷寂寥的远景风景，占据画面中央", STYLE_LAND),
-    "ledger.yucun-fengsu-2liang": ("两枚小银锭并排置于粗陶碟中，器皿朴拙、光泽内敛，占据画面中央", STYLE_OBJECT),
+    "ledger.yucun-fengsu-2liang": ("两枚小银锭并排卧在画面中央，形体敦实、光泽内敛、边缘有细密錾纹，四周一片空白", STYLE_OBJECT),
     "ledger.zhen-silver": ("两封束好的银子以红纸包就，封口压痕可见，静静并列，占据画面中央", STYLE_OBJECT),
     "ledger.zhen-brocade": ("四匹锦缎层层叠放成一摞，织金云纹在缎面流动、边缘垂坠，占据画面中央", STYLE_OBJECT),
     "ledger.fengsu-baijin": ("一只鼓胀饱满的锦囊静置案上，囊口金线束紧、垂坠如水，占据画面中央", STYLE_OBJECT),
-    "ledger.zhen-thanks-goods": ("数件什物杂陈：布匹、茶罐、纸包散而不乱，静物一组，占据画面中央", STYLE_OBJECT),
+    "ledger.zhen-thanks-goods": ("两三份用红纸包好、用细绳捆扎的谢礼包裹，并排散在画面中央，纸面有细密折痕与绳结", STYLE_OBJECT),
     "ledger.fengyuan-silver": ("一只旧木箱敞开，内中白银满箱、缎光溢出箱沿，占据画面中央", STYLE_OBJECT),
-    "ledger.feng-burial-silver": ("素白封套内裹着纸钱与银锭，旁边一盏冷落孤灯，静物一组，占据画面中央", STYLE_OBJECT),
+    "ledger.feng-burial-silver": ("一只素净的白色封套半开着，里头露出几张纸钱与两枚小银锭，封套皱折、纸钱微露边角，占据画面中央", STYLE_OBJECT),
     # --- 衣物 clothing ---
     "ledger.xifeng-cloth": ("两匹裁好的缎子折叠齐整，缎面流光、边幅未动，占据画面中央", STYLE_OBJECT),
     # --- 物件 item ---
     # 荐书是「一纸文书」，鱼符是刻鱼形的木牌，都不是活物，更不是瓶子。
     "ledger.ruhai-recommendation": ("一枚扁平的长方形木牌，上面刻着一条鱼的纹样，木纹清晰，占据画面中央", STYLE_OBJECT),
     # 官凭是「盖了朱印的空纸」，纸面不写名字；印是另一枚器物，可以有。
-    "ledger.zheng-restoration": ("一枚小小的方形官印立着，印面朝前，印面刻着简洁的阳文纹样，占据画面中央", STYLE_OBJECT),
+    "ledger.zheng-restoration": ("一方小巧的官印仰卧在画面中央，顶部雕着一只蜷曲的兽形印钮，印面朝上完全光素、没有任何字或纹样，印身是细腻的青石并镶着一圈暗红边", STYLE_OBJECT),
     "ledger.yucun-letters": ("一只素净的白信封，封缄压好，封皮上没有任何字迹，占据画面中央", STYLE_OBJECT),
 }
 
