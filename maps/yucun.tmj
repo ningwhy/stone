@@ -21,18 +21,28 @@
       "objects": [
         {
           "id": 1,
-          "name": "A0 京城 · 贾政书房",
+          "name": "A1 京城 · 贾政书房",
           "x": 640,
           "y": 512,
           "width": 1280,
           "height": 1152,
           "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 2,
+          "name": "ROOM 京城 · 贾政书房",
+          "x": 768,
+          "y": 576,
+          "width": 1024,
+          "height": 768,
+          "rotation": 0,
           "visible": true,
           "properties": [
             {
               "name": "indoor",
-              "value": true,
-              "type": "bool"
+              "type": "bool",
+              "value": true
             }
           ]
         }
@@ -60,7 +70,7 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 2,
+          "id": 3,
           "name": "visitor",
           "x": 1120.0,
           "y": 1376.0,
@@ -71,7 +81,7 @@
           "point": true
         },
         {
-          "id": 3,
+          "id": 4,
           "name": "host",
           "x": 1312.0,
           "y": 864.0,
@@ -82,7 +92,7 @@
           "point": true
         },
         {
-          "id": 4,
+          "id": 5,
           "name": "guest",
           "x": 1184.0,
           "y": 992.0,
@@ -93,7 +103,7 @@
           "point": true
         },
         {
-          "id": 5,
+          "id": 6,
           "name": "door",
           "x": 1120.0,
           "y": 1632.0,
@@ -116,7 +126,7 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 6,
+          "id": 7,
           "name": "场景动线",
           "x": 0,
           "y": 0,
@@ -150,12 +160,12 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 7,
+          "id": 8,
           "name": "main-hall",
-          "x": 1575.622,
-          "y": 1405.5980000000002,
-          "width": 1100,
-          "height": 888,
+          "x": 1439.6547972972974,
+          "y": 1420.3143468468468,
+          "width": 532.6576576576576,
+          "height": 430.0,
           "rotation": 0,
           "visible": true,
           "gid": 4,
@@ -172,24 +182,48 @@
               "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
-            },
-            {
               "name": "interiorZone",
-              "value": "A0",
+              "value": "ROOM",
               "type": "string"
             }
           ]
         },
         {
-          "id": 8,
+          "id": 9,
+          "name": "bookshelf",
+          "x": 1257.3618,
+          "y": 918.6382,
+          "width": 140.4,
+          "height": 246.95999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 181,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "bookshelf",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 10,
           "name": "writing-desk",
-          "x": 1248.655,
-          "y": 864.655,
-          "width": 180.0,
-          "height": 147.0,
+          "x": 1350.5109,
+          "y": 862.5109,
+          "width": 140.4,
+          "height": 114.66000000000001,
           "rotation": 0,
           "visible": true,
           "gid": 112,
@@ -202,129 +236,148 @@
             },
             {
               "name": "visibility",
-              "value": "always",
+              "value": "interior",
               "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
             }
           ]
         },
         {
-          "id": 9,
-          "name": "garden-tree",
-          "x": 678.4875000000001,
-          "y": 1511.9685,
-          "width": 290,
-          "height": 252,
+          "id": 11,
+          "name": "tea-table",
+          "x": 1174.5562,
+          "y": 1022.5562,
+          "width": 78.0,
+          "height": 69.0,
           "rotation": 0,
           "visible": true,
-          "gid": 3,
+          "gid": 43,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "garden-tree",
+              "value": "tea-table",
               "type": "string"
             },
             {
               "name": "visibility",
-              "value": "always",
+              "value": "interior",
               "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
             }
           ]
         },
         {
-          "id": 10,
-          "name": "garden-tree",
-          "x": 1894.4875000000002,
-          "y": 1319.9685,
-          "width": 290,
-          "height": 252,
+          "id": 12,
+          "name": "round-stool",
+          "x": 1150.25978,
+          "y": 1058.25978,
+          "width": 43.4,
+          "height": 57.66,
           "rotation": 0,
           "visible": true,
-          "gid": 3,
+          "gid": 114,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "garden-tree",
+              "value": "round-stool",
               "type": "string"
             },
             {
               "name": "visibility",
-              "value": "always",
+              "value": "interior",
               "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
             }
           ]
         },
         {
           "id": 13,
-          "name": "official-chair",
-          "x": 1312.444,
-          "y": 736.444,
-          "width": 100.0,
-          "height": 138.0,
+          "name": "wood-screen",
+          "x": 1568.3536,
+          "y": 800.3535999999999,
+          "width": 129.20000000000002,
+          "height": 116.96000000000001,
           "rotation": 0,
           "visible": true,
-          "gid": 113,
+          "gid": 39,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "type": "string",
-              "value": "official-chair"
+              "value": "wood-screen",
+              "type": "string"
             },
             {
               "name": "visibility",
-              "type": "string",
-              "value": "always"
+              "value": "interior",
+              "type": "string"
             },
             {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "garden-tree",
+          "x": 678.8767499999999,
+          "y": 1512.44661,
+          "width": 307.40000000000003,
+          "height": 267.12,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
             }
           ]
         },
         {
           "id": 15,
-          "name": "cabinet",
-          "x": 1696.592,
-          "y": 1184.592,
-          "width": 130.0,
-          "height": 222.0,
+          "name": "garden-tree",
+          "x": 1766.61725,
+          "y": 1512.12787,
+          "width": 295.8,
+          "height": 257.04,
           "rotation": 0,
           "visible": true,
-          "gid": 116,
+          "gid": 3,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "type": "string",
-              "value": "cabinet"
+              "value": "garden-tree",
+              "type": "string"
             },
             {
               "name": "visibility",
-              "type": "string",
-              "value": "always"
-            },
-            {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
+              "value": "always",
+              "type": "string"
             }
           ]
         }
@@ -341,10 +394,10 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 11,
+          "id": 16,
           "name": "writing-desk",
-          "x": 1216,
-          "y": 832,
+          "x": 1318.0,
+          "y": 830.0,
           "width": 64,
           "height": 64,
           "rotation": 0,
@@ -352,23 +405,23 @@
           "type": "collision"
         },
         {
-          "id": 14,
-          "name": "official-chair",
-          "x": 1280,
-          "y": 704,
-          "width": 64.0,
-          "height": 64.0,
+          "id": 17,
+          "name": "tea-table",
+          "x": 1142.0,
+          "y": 990.0,
+          "width": 64,
+          "height": 64,
           "rotation": 0,
           "visible": true,
           "type": "collision"
         },
         {
-          "id": 16,
-          "name": "cabinet",
-          "x": 1664,
-          "y": 1152,
-          "width": 64.0,
-          "height": 64.0,
+          "id": 18,
+          "name": "wood-screen",
+          "x": 1536.0,
+          "y": 768.0,
+          "width": 64,
+          "height": 64,
           "rotation": 0,
           "visible": true,
           "type": "collision"
@@ -385,10 +438,10 @@
       "visible": false,
       "objects": [
         {
-          "id": 12,
+          "id": 19,
           "name": "贾政书房",
           "x": 1312.0,
-          "y": 736.0,
+          "y": 672.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -405,7 +458,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 17,
+  "nextobjectid": 20,
   "properties": [
     {
       "name": "sceneId",
@@ -421,6 +474,21 @@
       "name": "theme",
       "type": "string",
       "value": "formal"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "16,22,4,5,path"
+    },
+    {
+      "name": "walls",
+      "type": "string",
+      "value": "10,8,30,8;10,8,10,26;30,8,30,26;10,26,16,26;20,26,30,26"
+    },
+    {
+      "name": "flowerbeds",
+      "type": "string",
+      "value": "26,22,3,3"
     }
   ]
 }

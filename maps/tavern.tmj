@@ -21,41 +21,31 @@
       "objects": [
         {
           "id": 1,
-          "name": "A0 扬州郭外 · 村肆",
-          "x": 832,
-          "y": 768,
-          "width": 896,
-          "height": 832,
+          "name": "A1 扬州郭外 · 村肆",
+          "x": 768,
+          "y": 896,
+          "width": 1024,
+          "height": 640,
           "rotation": 0,
           "visible": true
         },
         {
           "id": 2,
-          "name": "A1 扬州郭外 · 村肆",
+          "name": "A2 扬州郭外 · 村肆",
           "x": 1024,
           "y": 1536,
           "width": 320,
-          "height": 576,
+          "height": 384,
           "rotation": 0,
           "visible": true
         },
         {
           "id": 3,
-          "name": "A2 扬州郭外 · 村肆",
-          "x": 384,
-          "y": 1600,
-          "width": 640,
-          "height": 320,
-          "rotation": 0,
-          "visible": true
-        },
-        {
-          "id": 4,
           "name": "A3 扬州郭外 · 村肆",
-          "x": 1536,
-          "y": 1600,
-          "width": 512,
-          "height": 320,
+          "x": 1664,
+          "y": 1280,
+          "width": 384,
+          "height": 256,
           "rotation": 0,
           "visible": true
         }
@@ -83,10 +73,21 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 5,
+          "id": 4,
           "name": "entry",
           "x": 1184.0,
-          "y": 1952.0,
+          "y": 1888.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 5,
+          "name": "path",
+          "x": 1184.0,
+          "y": 1632.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -95,17 +96,6 @@
         },
         {
           "id": 6,
-          "name": "path",
-          "x": 1184.0,
-          "y": 1568.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true
-        },
-        {
-          "id": 7,
           "name": "guest",
           "x": 1184.0,
           "y": 1184.0,
@@ -116,9 +106,9 @@
           "point": true
         },
         {
-          "id": 8,
+          "id": 7,
           "name": "host",
-          "x": 1376.0,
+          "x": 1312.0,
           "y": 1056.0,
           "width": 0,
           "height": 0,
@@ -127,9 +117,9 @@
           "point": true
         },
         {
-          "id": 9,
+          "id": 8,
           "name": "left",
-          "x": 992.0,
+          "x": 928.0,
           "y": 1120.0,
           "width": 0,
           "height": 0,
@@ -138,10 +128,21 @@
           "point": true
         },
         {
-          "id": 10,
+          "id": 9,
           "name": "right",
-          "x": 1568.0,
-          "y": 1184.0,
+          "x": 1504.0,
+          "y": 992.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 10,
+          "name": "rear",
+          "x": 1312.0,
+          "y": 992.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -150,20 +151,9 @@
         },
         {
           "id": 11,
-          "name": "rear",
-          "x": 1440.0,
-          "y": 736.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true
-        },
-        {
-          "id": 12,
           "name": "exit",
-          "x": 1952.0,
-          "y": 1952.0,
+          "x": 1760.0,
+          "y": 1440.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -183,7 +173,7 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 13,
+          "id": 12,
           "name": "场景动线",
           "x": 0,
           "y": 0,
@@ -217,99 +207,156 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 14,
-          "name": "estate-tavern",
-          "x": 1445.3475,
-          "y": 997.3475000000001,
-          "width": 919.9999999999999,
-          "height": 794.65,
+          "id": 13,
+          "name": "tavern-house",
+          "x": 1309.8857723577235,
+          "y": 925.4162601626016,
+          "width": 640.2439024390244,
+          "height": 350.0,
           "rotation": 0,
           "visible": true,
-          "gid": 92,
+          "gid": 166,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "estate-tavern",
+              "value": "tavern-house",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "exterior",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "wine-jars",
+          "x": 992.18,
+          "y": 1055.82,
+          "width": 285.12,
+          "height": 260.64,
+          "rotation": 0,
+          "visible": true,
+          "gid": 179,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "wine-jars",
               "type": "string"
             },
             {
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         },
         {
           "id": 15,
-          "name": "square-table",
-          "x": 1312.4151,
-          "y": 1248.4151,
-          "width": 115.49999999999999,
-          "height": 114.8,
+          "name": "tea-table",
+          "x": 1248.72306,
+          "y": 1184.72306,
+          "width": 101.4,
+          "height": 89.7,
           "rotation": 0,
           "visible": true,
-          "gid": 110,
+          "gid": 43,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "square-table",
+              "value": "tea-table",
               "type": "string"
             },
             {
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         },
         {
           "id": 16,
-          "name": "garden-tree",
-          "x": 551.785,
-          "y": 1321.5621999999998,
-          "width": 348.0,
-          "height": 302.4,
+          "name": "tea-table",
+          "x": 1504.66744,
+          "y": 1248.66744,
+          "width": 93.6,
+          "height": 82.8,
           "rotation": 0,
           "visible": true,
-          "gid": 3,
+          "gid": 43,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "garden-tree",
+              "value": "tea-table",
               "type": "string"
             },
             {
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         },
         {
           "id": 17,
+          "name": "round-stool",
+          "x": 1120.25978,
+          "y": 1184.25978,
+          "width": 43.4,
+          "height": 57.66,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "round-stool",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "round-stool",
+          "x": 1376.25978,
+          "y": 1184.25978,
+          "width": 43.4,
+          "height": 57.66,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "round-stool",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 19,
           "name": "garden-tree",
-          "x": 1960.4337500000001,
-          "y": 1642.35905,
-          "width": 377.0,
-          "height": 327.6,
+          "x": 807.5255,
+          "y": 1577.24346,
+          "width": 336.4,
+          "height": 292.32,
           "rotation": 0,
           "visible": true,
           "gid": 3,
@@ -324,127 +371,30 @@
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         },
         {
-          "id": 21,
-          "name": "square-stool-guest",
-          "x": 1120.283,
-          "y": 1120.283,
-          "width": 70.0,
-          "height": 77.0,
+          "id": 20,
+          "name": "garden-tree",
+          "x": 1766.3577500000001,
+          "y": 1383.80913,
+          "width": 284.2,
+          "height": 246.96,
           "rotation": 0,
           "visible": true,
-          "gid": 115,
+          "gid": 3,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "type": "string",
-              "value": "square-stool"
+              "value": "garden-tree",
+              "type": "string"
             },
             {
               "name": "visibility",
-              "type": "string",
-              "value": "always"
-            },
-            {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "id": 23,
-          "name": "square-stool-host",
-          "x": 1376.283,
-          "y": 992.2829999999999,
-          "width": 70.0,
-          "height": 77.0,
-          "rotation": 0,
-          "visible": true,
-          "gid": 115,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "type": "string",
-              "value": "square-stool"
-            },
-            {
-              "name": "visibility",
-              "type": "string",
-              "value": "always"
-            },
-            {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "id": 25,
-          "name": "square-stool-left",
-          "x": 928.2829999999999,
-          "y": 1120.283,
-          "width": 70.0,
-          "height": 77.0,
-          "rotation": 0,
-          "visible": true,
-          "gid": 115,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "type": "string",
-              "value": "square-stool"
-            },
-            {
-              "name": "visibility",
-              "type": "string",
-              "value": "always"
-            },
-            {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "id": 27,
-          "name": "square-stool-right",
-          "x": 1632.283,
-          "y": 1184.283,
-          "width": 70.0,
-          "height": 77.0,
-          "rotation": 0,
-          "visible": true,
-          "gid": 115,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "type": "string",
-              "value": "square-stool"
-            },
-            {
-              "name": "visibility",
-              "type": "string",
-              "value": "always"
-            },
-            {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
+              "value": "always",
+              "type": "string"
             }
           ]
         }
@@ -461,10 +411,10 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 18,
-          "name": "square-table",
-          "x": 1280,
-          "y": 1216,
+          "id": 21,
+          "name": "tea-table",
+          "x": 1216.0,
+          "y": 1152.0,
           "width": 64,
           "height": 64,
           "rotation": 0,
@@ -473,44 +423,11 @@
         },
         {
           "id": 22,
-          "name": "square-stool-guest",
-          "x": 1088,
-          "y": 1088,
-          "width": 64.0,
-          "height": 64.0,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 24,
-          "name": "square-stool-host",
-          "x": 1344,
-          "y": 960,
-          "width": 64.0,
-          "height": 64.0,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 26,
-          "name": "square-stool-left",
-          "x": 896,
-          "y": 1088,
-          "width": 64.0,
-          "height": 64.0,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 28,
-          "name": "square-stool-right",
-          "x": 1600,
-          "y": 1152,
-          "width": 64.0,
-          "height": 64.0,
+          "name": "tea-table",
+          "x": 1472.0,
+          "y": 1216.0,
+          "width": 64,
+          "height": 64,
           "rotation": 0,
           "visible": true,
           "type": "collision"
@@ -527,10 +444,10 @@
       "visible": false,
       "objects": [
         {
-          "id": 19,
-          "name": "酒肆",
-          "x": 1440.0,
-          "y": 928.0,
+          "id": 23,
+          "name": "村肆",
+          "x": 1312.0,
+          "y": 800.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -538,10 +455,10 @@
           "point": true
         },
         {
-          "id": 20,
+          "id": 24,
           "name": "入城之路",
           "x": 1184.0,
-          "y": 1952.0,
+          "y": 1760.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -558,7 +475,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 29,
+  "nextobjectid": 25,
   "properties": [
     {
       "name": "sceneId",
@@ -574,6 +491,16 @@
       "name": "theme",
       "type": "string",
       "value": "garden"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "16,20,4,9,path"
+    },
+    {
+      "name": "flowerbeds",
+      "type": "bool",
+      "value": false
     }
   ]
 }

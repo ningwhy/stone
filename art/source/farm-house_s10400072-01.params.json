@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "farm-house_s10400072-01",
+  "seed": 10400072,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏建筑立绘：一座低矮农家茅屋的房屋主体，正面朝着观者略偏左，土坯墙、厚茅草顶、木门与糊纸小窗。整幅画只有这一座茅屋，白纸背景，房屋之外什么都没有——不要篱笆、不要地面、不要台基、不要树、不要农具、不要人物。房屋底边平齐，完整入画，四周留白。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "2b3ceed2-7370-4728-8259-732587c180c0",
+  "generated_at": "2026-10-28 17:35:48",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1536x1024"
+}

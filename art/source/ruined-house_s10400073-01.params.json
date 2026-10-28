@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "ruined-house_s10400073-01",
+  "seed": 10400073,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏场景立绘：一截烧毁的房屋残迹，三四根焦黑梁柱支着半截坍落的屋顶，旁边一段塌墙与碎瓦。整幅画只有这处残迹，白纸背景——不要完整院落、不要围墙、不要地面、不要台基、不要树木、不要人物。残迹底边平齐，完整入画，四周留白。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "0792f3bc-5c24-42f5-883c-15d85d501d25",
+  "generated_at": "2026-10-28 17:36:02",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1536x1024"
+}

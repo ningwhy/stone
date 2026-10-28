@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 const rawMaps=import.meta.glob('../maps/*.tmj',{query:'?raw',import:'default',eager:true}) as Record<string,string>;
 import { parseTiledMap } from './model.ts';
-import { SAVE_KEY, LEGACY_SAVE_KEY, StoryEngine } from './engine.ts';
+import { SAVE_KEY, LEGACY_SAVE_KEY, LEGACY_V2_KEY, StoryEngine } from './engine.ts';
 import { App } from './App.tsx';
 import './styles.css';
 
@@ -15,7 +15,7 @@ try {
   if (typeof window !== 'undefined') (window as unknown as {__engine?:StoryEngine}).__engine=engine;
   let notice='';
   try {
-    const saved=localStorage.getItem(SAVE_KEY)??localStorage.getItem(LEGACY_SAVE_KEY);
+    const saved=localStorage.getItem(SAVE_KEY)??localStorage.getItem('honglou-four-chapters:v4')??localStorage.getItem(LEGACY_SAVE_KEY)??localStorage.getItem(LEGACY_V2_KEY);
     if(saved) {engine.restore(JSON.parse(saved));notice='已恢复上次的地图与对白进度';}
   } catch {notice='旧存档无法读取，已从第一回开篇重新开始';}
   root.render(<App engine={engine} initialNotice={notice}/>);

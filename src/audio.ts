@@ -15,6 +15,8 @@ export type AudioPrefs = { bgm: number; sfx: number };
 
 const PREFS_KEY = 'honglou.audio.v1';
 const MUTE_KEY = 'honglou.audio.muted.v1';
+/** Bumped whenever the effect files in `public/assets/audio` are rebuilt; see `load()`. */
+const AUDIO_REV = 2;
 const DEFAULTS: AudioPrefs = { bgm: 0.5, sfx: 0.75 };
 
 /** The master switch is remembered separately from the levels, so a reader who silenced
@@ -137,7 +139,11 @@ class AudioEngine {
     if (cached) return Promise.resolve(cached);
     const inFlight = this.loading.get(name);
     if (inFlight) return inFlight;
-    const url = `${import.meta.env.BASE_URL}assets/audio/${name}.ogg`.replace(/\/+/g, '/');
+    // Sound files carry no content hash of their own, and both the browser and the CDN in
+    // front of the site cache by extension — so a rebuilt effect kept its old URL and
+    // readers went on hearing the previous take. One revision for the whole folder is
+    // enough: bump it whenever `npm run audio` rewrites a file.
+    const url = `${import.meta.env.BASE_URL}assets/audio/${name}.ogg?rev=${AUDIO_REV}`.replace(/\/+/g, '/');
     const job = fetch(url)
       .then(response => {
         if (!response.ok) throw new Error(`${url} -> ${response.status}`);

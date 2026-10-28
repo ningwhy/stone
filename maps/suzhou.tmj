@@ -21,41 +21,58 @@
       "objects": [
         {
           "id": 1,
-          "name": "A0 姑苏 · 仁清巷与甄宅",
-          "x": 832,
-          "y": 768,
-          "width": 896,
-          "height": 832,
+          "name": "A1 姑苏 · 仁清巷与甄宅",
+          "x": 1024,
+          "y": 896,
+          "width": 704,
+          "height": 512,
           "rotation": 0,
           "visible": true
         },
         {
           "id": 2,
-          "name": "A1 姑苏 · 仁清巷与甄宅",
-          "x": 1024,
-          "y": 1536,
+          "name": "STUDY 姑苏 · 仁清巷与甄宅",
+          "x": 1280,
+          "y": 896,
           "width": 320,
-          "height": 576,
+          "height": 256,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "type": "bool",
+              "value": true
+            }
+          ]
         },
         {
           "id": 3,
-          "name": "A2 姑苏 · 仁清巷与甄宅",
-          "x": 384,
-          "y": 1600,
-          "width": 640,
+          "name": "A3 姑苏 · 仁清巷与甄宅",
+          "x": 704,
+          "y": 1408,
+          "width": 896,
           "height": 320,
           "rotation": 0,
           "visible": true
         },
         {
           "id": 4,
-          "name": "A3 姑苏 · 仁清巷与甄宅",
-          "x": 1536,
-          "y": 1600,
-          "width": 512,
-          "height": 320,
+          "name": "A4 姑苏 · 仁清巷与甄宅",
+          "x": 448,
+          "y": 1280,
+          "width": 576,
+          "height": 512,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 5,
+          "name": "A5 姑苏 · 仁清巷与甄宅",
+          "x": 1664,
+          "y": 1344,
+          "width": 256,
+          "height": 256,
           "rotation": 0,
           "visible": true
         }
@@ -83,21 +100,10 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 5,
-          "name": "entry",
-          "x": 1184.0,
-          "y": 1952.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true
-        },
-        {
           "id": 6,
-          "name": "path",
-          "x": 1184.0,
-          "y": 1568.0,
+          "name": "entry",
+          "x": 1120.0,
+          "y": 1696.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -106,9 +112,9 @@
         },
         {
           "id": 7,
-          "name": "guest",
-          "x": 1184.0,
-          "y": 1184.0,
+          "name": "path",
+          "x": 1312.0,
+          "y": 1440.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -117,30 +123,8 @@
         },
         {
           "id": 8,
-          "name": "host",
-          "x": 1376.0,
-          "y": 1056.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true
-        },
-        {
-          "id": 9,
-          "name": "left",
-          "x": 992.0,
-          "y": 1120.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true
-        },
-        {
-          "id": 10,
-          "name": "right",
-          "x": 1568.0,
+          "name": "guest",
+          "x": 1440.0,
           "y": 1184.0,
           "width": 0,
           "height": 0,
@@ -149,10 +133,32 @@
           "point": true
         },
         {
+          "id": 9,
+          "name": "host",
+          "x": 1568.0,
+          "y": 1248.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 10,
+          "name": "left",
+          "x": 1056.0,
+          "y": 1376.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
           "id": 11,
-          "name": "rear",
-          "x": 1440.0,
-          "y": 736.0,
+          "name": "right",
+          "x": 1696.0,
+          "y": 1248.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -161,9 +167,20 @@
         },
         {
           "id": 12,
+          "name": "rear",
+          "x": 1632.0,
+          "y": 992.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 13,
           "name": "exit",
-          "x": 1952.0,
-          "y": 1952.0,
+          "x": 1440.0,
+          "y": 1696.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -183,7 +200,7 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 13,
+          "id": 14,
           "name": "场景动线",
           "x": 0,
           "y": 0,
@@ -217,70 +234,147 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 14,
-          "name": "estate-zhen",
-          "x": 1509.1271,
-          "y": 997.1270999999999,
-          "width": 880.0000000000001,
-          "height": 696.3000000000001,
-          "rotation": 0,
-          "visible": true,
-          "gid": 87,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "value": "estate-zhen",
-              "type": "string"
-            },
-            {
-              "name": "visibility",
-              "value": "always",
-              "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
-            }
-          ]
-        },
-        {
           "id": 15,
-          "name": "estate-hulu",
-          "x": 676.0698,
-          "y": 1252.0698,
-          "width": 680.0,
-          "height": 615.4,
+          "name": "zhen-house",
+          "x": 1504.103723916533,
+          "y": 1151.896276083467,
+          "width": 520.0642054574639,
+          "height": 360.0,
           "rotation": 0,
           "visible": true,
-          "gid": 88,
+          "gid": 163,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "estate-hulu",
+              "value": "zhen-house",
               "type": "string"
             },
             {
               "name": "visibility",
-              "value": "always",
+              "value": "exterior",
               "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "interiorZone",
+              "value": "STUDY",
+              "type": "string"
             }
           ]
         },
         {
           "id": 16,
+          "name": "bookshelf",
+          "x": 1494.31155,
+          "y": 1085.68845,
+          "width": 120.9,
+          "height": 212.66,
+          "rotation": 0,
+          "visible": true,
+          "gid": 181,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "bookshelf",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "STUDY",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "tea-table",
+          "x": 1512.50985,
+          "y": 1108.50985,
+          "width": 71.5,
+          "height": 63.25000000000001,
+          "rotation": 0,
+          "visible": true,
+          "gid": 43,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "tea-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "STUDY",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "hulu-temple",
+          "x": 864.1032712765957,
+          "y": 1439.8967287234043,
+          "width": 526.5957446808511,
+          "height": 330.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 164,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "hulu-temple",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "exterior",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "altar-shrine",
+          "x": 782.75952,
+          "y": 1660.2776,
+          "width": 111.83999999999999,
+          "height": 153.6,
+          "rotation": 0,
+          "visible": true,
+          "gid": 177,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "altar-shrine",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 20,
           "name": "garden-tree",
-          "x": 1959.13625,
-          "y": 1512.7653500000001,
-          "width": 319.0,
-          "height": 277.20000000000005,
+          "x": 1638.4875000000002,
+          "y": 1383.9685,
+          "width": 290.0,
+          "height": 252.0,
           "rotation": 0,
           "visible": true,
           "gid": 3,
@@ -295,156 +389,54 @@
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         },
         {
-          "id": 17,
-          "name": "square-table",
-          "x": 1376.4744,
-          "y": 1184.4744,
-          "width": 132.0,
-          "height": 131.20000000000002,
+          "id": 21,
+          "name": "bamboo-cluster",
+          "x": 1119.07724,
+          "y": 1375.07724,
+          "width": 563.0400000000001,
+          "height": 310.96000000000004,
           "rotation": 0,
           "visible": true,
-          "gid": 110,
+          "gid": 189,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "square-table",
+              "value": "bamboo-cluster",
               "type": "string"
             },
             {
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         },
         {
           "id": 22,
-          "name": "square-stool-guest",
-          "x": 1120.283,
-          "y": 1120.283,
-          "width": 70.0,
-          "height": 77.0,
+          "name": "garden-rock",
+          "x": 1253.71169,
+          "y": 1319.82883,
+          "width": 140.6,
+          "height": 154.66,
           "rotation": 0,
           "visible": true,
-          "gid": 115,
+          "gid": 5,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "type": "string",
-              "value": "square-stool"
+              "value": "garden-rock",
+              "type": "string"
             },
             {
               "name": "visibility",
-              "type": "string",
-              "value": "always"
-            },
-            {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "id": 24,
-          "name": "square-stool-host",
-          "x": 1376.283,
-          "y": 992.2829999999999,
-          "width": 70.0,
-          "height": 77.0,
-          "rotation": 0,
-          "visible": true,
-          "gid": 115,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "type": "string",
-              "value": "square-stool"
-            },
-            {
-              "name": "visibility",
-              "type": "string",
-              "value": "always"
-            },
-            {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "id": 26,
-          "name": "square-stool-left",
-          "x": 928.2829999999999,
-          "y": 1120.283,
-          "width": 70.0,
-          "height": 77.0,
-          "rotation": 0,
-          "visible": true,
-          "gid": 115,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "type": "string",
-              "value": "square-stool"
-            },
-            {
-              "name": "visibility",
-              "type": "string",
-              "value": "always"
-            },
-            {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "id": 28,
-          "name": "square-stool-right",
-          "x": 1632.283,
-          "y": 1184.283,
-          "width": 70.0,
-          "height": 77.0,
-          "rotation": 0,
-          "visible": true,
-          "gid": 115,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "type": "string",
-              "value": "square-stool"
-            },
-            {
-              "name": "visibility",
-              "type": "string",
-              "value": "always"
-            },
-            {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
+              "value": "always",
+              "type": "string"
             }
           ]
         }
@@ -461,10 +453,10 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 18,
-          "name": "square-table",
-          "x": 1344,
-          "y": 1152,
+          "id": 23,
+          "name": "tea-table",
+          "x": 1480.0,
+          "y": 1076.0,
           "width": 64,
           "height": 64,
           "rotation": 0,
@@ -472,45 +464,12 @@
           "type": "collision"
         },
         {
-          "id": 23,
-          "name": "square-stool-guest",
-          "x": 1088,
-          "y": 1088,
-          "width": 64.0,
-          "height": 64.0,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 25,
-          "name": "square-stool-host",
-          "x": 1344,
-          "y": 960,
-          "width": 64.0,
-          "height": 64.0,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 27,
-          "name": "square-stool-left",
-          "x": 896,
-          "y": 1088,
-          "width": 64.0,
-          "height": 64.0,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 29,
-          "name": "square-stool-right",
-          "x": 1600,
-          "y": 1152,
-          "width": 64.0,
-          "height": 64.0,
+          "id": 24,
+          "name": "garden-rock",
+          "x": 1216.0,
+          "y": 1280.0,
+          "width": 64,
+          "height": 64,
           "rotation": 0,
           "visible": true,
           "type": "collision"
@@ -527,9 +486,9 @@
       "visible": false,
       "objects": [
         {
-          "id": 19,
-          "name": "甄宅书斋",
-          "x": 1504.0,
+          "id": 25,
+          "name": "甄宅",
+          "x": 1632.0,
           "y": 928.0,
           "width": 0,
           "height": 0,
@@ -538,10 +497,10 @@
           "point": true
         },
         {
-          "id": 20,
-          "name": "葫芦庙",
-          "x": 672.0,
-          "y": 1184.0,
+          "id": 26,
+          "name": "书斋",
+          "x": 1312.0,
+          "y": 1120.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -549,10 +508,21 @@
           "point": true
         },
         {
-          "id": 21,
+          "id": 27,
+          "name": "葫芦庙",
+          "x": 800.0,
+          "y": 1376.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 28,
           "name": "仁清巷",
-          "x": 1184.0,
-          "y": 1824.0,
+          "x": 1120.0,
+          "y": 1696.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -569,7 +539,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 30,
+  "nextobjectid": 29,
   "properties": [
     {
       "name": "sceneId",
@@ -585,6 +555,21 @@
       "name": "theme",
       "type": "string",
       "value": "garden"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "21,18,3,5,path;10,24,3,4,path"
+    },
+    {
+      "name": "walls",
+      "type": "string",
+      "value": "16,14,27,14;16,14,16,22;27,14,27,22;16,22,21,22;24,22,27,22;7,20,16,20;7,20,7,28;16,20,16,28;7,28,10,28;13,28,16,28"
+    },
+    {
+      "name": "flowerbeds",
+      "type": "string",
+      "value": "24,17,2,3;17,19,3,2"
     }
   ]
 }

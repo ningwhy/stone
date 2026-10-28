@@ -8,7 +8,7 @@ import { JourneyMap } from './JourneyMap.tsx';
 import { Portrait } from './Portrait.tsx';
 import { LoadingScreen, RotateHint, SceneLoadingCard } from './LoadingScreen.tsx';
 import { prefetchCast, prefetchUpcoming } from './prefetch.ts';
-import { WorldMap, worldLocations, travelRoute, worldLocationFor } from './WorldMap.tsx';
+import { WorldMap, worldLocations, travelRoute, worldLocationFor, levelForScene, levelTabName } from './WorldMap.tsx';
 import type { Travel } from './WorldMap.tsx';
 import { actionNarration } from './narration.ts';
 import { emotionOf } from './emotion.ts';
@@ -270,6 +270,16 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   useEffect(()=>{if(loaded)return;const timer=setTimeout(()=>setLoaded(true),12000);return ()=>clearTimeout(timer);},[loaded]);
   useEffect(()=>{if(!loaded||!overlay)return;const timer=setTimeout(()=>setOverlay(false),600);return ()=>clearTimeout(timer);},[loaded,overlay]);
   const worldId=worldLocationFor(state.sceneId,state.focus);
+  // The estate overview only makes sense while the story is actually inside 荣国府, which
+  // is books 3–4. Book 5 takes place across the street in 宁国府 and then in 太虚幻境 and
+  // the 迷津; book 6 in 刘家庄. None of those are on the estate map, so offering
+  // 荣国府总览 there dropped the reader onto a plan of a house they were not in — with
+  // 会芳园 listed nowhere. Those books get their own ordered trail instead.
+  // Books 3–6 all unfold in places that exist on the atlas: 荣国府, 宁国府 and the road
+  // between them. Books 1–2 roam through 姑苏、扬州、郭外、村肆 with no single house to
+  // stand in, so they keep the ordered trail of that book's stages instead.
+  const atlasLevel=[3,4,5,6].includes(step.source.chapter)?levelForScene(state.sceneId):null;
+  const overviewLabel=atlasLevel?levelTabName(atlasLevel):'本回行迹';
   const previous=useRef({scene:worldId,index:state.index});
   useEffect(()=>{
     const prev=previous.current;previous.current={scene:worldId,index:state.index};
@@ -307,11 +317,19 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   },[automatic,state.paused,state.status,state.index,step.text,engine,travel,pickup]);
   useEffect(()=>{
     const handler=(event:KeyboardEvent)=>{
-      if(event.code!=='Space'||event.repeat||modal||pickup||travel||['BUTTON','INPUT','SELECT','TEXTAREA'].includes((event.target as HTMLElement)?.tagName))return;
-      event.preventDefault();audio.play('sfx-page');engine.advance();
+      if(event.code!=='Space'||event.repeat||modal||pickup||['BUTTON','INPUT','SELECT','TEXTAREA'].includes((event.target as HTMLElement)?.tagName))return;
+      event.preventDefault();
+      // Space is the same key the reader already uses to turn the page, so it has to
+      // do the obvious thing in both states: while somebody is walking, it cuts the
+      // walk short (the same as the 跳过移动 button); while the dialogue is waiting,
+      // it turns the page. Travelling between two places on the estate map is a
+      // journey of its own, and space ends that too.
+      if(travel){setTravel(null);return;}
+      if(state.status==='moving'){engine.skip();return;}
+      audio.play('sfx-page');engine.advance();
     };
     window.addEventListener('keydown',handler);return ()=>window.removeEventListener('keydown',handler);
-  },[engine,modal,travel]);
+  },[engine,modal,travel,state.status]);
   useEffect(()=>{if(!notice)return;const t=setTimeout(()=>setNotice(''),4500);return ()=>clearTimeout(t);},[notice]);
   const load=()=>{
     try {const value=localStorage.getItem(SAVE_KEY);if(!value)throw new Error('还没有保存的进度');engine.restore(JSON.parse(value));setAutomatic(false);setNotice('已恢复地图与对白进度');}
@@ -339,8 +357,8 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
     <RotateHint/>
     <header className="app-header">
       <a className="brand" href="./" aria-label="红楼一隅首页"><span className="brand-seal">红</span><span>红楼一隅</span></a>
-      <select className="chapter-select" aria-label="选择剧情段落" value={step.chapter} onChange={e=>{const chapter=chapters.find(c=>c.id===e.target.value)!;setAutomatic(false);setTravel(null);engine.seek(chapter.start);}}>{[1,2,3,4].map(book=><optgroup label={bookNames[book]} key={book}>{chapters.filter(c=>c.book===book).map(c=><option value={c.id} key={c.id}>{chapterMarks.get(c.id)} {bookNames[book]} · {c.title}</option>)}</optgroup>)}</select>
-      <span className="reading-progress" title={`${state.index+1} / ${story.length}`}>{progress}%<progress max="100" value={progress} aria-label="前四回剧情进度"/></span>
+      <select className="chapter-select" aria-label="选择剧情段落" value={step.chapter} onChange={e=>{const chapter=chapters.find(c=>c.id===e.target.value)!;setAutomatic(false);setTravel(null);engine.seek(chapter.start);}}>{[1,2,3,4,5,6].map(book=><optgroup label={bookNames[book]} key={book}>{chapters.filter(c=>c.book===book).map(c=><option value={c.id} key={c.id}>{chapterMarks.get(c.id)} {bookNames[book]} · {c.title}</option>)}</optgroup>)}</select>
+      <span className="reading-progress" title={`${state.index+1} / ${story.length}`}>{progress}%<progress max="100" value={progress} aria-label="前五回剧情进度"/></span>
       <nav className="playback-controls" aria-label="演出控制">
         {/* One switch, not three. It reads 自动 while the story is waiting for the reader
             and 暂停 while the story is running itself -- the label always names what the
@@ -379,11 +397,12 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
             {!sceneReady&&sceneSlow&&<SceneLoadingCard title={engine.maps[state.sceneId]?.title??step.place} progress={sceneProgress}/>}
           </div>
           {/* Books 3–4 take place inside the estate, so their overview tab opens the
-              estate map; books 1–2 happen in Yangzhou before the family is reached,
-              and get the ordered trail of that book's stages instead. */}
-          {overview&&(step.source.chapter<3)?<JourneyMap chapter={step.source.chapter} sceneId={state.sceneId} onVisit={node=>{setOverview(false);setAutomatic(false);engine.seek(node);}}/>:(overview||travel)&&<WorldMap sceneId={worldId} travel={travel} onVisit={id=>{const place=worldLocations.find(l=>l.id===id);const scene=place?.scene??id;const target=place?.start?story.find(s=>s.id===place.start):story.find(s=>s.source.chapter===step.source.chapter&&s.scene===scene)??story.find(s=>s.source.chapter===3&&s.scene===scene);if(target){setTravel(null);setOverview(false);setAutomatic(false);engine.seek(target.id);}}}/>}
+              estate map; books 1–2 happen in Yangzhou before the family is reached, and
+              books 5–6 happen in 宁国府, 太虚幻境 and 刘家庄 — both get the ordered trail
+              of that book's stages instead. */}
+          {overview&&!atlasLevel?<JourneyMap chapter={step.source.chapter} sceneId={state.sceneId} maps={engine.maps} onVisit={node=>{setOverview(false);setAutomatic(false);engine.seek(node);}}/>:(overview||travel)&&<WorldMap sceneId={worldId} travel={travel} onVisit={id=>{const place=worldLocations.find(l=>l.id===id);const scene=place?.scene??id;const target=place?.start?story.find(s=>s.id===place.start):story.find(s=>s.source.chapter===step.source.chapter&&s.scene===scene)??story.find(s=>s.source.chapter===3&&s.scene===scene);if(target){setTravel(null);setOverview(false);setAutomatic(false);engine.seek(target.id);}}}/>}
           <div className="map-navigation">
-            <div className="view-switch" aria-label="地图视图"><button aria-pressed={!overview&&!travel} onClick={()=>{setTravel(null);setOverview(false);}}>当前场景</button><button aria-pressed={overview||!!travel} onClick={()=>setOverview(true)}>{step.source.chapter<3?'本回行迹':'荣国府总览'}</button></div>
+            <div className="view-switch" aria-label="地图视图"><button aria-pressed={!overview&&!travel} onClick={()=>{setTravel(null);setOverview(false);}}>当前场景</button><button aria-pressed={overview||!!travel} onClick={()=>setOverview(true)}>{overviewLabel}</button></div>
             <span className="current-place">{travel?`${worldLocations.find(l=>l.id===travel.from)?.name} → ${worldLocations.find(l=>l.id===travel.to)?.name}`:step.place}</span>
           </div>
           {/* The freeze control stays available in every view, because the walk between
@@ -437,10 +456,10 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
       </section>
     </div>}
     <dialog ref={dialog} className={modal==='atlas'?(atlasTab==='ledger'?'is-ledger':'is-atlas'):''} onCancel={event=>{event.preventDefault();setModal(null);}} onClick={event=>{if(event.target===dialog.current)setModal(null);}}>
-      <div className="modal-header"><h2>{modal==='history'?'对白回看':modal==='settings'?'阅读设置':modal==='source'?'原文与改编':modal==='atlas'?'前四回 · 册页':modal==='cast'?'前四回 · 人物图鉴':character?.fullName}</h2><button className="icon-button" aria-label="关闭弹窗" onClick={()=>setModal(null)}><Icon name="close"/></button></div>
+      <div className="modal-header"><h2>{modal==='history'?'对白回看':modal==='settings'?'阅读设置':modal==='source'?'原文与改编':modal==='atlas'?'前五回 · 册页':modal==='cast'?'前五回 · 人物图鉴':character?.fullName}</h2><button className="icon-button" aria-label="关闭弹窗" onClick={()=>setModal(null)}><Icon name="close"/></button></div>
       {modal==='history'&&<div className="history-list">{engine.readHistory().map(entry=><article key={entry.id}><span>{entry.speaker}<small>{entry.id}</small></span><p>{entry.text}</p><button className="text-button" onClick={()=>{setModal(null);setAutomatic(false);engine.seek(entry.id);}}><Icon name="reset"/>回到此处</button></article>)}</div>}
       {modal==='settings'&&<div className="settings-body"><p>{storageError||savedLabel}</p><div className="save-actions"><button className="text-button" onClick={save} disabled={inMotion}>保存</button><button className="text-button" onClick={()=>{setModal(null);load();}}>读取</button><button className="text-button" onClick={()=>{setModal(null);restart();}}>重玩</button><button className="text-button" onClick={()=>setModal('source')}>原文与改编</button><button className="text-button" onClick={()=>setModal('atlas')}>册页</button><button className="text-button" onClick={()=>setModal('cast')}>人物图鉴</button></div><label>人物行走速度<select value={state.speed} onChange={e=>engine.setSpeed(Number(e.target.value))}><option value="0.5">慢行 · 0.5 倍</option><option value="1">常速 · 1 倍</option><option value="2">快行 · 2 倍</option></select></label><label className="check-label"><input type="checkbox" checked={showGuides} onChange={e=>{setShowGuides(e.target.checked);sceneRef.current?.guides(e.target.checked);}}/>显示地图上的引导路线</label><div className="audio-settings"><span className="audio-settings-title">声音</span><label className="check-label"><input type="checkbox" checked={!muted} onChange={e=>{const on=e.target.checked;setMuted(!on);audio.setMuted(!on);}}/>开启全部声音</label><label>背景音乐<input type="range" min="0" max="100" disabled={muted} value={Math.round(audioPrefs.bgm*100)} onChange={e=>{const v=Number(e.target.value)/100;setAudioPrefs(p=>({...p,bgm:v}));audio.setPrefs({bgm:v});}}/></label><label>音效<input type="range" min="0" max="100" disabled={muted} value={Math.round(audioPrefs.sfx*100)} onChange={e=>{const v=Number(e.target.value)/100;setAudioPrefs(p=>({...p,sfx:v}));audio.setPrefs({sfx:v});}}/></label><p className="audio-hint">关掉总开关后音乐与音效同时静默，两个滑杆仍记住原来的音量；重新打开即恢复。音乐随场景变换：园林、街市、运河、夜、室内、太虚各一曲，每一回另有专属的底乐。首次点击页面后开始播放。</p></div><p>打开设置、人物信息或对白记录时，演出会暂停；关掉弹窗后继续。标题栏的「自动」按钮同时管着自动播放：点它开始自动往下读，再点它停下来。</p><p>进度在每条对白到达后自动保存，刷新页面会恢复。隐私浏览或存储限制可能使保存失败。</p></div>}
-      {modal==='source'&&<div className="source-body"><span className="source-badge">{bookNames[step.source.chapter]} · 完整剧情改编</span><p>前四回覆盖石头来历、绛珠还泪、甄家兴衰、雨村仕途、冷子兴演说、黛玉入府全程，以及第四回雨村判案、薛家入京住进梨香院。第四回 112 个节点已全部接入：应天府大堂与退堂密室、薛家入京路上、荣禧堂接风、梨香院安顿。梦境、回忆和转述均另作标识，人物不会因此出现在当下场景。</p><p>底本参考维基文库《红楼梦》第一至四回，正文已存入项目资料。除诗词和少量短句，页面文字为便于交互阅读的改写；空间布局、尺度与演出为设计补充。</p><p>当前节点：{step.id}；对应原文段落起句：“{step.source.paragraphLead}”。</p><p>地图均为 40×40 等距舞台。总览以列增为东、行增为南；西角门按西墙方案布置，黑油大门开在南墙偏东。西角门具体墙面是设计选择，原文明确的是去程出西角门、往东过正门、入黑油大门的顺序；回程门名未明示，本版选择由正门进入。原文中仅被提及、没有实际到访的地点不安排人物进入；第三回宝玉庙里还愿与贾政斋戒只作叙述。</p><p>美术由本地 ComfyUI 生成，经抠图与定位校准接入。服饰与建筑为原创视觉演绎，有形出场的人物均配有立绘与 Q 版图像；只在谈话中提及的家族成员保留为转述。</p></div>}
+      {modal==='source'&&<div className="source-body"><span className="source-badge">{bookNames[step.source.chapter]} · 完整剧情改编</span><p>前五回覆盖石头来历、绛珠还泪、甄家兴衰、雨村仕途、冷子兴演说、黛玉入府全程，第四回雨村判案、薛家入京住进梨香院，第五回宁府会芳园与太虚幻境：宝玉随秦可卿入梦，警幻仙姑引览金陵十二钗册籍与红楼梦十二支。第五回 123 个节点接入宁府卧房、太虚幻境、薄命司与迷津三处 40×40 舞台。第六回自秦氏卧房接续：宝玉梦醒后随袭人回贾母处，视角转到千里之外的刘家庄。刘姥姥连宗旧起，代女婿狗儿进荣国府攀亲，经后门投到周瑞家的门下，被引至凤姐上房，得二十两银子与一吊钱而去。第六回 161 个节点，新建刘家庄与荣府后门至凤姐院两处 40×40 舞台，另复用宁府卧房、贾母院与宁荣街三处。梦境、回忆和转述均另作标识，人物不会因此出现在当下场景。</p><p>底本参考维基文库《红楼梦》第一至五回，正文已存入项目资料。除诗词和少量短句，页面文字为便于交互阅读的改写；空间布局、尺度与演出为设计补充。</p><p>当前节点：{step.id}；对应原文段落起句：“{step.source.paragraphLead}”。</p><p>地图均为 40×40 等距舞台。总览以列增为东、行增为南；西角门按西墙方案布置，黑油大门开在南墙偏东。西角门具体墙面是设计选择，原文明确的是去程出西角门、往东过正门、入黑油大门的顺序；回程门名未明示，本版选择由正门进入。原文中仅被提及、没有实际到访的地点不安排人物进入；第三回宝玉庙里还愿与贾政斋戒只作叙述。</p><p>美术由本地 ComfyUI 生成，经抠图与定位校准接入。服饰与建筑为原创视觉演绎，有形出场的人物均配有立绘与 Q 版图像；只在谈话中提及的家族成员保留为转述。</p></div>}
       {modal==='atlas'&&<div className="atlas-body">
         <div className="atlas-tabs" role="tablist" aria-label="册页视图">
           <button role="tab" aria-selected={atlasTab==='maps'} onClick={()=>setAtlasTab('maps')}>地图</button>

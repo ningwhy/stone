@@ -330,15 +330,43 @@ def fx_door() -> np.ndarray:
 
 
 def fx_page() -> np.ndarray:
-    """Turning a page: high-band noise with two rustles."""
-    dur = 0.42
+    """Turning a page: paper leaving the stack, then settling.
+
+    The old version was two bands of 3.4 kHz noise with a swell-shaped envelope —
+    a spectrum centroid of 5.75 kHz and a rise-then-fall contour. That is the
+    textbook signature of something falling into water, and it was the most
+    frequently played sound in the whole app (every dialogue advance), so it wore
+    on the reader fast.
+
+    A real page turn is mostly *low*: the sheet flexes against the stack below it
+    and that friction lives in the few hundred hertz. The bright part is only the
+    instant the sheet releases and snaps flat — a very short transient, not a
+    sustained hiss. So: a low body, one crisp release, a whisper of fibre, and a
+    tail that dies inside 200 ms so it never overlaps the next line.
+    """
+    dur = 0.26
     n = int(dur * SR)
     t = np.arange(n) / SR
     rng = np.random.default_rng(404)
     noise = rng.standard_normal(n)
-    hi = simple_band(noise, 3400, 0.9)
-    rustle = hi * (np.exp(-((t - 0.10) ** 2) / 0.035) + 0.7 * np.exp(-((t - 0.24) ** 2) / 0.05))
-    return rustle * 0.5
+
+    # The body: paper flexing and sliding across the page below it.
+    body = simple_band(noise, 620, 1.1)
+    body *= np.exp(-t / 0.055) * 0.85
+    # A slow swell underneath so the sheet sounds like it is being lifted, not cut.
+    body *= 0.55 + 0.45 * np.sin(np.pi * np.clip(t / 0.14, 0, 1))
+
+    # The release: the single crisp moment when the corner lets go and the sheet
+    # goes flat. Short, and brighter than the body — but brief enough to read as a
+    # snap, not a hiss, and kept below 2 kHz so it never reads as spray.
+    snap = simple_band(noise, 1750, 1.3)
+    snap *= np.exp(-((t - 0.055) ** 2) / 0.0016) * 0.34
+
+    # Fibre settling: a whisper of grain as the paper comes to rest.
+    settle = simple_band(noise, 1050, 0.8)
+    settle *= np.exp(-((t - 0.085) ** 2) / 0.010) * 0.14
+
+    return body + snap + settle
 
 
 def fx_bell() -> np.ndarray:

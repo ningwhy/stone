@@ -83,7 +83,7 @@ npm run map:inspect        # 需要 Tiled 1.12+，路径可用 TILED_APP 覆盖
 - [透明素材与锚点接触表](art/asset-contact.png)
 - [第四回原文证据表](design/chapter04-evidence.json)、[第四回剧情](design/chapter04-story.json)、[第三回剧情](design/chapter03-story.json)、[入府 Tiled 地图](maps/rongguo-entry.tmj)、[总览 Tiled 参考](maps/world/rongguo-overview.tmj)
 
-网页读取 `maps/*.tmj` 的 20 张局部地图；总览读取 `design/rongguo-world.json`，`maps/world` 为单向导出参考。Tiled 中对象实际坐标优先，资产尺寸与锚点由 manifest 校准契约提供。
+网页读取 `maps/*.tmj` 的 20 张局部地图；总览读取 `design/atlas-maps.json`（三级舆图），`maps/world` 为单向导出参考。Tiled 中对象实际坐标优先，资产尺寸与锚点由 manifest 校准契约提供。
 
 西角门在西墙是本项目采用的方案；黑油门位于南墙偏东。原文明示去程出西角门、往东过正门、入黑油门，回程经过正门是本版设计选择。原文没有唯一精确总图。
 

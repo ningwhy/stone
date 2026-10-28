@@ -1,0 +1,795 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "tiledversion": "1.11.2",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "nextlayerid": 4,
+  "nextobjectid": 21,
+  "layers": [
+    {
+      "id": 1,
+      "name": "Locations",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#526b54",
+      "objects": [
+        {
+          "id": 1,
+          "name": "capital_city",
+          "type": "",
+          "x": 1440.0,
+          "y": 608.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "capital"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": "A001"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "京都 · 神京"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "site"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": "capital"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "黛玉弃舟登岸后入城，一路行至宁荣街。第二回冷子兴说“街东是宁国府，街西是荣国府，二宅相连，竟将大半条街占了”。"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "yangzhou",
+          "type": "",
+          "x": 1120.0,
+          "y": 1760.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "lin"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": "C2-009"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "扬州 · 维扬"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "site"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "林如海任盐政、黛玉辞父北上的地方；贾雨村也曾在此做黛玉西席、后由此入京。"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "yingtian",
+          "type": "",
+          "x": 544.0,
+          "y": 2016.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c4_yamen"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": "C04-007"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "应天府 · 金陵"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "site"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "金陵应天府衙署。贾雨村起复后补授此缺，在此判断薛蟠纵仆行凶一案。"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "suzhou",
+          "type": "",
+          "x": 1376.0,
+          "y": 2272.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "suzhou"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": "C1-019"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "姑苏 · 阊门外"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "site"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "第一回甄士隐家所在，十里街仁清巷葫芦庙旁；故事由此起头。"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "liujiazhuang",
+          "type": "",
+          "x": 2080.0,
+          "y": 992.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c6_village"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": "C06-014"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "京东 · 刘家庄"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "site"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "第六回刘姥姥、板儿所住的京郊村子，进城要走一天，找至宁荣街再进荣国府。"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "taixu",
+          "type": "",
+          "x": 2208.0,
+          "y": 352.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c5_taixu"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": "C05-023"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "太虚幻境"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "myth"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "第五回宝玉梦中所入。不在舆图之内，画在天际以示“幻境”，与京都等实体地点并列在目录里。"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "qinggeng",
+          "type": "",
+          "x": 352.0,
+          "y": 480.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "大荒山 · 青埂峰"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "myth"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "第一回顽石所在；僧道携石下凡历劫，全书由此石头起。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Roads",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#b99553",
+      "objects": [
+        {
+          "id": 8,
+          "name": "suzhou → yangzhou",
+          "type": "",
+          "x": 1376.0,
+          "y": 2400.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -256,
+              "y": -448
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "yangzhou → canal_mid",
+          "type": "",
+          "x": 1120.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 192,
+              "y": -512
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "canal_mid → capital_city",
+          "type": "",
+          "x": 1312.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 128,
+              "y": -640
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "capital_city → yingtian",
+          "type": "",
+          "x": 1440.0,
+          "y": 800.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -704,
+              "y": 1408
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "capital_city → liujiazhuang",
+          "type": "",
+          "x": 1440.0,
+          "y": 800.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 640,
+              "y": 384
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "capital_city → canal_mid",
+          "type": "",
+          "x": 1440.0,
+          "y": 800.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -128,
+              "y": 640
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Art",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#83916c",
+      "objects": [
+        {
+          "id": 14,
+          "name": "京都 · 神京",
+          "type": "",
+          "x": 1638.3147086769231,
+          "y": 755.5817156923076,
+          "width": 880.64,
+          "height": 715.3506461538461,
+          "rotation": 0,
+          "visible": true,
+          "gid": 98,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "manor-main-gate"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "capital"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "capital_city"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "扬州 · 维扬",
+          "type": "",
+          "x": 1122.906273882353,
+          "y": 1762.906273882353,
+          "width": 715.52,
+          "height": 422.9985882352941,
+          "rotation": 0,
+          "visible": true,
+          "gid": 42,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "river-boat"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "lin"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "yangzhou"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "应天府 · 金陵",
+          "type": "",
+          "x": 547.8942176,
+          "y": 2019.8942176,
+          "width": 715.52,
+          "height": 609.0864,
+          "rotation": 0,
+          "visible": true,
+          "gid": 90,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "estate-yamen"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c4_yamen"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "yingtian"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "姑苏 · 阊门外",
+          "type": "",
+          "x": 1376.1207516444445,
+          "y": 2271.879248355556,
+          "width": 605.4399999999999,
+          "height": 419.0990222222222,
+          "rotation": 0,
+          "visible": true,
+          "gid": 163,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "zhen-house"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "suzhou"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "suzhou"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "京东 · 刘家庄",
+          "type": "",
+          "x": 2083.2330496,
+          "y": 995.2330496,
+          "width": 605.4399999999999,
+          "height": 342.07359999999994,
+          "rotation": 0,
+          "visible": true,
+          "gid": 89,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "estate-farm"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c6_village"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "liujiazhuang"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "太虚幻境",
+          "type": "",
+          "x": 2309.3176320000002,
+          "y": 253.47545142857138,
+          "width": 715.52,
+          "height": 677.1885714285714,
+          "rotation": 0,
+          "visible": true,
+          "gid": 136,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "taixu-gate"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c5_taixu"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "taixu"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "大荒山 · 青埂峰",
+          "type": "",
+          "x": 362.6580726153845,
+          "y": 490.08057599999995,
+          "width": 605.4399999999999,
+          "height": 777.7575384615384,
+          "rotation": 0,
+          "visible": true,
+          "gid": 96,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "spirit-stone"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "qinggeng"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "../rongguo-art.tsj"
+    }
+  ],
+  "properties": [
+    {
+      "name": "title",
+      "type": "string",
+      "value": "天下"
+    },
+    {
+      "name": "subtitle",
+      "type": "string",
+      "value": "神京 · 扬州 · 应天府 · 姑苏 —— 第一级"
+    },
+    {
+      "name": "parent",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "note",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "value": "design/atlas-maps.json"
+    }
+  ]
+}

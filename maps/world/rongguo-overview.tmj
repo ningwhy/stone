@@ -9,8 +9,8 @@
   "tilewidth": 128,
   "tileheight": 64,
   "infinite": false,
-  "nextlayerid": 6,
-  "nextobjectid": 56,
+  "nextlayerid": 8,
+  "nextobjectid": 77,
   "layers": [
     {
       "id": 1,
@@ -24,7 +24,7 @@
       "color": "#655441",
       "objects": [
         {
-          "id": 45,
+          "id": 55,
           "name": "西角门",
           "type": "",
           "x": 288.0,
@@ -41,11 +41,6 @@
               "value": "west_gate"
             },
             {
-              "name": "wall",
-              "type": "string",
-              "value": "west"
-            },
-            {
               "name": "asset",
               "type": "string",
               "value": "west-wall-gate"
@@ -53,7 +48,7 @@
           ]
         },
         {
-          "id": 46,
+          "id": 56,
           "name": "荣府正门",
           "type": "",
           "x": 1504.0,
@@ -70,11 +65,6 @@
               "value": "main_gate"
             },
             {
-              "name": "wall",
-              "type": "string",
-              "value": "south"
-            },
-            {
               "name": "asset",
               "type": "string",
               "value": "manor-main-gate"
@@ -82,7 +72,7 @@
           ]
         },
         {
-          "id": 47,
+          "id": 57,
           "name": "黑油大门",
           "type": "",
           "x": 2272.0,
@@ -97,11 +87,6 @@
               "name": "gateId",
               "type": "string",
               "value": "black_gate"
-            },
-            {
-              "name": "wall",
-              "type": "string",
-              "value": "south"
             },
             {
               "name": "asset",
@@ -124,7 +109,7 @@
       "color": "#83916c",
       "objects": [
         {
-          "id": 48,
+          "id": 58,
           "name": "院墙",
           "type": "",
           "x": 256,
@@ -145,7 +130,7 @@
           ]
         },
         {
-          "id": 49,
+          "id": 59,
           "name": "院墙",
           "type": "",
           "x": 2560,
@@ -166,7 +151,7 @@
           ]
         },
         {
-          "id": 50,
+          "id": 60,
           "name": "院墙",
           "type": "",
           "x": 256,
@@ -187,7 +172,7 @@
           ]
         },
         {
-          "id": 51,
+          "id": 61,
           "name": "院墙",
           "type": "",
           "x": 256,
@@ -208,7 +193,7 @@
           ]
         },
         {
-          "id": 52,
+          "id": 62,
           "name": "院墙",
           "type": "",
           "x": 256,
@@ -229,7 +214,7 @@
           ]
         },
         {
-          "id": 53,
+          "id": 63,
           "name": "院墙",
           "type": "",
           "x": 1568.0,
@@ -250,7 +235,7 @@
           ]
         },
         {
-          "id": 54,
+          "id": 64,
           "name": "院墙",
           "type": "",
           "x": 2336.0,
@@ -271,11 +256,11 @@
           ]
         },
         {
-          "id": 55,
+          "id": 65,
           "name": "院墙",
           "type": "",
           "x": 1920,
-          "y": 128,
+          "y": 896,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -287,7 +272,7 @@
             },
             {
               "x": 0,
-              "y": 2176
+              "y": 1408
             }
           ]
         }
@@ -295,6 +280,65 @@
     },
     {
       "id": 3,
+      "name": "Groups",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#9a8f6a",
+      "objects": [
+        {
+          "id": 66,
+          "name": "贾母院",
+          "type": "",
+          "x": 448,
+          "y": 1024,
+          "width": 576,
+          "height": 832,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "groupId",
+              "type": "string",
+              "value": "granny"
+            },
+            {
+              "name": "note",
+              "type": "string",
+              "value": "垂花门—抄手游廊—穿堂（大插屏）—三间内厅—正房大院—五间上房，后房在正房之后，碧纱橱在正房之内。三者同属一院。"
+            }
+          ]
+        },
+        {
+          "id": 67,
+          "name": "荣禧堂 · 正内室",
+          "type": "",
+          "x": 1216,
+          "y": 1280,
+          "width": 640,
+          "height": 576,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "groupId",
+              "type": "string",
+              "value": "rongxi"
+            },
+            {
+              "name": "note",
+              "type": "string",
+              "value": "五间大正房与东西厢房为一院，一条大甬路直通大门。王夫人“时常居坐宴息”就在正室东边的三间耳房与东廊三间小正房，同在此院落之内，不是另起一院。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
       "name": "Locations",
       "type": "objectgroup",
       "draworder": "topdown",
@@ -334,12 +378,27 @@
             {
               "name": "title",
               "type": "string",
-              "value": "荣府西墙 · 西角门"
+              "value": "西角门 · 换轿处"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "site"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
             },
             {
               "name": "description",
               "type": "string",
-              "value": "西侧院墙的入府角门。黛玉由此换轿入内；去贾赦院先出此门，沿墙外道路转到南面，再向东经过荣府正门。"
+              "value": "西侧院墙的入府角门。轿夫抬入走一射之地，转弯处换小厮抬轿，至垂花门落下；去贾赦东院也要先出此门。"
             }
           ]
         },
@@ -347,7 +406,7 @@
           "id": 2,
           "name": "entry",
           "type": "",
-          "x": 672.0,
+          "x": 800.0,
           "y": 1696.0,
           "width": 0,
           "height": 0,
@@ -373,17 +432,302 @@
             {
               "name": "title",
               "type": "string",
-              "value": "贾母院 · 穿堂"
+              "value": "垂花门 · 穿堂 · 正房五间"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "court"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": "granny"
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
             },
             {
               "name": "description",
               "type": "string",
-              "value": "垂花门、游廊、穿堂插屏、贾母院落与正房；黛玉入府认亲，初见凤姐。"
+              "value": "贾母院的正房。黛玉在此拜见外祖母、见三春、凤姐从后房门进来。"
             }
           ]
         },
         {
           "id": 3,
+          "name": "night",
+          "type": "",
+          "x": 800.0,
+          "y": 1504.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "night"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "碧纱橱（贾母正房内）"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "room"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": "granny"
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "碧纱橱是贾母正房里的隔间，不是独立院落。贾母把黛玉安置在橱内，宝玉睡在橱外的床，贾母自己挪进套间暖阁。"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "dinner",
+          "type": "",
+          "x": 672.0,
+          "y": 1184.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "dinner"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "贾母后房 · 晚膳"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "court"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": "granny"
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "正房之后的后房。王夫人携黛玉从后房门由后廊往西，穿过东西穿堂回贾母后院用膳；宝黛初见与摔玉在此。"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "central",
+          "type": "",
+          "x": 1504.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "central"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "荣禧堂 · 五间大正房"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "court"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": "rongxi"
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "向南大厅之后、仪门内的大院落，正经正内室，一条大甬路直接出大门。堂上悬“荣禧堂”赤金九龙青地大匾。"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "wang",
+          "type": "",
+          "x": 1760.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "wang"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "正室东耳房 · 东廊小正房"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "room"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": "rongxi"
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "王夫人居坐宴息之处，在荣禧堂正室东边的三间耳房，再出来是东廊三间小正房。同属荣禧堂院落，不是独立一院。"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "feng",
+          "type": "",
+          "x": 1120.0,
+          "y": 672.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "wang"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": "feng_room"
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": "U019"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "王熙凤院"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "court"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "贾琏、王熙凤住的小小一所房室。在南北宽夹道的北端，粉油大影壁之后。王夫人带黛玉去贾母后房时，在夹道边指给黛玉看。"
+            }
+          ]
+        },
+        {
+          "id": 8,
           "name": "east",
           "type": "",
           "x": 2272.0,
@@ -415,134 +759,32 @@
               "value": "贾赦东院"
             },
             {
-              "name": "description",
+              "name": "kind",
               "type": "string",
-              "value": "荣府东部另院。由南墙偏东的黑油大门进入，经仪门到邢夫人处；不从贾母院横穿院墙。"
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "name": "central",
-          "type": "",
-          "x": 1504.0,
-          "y": 1632.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true,
-          "properties": [
-            {
-              "name": "sceneId",
-              "type": "string",
-              "value": "central"
+              "value": "court"
             },
             {
-              "name": "focus",
+              "name": "group",
               "type": "string",
               "value": ""
             },
             {
-              "name": "storyNode",
+              "name": "drill",
               "type": "string",
               "value": ""
-            },
-            {
-              "name": "title",
-              "type": "string",
-              "value": "荣禧堂"
             },
             {
               "name": "description",
               "type": "string",
-              "value": "内仪门、荣禧堂正堂、东边侧门；黛玉观察堂上陈设。"
+              "value": "荣府东部另院，由南墙偏东的黑油大门进入，三层仪门。院宇小巧别致，是从荣府花园隔断过来的。"
             }
           ]
         },
         {
-          "id": 5,
-          "name": "wang",
+          "id": 9,
+          "name": "c4_lixiang",
           "type": "",
-          "x": 1568.0,
-          "y": 928.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true,
-          "properties": [
-            {
-              "name": "sceneId",
-              "type": "string",
-              "value": "wang"
-            },
-            {
-              "name": "focus",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "name": "storyNode",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "name": "title",
-              "type": "string",
-              "value": "王夫人院"
-            },
-            {
-              "name": "description",
-              "type": "string",
-              "value": "正室东耳房、候茶室、东廊三间小正房与王夫人起居处；后廊接南北夹道。"
-            }
-          ]
-        },
-        {
-          "id": 6,
-          "name": "dinner",
-          "type": "",
-          "x": 672.0,
-          "y": 1056.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true,
-          "properties": [
-            {
-              "name": "sceneId",
-              "type": "string",
-              "value": "dinner"
-            },
-            {
-              "name": "focus",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "name": "storyNode",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "name": "title",
-              "type": "string",
-              "value": "贾母后房 · 晚膳"
-            },
-            {
-              "name": "description",
-              "type": "string",
-              "value": "贾母后房用膳、奉茶、问读书；宝黛初见与摔玉也在此演出。"
-            }
-          ]
-        },
-        {
-          "id": 7,
-          "name": "night",
-          "type": "",
-          "x": 672.0,
+          "x": 2208.0,
           "y": 416.0,
           "width": 0,
           "height": 0,
@@ -553,7 +795,7 @@
             {
               "name": "sceneId",
               "type": "string",
-              "value": "night"
+              "value": "c4_lixiang"
             },
             {
               "name": "focus",
@@ -563,22 +805,37 @@
             {
               "name": "storyNode",
               "type": "string",
-              "value": ""
+              "value": "C04-104"
             },
             {
               "name": "title",
               "type": "string",
-              "value": "碧纱橱 · 外间"
+              "value": "梨香院"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "court"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
             },
             {
               "name": "description",
               "type": "string",
-              "value": "碧纱橱、贾母卧房与宝玉外间床；安寝、袭人劝慰及次晨请安。"
+              "value": "荣府东北角的小院，荣公暮年养静之所，薛姨妈一家进京后住此。另有街门通街，西南角门通夹道，出去便是王夫人正房的东边。"
             }
           ]
         },
         {
-          "id": 8,
+          "id": 10,
           "name": "yucun",
           "type": "",
           "x": 1504.0,
@@ -610,55 +867,31 @@
               "value": "贾政书房"
             },
             {
-              "name": "description",
+              "name": "kind",
               "type": "string",
-              "value": "贾政的外书房院落。雨村进京持荐书求见的独立支线；黛玉不参与此场拜访。"
-            }
-          ]
-        },
-        {
-          "id": 9,
-          "name": "feng",
-          "type": "",
-          "x": 1184.0,
-          "y": 544.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true,
-          "properties": [
-            {
-              "name": "sceneId",
-              "type": "string",
-              "value": "wang"
+              "value": "court"
             },
             {
-              "name": "focus",
+              "name": "group",
               "type": "string",
-              "value": "feng_room"
+              "value": ""
             },
             {
-              "name": "storyNode",
+              "name": "drill",
               "type": "string",
-              "value": "U019"
-            },
-            {
-              "name": "title",
-              "type": "string",
-              "value": "王熙凤院"
+              "value": ""
             },
             {
               "name": "description",
               "type": "string",
-              "value": "贾琏、王熙凤居住的小院，粉油大影壁后为院门。王夫人领黛玉经过夹道时指认此处；本回只到门前，不虚构入室剧情。"
+              "value": "贾政的外书房院落，雨村进京持荐书求见的独立支线。第三回黛玉来时贾政“斋戒去了”，原文并未写她到此。"
             }
           ]
         }
       ]
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Roads",
       "type": "objectgroup",
       "draworder": "topdown",
@@ -669,7 +902,7 @@
       "color": "#b99553",
       "objects": [
         {
-          "id": 10,
+          "id": 11,
           "name": "capital → west_out",
           "type": "",
           "x": 288.0,
@@ -690,7 +923,7 @@
           ]
         },
         {
-          "id": 11,
+          "id": 12,
           "name": "west_out → west_turn",
           "type": "",
           "x": 160.0,
@@ -711,7 +944,7 @@
           ]
         },
         {
-          "id": 12,
+          "id": 13,
           "name": "west_turn → south_main",
           "type": "",
           "x": 160.0,
@@ -732,7 +965,7 @@
           ]
         },
         {
-          "id": 13,
+          "id": 14,
           "name": "south_main → south_black",
           "type": "",
           "x": 1504.0,
@@ -753,7 +986,7 @@
           ]
         },
         {
-          "id": 14,
+          "id": 15,
           "name": "south_main → main_gate",
           "type": "",
           "x": 1504.0,
@@ -774,7 +1007,7 @@
           ]
         },
         {
-          "id": 15,
+          "id": 16,
           "name": "main_gate → yucun",
           "type": "",
           "x": 1504.0,
@@ -795,7 +1028,7 @@
           ]
         },
         {
-          "id": 16,
+          "id": 17,
           "name": "south_black → black_gate",
           "type": "",
           "x": 2272.0,
@@ -816,7 +1049,7 @@
           ]
         },
         {
-          "id": 17,
+          "id": 18,
           "name": "black_gate → east",
           "type": "",
           "x": 2272.0,
@@ -837,7 +1070,7 @@
           ]
         },
         {
-          "id": 18,
+          "id": 19,
           "name": "capital → west_inside",
           "type": "",
           "x": 288.0,
@@ -858,280 +1091,7 @@
           ]
         },
         {
-          "id": 19,
-          "name": "entry → lane_entry",
-          "type": "",
-          "x": 672.0,
-          "y": 1696.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "polyline": [
-            {
-              "x": 0,
-              "y": 0
-            },
-            {
-              "x": 448,
-              "y": 0
-            }
-          ]
-        },
-        {
           "id": 20,
-          "name": "central → lane_central",
-          "type": "",
-          "x": 1504.0,
-          "y": 1632.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "polyline": [
-            {
-              "x": 0,
-              "y": 0
-            },
-            {
-              "x": -384,
-              "y": 0
-            }
-          ]
-        },
-        {
-          "id": 21,
-          "name": "wang → lane_wang",
-          "type": "",
-          "x": 1568.0,
-          "y": 928.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "polyline": [
-            {
-              "x": 0,
-              "y": 0
-            },
-            {
-              "x": -448,
-              "y": 0
-            }
-          ]
-        },
-        {
-          "id": 22,
-          "name": "dinner → lane_dinner",
-          "type": "",
-          "x": 672.0,
-          "y": 1056.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "polyline": [
-            {
-              "x": 0,
-              "y": 0
-            },
-            {
-              "x": 448,
-              "y": 0
-            }
-          ]
-        },
-        {
-          "id": 23,
-          "name": "night → lane_night",
-          "type": "",
-          "x": 672.0,
-          "y": 416.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "polyline": [
-            {
-              "x": 0,
-              "y": 0
-            },
-            {
-              "x": 448,
-              "y": 0
-            }
-          ]
-        },
-        {
-          "id": 24,
-          "name": "yucun → lane_yucun",
-          "type": "",
-          "x": 1504.0,
-          "y": 2080.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "polyline": [
-            {
-              "x": 0,
-              "y": 0
-            },
-            {
-              "x": -384,
-              "y": 0
-            }
-          ]
-        },
-        {
-          "id": 25,
-          "name": "feng → lane_feng",
-          "type": "",
-          "x": 1184.0,
-          "y": 544.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "polyline": [
-            {
-              "x": 0,
-              "y": 0
-            },
-            {
-              "x": -64,
-              "y": 0
-            }
-          ]
-        },
-        {
-          "id": 26,
-          "name": "lane_night → lane_feng",
-          "type": "",
-          "x": 1120.0,
-          "y": 416.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "polyline": [
-            {
-              "x": 0,
-              "y": 0
-            },
-            {
-              "x": 0,
-              "y": 128
-            }
-          ]
-        },
-        {
-          "id": 27,
-          "name": "lane_feng → lane_wang",
-          "type": "",
-          "x": 1120.0,
-          "y": 544.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "polyline": [
-            {
-              "x": 0,
-              "y": 0
-            },
-            {
-              "x": 0,
-              "y": 384
-            }
-          ]
-        },
-        {
-          "id": 28,
-          "name": "lane_wang → lane_dinner",
-          "type": "",
-          "x": 1120.0,
-          "y": 928.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "polyline": [
-            {
-              "x": 0,
-              "y": 0
-            },
-            {
-              "x": 0,
-              "y": 128
-            }
-          ]
-        },
-        {
-          "id": 29,
-          "name": "lane_dinner → lane_central",
-          "type": "",
-          "x": 1120.0,
-          "y": 1056.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "polyline": [
-            {
-              "x": 0,
-              "y": 0
-            },
-            {
-              "x": 0,
-              "y": 576
-            }
-          ]
-        },
-        {
-          "id": 30,
-          "name": "lane_central → lane_entry",
-          "type": "",
-          "x": 1120.0,
-          "y": 1632.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "polyline": [
-            {
-              "x": 0,
-              "y": 0
-            },
-            {
-              "x": 0,
-              "y": 64
-            }
-          ]
-        },
-        {
-          "id": 31,
-          "name": "lane_entry → lane_yucun",
-          "type": "",
-          "x": 1120.0,
-          "y": 1696.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "polyline": [
-            {
-              "x": 0,
-              "y": 0
-            },
-            {
-              "x": 0,
-              "y": 384
-            }
-          ]
-        },
-        {
-          "id": 32,
           "name": "west_inside → west_approach",
           "type": "",
           "x": 416.0,
@@ -1152,7 +1112,7 @@
           ]
         },
         {
-          "id": 33,
+          "id": 21,
           "name": "west_approach → entry",
           "type": "",
           "x": 416.0,
@@ -1167,15 +1127,619 @@
               "y": 0
             },
             {
-              "x": 256,
+              "x": 384,
               "y": 0
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "entry → lane_entry",
+          "type": "",
+          "x": 800.0,
+          "y": 1696.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 320,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "lane_entry → lane_central",
+          "type": "",
+          "x": 1120.0,
+          "y": 1696.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -64
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "name": "lane_central → central",
+          "type": "",
+          "x": 1120.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 384,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "name": "central → lane_central",
+          "type": "",
+          "x": 1504.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -384,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "lane_wang → wang",
+          "type": "",
+          "x": 1120.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 640,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "name": "lane_dinner → dinner",
+          "type": "",
+          "x": 1120.0,
+          "y": 1184.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -448,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "lane_night → night",
+          "type": "",
+          "x": 1120.0,
+          "y": 1504.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -320,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "name": "lane_yucun → yucun",
+          "type": "",
+          "x": 1120.0,
+          "y": 2080.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 384,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "name": "lane_feng → feng",
+          "type": "",
+          "x": 1120.0,
+          "y": 800.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -128
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "name": "lane_night → lane_feng",
+          "type": "",
+          "x": 1120.0,
+          "y": 1504.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -704
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "name": "lane_wang → lane_dinner",
+          "type": "",
+          "x": 1120.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -256
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "name": "lane_dinner → lane_central",
+          "type": "",
+          "x": 1120.0,
+          "y": 1184.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 448
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "name": "lane_central → lane_entry",
+          "type": "",
+          "x": 1120.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 64
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "name": "lane_entry → lane_yucun",
+          "type": "",
+          "x": 1120.0,
+          "y": 1696.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 384
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "name": "c4_lixiang → lixiang_south",
+          "type": "",
+          "x": 2208.0,
+          "y": 416.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 256
+            }
+          ]
+        },
+        {
+          "id": 37,
+          "name": "lixiang_south → lixiang_gate",
+          "type": "",
+          "x": 2208.0,
+          "y": 672.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -192,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 38,
+          "name": "lixiang_gate → lane_lixiang",
+          "type": "",
+          "x": 2016.0,
+          "y": 672.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -896,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 39,
+          "name": "lane_lixiang → lane_feng",
+          "type": "",
+          "x": 1120.0,
+          "y": 672.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 128
+            }
+          ]
+        },
+        {
+          "id": 40,
+          "name": "lane_lixiang → lane_wang",
+          "type": "",
+          "x": 1120.0,
+          "y": 672.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 768
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "name": "feng → lane_feng",
+          "type": "",
+          "x": 1120.0,
+          "y": 672.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 128
             }
           ]
         }
       ]
     },
     {
-      "id": 5,
+      "id": 6,
+      "name": "Markers",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#8a8f7a",
+      "objects": [
+        {
+          "id": 68,
+          "name": "南 北 宽 夹 道",
+          "type": "",
+          "x": 1120.0,
+          "y": 1376.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 69,
+          "name": "倒座三间抱厦厅",
+          "type": "",
+          "x": 1120.0,
+          "y": 1120.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 70,
+          "name": "粉油大影壁",
+          "type": "",
+          "x": 992.0,
+          "y": 864.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 71,
+          "name": "向南大厅",
+          "type": "",
+          "x": 1504.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 72,
+          "name": "后一带花园（后并入大观园）",
+          "type": "",
+          "x": 672.0,
+          "y": 416.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 73,
+          "name": "李纨居处（第六回：周瑞家的从其窗下过）",
+          "type": "",
+          "x": 1376.0,
+          "y": 992.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 74,
+          "name": "大甬路 · 直通大门",
+          "type": "",
+          "x": 1504.0,
+          "y": 2208.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 75,
+          "name": "梨香院西南角门 · 通夹道至王夫人正房东",
+          "type": "",
+          "x": 2016.0,
+          "y": 736.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 76,
+          "name": "梨香院街门 · 薛蟠家人出入",
+          "type": "",
+          "x": 2400.0,
+          "y": 672.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
       "name": "Art",
       "type": "objectgroup",
       "draworder": "topdown",
@@ -1186,8 +1750,8 @@
       "color": "#83916c",
       "objects": [
         {
-          "id": 34,
-          "name": "荣府西墙 · 西角门",
+          "id": 42,
+          "name": "西角门 · 换轿处",
           "type": "",
           "x": 307.4206523076923,
           "y": 1990.025865846154,
@@ -1215,13 +1779,13 @@
           ]
         },
         {
-          "id": 35,
-          "name": "贾母院 · 穿堂",
+          "id": 43,
+          "name": "垂花门 · 穿堂 · 正房五间",
           "type": "",
-          "x": 677.0291424,
-          "y": 1701.0291424,
-          "width": 990.72,
-          "height": 631.5840000000001,
+          "x": 802.5145712,
+          "y": 1698.5145712,
+          "width": 495.36,
+          "height": 315.79200000000003,
           "rotation": 0,
           "visible": true,
           "gid": 60,
@@ -1244,7 +1808,152 @@
           ]
         },
         {
-          "id": 36,
+          "id": 44,
+          "name": "碧纱橱（贾母正房内）",
+          "type": "",
+          "x": 801.7242656,
+          "y": 1505.7242656,
+          "width": 330.24,
+          "height": 255.5232,
+          "rotation": 0,
+          "visible": true,
+          "gid": 65,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "estate-bisha"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "night"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "night"
+            }
+          ]
+        },
+        {
+          "id": 45,
+          "name": "贾母后房 · 晚膳",
+          "type": "",
+          "x": 674.6216928,
+          "y": 1186.6216928000001,
+          "width": 495.36,
+          "height": 342.4176,
+          "rotation": 0,
+          "visible": true,
+          "gid": 64,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "estate-rear"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "dinner"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "dinner"
+            }
+          ]
+        },
+        {
+          "id": 46,
+          "name": "荣禧堂 · 五间大正房",
+          "type": "",
+          "x": 1609.9874257454546,
+          "y": 1694.8953088,
+          "width": 880.64,
+          "height": 745.3416727272727,
+          "rotation": 0,
+          "visible": true,
+          "gid": 37,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "rongxi-hall"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "central"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "central"
+            }
+          ]
+        },
+        {
+          "id": 47,
+          "name": "正室东耳房 · 东廊小正房",
+          "type": "",
+          "x": 1761.8476928,
+          "y": 1441.8476928,
+          "width": 330.24,
+          "height": 232.81920000000002,
+          "rotation": 0,
+          "visible": true,
+          "gid": 62,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "estate-wang"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "wang"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "wang"
+            }
+          ]
+        },
+        {
+          "id": 48,
+          "name": "王熙凤院",
+          "type": "",
+          "x": 1123.307216,
+          "y": 675.307216,
+          "width": 605.4399999999999,
+          "height": 441.21439999999996,
+          "rotation": 0,
+          "visible": true,
+          "gid": 63,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "estate-feng"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "wang"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "feng"
+            }
+          ]
+        },
+        {
+          "id": 49,
           "name": "贾赦东院",
           "type": "",
           "x": 2277.1076432,
@@ -1273,123 +1982,36 @@
           ]
         },
         {
-          "id": 37,
-          "name": "荣禧堂",
+          "id": 50,
+          "name": "梨香院",
           "type": "",
-          "x": 1609.9874257454546,
-          "y": 1694.8953088,
-          "width": 880.64,
-          "height": 745.3416727272727,
+          "x": 2209.93414,
+          "y": 421.8059976,
+          "width": 715.52,
+          "height": 431.1008,
           "rotation": 0,
           "visible": true,
-          "gid": 37,
+          "gid": 119,
           "properties": [
             {
               "name": "asset",
               "type": "string",
-              "value": "rongxi-hall"
+              "value": "estate-lixiang"
             },
             {
               "name": "sceneId",
               "type": "string",
-              "value": "central"
+              "value": "c4_lixiang"
             },
             {
               "name": "locationId",
               "type": "string",
-              "value": "central"
+              "value": "c4_lixiang"
             }
           ]
         },
         {
-          "id": 38,
-          "name": "王夫人院",
-          "type": "",
-          "x": 1572.9271808,
-          "y": 932.9271808,
-          "width": 880.64,
-          "height": 620.8512000000001,
-          "rotation": 0,
-          "visible": true,
-          "gid": 62,
-          "properties": [
-            {
-              "name": "asset",
-              "type": "string",
-              "value": "estate-wang"
-            },
-            {
-              "name": "sceneId",
-              "type": "string",
-              "value": "wang"
-            },
-            {
-              "name": "locationId",
-              "type": "string",
-              "value": "wang"
-            }
-          ]
-        },
-        {
-          "id": 39,
-          "name": "贾母后房 · 晚膳",
-          "type": "",
-          "x": 676.6607872000001,
-          "y": 1060.6607872,
-          "width": 880.64,
-          "height": 608.7424,
-          "rotation": 0,
-          "visible": true,
-          "gid": 64,
-          "properties": [
-            {
-              "name": "asset",
-              "type": "string",
-              "value": "estate-rear"
-            },
-            {
-              "name": "sceneId",
-              "type": "string",
-              "value": "dinner"
-            },
-            {
-              "name": "locationId",
-              "type": "string",
-              "value": "dinner"
-            }
-          ]
-        },
-        {
-          "id": 40,
-          "name": "碧纱橱 · 外间",
-          "type": "",
-          "x": 676.310664,
-          "y": 420.31066400000003,
-          "width": 825.6,
-          "height": 638.808,
-          "rotation": 0,
-          "visible": true,
-          "gid": 65,
-          "properties": [
-            {
-              "name": "asset",
-              "type": "string",
-              "value": "estate-bisha"
-            },
-            {
-              "name": "sceneId",
-              "type": "string",
-              "value": "night"
-            },
-            {
-              "name": "locationId",
-              "type": "string",
-              "value": "night"
-            }
-          ]
-        },
-        {
-          "id": 41,
+          "id": 51,
           "name": "贾政书房",
           "type": "",
           "x": 1507.2297472,
@@ -1418,36 +2040,31 @@
           ]
         },
         {
-          "id": 42,
-          "name": "王熙凤院",
+          "id": 52,
+          "name": "西角门",
           "type": "",
-          "x": 1187.908528,
-          "y": 547.908528,
-          "width": 715.52,
-          "height": 521.4352,
+          "x": 308.81100452488687,
+          "y": 1992.7481918552035,
+          "width": 353.88235294117646,
+          "height": 294.9019607843137,
           "rotation": 0,
           "visible": true,
-          "gid": 63,
+          "gid": 95,
           "properties": [
             {
               "name": "asset",
               "type": "string",
-              "value": "estate-feng"
+              "value": "west-wall-gate"
             },
             {
-              "name": "sceneId",
+              "name": "gateId",
               "type": "string",
-              "value": "wang"
-            },
-            {
-              "name": "locationId",
-              "type": "string",
-              "value": "feng"
+              "value": "west_gate"
             }
           ]
         },
         {
-          "id": 43,
+          "id": 53,
           "name": "荣府正门",
           "type": "",
           "x": 1583.6921281447962,
@@ -1471,7 +2088,7 @@
           ]
         },
         {
-          "id": 44,
+          "id": 54,
           "name": "黑油大门",
           "type": "",
           "x": 2313.3275607843134,
@@ -1507,17 +2124,27 @@
     {
       "name": "title",
       "type": "string",
-      "value": "荣国府总览"
+      "value": "荣国府"
+    },
+    {
+      "name": "subtitle",
+      "type": "string",
+      "value": "院落 · 正屋 · 连廊 —— 第三级"
+    },
+    {
+      "name": "parent",
+      "type": "string",
+      "value": "capital"
     },
     {
       "name": "note",
       "type": "string",
-      "value": "依据第三回进出顺序与相对方位编排；西角门采用西墙方案，非历史建筑复原。"
+      "value": "依据第三回进出顺序与第四回梨香院方位编排；西角门采用西墙方案，非历史建筑复原。"
     },
     {
       "name": "source",
       "type": "string",
-      "value": "design/rongguo-world.json"
+      "value": "design/atlas-maps.json"
     }
   ]
 }

@@ -12,6 +12,10 @@ __pycache__/
 # Files already tracked stay tracked so past commits keep working; new ones are ignored.
 art/matted/*.png
 art/matted/*.webp
+# The matting sidecars and the _backup folder are intermediates too: reproducible from
+# art/source + art/calibration.json, so they must not accumulate in history either.
+art/matted/*.json
+art/matted/_backup/
 
 # Rejected/archived generations stay on disk (zero-delete regen keeps every old take),
 # but they are iteration leftovers, not sources of truth: only the current take ships.

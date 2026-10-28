@@ -312,3 +312,20 @@ dialog.is-ledger .atlas-body{padding:14px 25px 26px}
 .pickup-actions .text-button{flex:1;justify-content:center}
 .pickup-confirm{flex:1.4;width:100%;justify-content:center;margin-top:0}
 .pickup-overlay .pickup-confirm:focus-visible{outline:2px solid #506b58;outline-offset:2px}
+/* 三级舆图：层级面包屑 + 缩放条 + 未营建提示 */
+/* 面包屑放在底部左侧，避开左上角的「当前场景 / 总览」切换与右上角的工具条。 */
+.world-crumbs{position:absolute;left:20px;bottom:32px;display:flex;align-items:center;gap:2px;z-index:6;font-size:11px}
+.world-crumbs span{display:inline-flex;align-items:center;gap:2px}
+.world-crumbs i{color:#a8b096;font-style:normal;margin:0 3px}
+.world-crumbs button{border:1px solid #c9d1ba;background:#faf6e9ee;border-radius:4px;padding:5px 9px;font-size:11px;color:#5f7357}
+.world-crumbs button[aria-current=true]{background:#56715d;color:#fff6e7;border-color:#56715d}
+.world-zoom{position:absolute;right:20px;bottom:8px;display:flex;align-items:center;gap:6px;z-index:6}
+.world-zoom button{border:1px solid #c9d1ba;background:#faf6e9ee;border-radius:4px;width:30px;height:28px;font-size:15px;color:#5f7357;display:grid;place-items:center}
+.world-zoom button:nth-child(3){width:auto;padding:0 9px;font-size:11px}
+.world-zoom span{font-size:10px;color:#8b957e;width:34px}
+.world-notice{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);max-width:420px;padding:18px 22px;background:#faf7e9f5;border:1px solid #c6cfb7;border-radius:8px;font-size:12px;line-height:1.9;color:#7a886e;box-shadow:0 5px 22px #43533d15}
+.world-detail-group{display:block;font-size:11px;font-style:normal;color:#9c8a63;margin:4px 0 8px}
+.world-detail-quote{margin:8px 0 0;padding:8px 0 0;border-top:1px dashed #d5dac6;font-size:11px;line-height:1.85;color:#8b9780}
+.world-detail-note{display:block;margin-top:8px;font-size:10px;color:#a08b63}
+.world-map .world-detail{max-height:calc(100% - 60px);overflow:auto}
+@media(max-width:700px){.world-crumbs{left:10px;bottom:30px;gap:1px;flex-wrap:wrap;max-width:calc(100% - 130px)}.world-crumbs button{padding:4px 6px;font-size:10px}.world-zoom{right:10px;bottom:32px;gap:4px}.world-zoom button{width:28px;height:26px;font-size:13px}.world-zoom span{width:30px}}

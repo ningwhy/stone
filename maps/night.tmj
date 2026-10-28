@@ -21,13 +21,20 @@
       "objects": [
         {
           "id": 1,
-          "name": "A0 贾母院 · 碧纱橱与外间",
-          "x": 640,
-          "y": 448,
-          "width": 1280,
-          "height": 1280,
+          "name": "ROOM 贾母院 · 碧纱橱与外间",
+          "x": 896,
+          "y": 640,
+          "width": 640,
+          "height": 512,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "type": "bool",
+              "value": true
+            }
+          ]
         }
       ]
     },
@@ -55,8 +62,8 @@
         {
           "id": 2,
           "name": "outer_door",
-          "x": 928.0,
-          "y": 1632.0,
+          "x": 992.0,
+          "y": 1120.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -66,8 +73,8 @@
         {
           "id": 3,
           "name": "grandmother_bed",
-          "x": 1056.0,
-          "y": 672.0,
+          "x": 1120.0,
+          "y": 736.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -77,8 +84,8 @@
         {
           "id": 4,
           "name": "daiyu_bed",
-          "x": 1376.0,
-          "y": 736.0,
+          "x": 1312.0,
+          "y": 800.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -89,7 +96,7 @@
           "id": 5,
           "name": "baoyu_bed",
           "x": 1120.0,
-          "y": 1312.0,
+          "y": 992.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -100,7 +107,7 @@
           "id": 6,
           "name": "xiren_place",
           "x": 1184.0,
-          "y": 1376.0,
+          "y": 1056.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -110,7 +117,7 @@
         {
           "id": 7,
           "name": "xueyan_place",
-          "x": 1504.0,
+          "x": 1376.0,
           "y": 864.0,
           "width": 0,
           "height": 0,
@@ -121,7 +128,7 @@
         {
           "id": 8,
           "name": "yingge_place",
-          "x": 1504.0,
+          "x": 1376.0,
           "y": 736.0,
           "width": 0,
           "height": 0,
@@ -132,8 +139,8 @@
         {
           "id": 9,
           "name": "bedside",
-          "x": 1440.0,
-          "y": 736.0,
+          "x": 1312.0,
+          "y": 864.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -143,8 +150,8 @@
         {
           "id": 10,
           "name": "night_talk",
-          "x": 1376.0,
-          "y": 1056.0,
+          "x": 1248.0,
+          "y": 928.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -155,7 +162,7 @@
           "id": 11,
           "name": "letter_place",
           "x": 1056.0,
-          "y": 1376.0,
+          "y": 992.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -210,69 +217,98 @@
       "objects": [
         {
           "id": 13,
-          "name": "canopy-bed",
-          "x": 1378.985625,
-          "y": 802.8045749999999,
-          "width": 255.0,
-          "height": 311.95,
+          "name": "main-hall",
+          "x": 1375.6547972972974,
+          "y": 1228.3143468468468,
+          "width": 532.6576576576576,
+          "height": 430.0,
           "rotation": 0,
           "visible": true,
-          "gid": 41,
+          "gid": 4,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "canopy-bed",
+              "value": "main-hall",
               "type": "string"
             },
             {
               "name": "visibility",
-              "value": "always",
+              "value": "exterior",
               "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": -400,
-              "type": "float"
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
             }
           ]
         },
         {
           "id": 14,
-          "name": "canopy-bed",
-          "x": 1058.45875,
-          "y": 738.3096499999999,
-          "width": 210.0,
-          "height": 256.9,
+          "name": "qin-bed",
+          "x": 1311.37876,
+          "y": 799.37876,
+          "width": 251.72,
+          "height": 258.54,
           "rotation": 0,
           "visible": true,
-          "gid": 41,
+          "gid": 183,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "canopy-bed",
+              "value": "qin-bed",
               "type": "string"
             },
             {
               "name": "visibility",
-              "value": "always",
+              "value": "interior",
               "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": -400,
-              "type": "float"
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
             }
           ]
         },
         {
           "id": 15,
+          "name": "taixu-bed",
+          "x": 1114.0372,
+          "y": 742.9156,
+          "width": 228.0,
+          "height": 226.79999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 139,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-bed",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 16,
           "name": "canopy-bed",
-          "x": 1122.81,
-          "y": 1378.6396,
-          "width": 240.0,
-          "height": 293.6,
+          "x": 1122.17775,
+          "y": 994.0456900000001,
+          "width": 186.0,
+          "height": 227.54,
           "rotation": 0,
           "visible": true,
           "gid": 41,
@@ -285,23 +321,23 @@
             },
             {
               "name": "visibility",
-              "value": "always",
+              "value": "interior",
               "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": -400,
-              "type": "float"
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
             }
           ]
         },
         {
-          "id": 16,
+          "id": 17,
           "name": "wood-screen",
-          "x": 1568.468,
-          "y": 1056.468,
-          "width": 171.0,
-          "height": 154.8,
+          "x": 1253.364,
+          "y": 839.364,
+          "width": 133.0,
+          "height": 120.39999999999999,
           "rotation": 0,
           "visible": true,
           "gid": 39,
@@ -314,23 +350,52 @@
             },
             {
               "name": "visibility",
-              "value": "always",
+              "value": "interior",
               "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
             }
           ]
         },
         {
-          "id": 17,
+          "id": 18,
+          "name": "lamp-stand",
+          "x": 1440.0,
+          "y": 992.0,
+          "width": 506.79999999999995,
+          "height": 302.4,
+          "rotation": 0,
+          "visible": true,
+          "gid": 187,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "lamp-stand",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 19,
           "name": "tea-table",
-          "x": 864.6510000000001,
-          "y": 1312.651,
-          "width": 91.0,
-          "height": 74.19999999999999,
+          "x": 992.53766,
+          "y": 928.53766,
+          "width": 75.39999999999999,
+          "height": 66.69999999999999,
           "rotation": 0,
           "visible": true,
           "gid": 43,
@@ -343,100 +408,42 @@
             },
             {
               "name": "visibility",
-              "value": "always",
+              "value": "interior",
               "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
             }
           ]
         },
         {
-          "id": 26,
-          "name": "brazier",
-          "x": 1248.524,
-          "y": 928.5239999999999,
-          "width": 90.0,
-          "height": 116.0,
+          "id": 20,
+          "name": "taixu-vase",
+          "x": 1445.06422,
+          "y": 775.4495399999998,
+          "width": 67.60000000000001,
+          "height": 93.08,
           "rotation": 0,
           "visible": true,
-          "gid": 117,
+          "gid": 143,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "type": "string",
-              "value": "brazier"
+              "value": "taixu-vase",
+              "type": "string"
             },
             {
               "name": "visibility",
-              "type": "string",
-              "value": "always"
+              "value": "interior",
+              "type": "string"
             },
             {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "id": 28,
-          "name": "cabinet",
-          "x": 1696.592,
-          "y": 1312.592,
-          "width": 130.0,
-          "height": 222.0,
-          "rotation": 0,
-          "visible": true,
-          "gid": 116,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "type": "string",
-              "value": "cabinet"
-            },
-            {
-              "name": "visibility",
-              "type": "string",
-              "value": "always"
-            },
-            {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "id": 30,
-          "name": "vase-stand",
-          "x": 864.436,
-          "y": 992.436,
-          "width": 110.0,
-          "height": 163.0,
-          "rotation": 0,
-          "visible": true,
-          "gid": 118,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "type": "string",
-              "value": "vase-stand"
-            },
-            {
-              "name": "visibility",
-              "type": "string",
-              "value": "always"
-            },
-            {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
             }
           ]
         }
@@ -453,43 +460,10 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 18,
-          "name": "canopy-bed",
-          "x": 1344,
-          "y": 768,
-          "width": 64,
-          "height": 64,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 19,
-          "name": "canopy-bed",
-          "x": 1024,
-          "y": 704,
-          "width": 64,
-          "height": 64,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 20,
-          "name": "canopy-bed",
-          "x": 1088,
-          "y": 1344,
-          "width": 64,
-          "height": 64,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
           "id": 21,
           "name": "wood-screen",
-          "x": 1536,
-          "y": 1024,
+          "x": 1221.0,
+          "y": 807.0,
           "width": 64,
           "height": 64,
           "rotation": 0,
@@ -499,43 +473,10 @@
         {
           "id": 22,
           "name": "tea-table",
-          "x": 832,
-          "y": 1280,
+          "x": 960.0,
+          "y": 896.0,
           "width": 64,
           "height": 64,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 27,
-          "name": "brazier",
-          "x": 1216,
-          "y": 896,
-          "width": 64.0,
-          "height": 64.0,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 29,
-          "name": "cabinet",
-          "x": 1664,
-          "y": 1280,
-          "width": 64.0,
-          "height": 64.0,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 31,
-          "name": "vase-stand",
-          "x": 832,
-          "y": 960,
-          "width": 64.0,
-          "height": 64.0,
           "rotation": 0,
           "visible": true,
           "type": "collision"
@@ -554,8 +495,8 @@
         {
           "id": 23,
           "name": "贾母套间",
-          "x": 992.0,
-          "y": 672.0,
+          "x": 1056.0,
+          "y": 736.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -565,8 +506,8 @@
         {
           "id": 24,
           "name": "碧纱橱",
-          "x": 1440.0,
-          "y": 608.0,
+          "x": 1376.0,
+          "y": 672.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -577,7 +518,7 @@
           "id": 25,
           "name": "外间暖阁",
           "x": 1120.0,
-          "y": 1376.0,
+          "y": 1056.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -594,7 +535,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 32,
+  "nextobjectid": 26,
   "properties": [
     {
       "name": "sceneId",
@@ -610,6 +551,11 @@
       "name": "theme",
       "type": "string",
       "value": "night"
+    },
+    {
+      "name": "flowerbeds",
+      "type": "bool",
+      "value": false
     }
   ]
 }

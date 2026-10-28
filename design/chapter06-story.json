@@ -1,0 +1,3510 @@
+[
+ {
+  "chapter": "c6-qin",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 秦氏卧房",
+  "focus": "bedchamber_door",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "卻說秦氏因聽見寶玉從夢中喚他的乳名，心中自是納悶",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-001",
+  "speaker": "narrator",
+  "text": "却说秦氏因听见宝玉从梦中唤他的乳名，心中自是纳闷，又不好细问。",
+  "title": "梦醒余波",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "qin_ke",
+    "at": "bedchamber_door"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-qin",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 秦氏卧房",
+  "focus": "bedchamber_door",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "卻說秦氏因聽見寶玉從夢中喚他的乳名，心中自是納悶",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-002",
+  "speaker": "qin_ke",
+  "text": "我的小名这里从没没人知道的，他如何知道，在梦里叫出来？",
+  "title": "我的小名这里从没没人知道的",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "bedchamber"
+   },
+   {
+    "type": "show",
+    "actor": "xiren",
+    "at": "screen_bed"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-qin",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 秦氏卧房",
+  "focus": "bedchamber_door",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "卻說秦氏因聽見寶玉從夢中喚他的乳名，心中自是納悶",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-003",
+  "speaker": "narrator",
+  "text": "众人忙端上桂圆汤来，呷了两口，遂起身整衣。宝玉满头是汗，渐渐的回过神来。",
+  "title": "桂圆汤",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "qin_ke"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-qin",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "卻說秦氏因聽見寶玉從夢中喚他的乳名，心中自是納悶",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-004",
+  "speaker": "narrator",
+  "text": "袭人伸手与他系裤带时，只觉冰凉一片沾湿，唬的忙退出手来。",
+  "title": "冰凉一片",
+  "actions": []
+ },
+ {
+  "chapter": "c6-qin",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 秦氏卧房",
+  "focus": "bedchamber_door",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "卻說秦氏因聽見寶玉從夢中喚他的乳名，心中自是納悶",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-005",
+  "speaker": "narrator",
+  "text": "袭人本是个聪明女子，年纪又比宝玉大两岁，近来也大了；见此光景，不觉也羞的红涨了脸面。",
+  "title": "袭人羞红",
+  "actions": []
+ },
+ {
+  "chapter": "c6-qin",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 秦氏卧房",
+  "focus": "bedchamber_door",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "卻說秦氏因聽見寶玉從夢中喚他的乳名，心中自是納悶",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-006",
+  "speaker": "narrator",
+  "text": "仍旧理好衣裳，遂至贾母处来，胡乱吃毕了晚饭。",
+  "title": "转往贾母处",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "baoyu"
+   },
+   {
+    "type": "hide",
+    "actor": "xiren"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-grandmother",
+  "scene": "night",
+  "place": "荣国府 · 贾母院",
+  "focus": "baoyu_bed",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "仍舊理好衣裳，遂至賈母處來",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-007",
+  "speaker": "narrator",
+  "text": "到了贾母处，宝玉、袭人胡乱吃毕了晚饭，各自歇下。",
+  "title": "贾母处晚膳",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "baoyu_bed"
+   },
+   {
+    "type": "show",
+    "actor": "xiren",
+    "at": "xiren_place"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-grandmother",
+  "scene": "night",
+  "place": "荣国府 · 贾母院",
+  "focus": "baoyu_bed",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "仍舊理好衣裳，遂至賈母處來",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-008",
+  "speaker": "narrator",
+  "text": "袭人忙趁众奶娘丫鬟不在旁时，另取出一件中衣来与宝玉换上。",
+  "title": "另取中衣",
+  "actions": []
+ },
+ {
+  "chapter": "c6-grandmother",
+  "scene": "night",
+  "place": "荣国府 · 贾母院",
+  "focus": "night_talk",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "仍舊理好衣裳，遂至賈母處來",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-009",
+  "speaker": "baoyu",
+  "text": "好姐姐，千万千万别告诉人。",
+  "title": "千万千万别告诉人",
+  "actions": []
+ },
+ {
+  "chapter": "c6-grandmother",
+  "scene": "night",
+  "place": "荣国府 · 贾母院",
+  "focus": "baoyu_bed",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "仍舊理好衣裳，遂至賈母處來",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-010",
+  "speaker": "narrator",
+  "text": "袭人笑道：「你梦见什么故事了？是那里流出来的那些脏东西？」",
+  "title": "梦中之事",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xiren",
+    "at": "xiren_place"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-grandmother",
+  "scene": "night",
+  "place": "荣国府 · 贾母院",
+  "focus": "night_talk",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "仍舊理好衣裳，遂至賈母處來",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-011",
+  "speaker": "baoyu",
+  "text": "一言难尽。",
+  "title": "一言难尽",
+  "actions": []
+ },
+ {
+  "chapter": "c6-grandmother",
+  "scene": "night",
+  "place": "荣国府 · 贾母院",
+  "focus": "baoyu_bed",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "仍舊理好衣裳，遂至賈母處來",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-012",
+  "speaker": "narrator",
+  "text": "然后说至警幻所授云雨之情，羞的袭人掩面伏身而笑……遂和宝玉偷试一番，自此宝玉视袭人更比别个不同。",
+  "title": "袭人掩面",
+  "actions": []
+ },
+ {
+  "chapter": "c6-grandmother",
+  "scene": "night",
+  "place": "荣国府 · 贾母院",
+  "focus": "outer_door",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "仍舊理好衣裳，遂至賈母處來",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-013",
+  "speaker": "narrator",
+  "text": "按荣府中一宅人合算起来，人口日盛，事务日繁。恰好忽从千里之外，芥豆之微，小小一个人家，因与荣府略有些瓜葛，这便引出一个故事来。",
+  "title": "千里之外的故事",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-014",
+  "speaker": "narrator",
+  "text": "方才所说的这小小之家，乃本地人氏，姓王，祖上曾作过小小的一个京官，久已告退。",
+  "title": "姓王的小小之家",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "liu_lao",
+    "at": "home_inner"
+   },
+   {
+    "type": "show",
+    "actor": "ban_er",
+    "at": "kang"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-015",
+  "speaker": "narrator",
+  "text": "因贪慕王家的势利，便连了宗认作侄儿，此后便以侄儿自居，与荣国府也渐渐攀上了亲。",
+  "title": "连宗认作侄儿",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-016",
+  "speaker": "narrator",
+  "text": "这王家本是金陵一族，与贾府原是一脉；那小王家的，靠着这点渊源，在乡里也算个体面人家。",
+  "title": "金陵一脉",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-017",
+  "speaker": "narrator",
+  "text": "王家的小姐嫁入荣国府，便是如今的王夫人；这层亲戚，后来竟成了刘姥姥进府的由头。",
+  "title": "王夫人这层亲戚",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-018",
+  "speaker": "narrator",
+  "text": "目今其祖已故，只有一个儿子，名唤王成，家业凋零，搬出城外原乡去了。",
+  "title": "王成家业凋零",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-019",
+  "speaker": "narrator",
+  "text": "只有其子，小名狗儿，娶妻刘氏，生了一子小名板儿，一家四口仍以务农为业。",
+  "title": "狗儿与板儿",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-020",
+  "speaker": "narrator",
+  "text": "狗儿亦生一子小名板儿，嫡妻刘氏又生一女名唤青儿；青儿尚在年幼，只在乡下，本回不随来。",
+  "title": "一家四口",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-021",
+  "speaker": "narrator",
+  "text": "因这年秋尽冬初，天气冷将上来，狗儿未免心中烦虑，白日间又作些生计。",
+  "title": "秋尽冬初",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-022",
+  "speaker": "narrator",
+  "text": "狗儿遂将岳母刘姥姥接来一处过活，帮着照看外孙儿女。",
+  "title": "接来刘姥姥",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-023",
+  "speaker": "narrator",
+  "text": "这刘姥姥乃是个积年的老寡妇，膝下又无儿女，只靠两亩薄田度日，如今依着女婿过活。",
+  "title": "积年老寡妇",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-024",
+  "speaker": "narrator",
+  "text": "因狗儿吃了几杯闷酒，在家闲寻气恼，刘氏也不敢顶撞，只低着头做活。",
+  "title": "狗儿闲寻气恼",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "liu_lao",
+    "at": "home_inner"
+   },
+   {
+    "type": "show",
+    "actor": "ban_er",
+    "at": "kang"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-025",
+  "speaker": "narrator",
+  "text": "刘姥姥看不过，乃劝女婿道：「姑爷，你别嗔着我多嘴。」",
+  "title": "刘姥姥劝架",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-026",
+  "speaker": "liu_lao",
+  "text": "姑爷，你别嗔着我多嘴。咱们庄稼人，守着这两亩薄田，也饿不死，何苦自寻烦恼。",
+  "title": "守着薄田饿不死",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-027",
+  "speaker": "liu_lao",
+  "text": "这长安城中，遍地都是钱，只可惜没人会去拿去罢了。",
+  "title": "遍地都是钱",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-028",
+  "speaker": "liu_lao",
+  "text": "如今这荣国府，正是烈火烹油、鲜花着锦的时节；咱们沾着点边儿，还怕没碗饭吃？",
+  "title": "荣国府的时节",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-029",
+  "speaker": "narrator",
+  "text": "刘姥姥将那长安城中的繁华，与荣国府的势派，细细说了一遍，狗儿只是冷笑。",
+  "title": "细说繁华",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-030",
+  "speaker": "narrator",
+  "text": "狗儿听了，便急道：「你老只会炕头上混说，难道叫我打劫偷去不成？」",
+  "title": "狗儿冷笑",
+  "actions": [],
+  "offscreen": true
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-031",
+  "speaker": "liu_lao",
+  "text": "谁叫你偷去呢？到底有多少人，也该想法儿去比咱们强的人家走动走动，不然那银子钱自己跑到咱家来不成？",
+  "title": "想法儿走动",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-032",
+  "speaker": "narrator",
+  "text": "狗儿冷笑道：「有法儿还等到这会子呢。我又没有收税的亲戚，作官的朋友，有什么法儿？」",
+  "title": "狗儿泄气",
+  "actions": [],
+  "offscreen": true
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-033",
+  "speaker": "liu_lao",
+  "text": "这倒不然。谋事在人，成事在天。咱们如今有这样的机会，我倒替你们想出一个机会来。",
+  "title": "谋事在人，成事在天",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-034",
+  "speaker": "narrator",
+  "text": "当日你们原是和金陵王家连过宗的，二十年前，王家的二小姐——如今是荣国府的二太太——还未出阁时，我就见过一面。",
+  "title": "金陵王家连宗",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-035",
+  "speaker": "narrator",
+  "text": "那时王家的二小姐行事爽利，待下人宽厚；刘姥姥当年曾随人进过一回府，远远的见过这位姑娘。",
+  "title": "远见二小姐",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-036",
+  "speaker": "narrator",
+  "text": "若是他发一点好心，拔一根寒毛比咱们的腰还粗呢。",
+  "title": "拔根寒毛比腰粗",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-037",
+  "speaker": "narrator",
+  "text": "刘氏一旁接口道：「你老虽说的是，但只你我这样个嘴脸，怎样好到他门上去的。」",
+  "title": "刘氏接口",
+  "actions": [],
+  "offscreen": true
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-038",
+  "speaker": "narrator",
+  "text": "狗儿利名心最重，听了这话便有些心动，道：「况且当年你又见过这姑太太一次，何不你老人家明日就走一趟，先试试风头再说。」",
+  "title": "狗儿心动",
+  "actions": [],
+  "offscreen": true
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-039",
+  "speaker": "liu_lao",
+  "text": "我倒没的能为，只是当年见过太太一面，明日走一趟也使得；成不成，不过碰碰运气。",
+  "title": "刘姥姥应承",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-040",
+  "speaker": "liu_lao",
+  "text": "侯门深似海，我是个什么东西。倒还是舍着我这付老脸去碰一碰，大不了讨个没趣回来。",
+  "title": "侯门深似海",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-041",
+  "speaker": "narrator",
+  "text": "刘姥姥打定主意，明日便去荣府走一遭，一则瞧瞧姑太太，二则碰碰运气。",
+  "title": "打定主意",
+  "actions": []
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "kang",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-042",
+  "speaker": "narrator",
+  "text": "狗儿道：「你竟带了外孙子板儿，先去找陪房周瑞——这周瑞先时曾和我父亲交过一件事，我们极好的。」",
+  "title": "去找周瑞",
+  "actions": [],
+  "offscreen": true
+ },
+ {
+  "chapter": "c6-village",
+  "scene": "c6_village",
+  "place": "刘家庄 · 狗儿家",
+  "focus": "home_inner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "方才所說的這小小之家，乃本地人氏，姓王",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-043",
+  "speaker": "narrator",
+  "text": "说毕，大家笑了一回。当晚计议已定，只等明日天明起身。",
+  "title": "当晚计议已定",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "liu_lao"
+   },
+   {
+    "type": "hide",
+    "actor": "ban_er"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-dawn",
+  "scene": "c6_village",
+  "place": "刘家庄 · 村口",
+  "focus": "village_exit",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "次日天未明，劉姥姥便起來梳洗了",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-044",
+  "speaker": "narrator",
+  "text": "次日天未明，刘姥姥便起来梳洗了，又悄没声的收拾了几样乡下土产。",
+  "title": "天未明起身",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "liu_lao",
+    "at": "home_inner"
+   },
+   {
+    "type": "show",
+    "actor": "ban_er",
+    "at": "kang"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-dawn",
+  "scene": "c6_village",
+  "place": "刘家庄 · 村口",
+  "focus": "kang",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "次日天未明，劉姥姥便起來梳洗了",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-045",
+  "speaker": "liu_lao",
+  "text": "板儿，你今日跟我去城里逛逛，可别淘气，见了人家规矩些。",
+  "title": "带板儿进城",
+  "actions": []
+ },
+ {
+  "chapter": "c6-dawn",
+  "scene": "c6_village",
+  "place": "刘家庄 · 村口",
+  "focus": "village_exit",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "次日天未明，劉姥姥便起來梳洗了",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-046",
+  "speaker": "narrator",
+  "text": "又将板儿教训了几句，祖孙两个收拾停当，出了村口望城里去了。",
+  "title": "出村口",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "home_inner",
+     "home_yard",
+     "village_exit"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "kang",
+     "home_yard",
+     "village_exit"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c6-capital",
+  "scene": "capital",
+  "place": "京城 · 宁荣街",
+  "focus": "rong_gate",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "於是劉姥姥帶他進城，找至宁荣街",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-047",
+  "speaker": "narrator",
+  "text": "于是刘姥姥带他进城，找至宁荣街。来至荣府大门石狮子前，只见簇簇轿马，刘姥姥便不敢过去。",
+  "title": "荣府大门石狮子",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "liu_lao",
+    "at": "rong_gate"
+   },
+   {
+    "type": "show",
+    "actor": "ban_er",
+    "at": "rong_gate"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-capital",
+  "scene": "capital",
+  "place": "京城 · 宁荣街",
+  "focus": "rong_gate",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "於是劉姥姥帶他進城，找至宁荣街",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-048",
+  "speaker": "narrator",
+  "text": "刘姥姥只远远的望着那一对蹲狮与朱轮华盖，脚下挪不动步，拉了板儿在街边站着。",
+  "title": "立在街边",
+  "actions": []
+ },
+ {
+  "chapter": "c6-capital",
+  "scene": "capital",
+  "place": "京城 · 宁荣街",
+  "focus": "rong_gate",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "於是劉姥姥帶他進城，找至宁荣街",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-049",
+  "speaker": "narrator",
+  "text": "然后蹭到角门前。只见几个挺胸叠肚指手画脚的人，坐在大板凳上，说东谈西，指手画脚。",
+  "title": "蹭到角门",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "rong_gate",
+     "west_corner"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "rong_gate",
+     "west_corner"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c6-capital",
+  "scene": "capital",
+  "place": "京城 · 宁荣街",
+  "focus": "west_corner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "於是劉姥姥帶他進城，找至宁荣街",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-050",
+  "speaker": "narrator",
+  "text": "那些人见他祖孙两个土头土脑的，都只当没看见，依旧说笑。",
+  "title": "门上的人",
+  "actions": []
+ },
+ {
+  "chapter": "c6-capital",
+  "scene": "capital",
+  "place": "京城 · 宁荣街",
+  "focus": "rong_gate",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "於是劉姥姥帶他進城，找至宁荣街",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-051",
+  "speaker": "narrator",
+  "text": "刘姥姥只得蹭上来问：「太爷们纳福。」",
+  "title": "上前问安",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "liu_lao",
+    "at": "west_corner"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-capital",
+  "scene": "capital",
+  "place": "京城 · 宁荣街",
+  "focus": "west_corner",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "於是劉姥姥帶他進城，找至宁荣街",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-052",
+  "speaker": "narrator",
+  "text": "刘姥姥道：「我找太太的陪房周大爷的，烦那位太爷替我请他老出来。」",
+  "title": "找周大爷",
+  "actions": []
+ },
+ {
+  "chapter": "c6-capital",
+  "scene": "capital",
+  "place": "京城 · 宁荣街",
+  "focus": "rong_gate",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "於是劉姥姥帶他進城，找至宁荣街",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-053",
+  "speaker": "narrator",
+  "text": "那人道：「周大爷已往南边去了。他在后一带住着，他娘子却在家。你要找时，从这边绕到后街上后门上去问就是了。」",
+  "title": "门人指路",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "west_corner",
+     "outside"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "west_corner",
+     "outside"
+    ]
+   }
+  ],
+  "offscreen": true
+ },
+ {
+  "chapter": "c6-backgate",
+  "scene": "c6_wangchui",
+  "place": "荣府后门",
+  "focus": "back_gate",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥聽了謝過，遂攜了板兒，繞到後門上",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-054",
+  "speaker": "narrator",
+  "text": "刘姥姥听了谢过，遂携了板儿，绕到后门上。走了半日，方到后街后门。",
+  "title": "绕到后门",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "liu_lao",
+    "at": "back_gate"
+   },
+   {
+    "type": "show",
+    "actor": "ban_er",
+    "at": "back_gate"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-backgate",
+  "scene": "c6_wangchui",
+  "place": "荣府后门",
+  "focus": "back_gate",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥聽了謝過，遂攜了板兒，繞到後門上",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-055",
+  "speaker": "narrator",
+  "text": "后门一带僻静些，却也常有府里的人出入；刘姥姥只在不远处张望，不敢冒然上前。",
+  "title": "后门张望",
+  "actions": []
+ },
+ {
+  "chapter": "c6-backgate",
+  "scene": "c6_wangchui",
+  "place": "荣府后门",
+  "focus": "market",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥聽了謝過，遂攜了板兒，繞到後門上",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-056",
+  "speaker": "narrator",
+  "text": "只见门前歇着些生意担子，卖吃食的、卖杂货的都有；闹吵吵三二十个小孩子在那里厮闹，好不热闹。",
+  "title": "后门市井",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-057",
+  "speaker": "narrator",
+  "text": "刘姥姥便拉住一个道：「我问哥儿一声，有个周大娘可在家么？」那孩子道：「你跟我来。」",
+  "title": "拉住孩子问",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "back_gate",
+     "market",
+     "zhou_court"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "back_gate",
+     "market",
+     "zhou_court"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-058",
+  "speaker": "narrator",
+  "text": "至一院墙边，指与刘姥姥道：「这就是他家。」又叫道：「周大娘，有个老奶奶来找你呢。」",
+  "title": "指与周家",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-059",
+  "speaker": "zhou_rui",
+  "text": "是那位？……哟，刘姥姥，你好呀！你说说是几年，我就忘了。请家里来坐罢。",
+  "title": "周瑞家的迎出",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "zhou_court"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-060",
+  "speaker": "liu_lao",
+  "text": "你老是贵人多忘事，那里还记得我们呢。说着，来至房中。",
+  "title": "来至房中",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "zhou_court",
+     "zhou_room"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "zhou_court",
+     "zhou_room"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "zhou_rui",
+    "via": [
+     "zhou_court",
+     "zhou_room"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-061",
+  "speaker": "narrator",
+  "text": "周瑞家的命雇的小丫头倒上茶来吃着，让刘姥姥上炕坐。",
+  "title": "倒茶让坐",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-062",
+  "speaker": "zhou_rui",
+  "text": "姥姥今日还是路过，还是特来的？",
+  "title": "问来意",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-063",
+  "speaker": "liu_lao",
+  "text": "原是特来瞧瞧嫂子你，二则也请请姑太太的安；若是方便，给周大娘请个安。",
+  "title": "特来请安",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-064",
+  "speaker": "narrator",
+  "text": "刘姥姥便将来意明说了几分，只不曾说那借银的话，先探着周瑞家的口气。",
+  "title": "探口气",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C06-065",
+  "speaker": "narrator",
+  "text": "只因昔年他丈夫周瑞争买田地一事，其中多得狗儿之父的力量，周瑞家的一直记着这份情。",
+  "title": "昔日的人情",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "zhou_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-066",
+  "speaker": "narrator",
+  "text": "今见刘姥姥如此而来，心中难却其意，便存了周全她的心。",
+  "title": "难却其意",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-067",
+  "speaker": "zhou_rui",
+  "text": "姥姥你放心。大远的诚心诚意来了，岂有个不教你见个真佛去的呢。",
+  "title": "见个真佛去",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-068",
+  "speaker": "zhou_rui",
+  "text": "我就破个例，给你通个信去，领你去见琏二奶奶。",
+  "title": "破例通个信",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-069",
+  "speaker": "zhou_rui",
+  "text": "如今太太竟不大管事，都是琏二奶奶管家了。这琏二奶奶，便是当日大舅老爷的女儿，小名凤哥儿的。",
+  "title": "点明凤姐身份",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-070",
+  "speaker": "narrator",
+  "text": "周瑞家的又道：「这凤姑娘今年大不过二十岁罢，少说也有一万个心眼子，行事比太太还利落些。」",
+  "title": "凤姐的心眼",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-071",
+  "speaker": "liu_lao",
+  "text": "原来是他！怪道呢，我当日就说他不差呢。既有这层缘分，便更该去见一见。",
+  "title": "原是凤哥儿",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-072",
+  "speaker": "zhou_rui",
+  "text": "今儿宁可不会太太，倒要见他一面，才不枉这里来一遭。",
+  "title": "定要见凤姐",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-073",
+  "speaker": "liu_lao",
+  "text": "阿弥陀佛！全仗嫂子方便了。",
+  "title": "全仗嫂子",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-074",
+  "speaker": "zhou_rui",
+  "text": "与人方便，自己方便。不过用我说一句话罢了，害着我什么。叫小丫头到倒厅上悄悄的打听打听。",
+  "title": "与人方便自己方便",
+  "actions": []
+ },
+ {
+  "chapter": "c6-zhourui",
+  "scene": "c6_wangchui",
+  "place": "周瑞家院",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "劉姥姥便拉住一個道：「我問哥兒一聲」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-075",
+  "speaker": "narrator",
+  "text": "周瑞家的便命小丫头到倒厅上去，悄悄的打听凤姐如今在何处。",
+  "title": "命丫头打听",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "zhou_rui",
+    "via": [
+     "zhou_room",
+     "daoting"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-076",
+  "speaker": "narrator",
+  "text": "小丫头回来说：「老太太屋里已摆完了饭了，二奶奶在太太屋里呢。」",
+  "title": "报信",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "daoting"
+   },
+   {
+    "type": "show",
+    "actor": "liu_lao",
+    "at": "daoting"
+   },
+   {
+    "type": "show",
+    "actor": "ban_er",
+    "at": "daoting"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-077",
+  "speaker": "zhou_rui",
+  "text": "快走，快走。这一下来他吃饭是个空子，咱们先赶着去。",
+  "title": "赶着空子去",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "zhou_rui",
+    "via": [
+     "daoting",
+     "yingbi",
+     "platform"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "daoting",
+     "yingbi",
+     "platform"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "daoting",
+     "yingbi",
+     "platform"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "yingbi",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-078",
+  "speaker": "narrator",
+  "text": "随着周瑞家的，逶迤往贾琏的住处来，穿过影壁，进了院门。",
+  "title": "过影壁进院",
+  "actions": []
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-079",
+  "speaker": "narrator",
+  "text": "先到了倒厅，周瑞家的将刘姥姥安插在那里略等一等，自己先过了影壁，进了院门去通禀。",
+  "title": "安插倒厅",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "zhou_rui",
+    "via": [
+     "platform"
+    ]
+   },
+   {
+    "type": "show",
+    "actor": "liu_lao",
+    "at": "daoting"
+   },
+   {
+    "type": "show",
+    "actor": "ban_er",
+    "at": "daoting"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-080",
+  "speaker": "narrator",
+  "text": "先找着凤姐的一个心腹通房大丫头名唤平儿的。周瑞家的笑道：「平姑娘，这位老奶奶是乡下来的亲戚。」",
+  "title": "先见平儿",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "platform"
+   },
+   {
+    "type": "show",
+    "actor": "ping_er",
+    "at": "platform"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-081",
+  "speaker": "ping_er",
+  "text": "周姐姐来了。这位老奶奶是……？既来了，且随我进来坐着罢。",
+  "title": "平儿相问",
+  "actions": []
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-082",
+  "speaker": "narrator",
+  "text": "平儿听了，便作了主意：「叫他们进来，先在这里坐着就是了。」",
+  "title": "平儿作主",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "daoting",
+     "platform"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "daoting",
+     "platform"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-083",
+  "speaker": "narrator",
+  "text": "上了正房台矶，小丫头打起猩红毡帘，才入堂屋，满屋中之物都耀眼争光的，使人头悬目眩。",
+  "title": "满屋耀眼争光",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "platform",
+     "hall"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "platform",
+     "hall"
+    ]
+   },
+   {
+    "type": "show",
+    "actor": "ping_er",
+    "at": "hall"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "hall",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-084",
+  "speaker": "narrator",
+  "text": "刘姥姥此时只有点头咂嘴念佛而已，不敢轻易落座。",
+  "title": "点头念佛",
+  "actions": []
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-085",
+  "speaker": "narrator",
+  "text": "于是来至东边这间屋内，乃是贾琏的女儿大姐儿睡觉之所。平儿站在炕沿边，打量了刘姥姥两眼。",
+  "title": "东屋大姐儿",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "hall",
+     "east_room"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "hall",
+     "east_room"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ping_er",
+    "via": [
+     "hall",
+     "east_room"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "east_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-086",
+  "speaker": "ping_er",
+  "text": "你便是刘姥姥？且在这里坐着，奶奶下来了便请你们进去。板儿也来，别乱跑。",
+  "title": "平儿安置",
+  "actions": []
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "east_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-087",
+  "speaker": "narrator",
+  "text": "刘姥姥见平儿遍身绫罗，插金带银，花容玉貌的，便当是凤姐儿了，忙要下拜。",
+  "title": "误认平儿为凤姐",
+  "actions": []
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-088",
+  "speaker": "liu_lao",
+  "text": "这位奶奶好生齐整，敢是凤姑娘不成？老身这厢有礼了。",
+  "title": "敢是凤姑娘",
+  "actions": []
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-089",
+  "speaker": "narrator",
+  "text": "刘姥姥只听见咯当咯当的响声，忽见堂屋中柱子上挂着一个匣子，底下又坠着一个秤砣般一物，却不住的乱幌。",
+  "title": "自鸣钟",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "east_room",
+     "hall"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "east_room",
+     "hall"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ping_er",
+    "via": [
+     "east_room",
+     "hall"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "hall",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-090",
+  "speaker": "narrator",
+  "text": "不一时，只见小丫头子们齐乱跑，说：「奶奶下来了。」",
+  "title": "奶奶下来了",
+  "actions": []
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "hall",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-091",
+  "speaker": "narrator",
+  "text": "正呆时，只听得当的一声，又若金钟铜磬一般，不防倒唬了一跳。原来这就是府里的自鸣钟。",
+  "title": "当的一声",
+  "actions": []
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-092",
+  "speaker": "narrator",
+  "text": "刘姥姥心中想着：「这是什么东西，会自己响？」只不敢多问，依旧呆呆的望着。",
+  "title": "自思自叹",
+  "actions": []
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-093",
+  "speaker": "zhou_rui",
+  "text": "周瑞家的与平儿忙起身，命刘姥姥「只管等着，是时候我们来请你」。",
+  "title": "且等着",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "hall"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "hall",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-094",
+  "speaker": "narrator",
+  "text": "刘姥姥屏声侧耳默候。只听远远有人笑声，约有一二十妇人，衣裙窸窣，渐入堂屋。",
+  "title": "远远人笑",
+  "actions": []
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-095",
+  "speaker": "narrator",
+  "text": "只听得那边说了声「摆饭」，渐渐的人才散出，院中略静了些。",
+  "title": "摆饭人散",
+  "actions": []
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-096",
+  "speaker": "narrator",
+  "text": "忽见二人抬了一张炕桌来，放在这边炕上，桌上碗盘森列，鸡鸭鱼肉摆了一桌。",
+  "title": "抬上炕桌",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "hall",
+     "east_room"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "hall",
+     "east_room"
+    ]
+   },
+   {
+    "type": "show",
+    "actor": "ping_er",
+    "at": "east_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "east_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-097",
+  "speaker": "liu_lao",
+  "text": "板儿，你瞧这肉，可还吃不得？今日可开了眼了。",
+  "title": "板儿看肉",
+  "actions": []
+ },
+ {
+  "chapter": "c6-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "platform",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "小丫頭回來說：「老太太屋裏已擺完了飯了」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-098",
+  "speaker": "narrator",
+  "text": "板儿一见了，便吵着要肉吃，刘姥姥一巴掌打了他去，低声喝他安分。",
+  "title": "板儿闹食",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "east_room",
+     "hall"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "east_room",
+     "hall"
+    ]
+   },
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "hall"
+   },
+   {
+    "type": "show",
+    "actor": "ping_er",
+    "at": "hall"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-099",
+  "speaker": "narrator",
+  "text": "忽见周瑞家的笑嘻嘻走过来，招手儿叫他：「快来，奶奶这会儿闲了。」刘姥姥方随了进去。",
+  "title": "招手叫进",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "hall",
+     "feng_room"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "hall",
+     "feng_room"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "zhou_rui",
+    "via": [
+     "hall",
+     "feng_room"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-100",
+  "speaker": "narrator",
+  "text": "只见门外鐡铜钩上悬着大红撒花软帘，南窗下是炕。那凤姐儿家常带着秋板貂鼠昭君套，围着攒珠勒子，穿着桃红撒花袄、石青刻丝灰鼠披风、大红洋绉银鼠皮裙。",
+  "title": "凤姐服饰",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-101",
+  "speaker": "feng",
+  "text": "凤姐也不接茶，也不抬头，只管拨手炉内的灰，慢慢的问道：「怎么还不请进来？」",
+  "title": "拨手炉问",
+  "actions": []
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-102",
+  "speaker": "liu_lao",
+  "text": "刘姥姥在地下已是拜了数拜，问姑奶奶安。",
+  "title": "拜见凤姐",
+  "actions": []
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-103",
+  "speaker": "feng",
+  "text": "周姐姐，快搀起来，别拜罢，请坐。我年轻，不大认得，可也不知是什么辈数，不敢称呼。",
+  "title": "搀起让坐",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-104",
+  "speaker": "narrator",
+  "text": "板儿便躲在背后，百般的哄他出来作揖，他死也不肯，只拿眼瞅着桌上的吃食。",
+  "title": "板儿不肯作揖",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ban_er",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-105",
+  "speaker": "feng",
+  "text": "亲戚们不大走动，都疏远了。知道的呢，说你们弃厌我们，不肯常来；不知道的，还只当我们眼里没人似的。",
+  "title": "亲戚疏远了",
+  "actions": []
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-106",
+  "speaker": "liu_lao",
+  "text": "我们家道艰难，走不起；来了，也是给姑奶奶打嘴。",
+  "title": "家道艰难",
+  "actions": []
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-107",
+  "speaker": "liu_lao",
+  "text": "俗话说的好，『朝廷还有三门子穷亲戚』呢，何况你我。老身今日可沾了姑奶奶的光了。",
+  "title": "三门子穷亲戚",
+  "actions": []
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-108",
+  "speaker": "feng",
+  "text": "这话没的叫人恶心。俗语说，『朝廷还有三门子穷亲戚』呢，何况你我。你既是头一遭来，我岂有不照应的。",
+  "title": "凤姐回话",
+  "actions": []
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-109",
+  "speaker": "feng",
+  "text": "凤姐又问周瑞家的：「回了太太了没有？」周瑞家的道未回，凤姐道：「你去瞧瞧，要是有人有事就罢，得闲儿呢就回。」",
+  "title": "问回太太",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-110",
+  "speaker": "zhou_rui",
+  "text": "周瑞家的答应着，自去回王夫人了。",
+  "title": "周瑞家去回",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "zhou_rui"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-111",
+  "speaker": "feng",
+  "text": "这里凤姐叫人抓些果子与板儿吃。板儿见了果子，方不吵闹。",
+  "title": "给板儿果子",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ban_er",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-112",
+  "speaker": "narrator",
+  "text": "就有家下许多媳妇管事的来回话。平儿回了，凤姐道：「我这里陪客呢，晚上再来回。」",
+  "title": "管家媳妇回话",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ping_er",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-113",
+  "speaker": "feng",
+  "text": "平儿，你先照应着这些回事的，我陪客说话。",
+  "title": "凤姐吩咐平儿",
+  "actions": []
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-114",
+  "speaker": "zhou_rui",
+  "text": "周瑞家的回来，向凤姐道：「太太说了，今日不得闲，二奶奶陪着便一样。有什么事，只管告诉二奶奶，都是一样的。」一面说，一面递眼色与刘姥姥。",
+  "title": "王夫人不现身",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-115",
+  "speaker": "narrator",
+  "text": "刘姥姥会意，知道太太是不见的了，便把心一横，准备开口。",
+  "title": "刘姥姥会意",
+  "actions": []
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-116",
+  "speaker": "liu_lao",
+  "text": "刘姥姥会意，未语先飞红的脸，欲待不说，又舍不得到口的钱，忍耻说道：「论理今儿初次见姑奶奶，却不该说……」",
+  "title": "欲说还休",
+  "actions": []
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-117",
+  "speaker": "liu_lao",
+  "text": "只是大远的奔了你老这里来，也少不的说了。",
+  "title": "少不的说了",
+  "actions": []
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-118",
+  "speaker": "narrator",
+  "text": "刚说到这里，只听二门上小厮们回说：「东府里的小大爷进来了。」凤姐忙止刘姥姥：「不必说了。」",
+  "title": "东府小大爷来",
+  "actions": []
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-119",
+  "speaker": "jia_rong",
+  "text": "只听一路靴子脚响，进来了一个十七八岁的少年，面目清秀，身材俊俏，轻裘宝带，美服华冠。",
+  "title": "贾蓉登场",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_rong",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-audience",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "忽見周瑞家的笑嘻嘻走過來，招手兒叫他",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-120",
+  "speaker": "narrator",
+  "text": "刘姥姥此时坐不是，立不是，藏没处藏，只把眼皮低着，不敢抬头。",
+  "title": "刘姥姥失措",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-121",
+  "speaker": "feng",
+  "text": "你只管坐着，这是我侄儿。刘姥姥方扭扭捏捏在炕沿上坐了。",
+  "title": "这是我侄儿",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "liu_lao",
+    "at": "feng_room"
+   },
+   {
+    "type": "show",
+    "actor": "jia_rong",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-122",
+  "speaker": "jia_rong",
+  "text": "我父亲打发我来求婶子，说那架玻璃炕屏要略摆一摆，明日就送过来。",
+  "title": "贾蓉借炕屏",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-123",
+  "speaker": "narrator",
+  "text": "凤姐道：「说迟了一日，昨儿已经给了人了。」贾蓉嘻嘻的笑着，在炕沿上半跪道：「婶子若不借，又说我不会说话了，又挨一顿好打呢。」",
+  "title": "半跪求情",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-124",
+  "speaker": "jia_rong",
+  "text": "婶子若不借，我回去挨一顿好打呢。好婶子，只借这一回。",
+  "title": "贾蓉撒娇",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-125",
+  "speaker": "feng",
+  "text": "凤姐笑道：「也没见你们，王家的东西都是好的不成？……若碰一点儿，你可仔细你的皮！」",
+  "title": "凤姐驳回",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-126",
+  "speaker": "feng",
+  "text": "因命平儿拿了楼房的钥匙，传几个妥当人抬去。贾蓉喜的眉开眼笑，千恩万谢的去了。",
+  "title": "到底借出",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ping_er",
+    "at": "feng_room"
+   },
+   {
+    "type": "hide",
+    "actor": "jia_rong"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-127",
+  "speaker": "feng",
+  "text": "这里凤姐忽又想起一事来，便向窗外叫：「蓉哥回来。」",
+  "title": "凤姐叫回",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_rong",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-128",
+  "speaker": "narrator",
+  "text": "贾蓉忙回来，垂手侍立，听婶子吩咐。",
+  "title": "贾蓉垂手",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-129",
+  "speaker": "feng",
+  "text": "凤姐只管慢慢的吃茶，出了半日的神，又笑道：「罢了，你且去罢。」贾蓉答应着退下。",
+  "title": "出了半日神",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "jia_rong"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-130",
+  "speaker": "liu_lao",
+  "text": "今日我带了你侄儿来，也不为别的，只因他老子娘在家里，连吃的都没有，天又冷了……",
+  "title": "明言来意",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "liu_lao",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-131",
+  "speaker": "narrator",
+  "text": "刘姥姥又推板儿道：「你那爹在家怎么教你的？快见过姑奶奶，讨个赏。」",
+  "title": "推板儿见礼",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ban_er",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-132",
+  "speaker": "liu_lao",
+  "text": "板儿，快磕头，姑奶奶疼你，赏你果子吃。",
+  "title": "板儿磕头",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-133",
+  "speaker": "ban_er",
+  "text": "板儿只扭着不肯，被刘姥姥逼着，胡乱作了个揖。",
+  "title": "板儿作揖",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-134",
+  "speaker": "feng",
+  "text": "凤姐道：「不必说了，我知道了。」因问周瑞家的：「这姥姥不知可用了早饭没有？」",
+  "title": "凤姐问饭",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-135",
+  "speaker": "zhou_rui",
+  "text": "周瑞家的道：「倒是没用呢，奶奶，我这就传饭去。」",
+  "title": "传饭去",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "zhou_rui"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-136",
+  "speaker": "narrator",
+  "text": "一时周瑞家的传了一桌客饭来，摆在东边屋内，过来带了刘姥姥和板儿过去吃饭。",
+  "title": "传客饭",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "feng_room",
+     "east_room"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "feng_room",
+     "east_room"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-137",
+  "speaker": "feng",
+  "text": "凤姐说：「周姐姐，好生让着些儿，我不能陪了。」",
+  "title": "凤姐让饭",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-138",
+  "speaker": "feng",
+  "text": "又叫过周瑞家的去，问他才回了太太，说了些什么。",
+  "title": "问回话",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-139",
+  "speaker": "zhou_rui",
+  "text": "周瑞家的道：「太太说，既是一家子，我如何连影儿也不知道。奶奶只管做主就是了。」",
+  "title": "太太原话",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-140",
+  "speaker": "narrator",
+  "text": "凤姐听了，也不说别的，只微微一笑，心里已有了主意。",
+  "title": "凤姐有主",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-141",
+  "speaker": "liu_lao",
+  "text": "说话时，刘姥姥已吃毕了饭，拉了板儿过来，抹舌咂嘴的道谢。",
+  "title": "饭毕道谢",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "east_room",
+     "feng_room"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "east_room",
+     "feng_room"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-142",
+  "speaker": "feng",
+  "text": "凤姐笑道：「且请坐下，听我告诉你老人家。今儿你既老远的来了，又是头一次见我张口，怎好叫你空回去呢。」",
+  "title": "凤姐周济",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-143",
+  "speaker": "narrator",
+  "text": "凤姐将家中如何艰难，如何拮据，说了一篇，却满口应承下来。",
+  "title": "说艰难应承",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-144",
+  "speaker": "feng",
+  "text": "你既来了，我岂有不周济你的理。只是我屋里也得顾着脸面，不能太过。",
+  "title": "岂有不周济",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-145",
+  "speaker": "feng",
+  "text": "可巧昨儿太太给我的丫头们做衣裳的二十两银子，我还没动呢，你若不嫌少，就暂且先拿了去罢。",
+  "title": "二十两银子",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-146",
+  "speaker": "narrator",
+  "text": "凤姐说着，便命平儿去取那包银子。",
+  "title": "命平儿取银",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ping_er",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-147",
+  "speaker": "liu_lao",
+  "text": "瘦死的骆驼比马大。你老拔根寒毛比我们的腰还粗呢！",
+  "title": "拔根寒毛比腰粗",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-148",
+  "speaker": "narrator",
+  "text": "刘姥姥只管这么说，却不知轻重，把个平儿都逗笑了。",
+  "title": "刘姥姥粗鄙",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-149",
+  "speaker": "feng",
+  "text": "周瑞家的见他说的粗鄙，只管使眼色止他。凤姐看见，笑而不睬，并不着恼。",
+  "title": "凤姐笑而不睬",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-150",
+  "speaker": "feng",
+  "text": "只命平儿把昨儿那包银子拿来，再拿一吊钱来……「这是二十两银子，暂且给这孩子做件冬衣罢。」",
+  "title": "银子加一吊钱",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ping_er",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-151",
+  "speaker": "ping_er",
+  "text": "平儿答应着，去取了银子与钱来，用红封皮封好。",
+  "title": "平儿取银钱",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-152",
+  "speaker": "narrator",
+  "text": "平儿将银子与钱交与刘姥姥，又悄悄的另抓了一把果子与板儿。",
+  "title": "交与银钱",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "liu_lao",
+    "at": "feng_room"
+   },
+   {
+    "type": "show",
+    "actor": "ban_er",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-153",
+  "speaker": "feng",
+  "text": "这钱雇车坐罢。改日无事，只管来逛逛，亲戚们原该走动。一面说，一面就站了起来。",
+  "title": "送客",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-154",
+  "speaker": "narrator",
+  "text": "刘姥姥只管千恩万谢的，拿了银子钱，随了周瑞家的来至外面。",
+  "title": "千恩万谢",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "feng_room",
+     "platform",
+     "daoting",
+     "zhou_court",
+     "back_gate"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "feng_room",
+     "platform",
+     "daoting",
+     "zhou_court",
+     "back_gate"
+    ]
+   },
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "back_gate"
+   },
+   {
+    "type": "hide",
+    "actor": "feng"
+   },
+   {
+    "type": "hide",
+    "actor": "ping_er"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-155",
+  "speaker": "zhou_rui",
+  "text": "周瑞家的道：「我的娘啊！你见了他怎么倒不会说了？开口就是『你侄儿』——蓉大爷才是他的正经侄儿呢，你倒认起亲来了。」",
+  "title": "周瑞家数落",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "back_gate"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-156",
+  "speaker": "liu_lao",
+  "text": "我老拙嘴笨，原不会说话，嫂子别笑话。今日多亏了你周全。",
+  "title": "刘姥姥赔笑",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-157",
+  "speaker": "narrator",
+  "text": "二人说着，又到周瑞家坐了片时。刘姥姥便要留下一块银子与周瑞家孩子们买果子吃。",
+  "title": "到周家坐",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "back_gate",
+     "zhou_court"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "back_gate",
+     "zhou_court"
+    ]
+   },
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "zhou_court"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "zhou_court",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-158",
+  "speaker": "liu_lao",
+  "text": "这点银子，给孩子们买果子吃罢，老身心领了嫂子的情。",
+  "title": "留银买果",
+  "actions": []
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-159",
+  "speaker": "zhou_rui",
+  "text": "周瑞家的如何放在眼里，执意不肯。刘姥姥感谢不尽，只得收回。",
+  "title": "周瑞家不肯",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "zhou_rui"
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-160",
+  "speaker": "narrator",
+  "text": "刘姥姥仍从后门去了，祖孙两个欢天喜地，雇了车回乡。",
+  "title": "仍从后门去",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "liu_lao",
+    "via": [
+     "zhou_court",
+     "back_gate"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "ban_er",
+    "via": [
+     "zhou_court",
+     "back_gate"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c6-gift",
+  "scene": "c6_wangchui",
+  "place": "凤姐上房",
+  "focus": "back_gate",
+  "source": {
+   "chapter": 6,
+   "paragraphLead": "鳳姐笑道：「你只管坐著，這是我侄兒」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C06-161",
+  "speaker": "narrator",
+  "text": "得意浓时易接济，受恩深处胜亲朋。",
+  "title": "收束诗",
+  "actions": []
+ }
+]

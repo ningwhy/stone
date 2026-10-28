@@ -1,0 +1,1525 @@
+{
+  "note": "三级舆图：第一级天下（京城/扬州/应天府同级），第二级京城（宁荣街与宁荣二府），第三级府内（荣国府/宁国府/大观园旧址）。府内布局一律以原文出入顺序与方位为据，凡原文未写、由改编推定的，在 source 字段标“改编”。",
+  "sceneLevel": {
+    "capital": "rongguo",
+    "entry": "rongguo",
+    "east": "rongguo",
+    "central": "rongguo",
+    "wang": "rongguo",
+    "dinner": "rongguo",
+    "night": "rongguo",
+    "yucun": "rongguo",
+    "c4_lixiang": "rongguo",
+    "c6_wangchui": "rongguo",
+    "c5_ningfu": "ningguo",
+    "lin": "realm",
+    "guowai": "realm",
+    "canal": "realm",
+    "suzhou": "realm",
+    "myth": "realm",
+    "dream": "realm",
+    "lantern": "realm",
+    "ruins": "realm",
+    "yamen": "realm",
+    "zhitong": "realm",
+    "tavern": "realm",
+    "farm": "realm",
+    "c4_yamen": "realm",
+    "c6_village": "realm",
+    "c5_taixu": "realm",
+    "c5_mijing": "realm"
+  },
+  "levels": {
+    "realm": {
+      "id": "realm",
+      "title": "天下",
+      "subtitle": "神京 · 扬州 · 应天府 · 姑苏 —— 第一级",
+      "parent": null,
+      "scale": 17,
+      "origin": [
+        720,
+        90
+      ],
+      "legend": "点击京城可进入第二级；其余为同级地点，直接跳到该地剧情。",
+      "locations": [
+        {
+          "id": "capital_city",
+          "name": "京都 · 神京",
+          "col": 22,
+          "row": 9,
+          "width": 9,
+          "height": 7,
+          "kind": "site",
+          "asset": "manor-main-gate",
+          "drill": "capital",
+          "scene": "capital",
+          "description": "黛玉弃舟登岸后入城，一路行至宁荣街。第二回冷子兴说“街东是宁国府，街西是荣国府，二宅相连，竟将大半条街占了”。",
+          "quote": "第三回：“自上了轿，进入城中，从纱窗向外瞧了一瞧，其街市之繁华，人烟之阜盛，自与别处不同。”",
+          "source": "原文",
+          "start": "A001",
+          "external": false,
+          "focus": ""
+        },
+        {
+          "id": "yangzhou",
+          "name": "扬州 · 维扬",
+          "col": 17,
+          "row": 27,
+          "width": 7,
+          "height": 6,
+          "kind": "site",
+          "asset": "river-boat",
+          "scene": "lin",
+          "description": "林如海任盐政、黛玉辞父北上的地方；贾雨村也曾在此做黛玉西席、后由此入京。",
+          "quote": "第三回：“黛玉自那日弃舟登岸时，便有荣国府打发了轿子并拉行李的车辆久候了。”",
+          "source": "原文",
+          "start": "C2-009",
+          "external": false,
+          "focus": ""
+        },
+        {
+          "id": "yingtian",
+          "name": "应天府 · 金陵",
+          "col": 8,
+          "row": 31,
+          "width": 7,
+          "height": 6,
+          "kind": "site",
+          "asset": "estate-yamen",
+          "scene": "c4_yamen",
+          "description": "金陵应天府衙署。贾雨村起复后补授此缺，在此判断薛蟠纵仆行凶一案。",
+          "quote": "第四回：“不上两个月，金陵应天府缺出，便谋补了此缺，拜辞了贾政，择日上任去了。”",
+          "source": "原文",
+          "start": "C04-007",
+          "external": false,
+          "focus": ""
+        },
+        {
+          "id": "suzhou",
+          "name": "姑苏 · 阊门外",
+          "col": 21,
+          "row": 35,
+          "width": 6,
+          "height": 5,
+          "kind": "site",
+          "asset": "zhen-house",
+          "scene": "suzhou",
+          "description": "第一回甄士隐家所在，十里街仁清巷葫芦庙旁；故事由此起头。",
+          "quote": "第一回：“当日地陷东南，这东南一隅有处曰姑苏，有城曰阊门者，最是红尘中一二等富贵风流之地。”",
+          "source": "原文",
+          "start": "C1-019",
+          "external": false,
+          "focus": ""
+        },
+        {
+          "id": "liujiazhuang",
+          "name": "京东 · 刘家庄",
+          "col": 32,
+          "row": 15,
+          "width": 6,
+          "height": 5,
+          "kind": "site",
+          "asset": "estate-farm",
+          "scene": "c6_village",
+          "description": "第六回刘姥姥、板儿所住的京郊村子，进城要走一天，找至宁荣街再进荣国府。",
+          "quote": "第六回：“刘姥姥便起来梳洗了……于是刘姥姥带他进城，找至宁荣街。”",
+          "source": "原文",
+          "start": "C06-014",
+          "external": false,
+          "focus": ""
+        },
+        {
+          "id": "taixu",
+          "name": "太虚幻境",
+          "col": 34,
+          "row": 5,
+          "width": 7,
+          "height": 6,
+          "kind": "myth",
+          "asset": "taixu-gate",
+          "scene": "c5_taixu",
+          "description": "第五回宝玉梦中所入。不在舆图之内，画在天际以示“幻境”，与京都等实体地点并列在目录里。",
+          "quote": "第五回：“宝玉……恍恍惚惚……至一所在，但见朱栏白石，绿树清溪，真是人迹希逢，飞尘不到。”",
+          "source": "原文",
+          "start": "C05-023",
+          "external": false,
+          "focus": ""
+        },
+        {
+          "id": "qinggeng",
+          "name": "大荒山 · 青埂峰",
+          "col": 5,
+          "row": 7,
+          "width": 6,
+          "height": 5,
+          "kind": "myth",
+          "asset": "spirit-stone",
+          "description": "第一回顽石所在；僧道携石下凡历劫，全书由此石头起。",
+          "quote": "第一回：“原来女娲氏炼石补天之时，于大荒山无稽崖炼成高经十二丈……弃在青埂峰下。”",
+          "source": "原文",
+          "start": "",
+          "external": false,
+          "focus": ""
+        }
+      ],
+      "network": {
+        "nodes": {
+          "capital_city": [
+            22,
+            12
+          ],
+          "yangzhou": [
+            17,
+            30
+          ],
+          "yingtian": [
+            11,
+            34
+          ],
+          "suzhou": [
+            21,
+            37
+          ],
+          "liujiazhuang": [
+            32,
+            18
+          ],
+          "taixu": [
+            34,
+            8
+          ],
+          "qinggeng": [
+            8,
+            10
+          ],
+          "canal_mid": [
+            20,
+            22
+          ]
+        },
+        "edges": [
+          [
+            "suzhou",
+            "yangzhou"
+          ],
+          [
+            "yangzhou",
+            "canal_mid"
+          ],
+          [
+            "canal_mid",
+            "capital_city"
+          ],
+          [
+            "capital_city",
+            "yingtian"
+          ],
+          [
+            "capital_city",
+            "liujiazhuang"
+          ],
+          [
+            "capital_city",
+            "canal_mid"
+          ]
+        ],
+        "dreamEdges": [
+          [
+            "capital_city",
+            "taixu"
+          ],
+          [
+            "qinggeng",
+            "suzhou"
+          ]
+        ]
+      },
+      "labels": [
+        [
+          "运 河 · 黛 玉 北 上",
+          19,
+          24
+        ],
+        [
+          "官 道 · 雨 村 赴 任",
+          15,
+          33
+        ],
+        [
+          "（幻境 · 不在舆图之内）",
+          35,
+          11
+        ]
+      ]
+    },
+    "capital": {
+      "id": "capital",
+      "title": "京城 · 宁荣街",
+      "subtitle": "宁荣街 · 宁国府 · 荣国府 —— 第二级",
+      "parent": "realm",
+      "scale": 17,
+      "origin": [
+        720,
+        70
+      ],
+      "legend": "两府皆坐北朝南，正门开在宁荣街北侧；宁国府在东，荣国府在西。点击府第进入第三级。",
+      "ground": [
+        {
+          "rect": [
+            2,
+            2,
+            36,
+            4
+          ],
+          "tone": "garden",
+          "name": "后一带花园"
+        },
+        {
+          "rect": [
+            2,
+            31,
+            36,
+            4
+          ],
+          "tone": "street",
+          "name": "宁荣街"
+        }
+      ],
+      "walls": [
+        [
+          [
+            21,
+            6
+          ],
+          [
+            21,
+            31
+          ]
+        ],
+        [
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            30
+          ]
+        ],
+        [
+          [
+            2,
+            30
+          ],
+          [
+            20,
+            30
+          ]
+        ],
+        [
+          [
+            21,
+            30
+          ],
+          [
+            38,
+            30
+          ]
+        ],
+        [
+          [
+            38,
+            6
+          ],
+          [
+            38,
+            30
+          ]
+        ],
+        [
+          [
+            2,
+            6
+          ],
+          [
+            38,
+            6
+          ]
+        ]
+      ],
+      "gates": [
+        {
+          "id": "ning_gate",
+          "name": "敕造宁国府",
+          "col": 30,
+          "row": 30,
+          "asset": "stone-lion",
+          "wall": "south",
+          "quote": "第三回：“忽见街北蹲着两个大石狮子，三间兽头大门……正门之上有一匾，匾上大书‘敕造宁国府’五个大字。”"
+        },
+        {
+          "id": "rong_gate",
+          "name": "荣国府正门",
+          "col": 10,
+          "row": 30,
+          "asset": "manor-main-gate",
+          "wall": "south",
+          "quote": "第三回：“想着，又往西行，不多远，照样也是三间大门，方是荣国府了。”"
+        }
+      ],
+      "locations": [
+        {
+          "id": "rongguo",
+          "name": "荣国府",
+          "col": 10,
+          "row": 18,
+          "width": 16,
+          "height": 22,
+          "kind": "estate",
+          "asset": "fu-hall",
+          "drill": "rongguo",
+          "description": "敕造荣国府，在宁荣街北侧偏西。第三回黛玉不进正门，只进西边角门；后一带花园日后并入大观园。",
+          "quote": "第三回：“又往西行，不多远，照样也是三间大门，方是荣国府了。却不进正门，只进了西边角门。”",
+          "source": "原文",
+          "start": "",
+          "external": false,
+          "focus": ""
+        },
+        {
+          "id": "ningguo",
+          "name": "宁国府",
+          "col": 30,
+          "row": 18,
+          "width": 16,
+          "height": 22,
+          "kind": "estate",
+          "asset": "ning-hall",
+          "drill": "ningguo",
+          "description": "敕造宁国府，在宁荣街北侧偏东，长房。第五回会芳园赏梅、宝玉梦游太虚境即在此府。",
+          "quote": "第三回：“忽见街北蹲着两个大石狮子，三间兽头大门……匾上大书‘敕造宁国府’五个大字。”",
+          "source": "原文",
+          "start": "",
+          "external": false,
+          "focus": ""
+        },
+        {
+          "id": "rear_garden",
+          "name": "后一带花园 · 大观园旧址",
+          "col": 20,
+          "row": 4,
+          "width": 28,
+          "height": 4,
+          "kind": "garden",
+          "asset": "garden-tree",
+          "drill": "daguanyuan",
+          "description": "两府之后的一带花园。第十六回起拆会芳园、并荣府东边花园，改建为大观园；前五回此处尚无园景。",
+          "quote": "第二回（冷子兴）：“就是后一带花园子里面，树木山石，也还都有蓊蔚洇润之气。”",
+          "source": "原文",
+          "start": "",
+          "external": false,
+          "focus": ""
+        }
+      ],
+      "markers": [
+        {
+          "name": "宁 荣 街",
+          "col": 20,
+          "row": 33
+        },
+        {
+          "name": "两府之间 · 私巷隔断",
+          "col": 21,
+          "row": 24
+        },
+        {
+          "name": "街市繁华 · 人烟阜盛",
+          "col": 3,
+          "row": 33
+        },
+        {
+          "name": "街市",
+          "col": 37,
+          "row": 33
+        }
+      ],
+      "network": {
+        "nodes": {
+          "rong_gate": [
+            10,
+            30
+          ],
+          "ning_gate": [
+            30,
+            30
+          ],
+          "street_west": [
+            2,
+            33
+          ],
+          "street_mid": [
+            20,
+            33
+          ],
+          "street_east": [
+            38,
+            33
+          ],
+          "lane_north": [
+            21,
+            6
+          ]
+        },
+        "edges": [
+          [
+            "street_west",
+            "street_mid"
+          ],
+          [
+            "street_mid",
+            "street_east"
+          ],
+          [
+            "street_mid",
+            "rong_gate"
+          ],
+          [
+            "street_mid",
+            "ning_gate"
+          ]
+        ]
+      }
+    },
+    "rongguo": {
+      "id": "rongguo",
+      "title": "荣国府",
+      "subtitle": "院落 · 正屋 · 连廊 —— 第三级",
+      "parent": "capital",
+      "scale": 17,
+      "origin": [
+        720,
+        55
+      ],
+      "note": "依据第三回进出顺序与第四回梨香院方位编排；西角门采用西墙方案，非历史建筑复原。",
+      "legend": "虚线框内为同一座院落，其中的小字是房内空间，不是另起一院。",
+      "daiyuScenes": [
+        "capital",
+        "entry",
+        "east",
+        "central",
+        "wang",
+        "dinner",
+        "night",
+        "feng",
+        "c4_lixiang"
+      ],
+      "groups": [
+        {
+          "id": "granny",
+          "name": "贾母院",
+          "rect": [
+            7,
+            16,
+            9,
+            13
+          ],
+          "note": "垂花门—抄手游廊—穿堂（大插屏）—三间内厅—正房大院—五间上房，后房在正房之后，碧纱橱在正房之内。三者同属一院。",
+          "quote": "第三回：“进了垂花门，两边是抄手游廊，当中是穿堂，当地放着一个紫檀架子大理石的大插屏。转过插屏，小小的三间厅，厅后就是后面的正房大院。正面五间上房……”"
+        },
+        {
+          "id": "rongxi",
+          "name": "荣禧堂 · 正内室",
+          "rect": [
+            19,
+            20,
+            10,
+            9
+          ],
+          "note": "五间大正房与东西厢房为一院，一条大甬路直通大门。王夫人“时常居坐宴息”就在正室东边的三间耳房与东廊三间小正房，同在此院落之内，不是另起一院。",
+          "quote": "第三回：“原来王夫人时常居坐宴息，亦不在这正室，只在这正室东边的三间耳房内。”"
+        }
+      ],
+      "walls": [
+        [
+          [
+            4,
+            2
+          ],
+          [
+            40,
+            2
+          ]
+        ],
+        [
+          [
+            40,
+            2
+          ],
+          [
+            40,
+            36
+          ]
+        ],
+        [
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            28.5
+          ]
+        ],
+        [
+          [
+            4,
+            31.5
+          ],
+          [
+            4,
+            36
+          ]
+        ],
+        [
+          [
+            4,
+            36
+          ],
+          [
+            21.5,
+            36
+          ]
+        ],
+        [
+          [
+            24.5,
+            36
+          ],
+          [
+            33.5,
+            36
+          ]
+        ],
+        [
+          [
+            36.5,
+            36
+          ],
+          [
+            40,
+            36
+          ]
+        ],
+        [
+          [
+            30,
+            14
+          ],
+          [
+            30,
+            36
+          ]
+        ]
+      ],
+      "gates": [
+        {
+          "id": "west_gate",
+          "name": "西角门",
+          "col": 4,
+          "row": 30,
+          "asset": "west-wall-gate",
+          "wall": "west",
+          "quote": "第三回：“却不进正门，只进了西边角门。”"
+        },
+        {
+          "id": "main_gate",
+          "name": "荣府正门",
+          "col": 23,
+          "row": 36,
+          "asset": "manor-main-gate",
+          "wall": "south",
+          "quote": "第三回：“（邢夫人）携了黛玉……出了西角门，往东过荣府正门，便入一黑油大门内。”"
+        },
+        {
+          "id": "black_gate",
+          "name": "黑油大门",
+          "col": 35,
+          "row": 36,
+          "asset": "black-oil-gate",
+          "wall": "south",
+          "quote": "第三回：“往东过荣府正门，便入一黑油大门内，至仪门前方下来。”"
+        }
+      ],
+      "locations": [
+        {
+          "id": "capital",
+          "name": "西角门 · 换轿处",
+          "col": 4,
+          "row": 30,
+          "width": 3,
+          "height": 3,
+          "kind": "site",
+          "asset": "west-wall-gate",
+          "scene": "capital",
+          "focus": "",
+          "start": "",
+          "external": false,
+          "source": "原文",
+          "description": "西侧院墙的入府角门。轿夫抬入走一射之地，转弯处换小厮抬轿，至垂花门落下；去贾赦东院也要先出此门。",
+          "quote": "第三回：“那轿夫抬进去，走了一射之地，将转弯时，便歇下退出去了。后面的婆子们已都下了轿……另换了三四个衣帽周全十七八岁的小厮上来，复抬起轿子。”"
+        },
+        {
+          "id": "entry",
+          "name": "垂花门 · 穿堂 · 正房五间",
+          "col": 12,
+          "row": 26,
+          "width": 5,
+          "height": 4,
+          "kind": "court",
+          "group": "granny",
+          "asset": "estate-grandmother",
+          "scene": "entry",
+          "focus": "",
+          "start": "",
+          "external": false,
+          "source": "原文",
+          "description": "贾母院的正房。黛玉在此拜见外祖母、见三春、凤姐从后房门进来。",
+          "quote": "第三回：“正面五间上房，皆雕梁画栋，两边穿山游廊厢房……黛玉方进入房时，只见两个人搀着一位鬓发如银的老母迎上来。”"
+        },
+        {
+          "id": "night",
+          "name": "碧纱橱（贾母正房内）",
+          "col": 12,
+          "row": 23,
+          "kind": "room",
+          "group": "granny",
+          "asset": "estate-bisha",
+          "scene": "night",
+          "focus": "",
+          "start": "",
+          "external": false,
+          "source": "原文",
+          "description": "碧纱橱是贾母正房里的隔间，不是独立院落。贾母把黛玉安置在橱内，宝玉睡在橱外的床，贾母自己挪进套间暖阁。",
+          "quote": "第三回：“贾母说：‘今将宝玉挪出来，同我在套间暖阁儿里，把你林姑娘暂安置碧纱橱里。’宝玉道：‘我就在碧纱橱外的床上很妥当。’”"
+        },
+        {
+          "id": "dinner",
+          "name": "贾母后房 · 晚膳",
+          "col": 10,
+          "row": 18,
+          "width": 5,
+          "height": 4,
+          "kind": "court",
+          "group": "granny",
+          "asset": "estate-rear",
+          "scene": "dinner",
+          "focus": "",
+          "start": "",
+          "external": false,
+          "source": "原文",
+          "description": "正房之后的后房。王夫人携黛玉从后房门由后廊往西，穿过东西穿堂回贾母后院用膳；宝黛初见与摔玉在此。",
+          "quote": "第三回：“王夫人遂携黛玉穿过一个东西穿堂，便是贾母的后院了，于是进入后房门……贾母正面榻上独坐，两旁四张空椅。”"
+        },
+        {
+          "id": "central",
+          "name": "荣禧堂 · 五间大正房",
+          "col": 23,
+          "row": 25,
+          "width": 9,
+          "height": 7,
+          "kind": "court",
+          "group": "rongxi",
+          "asset": "rongxi-hall",
+          "scene": "central",
+          "focus": "",
+          "start": "",
+          "external": false,
+          "source": "原文",
+          "description": "向南大厅之后、仪门内的大院落，正经正内室，一条大甬路直接出大门。堂上悬“荣禧堂”赤金九龙青地大匾。",
+          "quote": "第三回：“向南大厅之后，仪门内大院落，上面五间大正房……黛玉便知这方是正经正内室，一条大甬路，直接出大门的。”"
+        },
+        {
+          "id": "wang",
+          "name": "正室东耳房 · 东廊小正房",
+          "col": 27,
+          "row": 22,
+          "kind": "room",
+          "group": "rongxi",
+          "asset": "estate-wang",
+          "scene": "wang",
+          "focus": "",
+          "start": "",
+          "external": false,
+          "source": "原文",
+          "description": "王夫人居坐宴息之处，在荣禧堂正室东边的三间耳房，再出来是东廊三间小正房。同属荣禧堂院落，不是独立一院。",
+          "quote": "第三回：“原来王夫人时常居坐宴息，亦不在这正室，只在这正室东边的三间耳房内……于是又引黛玉出来，到了东廊三间小正房内。”"
+        },
+        {
+          "id": "feng",
+          "name": "王熙凤院",
+          "col": 17,
+          "row": 10,
+          "width": 6,
+          "height": 5,
+          "kind": "court",
+          "asset": "estate-feng",
+          "scene": "wang",
+          "focus": "feng_room",
+          "start": "U019",
+          "external": false,
+          "source": "原文",
+          "description": "贾琏、王熙凤住的小小一所房室。在南北宽夹道的北端，粉油大影壁之后。王夫人带黛玉去贾母后房时，在夹道边指给黛玉看。",
+          "quote": "第三回：“出了角门，是一条南北宽夹道。南边是倒座三间小小的抱厦厅，北边立着一个粉油大影壁，后有一半大门，小小一所房室。王夫人笑指向黛玉道：‘这是你凤姐姐的屋子。’”"
+        },
+        {
+          "id": "east",
+          "name": "贾赦东院",
+          "col": 35,
+          "row": 27,
+          "width": 8,
+          "height": 9,
+          "kind": "court",
+          "asset": "estate-east",
+          "scene": "east",
+          "focus": "",
+          "start": "",
+          "external": false,
+          "source": "原文",
+          "description": "荣府东部另院，由南墙偏东的黑油大门进入，三层仪门。院宇小巧别致，是从荣府花园隔断过来的。",
+          "quote": "第三回：“出了西角门，往东过荣府正门，便入一黑油大门内，至仪门前方下来……黛玉度其房屋院宇，必是荣府中花园隔断过来的。”"
+        },
+        {
+          "id": "c4_lixiang",
+          "name": "梨香院",
+          "col": 34,
+          "row": 6,
+          "width": 7,
+          "height": 6,
+          "kind": "court",
+          "asset": "estate-lixiang",
+          "scene": "c4_lixiang",
+          "focus": "",
+          "start": "C04-104",
+          "external": false,
+          "source": "原文",
+          "description": "荣府东北角的小院，荣公暮年养静之所，薛姨妈一家进京后住此。另有街门通街，西南角门通夹道，出去便是王夫人正房的东边。",
+          "quote": "第四回：“咱们东北角上梨香院一所十来间房，白空闲着……原来这梨香院即当日荣公暮年养静之所，小小巧巧，约有十余间房屋……西南有一角门，通一夹道，出夹道便是王夫人正房的东边了。”"
+        },
+        {
+          "id": "yucun",
+          "name": "贾政书房",
+          "col": 23,
+          "row": 32,
+          "width": 7,
+          "height": 5,
+          "kind": "court",
+          "asset": "estate-study",
+          "scene": "yucun",
+          "focus": "",
+          "start": "",
+          "external": false,
+          "source": "改编",
+          "description": "贾政的外书房院落，雨村进京持荐书求见的独立支线。第三回黛玉来时贾政“斋戒去了”，原文并未写她到此。",
+          "quote": "第三回：“（王夫人）你舅舅今日斋戒去了，再见罢。”"
+        }
+      ],
+      "markers": [
+        {
+          "name": "南 北 宽 夹 道",
+          "col": 17,
+          "row": 21
+        },
+        {
+          "name": "倒座三间抱厦厅",
+          "col": 17,
+          "row": 17
+        },
+        {
+          "name": "粉油大影壁",
+          "col": 15,
+          "row": 13
+        },
+        {
+          "name": "向南大厅",
+          "col": 23,
+          "row": 30
+        },
+        {
+          "name": "后一带花园（后并入大观园）",
+          "col": 10,
+          "row": 6
+        },
+        {
+          "name": "李纨居处（第六回：周瑞家的从其窗下过）",
+          "col": 21,
+          "row": 15
+        },
+        {
+          "name": "大甬路 · 直通大门",
+          "col": 23,
+          "row": 34
+        },
+        {
+          "name": "梨香院西南角门 · 通夹道至王夫人正房东",
+          "col": 31,
+          "row": 11
+        },
+        {
+          "name": "梨香院街门 · 薛蟠家人出入",
+          "col": 37,
+          "row": 10
+        }
+      ],
+      "network": {
+        "nodes": {
+          "capital": [
+            4,
+            30
+          ],
+          "entry": [
+            12,
+            26
+          ],
+          "dinner": [
+            10,
+            18
+          ],
+          "night": [
+            12,
+            23
+          ],
+          "central": [
+            23,
+            25
+          ],
+          "wang": [
+            27,
+            22
+          ],
+          "east": [
+            35,
+            27
+          ],
+          "feng": [
+            17,
+            10
+          ],
+          "c4_lixiang": [
+            34,
+            6
+          ],
+          "yucun": [
+            23,
+            32
+          ],
+          "west_out": [
+            2,
+            30
+          ],
+          "west_turn": [
+            2,
+            38
+          ],
+          "south_main": [
+            23,
+            38
+          ],
+          "south_black": [
+            35,
+            38
+          ],
+          "main_gate": [
+            23,
+            36
+          ],
+          "black_gate": [
+            35,
+            36
+          ],
+          "west_inside": [
+            6,
+            30
+          ],
+          "west_approach": [
+            6,
+            26
+          ],
+          "lane_entry": [
+            17,
+            26
+          ],
+          "lane_night": [
+            17,
+            23
+          ],
+          "lane_dinner": [
+            17,
+            18
+          ],
+          "lane_central": [
+            17,
+            25
+          ],
+          "lane_wang": [
+            17,
+            22
+          ],
+          "lane_feng": [
+            17,
+            12
+          ],
+          "lane_yucun": [
+            17,
+            32
+          ],
+          "lane_lixiang": [
+            17,
+            10
+          ],
+          "lixiang_gate": [
+            31,
+            10
+          ],
+          "lixiang_south": [
+            34,
+            10
+          ]
+        },
+        "edges": [
+          [
+            "capital",
+            "west_out"
+          ],
+          [
+            "west_out",
+            "west_turn"
+          ],
+          [
+            "west_turn",
+            "south_main"
+          ],
+          [
+            "south_main",
+            "south_black"
+          ],
+          [
+            "south_main",
+            "main_gate"
+          ],
+          [
+            "main_gate",
+            "yucun"
+          ],
+          [
+            "south_black",
+            "black_gate"
+          ],
+          [
+            "black_gate",
+            "east"
+          ],
+          [
+            "capital",
+            "west_inside"
+          ],
+          [
+            "west_inside",
+            "west_approach"
+          ],
+          [
+            "west_approach",
+            "entry"
+          ],
+          [
+            "entry",
+            "lane_entry"
+          ],
+          [
+            "lane_entry",
+            "lane_central"
+          ],
+          [
+            "lane_central",
+            "central"
+          ],
+          [
+            "central",
+            "lane_central"
+          ],
+          [
+            "lane_wang",
+            "wang"
+          ],
+          [
+            "lane_dinner",
+            "dinner"
+          ],
+          [
+            "lane_night",
+            "night"
+          ],
+          [
+            "lane_yucun",
+            "yucun"
+          ],
+          [
+            "lane_feng",
+            "feng"
+          ],
+          [
+            "lane_night",
+            "lane_feng"
+          ],
+          [
+            "lane_wang",
+            "lane_dinner"
+          ],
+          [
+            "lane_dinner",
+            "lane_central"
+          ],
+          [
+            "lane_central",
+            "lane_entry"
+          ],
+          [
+            "lane_entry",
+            "lane_yucun"
+          ],
+          [
+            "c4_lixiang",
+            "lixiang_south"
+          ],
+          [
+            "lixiang_south",
+            "lixiang_gate"
+          ],
+          [
+            "lixiang_gate",
+            "lane_lixiang"
+          ],
+          [
+            "lane_lixiang",
+            "lane_feng"
+          ],
+          [
+            "lane_lixiang",
+            "lane_wang"
+          ],
+          [
+            "feng",
+            "lane_feng"
+          ]
+        ]
+      },
+      "compass": {
+        "east": "col+",
+        "south": "row+",
+        "north": "row-",
+        "west": "col-"
+      }
+    },
+    "ningguo": {
+      "id": "ningguo",
+      "title": "宁国府",
+      "subtitle": "中路三进 · 西路会芳园 —— 第三级",
+      "parent": "capital",
+      "scale": 17,
+      "origin": [
+        720,
+        55
+      ],
+      "note": "中路按第五十三回“从大门、仪门、大厅、暖阁、内厅、内三门、内仪门并内塞门，直到正堂”排为三进；西路为会芳园与贾氏宗祠。前五回实际写到的是会芳园与上房内间、秦氏卧房。",
+      "legend": "中路三进自南向北；会芳园与贾氏宗祠在西路。虚线框为一院，小字为房内空间。",
+      "walls": [
+        [
+          [
+            4,
+            2
+          ],
+          [
+            38,
+            2
+          ]
+        ],
+        [
+          [
+            38,
+            2
+          ],
+          [
+            38,
+            34
+          ]
+        ],
+        [
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            34
+          ]
+        ],
+        [
+          [
+            4,
+            34
+          ],
+          [
+            15,
+            34
+          ]
+        ],
+        [
+          [
+            18,
+            34
+          ],
+          [
+            34,
+            34
+          ]
+        ],
+        [
+          [
+            34,
+            34
+          ],
+          [
+            38,
+            34
+          ]
+        ]
+      ],
+      "gates": [
+        {
+          "id": "ning_main_gate",
+          "name": "大门 · 三间兽头大门",
+          "col": 26,
+          "row": 34,
+          "asset": "stone-lion",
+          "wall": "south",
+          "quote": "第三回：“忽见街北蹲着两个大石狮子，三间兽头大门……正门之上有一匾，匾上大书‘敕造宁国府’五个大字。”"
+        }
+      ],
+      "groups": [
+        {
+          "id": "zhonglu",
+          "name": "中路 · 三进院落",
+          "rect": [
+            22,
+            8,
+            9,
+            26
+          ],
+          "note": "第一进：大门到仪门。第二进：仪门到内三门，院中有大厅（含暖阁）与后面的内厅。第三进：内三门到正堂。",
+          "quote": "第五十三回：“宁国府从大门、仪门、大厅、暖阁、内厅、内三门、内仪门并内塞门，直到正堂，一路正门大开。”"
+        },
+        {
+          "id": "huifang",
+          "name": "会芳园（西路花园）",
+          "rect": [
+            6,
+            8,
+            13,
+            16
+          ],
+          "note": "宁府西路的花园。园中有天香楼、凝曦轩、登仙阁、逗蜂轩，有溪流经过；西北是水面，东南有假山。",
+          "quote": "第五回：“因东边宁府花园内梅花盛开，贾珍之妻尤氏乃治酒请贾母、邢夫人、王夫人等赏花……就在会芳园游玩，先茶后酒。”"
+        }
+      ],
+      "locations": [
+        {
+          "id": "ning_gate_court",
+          "name": "大门 · 第一进",
+          "col": 26,
+          "row": 31,
+          "width": 7,
+          "height": 5,
+          "kind": "court",
+          "group": "zhonglu",
+          "asset": "main-hall",
+          "scene": "c5_ningfu",
+          "description": "三间兽头大门，门前两个大石狮子，门前列坐十来个华冠丽服之人。正门不开时由东西两角门出入。",
+          "quote": "第三回：“门前列坐着十来个华冠丽服之人。正门却不开，只有东西两角门有人出入。”",
+          "source": "原文",
+          "start": "C05-001",
+          "external": false,
+          "focus": ""
+        },
+        {
+          "id": "ning_hall",
+          "name": "大厅 · 暖阁（第二进）",
+          "col": 26,
+          "row": 25,
+          "width": 8,
+          "height": 6,
+          "kind": "court",
+          "group": "zhonglu",
+          "asset": "ning-hall",
+          "scene": "c5_ningfu",
+          "description": "仪门之内的大厅，左右为暖阁，厅后是内厅。第五十三回祭宗祠日，贾母等朝贺回来便在宁府暖阁下轿。",
+          "quote": "第五十三回：“……便到宁国府暖阁下轿。”",
+          "source": "原文",
+          "start": "",
+          "external": false,
+          "focus": ""
+        },
+        {
+          "id": "ning_inner",
+          "name": "内厅 · 内三门",
+          "col": 26,
+          "row": 18,
+          "width": 8,
+          "height": 5,
+          "kind": "court",
+          "group": "zhonglu",
+          "asset": "fu-hall",
+          "description": "大厅之后的内厅，再北为内三门（内仪门并内塞门），两门之内即正堂。",
+          "quote": "第五十三回：“宁国府从大门、仪门、大厅、暖阁、内厅、内三门、内仪门并内塞门，直到正堂。”",
+          "source": "原文",
+          "start": "",
+          "external": false,
+          "focus": ""
+        },
+        {
+          "id": "ning_zhengtang",
+          "name": "正堂 · 上房内间",
+          "col": 26,
+          "row": 11,
+          "width": 8,
+          "height": 5,
+          "kind": "court",
+          "group": "zhonglu",
+          "asset": "wang-hall",
+          "scene": "c5_ningfu",
+          "description": "第三进的正堂，贾珍、尤氏起居处。第五回秦氏先引宝玉到此处的上房内间，宝玉见《燃藜图》与对联便不肯待。",
+          "quote": "第五回：“当下秦氏引了一簇人来至上房内间，宝玉抬头看见是一幅画贴在上面……其故事乃是‘燃藜图’……忙说：‘快出去！快出去！’”",
+          "source": "原文",
+          "start": "C05-013",
+          "external": false,
+          "focus": ""
+        },
+        {
+          "id": "qin_room",
+          "name": "秦氏卧房",
+          "col": 31,
+          "row": 10,
+          "kind": "room",
+          "group": "zhonglu",
+          "asset": "qin-room",
+          "scene": "c5_ningfu",
+          "focus": "qin_room",
+          "description": "贾蓉之妻秦可卿的卧房，在正堂之东。宝玉在此香甜入梦，神游太虚幻境；第五回的梦起梦醒都在此处。",
+          "quote": "第五回：“说着大家来至秦氏卧房。刚至房门，便有一股细细的甜香袭了人来……宝玉便愈觉得眼饧骨软，连说‘好香！’”",
+          "source": "原文",
+          "start": "C05-019",
+          "external": false
+        },
+        {
+          "id": "huifang_yuan",
+          "name": "会芳园 · 梅花",
+          "col": 12,
+          "row": 16,
+          "width": 12,
+          "height": 11,
+          "kind": "garden",
+          "group": "huifang",
+          "asset": "garden-tree",
+          "scene": "c5_ningfu",
+          "description": "第五回尤氏治酒请贾母等赏梅的花园，先茶后酒。前五回里宁国府真正登场的就在这里。",
+          "quote": "第五回：“因东边宁府花园内梅花盛开，贾珍之妻尤氏乃治酒，请贾母、邢夫人、王夫人等赏花……就在会芳园游顽，先茶后酒。”",
+          "source": "原文",
+          "start": "C05-001",
+          "external": false,
+          "focus": ""
+        },
+        {
+          "id": "zongci",
+          "name": "贾氏宗祠",
+          "col": 8,
+          "row": 29,
+          "width": 7,
+          "height": 5,
+          "kind": "court",
+          "asset": "main-hall",
+          "description": "宁府西边另一个院子，黑油栅栏内五间大门，匾书“贾氏宗祠”。院中白石甬路、苍松翠柏，正殿悬“慎终追远”。",
+          "quote": "第五十三回：“原来宁府西边另一个院子，黑油栅栏内五间大门，上悬一块匾，写着是‘贾氏宗祠’四个字。”",
+          "source": "原文",
+          "start": "",
+          "external": false,
+          "focus": ""
+        }
+      ],
+      "markers": [
+        {
+          "name": "天香楼",
+          "col": 8,
+          "row": 11
+        },
+        {
+          "name": "凝曦轩 · 依水",
+          "col": 11,
+          "row": 10
+        },
+        {
+          "name": "登仙阁",
+          "col": 7,
+          "row": 20
+        },
+        {
+          "name": "逗蜂轩 · 傍山",
+          "col": 15,
+          "row": 20
+        },
+        {
+          "name": "西北水面",
+          "col": 8,
+          "row": 13
+        },
+        {
+          "name": "东南假山",
+          "col": 16,
+          "row": 21
+        },
+        {
+          "name": "丛绿堂（紧邻宗祠）",
+          "col": 14,
+          "row": 30
+        },
+        {
+          "name": "东路院落 · 贾珍等居处",
+          "col": 35,
+          "row": 24
+        },
+        {
+          "name": "仪门",
+          "col": 26,
+          "row": 28
+        },
+        {
+          "name": "内三门（内仪门并内塞门）",
+          "col": 26,
+          "row": 15
+        }
+      ],
+      "network": {
+        "nodes": {
+          "ning_main_gate": [
+            26,
+            34
+          ],
+          "ning_gate_court": [
+            26,
+            31
+          ],
+          "ning_hall": [
+            26,
+            25
+          ],
+          "ning_inner": [
+            26,
+            18
+          ],
+          "ning_zhengtang": [
+            26,
+            11
+          ],
+          "qin_room": [
+            31,
+            8
+          ],
+          "huifang_yuan": [
+            12,
+            16
+          ],
+          "zongci": [
+            8,
+            29
+          ],
+          "street": [
+            26,
+            37
+          ]
+        },
+        "edges": [
+          [
+            "street",
+            "ning_main_gate"
+          ],
+          [
+            "ning_main_gate",
+            "ning_gate_court"
+          ],
+          [
+            "ning_gate_court",
+            "ning_hall"
+          ],
+          [
+            "ning_hall",
+            "ning_inner"
+          ],
+          [
+            "ning_inner",
+            "ning_zhengtang"
+          ],
+          [
+            "ning_zhengtang",
+            "qin_room"
+          ],
+          [
+            "ning_gate_court",
+            "huifang_yuan"
+          ],
+          [
+            "ning_gate_court",
+            "zongci"
+          ]
+        ]
+      }
+    },
+    "daguanyuan": {
+      "id": "daguanyuan",
+      "title": "大观园",
+      "subtitle": "第三级 · 前五回尚未营建",
+      "parent": "capital",
+      "scale": 17,
+      "origin": [
+        720,
+        55
+      ],
+      "notice": "前五回没有大观园。此处原是两府之后一带花园与宁府会芳园的旧址；第十六回起才拆墙并园、起造楼台，第十七回元春归省才有园景。",
+      "locations": [
+        {
+          "id": "rear_garden_now",
+          "name": "后一带花园",
+          "col": 20,
+          "row": 20,
+          "width": 24,
+          "height": 14,
+          "kind": "garden",
+          "asset": "garden-tree",
+          "description": "冷子兴所见“后一带花园子，树木山石，也还都有蓊蔚洇润之气”。日后与宁府会芳园一并改建为大观园。",
+          "quote": "第二回（冷子兴）：“隔着墙一望，里面厅殿楼阁，也还都峥嵘轩峻；就是后一带花园子里面，树木山石，也还都有蓊蔚洇润之气。”",
+          "source": "原文",
+          "start": "",
+          "external": false,
+          "focus": ""
+        }
+      ],
+      "markers": [
+        {
+          "name": "第十六回 · 始议起造",
+          "col": 12,
+          "row": 14
+        },
+        {
+          "name": "第十七回 · 元春归省",
+          "col": 28,
+          "row": 14
+        }
+      ]
+    }
+  }
+}

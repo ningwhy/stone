@@ -5,9 +5,9 @@
 
 ## 总览
 
-- 位图总数 **94**（立绘 39、Q版 39、表情变体 16）
-- 朝左 **8**，朝右 **86**
-- 依据：实测 **68**、目视裁决 **26**
+- 位图总数 **109**（立绘 46、Q版 46、表情变体 17）
+- 朝左 **15**，朝右 **94**
+- 依据：实测 **68**、目视裁决 **41**
 
 「朝左 / 朝右」指的是**原图**里脸偏向画面的哪一侧——不是角色在剧情里该朝哪边。
 运行时用它决定该用原图还是左右镜像：要求显示的一侧与原图不符时才镜像。
@@ -16,6 +16,20 @@
 
 | 资产键 | 角色 | 类别 | 原图朝向 | 判定依据 |
 | --- | --- | --- | --- | --- |
+| `ban_er-chibi` | ban_er | Q版 | **朝右** | 目视 |
+| `ban_er-portrait` | ban_er | 立绘 | **朝左** | 目视 |
+| `jia_rong-chibi` | jia_rong | Q版 | **朝左** | 目视 |
+| `jia_rong-portrait` | jia_rong | 立绘 | **朝左** | 目视 |
+| `jinghuan-chibi` | jinghuan | Q版 | **朝右** | 目视 |
+| `jinghuan-portrait` | jinghuan | 立绘 | **朝右** | 目视 |
+| `liu_lao-chibi` | liu_lao | Q版 | **朝左** | 目视 |
+| `liu_lao-portrait` | liu_lao | 立绘 | **朝左** | 目视 |
+| `ping_er-chibi` | ping_er | Q版 | **朝右** | 目视 |
+| `ping_er-portrait` | ping_er | 立绘 | **朝右** | 目视 |
+| `qin_ke-chibi` | qin_ke | Q版 | **朝右** | 目视 |
+| `qin_ke-portrait` | qin_ke | 立绘 | **朝右** | 目视 |
+| `zhou_rui-chibi` | zhou_rui | Q版 | **朝左** | 目视 |
+| `zhou_rui-portrait` | zhou_rui | 立绘 | **朝左** | 目视 |
 | `maid-chibi` | 丫鬟 | Q版 | **朝右** | 目视 |
 | `maid-portrait` | 丫鬟 | 立绘 | **朝右** | 实测·3票 |
 | `messenger-chibi` | 传话人 | Q版 | **朝右** | 目视 |
@@ -87,6 +101,7 @@
 | `xing-portrait` | 袭人 | 立绘 | **朝右** | 实测·3票 |
 | `xiren-portrait` | 袭人 | 立绘 | **朝右** | 实测·3票 |
 | `baoyu-chibi` | 贾宝玉 | Q版 | **朝右** | 目视 |
+| `baoyu-portrait-v2` | 贾宝玉 | 变体·v2 | **朝右** | 目视 |
 | `baoyu-portrait-sad` | 贾宝玉 | 变体·忧愁 | **朝右** | 实测·3票 |
 | `baoyu-portrait-surprise` | 贾宝玉 | 变体·惊愕 | **朝右** | 实测·3票 |
 | `baoyu-portrait-joy` | 贾宝玉 | 变体·欢喜 | **朝右** | 实测·3票 |
@@ -115,6 +130,13 @@
 
 | 资产键 | 角色 | 类别 | 判定依据 |
 | --- | --- | --- | --- |
+| `ban_er-portrait` | ban_er | 立绘 | 目视 |
+| `jia_rong-chibi` | jia_rong | Q版 | 目视 |
+| `jia_rong-portrait` | jia_rong | 立绘 | 目视 |
+| `liu_lao-chibi` | liu_lao | Q版 | 目视 |
+| `liu_lao-portrait` | liu_lao | 立绘 | 目视 |
+| `zhou_rui-chibi` | zhou_rui | Q版 | 目视 |
+| `zhou_rui-portrait` | zhou_rui | 立绘 | 目视 |
 | `ruhai-portrait` | 如来 | 立绘 | 实测·3票 |
 | `nurse_li-portrait` | 李嬷嬷 | 立绘 | 目视 |
 | `monk-portrait` | 癞头和尚 | 立绘 | 实测·3票 |

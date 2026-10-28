@@ -9,7 +9,7 @@ const chrome='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||(existsSync(chrome)?chrome:undefined)});
 const context=await browser.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'});
 const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});mkdirSync('artifacts',{recursive:true});
-const saved=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('honglou-four-chapters:v4')));
+const saved=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('honglou-five-six-chapters:v5')));
 const node=()=>page.locator('.node-label').textContent();
 // A paused stage must hold still. Read the canvas pixels inside the page instead of
 // comparing Playwright element screenshots: the element screenshot path re-rasterises
@@ -29,7 +29,7 @@ try{
  assert.ok(marks.some(m=>/○/.test(m)),'the chapters not read yet must be marked as unread');
  const visited=new Set();
  for(let i=0;i<story.length;i++){
-  assert.equal(await node(),i===story.length-1?'终幕':story[i].id);const data=await saved();assert.equal(data.node,story[i].id);visited.add(data.state.sceneId);assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),206);
+  assert.equal(await node(),story[i].id);const data=await saved();assert.equal(data.node,story[i].id);visited.add(data.state.sceneId);assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),206);
   if(story[i].id==='F001'){assert.equal(data.state.actors.feng.visible,false);assert.equal(await page.locator('.dialogue-type').textContent(),'画外');}
   if(['C1-012','C1-025','C1-039','C2-018','C2-023'].includes(story[i].id))await page.screenshot({path:`artifacts/prequel-${story[i].id}.png`,fullPage:true});
   if(story[i].id==='B010')await page.screenshot({path:'artifacts/chapter-first-meeting.png',fullPage:true});
@@ -61,6 +61,17 @@ try{
  await page.getByRole('button',{name:'查看贾赦东院地点',exact:true}).click();assert.ok((await page.locator('.world-detail').textContent()).includes('黑油大门'));
  assert.equal(await node(),'N006');await page.getByRole('button',{name:'关闭地点详情'}).click();
  await page.screenshot({path:'artifacts/rongguo-overview.png',fullPage:true});
+ // 三级舆图：府内是第三级，可上溯京城再下钻宁国府；碧纱橱是房内空间，梨香院才是院落。
+ assert.deepEqual(await page.locator('.world-crumbs button').allTextContents(),['天下舆图','京城总览','荣国府总览']);
+ assert.equal(await page.getByRole('button',{name:'查看碧纱橱（贾母正房内）地点'}).getAttribute('data-kind'),'room');
+ assert.equal(await page.getByRole('button',{name:'查看正室东耳房 · 东廊小正房地点'}).getAttribute('data-kind'),'room');
+ assert.equal(await page.getByRole('button',{name:'查看梨香院地点'}).getAttribute('data-kind'),'court');
+ await page.locator('.world-crumbs button',{hasText:'京城总览'}).click();
+ assert.deepEqual(await page.locator('.world-crumbs button').allTextContents(),['天下舆图','京城总览']);
+ await page.getByRole('button',{name:'查看宁国府地点'}).click();await page.getByRole('button',{name:'进入宁国府总览 →'}).click();
+ assert.deepEqual(await page.locator('.world-crumbs button').allTextContents(),['天下舆图','京城总览','宁国府总览']);
+ await page.waitForFunction(()=>document.querySelectorAll('.world-location image[data-loaded=true]').length===7);
+ await page.screenshot({path:'artifacts/ningguo-overview.png',fullPage:true});
  await page.getByRole('button',{name:'当前场景',exact:true}).click();
  // A real sequential boundary must animate along the estate roads; pause freezes the token.
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(chapters[3].id);await reading();
@@ -110,7 +121,7 @@ try{
  await page.getByRole('tab',{name:'地图'}).click(); // 复位页签，后面的册页断言默认从地图起
  await page.keyboard.press('Escape');
 
- await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'册页',exact:true}).click();assert.equal(await page.locator('.atlas-body article').count(),22);
+ await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'册页',exact:true}).click();assert.equal(await page.locator('.atlas-body article').count(),27);
  // 见闻标签：32 张卡（22 地志 + 6 金句 + 4 信物），读过的部分已入册，收集数与页签一致。
  await page.getByRole('tab',{name:/见闻/}).click();
  assert.equal(await page.locator('.card-gallery .card-item').count(),36,'the album must list every card');
@@ -177,18 +188,23 @@ try{
  await page.locator('.ledger-people button').filter({hasText:'英莲'}).click();
  assert.match(await page.locator('.ledger-book h3').textContent(),/英莲的流转链/);
  assert.equal(await page.locator('.ledger-book .ledger-row').count(),3,'the chain lists every transfer of one item');
- await page.getByRole('tab',{name:'地图'}).click();assert.equal(await page.locator('.atlas-body article').count(),22);
+ await page.getByRole('tab',{name:'地图'}).click();assert.equal(await page.locator('.atlas-body article').count(),27);
  await page.keyboard.press('Escape');
 
  // A complete painted cast directory makes early characters discoverable after resuming.
  await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'人物图鉴',exact:true}).click();
- assert.equal(await page.locator('.cast-gallery article').count(),38);
- assert.equal(await page.locator('.cast-gallery img').count(),38);
+ assert.equal(await page.locator('.cast-gallery article').count(),45);
+ assert.equal(await page.locator('.cast-gallery img').count(),45);
  await page.screenshot({path:'artifacts/cast-directory.png',fullPage:true});
  await page.locator('.cast-gallery article').filter({has:page.locator('strong',{hasText:'冷子兴'})}).getByRole('button',{name:'定位出场 →',exact:true}).click();await reading();assert.equal((await saved()).state.actors.leng.visible,true);assert.ok((await node()).startsWith('C2-'));await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('prologue');await reading();await next();await next();await next();assert.equal(await node(),'P004');
  assert.match(await page.locator('.speaker-portrait img').getAttribute('src'),/^\/assets\/rongguo\/leng-portrait\.webp\?v=[a-f0-9]+$/);
  await page.screenshot({path:'artifacts/leng-zixing.png',fullPage:true});
- await page.getByRole('button',{name:'荣国府总览',exact:true}).click();await page.getByRole('button',{name:'查看王熙凤院地点',exact:true}).click();
+ // 扬州一节的「总览」落在第一级天下；下钻 京都 → 京城 → 荣国府 才到凤姐院门口。
+ await page.getByRole('button',{name:'天下舆图',exact:true}).click();await page.locator('.world-map').waitFor();
+ await page.getByRole('button',{name:'查看京都 · 神京地点'}).click();await page.getByRole('button',{name:'进入京城总览 →'}).click();
+ await page.getByRole('button',{name:'查看荣国府地点'}).click();await page.getByRole('button',{name:'进入荣国府总览 →'}).click();
+ assert.deepEqual(await page.locator('.world-crumbs button').allTextContents(),['天下舆图','京城总览','荣国府总览']);
+ await page.getByRole('button',{name:'查看王熙凤院地点',exact:true}).click();
  assert.ok((await page.locator('.world-detail').textContent()).includes('粉油大影壁'));
  await page.getByRole('button',{name:'从此处剧情开始 →',exact:true}).click();await reading();assert.equal(await node(),'U019');
  await page.screenshot({path:'artifacts/feng-courtyard-gate.png',fullPage:true});
@@ -231,6 +247,6 @@ await dismissPickup(page,true);
 await page.evaluate(()=>window.__mapScene.engine.seek('C1-033'));
 await page.waitForTimeout(500);
 assert.equal(await page.locator('.pickup-overlay').count(),0,'collected goods do not pop twice');
-await page.evaluate(()=>localStorage.setItem('honglou-four-chapters:v4','{bad'));await page.reload();await reading();assert.equal(await node(),'C1-001');
+await page.evaluate(()=>localStorage.setItem('honglou-five-six-chapters:v5','{bad'));await page.reload();await reading();assert.equal(await node(),'C1-001');
  assert.equal(errors.length,0,JSON.stringify(errors));console.log('Passed: all 354 nodes, twenty-two maps, complete history, chapter 1–4 selection, cross-scene save/reload, offscreen reveal, natural movement, pause, settings, atlas, stable map area, minimum readable sprites/labels, zoom hit targets, overview browsing, paused estate travel, controls visible at 1440×900 / 1280×720 / 390×844, corrupt-save recovery.');
 }catch(e){console.error('Browser errors:',errors);console.error((await page.locator('body').innerText()).slice(0,3500));await page.screenshot({path:'artifacts/browser-failure.png',fullPage:true});throw e;}finally{await context.close();await browser.close();}

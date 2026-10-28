@@ -64,6 +64,25 @@ try{
  await page.locator('.world-map').waitFor({timeout:30000});
  console.log(`${tag} chapter-four overview: estate map opens`);
  await page.getByRole('button',{name:'当前场景',exact:true}).click();
+ // Book five happens across the street in 宁国府, so its overview tab opens the atlas on the
+ // 宁国府 level — not the 荣国府 plan the reader is not standing in, and not a generic trail.
+ await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c5-niang');await reading();
+ await page.getByRole('button',{name:'宁国府总览',exact:true}).click();
+ await page.locator('.world-map').waitFor({timeout:30000});
+ assert.equal(await page.locator('.journey-map').count(),0,'book five must open the atlas, not a generic trail');
+ await page.waitForFunction(()=>document.querySelectorAll('.world-location image[data-loaded=true]').length===7,undefined,{timeout:120000});
+ const bookFiveStages=await page.locator('.world-site-label text').allTextContents();
+ assert.ok(bookFiveStages.some(t=>t.includes('会芳园')),`book five must open in 会芳园, got ${bookFiveStages.join(' / ')}`);
+ assert.ok(bookFiveStages.some(t=>t.includes('秦氏卧房')),`book five must list 秦氏卧房, got ${bookFiveStages.join(' / ')}`);
+ assert.ok(bookFiveStages.some(t=>t.includes('宗祠')),`book five must list 贾氏宗祠, got ${bookFiveStages.join(' / ')}`);
+ const crumbs=await page.locator('.world-crumbs button').allTextContents();
+ assert.deepEqual(crumbs,['天下舆图','京城总览','宁国府总览'],`book five crumbs: ${crumbs.join(' / ')}`);
+ console.log(`${tag} chapter-five atlas: ${crumbs.join(' › ')} · ${bookFiveStages.join(' / ')}`);
+ // The place art paints asynchronously; without this wait the screenshot showed empty plots.
+ // SVG <image> has no naturalWidth, so watch the onLoad marker the map sets instead.
+ await page.waitForFunction(()=>[...document.querySelectorAll('.world-location image')].every(i=>i.dataset.loaded==='true'),undefined,{timeout:30000});
+ await page.screenshot({path:`artifacts/${tag}-chapter05-atlas.png`,fullPage:true});
+ await page.getByRole('button',{name:'当前场景',exact:true}).click();
  // The estate overview is the chapter-three page; its thumbnails used to 404 in production.
  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('reunion');await reading();
  await page.getByRole('button',{name:'荣国府总览',exact:true}).click();

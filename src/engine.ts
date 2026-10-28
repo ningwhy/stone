@@ -15,9 +15,9 @@ export type StoryState = {
   readLog?: string[];
 };
 type Job = {actor: ActorId; path: Point[]; cursor: number};
-/** v4 adds chapter four at the end of the line, so an old finale is no longer the finale. */
-export type SaveData = {version: 4; chapter: 'four'; node: string; state: StoryState};
-export const SAVE_KEY = 'honglou-four-chapters:v4';
+/** v5 adds chapters five and six at the end of the line, so an old finale is no longer the finale. */
+export type SaveData = {version: 5; chapter: 'five-six'; node: string; state: StoryState};
+export const SAVE_KEY = 'honglou-five-six-chapters:v5';
 export const LEGACY_SAVE_KEY='honglou-first-three:v3';
 export const LEGACY_V2_KEY='honglou-chapter03:v2';
 
@@ -281,14 +281,14 @@ export class StoryEngine {
   serialize(): SaveData {
     if (!['reading','ended'].includes(this.state.status)) throw new Error('请等待本段移动结束后保存');
     const state=structuredClone(this.state); state.paused=false;
-    return {version:4,chapter:'four',node:this.step.id,state};
+    return {version:5,chapter:'five-six',node:this.step.id,state};
   }
   restore(input: unknown) {
     // Validate everything before replacing the live world; malformed saves cannot corrupt it.
     const data=structuredClone(input) as {version?:number;chapter?:string;node?:string;state?:StoryState}|null;
-    const current=data?.version===4&&data.chapter==='four';
-    const recent=data?.version===3&&data.chapter==='first-three';
-    const legacy=data?.version===2&&data.chapter==='chapter03';
+    const current=data?.version===5&&data.chapter==='five-six';
+    const recent=data?.version===4&&data.chapter==='four';
+    const legacy=data?.version===3&&data.chapter==='first-three'||data?.version===2&&data.chapter==='chapter03';
     if (!data || (!current&&!recent&&!legacy) || !data.state) throw new Error('存档版本不兼容');
     const state=data.state, index=this.steps.findIndex(s=>s.id===data.node);
     if (index<0 || (legacy?chapter3Story.findIndex(s=>s.id===data.node):index)!==state.index || !['reading','ended'].includes(state.status)) throw new Error('存档剧情节点无效');

@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "plum-tree_s10400082-01",
+  "seed": 10400082,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏场景道具素材，白底贴图：画面上只有一株盛开的梅树，深色虬曲枝干，满枝粉白梅花，花瓣疏密有致，清冷雅致。背景必须是均匀纯净的纯白色（#FFFFFF），像纸剪的贴纸一样干净——绝对不要画墙、瓦片、地面、石头、天空、栏杆、其他植物或人物。梅树完整居中，四周留足白边。高对比轮廓，便于抠图。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "a8749fdb-dc43-4e97-a948-39da7222dd46",
+  "generated_at": "2026-10-28 17:59:04",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1024x768"
+}

@@ -17,7 +17,9 @@ test('Tiled image object, calibrated anchor and logical cell coincide',()=>{
 
 test('all Tiled art resolves to transparent assets; collision is explicit',()=>{
  const m=parseTiledMap(raw);
- assert.equal(m.art.length,22);
+ // 30 = the 22 the garden had plus 贾母榻, its screen, both chairs, the two vases, the tea
+ // table and the floor lamp: `furnish_entry.py` used to skip the last two for want of art.
+ assert.equal(m.art.length,30);
  for(const o of m.art)assert.ok(existsSync(new URL(`../public${artAssets[o.asset].image}`,import.meta.url)));
  assert.equal(m.walkable.has(cellKey(26,18)),false);
  assert.equal(m.walkable.has(cellKey(13,25)),true,'portal must remain traversable');
@@ -40,7 +42,7 @@ test('every human actor has a painted portrait and chibi; estate sites use archi
  for(const id of Object.keys(cast).filter(id=>id!=='sedan'))for(const kind of ['portrait','chibi']){
   const a=artAssets[`${id}-${kind}`];assert.ok(a,`${id} missing ${kind}`);assert.ok(existsSync(new URL(`../public${a.image}`,import.meta.url)));
  }
- const world=JSON.parse(readFileSync(new URL('../design/rongguo-world.json',import.meta.url),'utf8'));
+ const world=JSON.parse(readFileSync(new URL('../design/atlas-maps.json',import.meta.url),'utf8')).levels.rongguo;
  for(const site of world.locations.filter((s:{external:boolean})=>!s.external)){assert.ok(/^(estate-|flower-gate$|west-wall-gate$|rongxi-hall$)/.test(site.asset),`${site.name} uses furniture`);assert.ok(artAssets[site.asset]);}
  const feng=world.locations.find((s:{id:string})=>s.id==='feng');assert.equal(feng.start,'U019');assert.equal(feng.scene,'wang');assert.equal(feng.focus,'feng_room');
 });

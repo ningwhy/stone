@@ -36,6 +36,7 @@ export class MapScene extends Phaser.Scene {
   roof?: Phaser.GameObjects.Graphics;
   artViews: {view:Phaser.GameObjects.Image;object:ArtObject}[] = [];
   grid?: Phaser.GameObjects.Graphics;
+  private roomSkirting?: Phaser.GameObjects.Graphics;
   passageRoof?: Phaser.GameObjects.Graphics;
   routeGuide?: Phaser.GameObjects.Graphics;
   actionTrail?: Phaser.GameObjects.Graphics;
@@ -45,6 +46,8 @@ export class MapScene extends Phaser.Scene {
   presentationPaused = false;
   private placeLabels:Phaser.GameObjects.Text[]=[];
   private actorLabels=new Map<ActorId,Phaser.GameObjects.Text>();
+  /** Horizontal alpha span per row band, sampled once per texture. See silhouetteOf(). */
+  private silhouettes=new Map<string,Uint8Array[]>();
   onActor: (id: ActorId) => void;
   onReady?: (scene: MapScene) => void;
   onProgress?: (value: number) => void;
@@ -81,33 +84,138 @@ export class MapScene extends Phaser.Scene {
     // page are wanted everywhere.
     for(const effect of [STEP_FILE[stepSurface(this.mapData)],'sfx-tap','sfx-page','sfx-door','sfx-bell','sfx-chair'])audio.warm(effect);
   }
-  private artwork() {
-    for(const object of this.mapData.art) {
+  /** A raised stone platform. The dream stages have no estate paving, so without one the
+   *  furniture sits on the bare wash and reads as cut-out stickers dropped on a page. The
+   *  two faces turned toward the camera are drawn as a plinth, which is what makes the
+   *  props read as standing *on* something. */
+  private terrace(g:Phaser.GameObjects.Graphics,c:number,r:number,w:number,h:number,kind:'court'|'path') {
+    // A `court` is jade-white platform stone on a dream stage; a `path` is the warm grey
+    // slab of an estate 甬路, laid over the courtyard tiles and cut into single stones.
+    const stone=kind==='path'
+      ? {top:0xe6dcc3,side:0xbfb49a,seam:0xa89c80,drop:7,step:1}
+      : {top:0xeaf0e3,side:0xc4d1c0,seam:0xb9c7b5,drop:12,step:2};
+    const drop=stone.drop;
+    const north=this.p(c,r),east=this.p(c+w,r),south=this.p(c+w,r+h),west=this.p(c,r+h);
+    // Cast shadow on the page, then the plinth, then the slab on top.
+    g.fillStyle(0x8ba294,.09);
+    g.beginPath();g.moveTo(north.x,north.y+drop+5);g.lineTo(east.x,east.y+drop+5);g.lineTo(south.x,south.y+drop+9);g.lineTo(west.x,west.y+drop+9);g.closePath();g.fillPath();
+    g.fillStyle(stone.side,.9);
+    g.beginPath();g.moveTo(east.x,east.y);g.lineTo(south.x,south.y);g.lineTo(south.x,south.y+drop);g.lineTo(east.x,east.y+drop);g.closePath();g.fillPath();
+    g.beginPath();g.moveTo(south.x,south.y);g.lineTo(west.x,west.y);g.lineTo(west.x,west.y+drop);g.lineTo(south.x,south.y+drop);g.closePath();g.fillPath();
+    g.lineStyle(1,0x9fb1a0,.5);
+    g.lineBetween(east.x,east.y+drop,south.x,south.y+drop);g.lineBetween(south.x,south.y+drop,west.x,west.y+drop);
+    g.fillStyle(stone.top,1);
+    g.beginPath();g.moveTo(north.x,north.y);g.lineTo(east.x,east.y);g.lineTo(south.x,south.y);g.lineTo(west.x,west.y);g.closePath();g.fillPath();
+    // Paving seams along both axes, plus a kerb line, so the slab is stone not paper.
+    g.lineStyle(1,stone.seam,.32);
+    for(let cc=c+stone.step;cc<c+w;cc+=stone.step){const a=this.p(cc,r),b=this.p(cc,r+h);g.lineBetween(a.x,a.y,b.x,b.y);}
+    for(let rr=r+stone.step;rr<r+h;rr+=stone.step){const a=this.p(c,rr),b=this.p(c+w,rr);g.lineBetween(a.x,a.y,b.x,b.y);}
+    g.lineStyle(1,0xa9b9a6,.5);
+    g.beginPath();g.moveTo(north.x,north.y);g.lineTo(east.x,east.y);g.lineTo(south.x,south.y);g.lineTo(west.x,west.y);g.closePath();g.strokePath();
+  }
+  /** Courtyard enclosure: a plastered wall with a grey tile coping, drawn under the props
+   *  so a hall still stands over its own wall. Gaps between segments are the gates, which
+   *  is how a Chinese courtyard states its plan — without them the buildings read as a
+   *  scattering of roofs on open ground. */
+  private courtyardWalls() {
+    if(!this.mapData.walls.length) return;
+    const g=this.add.graphics().setDepth(-9900);
+    const H=36;
+    for(const [c1,r1,c2,r2] of this.mapData.walls) {
+      const a=this.p(c1,r1),b=this.p(c2,r2);
+      // A wall is a face with height, not a line on the ground: a plastered panel standing
+      // 36 px proud of its base, a tiled coping on top, and a cast shadow at the foot. A
+      // flat band in the paving colour simply vanished into the tiles.
+      g.fillStyle(0x6f7562,.12);
+      g.beginPath();g.moveTo(a.x,a.y+4);g.lineTo(b.x,b.y+4);
+      g.lineTo(b.x,b.y+16);g.lineTo(a.x,a.y+16);g.closePath();g.fillPath();
+      g.fillStyle(0xded2b6,1);
+      g.beginPath();g.moveTo(a.x,a.y);g.lineTo(b.x,b.y);
+      g.lineTo(b.x,b.y-H);g.lineTo(a.x,a.y-H);g.closePath();g.fillPath();
+      // A hairline course of bricks halfway up, so a long wall still has scale.
+      g.lineStyle(1,0xc2b696,.55);g.lineBetween(a.x,a.y-H*.45,b.x,b.y-H*.45);
+      g.fillStyle(0x76806f,1);
+      g.beginPath();g.moveTo(a.x,a.y-H);g.lineTo(b.x,b.y-H);
+      g.lineTo(b.x,b.y-H-7);g.lineTo(a.x,a.y-H-7);g.closePath();g.fillPath();
+      g.lineStyle(1,0x59604f,.5);g.lineBetween(a.x,a.y-6,b.x,b.y-6);
+    }
+  }
+  /** Hanging lanterns for a night street: a warm halo on the ground, then the lamp.
+   *
+   *  The 灯市 booths are painted bamboo frames, so without lights hanging from them the
+   *  market played as a row of empty tents in broad daylight. A lantern is a cord, two
+   *  rounded rects, a gold cap and a warm core — drawing it here keeps a dozen of them
+   *  consistent and saves another 1024 px render that the image model would fill with a
+   *  courtyard wall anyway. */
+  private lanterns() {
+    const halos=this.add.graphics().setDepth(-9960);
+    // A lantern has to hang from something: rope the neighbours together along the street,
+    // so the string reads as a string and not as lamps floating in the dark.
+    const lit=this.mapData.lights.map(([c,r])=>this.p(c,r));
+    for(let i=1;i<lit.length;i++){
+      const a=lit[i-1],b=lit[i];
+      if(Math.hypot(b.x-a.x,b.y-a.y)>420) continue;
+      const rope=this.add.graphics().setDepth(Math.min(a.y,b.y)-90);
+      rope.lineStyle(1.4,0x4a3b2c,.75);
+      rope.beginPath();rope.moveTo(a.x,a.y-78);
+      rope.lineTo((a.x+b.x)/2,Math.min(a.y,b.y)-78+9);
+      rope.lineTo(b.x,b.y-78);rope.strokePath();
+    }
+    for(const [c,r] of this.mapData.lights) {
+      const p=this.p(c,r);
+      // Ground first: three soft discs, so the paving under a lantern reads as lit.
+      for(const [rad,alpha] of [[52,.05],[32,.07],[17,.10]] as [number,number][]) {
+        halos.fillStyle(0xffc46b,alpha); halos.fillCircle(p.x,p.y,rad);
+      }
+      const g=this.add.graphics().setDepth(p.y);
+      g.lineStyle(1.6,0x5b4632,.9); g.lineBetween(p.x,p.y-78,p.x,p.y-46);
+      g.fillStyle(0x8f2f28,1); g.fillRoundedRect(p.x-12,p.y-46,24,28,8);
+      g.fillStyle(0xef5138,1); g.fillRoundedRect(p.x-9,p.y-43,18,22,7);
+      g.fillStyle(0xffdda8,.9); g.fillEllipse(p.x,p.y-32,11,15);
+      g.fillStyle(0x8a6d3f,1); g.fillRect(p.x-13,p.y-50,26,4); g.fillRect(p.x-10,p.y-20,20,3);
+      g.fillStyle(0xb8352c,1); g.fillRect(p.x-1.5,p.y-17,3,9);
+      g.fillStyle(0xd8543f,1); g.fillEllipse(p.x,p.y-7,7,5);
+    }
+  }
+  private artwork() {    for(const object of this.mapData.art) {
       const ground=artGround(object);
       const image=this.add.image(object.x,object.y,object.asset).setOrigin(.5,1)
         .setDisplaySize(object.width,object.height).setDepth(ground.y+object.depthOffset);
       this.artViews.push({view:image,object});
-      if(object.asset==='garden-tree' || object.asset==='garden-rock') {
-        const shadow=this.add.graphics().setDepth(-9990);
-        shadow.fillStyle(0x68755a,.12);shadow.fillEllipse(ground.x+12,ground.y+6,object.width*.52,object.width*.18);
+      // Every prop gets a faint contact shadow at its own foot line. Sorted just under its
+      // sprite, so a nearer prop still covers it. Skipped for whole buildings (they already
+      // have their own painted ground shadow) and for the floating 仙珠.
+      if(object.width<=700&&!object.asset.endsWith('pearl')) {
+        const width=Math.min(object.width*.66,150);
+        const shadow=this.add.graphics().setDepth(object.y-1);
+        shadow.fillStyle(0x5f6b52,.07);shadow.fillEllipse(ground.x+2,ground.y+3,width*1.05,width*.34);
+        shadow.fillStyle(0x5f6b52,.09);shadow.fillEllipse(ground.x,ground.y,width*.58,width*.17);
       }
     }
   }
   create() {
     const floor=this.add.graphics().setDepth(-10000);
-    this.rect(floor,0,0,40,40,this.mapData.theme==='night'?0xc7c9c5:this.mapData.theme==='myth'?0xd4d9c7:this.mapData.theme==='dream'?0xd9e5df:this.mapData.theme==='ruins'?0xd3cbbd:0xeee8d7);
-    if(this.mapData.theme==='river') {
-      // A stage declares its own canal rectangles; the historic garden pond stays the default.
-      if(this.mapData.water.length){
-        for(const [c,r,w,h] of this.mapData.water){
-          this.rect(floor,c,r,w,h,0xa8c5c2);
-          floor.lineStyle(1,0xe1eee7,.4);
-          for(let cc=c+1;cc<c+w-1;cc++)for(let rr=r+1;rr<r+h-1;rr+=3){const p=this.p(cc,rr);floor.lineBetween(p.x,p.y,p.x+35,p.y+3);}
-        }
-      } else {
-        this.rect(floor,20,22,18,15,0xa8c5c2);
-        floor.lineStyle(1,0xe1eee7,.4);
-        for(let i=0;i<55;i++){const p=this.p(21+i%16,23+Math.floor(i/16)*3);floor.lineBetween(p.x,p.y,p.x+35,p.y+3);}
+    // The backdrop is a flat theme wash drawn well past the 40×40 playfield: stages
+    // that hug the north or east edge (e.g. 太虚幻境's 警幻院/香闺 at row 3) put the
+    // camera over the map border, and a 0..40 rect left a pale page-coloured wedge in
+    // the corner. Painting a margin of the same colour keeps every stage full-bleed.
+    this.rect(floor,-16,-16,72,72,this.mapData.theme==='night'?0xc7c9c5:this.mapData.theme==='myth'?0xd4d9c7:this.mapData.theme==='dream'?0xd9e5df:this.mapData.theme==='ruins'?0xd3cbbd:0xeee8d7);
+    // Any stage may declare water: a river for the canal, a garden pond, or the ink-black
+    // torrent of 迷津. The colour is the *place*, not the theme: 灵河 is a fairy stream and
+    // stays jade even though the beat is a dream, while the same dream theme in 迷津 is
+    // pitch. Painting every dream-stage river black turned 灵河 into a black wall.
+    if(this.mapData.water.length){
+      const ink=this.mapData.id==='c5_mijing'?0x2f3a36:this.mapData.theme==='ruins'?0x39433f
+        :this.mapData.theme==='myth'?0x4c5a54:this.mapData.theme==='night'?0x53635f:0xa8c5c2;
+      const dark=ink!==0xa8c5c2;
+      const glint=dark?0x8d9a90:0xe1eee7;
+      for(const [c,r,w,h] of this.mapData.water){
+        // A bank first: a damp rim keeps a dark band from reading as a wall standing up.
+        this.rect(floor,c-.2,r-.2,w+.4,h+.4,dark?0x6d7266:0x93a89f);
+        this.rect(floor,c,r,w,h,ink);
+        // A slow bank of foam where the current runs, so a black stream still reads as water.
+        floor.lineStyle(dark?2:1,glint,dark?.30:.40);
+        for(let cc=c+1;cc<c+w-1;cc++)for(let rr=r+1;rr<r+h-1;rr+=3){const p=this.p(cc,rr);floor.lineBetween(p.x,p.y,p.x+35,p.y+3);}
       }
     }
 
@@ -116,6 +224,14 @@ export class MapScene extends Phaser.Scene {
     const random=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};
     for(let i=0;i<3600;i++) {
       const p=this.p(random()*40,random()*40);
+      floor.fillStyle(random()>.5?0x9d9576:0xffffff,.07);floor.fillCircle(p.x,p.y,random()*2.5+.5);
+    }
+    // Same grain for the margin ring, so the extended wash doesn't read as a
+    // smoother band around the map proper.
+    for(let i=0;i<2600;i++) {
+      const c=random()*72-16,r=random()*72-16;
+      if(c>=0&&c<=40&&r>=0&&r<=40)continue;
+      const p=this.p(c,r);
       floor.fillStyle(random()>.5?0x9d9576:0xffffff,.07);floor.fillCircle(p.x,p.y,random()*2.5+.5);
     }
     for(const z of this.mapData.zones) {
@@ -135,16 +251,30 @@ export class MapScene extends Phaser.Scene {
       }
     }
     if(this.mapData.id==='entry')for(let c=11;c<=16;c++)this.rect(floor,c,17,1,1,0xe6deca);
-    // The estate flowerbeds stay off for the indoor, street and dreamlike themes, and a stage
-    // whose floor they would paint over (the canal) opts out through its own property.
-    const beds=this.mapData.flowerbeds&&!['interior','night','street','myth','dream','ruins'].includes(this.mapData.theme)
-      ?[[6,24,3,6],[6,15,3,5],[27,16,3,6],[29,5,4,4],[15,10,2,3],[24,19,4,2],[6,6,5,4]]:[];
-    for(const [c,r,w,h] of beds) {
-      this.rect(floor,c,r,w,h,0xbfc6a6);this.rect(floor,c+.15,r+.15,w-.3,h-.3,0xcbd0b2);
-      for(let i=0;i<90;i++) {
-        const p=this.p(c+random()*w,r+random()*h);floor.fillStyle(i%3?0x899779:0xf3d8ce,.38);floor.fillEllipse(p.x,p.y,3+random()*6,2);
+    // Planting is per-courtyard now: a stage lists its own beds, and an empty list means
+    // paving, dust or water instead of the old seven estate beds in every garden alike.
+    for(const [c,r,w,h] of this.mapData.beds) {
+      this.rect(floor,c,r,w,h,0x9fae86);this.rect(floor,c+.15,r+.15,w-.3,h-.3,0xb9c19c);
+      // A bed is a planting, not a green rectangle: a hedge along the kerb, then clumps of
+      // blossom on the diagonal grid the rest of the garden uses. At the zoom the game
+      // actually plays at, a single 4 px speckle per cell vanished and the bed read as lawn.
+      floor.lineStyle(3,0x7f8f68,.85);
+      for(const [x1,y1,x2,y2] of [[c,r,c+w,r],[c+w,r,c+w,r+h],[c+w,r+h,c,r+h],[c,r+h,c,r]]) {
+        const a=this.p(x1,y1),b=this.p(x2,y2);floor.lineBetween(a.x,a.y,b.x,b.y);
+      }
+      for(let i=0;i<Math.max(6,w*h*1.6);i++) {
+        const p=this.p(c+.4+random()*(w-.8),r+.4+random()*(h-.8));
+        const hue=random();
+        floor.fillStyle(0x6f7f5a,.5);floor.fillEllipse(p.x,p.y+2,9+random()*7,3);
+        floor.fillStyle(hue>.62?0xf0cdd2:hue>.3?0xf6efe0:0xe6b6bd,.92);
+        floor.fillCircle(p.x,p.y-1,2.6+random()*2.2);
+        floor.fillStyle(0xfdf8ee,.75);floor.fillCircle(p.x-1,p.y-2,1.1+random());
       }
     }
+    // Platforms last, so they lie on top of the estate paving: a dream stage declares
+    // them because it has no zone paving at all, while a courtyard uses one to lay a
+    // stone 甬路 across its tiles.
+    for(const t of this.mapData.terraces) this.terrace(floor,t.col,t.row,t.width,t.height,t.kind);
     const grid=this.add.graphics().setDepth(-9998).setVisible(false);this.grid=grid;
     grid.lineStyle(1,0x847d61,.25);
     for(let i=0;i<=40;i++) {
@@ -157,14 +287,22 @@ export class MapScene extends Phaser.Scene {
     if(this.mapData.theme==='dream'){
       for(let i=0;i<70;i++){const p=this.p(random()*40,random()*40);floor.lineStyle(1,0xf5f5e4,.5);floor.strokeEllipse(p.x,p.y,20+random()*55,5+random()*10);}
     }
-    if(this.mapData.id==='east'){
-      const boundary=this.add.graphics().setDepth(-9900);
-      for(const [left,right] of [[9,22.5],[25.5,29]]){const a=this.p(left,28.5),b=this.p(right,28.5);boundary.lineStyle(28,0xe3dac2);boundary.lineBetween(a.x,a.y-14,b.x,b.y-14);boundary.lineStyle(6,0x758573);boundary.lineBetween(a.x,a.y-30,b.x,b.y-30);}
+    // A 灯市 is played at night. Darkening the ground only — never the sprites — keeps the
+    // lamps and the people lit while the paving falls away, which is what a night street does.
+    if(this.mapData.dusk){
+      const veil=this.add.graphics().setDepth(-9970);
+      const pts=[this.p(-16,-16),this.p(56,-16),this.p(56,56),this.p(-16,56)];
+      veil.fillStyle(0x2f3a52,.52);veil.beginPath();veil.moveTo(pts[0].x,pts[0].y);
+      for(const q of pts.slice(1))veil.lineTo(q.x,q.y);
+      veil.closePath();veil.fillPath();
     }
+    this.courtyardWalls();
+    this.lanterns();
+    // Skirting for cut-away rooms: drawn above the floor and below every prop, redrawn on
+    // each snapshot so it follows the room somebody walked into.
+    this.roomSkirting=this.add.graphics().setDepth(-9880);
     this.artwork();
     if(this.mapData.id==='entry') {
-    const boundary=this.add.graphics().setDepth(-9900);
-    for(const [start,end] of [[27,31],[33,36]]){const a=this.p(3.5,start),b=this.p(3.5,end);boundary.lineStyle(28,0xe3dac2);boundary.lineBetween(a.x,a.y-14,b.x,b.y-14);boundary.lineStyle(6,0x758573);boundary.lineBetween(a.x,a.y-30,b.x,b.y-30);}
     // A low open colonnade keeps the turning route and the freestanding screen readable.
     const colonnade=this.add.graphics().setDepth(-1000);
     for(const [c,r] of [[10,18],[10,21],[10,24],[17,18],[17,21],[17,24]]) {
@@ -210,6 +348,61 @@ export class MapScene extends Phaser.Scene {
     const center=this.target();this.cameras.main.centerOn(center.x,center.y);
     this.onReady?.(this);
   }
+  /** Where a prop's artwork actually is, cell by cell.
+   *
+   *  A sprite's rectangle is generous where the art is not: a cherry tree is a round crown
+   *  inside a square box, a table is a slab and four legs with daylight between them, a
+   *  bamboo clump is three stems and a lot of air. The difference decides whether a walker
+   *  is *behind* the thing or merely standing in the empty part of its box, and that is the
+   *  whole complaint about props fading on contact. So each texture is sampled once, at
+   *  32×32, into an opacity grid — cheap (one drawImage, a four-kilobyte read) and cached
+   *  for the whole scene. */
+  private silhouetteOf(asset:string) {
+    const cached=this.silhouettes.get(asset);
+    if(cached)return cached;
+    const empty:Uint8Array[]=[];
+    this.silhouettes.set(asset,empty);
+    if(!this.textures.exists(asset))return empty;
+    const source=this.textures.get(asset).getSourceImage() as CanvasImageSource & {width?:number};
+    if(!source||!(source.width??0))return empty;
+    const n=32,canvas=document.createElement('canvas');
+    canvas.width=n;canvas.height=n;
+    const ctx=canvas.getContext('2d',{willReadFrequently:true});
+    if(!ctx)return empty;
+    ctx.drawImage(source,0,0,n,n);
+    const data=ctx.getImageData(0,0,n,n).data,grid:Uint8Array[]=[];
+    for(let y=0;y<n;y++) {
+      const row=new Uint8Array(n);
+      for(let x=0;x<n;x++) row[x]=data[(y*n+x)*4+3]>40?1:0;
+      grid.push(row);
+    }
+    this.silhouettes.set(asset,grid);
+    return grid;
+  }
+  /** The walls of a room whose roof has just come off.
+   *
+   *  Lifting the shell hides the whole building sprite — including the walls that gave
+   *  the room its shape — and leaves furniture standing on open paving. A cut-away view
+   *  needs the room's own skirting: a plastered base with a shadowed inner face along the
+   *  three edges that still exist, and a gap where the door was, so the reader can tell a
+   *  room from a courtyard. Drawn above the floor, below every prop. */
+  private roomWalls(c:number,r:number,w:number,h:number) {
+    const g=this.roomSkirting; if(!g)return;
+    const n=this.p(c,r),e=this.p(c+w,r),s=this.p(c+w,r+h),wst=this.p(c,r+h);
+    const height=30;
+    const face=(a:{x:number;y:number},b:{x:number;y:number})=>{
+      g.fillStyle(0x8c9280,.10);
+      g.beginPath();g.moveTo(a.x,a.y);g.lineTo(b.x,b.y);g.lineTo(b.x,b.y+height+6);g.lineTo(a.x,a.y+height+6);g.closePath();g.fillPath();
+      g.fillStyle(0xd6c8a6,1);
+      g.beginPath();g.moveTo(a.x,a.y);g.lineTo(b.x,b.y);g.lineTo(b.x,b.y+height);g.lineTo(a.x,a.y+height);g.closePath();g.fillPath();
+      g.lineStyle(2,0xa2937a,.9);g.lineBetween(a.x,a.y+height,b.x,b.y+height);
+      g.lineStyle(4,0x6b7462,.75);g.lineBetween(a.x,a.y,b.x,b.y);
+      g.lineStyle(1,0x8e7f66,.5);g.lineBetween(a.x,a.y+height*.5,b.x,b.y+height*.5);
+    };
+    // North and west edges stand behind the furniture; the south edge is left open — that
+    // is the side the door was on, and it is also where the camera looks in.
+    face(n,e); face(n,wst);
+  }
   private screen() {
     const block=this.mapData.blockers[0]; if(!block)return;
     const p=this.p(block.col+1,block.row+.5),g=this.add.graphics({x:p.x,y:p.y}).setDepth(p.y);
@@ -253,9 +446,16 @@ export class MapScene extends Phaser.Scene {
   }
   /** True while anybody stands on the given floor region. */
   private zoneOccupied(zoneId:string,state:ReturnType<StoryEngine['getSnapshot']>) {
+    // Tested against the named rect, not through `zoneAt`: a room's floor always lies
+    // inside the yard's floor, and `zoneAt` returns the *first* rect that contains the
+    // cell — the yard — so the room would never count as occupied and its roof would
+    // never lift. 贾政书房、甄宅书斋、智通寺大殿 were all standing open-roofed for this.
+    const zone=this.mapData.zones.find(z=>z.id===zoneId);
+    if(!zone)return false;
     for(const actor of Object.values(state.actors)) {
       if(!actor.visible)continue;
-      if(zoneAt(this.mapData,actor.col,actor.row)?.id===zoneId)return true;
+      if(actor.col>=zone.col && actor.col<zone.col+zone.width
+         && actor.row>=zone.row && actor.row<zone.row+zone.height)return true;
     }
     return false;
   }
@@ -267,7 +467,20 @@ export class MapScene extends Phaser.Scene {
       // A building's roof lifts as soon as somebody stands on the floor it covers,
       // so the interior paving and furnishings read through instead of a solid wall.
       const roofOff=object.interiorZone!==undefined && this.zoneOccupied(object.interiorZone,state);
-      view.setVisible(object.visibility!=='exterior' || (state.roofVisible && !roofOff));
+      // Three states: `exterior` is the shell (visible while its roof is up, gone the
+      // moment the room opens); `interior` is the furnishings, which must not stand in
+      // the courtyard beside the house while the roof is still on; `always` is scenery.
+      // An interior piece that names its room follows that room alone — a stage with two
+      // halls would otherwise open both rooms at once.
+      const shown=object.visibility==='exterior' ? (state.roofVisible && !roofOff)
+        : object.visibility==='interior' ? (object.interiorZone!==undefined ? roofOff : !state.roofVisible || roofOff)
+        : true;
+      view.setVisible(shown);
+    }
+    this.roomSkirting?.clear();
+    for(const z of this.mapData.zones) {
+      if(!(z.indoor ?? false))continue;
+      this.roomWalls(z.col,z.row,z.width,z.height);
     }
     const zoom=this.cameras.main.zoom;
     for(const label of this.placeLabels)label.setScale(1/zoom);
@@ -300,21 +513,77 @@ export class MapScene extends Phaser.Scene {
       if(sprite)sprite.setFlipX((a.direction===1)!==(paintedFacingOf(chibiKey,id,'chibi')==='right'));
       this.actorLabels.get(id)!.setScale(1/(zoom*scale)).setPosition(0,7/(zoom*scale));
     }
-    // A building, gate or piece of furniture goes translucent while a walker stands
-    // behind it — the same treatment the chapter-three flower gate used to hardcode,
-    // generalized: the person stays visible, the obstacle reads as an obstacle. The
-    // test is purely the drawn sprite's rectangle: calibrated anchors lift the sort
-    // line above the bitmap's bottom edge, so a depth comparison would miss the
-    // threshold band where a walker visibly overlaps the artwork.
+    // Whether a prop goes translucent depends on *where the walker is standing*, not on
+    // whether the two bitmaps overlap. A sprite rectangle cannot answer that question:
+    // standing on the bed, in a doorway, under a tree, behind a screen and in front of it
+    // all put the feet inside the same box, and fading the prop for every one of them is
+    // what made the map feel like everything melts on contact.
+    //
+    // Three relations are told apart, in the order that matters:
+    //
+    //   on / inside — the feet are within the prop's footprint. The footprint is the
+    //     ellipse its contact shadow is already drawn from, so the two agree by
+    //     construction; a walker on the bed, in the gate's opening or at the foot of a
+    //     tree stands *in* the thing, not behind it, and both must stay solid.
+    //   in front    — feet south of the prop's foot line. Depth sorting already draws the
+    //     walker on top, so there is nothing to fade.
+    //   behind      — feet north of the foot line and within its width. Only this case
+    //     hides somebody, and only here does the prop go translucent.
+    //
+    // …and "behind" still has to mean something: a walker whose feet are a hand's width
+    // north of a low table loses a sliver of an ankle, and fading a 137 px table for that
+    // reads as a glitch, not as a courtesy. The prop only fades once it actually covers a
+    // quarter of the walker — below that, the person is legible anyway.
+    //
+    // The foot line is artGround(): props with a tall painted base (the flower gate puts
+    // its feet 145 px above the bottom of its PNG) would otherwise fade while the walker
+    // is still plainly in front of them.
     for(const {view,object} of this.artViews) {
-      if(!view.visible){view.setAlpha(1);continue;}
-      const half=object.width/2,top=object.y-object.height;
+      // A building shell never fades. Walking into it already lifts the whole shell off
+      // the floor (see the `exterior` branch above), so the only case left is somebody
+      // passing behind a house on the way somewhere else — and there the answer is the
+      // name label, not a translucent roof: fading a 700 px house to 45 % turned the whole
+      // courtyard into grey haze and still did not reveal a 85 px walker underneath it.
+      if(!view.visible||object.flat||object.visibility==='exterior'){view.setAlpha(1);continue;}
+      const ground=artGround(object);
+      const top=object.y-object.height,left=object.x-object.width/2;
+      const rows=this.silhouetteOf(object.asset);
+      // Same ellipse as the contact shadow: a wide prop is capped at 150 px of contact,
+      // because a 900 px hall only touches the ground along its plinth.
+      const foot=Math.min(object.width*.66,150);
+      const rx=foot*1.05/2,ry=foot*.34/2;
       let behind=false;
-      for(const actor of Object.values(state.actors)) {
+      for(const [id,actor] of Object.entries(state.actors)) {
         if(!actor.visible)continue;
         const p=project(actor,this.mapData);
-        if(p.x<object.x-half||p.x>object.x+half)continue;
-        if(p.y<=top||p.y>=object.y)continue;            // outside the sprite's reach
+        if(p.y>=ground.y)continue;                          // in front of it
+        if(p.y<=top)continue;                               // beyond its tallest reach
+        const dx=(p.x-ground.x)/rx,dy=(p.y-ground.y)/ry;
+        if(dx*dx+dy*dy<=1)continue;                         // standing on / inside it
+        // Walk the body from feet to crown and ask, band by band, whether the artwork is
+        // actually there at this x. Six samples is enough to tell a tree crown from the
+        // empty corner of the tree's box, and a table top from the gap under it.
+        const body=artAssets[`${id}-chibi`]?.height??85;
+        const u=(p.x-left)/object.width;
+        let hits=0,seen=0;
+        const samples=6;
+        for(let i=0;i<samples;i++) {
+          const y=p.y-body*(i+.5)/samples;
+          const t=(y-top)/object.height;
+          if(t<0||t>=1)continue;
+          seen++;
+          if(!rows.length) {                                 // texture never sampled
+            if(Math.abs(p.x-object.x)<=object.width*.3)hits++;
+            continue;
+          }
+          const grid=rows[Math.floor(t*rows.length)];
+          // A walker is ~40 px wide; at 32 samples a body spans about a cell either side.
+          const ix=Math.round(u*(grid.length-1));
+          if(grid[ix]||grid[ix-1]||grid[ix+1])hits++;
+        }
+        // Only the bands the body actually reaches count: a walker taller than the prop
+        // has their head out in the open, and that part must not vote.
+        if(!seen||hits/seen<.55)continue;
         behind=true;break;
       }
       view.setAlpha(behind?.45:1);

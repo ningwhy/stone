@@ -244,7 +244,7 @@
           "id": 16,
           "name": "river-boat",
           "x": 289.10479999999995,
-          "y": 1377.1048,
+          "y": 1441.1048,
           "width": 272.0,
           "height": 160.8,
           "rotation": 0,
@@ -271,19 +271,19 @@
         },
         {
           "id": 17,
-          "name": "manor-main-gate",
-          "x": 2325.1008,
-          "y": 1335.144,
-          "width": 520.0,
-          "height": 422.40000000000003,
+          "name": "canal-quay",
+          "x": 480.0,
+          "y": 1824.0,
+          "width": 531.96,
+          "height": 441.44,
           "rotation": 0,
           "visible": true,
-          "gid": 98,
+          "gid": 190,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "manor-main-gate",
+              "value": "canal-quay",
               "type": "string"
             },
             {
@@ -300,19 +300,19 @@
         },
         {
           "id": 18,
-          "name": "garden-tree",
-          "x": 551.4606249999999,
-          "y": 809.163775,
-          "width": 333.5,
-          "height": 289.79999999999995,
+          "name": "reeds",
+          "x": 544.1505999999999,
+          "y": 1439.8494,
+          "width": 250.79999999999998,
+          "height": 213.6,
           "rotation": 0,
           "visible": true,
-          "gid": 3,
+          "gid": 188,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "garden-tree",
+              "value": "reeds",
               "type": "string"
             },
             {
@@ -329,19 +329,19 @@
         },
         {
           "id": 19,
-          "name": "garden-tree",
-          "x": 999.785,
-          "y": 745.5622,
-          "width": 348.0,
-          "height": 302.4,
+          "name": "reeds",
+          "x": 1056.1506,
+          "y": 1567.8494,
+          "width": 250.79999999999998,
+          "height": 213.6,
           "rotation": 0,
           "visible": true,
-          "gid": 3,
+          "gid": 188,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "garden-tree",
+              "value": "reeds",
               "type": "string"
             },
             {
@@ -358,9 +358,183 @@
         },
         {
           "id": 20,
+          "name": "reeds",
+          "x": 1504.1506,
+          "y": 1503.8494,
+          "width": 250.79999999999998,
+          "height": 213.6,
+          "rotation": 0,
+          "visible": true,
+          "gid": 188,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "reeds",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "reeds",
+          "x": 1952.1506,
+          "y": 1503.8494,
+          "width": 250.79999999999998,
+          "height": 213.6,
+          "rotation": 0,
+          "visible": true,
+          "gid": 188,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "reeds",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "reeds",
+          "x": 1120.23845,
+          "y": 2015.76155,
+          "width": 397.09999999999997,
+          "height": 338.2,
+          "rotation": 0,
+          "visible": true,
+          "gid": 188,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "reeds",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "reeds",
+          "x": 1632.21335,
+          "y": 2015.78665,
+          "width": 355.3,
+          "height": 302.59999999999997,
+          "rotation": 0,
+          "visible": true,
+          "gid": 188,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "reeds",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "name": "garden-rock",
+          "x": 741.4029499999999,
+          "y": 1575.40565,
+          "width": 133.0,
+          "height": 146.29999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "name": "garden-rock",
+          "x": 1637.40295,
+          "y": 1575.40565,
+          "width": 133.0,
+          "height": 146.29999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "depthOffset",
+              "value": 0,
+              "type": "float"
+            }
+          ]
+        },
+        {
+          "id": 26,
           "name": "garden-tree",
-          "x": 1511.13625,
-          "y": 744.7653500000001,
+          "x": 615.13625,
+          "y": 1960.7653500000001,
           "width": 319.0,
           "height": 277.20000000000005,
           "rotation": 0,
@@ -386,186 +560,12 @@
           ]
         },
         {
-          "id": 21,
-          "name": "garden-tree",
-          "x": 2022.811875,
-          "y": 808.366925,
-          "width": 304.5,
-          "height": 264.6,
-          "rotation": 0,
-          "visible": true,
-          "gid": 3,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "value": "garden-tree",
-              "type": "string"
-            },
-            {
-              "name": "visibility",
-              "value": "always",
-              "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
-            }
-          ]
-        },
-        {
-          "id": 22,
-          "name": "garden-rock",
-          "x": 806.1748,
-          "y": 872.4636,
-          "width": 152.0,
-          "height": 167.20000000000002,
-          "rotation": 0,
-          "visible": true,
-          "gid": 5,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "value": "garden-rock",
-              "type": "string"
-            },
-            {
-              "name": "visibility",
-              "value": "always",
-              "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
-            }
-          ]
-        },
-        {
-          "id": 23,
-          "name": "garden-rock",
-          "x": 1765.788875,
-          "y": 807.9346250000001,
-          "width": 142.5,
-          "height": 156.75,
-          "rotation": 0,
-          "visible": true,
-          "gid": 5,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "value": "garden-rock",
-              "type": "string"
-            },
-            {
-              "name": "visibility",
-              "value": "always",
-              "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
-            }
-          ]
-        },
-        {
-          "id": 24,
-          "name": "garden-tree",
-          "x": 615.7850000000001,
-          "y": 1961.5622,
-          "width": 348.0,
-          "height": 302.4,
-          "rotation": 0,
-          "visible": true,
-          "gid": 3,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "value": "garden-tree",
-              "type": "string"
-            },
-            {
-              "name": "visibility",
-              "value": "always",
-              "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
-            }
-          ]
-        },
-        {
-          "id": 25,
-          "name": "garden-tree",
-          "x": 1126.811875,
-          "y": 2024.366925,
-          "width": 304.5,
-          "height": 264.6,
-          "rotation": 0,
-          "visible": true,
-          "gid": 3,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "value": "garden-tree",
-              "type": "string"
-            },
-            {
-              "name": "visibility",
-              "value": "always",
-              "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
-            }
-          ]
-        },
-        {
-          "id": 26,
-          "name": "garden-tree",
-          "x": 1639.4606250000002,
-          "y": 1961.163775,
-          "width": 333.5,
-          "height": 289.79999999999995,
-          "rotation": 0,
-          "visible": true,
-          "gid": 3,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "value": "garden-tree",
-              "type": "string"
-            },
-            {
-              "name": "visibility",
-              "value": "always",
-              "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
-            }
-          ]
-        },
-        {
           "id": 27,
           "name": "garden-tree",
-          "x": 2086.4875,
-          "y": 2023.9685,
-          "width": 290.0,
-          "height": 252.0,
+          "x": 1638.811875,
+          "y": 1960.366925,
+          "width": 304.5,
+          "height": 264.6,
           "rotation": 0,
           "visible": true,
           "gid": 3,
@@ -590,48 +590,19 @@
         },
         {
           "id": 28,
-          "name": "garden-rock",
-          "x": 934.560725,
-          "y": 2088.992575,
-          "width": 161.5,
-          "height": 177.65,
+          "name": "manor-main-gate",
+          "x": 2302.2572727272727,
+          "y": 1318.144318181818,
+          "width": 418.56060606060606,
+          "height": 340.0,
           "rotation": 0,
           "visible": true,
-          "gid": 5,
+          "gid": 98,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "garden-rock",
-              "type": "string"
-            },
-            {
-              "name": "visibility",
-              "value": "always",
-              "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
-            }
-          ]
-        },
-        {
-          "id": 29,
-          "name": "garden-rock",
-          "x": 1894.1748,
-          "y": 2088.4636,
-          "width": 152.0,
-          "height": 167.20000000000002,
-          "rotation": 0,
-          "visible": true,
-          "gid": 5,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "value": "garden-rock",
+              "value": "manor-main-gate",
               "type": "string"
             },
             {
@@ -659,43 +630,21 @@
       "draworder": "topdown",
       "objects": [
         {
+          "id": 29,
+          "name": "garden-rock",
+          "x": 704,
+          "y": 1536,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
           "id": 30,
           "name": "garden-rock",
-          "x": 768,
-          "y": 832,
-          "width": 64,
-          "height": 64,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 31,
-          "name": "garden-rock",
-          "x": 1728,
-          "y": 768,
-          "width": 64,
-          "height": 64,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 32,
-          "name": "garden-rock",
-          "x": 896,
-          "y": 2048,
-          "width": 64,
-          "height": 64,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 33,
-          "name": "garden-rock",
-          "x": 1856,
-          "y": 2048,
+          "x": 1600,
+          "y": 1536,
           "width": 64,
           "height": 64,
           "rotation": 0,
@@ -715,7 +664,7 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 34,
+          "id": 31,
           "name": "扬州渡口",
           "x": 352.0,
           "y": 1952.0,
@@ -726,7 +675,7 @@
           "point": true
         },
         {
-          "id": 35,
+          "id": 32,
           "name": "运河东流",
           "x": 1184.0,
           "y": 1248.0,
@@ -737,7 +686,7 @@
           "point": true
         },
         {
-          "id": 36,
+          "id": 33,
           "name": "京城水门",
           "x": 2144.0,
           "y": 1568.0,
@@ -757,7 +706,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 37,
+  "nextobjectid": 34,
   "properties": [
     {
       "name": "sceneId",
@@ -778,6 +727,11 @@
       "name": "water",
       "type": "string",
       "value": "3,14,34,11"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "5,26,3,3,path;19,26,3,3,path;32,25,3,3,path"
     },
     {
       "name": "flowerbeds",

@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "wang-kang-table_s10300103-01",
+  "seed": 10300103,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏家具素材：一张摆放在炕上的小炕桌，朱红漆木面，四腿收束，桌上隐约几只碗盘（无文字纹样），小巧精致。正交等距俯视，二比一菱形投影，能看见桌面与边缘。仅一张桌，无地面平台、无背景、无人物、无投影。完整居中，四周留白。纯净均匀纯白色背景，可抠图游戏素材，轮廓清晰。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "fa00872a-1f40-4fea-b6a8-3733befcb062",
+  "generated_at": "2026-10-28 12:46:20",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "448x320"
+}

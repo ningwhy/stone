@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "taixu-pearl_s10300099-01",
+  "seed": 10300099,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏道具素材：一颗太虚幻境的仙珠。画面里只有这一颗正圆宝珠，绛红色透明的水晶球体，内部有流动的紫红纹路与一点莹光，表面莹润反光，珠外环绕一圈淡金色仙气光晕。禁止出现建筑、亭台、楼阁、回廊、院墙、门、栏杆、地面、台阶、平台、山水、云海、人物。单一物体，整颗珠子完整居中，四周大片留白。纯净均匀纯白色背景，可直接抠图的游戏素材，轮廓清晰。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "c9145cf1-1977-4f03-a795-1cc5972a7c21",
+  "generated_at": "2026-10-28 13:47:27",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "384x384"
+}

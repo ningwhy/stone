@@ -958,5 +958,573 @@
     "faintAlphaRatio": 0.00252,
     "width": 935,
     "height": 637
+  },
+  {
+    "asset": "jinghuan-portrait",
+    "visiblePixels": 96188,
+    "solidAlpha250Ratio": 0.98337,
+    "faintAlphaRatio": 0.00672,
+    "width": 353,
+    "height": 600
+  },
+  {
+    "asset": "jinghuan-chibi",
+    "visiblePixels": 3515,
+    "solidAlpha250Ratio": 0.91238,
+    "faintAlphaRatio": 0.03613,
+    "width": 60,
+    "height": 116
+  },
+  {
+    "asset": "qin_ke-portrait",
+    "visiblePixels": 109481,
+    "solidAlpha250Ratio": 0.98863,
+    "faintAlphaRatio": 0.00508,
+    "width": 275,
+    "height": 600
+  },
+  {
+    "asset": "qin_ke-chibi",
+    "visiblePixels": 2939,
+    "solidAlpha250Ratio": 0.90303,
+    "faintAlphaRatio": 0.03981,
+    "width": 39,
+    "height": 116
+  },
+  {
+    "asset": "liu_lao-portrait",
+    "visiblePixels": 154673,
+    "solidAlpha250Ratio": 0.98977,
+    "faintAlphaRatio": 0.0045,
+    "width": 475,
+    "height": 600
+  },
+  {
+    "asset": "liu_lao-chibi",
+    "visiblePixels": 4873,
+    "solidAlpha250Ratio": 0.93926,
+    "faintAlphaRatio": 0.02319,
+    "width": 54,
+    "height": 116
+  },
+  {
+    "asset": "ban_er-portrait",
+    "visiblePixels": 87194,
+    "solidAlpha250Ratio": 0.98077,
+    "faintAlphaRatio": 0.00825,
+    "width": 223,
+    "height": 600
+  },
+  {
+    "asset": "ban_er-chibi",
+    "visiblePixels": 4587,
+    "solidAlpha250Ratio": 0.93482,
+    "faintAlphaRatio": 0.02878,
+    "width": 57,
+    "height": 116
+  },
+  {
+    "asset": "zhou_rui-portrait",
+    "visiblePixels": 111757,
+    "solidAlpha250Ratio": 0.98862,
+    "faintAlphaRatio": 0.00479,
+    "width": 270,
+    "height": 600
+  },
+  {
+    "asset": "zhou_rui-chibi",
+    "visiblePixels": 3505,
+    "solidAlpha250Ratio": 0.9184,
+    "faintAlphaRatio": 0.03481,
+    "width": 42,
+    "height": 116
+  },
+  {
+    "asset": "ping_er-portrait",
+    "visiblePixels": 104051,
+    "solidAlpha250Ratio": 0.98754,
+    "faintAlphaRatio": 0.00531,
+    "width": 250,
+    "height": 600
+  },
+  {
+    "asset": "ping_er-chibi",
+    "visiblePixels": 3106,
+    "solidAlpha250Ratio": 0.92048,
+    "faintAlphaRatio": 0.0293,
+    "width": 35,
+    "height": 116
+  },
+  {
+    "asset": "jia_rong-portrait",
+    "visiblePixels": 77660,
+    "solidAlpha250Ratio": 0.98332,
+    "faintAlphaRatio": 0.00744,
+    "width": 193,
+    "height": 600
+  },
+  {
+    "asset": "jia_rong-chibi",
+    "visiblePixels": 3407,
+    "solidAlpha250Ratio": 0.92574,
+    "faintAlphaRatio": 0.03053,
+    "width": 40,
+    "height": 116
+  },
+  {
+    "asset": "taixu-arch",
+    "visiblePixels": 139408,
+    "solidAlpha250Ratio": 0.9723,
+    "faintAlphaRatio": 0.01085,
+    "width": 520,
+    "height": 511
+  },
+  {
+    "asset": "taixu-gate",
+    "visiblePixels": 196640,
+    "solidAlpha250Ratio": 0.99047,
+    "faintAlphaRatio": 0.00403,
+    "width": 560,
+    "height": 530
+  },
+  {
+    "asset": "taixu-hall",
+    "visiblePixels": 514919,
+    "solidAlpha250Ratio": 0.99327,
+    "faintAlphaRatio": 0.00299,
+    "width": 1100,
+    "height": 784
+  },
+  {
+    "asset": "taixu-cabinet",
+    "visiblePixels": 33610,
+    "solidAlpha250Ratio": 0.97989,
+    "faintAlphaRatio": 0.00848,
+    "width": 170,
+    "height": 258
+  },
+  {
+    "asset": "taixu-bed",
+    "visiblePixels": 81224,
+    "solidAlpha250Ratio": 0.98099,
+    "faintAlphaRatio": 0.00822,
+    "width": 380,
+    "height": 378
+  },
+  {
+    "asset": "taixu-chair",
+    "visiblePixels": 18433,
+    "solidAlpha250Ratio": 0.95996,
+    "faintAlphaRatio": 0.01769,
+    "width": 130,
+    "height": 200
+  },
+  {
+    "asset": "taixu-table",
+    "visiblePixels": 22202,
+    "solidAlpha250Ratio": 0.97176,
+    "faintAlphaRatio": 0.01207,
+    "width": 260,
+    "height": 174
+  },
+  {
+    "asset": "taixu-brazier",
+    "visiblePixels": 13200,
+    "solidAlpha250Ratio": 0.9353,
+    "faintAlphaRatio": 0.02909,
+    "width": 130,
+    "height": 240
+  },
+  {
+    "asset": "taixu-vase",
+    "visiblePixels": 8467,
+    "solidAlpha250Ratio": 0.97177,
+    "faintAlphaRatio": 0.02823,
+    "width": 130,
+    "height": 179
+  },
+  {
+    "asset": "taixu-pearl",
+    "visiblePixels": 9764,
+    "solidAlpha250Ratio": 0.97624,
+    "faintAlphaRatio": 0.01024,
+    "width": 110,
+    "height": 110
+  },
+  {
+    "asset": "taixu-tree",
+    "visiblePixels": 38203,
+    "solidAlpha250Ratio": 0.94477,
+    "faintAlphaRatio": 0.02335,
+    "width": 280,
+    "height": 254
+  },
+  {
+    "asset": "taixu-rock",
+    "visiblePixels": 52141,
+    "solidAlpha250Ratio": 0.98448,
+    "faintAlphaRatio": 0.00641,
+    "width": 250,
+    "height": 305
+  },
+  {
+    "asset": "taixu-screen",
+    "visiblePixels": 36012,
+    "solidAlpha250Ratio": 0.97237,
+    "faintAlphaRatio": 0.00675,
+    "width": 240,
+    "height": 255
+  },
+  {
+    "asset": "wang-hall",
+    "visiblePixels": 675922,
+    "solidAlpha250Ratio": 0.99529,
+    "faintAlphaRatio": 0.00189,
+    "width": 1100,
+    "height": 772
+  },
+  {
+    "asset": "wang-kang",
+    "visiblePixels": 117221,
+    "solidAlpha250Ratio": 0.98131,
+    "faintAlphaRatio": 0.00861,
+    "width": 480,
+    "height": 428
+  },
+  {
+    "asset": "wang-kang-table",
+    "visiblePixels": 7928,
+    "solidAlpha250Ratio": 0.95447,
+    "faintAlphaRatio": 0.01741,
+    "width": 150,
+    "height": 103
+  },
+  {
+    "asset": "wang-chair",
+    "visiblePixels": 9299,
+    "solidAlpha250Ratio": 0.91408,
+    "faintAlphaRatio": 0.06183,
+    "width": 110,
+    "height": 162
+  },
+  {
+    "asset": "wang-screen",
+    "visiblePixels": 48464,
+    "solidAlpha250Ratio": 0.98062,
+    "faintAlphaRatio": 0.00881,
+    "width": 280,
+    "height": 248
+  },
+  {
+    "asset": "wang-handwarmer",
+    "visiblePixels": 5994,
+    "solidAlpha250Ratio": 0.95863,
+    "faintAlphaRatio": 0.01835,
+    "width": 90,
+    "height": 100
+  },
+  {
+    "asset": "wang-clock",
+    "visiblePixels": 20357,
+    "solidAlpha250Ratio": 0.96994,
+    "faintAlphaRatio": 0.02102,
+    "width": 110,
+    "height": 255
+  },
+  {
+    "asset": "wang-teatray",
+    "visiblePixels": 2754,
+    "solidAlpha250Ratio": 0.94009,
+    "faintAlphaRatio": 0.02397,
+    "width": 90,
+    "height": 51
+  },
+  {
+    "asset": "wang-curtain",
+    "visiblePixels": 25605,
+    "solidAlpha250Ratio": 0.96196,
+    "faintAlphaRatio": 0.01695,
+    "width": 200,
+    "height": 233
+  },
+  {
+    "asset": "wang-cabinet",
+    "visiblePixels": 39084,
+    "solidAlpha250Ratio": 0.98913,
+    "faintAlphaRatio": 0.0034,
+    "width": 170,
+    "height": 276
+  },
+  {
+    "asset": "wang-tree",
+    "visiblePixels": 40922,
+    "solidAlpha250Ratio": 0.9425,
+    "faintAlphaRatio": 0.02524,
+    "width": 280,
+    "height": 285
+  },
+  {
+    "asset": "wang-gate",
+    "visiblePixels": 202059,
+    "solidAlpha250Ratio": 0.99095,
+    "faintAlphaRatio": 0.00428,
+    "width": 560,
+    "height": 537
+  },
+  {
+    "asset": "wang-rock",
+    "visiblePixels": 42541,
+    "solidAlpha250Ratio": 0.97663,
+    "faintAlphaRatio": 0.01121,
+    "width": 230,
+    "height": 318
+  },
+  {
+    "asset": "baoyu-portrait-v2",
+    "visiblePixels": 309983,
+    "solidAlpha250Ratio": 0.99395,
+    "faintAlphaRatio": 0.00099,
+    "width": 555,
+    "height": 963
+  },
+  {
+    "asset": "estate-ruins-v2",
+    "visiblePixels": 399361,
+    "solidAlpha250Ratio": 0.98783,
+    "faintAlphaRatio": 0.00617,
+    "width": 900,
+    "height": 704
+  },
+  {
+    "asset": "zhen-house",
+    "visiblePixels": 382770,
+    "solidAlpha250Ratio": 0.99421,
+    "faintAlphaRatio": 0.0024,
+    "width": 900,
+    "height": 623
+  },
+  {
+    "asset": "hulu-temple",
+    "visiblePixels": 315102,
+    "solidAlpha250Ratio": 0.99241,
+    "faintAlphaRatio": 0.00334,
+    "width": 900,
+    "height": 564
+  },
+  {
+    "asset": "zhitong-temple",
+    "visiblePixels": 321577,
+    "solidAlpha250Ratio": 0.99288,
+    "faintAlphaRatio": 0.00336,
+    "width": 900,
+    "height": 511
+  },
+  {
+    "asset": "tavern-house",
+    "visiblePixels": 329521,
+    "solidAlpha250Ratio": 0.99091,
+    "faintAlphaRatio": 0.00353,
+    "width": 900,
+    "height": 492
+  },
+  {
+    "asset": "yamen-hall",
+    "visiblePixels": 317290,
+    "solidAlpha250Ratio": 0.99155,
+    "faintAlphaRatio": 0.00388,
+    "width": 900,
+    "height": 520
+  },
+  {
+    "asset": "fu-hall",
+    "visiblePixels": 282456,
+    "solidAlpha250Ratio": 0.98024,
+    "faintAlphaRatio": 0.00815,
+    "width": 900,
+    "height": 517
+  },
+  {
+    "asset": "farm-house",
+    "visiblePixels": 279920,
+    "solidAlpha250Ratio": 0.99129,
+    "faintAlphaRatio": 0.00334,
+    "width": 900,
+    "height": 414
+  },
+  {
+    "asset": "ruined-house",
+    "visiblePixels": 284599,
+    "solidAlpha250Ratio": 0.98804,
+    "faintAlphaRatio": 0.00502,
+    "width": 900,
+    "height": 486
+  },
+  {
+    "asset": "lantern-booth",
+    "visiblePixels": 126034,
+    "solidAlpha250Ratio": 1.0,
+    "faintAlphaRatio": 0.0,
+    "width": 633,
+    "height": 636
+  },
+  {
+    "asset": "screen-wall",
+    "visiblePixels": 224986,
+    "solidAlpha250Ratio": 1.0,
+    "faintAlphaRatio": 0.0,
+    "width": 668,
+    "height": 633
+  },
+  {
+    "asset": "stone-lion",
+    "visiblePixels": 346224,
+    "solidAlpha250Ratio": 1.0,
+    "faintAlphaRatio": 0.0,
+    "width": 768,
+    "height": 512
+  },
+  {
+    "asset": "mijing-raft",
+    "visiblePixels": 76440,
+    "solidAlpha250Ratio": 0.98543,
+    "faintAlphaRatio": 0.00396,
+    "width": 575,
+    "height": 316
+  },
+  {
+    "asset": "mijing-thorn",
+    "visiblePixels": 143859,
+    "solidAlpha250Ratio": 0.98125,
+    "faintAlphaRatio": 0.00701,
+    "width": 685,
+    "height": 436
+  },
+  {
+    "asset": "official-desk",
+    "visiblePixels": 34288,
+    "solidAlpha250Ratio": 0.95704,
+    "faintAlphaRatio": 0.01473,
+    "width": 343,
+    "height": 335
+  },
+  {
+    "asset": "altar-shrine",
+    "visiblePixels": 43076,
+    "solidAlpha250Ratio": 0.9851,
+    "faintAlphaRatio": 0.00446,
+    "width": 233,
+    "height": 320
+  },
+  {
+    "asset": "gruel-pot",
+    "visiblePixels": 79423,
+    "solidAlpha250Ratio": 0.9804,
+    "faintAlphaRatio": 0.00242,
+    "width": 548,
+    "height": 326
+  },
+  {
+    "asset": "wine-jars",
+    "visiblePixels": 89402,
+    "solidAlpha250Ratio": 1.0,
+    "faintAlphaRatio": 0.0,
+    "width": 396,
+    "height": 362
+  },
+  {
+    "asset": "farm-stove",
+    "visiblePixels": 76040,
+    "solidAlpha250Ratio": 0.98077,
+    "faintAlphaRatio": 0.00617,
+    "width": 554,
+    "height": 305
+  },
+  {
+    "asset": "bookshelf",
+    "visiblePixels": 48876,
+    "solidAlpha250Ratio": 0.99202,
+    "faintAlphaRatio": 0.00286,
+    "width": 195,
+    "height": 343
+  },
+  {
+    "asset": "plain-kang",
+    "visiblePixels": 120493,
+    "solidAlpha250Ratio": 1.0,
+    "faintAlphaRatio": 0.0,
+    "width": 566,
+    "height": 354
+  },
+  {
+    "asset": "qin-bed",
+    "visiblePixels": 131149,
+    "solidAlpha250Ratio": 0.99629,
+    "faintAlphaRatio": 0.00076,
+    "width": 406,
+    "height": 417
+  },
+  {
+    "asset": "qin-mirror",
+    "visiblePixels": 50547,
+    "solidAlpha250Ratio": 0.97838,
+    "faintAlphaRatio": 0.00457,
+    "width": 285,
+    "height": 397
+  },
+  {
+    "asset": "ning-hall",
+    "visiblePixels": 333541,
+    "solidAlpha250Ratio": 0.99132,
+    "faintAlphaRatio": 0.0038,
+    "width": 900,
+    "height": 556
+  },
+  {
+    "asset": "daybed",
+    "visiblePixels": 132135,
+    "solidAlpha250Ratio": 0.98646,
+    "faintAlphaRatio": 0.00266,
+    "width": 594,
+    "height": 370
+  },
+  {
+    "asset": "lamp-stand",
+    "visiblePixels": 157077,
+    "solidAlpha250Ratio": 0.99206,
+    "faintAlphaRatio": 0.00015,
+    "width": 724,
+    "height": 432
+  },
+  {
+    "asset": "reeds",
+    "visiblePixels": 65601,
+    "solidAlpha250Ratio": 0.91739,
+    "faintAlphaRatio": 0.03155,
+    "width": 418,
+    "height": 356
+  },
+  {
+    "asset": "bamboo-cluster",
+    "visiblePixels": 63571,
+    "solidAlpha250Ratio": 0.96602,
+    "faintAlphaRatio": 0.00901,
+    "width": 612,
+    "height": 338
+  },
+  {
+    "asset": "canal-quay",
+    "visiblePixels": 336642,
+    "solidAlpha250Ratio": 0.99433,
+    "faintAlphaRatio": 0.00118,
+    "width": 858,
+    "height": 712
+  },
+  {
+    "asset": "qin-room",
+    "visiblePixels": 375576,
+    "solidAlpha250Ratio": 0.99269,
+    "faintAlphaRatio": 0.0037,
+    "width": 900,
+    "height": 580
   }
 ]

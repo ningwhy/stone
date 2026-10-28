@@ -1,0 +1,72 @@
+[
+ {
+  "id": "c6-qin",
+  "title": "秦氏卧房 · 梦醒余波",
+  "scene": "c5_ningfu",
+  "start": "C06-001",
+  "book": 6
+ },
+ {
+  "id": "c6-grandmother",
+  "title": "贾母处 · 晚膳夜话",
+  "scene": "night",
+  "start": "C06-007",
+  "book": 6
+ },
+ {
+  "id": "c6-village",
+  "title": "刘家庄 · 狗儿家",
+  "scene": "c6_village",
+  "start": "C06-014",
+  "book": 6
+ },
+ {
+  "id": "c6-dawn",
+  "title": "刘家庄 · 次日清晨",
+  "scene": "c6_village",
+  "start": "C06-044",
+  "book": 6
+ },
+ {
+  "id": "c6-capital",
+  "title": "宁荣街 · 荣府大门",
+  "scene": "capital",
+  "start": "C06-047",
+  "book": 6
+ },
+ {
+  "id": "c6-backgate",
+  "title": "荣府后门",
+  "scene": "c6_wangchui",
+  "start": "C06-054",
+  "book": 6
+ },
+ {
+  "id": "c6-zhourui",
+  "title": "周瑞家院 · 引见凤姐",
+  "scene": "c6_wangchui",
+  "start": "C06-057",
+  "book": 6
+ },
+ {
+  "id": "c6-feng",
+  "title": "凤姐院 · 平儿与自鸣钟",
+  "scene": "c6_wangchui",
+  "start": "C06-076",
+  "book": 6
+ },
+ {
+  "id": "c6-audience",
+  "title": "凤姐上房 · 拜见",
+  "scene": "c6_wangchui",
+  "start": "C06-099",
+  "book": 6
+ },
+ {
+  "id": "c6-gift",
+  "title": "凤姐上房 · 周济",
+  "scene": "c6_wangchui",
+  "start": "C06-121",
+  "book": 6
+ }
+]

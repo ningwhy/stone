@@ -15,27 +15,16 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAPS = os.path.join(ROOT, 'maps')
 
 # map -> { zone id: is indoor }
+# Only the hand-authored entry stage is patched here. Every generated stage now
+# declares its own indoor floors and interiorZone directly (see stage_defs.py), so
+# listing them again would overwrite the generators' zone ids.
 INDOOR_ZONES = {
-    'central':      {'A1', 'A2'},
-    'rongguo-entry':{'F'},
-    'c4_yamen':     {'A1'},
-    'wang':         {'A1'},
-    'yucun':        {'A0'},
-    'lin':          {'A0'},
-    'east':         {'A2'},
-    'c4_lixiang':   {'A1'},
+    'rongguo-entry': {'F'},
 }
 
 # map -> { exterior art object name: interior zone id }
 INTERIOR_OF = {
-    'central':       {'rongxi-hall': 'A1', 'main-hall': 'A2'},
     'rongguo-entry': {'贾母正房外观': 'F'},
-    'c4_yamen':      {'main-hall': 'A1'},
-    'wang':          {'main-hall': 'A1'},
-    'yucun':         {'main-hall': 'A0'},
-    'lin':           {'main-hall': 'A0'},
-    'east':          {'main-hall': 'A2'},
-    'c4_lixiang':    {'main-hall': 'A1'},
 }
 
 

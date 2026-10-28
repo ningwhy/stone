@@ -3098,8 +3098,8 @@
           "gid": 4,
           "x": 1511.622,
           "y": 765.5980000000002,
-          "width": 1100,
-          "height": 888,
+          "width": 582.2072072072071,
+          "height": 470.0,
           "rotation": 0,
           "visible": true,
           "properties": [
@@ -3132,8 +3132,8 @@
           "gid": 4,
           "x": 2131.26296,
           "y": 843.1666399999999,
-          "width": 748.0,
-          "height": 603.84,
+          "width": 582.2072072072073,
+          "height": 470.0,
           "rotation": 0,
           "visible": true,
           "properties": [
@@ -3159,10 +3159,10 @@
           "name": "西厢房",
           "type": "art",
           "gid": 4,
-          "x": 771.44564,
-          "y": 897.71076,
-          "width": 682.0,
-          "height": 550.56,
+          "x": 771.4456,
+          "y": 1089.7108,
+          "width": 582.2072072072073,
+          "height": 470.0,
           "rotation": 0,
           "visible": true,
           "properties": [
@@ -3478,8 +3478,8 @@
           "name": "海棠11",
           "type": "art",
           "gid": 3,
-          "x": 551.785,
-          "y": 553.5622,
+          "x": 999.785,
+          "y": 873.5622,
           "width": 348.0,
           "height": 302.4,
           "rotation": 0,
@@ -3704,6 +3704,278 @@
               "value": -10
             }
           ]
+        },
+        {
+          "id": 78,
+          "name": "贾母榻",
+          "rotation": 0,
+          "visible": true,
+          "type": "art",
+          "x": 1248.0,
+          "y": 377.59999999999997,
+          "width": 439.56,
+          "height": 273.8,
+          "gid": 186,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "daybed"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "interior"
+            },
+            {
+              "name": "interiorZone",
+              "type": "string",
+              "value": "F"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 79,
+          "name": "榻后屏风",
+          "rotation": 0,
+          "visible": true,
+          "type": "art",
+          "x": 1248.3224,
+          "y": 301.12239999999997,
+          "width": 117.8,
+          "height": 106.64,
+          "gid": 39,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "wood-screen"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "interior"
+            },
+            {
+              "name": "interiorZone",
+              "type": "string",
+              "value": "F"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 80,
+          "name": "邢夫人椅",
+          "rotation": 0,
+          "visible": true,
+          "type": "art",
+          "x": 1120.3019199999999,
+          "y": 320.30192,
+          "width": 68.0,
+          "height": 93.84,
+          "gid": 113,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "official-chair"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "interior"
+            },
+            {
+              "name": "interiorZone",
+              "type": "string",
+              "value": "F"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 81,
+          "name": "王夫人椅",
+          "rotation": 0,
+          "visible": true,
+          "type": "art",
+          "x": 1504.3019199999999,
+          "y": 320.30192,
+          "width": 68.0,
+          "height": 93.84,
+          "gid": 113,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "official-chair"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "interior"
+            },
+            {
+              "name": "interiorZone",
+              "type": "string",
+              "value": "F"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 82,
+          "name": "瓶花东",
+          "rotation": 0,
+          "visible": true,
+          "type": "art",
+          "x": 1376.06422,
+          "y": 307.6495400000001,
+          "width": 67.60000000000001,
+          "height": 93.08,
+          "gid": 143,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "taixu-vase"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "interior"
+            },
+            {
+              "name": "interiorZone",
+              "type": "string",
+              "value": "F"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 83,
+          "name": "瓶花西",
+          "rotation": 0,
+          "visible": true,
+          "type": "art",
+          "x": 1056.06422,
+          "y": 307.64954000000006,
+          "width": 67.60000000000001,
+          "height": 93.08,
+          "gid": 143,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "taixu-vase"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "interior"
+            },
+            {
+              "name": "interiorZone",
+              "type": "string",
+              "value": "F"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 84,
+          "name": "茗碗案",
+          "rotation": 0,
+          "visible": true,
+          "type": "art",
+          "x": 1696.51912,
+          "y": 365.31912,
+          "width": 72.80000000000001,
+          "height": 64.4,
+          "gid": 43,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "tea-table"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "interior"
+            },
+            {
+              "name": "interiorZone",
+              "type": "string",
+              "value": "F"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 85,
+          "name": "落地灯",
+          "rotation": 0,
+          "visible": true,
+          "type": "art",
+          "x": 1056.0,
+          "y": 569.5999999999999,
+          "width": 448.88,
+          "height": 267.84,
+          "gid": 187,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "lamp-stand"
+            },
+            {
+              "name": "visibility",
+              "type": "string",
+              "value": "interior"
+            },
+            {
+              "name": "interiorZone",
+              "type": "string",
+              "value": "F"
+            },
+            {
+              "name": "depthOffset",
+              "type": "float",
+              "value": 0
+            }
+          ]
         }
       ]
     },
@@ -3753,6 +4025,16 @@
       "name": "adaptation",
       "type": "bool",
       "value": true
+    },
+    {
+      "name": "walls",
+      "type": "string",
+      "value": "3.5,27,3.5,31;3.5,33,3.5,36"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "18,11,2,8,path"
     },
     {
       "name": "sceneId",

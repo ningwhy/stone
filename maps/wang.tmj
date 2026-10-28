@@ -21,35 +21,55 @@
       "objects": [
         {
           "id": 1,
-          "name": "A0 王夫人院 · 东廊三间",
+          "name": "A1 王夫人院 · 东廊三间",
           "x": 640,
           "y": 1152,
           "width": 1280,
           "height": 768,
           "rotation": 0,
-          "visible": true,
-          "properties": [
-            {
-              "name": "indoor",
-              "value": false,
-              "type": "bool"
-            }
-          ]
+          "visible": true
         },
         {
           "id": 2,
-          "name": "A1 王夫人院 · 东廊三间",
-          "x": 768,
-          "y": 384,
-          "width": 1024,
-          "height": 768,
+          "name": "ROOM 王夫人院 · 东廊三间",
+          "x": 832,
+          "y": 576,
+          "width": 832,
+          "height": 576,
           "rotation": 0,
           "visible": true,
           "properties": [
             {
               "name": "indoor",
-              "value": true,
-              "type": "bool"
+              "type": "bool",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "A3 王夫人院 · 东廊三间",
+          "x": 1664,
+          "y": 1152,
+          "width": 320,
+          "height": 640,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 4,
+          "name": "EAST 王夫人院 · 东廊三间",
+          "x": 1408,
+          "y": 448,
+          "width": 384,
+          "height": 256,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "type": "bool",
+              "value": true
             }
           ]
         }
@@ -77,7 +97,7 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 3,
+          "id": 5,
           "name": "court_entry",
           "x": 928.0,
           "y": 1824.0,
@@ -88,10 +108,10 @@
           "point": true
         },
         {
-          "id": 4,
+          "id": 6,
           "name": "hall_entry",
           "x": 1184.0,
-          "y": 1312.0,
+          "y": 1120.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -99,7 +119,7 @@
           "point": true
         },
         {
-          "id": 5,
+          "id": 7,
           "name": "kang_edge",
           "x": 1248.0,
           "y": 736.0,
@@ -110,7 +130,7 @@
           "point": true
         },
         {
-          "id": 6,
+          "id": 8,
           "name": "wang_host",
           "x": 1376.0,
           "y": 672.0,
@@ -121,7 +141,7 @@
           "point": true
         },
         {
-          "id": 7,
+          "id": 9,
           "name": "guest_seat",
           "x": 1184.0,
           "y": 800.0,
@@ -132,7 +152,7 @@
           "point": true
         },
         {
-          "id": 8,
+          "id": 10,
           "name": "tea_seat",
           "x": 1440.0,
           "y": 864.0,
@@ -143,7 +163,7 @@
           "point": true
         },
         {
-          "id": 9,
+          "id": 11,
           "name": "east_corridor",
           "x": 1824.0,
           "y": 1248.0,
@@ -154,10 +174,10 @@
           "point": true
         },
         {
-          "id": 10,
+          "id": 12,
           "name": "south_passage",
           "x": 1504.0,
-          "y": 1568.0,
+          "y": 1504.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -165,7 +185,7 @@
           "point": true
         },
         {
-          "id": 11,
+          "id": 13,
           "name": "back_lane",
           "x": 1120.0,
           "y": 1888.0,
@@ -176,7 +196,7 @@
           "point": true
         },
         {
-          "id": 12,
+          "id": 14,
           "name": "feng_room",
           "x": 800.0,
           "y": 1568.0,
@@ -187,7 +207,7 @@
           "point": true
         },
         {
-          "id": 26,
+          "id": 15,
           "name": "li_room",
           "x": 1568.0,
           "y": 544.0,
@@ -210,7 +230,7 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 13,
+          "id": 16,
           "name": "场景动线",
           "x": 0,
           "y": 0,
@@ -226,7 +246,7 @@
             },
             {
               "name": "anchor_ids",
-              "value": "court_entry,hall_entry,kang_edge,wang_host,guest_seat,tea_seat,east_corridor,south_passage,back_lane,feng_room",
+              "value": "court_entry,hall_entry,kang_edge,wang_host,guest_seat,tea_seat,east_corridor,south_passage,back_lane,feng_room,li_room",
               "type": "string"
             }
           ]
@@ -244,12 +264,12 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 14,
+          "id": 17,
           "name": "main-hall",
-          "x": 1575.622,
-          "y": 1341.5980000000002,
-          "width": 1100,
-          "height": 888,
+          "x": 1439.6547972972974,
+          "y": 1228.3143468468468,
+          "width": 532.6576576576576,
+          "height": 430.0,
           "rotation": 0,
           "visible": true,
           "gid": 4,
@@ -266,24 +286,48 @@
               "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
-            },
-            {
               "name": "interiorZone",
-              "value": "A1",
+              "value": "ROOM",
               "type": "string"
             }
           ]
         },
         {
-          "id": 15,
+          "id": 18,
+          "name": "plain-kang",
+          "x": 1169.415,
+          "y": 825.0250000000001,
+          "width": 441.48,
+          "height": 276.12,
+          "rotation": 0,
+          "visible": true,
+          "gid": 182,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "plain-kang",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 19,
           "name": "tea-table",
-          "x": 1312.837,
-          "y": 736.837,
-          "width": 117.0,
-          "height": 95.4,
+          "x": 1416.53766,
+          "y": 780.53766,
+          "width": 75.39999999999999,
+          "height": 66.69999999999999,
           "rotation": 0,
           "visible": true,
           "gid": 43,
@@ -296,21 +340,79 @@
             },
             {
               "name": "visibility",
-              "value": "always",
+              "value": "interior",
               "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
             }
           ]
         },
         {
-          "id": 16,
+          "id": 20,
+          "name": "official-chair",
+          "x": 1169.3108,
+          "y": 1003.3108,
+          "width": 70.0,
+          "height": 96.6,
+          "rotation": 0,
+          "visible": true,
+          "gid": 113,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "official-chair",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "official-chair",
+          "x": 1560.3108,
+          "y": 924.3108,
+          "width": 70.0,
+          "height": 96.6,
+          "rotation": 0,
+          "visible": true,
+          "gid": 113,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "official-chair",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 22,
           "name": "wood-screen",
-          "x": 1568.364,
-          "y": 672.364,
+          "x": 1578.364,
+          "y": 726.364,
           "width": 133.0,
           "height": 120.39999999999999,
           "rotation": 0,
@@ -325,23 +427,23 @@
             },
             {
               "name": "visibility",
-              "value": "always",
+              "value": "interior",
               "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "interiorZone",
+              "value": "ROOM",
+              "type": "string"
             }
           ]
         },
         {
-          "id": 17,
+          "id": 23,
           "name": "garden-tree",
-          "x": 742.4875000000001,
-          "y": 1575.9685,
-          "width": 290,
-          "height": 252,
+          "x": 742.747,
+          "y": 1576.28724,
+          "width": 301.6,
+          "height": 262.08,
           "rotation": 0,
           "visible": true,
           "gid": 3,
@@ -356,16 +458,11 @@
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         },
         {
-          "id": 18,
+          "id": 24,
           "name": "garden-tree",
           "x": 1959.13625,
           "y": 1192.7653500000001,
@@ -385,127 +482,30 @@
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         },
         {
-          "id": 19,
-          "name": "estate-feng",
-          "x": 803.059,
-          "y": 1571.059,
-          "width": 560.0,
-          "height": 408.09999999999997,
+          "id": 25,
+          "name": "bamboo-cluster",
+          "x": 863.0972999999999,
+          "y": 1311.0973,
+          "width": 550.8000000000001,
+          "height": 304.2,
           "rotation": 0,
           "visible": true,
-          "gid": 63,
+          "gid": 189,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "estate-feng",
+              "value": "bamboo-cluster",
               "type": "string"
             },
             {
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
-            }
-          ]
-        },
-        {
-          "id": 27,
-          "name": "official-chair",
-          "x": 1376.444,
-          "y": 928.444,
-          "width": 100.0,
-          "height": 138.0,
-          "rotation": 0,
-          "visible": true,
-          "gid": 113,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "type": "string",
-              "value": "official-chair"
-            },
-            {
-              "name": "visibility",
-              "type": "string",
-              "value": "always"
-            },
-            {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "id": 29,
-          "name": "cabinet",
-          "x": 1760.592,
-          "y": 480.5920000000001,
-          "width": 130.0,
-          "height": 222.0,
-          "rotation": 0,
-          "visible": true,
-          "gid": 116,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "type": "string",
-              "value": "cabinet"
-            },
-            {
-              "name": "visibility",
-              "type": "string",
-              "value": "always"
-            },
-            {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "id": 31,
-          "name": "vase-stand",
-          "x": 992.4359999999999,
-          "y": 1056.436,
-          "width": 110.0,
-          "height": 163.0,
-          "rotation": 0,
-          "visible": true,
-          "gid": 118,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "type": "string",
-              "value": "vase-stand"
-            },
-            {
-              "name": "visibility",
-              "type": "string",
-              "value": "always"
-            },
-            {
-              "name": "depthOffset",
-              "type": "float",
-              "value": 0
             }
           ]
         }
@@ -522,10 +522,10 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 20,
+          "id": 26,
           "name": "tea-table",
-          "x": 1280,
-          "y": 704,
+          "x": 1384.0,
+          "y": 748.0,
           "width": 64,
           "height": 64,
           "rotation": 0,
@@ -533,45 +533,12 @@
           "type": "collision"
         },
         {
-          "id": 21,
+          "id": 27,
           "name": "wood-screen",
-          "x": 1536,
-          "y": 640,
+          "x": 1546.0,
+          "y": 694.0,
           "width": 64,
           "height": 64,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 28,
-          "name": "official-chair",
-          "x": 1344,
-          "y": 896,
-          "width": 64.0,
-          "height": 64.0,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 30,
-          "name": "cabinet",
-          "x": 1728,
-          "y": 448,
-          "width": 64.0,
-          "height": 64.0,
-          "rotation": 0,
-          "visible": true,
-          "type": "collision"
-        },
-        {
-          "id": 32,
-          "name": "vase-stand",
-          "x": 960,
-          "y": 1024,
-          "width": 64.0,
-          "height": 64.0,
           "rotation": 0,
           "visible": true,
           "type": "collision"
@@ -588,10 +555,10 @@
       "visible": false,
       "objects": [
         {
-          "id": 22,
+          "id": 28,
           "name": "王夫人起居处",
           "x": 1312.0,
-          "y": 544.0,
+          "y": 480.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -599,7 +566,7 @@
           "point": true
         },
         {
-          "id": 23,
+          "id": 29,
           "name": "东廊",
           "x": 1824.0,
           "y": 1312.0,
@@ -610,7 +577,7 @@
           "point": true
         },
         {
-          "id": 24,
+          "id": 30,
           "name": "夹道",
           "x": 1120.0,
           "y": 1888.0,
@@ -621,7 +588,7 @@
           "point": true
         },
         {
-          "id": 25,
+          "id": 31,
           "name": "凤姐院门",
           "x": 800.0,
           "y": 1568.0,
@@ -641,7 +608,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 33,
+  "nextobjectid": 32,
   "properties": [
     {
       "name": "sceneId",
@@ -657,6 +624,21 @@
       "name": "theme",
       "type": "string",
       "value": "interior"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "13,22,4,8,path"
+    },
+    {
+      "name": "walls",
+      "type": "string",
+      "value": "10,8,30,8;10,8,10,28;30,8,30,28;10,28,13,28;17,28,30,28"
+    },
+    {
+      "name": "flowerbeds",
+      "type": "string",
+      "value": "26,22,3,3"
     }
   ]
 }

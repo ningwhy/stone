@@ -45,7 +45,7 @@ try{
   const snap=await page.evaluate(()=>{
    const s=window.__mapScene,st=s.engine.getSnapshot();
    return {step:s.engine.steps[st.index].id,scene:s.mapData.id,theme:s.mapData.theme,
-    water:s.mapData.water,flowerbeds:s.mapData.flowerbeds,status:st.status,
+    water:s.mapData.water,beds:s.mapData.beds,status:st.status,
     visible:Object.entries(st.actors).filter(([,a])=>a.visible).map(([k,a])=>[k,a.col,a.row,a.moving])};
   });
   assert.equal(snap.step,id,`seek landed on ${snap.step}`);
@@ -59,11 +59,11 @@ try{
   if(scene==='canal'){
    assert.equal(snap.theme,'river');
    assert.deepEqual(snap.water,[[3,14,34,11]],'the canal stage lost its water band');
-   assert.equal(snap.flowerbeds,false,'the canal stage must not grow garden flowerbeds');
+   assert.equal(snap.beds.length,0,'the canal stage must not grow garden flowerbeds');
   }else{
    assert.equal(snap.theme,'garden');
    assert.equal(snap.water.length,0,'the country walk has no water band');
-   assert.equal(snap.flowerbeds,true,'the country walk keeps the garden flowerbeds');
+   assert.ok(snap.beds.length>0,'the country walk keeps its own planting');
   }
   await page.screenshot({path:`artifacts/travel-stages/${id}.png`});
  }

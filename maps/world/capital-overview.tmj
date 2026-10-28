@@ -1,0 +1,758 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "tiledversion": "1.11.2",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "nextlayerid": 7,
+  "nextobjectid": 25,
+  "layers": [
+    {
+      "id": 1,
+      "name": "Gates",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#655441",
+      "objects": [
+        {
+          "id": 13,
+          "name": "敕造宁国府",
+          "type": "",
+          "x": 1952.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "gateId",
+              "type": "string",
+              "value": "ning_gate"
+            },
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "stone-lion"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "荣国府正门",
+          "type": "",
+          "x": 672.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "gateId",
+              "type": "string",
+              "value": "rong_gate"
+            },
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "manor-main-gate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Walls",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#83916c",
+      "objects": [
+        {
+          "id": 15,
+          "name": "院墙",
+          "type": "",
+          "x": 1344,
+          "y": 384,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 1600
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "院墙",
+          "type": "",
+          "x": 128,
+          "y": 384,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 1536
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "院墙",
+          "type": "",
+          "x": 128,
+          "y": 1920,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1152,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "院墙",
+          "type": "",
+          "x": 1344,
+          "y": 1920,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1088,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "院墙",
+          "type": "",
+          "x": 2432,
+          "y": 384,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 1536
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "院墙",
+          "type": "",
+          "x": 128,
+          "y": 384,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 2304,
+              "y": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Locations",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#526b54",
+      "objects": [
+        {
+          "id": 1,
+          "name": "rongguo",
+          "type": "",
+          "x": 672.0,
+          "y": 1184.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "荣国府"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "estate"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": "rongguo"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "敕造荣国府，在宁荣街北侧偏西。第三回黛玉不进正门，只进西边角门；后一带花园日后并入大观园。"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "ningguo",
+          "type": "",
+          "x": 1952.0,
+          "y": 1184.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "宁国府"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "estate"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": "ningguo"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "敕造宁国府，在宁荣街北侧偏东，长房。第五回会芳园赏梅、宝玉梦游太虚境即在此府。"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "rear_garden",
+          "type": "",
+          "x": 1312.0,
+          "y": 288.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "后一带花园 · 大观园旧址"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "garden"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": "daguanyuan"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "两府之后的一带花园。第十六回起拆会芳园、并荣府东边花园，改建为大观园；前五回此处尚无园景。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Roads",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#b99553",
+      "objects": [
+        {
+          "id": 4,
+          "name": "street_west → street_mid",
+          "type": "",
+          "x": 160.0,
+          "y": 2144.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1152,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "street_mid → street_east",
+          "type": "",
+          "x": 1312.0,
+          "y": 2144.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1152,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "street_mid → rong_gate",
+          "type": "",
+          "x": 1312.0,
+          "y": 2144.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -640,
+              "y": -192
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "street_mid → ning_gate",
+          "type": "",
+          "x": 1312.0,
+          "y": 2144.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 640,
+              "y": -192
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Markers",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#8a8f7a",
+      "objects": [
+        {
+          "id": 21,
+          "name": "宁 荣 街",
+          "type": "",
+          "x": 1312.0,
+          "y": 2144.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "两府之间 · 私巷隔断",
+          "type": "",
+          "x": 1376.0,
+          "y": 1568.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "街市繁华 · 人烟阜盛",
+          "type": "",
+          "x": 224.0,
+          "y": 2144.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "name": "街市",
+          "type": "",
+          "x": 2400.0,
+          "y": 2144.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Art",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#83916c",
+      "objects": [
+        {
+          "id": 8,
+          "name": "荣国府",
+          "type": "",
+          "x": 663.3201919999999,
+          "y": 1174.5672447999998,
+          "width": 2091.52,
+          "height": 1201.4620444444445,
+          "rotation": 0,
+          "visible": true,
+          "gid": 168,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "fu-hall"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "rongguo"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "宁国府",
+          "type": "",
+          "x": 1950.748573866667,
+          "y": 1181.9142897777779,
+          "width": 2091.52,
+          "height": 1292.0945777777777,
+          "rotation": 0,
+          "visible": true,
+          "gid": 185,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "ning-hall"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "ningguo"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "后一带花园 · 大观园旧址",
+          "type": "",
+          "x": 1351.4010482758622,
+          "y": 336.3957230344828,
+          "width": 1761.28,
+          "height": 1530.4915862068965,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "garden-tree"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "rear_garden"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "敕造宁国府",
+          "type": "",
+          "x": 1952.1151960784314,
+          "y": 1951.8848039215686,
+          "width": 353.88235294117646,
+          "height": 235.92156862745097,
+          "rotation": 0,
+          "visible": true,
+          "gid": 173,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "stone-lion"
+            },
+            {
+              "name": "gateId",
+              "type": "string",
+              "value": "ning_gate"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "荣国府正门",
+          "type": "",
+          "x": 751.6921281447964,
+          "y": 2011.3052380090498,
+          "width": 353.88235294117646,
+          "height": 287.46135746606336,
+          "rotation": 0,
+          "visible": true,
+          "gid": 98,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "manor-main-gate"
+            },
+            {
+              "name": "gateId",
+              "type": "string",
+              "value": "rong_gate"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "../rongguo-art.tsj"
+    }
+  ],
+  "properties": [
+    {
+      "name": "title",
+      "type": "string",
+      "value": "京城 · 宁荣街"
+    },
+    {
+      "name": "subtitle",
+      "type": "string",
+      "value": "宁荣街 · 宁国府 · 荣国府 —— 第二级"
+    },
+    {
+      "name": "parent",
+      "type": "string",
+      "value": "realm"
+    },
+    {
+      "name": "note",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "value": "design/atlas-maps.json"
+    }
+  ]
+}

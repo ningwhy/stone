@@ -16,7 +16,8 @@
     "audio:check": "python3 scripts/check_audio.py",
     "art:audit": "python3 scripts/asset_audit.py",
     "map:inspect": "bash scripts/tiled_inspect.sh",
-    "chapter04:evidence": "python3 scripts/build_chapter04_evidence.py"
+    "chapter04:evidence": "python3 scripts/build_chapter04_evidence.py",
+    "map:framing": "python3 scripts/check_stage_framing.py"
   },
   "engines": {
     "node": ">=22.18"

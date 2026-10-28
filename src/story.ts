@@ -7,6 +7,10 @@ import sections1 from '../design/chapter01-sections.json' with { type:'json' };
 import sections2 from '../design/chapter02-sections.json' with { type:'json' };
 import script4 from '../design/chapter04-story.json' with { type:'json' };
 import sections4 from '../design/chapter04-sections.json' with { type:'json' };
+import script5 from '../design/chapter05-story.json' with { type:'json' };
+import sections5 from '../design/chapter05-sections.json' with { type:'json' };
+import script6 from '../design/chapter06-story.json' with { type:'json' };
+import sections6 from '../design/chapter06-sections.json' with { type:'json' };
 export const cast = {
   oldmonk:{"name": "智通寺老僧", "fullName": "智通寺老僧", "color": 8885375, "css": "#87947f", "relation": "寺中煮粥人", "description": "龙钟衰老，回答雨村时答非所问；与癞头和尚分列。"},
   huoqi:{"name": "霍启", "fullName": "霍启", "color": 8885375, "css": "#87947f", "relation": "甄家家人", "description": "带英莲看灯，暂离后失去孩子，惧罪逃走。"},
@@ -47,6 +51,13 @@ export const cast = {
   xuepan:{name:'薛蟠',fullName:'薛蟠',color:0x6d8bab,css:'#6d8bab',relation:'薛家公子',description:'字文起，金陵皇商。五岁上性情奢侈，言语傲慢，终日斗鸡走马。人命官司被他视为儿戏，入京后日日受纨绔引诱，比当日更坏十倍。'},
   xueyima:{name:'薛姨妈',fullName:'薛姨妈',color:0x9c8ea6,css:'#9c8ea6',relation:'薛家寡母',description:'京营节度使王子腾之妹，与王夫人一母所生。为约束儿子执意住进荣府梨香院，声明日用供给一概免却。'},
   baochai:{name:'宝钗',fullName:'薛宝钗',color:0x8fb3a6,css:'#8fb3a6',relation:'薛家小姐',description:'乳名宝钗，比薛蟠小两岁。肌骨莹润，举止娴雅，读书识字胜过乃兄。随母兄进京待选，与黛玉、迎春等日日同处。'},
+  jinghuan:{name:'警幻',fullName:'警幻仙姑',color:0x7b5ea8,css:'#7b5ea8',relation:'太虚幻境之主',description:'居离恨天之上、灌愁海之中，司人间风情月债。奉荣宁二公之灵嘱，引宝玉入梦，历演金陵十二钗判词与红楼梦十二支，以情欲声色警其痴顽。'},
+  qin_ke:{name:'可卿',fullName:'秦可卿',color:0xb56f8a,css:'#b56f8a',relation:'贾蓉之妻 · 宝玉梦中兼美',description:'贾蓉之妻，金陵十二钗之末，乳名兼美字可卿。宝玉梦中，警幻以妹许之，教以云雨之事；人间结局见于第十三回。'},
+  liu_lao:{name:'刘姥姥',fullName:'刘姥姥',color:0x9c7a4c,css:'#9c7a4c',relation:'狗儿之岳母 · 乡间老妪',description:'积年穷寡妇，膝下无儿，依女婿狗儿过活。因与金陵王家连过宗，携外孙板儿进荣国府攀亲，得凤姐周济二十两银子。'},
+  ban_er:{name:'板儿',fullName:'板儿',color:0xc9a86a,css:'#c9a86a',relation:'狗儿之子 · 刘姥姥外孙',description:'狗儿与刘氏之子，才五六岁的孩子。随刘姥姥进荣府，因闹着要吃肉、不肯作揖，是刘姥姥进府的陪衬。'},
+  zhou_rui:{name:'周瑞家的',fullName:'周瑞家的',color:0x8a7da0,css:'#8a7da0',relation:'王夫人陪房 · 凤姐之下',description:'王夫人的陪房媳妇，丈夫周瑞。昔年争买田地多得狗儿之父之力，故引刘姥姥去见凤姐，是荣府对外的接引人。'},
+  ping_er:{name:'平儿',fullName:'平儿',color:0xb59a7a,css:'#b59a7a',relation:'凤姐心腹通房大丫头',description:'凤姐的心腹通房大丫头，处事妥帖。刘姥姥初进院时误认她为凤姐；奉凤姐命取二十两银子与一吊钱周济刘姥姥。'},
+  jia_rong:{name:'贾蓉',fullName:'贾蓉',color:0x6f8fb0,css:'#6f8fb0',relation:'贾珍之子 · 秦可卿之夫',description:'宁国府贾珍之子，秦可卿之夫。十七八岁，轻裘宝带、美服华冠。来向凤姐借玻璃炕屏，于刘姥姥在场时闯入，令其坐立不安。'},
 };
 export type ActorId=keyof typeof cast;
 export type FacingSide='left'|'right';
@@ -88,12 +99,12 @@ export type Move={type:'move';actor:ActorId;via:string[]};
 export type Action=Move|{type:'parallel';moves:Move[]}|{type:'show';actor:ActorId;at:string}|{type:'hide';actor:ActorId}|{type:'roof';visible:boolean}|{type:'effect';actor:ActorId;kind:'jade'|'greet'|'rest';duration:number};
 export type StoryStep={id:string;chapter:string;scene:string;title:string;place:string;focus:string;speaker:ActorId|'narrator';text:string;mood?:string;offscreen?:boolean;actions:Action[];source:{chapter:number;paragraphLead:string;textKind:string;layer?:string}};
 export const chapter3Story=script as StoryStep[];
-export const story=[...script1,...script2,...script,...script4] as StoryStep[];
+export const story=[...script1,...script2,...script,...script4,...script5,...script6] as StoryStep[];
 /** Index of the last chapter-three node inside `story`; saves taken before chapter four
  * end here, and a saved ending at or before it must reopen as an ordinary reading state. */
 export const LAST_LEGACY_INDEX=([...script1,...script2,...script] as StoryStep[]).length-1;
-export const chapters=[...sections1,...sections2,...sections.map(s=>({...s,book:3})),...sections4];
-export const bookNames:Record<number,string>={1:"第一回",2:"第二回",3:"第三回",4:"第四回"};
+export const chapters=[...sections1,...sections2,...sections.map(s=>({...s,book:3})),...sections4,...sections5.map(s=>({...s,book:5})),...sections6.map(s=>({...s,book:6}))];
+export const bookNames:Record<number,string>={1:"第一回",2:"第二回",3:"第三回",4:"第四回",5:"第五回",6:"第六回"};
 
 /** Consecutive move actions for different actors describe one shared walk; play them together
  * so a two-person errand no longer costs twice the stage time. Same-actor neighbours stay

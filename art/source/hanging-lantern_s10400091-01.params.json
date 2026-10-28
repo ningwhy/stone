@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "hanging-lantern_s10400091-01",
+  "seed": 10400091,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏场景道具素材，白底贴图：一盏中国宫灯/花灯，朱红纱面，六角宫灯形制，上下雕花木框，底部垂下红穗子，灯身透出暖黄光。画面上只有这一盏灯，背景是均匀纯净纯白色（#FFFFFF），绝对不要画墙、屋檐、地面、街市、人物或其他灯笼。灯完整居中，四周留白，等距视角，便于抠图。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "36ba1d6c-8be8-4caa-ab73-884666fdf7e2",
+  "generated_at": "2026-10-28 18:01:26",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x1024"
+}

@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "zhou_rui-chibi_s10233025-01",
+  "seed": 10233025,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立单个人物设定，红楼梦原创形象。周瑞家的，王夫人的陪房媳妇，府中管事仆妇。一位中年妇人：面庞丰润成熟，神情干练稳重，年纪约四十岁上下。头发梳整齐的圆髻，插一支素银簪。身着藏青色比甲配藕荷色袄裙，洁净挺括。Q版三头身游戏角色：超大圆头，头部高度恰好占全身高度约三分之一，矮胖的短腿短手，娃娃般憨萌的整体比例。双脚分开站稳、鞋底完整朝前清楚露出，绝不被裙摆或衣遮挡。纯净纯白背景：画面中除人物外不要出现任何地面、台阶、栏杆、廊柱、屋檐、家具、器皿、门窗、植物或点景，也不要有影子与投影，四周大量留白。轻微俯视等距，朝右下，站立。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "3fef7d62-4f35-48a5-932a-81487f490803",
+  "generated_at": "2026-10-27 23:59:06",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x1024"
+}

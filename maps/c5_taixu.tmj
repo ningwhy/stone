@@ -1,0 +1,1645 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "PlanZones",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 1,
+          "name": "A0 太虚幻境 · 孽海情天",
+          "x": 256,
+          "y": 1536,
+          "width": 2048,
+          "height": 768,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 2,
+          "name": "A1 太虚幻境 · 孽海情天",
+          "x": 512,
+          "y": 1024,
+          "width": 1536,
+          "height": 512,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 3,
+          "name": "A2 太虚幻境 · 孽海情天",
+          "x": 384,
+          "y": 384,
+          "width": 768,
+          "height": 640,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 4,
+          "name": "A3 太虚幻境 · 孽海情天",
+          "x": 1536,
+          "y": 384,
+          "width": 768,
+          "height": 640,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 5,
+          "name": "A4 太虚幻境 · 孽海情天",
+          "x": 256,
+          "y": 0,
+          "width": 2048,
+          "height": 512,
+          "rotation": 0,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PlanBlockers",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 3,
+      "name": "Anchors",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 6,
+          "name": "arch",
+          "x": 1184.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 7,
+          "name": "gate_outer",
+          "x": 1184.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 8,
+          "name": "gate_inner",
+          "x": 1184.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 9,
+          "name": "hall_left",
+          "x": 672.0,
+          "y": 1312.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 10,
+          "name": "hall_right",
+          "x": 1696.0,
+          "y": 1312.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 11,
+          "name": "registry",
+          "x": 800.0,
+          "y": 864.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 12,
+          "name": "scroll_desk",
+          "x": 800.0,
+          "y": 736.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 13,
+          "name": "courtyard",
+          "x": 1184.0,
+          "y": 544.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 14,
+          "name": "fairy_host",
+          "x": 992.0,
+          "y": 352.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 15,
+          "name": "banquet",
+          "x": 1184.0,
+          "y": 352.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 16,
+          "name": "boudoir_door",
+          "x": 1824.0,
+          "y": 224.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 17,
+          "name": "boudoir",
+          "x": 2016.0,
+          "y": 160.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Routes",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 18,
+          "name": "动线 gate",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "gate",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "arch,gate_outer,gate_inner",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "动线 halls",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "halls",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "gate_inner,hall_left",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "动线 halls2",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "halls2",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "gate_inner,hall_right",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "动线 registry",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "registry",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "gate_inner,registry,scroll_desk",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "动线 banquet",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "banquet",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "scroll_desk,courtyard,banquet",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "动线 boudoir",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "boudoir",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "courtyard,boudoir_door,boudoir",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Art",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 24,
+          "name": "taixu-screen",
+          "x": 642.4154000000001,
+          "y": 1282.13888,
+          "width": 148.8,
+          "height": 158.1,
+          "rotation": 0,
+          "visible": true,
+          "gid": 147,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-screen",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "name": "taixu-rock",
+          "x": 637.6220000000001,
+          "y": 1426.8756,
+          "width": 100.0,
+          "height": 122.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 146,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "taixu-rock",
+          "x": 768.5287000000001,
+          "y": 1251.89426,
+          "width": 85.0,
+          "height": 103.7,
+          "rotation": 0,
+          "visible": true,
+          "gid": 146,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "name": "taixu-tree",
+          "x": 465.5309,
+          "y": 1294.9059,
+          "width": 196.0,
+          "height": 177.79999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 145,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "taixu-tree",
+          "x": 677.39968,
+          "y": 1114.9996800000001,
+          "width": 179.20000000000002,
+          "height": 162.56,
+          "rotation": 0,
+          "visible": true,
+          "gid": 145,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "name": "taixu-screen",
+          "x": 1666.4153999999999,
+          "y": 1282.13888,
+          "width": 148.8,
+          "height": 158.1,
+          "rotation": 0,
+          "visible": true,
+          "gid": 147,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-screen",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "name": "taixu-rock",
+          "x": 1661.622,
+          "y": 1426.8756,
+          "width": 100.0,
+          "height": 122.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 146,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "name": "taixu-rock",
+          "x": 1792.5286999999998,
+          "y": 1251.89426,
+          "width": 85.0,
+          "height": 103.7,
+          "rotation": 0,
+          "visible": true,
+          "gid": 146,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "name": "taixu-tree",
+          "x": 1489.5309,
+          "y": 1294.9059,
+          "width": 196.0,
+          "height": 177.79999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 145,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "name": "taixu-tree",
+          "x": 1701.39968,
+          "y": 1114.99968,
+          "width": 179.20000000000002,
+          "height": 162.56,
+          "rotation": 0,
+          "visible": true,
+          "gid": 145,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "name": "taixu-arch",
+          "x": 1138.7009200000002,
+          "y": 1906.23364,
+          "width": 343.2,
+          "height": 337.26,
+          "rotation": 0,
+          "visible": true,
+          "gid": 135,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-arch",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "name": "taixu-tree",
+          "x": 1030.7933400000002,
+          "y": 2053.71834,
+          "width": 229.6,
+          "height": 208.28,
+          "rotation": 0,
+          "visible": true,
+          "gid": 145,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "name": "taixu-tree",
+          "x": 1267.6183800000001,
+          "y": 1780.84338,
+          "width": 207.2,
+          "height": 187.96,
+          "rotation": 0,
+          "visible": true,
+          "gid": 145,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 37,
+          "name": "taixu-rock",
+          "x": 1166.6842000000001,
+          "y": 2085.86316,
+          "width": 110.0,
+          "height": 134.2,
+          "rotation": 0,
+          "visible": true,
+          "gid": 146,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 38,
+          "name": "taixu-rock",
+          "x": 1293.5598,
+          "y": 1902.8880399999998,
+          "width": 90.0,
+          "height": 109.8,
+          "rotation": 0,
+          "visible": true,
+          "gid": 146,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 39,
+          "name": "taixu-gate",
+          "x": 1201.5776,
+          "y": 1427.734,
+          "width": 336.0,
+          "height": 318.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 136,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-gate",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 40,
+          "name": "taixu-rock",
+          "x": 1133.622,
+          "y": 1586.8756,
+          "width": 100.0,
+          "height": 122.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 146,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "name": "taixu-rock",
+          "x": 1259.5286999999998,
+          "y": 1436.89426,
+          "width": 85.0,
+          "height": 103.7,
+          "rotation": 0,
+          "visible": true,
+          "gid": 146,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 42,
+          "name": "taixu-tree",
+          "x": 996.5309,
+          "y": 1603.9059,
+          "width": 196.0,
+          "height": 177.79999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 145,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 43,
+          "name": "taixu-tree",
+          "x": 1263.39968,
+          "y": 1292.99968,
+          "width": 179.20000000000002,
+          "height": 162.56,
+          "rotation": 0,
+          "visible": true,
+          "gid": 145,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 44,
+          "name": "taixu-cabinet",
+          "x": 581.3453999999999,
+          "y": 559.2726,
+          "width": 102.0,
+          "height": 154.79999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 138,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-cabinet",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 45,
+          "name": "taixu-cabinet",
+          "x": 638.3453999999999,
+          "y": 494.27259999999995,
+          "width": 102.0,
+          "height": 154.79999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 138,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-cabinet",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 46,
+          "name": "taixu-cabinet",
+          "x": 598.3453999999999,
+          "y": 730.2726,
+          "width": 102.0,
+          "height": 154.79999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 138,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-cabinet",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 47,
+          "name": "taixu-cabinet",
+          "x": 706.3453999999999,
+          "y": 838.2726,
+          "width": 102.0,
+          "height": 154.79999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 138,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-cabinet",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 48,
+          "name": "taixu-cabinet",
+          "x": 804.3453999999999,
+          "y": 508.2726,
+          "width": 102.0,
+          "height": 154.79999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 138,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-cabinet",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 49,
+          "name": "taixu-cabinet",
+          "x": 912.3453999999999,
+          "y": 616.2726,
+          "width": 102.0,
+          "height": 154.79999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 138,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-cabinet",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 50,
+          "name": "taixu-table",
+          "x": 791.34212,
+          "y": 745.33212,
+          "width": 145.60000000000002,
+          "height": 97.44000000000001,
+          "rotation": 0,
+          "visible": true,
+          "gid": 141,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 51,
+          "name": "taixu-vase",
+          "x": 791.56175,
+          "y": 832.93225,
+          "width": 65.0,
+          "height": 89.5,
+          "rotation": 0,
+          "visible": true,
+          "gid": 143,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-vase",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 52,
+          "name": "taixu-vase",
+          "x": 894.05681,
+          "y": 718.3976700000001,
+          "width": 59.800000000000004,
+          "height": 82.34,
+          "rotation": 0,
+          "visible": true,
+          "gid": 143,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-vase",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 53,
+          "name": "taixu-brazier",
+          "x": 892.56741,
+          "y": 828.1888299999999,
+          "width": 59.800000000000004,
+          "height": 110.4,
+          "rotation": 0,
+          "visible": true,
+          "gid": 142,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-brazier",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 54,
+          "name": "taixu-table",
+          "x": 1175.34212,
+          "y": 425.33212000000003,
+          "width": 145.60000000000002,
+          "height": 97.44000000000001,
+          "rotation": 0,
+          "visible": true,
+          "gid": 141,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 55,
+          "name": "taixu-chair",
+          "x": 1106.6972500000002,
+          "y": 389.82875,
+          "width": 65.0,
+          "height": 100.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 140,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-chair",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 56,
+          "name": "taixu-chair",
+          "x": 1159.6972500000002,
+          "y": 328.82875,
+          "width": 65.0,
+          "height": 100.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 140,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-chair",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 57,
+          "name": "taixu-chair",
+          "x": 1208.6972500000002,
+          "y": 491.82875,
+          "width": 65.0,
+          "height": 100.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 140,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-chair",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 58,
+          "name": "taixu-chair",
+          "x": 1262.6972500000002,
+          "y": 429.82875,
+          "width": 65.0,
+          "height": 100.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 140,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-chair",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 59,
+          "name": "taixu-brazier",
+          "x": 1274.6167500000001,
+          "y": 378.20525000000004,
+          "width": 65.0,
+          "height": 120.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 142,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-brazier",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 60,
+          "name": "taixu-vase",
+          "x": 1104.0617499999998,
+          "y": 464.43224999999995,
+          "width": 65.0,
+          "height": 89.5,
+          "rotation": 0,
+          "visible": true,
+          "gid": 143,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-vase",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 61,
+          "name": "taixu-vase",
+          "x": 1210.05434,
+          "y": 286.38038,
+          "width": 57.2,
+          "height": 78.76,
+          "rotation": 0,
+          "visible": true,
+          "gid": 143,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-vase",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 62,
+          "name": "taixu-screen",
+          "x": 919.3752,
+          "y": 337.12543999999997,
+          "width": 134.4,
+          "height": 142.8,
+          "rotation": 0,
+          "visible": true,
+          "gid": 147,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-screen",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 63,
+          "name": "taixu-screen",
+          "x": 1105.3752,
+          "y": 151.12543999999997,
+          "width": 134.4,
+          "height": 142.8,
+          "rotation": 0,
+          "visible": true,
+          "gid": 147,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-screen",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 64,
+          "name": "taixu-tree",
+          "x": 1809.66212,
+          "y": 198.81212000000005,
+          "width": 212.8,
+          "height": 193.04,
+          "rotation": 0,
+          "visible": true,
+          "gid": 145,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 65,
+          "name": "taixu-tree",
+          "x": 2023.44342,
+          "y": 360.96842000000015,
+          "width": 184.8,
+          "height": 167.64000000000001,
+          "rotation": 0,
+          "visible": true,
+          "gid": 145,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 66,
+          "name": "taixu-bed",
+          "x": 1999.83844,
+          "y": 37.14611999999988,
+          "width": 235.6,
+          "height": 234.35999999999999,
+          "rotation": 0,
+          "visible": true,
+          "gid": 139,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-bed",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 67,
+          "name": "taixu-table",
+          "x": 2034.19738,
+          "y": 262.33237999999994,
+          "width": 114.4,
+          "height": 76.56,
+          "rotation": 0,
+          "visible": true,
+          "gid": 141,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 68,
+          "name": "taixu-chair",
+          "x": 2002.4814700000002,
+          "y": 278.00245000000007,
+          "width": 59.800000000000004,
+          "height": 92.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 140,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-chair",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 69,
+          "name": "taixu-chair",
+          "x": 2091.37358,
+          "y": 237.08929999999998,
+          "width": 57.2,
+          "height": 88.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 140,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-chair",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 70,
+          "name": "taixu-vase",
+          "x": 1977.05187,
+          "y": 191.36309000000006,
+          "width": 54.6,
+          "height": 75.17999999999999,
+          "rotation": 0,
+          "visible": true,
+          "gid": 143,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-vase",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 71,
+          "name": "taixu-brazier",
+          "x": 2126.54274,
+          "y": 102.18061999999998,
+          "width": 57.2,
+          "height": 105.6,
+          "rotation": 0,
+          "visible": true,
+          "gid": 142,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-brazier",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ArtFootprints",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 7,
+      "name": "Labels",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "objects": [
+        {
+          "id": 72,
+          "name": "石牌坊",
+          "x": 1184.0,
+          "y": 2016.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 73,
+          "name": "孽海情天",
+          "x": 1184.0,
+          "y": 1504.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 74,
+          "name": "薄命司",
+          "x": 800.0,
+          "y": 800.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 75,
+          "name": "警幻院",
+          "x": 1184.0,
+          "y": 480.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 76,
+          "name": "香闺绣阁",
+          "x": 2016.0,
+          "y": 96.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "rongguo-art.tsj"
+    }
+  ],
+  "nextlayerid": 8,
+  "nextobjectid": 77,
+  "properties": [
+    {
+      "name": "sceneId",
+      "type": "string",
+      "value": "c5_taixu"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "value": "太虚幻境 · 孽海情天"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "value": "dream"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "25,0,11,7,court;13,1,11,8,court;8,8,11,8,court;7,17,7,7,court;23,17,7,7,court;14,16,9,9,court;15,25,8,10,court"
+    }
+  ]
+}

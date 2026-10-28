@@ -1,0 +1,209 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "tiledversion": "1.11.2",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "nextlayerid": 4,
+  "nextobjectid": 5,
+  "layers": [
+    {
+      "id": 1,
+      "name": "Locations",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#526b54",
+      "objects": [
+        {
+          "id": 1,
+          "name": "rear_garden_now",
+          "type": "",
+          "x": 1312.0,
+          "y": 1312.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "后一带花园"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "garden"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "冷子兴所见“后一带花园子，树木山石，也还都有蓊蔚洇润之气”。日后与宁府会芳园一并改建为大观园。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Markers",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#8a8f7a",
+      "objects": [
+        {
+          "id": 3,
+          "name": "第十六回 · 始议起造",
+          "type": "",
+          "x": 800.0,
+          "y": 928.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "第十七回 · 元春归省",
+          "type": "",
+          "x": 1824.0,
+          "y": 928.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Art",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#83916c",
+      "objects": [
+        {
+          "id": 2,
+          "name": "后一带花园",
+          "type": "",
+          "x": 1358.7887448275862,
+          "y": 1369.4699211034483,
+          "width": 2091.52,
+          "height": 1817.4587586206899,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "garden-tree"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "rear_garden_now"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "../rongguo-art.tsj"
+    }
+  ],
+  "properties": [
+    {
+      "name": "title",
+      "type": "string",
+      "value": "大观园"
+    },
+    {
+      "name": "subtitle",
+      "type": "string",
+      "value": "第三级 · 前五回尚未营建"
+    },
+    {
+      "name": "parent",
+      "type": "string",
+      "value": "capital"
+    },
+    {
+      "name": "note",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "value": "design/atlas-maps.json"
+    }
+  ]
+}

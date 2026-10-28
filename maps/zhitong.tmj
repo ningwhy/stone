@@ -21,41 +21,48 @@
       "objects": [
         {
           "id": 1,
-          "name": "A0 扬州郭外 · 智通寺",
+          "name": "A1 扬州郭外 · 智通寺",
           "x": 832,
-          "y": 768,
-          "width": 896,
-          "height": 832,
+          "y": 1216,
+          "width": 1024,
+          "height": 448,
           "rotation": 0,
           "visible": true
         },
         {
           "id": 2,
-          "name": "A1 扬州郭外 · 智通寺",
-          "x": 1024,
-          "y": 1536,
-          "width": 320,
-          "height": 576,
+          "name": "HALL 扬州郭外 · 智通寺",
+          "x": 960,
+          "y": 832,
+          "width": 640,
+          "height": 384,
           "rotation": 0,
-          "visible": true
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "type": "bool",
+              "value": true
+            }
+          ]
         },
         {
           "id": 3,
-          "name": "A2 扬州郭外 · 智通寺",
-          "x": 384,
-          "y": 1600,
-          "width": 640,
-          "height": 320,
+          "name": "A3 扬州郭外 · 智通寺",
+          "x": 256,
+          "y": 1344,
+          "width": 448,
+          "height": 448,
           "rotation": 0,
           "visible": true
         },
         {
           "id": 4,
-          "name": "A3 扬州郭外 · 智通寺",
-          "x": 1536,
-          "y": 1600,
-          "width": 512,
-          "height": 320,
+          "name": "A4 扬州郭外 · 智通寺",
+          "x": 1216,
+          "y": 1664,
+          "width": 384,
+          "height": 256,
           "rotation": 0,
           "visible": true
         }
@@ -85,8 +92,8 @@
         {
           "id": 5,
           "name": "entry",
-          "x": 1184.0,
-          "y": 1952.0,
+          "x": 1376.0,
+          "y": 1824.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -96,7 +103,7 @@
         {
           "id": 6,
           "name": "path",
-          "x": 1184.0,
+          "x": 1376.0,
           "y": 1568.0,
           "width": 0,
           "height": 0,
@@ -107,8 +114,8 @@
         {
           "id": 7,
           "name": "guest",
-          "x": 1184.0,
-          "y": 1184.0,
+          "x": 1248.0,
+          "y": 1440.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -118,8 +125,8 @@
         {
           "id": 8,
           "name": "host",
-          "x": 1376.0,
-          "y": 1056.0,
+          "x": 1440.0,
+          "y": 1376.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -130,7 +137,7 @@
           "id": 9,
           "name": "left",
           "x": 992.0,
-          "y": 1120.0,
+          "y": 1440.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -140,8 +147,8 @@
         {
           "id": 10,
           "name": "right",
-          "x": 1568.0,
-          "y": 1184.0,
+          "x": 1760.0,
+          "y": 1376.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -151,8 +158,8 @@
         {
           "id": 11,
           "name": "rear",
-          "x": 1440.0,
-          "y": 736.0,
+          "x": 1312.0,
+          "y": 1184.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -162,8 +169,8 @@
         {
           "id": 12,
           "name": "exit",
-          "x": 1952.0,
-          "y": 1952.0,
+          "x": 1824.0,
+          "y": 1504.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -218,69 +225,141 @@
       "objects": [
         {
           "id": 14,
-          "name": "estate-zhitong",
-          "x": 1445.324,
-          "y": 997.3240000000001,
-          "width": 880.0000000000001,
-          "height": 598.4000000000001,
+          "name": "zhitong-temple",
+          "x": 1311.518121330724,
+          "y": 1215.518121330724,
+          "width": 634.050880626223,
+          "height": 360.0,
           "rotation": 0,
           "visible": true,
-          "gid": 91,
+          "gid": 165,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "estate-zhitong",
+              "value": "zhitong-temple",
               "type": "string"
             },
             {
               "name": "visibility",
-              "value": "always",
+              "value": "exterior",
               "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "interiorZone",
+              "value": "HALL",
+              "type": "string"
             }
           ]
         },
         {
           "id": 15,
-          "name": "garden-tree",
-          "x": 617.73125,
-          "y": 1259.95275,
-          "width": 435.0,
-          "height": 378.0,
+          "name": "gruel-pot",
+          "x": 1377.0,
+          "y": 1343.0,
+          "width": 274.0,
+          "height": 163.0,
           "rotation": 0,
           "visible": true,
-          "gid": 3,
+          "gid": 178,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "garden-tree",
+              "value": "gruel-pot",
               "type": "string"
             },
             {
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         },
         {
           "id": 16,
+          "name": "altar-shrine",
+          "x": 1132.72946,
+          "y": 1058.1873,
+          "width": 125.82000000000001,
+          "height": 172.8,
+          "rotation": 0,
+          "visible": true,
+          "gid": 177,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "altar-shrine",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "HALL",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "bamboo-cluster",
+          "x": 1630.97694,
+          "y": 1566.97694,
+          "width": 624.24,
+          "height": 344.76,
+          "rotation": 0,
+          "visible": true,
+          "gid": 189,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "bamboo-cluster",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "bamboo-cluster",
+          "x": 926.9368200000001,
+          "y": 1502.9368200000001,
+          "width": 648.72,
+          "height": 358.28000000000003,
+          "rotation": 0,
+          "visible": true,
+          "gid": 189,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "bamboo-cluster",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 19,
           "name": "garden-tree",
-          "x": 1895.785,
-          "y": 1513.5622,
-          "width": 348.0,
-          "height": 302.4,
+          "x": 808.5635,
+          "y": 1578.51842,
+          "width": 382.8,
+          "height": 332.64000000000004,
           "rotation": 0,
           "visible": true,
           "gid": 3,
@@ -295,21 +374,16 @@
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         },
         {
-          "id": 17,
+          "id": 20,
           "name": "garden-rock",
-          "x": 743.7184999999998,
-          "y": 1770.5794999999998,
-          "width": 190,
-          "height": 209,
+          "x": 1574.6379100000001,
+          "y": 1577.09837,
+          "width": 163.4,
+          "height": 179.74,
           "rotation": 0,
           "visible": true,
           "gid": 5,
@@ -324,11 +398,6 @@
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         }
@@ -345,10 +414,10 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 18,
+          "id": 21,
           "name": "garden-rock",
-          "x": 704,
-          "y": 1728,
+          "x": 1536.0,
+          "y": 1536.0,
           "width": 64,
           "height": 64,
           "rotation": 0,
@@ -367,10 +436,10 @@
       "visible": false,
       "objects": [
         {
-          "id": 19,
+          "id": 22,
           "name": "智通寺",
-          "x": 1440.0,
-          "y": 928.0,
+          "x": 1312.0,
+          "y": 800.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -378,10 +447,10 @@
           "point": true
         },
         {
-          "id": 20,
-          "name": "通往村肆",
-          "x": 1184.0,
-          "y": 1888.0,
+          "id": 23,
+          "name": "山门",
+          "x": 1248.0,
+          "y": 1248.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -398,7 +467,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 21,
+  "nextobjectid": 24,
   "properties": [
     {
       "name": "sceneId",
@@ -414,6 +483,21 @@
       "name": "theme",
       "type": "string",
       "value": "garden"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "19,19,4,7,path"
+    },
+    {
+      "name": "walls",
+      "type": "string",
+      "value": "13,12,27,12;13,12,13,21;27,12,27,21;13,21,19,21;22,21,27,21"
+    },
+    {
+      "name": "flowerbeds",
+      "type": "bool",
+      "value": false
     }
   ]
 }

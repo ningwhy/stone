@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "qin-room_s10400061-01",
+  "seed": 10400061,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏建筑素材：一座内宅卧房的三间正房，深色木构与青灰瓦顶，正中四扇雕花格扇门，两次间为支摘窗，檐下一条窄廊与两级石阶，讲究而含春意，无匾文、不连院墙院落、无人物树木。正交等距俯视，地面两轴二比一菱形，门面朝向左下方，可见屋顶与正面，建筑完整居中，不裁切，四周留白。纯净均匀纯白色背景，可抠图游戏素材，轮廓清晰。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "af9814df-ec49-4fd2-8263-157f8e0adba3",
+  "generated_at": "2026-10-28 17:35:00",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1536x1024"
+}

@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "stone-lion_s10400074-01",
+  "seed": 10400074,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏道具立绘：一只石狮子蹲踞在须弥座上，狮子在正中，座子完整。整幅画只有这一只石狮与它的座，白纸背景——不要门楼、不要门扇、不要院墙、不要台阶、不要地面、不要人物。完整入画，四周留白。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "ab024db2-8e86-431f-81d0-333621031b70",
+  "generated_at": "2026-10-28 17:36:07",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x512"
+}

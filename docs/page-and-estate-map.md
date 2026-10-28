@@ -8,6 +8,6 @@
 
 人物图鉴位于设置，可查看新面部的头肩近景并定位首次出场；所有有形出场的人物有立绘与 Q 版，包括张如圭、冷子兴、嬷嬷与丫鬟。王熙凤院对应局部 wang 的 feng_room 与 U019，不虚构原文没有的进屋会面。
 
-总览网页直接读取 `design/rongguo-world.json`，Tiled 参考在 `maps/world/rongguo-overview.tmj`；局部地图读取 `maps/*.tmj`。地图方位与推定依据见 [空间考据](estate-geography.md)。后续扩回必须补对应行迹/总览策略，当前代码含前三回专用条件。
+总览网页直接读取 `design/atlas-maps.json`（三级：天下 / 京城 / 府内），Tiled 参考在 `maps/world/<level>-overview.tmj`；局部地图读取 `maps/*.tmj`。地图方位与推定依据见 [空间考据](estate-geography.md)。后续扩回必须补对应行迹/总览策略，当前代码含前三回专用条件。
 
 验证命令和截图标准见 [验收规范](production/verification.md)。旧版 128 节、九图、23 人指原第三回范围，不是当前全项目数量。

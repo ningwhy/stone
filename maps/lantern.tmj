@@ -21,41 +21,31 @@
       "objects": [
         {
           "id": 1,
-          "name": "A0 姑苏 · 元宵灯市",
-          "x": 832,
-          "y": 768,
-          "width": 896,
-          "height": 832,
-          "rotation": 0,
-          "visible": true
-        },
-        {
-          "id": 2,
           "name": "A1 姑苏 · 元宵灯市",
-          "x": 1024,
-          "y": 1536,
-          "width": 320,
+          "x": 640,
+          "y": 1152,
+          "width": 1408,
           "height": 576,
           "rotation": 0,
           "visible": true
         },
         {
-          "id": 3,
+          "id": 2,
           "name": "A2 姑苏 · 元宵灯市",
-          "x": 384,
-          "y": 1600,
-          "width": 640,
-          "height": 320,
+          "x": 768,
+          "y": 768,
+          "width": 1024,
+          "height": 448,
           "rotation": 0,
           "visible": true
         },
         {
-          "id": 4,
+          "id": 3,
           "name": "A3 姑苏 · 元宵灯市",
-          "x": 1536,
-          "y": 1600,
-          "width": 512,
-          "height": 320,
+          "x": 1024,
+          "y": 1728,
+          "width": 320,
+          "height": 256,
           "rotation": 0,
           "visible": true
         }
@@ -83,10 +73,10 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 5,
+          "id": 4,
           "name": "entry",
           "x": 1184.0,
-          "y": 1952.0,
+          "y": 1888.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -94,7 +84,7 @@
           "point": true
         },
         {
-          "id": 6,
+          "id": 5,
           "name": "path",
           "x": 1184.0,
           "y": 1568.0,
@@ -105,10 +95,21 @@
           "point": true
         },
         {
-          "id": 7,
+          "id": 6,
           "name": "guest",
-          "x": 1184.0,
-          "y": 1184.0,
+          "x": 1312.0,
+          "y": 1248.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 7,
+          "name": "host",
+          "x": 1504.0,
+          "y": 1248.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -117,9 +118,9 @@
         },
         {
           "id": 8,
-          "name": "host",
-          "x": 1376.0,
-          "y": 1056.0,
+          "name": "left",
+          "x": 928.0,
+          "y": 1312.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -128,19 +129,8 @@
         },
         {
           "id": 9,
-          "name": "left",
-          "x": 992.0,
-          "y": 1120.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true
-        },
-        {
-          "id": 10,
           "name": "right",
-          "x": 1568.0,
+          "x": 1696.0,
           "y": 1184.0,
           "width": 0,
           "height": 0,
@@ -149,10 +139,10 @@
           "point": true
         },
         {
-          "id": 11,
+          "id": 10,
           "name": "rear",
-          "x": 1440.0,
-          "y": 736.0,
+          "x": 800.0,
+          "y": 992.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -160,10 +150,10 @@
           "point": true
         },
         {
-          "id": 12,
+          "id": 11,
           "name": "exit",
           "x": 1952.0,
-          "y": 1952.0,
+          "y": 1440.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -183,7 +173,7 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 13,
+          "id": 12,
           "name": "场景动线",
           "x": 0,
           "y": 0,
@@ -217,70 +207,108 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 14,
-          "name": "estate-lantern",
-          "x": 1508.5848,
-          "y": 1060.5848,
-          "width": 880.0000000000001,
-          "height": 606.1,
+          "id": 13,
+          "name": "lantern-booth",
+          "x": 1567.6462264150944,
+          "y": 1119.4103773584905,
+          "width": 298.5849056603774,
+          "height": 300.0,
           "rotation": 0,
           "visible": true,
-          "gid": 93,
+          "gid": 171,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "estate-lantern",
+              "value": "lantern-booth",
               "type": "string"
             },
             {
               "name": "visibility",
               "value": "always",
               "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "lantern-booth",
+          "x": 927.6462264150942,
+          "y": 1055.4103773584905,
+          "width": 298.5849056603774,
+          "height": 300.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 171,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "lantern-booth",
+              "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
             }
           ]
         },
         {
           "id": 15,
-          "name": "estate-lantern",
-          "x": 611.5428,
-          "y": 1379.5428000000002,
-          "width": 680.0,
-          "height": 468.34999999999997,
+          "name": "lantern-booth",
+          "x": 1247.6462264150944,
+          "y": 863.4103773584905,
+          "width": 298.5849056603774,
+          "height": 300.0,
           "rotation": 0,
           "visible": true,
-          "gid": 93,
+          "gid": 171,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "estate-lantern",
+              "value": "lantern-booth",
               "type": "string"
             },
             {
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         },
         {
           "id": 16,
+          "name": "zhen-house",
+          "x": 672.1037239165329,
+          "y": 1503.896276083467,
+          "width": 520.0642054574639,
+          "height": 360.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 163,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "zhen-house",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "exterior",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 17,
           "name": "garden-tree",
-          "x": 2022.4875000000002,
-          "y": 1639.9685,
-          "width": 290,
-          "height": 252,
+          "x": 1831.13625,
+          "y": 1640.7653500000001,
+          "width": 319.0,
+          "height": 277.20000000000005,
           "rotation": 0,
           "visible": true,
           "gid": 3,
@@ -295,11 +323,30 @@
               "name": "visibility",
               "value": "always",
               "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "stone-lion",
+          "x": 744.13,
+          "y": 1447.87,
+          "width": 399.36,
+          "height": 266.24,
+          "rotation": 0,
+          "visible": true,
+          "gid": 173,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "stone-lion",
+              "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
             }
           ]
         }
@@ -326,10 +373,10 @@
       "visible": false,
       "objects": [
         {
-          "id": 17,
+          "id": 19,
           "name": "社火花灯",
-          "x": 1504.0,
-          "y": 992.0,
+          "x": 1440.0,
+          "y": 928.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -337,10 +384,21 @@
           "point": true
         },
         {
-          "id": 18,
+          "id": 20,
           "name": "失散处",
           "x": 1184.0,
-          "y": 1568.0,
+          "y": 1184.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 21,
+          "name": "仁清巷口",
+          "x": 1184.0,
+          "y": 1760.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -357,7 +415,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 19,
+  "nextobjectid": 22,
   "properties": [
     {
       "name": "sceneId",
@@ -373,6 +431,26 @@
       "name": "theme",
       "type": "string",
       "value": "night"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "11,19,20,7,path"
+    },
+    {
+      "name": "lights",
+      "type": "string",
+      "value": "14,25;16,23;18,21;20,19;22,17;24,15;24,18;14,17;19,14"
+    },
+    {
+      "name": "dusk",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "name": "flowerbeds",
+      "type": "bool",
+      "value": false
     }
   ]
 }

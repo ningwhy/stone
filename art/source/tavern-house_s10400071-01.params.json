@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "tavern-house_s10400071-01",
+  "seed": 10400071,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏建筑立绘：一座乡村酒馆的房屋主体，正面朝着观者略偏左，土墙、茅草顶、门洞敞开、檐下挂无字青布帘。整幅画只有这一座房屋，白纸背景，房屋之外什么都没有——不要地面、不要台基、不要草地、不要树木、不要院墙、不要其他屋子、不要人物。建筑底边平齐，完整入画，四周留白。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "a09fed36-8804-432c-94d3-9e2c0e7e8985",
+  "generated_at": "2026-10-28 17:35:33",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1536x1024"
+}

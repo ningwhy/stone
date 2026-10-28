@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "ban_er-portrait_s10233012-01",
+  "seed": 10233012,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立单个人物设定，红楼梦原创形象。板儿，狗儿与刘氏之子，才五六岁的乡下男孩。圆头圆脑，额前留一小片齐刘海，两侧梳小髽髻，圓脸红扑扑，眉目天真好奇，怯生生望着前方。身着土黄色粗布小袄与同色小裤，脚穿虎头布鞋，衣襟略显宽大。清雅工笔淡彩手绘，人物衣服细节清楚，纯净纯白背景，背景无建筑、花纹、边框、文字或落款。半身立绘，头顶至腰下完整，人物正面略向左，双手自然拢于身前，四周留白。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "b254cd53-e2ea-4e74-8d3d-1e95098b0d6e",
+  "generated_at": "2026-10-27 23:53:07",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x1152"
+}

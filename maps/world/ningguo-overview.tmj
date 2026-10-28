@@ -1,0 +1,1299 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "tiledversion": "1.11.2",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "nextlayerid": 8,
+  "nextobjectid": 43,
+  "layers": [
+    {
+      "id": 1,
+      "name": "Gates",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#655441",
+      "objects": [
+        {
+          "id": 24,
+          "name": "大门 · 三间兽头大门",
+          "type": "",
+          "x": 1696.0,
+          "y": 2208.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "gateId",
+              "type": "string",
+              "value": "ning_main_gate"
+            },
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "stone-lion"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Walls",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#83916c",
+      "objects": [
+        {
+          "id": 25,
+          "name": "院墙",
+          "type": "",
+          "x": 256,
+          "y": 128,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 2176,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "院墙",
+          "type": "",
+          "x": 2432,
+          "y": 128,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 2048
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "name": "院墙",
+          "type": "",
+          "x": 256,
+          "y": 128,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 2048
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "院墙",
+          "type": "",
+          "x": 256,
+          "y": 2176,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 704,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "name": "院墙",
+          "type": "",
+          "x": 1152,
+          "y": 2176,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1024,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "name": "院墙",
+          "type": "",
+          "x": 2176,
+          "y": 2176,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 256,
+              "y": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Groups",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#9a8f6a",
+      "objects": [
+        {
+          "id": 31,
+          "name": "中路 · 三进院落",
+          "type": "",
+          "x": 1408,
+          "y": 512,
+          "width": 576,
+          "height": 1664,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "groupId",
+              "type": "string",
+              "value": "zhonglu"
+            },
+            {
+              "name": "note",
+              "type": "string",
+              "value": "第一进：大门到仪门。第二进：仪门到内三门，院中有大厅（含暖阁）与后面的内厅。第三进：内三门到正堂。"
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "name": "会芳园（西路花园）",
+          "type": "",
+          "x": 384,
+          "y": 512,
+          "width": 832,
+          "height": 1024,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "groupId",
+              "type": "string",
+              "value": "huifang"
+            },
+            {
+              "name": "note",
+              "type": "string",
+              "value": "宁府西路的花园。园中有天香楼、凝曦轩、登仙阁、逗蜂轩，有溪流经过；西北是水面，东南有假山。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Locations",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#526b54",
+      "objects": [
+        {
+          "id": 1,
+          "name": "ning_gate_court",
+          "type": "",
+          "x": 1696.0,
+          "y": 2016.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c5_ningfu"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": "C05-001"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "大门 · 第一进"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "court"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": "zhonglu"
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "三间兽头大门，门前两个大石狮子，门前列坐十来个华冠丽服之人。正门不开时由东西两角门出入。"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "ning_hall",
+          "type": "",
+          "x": 1696.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c5_ningfu"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "大厅 · 暖阁（第二进）"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "court"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": "zhonglu"
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "仪门之内的大厅，左右为暖阁，厅后是内厅。第五十三回祭宗祠日，贾母等朝贺回来便在宁府暖阁下轿。"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "ning_inner",
+          "type": "",
+          "x": 1696.0,
+          "y": 1184.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "内厅 · 内三门"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "court"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": "zhonglu"
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "大厅之后的内厅，再北为内三门（内仪门并内塞门），两门之内即正堂。"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "ning_zhengtang",
+          "type": "",
+          "x": 1696.0,
+          "y": 736.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c5_ningfu"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": "C05-013"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "正堂 · 上房内间"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "court"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": "zhonglu"
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "第三进的正堂，贾珍、尤氏起居处。第五回秦氏先引宝玉到此处的上房内间，宝玉见《燃藜图》与对联便不肯待。"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "qin_room",
+          "type": "",
+          "x": 2016.0,
+          "y": 672.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c5_ningfu"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": "qin_room"
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": "C05-019"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "秦氏卧房"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "room"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": "zhonglu"
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "贾蓉之妻秦可卿的卧房，在正堂之东。宝玉在此香甜入梦，神游太虚幻境；第五回的梦起梦醒都在此处。"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "huifang_yuan",
+          "type": "",
+          "x": 800.0,
+          "y": 1056.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c5_ningfu"
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": "C05-001"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "会芳园 · 梅花"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "garden"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": "huifang"
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "第五回尤氏治酒请贾母等赏梅的花园，先茶后酒。前五回里宁国府真正登场的就在这里。"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "zongci",
+          "type": "",
+          "x": 544.0,
+          "y": 1888.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "focus",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "storyNode",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "贾氏宗祠"
+            },
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "court"
+            },
+            {
+              "name": "group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "drill",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "宁府西边另一个院子，黑油栅栏内五间大门，匾书“贾氏宗祠”。院中白石甬路、苍松翠柏，正殿悬“慎终追远”。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Roads",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#b99553",
+      "objects": [
+        {
+          "id": 8,
+          "name": "street → ning_main_gate",
+          "type": "",
+          "x": 1696.0,
+          "y": 2400.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -192
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "ning_main_gate → ning_gate_court",
+          "type": "",
+          "x": 1696.0,
+          "y": 2208.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -192
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "ning_gate_court → ning_hall",
+          "type": "",
+          "x": 1696.0,
+          "y": 2016.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -384
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "ning_hall → ning_inner",
+          "type": "",
+          "x": 1696.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -448
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "ning_inner → ning_zhengtang",
+          "type": "",
+          "x": 1696.0,
+          "y": 1184.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -448
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "ning_zhengtang → qin_room",
+          "type": "",
+          "x": 1696.0,
+          "y": 736.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 320,
+              "y": -192
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "ning_gate_court → huifang_yuan",
+          "type": "",
+          "x": 1696.0,
+          "y": 2016.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -896,
+              "y": -960
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "ning_gate_court → zongci",
+          "type": "",
+          "x": 1696.0,
+          "y": 2016.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -1152,
+              "y": -128
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Markers",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#8a8f7a",
+      "objects": [
+        {
+          "id": 33,
+          "name": "天香楼",
+          "type": "",
+          "x": 544.0,
+          "y": 736.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "name": "凝曦轩 · 依水",
+          "type": "",
+          "x": 736.0,
+          "y": 672.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "name": "登仙阁",
+          "type": "",
+          "x": 480.0,
+          "y": 1312.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "name": "逗蜂轩 · 傍山",
+          "type": "",
+          "x": 992.0,
+          "y": 1312.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 37,
+          "name": "西北水面",
+          "type": "",
+          "x": 544.0,
+          "y": 864.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 38,
+          "name": "东南假山",
+          "type": "",
+          "x": 1056.0,
+          "y": 1376.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 39,
+          "name": "丛绿堂（紧邻宗祠）",
+          "type": "",
+          "x": 928.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 40,
+          "name": "东路院落 · 贾珍等居处",
+          "type": "",
+          "x": 2272.0,
+          "y": 1568.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "name": "仪门",
+          "type": "",
+          "x": 1696.0,
+          "y": 1824.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        },
+        {
+          "id": 42,
+          "name": "内三门（内仪门并内塞门）",
+          "type": "",
+          "x": 1696.0,
+          "y": 992.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "marker"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Art",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "color": "#83916c",
+      "objects": [
+        {
+          "id": 16,
+          "name": "大门 · 第一进",
+          "type": "",
+          "x": 1854.2882350545456,
+          "y": 2110.6275700363635,
+          "width": 660.48,
+          "height": 533.1874909090909,
+          "rotation": 0,
+          "visible": true,
+          "gid": 4,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "main-hall"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c5_ningfu"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "ning_gate_court"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "大厅 · 暖阁（第二进）",
+          "type": "",
+          "x": 1695.5389482666667,
+          "y": 1631.2315804444445,
+          "width": 770.56,
+          "height": 476.03484444444445,
+          "rotation": 0,
+          "visible": true,
+          "gid": 185,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "ning-hall"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c5_ningfu"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "ning_hall"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "内厅 · 内三门",
+          "type": "",
+          "x": 1693.030592,
+          "y": 1180.7730047999999,
+          "width": 715.52,
+          "height": 411.0264888888889,
+          "rotation": 0,
+          "visible": true,
+          "gid": 168,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "fu-hall"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "ning_inner"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "正堂 · 上房内间",
+          "type": "",
+          "x": 1663.326754909091,
+          "y": 769.8662120727273,
+          "width": 715.52,
+          "height": 502.16494545454543,
+          "rotation": 0,
+          "visible": true,
+          "gid": 148,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "wang-hall"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c5_ningfu"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "ning_zhengtang"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "秦氏卧房",
+          "type": "",
+          "x": 2015.8664362666668,
+          "y": 671.5993088,
+          "width": 330.24,
+          "height": 212.82133333333334,
+          "rotation": 0,
+          "visible": true,
+          "gid": 191,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "qin-room"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c5_ningfu"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "qin_room"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "会芳园 · 梅花",
+          "type": "",
+          "x": 828.3195034482759,
+          "y": 1090.7844259310345,
+          "width": 1265.92,
+          "height": 1100.040827586207,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "garden-tree"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": "c5_ningfu"
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "huifang_yuan"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "贾氏宗祠",
+          "type": "",
+          "x": 702.2882350545455,
+          "y": 1982.6275700363635,
+          "width": 660.48,
+          "height": 533.1874909090909,
+          "rotation": 0,
+          "visible": true,
+          "gid": 4,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "main-hall"
+            },
+            {
+              "name": "sceneId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "locationId",
+              "type": "string",
+              "value": "zongci"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "大门 · 三间兽头大门",
+          "type": "",
+          "x": 1696.1151960784314,
+          "y": 2207.8848039215686,
+          "width": 353.88235294117646,
+          "height": 235.92156862745097,
+          "rotation": 0,
+          "visible": true,
+          "gid": 173,
+          "properties": [
+            {
+              "name": "asset",
+              "type": "string",
+              "value": "stone-lion"
+            },
+            {
+              "name": "gateId",
+              "type": "string",
+              "value": "ning_main_gate"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "../rongguo-art.tsj"
+    }
+  ],
+  "properties": [
+    {
+      "name": "title",
+      "type": "string",
+      "value": "宁国府"
+    },
+    {
+      "name": "subtitle",
+      "type": "string",
+      "value": "中路三进 · 西路会芳园 —— 第三级"
+    },
+    {
+      "name": "parent",
+      "type": "string",
+      "value": "capital"
+    },
+    {
+      "name": "note",
+      "type": "string",
+      "value": "中路按第五十三回“从大门、仪门、大厅、暖阁、内厅、内三门、内仪门并内塞门，直到正堂”排为三进；西路为会芳园与贾氏宗祠。前五回实际写到的是会芳园与上房内间、秦氏卧房。"
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "value": "design/atlas-maps.json"
+    }
+  ]
+}

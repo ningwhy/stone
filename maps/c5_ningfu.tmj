@@ -1,0 +1,1094 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "PlanZones",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 1,
+          "name": "A0 宁国府 · 会芳园与秦氏卧房",
+          "x": 384,
+          "y": 1280,
+          "width": 1792,
+          "height": 896,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 2,
+          "name": "UPPER 宁国府 · 会芳园与秦氏卧房",
+          "x": 640,
+          "y": 640,
+          "width": 1280,
+          "height": 640,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "type": "bool",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "BED 宁国府 · 会芳园与秦氏卧房",
+          "x": 768,
+          "y": 256,
+          "width": 1024,
+          "height": 448,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "type": "bool",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PlanBlockers",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 3,
+      "name": "Anchors",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 4,
+          "name": "garden_entry",
+          "x": 480.0,
+          "y": 1824.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 5,
+          "name": "garden_center",
+          "x": 1184.0,
+          "y": 1760.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 6,
+          "name": "plum_grove",
+          "x": 1760.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 7,
+          "name": "upper_room_door",
+          "x": 1248.0,
+          "y": 1248.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 8,
+          "name": "upper_room",
+          "x": 1248.0,
+          "y": 864.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 9,
+          "name": "portrait_wall",
+          "x": 1440.0,
+          "y": 800.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 10,
+          "name": "bedchamber_door",
+          "x": 1056.0,
+          "y": 672.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 11,
+          "name": "bedchamber",
+          "x": 1120.0,
+          "y": 416.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 12,
+          "name": "screen_bed",
+          "x": 1376.0,
+          "y": 416.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Routes",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 13,
+          "name": "动线 garden",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "garden",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "garden_entry,garden_center,plum_grove",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "动线 to_upper",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "to_upper",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "garden_center,upper_room_door,upper_room",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "动线 to_bed",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "to_bed",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "upper_room,bedchamber_door,bedchamber",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "动线 to_screen",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "to_screen",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "bedchamber,screen_bed",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Art",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 17,
+          "name": "flower-gate",
+          "x": 576.0073100000001,
+          "y": 1971.40333,
+          "width": 372.0,
+          "height": 391.21999999999997,
+          "rotation": 0,
+          "visible": true,
+          "gid": 1,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "flower-gate",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "garden-tree",
+          "x": 1766.09825,
+          "y": 1383.49039,
+          "width": 272.59999999999997,
+          "height": 236.88,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "garden-tree",
+          "x": 1573.4495,
+          "y": 1638.69354,
+          "width": 243.6,
+          "height": 211.67999999999998,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "garden-tree",
+          "x": 2020.9305,
+          "y": 1638.05606,
+          "width": 220.4,
+          "height": 191.52,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "garden-tree",
+          "x": 678.8767499999999,
+          "y": 1576.44661,
+          "width": 307.40000000000003,
+          "height": 267.12,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "garden-tree",
+          "x": 806.61725,
+          "y": 1768.12787,
+          "width": 295.8,
+          "height": 257.04,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "garden-tree",
+          "x": 1509.9685,
+          "y": 1831.33102,
+          "width": 266.8,
+          "height": 231.84,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "name": "garden-rock",
+          "x": 998.32917,
+          "y": 1960.67519,
+          "width": 155.79999999999998,
+          "height": 171.38,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "garden-rock",
+          "x": 1765.71169,
+          "y": 2023.82883,
+          "width": 140.6,
+          "height": 154.66,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "wang-rock",
+          "x": 1891.11969,
+          "y": 1886.3497499999999,
+          "width": 188.6,
+          "height": 260.76,
+          "rotation": 0,
+          "visible": true,
+          "gid": 160,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "wang-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "name": "garden-rock",
+          "x": 1381.86606,
+          "y": 1960.04042,
+          "width": 144.4,
+          "height": 158.84,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "name": "garden-rock",
+          "x": 869.2485800000001,
+          "y": 1959.1940600000003,
+          "width": 129.20000000000002,
+          "height": 142.12,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "name": "ning-hall",
+          "x": 1247.6513309352517,
+          "y": 1279.4188848920862,
+          "width": 582.7338129496403,
+          "height": 360.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 185,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "ning-hall",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "exterior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "UPPER",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "name": "altar-table",
+          "x": 1294.8169,
+          "y": 886.8169,
+          "width": 136.5,
+          "height": 114.8,
+          "rotation": 0,
+          "visible": true,
+          "gid": 111,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "altar-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "UPPER",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "name": "official-chair",
+          "x": 1228.31968,
+          "y": 964.3196800000001,
+          "width": 72.0,
+          "height": 99.36,
+          "rotation": 0,
+          "visible": true,
+          "gid": 113,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "official-chair",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "UPPER",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 37,
+          "name": "official-chair",
+          "x": 1363.31968,
+          "y": 829.3196800000001,
+          "width": 72.0,
+          "height": 99.36,
+          "rotation": 0,
+          "visible": true,
+          "gid": 113,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "official-chair",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "UPPER",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 38,
+          "name": "tea-table",
+          "x": 1002.53766,
+          "y": 874.53766,
+          "width": 75.39999999999999,
+          "height": 66.69999999999999,
+          "rotation": 0,
+          "visible": true,
+          "gid": 43,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "tea-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "UPPER",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 40,
+          "name": "qin-room",
+          "x": 1183.7991724137933,
+          "y": 703.3975172413793,
+          "width": 496.55172413793105,
+          "height": 320.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 191,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "qin-room",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "exterior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "BED",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "name": "qin-bed",
+          "x": 1100.1984,
+          "y": 466.1984,
+          "width": 324.8,
+          "height": 333.6,
+          "rotation": 0,
+          "visible": true,
+          "gid": 183,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "qin-bed",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "BED",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 42,
+          "name": "qin-mirror",
+          "x": 1409.6493,
+          "y": 408.9465,
+          "width": 199.5,
+          "height": 277.9,
+          "rotation": 0,
+          "visible": true,
+          "gid": 184,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "qin-mirror",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "BED",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 43,
+          "name": "daybed",
+          "x": 1323.0,
+          "y": 485.0,
+          "width": 368.28,
+          "height": 229.4,
+          "rotation": 0,
+          "visible": true,
+          "gid": 186,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "daybed",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "BED",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 44,
+          "name": "taixu-brazier",
+          "x": 989.66609,
+          "y": 443.22167,
+          "width": 70.2,
+          "height": 129.60000000000002,
+          "rotation": 0,
+          "visible": true,
+          "gid": 142,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-brazier",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "BED",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 45,
+          "name": "wood-screen",
+          "x": 1332.3224,
+          "y": 332.3224,
+          "width": 117.8,
+          "height": 106.64,
+          "rotation": 0,
+          "visible": true,
+          "gid": 39,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "wood-screen",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "interior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "BED",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ArtFootprints",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 25,
+          "name": "garden-rock",
+          "x": 960.0,
+          "y": 1920.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 27,
+          "name": "garden-rock",
+          "x": 1728.0,
+          "y": 1984.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 30,
+          "name": "garden-rock",
+          "x": 1344.0,
+          "y": 1920.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 32,
+          "name": "garden-rock",
+          "x": 832.0,
+          "y": 1920.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 35,
+          "name": "altar-table",
+          "x": 1262.0,
+          "y": 854.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 39,
+          "name": "tea-table",
+          "x": 970.0,
+          "y": 842.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 46,
+          "name": "wood-screen",
+          "x": 1300.0,
+          "y": 300.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Labels",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "objects": [
+        {
+          "id": 47,
+          "name": "会芳园",
+          "x": 1184.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 48,
+          "name": "上房",
+          "x": 1248.0,
+          "y": 736.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 49,
+          "name": "秦氏卧房",
+          "x": 1120.0,
+          "y": 288.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 50,
+          "name": "梅花处",
+          "x": 1760.0,
+          "y": 1376.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "rongguo-art.tsj"
+    }
+  ],
+  "nextlayerid": 8,
+  "nextobjectid": 51,
+  "properties": [
+    {
+      "name": "sceneId",
+      "type": "string",
+      "value": "c5_ningfu"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "value": "宁国府 · 会芳园与秦氏卧房"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "value": "garden"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "14,22,4,9,path;17,19,4,3,path"
+    },
+    {
+      "name": "water",
+      "type": "string",
+      "value": "22,24,6,3"
+    },
+    {
+      "name": "flowerbeds",
+      "type": "string",
+      "value": "10,24,3,4;16,26,3,3"
+    }
+  ]
+}

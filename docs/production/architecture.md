@@ -30,7 +30,7 @@
 | 入府规划层 | `maps/rongguo-entry.tmj` | `build_planning_assets.py` 从 map-plan 重建规划层，保留 Art/ArtFootprints；仍会覆盖手工改的 Anchors/Routes 等 |
 | 入府美术层 | 同一 entry TMJ | `build_art_assets.py` 从 calibration 重建 Art/ArtFootprints/tileset；覆盖 Tiled 中这两层的手工摆放 |
 | 其余 17 张局部图 | `maps/*.tmj` | `build_chapter_maps.py` 从脚本内 scenes 加 prequel-maps 整张重建；entry 仅更新场景属性 |
-| 荣府总览 | `design/rongguo-world.json` | 网页直接读 JSON；`build_world_map.py` 导出 TMJ，不反向同步 |
+| 舆图总览 | `design/atlas-maps.json`（realm / capital / rongguo / ningguo / daguanyuan） | 网页直接读 JSON；`build_world_map.py` 按级导出 TMJ，不反向同步 |
 | 原始画面 | `art/source/` | `generate_art.py` 按 generation-plan；已有成功源图跳过 |
 | 抠图候选 | `art/matted/` | `matte_art.py`；SAM / SDMatte 保留，实际校准构建当前固定读取 SAM |
 | 几何校准 | `art/calibration.json` | extend / calibrate 脚本是旧批次专用，不能当通用自动校准器 |

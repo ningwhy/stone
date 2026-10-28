@@ -28,7 +28,13 @@ for(const file of readdirSync(assetDir)){
  const key=file.replace(/\.png$/,'');
  requireThat(!!manifest[key],`${key}: PNG on disk is not registered in the manifest`);
 }
-for(const map of maps.values())for(const art of map.art)requireThat(!!manifest[art.asset],`${map.id}: missing art ${art.asset}`);
+for(const map of maps.values())for(const art of map.art){
+ requireThat(!!manifest[art.asset],`${map.id}: missing art ${art.asset}`);
+ // A portrait is a full-figure dialogue bust (248–555 px wide, 600+ tall), not scenery.
+ // One got placed on the Ning-fu floor as the "painting" on the wall and read as a person
+ // standing in the room at three times the height of the furniture.
+ requireThat(!/(^|-)portrait(-|$)/.test(art.asset),`${map.id}: ${art.asset} is a dialogue portrait, not a map prop`);
+}
 const ids=new Set(),sections=new Map();
 for(const section of chapters){
  requireThat(!sections.has(section.id),`Duplicate section ${section.id}`);sections.set(section.id,section);

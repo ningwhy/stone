@@ -21,41 +21,31 @@
       "objects": [
         {
           "id": 1,
-          "name": "A0 太虚幻境 · 灵河（梦中）",
-          "x": 832,
-          "y": 768,
-          "width": 896,
-          "height": 832,
+          "name": "A1 太虚幻境 · 灵河（梦中）",
+          "x": 768,
+          "y": 512,
+          "width": 1024,
+          "height": 768,
           "rotation": 0,
           "visible": true
         },
         {
           "id": 2,
-          "name": "A1 太虚幻境 · 灵河（梦中）",
-          "x": 1024,
-          "y": 1536,
+          "name": "A2 太虚幻境 · 灵河（梦中）",
+          "x": 1088,
+          "y": 1216,
           "width": 320,
-          "height": 576,
+          "height": 704,
           "rotation": 0,
           "visible": true
         },
         {
           "id": 3,
-          "name": "A2 太虚幻境 · 灵河（梦中）",
-          "x": 384,
-          "y": 1600,
-          "width": 640,
-          "height": 320,
-          "rotation": 0,
-          "visible": true
-        },
-        {
-          "id": 4,
           "name": "A3 太虚幻境 · 灵河（梦中）",
-          "x": 1536,
-          "y": 1600,
+          "x": 1664,
+          "y": 1536,
           "width": 512,
-          "height": 320,
+          "height": 384,
           "rotation": 0,
           "visible": true
         }
@@ -83,10 +73,21 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 5,
+          "id": 4,
           "name": "entry",
-          "x": 1184.0,
-          "y": 1952.0,
+          "x": 1248.0,
+          "y": 1888.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 5,
+          "name": "path",
+          "x": 1248.0,
+          "y": 1504.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -95,17 +96,6 @@
         },
         {
           "id": 6,
-          "name": "path",
-          "x": 1184.0,
-          "y": 1568.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true
-        },
-        {
-          "id": 7,
           "name": "guest",
           "x": 1184.0,
           "y": 1184.0,
@@ -116,9 +106,20 @@
           "point": true
         },
         {
-          "id": 8,
+          "id": 7,
           "name": "host",
           "x": 1376.0,
+          "y": 992.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 8,
+          "name": "left",
+          "x": 928.0,
           "y": 1056.0,
           "width": 0,
           "height": 0,
@@ -128,17 +129,6 @@
         },
         {
           "id": 9,
-          "name": "left",
-          "x": 992.0,
-          "y": 1120.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true
-        },
-        {
-          "id": 10,
           "name": "right",
           "x": 1568.0,
           "y": 1184.0,
@@ -149,10 +139,10 @@
           "point": true
         },
         {
-          "id": 11,
+          "id": 10,
           "name": "rear",
           "x": 1440.0,
-          "y": 736.0,
+          "y": 672.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -160,10 +150,10 @@
           "point": true
         },
         {
-          "id": 12,
+          "id": 11,
           "name": "exit",
           "x": 1952.0,
-          "y": 1952.0,
+          "y": 1696.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -183,7 +173,7 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 13,
+          "id": 12,
           "name": "场景动线",
           "x": 0,
           "y": 0,
@@ -217,70 +207,36 @@
       "draworder": "topdown",
       "objects": [
         {
+          "id": 13,
+          "name": "taixu-arch",
+          "x": 1312.706614481409,
+          "y": 608.2355381604697,
+          "width": 345.98825831702544,
+          "height": 340.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 135,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-arch",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
           "id": 14,
-          "name": "flower-gate",
-          "x": 1594.8505,
-          "y": 998.5215,
-          "width": 600,
-          "height": 631,
-          "rotation": 0,
-          "visible": true,
-          "gid": 1,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "value": "flower-gate",
-              "type": "string"
-            },
-            {
-              "name": "visibility",
-              "value": "always",
-              "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
-            }
-          ]
-        },
-        {
-          "id": 15,
-          "name": "crimson-pearl",
-          "x": 802.02235,
-          "y": 801.88265,
-          "width": 220.00000000000003,
-          "height": 216.70000000000002,
-          "rotation": 0,
-          "visible": true,
-          "gid": 97,
-          "type": "art",
-          "properties": [
-            {
-              "name": "asset",
-              "value": "crimson-pearl",
-              "type": "string"
-            },
-            {
-              "name": "visibility",
-              "value": "always",
-              "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
-            }
-          ]
-        },
-        {
-          "id": 16,
           "name": "garden-rock",
-          "x": 743.7185,
-          "y": 1258.5795,
-          "width": 190,
-          "height": 209,
+          "x": 936.876275,
+          "y": 1324.166425,
+          "width": 218.49999999999997,
+          "height": 240.35,
           "rotation": 0,
           "visible": true,
           "gid": 5,
@@ -295,21 +251,40 @@
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         },
         {
-          "id": 17,
+          "id": 15,
+          "name": "crimson-pearl",
+          "x": 801.562725,
+          "y": 1249.454775,
+          "width": 170.0,
+          "height": 167.45,
+          "rotation": 0,
+          "visible": true,
+          "gid": 97,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "crimson-pearl",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 16,
           "name": "garden-tree",
-          "x": 1895.785,
-          "y": 1065.5622,
-          "width": 348.0,
-          "height": 302.4,
+          "x": 551.13625,
+          "y": 1128.76535,
+          "width": 319.0,
+          "height": 277.20000000000005,
           "rotation": 0,
           "visible": true,
           "gid": 3,
@@ -324,11 +299,54 @@
               "name": "visibility",
               "value": "always",
               "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "garden-tree",
+          "x": 1959.5255,
+          "y": 1065.24346,
+          "width": 336.4,
+          "height": 292.32,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "taixu-rock",
+          "x": 1761.244,
+          "y": 1375.7512,
+          "width": 200.0,
+          "height": 244.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 146,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "taixu-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
             }
           ]
         }
@@ -345,10 +363,10 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 18,
+          "id": 19,
           "name": "garden-rock",
-          "x": 704,
-          "y": 1216,
+          "x": 896.0,
+          "y": 1280.0,
           "width": 64,
           "height": 64,
           "rotation": 0,
@@ -367,10 +385,10 @@
       "visible": false,
       "objects": [
         {
-          "id": 19,
+          "id": 20,
           "name": "太虚幻境",
           "x": 1440.0,
-          "y": 800.0,
+          "y": 480.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -378,10 +396,21 @@
           "point": true
         },
         {
-          "id": 20,
-          "name": "绛珠仙草 · 因缘转述",
-          "x": 800.0,
-          "y": 800.0,
+          "id": 21,
+          "name": "灵河",
+          "x": 1184.0,
+          "y": 992.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 22,
+          "name": "三生石",
+          "x": 928.0,
+          "y": 1376.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -398,7 +427,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 21,
+  "nextobjectid": 23,
   "properties": [
     {
       "name": "sceneId",
@@ -414,6 +443,21 @@
       "name": "theme",
       "type": "string",
       "value": "dream"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "17,17,4,7,path;16,4,10,5,court"
+    },
+    {
+      "name": "water",
+      "type": "string",
+      "value": "12,13,17,4"
+    },
+    {
+      "name": "flowerbeds",
+      "type": "bool",
+      "value": false
     }
   ]
 }

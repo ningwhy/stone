@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "wang-gate_s10300112-01",
+  "seed": 10300112,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏建筑构件：荣国府凤姐院随墙门（院门），砖雕门楼、朱红门扇、铜兽门环、上方悬素木匾（无文字），两侧磨砖对缝院墙，整体精致规整、带淡淡生活气息。正交等距俯视，二比一菱形投影，能看见门道与侧墙。仅一座院门，无地面平台、无背景、无人物、无投影。完整居中，四周留白。纯净均匀纯白色背景，可抠图游戏素材，轮廓清晰。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "f915f5b2-a25f-46fb-ae39-552baf745cae",
+  "generated_at": "2026-10-28 13:04:22",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "640x768"
+}

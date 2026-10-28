@@ -14,17 +14,28 @@ Usage: python3 scripts/build_chapter04.py
 """
 import json
 import shutil
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'scripts'))
+from stage_defs import eave, fit, is_shell  # noqa: E402  (a roof lifts off the floor it covers)
 BACKUP = ROOT / 'artifacts/backups/2026-10-24-chapter04'
 
+
+def at(c, r, dx=0.0, dy=0.0):
+    """Grid position offset by screen pixels (dx right, dy down)."""
+    return (c + dx / 128 + dy / 64, r + dy / 64 - dx / 128)
+
 scenes = {
+    # 应天府：堂上审薛蟠争买英莲一案，退堂后门子在密室递上护官符。
+    # 大堂是七级丹陛的五间歇山，公案摆在正中，案后一把椅子；密室在大堂之后，
+    # 只陈一屏一案两椅——密谈的屋子不该堆满家具。
     'c4_yamen': {
         'name': '应天府 · 刑堂与退堂密室',
         'theme': 'formal',
-        # Two playable floors: the open court to the south, the private chamber behind the bench.
-        'zones': [[8, 18, 24, 14], [12, 6, 16, 12]],
+        'zones': [[8, 18, 24, 14, False], [12, 10, 16, 10, True, 'HALL'],
+                  [12, 4, 16, 8, True, 'BACK']],
         'anchors': {
             'plaintiff': [12, 28],
             'hall_center': [19, 27],
@@ -40,21 +51,37 @@ scenes = {
             'chamber': ['bench', 'side_door', 'chamber_host'],
             'seat': ['chamber_host', 'chamber_seat'],
         },
-        'labels': [['应天府大堂', 19, 26], ['退堂密室', 19, 8]],
+        'labels': [['应天府大堂', 19, 25], ['退堂密室', 19, 7]],
         'props': [
-            ('main-hall', 20, 11, 1.0),
-            ('tea-table', 19, 22, 1.0),
-            ('tea-table', 19, 10, .7),
-            ('wood-screen', 24, 12, .8),
+            ('fu-hall', *at(19, 14), .92, 'HALL'),
+            ('official-desk', *at(19, 21, -20, 46), .82, 'HALL'),
+            # 堂下两侧的执事牌与刑杖，只用屏与瓶示意，不堆杂物。
+            ('wood-screen', *at(19, 20, -300, -20), .70, 'HALL'),
+            ('wood-screen', *at(19, 20, 300, -20), .70, 'HALL'),
+            ('altar-table', *at(19, 12, 0, 30), .66, 'BACK'),
+            ('tea-table', *at(17, 10, 0, 10), .58, 'BACK'),
+            ('official-chair', *at(19, 10, 60, 30), .66, 'BACK'),
+            ('wood-screen', *at(22, 10, 0, 0), .66, 'BACK'),
+            # 两株树原来并排种在 (9,22)/(30,22)：都贴着院墙外沿，离原告跪的丹墀
+            # 十一格，一屏之外——衙前只看得见空砖地。挪进院里，一株在原告身后，
+            # 一株在公案东侧。
+            ('garden-tree', *at(10, 27), 1.06),
+            ('garden-tree', *at(29, 22), 1.06),
+            ('stone-lion', *at(13, 30), .56),
+            ('stone-lion', *at(25, 30), .56),
         ],
+        'walls': [[8, 10, 32, 10], [8, 10, 8, 31], [32, 10, 32, 31],
+                  [8, 31, 12, 31], [26, 31, 32, 31]],
+        'terraces': [[17, 22, 4, 9, 'path'], [13, 11, 12, 9, 'court']],
+        'beds': [],
     },
+    # 梨香院：荣府东北角一小院，薛家母子寄居。前厅一明两暗，后院几间房，
+    # 院里一株梨树、一片湖石，南面通街门，西南角门通夹道。
     'c4_lixiang': {
         'name': '荣府东北角 · 梨香院',
         'theme': 'garden',
-        # A small walled court: the street gate to the south-east, the front hall to the
-        # north-west, the back rooms behind it, and the south-west corner gate that leads
-        # to the lane running to Wang's quarters (only the relative position is designed).
-        'zones': [[9, 20, 22, 12], [11, 8, 18, 12], [20, 16, 8, 6]],
+        'zones': [[9, 20, 22, 12, False], [11, 8, 18, 12, True, 'HALL'],
+                  [20, 16, 8, 6, False]],
         'anchors': {
             'street_gate': [28, 24],
             'court_center': [19, 25],
@@ -70,14 +97,22 @@ scenes = {
         'labels': [['梨香院', 19, 22], ['前厅', 16, 10], ['后舍', 22, 8], ['通街门', 28, 24],
                    ['西南角门', 11, 22]],
         'props': [
-            ('main-hall', 16, 10, .85),
-            ('bamboo-gate', 28, 24, .6),
-            ('wood-screen', 22, 11, .7),
-            ('garden-tree', 11, 21, 1.0),
-            ('garden-tree', 28, 21, 1.05),
-            ('garden-rock', 26, 19, .9),
-            ('tea-table', 17, 13, .6),
+            ('lixiang-hall', *at(16, 11), .88, 'HALL'),
+            ('plain-kang', *at(22, 10, -10, 10), .70, 'HALL'),
+            ('tea-table', *at(17, 13, 0, 10), .60, 'HALL'),
+            ('official-chair', *at(17, 13, -110, 24), .68, 'HALL'),
+            ('official-chair', *at(17, 13, 110, 24), .68, 'HALL'),
+            ('wood-screen', *at(14, 12, 0, 0), .66, 'HALL'),
+            ('bamboo-gate', *at(28, 24), .62),
+            ('garden-tree', *at(11, 21), 1.02),
+            ('garden-tree', *at(28, 21), 1.06),
+            ('garden-rock', *at(26, 19), .90),
+            ('bamboo-cluster', *at(9, 28), .94),
         ],
+        'walls': [[9, 8, 29, 8], [9, 8, 9, 31], [29, 8, 29, 21], [9, 31, 26, 31],
+                  [29, 27, 29, 31]],
+        'terraces': [[17, 20, 3, 11, 'path']],
+        'beds': [[10, 24, 3, 4], [24, 28, 3, 3]],
     },
 }
 
@@ -103,8 +138,19 @@ def build_map(key, scene):
         counter[0] += 1
         return o
 
-    zones = [obj(f'A{i} {scene["name"]}', c, r, width=w * 64, height=h * 64)
-             for i, (c, r, w, h) in enumerate(scene['zones'])]
+    zones = []
+    rects = {}
+    for i, z in enumerate(scene['zones']):
+        zone = obj(f'{(z[5] if len(z) > 5 else "A" + str(i))} {scene["name"]}', z[0], z[1],
+                   width=z[2] * 64, height=z[3] * 64)
+        if len(z) > 4 and z[4]:
+            zone['properties'] = [{'name': 'indoor', 'type': 'bool', 'value': True}]
+        zones.append(zone)
+        rects[z[5] if len(z) > 5 else f'A{i + 1}'] = tuple(z[:4])
+    for name, (c, r) in scene['anchors'].items():
+        assert any(z['x'] / 64 <= c < (z['x'] + z['width']) / 64
+                   and z['y'] / 64 <= r < (z['y'] + z['height']) / 64 for z in zones), \
+            f'{key}: anchor {name} ({c},{r}) stands outside every floor'
     anchors = [obj(n, c + .5, r + .5, point=True) for n, (c, r) in scene['anchors'].items()]
     paths = [obj('动线 %s' % rid, 0, 0, properties=[
         {'name': 'route_id', 'value': rid, 'type': 'string'},
@@ -113,19 +159,26 @@ def build_map(key, scene):
 
     art = []
     footprints = []
-    for asset, c, r, scale in scene['props']:
+    for prop in scene['props']:
+        asset, c, r, scale = prop[0], prop[1], prop[2], fit(prop[0], prop[3])
+        zone = prop[4] if len(prop) > 4 else None
         if asset not in assets:
             continue
+        if is_shell(asset):
+            c, r = eave(c, r, zone, rects)
         a = assets[asset]
         x = (c - r) * 64 + (a['width'] / 2 - a['anchor'][0]) * scale
         y = (c + r + 1) * 32 + (a['height'] - a['anchor'][1]) * scale
+        shell = is_shell(asset)
+        art_props = [{'name': 'asset', 'value': asset, 'type': 'string'},
+                     {'name': 'visibility',
+                      'value': 'exterior' if shell else ('interior' if zone else 'always'),
+                      'type': 'string'}]
+        if zone:
+            art_props.append({'name': 'interiorZone', 'value': zone, 'type': 'string'})
         art.append(obj(asset, 0, 0, x=y + x / 2, y=y - x / 2, gid=gids[asset],
                        width=a['width'] * scale, height=a['height'] * scale, type='art',
-                       properties=[
-                           {'name': 'asset', 'value': asset, 'type': 'string'},
-                           {'name': 'visibility',
-                            'value': 'exterior' if asset in ('main-hall', 'rongxi-hall') else 'always',
-                            'type': 'string'}]))
+                       properties=art_props))
         if asset in ('wood-screen', 'tea-table', 'garden-rock') and [c, r] not in list(scene['anchors'].values()):
             footprints.append(obj(asset, c, r, width=64, height=64, type='collision'))
 
@@ -146,7 +199,16 @@ def build_map(key, scene):
         'nextlayerid': len(layers) + 1, 'nextobjectid': counter[0],
         'properties': [{'name': 'sceneId', 'type': 'string', 'value': key},
                        {'name': 'title', 'type': 'string', 'value': scene['name']},
-                       {'name': 'theme', 'type': 'string', 'value': scene['theme']}],
+                       {'name': 'theme', 'type': 'string', 'value': scene['theme']}]
+                      + [{'name': flag, 'type': 'string',
+                          'value': ';'.join(','.join(str(v) for v in row) for row in rows)}
+                         for flag, rows in (('terraces', scene.get('terraces')),
+                                            ('walls', scene.get('walls')),
+                                            ('water', scene.get('water')),
+                                            ('flowerbeds', scene.get('beds')))
+                         if rows]
+                      + ([{'name': 'flowerbeds', 'type': 'bool', 'value': False}]
+                         if scene.get('beds') == [] else []),
     }
     (ROOT / f'maps/{key}.tmj').write_text(json.dumps(tmj, ensure_ascii=False, indent=2) + '\n')
     return len(scene['anchors'])

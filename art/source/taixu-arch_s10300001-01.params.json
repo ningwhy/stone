@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "taixu-arch_s10300001-01",
+  "seed": 10300001,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏建筑构件：一座太虚幻境的神仙石牌坊，整体由羊脂白玉与青玉雕成，祥云缠枝浅浮雕纹样，坊额正中嵌一块素玉匾（无文字），左右石柱顶端各托一团升腾瑞云，牌坊无门扇、不连院墙、不连地面平台，四周缭绕淡淡仙雾与细碎流光星点，下方接地轮廓明确。正交等距俯视，二比一菱形投影，能看见牌坊顶部与两侧石柱。整座牌坊完整居中，飞檐祥云不裁切，四周留白。纯净均匀纯白色背景，可抠图游戏素材，轮廓清晰。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "0dc4fec4-db6a-437c-aac6-7f47fc063967",
+  "generated_at": "2026-10-28 12:38:06",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1024x1152"
+}

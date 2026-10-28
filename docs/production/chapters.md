@@ -69,7 +69,7 @@
 | `src/story.ts` | import 新 story/sections，按叙事顺序追加 story/chapters，bookNames 增加回名；保留 chapter3Story 供旧存档迁移 |
 | `src/App.tsx` | 顶部分组 `[1,2,3]` 扩充；选择本回行迹或府内总览的条件不再只靠 `<3`；更新静态“前三回”标题与原文说明 |
 | `src/JourneyMap.tsx` | 若使用新回行迹，为场景名称、图像与地点说明补元数据；它当前只 import prequel-maps，不能保证识别后回新场景 |
-| `design/rongguo-world.json` / `WorldMap` | 仅在事件确实涉及府内既定道路时复用；跨城/回忆用行迹；定位 start 不能把第 N 回按钮跳回第三回 |
+| `design/atlas-maps.json` / `WorldMap` | 仅在事件确实涉及府内既定道路时复用；跨城/回忆用行迹；定位 start 不能把第 N 回按钮跳回第三回 |
 | `src/engine.ts` / `src/main.tsx` | 新演员与扩展剧情的存档兼容，见下节 |
 | `tests/` | 扩全节点覆盖和新增地图/人物；原有回归继续通过，历史统计断言按范围调整 |
 | `README`、制作记录 | 更新覆盖范围、素材数、限制和实测验证 |

@@ -3625,6 +3625,1497 @@
    "bodyCompress": null,
    "hash": "b5332f6f0883"
   },
+  "jinghuan-portrait": {
+   "image": "/assets/rongguo/jinghuan-portrait.png",
+   "width": 353,
+   "height": 600,
+   "anchor": [
+    175.613,
+    599.409
+   ],
+   "source": "art/source/jinghuan-portrait_s10233000-01.png",
+   "matte": "art/matted/jinghuan-portrait_s10233000-sam.png",
+   "crop": [
+    171,
+    103,
+    768,
+    1118
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "938f22b7e868"
+  },
+  "jinghuan-chibi": {
+   "image": "/assets/rongguo/jinghuan-chibi.png",
+   "width": 60,
+   "height": 116,
+   "anchor": [
+    29.93,
+    116
+   ],
+   "source": "art/source/jinghuan-chibi_s10233001-01.png",
+   "matte": "art/matted/jinghuan-chibi_s10233001-sam.png",
+   "crop": [
+    116,
+    129,
+    545,
+    954
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "7769b7c8409d"
+  },
+  "qin_ke-portrait": {
+   "image": "/assets/rongguo/qin_ke-portrait.png",
+   "width": 275,
+   "height": 600,
+   "anchor": [
+    136.925,
+    599.424
+   ],
+   "source": "art/source/qin_ke-portrait_s10233002-01.png",
+   "matte": "art/matted/qin_ke-portrait_s10233002-sam.png",
+   "crop": [
+    135,
+    110,
+    613,
+    1152
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "92cb95a85b11"
+  },
+  "qin_ke-chibi": {
+   "image": "/assets/rongguo/qin_ke-chibi.png",
+   "width": 39,
+   "height": 116,
+   "anchor": [
+    19.359,
+    115.858
+   ],
+   "source": "art/source/qin_ke-chibi_s10233003-01.png",
+   "matte": "art/matted/qin_ke-chibi_s10233003-sam.png",
+   "crop": [
+    279,
+    142,
+    555,
+    959
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "51f4149355fc"
+  },
+  "liu_lao-portrait": {
+   "image": "/assets/rongguo/liu_lao-portrait.png",
+   "width": 475,
+   "height": 600,
+   "anchor": [
+    236.853,
+    599.353
+   ],
+   "source": "art/source/liu_lao-portrait_s10233010-01.png",
+   "matte": "art/matted/liu_lao-portrait_s10233010-sam.png",
+   "crop": [
+    14,
+    178,
+    748,
+    1106
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "b708a282a475"
+  },
+  "liu_lao-chibi": {
+   "image": "/assets/rongguo/liu_lao-chibi.png",
+   "width": 54,
+   "height": 116,
+   "anchor": [
+    27.076,
+    116
+   ],
+   "source": "art/source/liu_lao-chibi_s10233021-01.png",
+   "matte": "art/matted/liu_lao-chibi_s10233021-sam.png",
+   "crop": [
+    203,
+    198,
+    560,
+    962
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "4951d7958e54"
+  },
+  "ban_er-portrait": {
+   "image": "/assets/rongguo/ban_er-portrait.png",
+   "width": 223,
+   "height": 600,
+   "anchor": [
+    110.836,
+    600
+   ],
+   "source": "art/source/ban_er-portrait_s10233012-01.png",
+   "matte": "art/matted/ban_er-portrait_s10233012-sam.png",
+   "crop": [
+    242,
+    214,
+    578,
+    1118
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "d2f74ad257a6"
+  },
+  "ban_er-chibi": {
+   "image": "/assets/rongguo/ban_er-chibi.png",
+   "width": 57,
+   "height": 116,
+   "anchor": [
+    28.412,
+    115.826
+   ],
+   "source": "art/source/ban_er-chibi_s10233023-01.png",
+   "matte": "art/matted/ban_er-chibi_s10233023-sam.png",
+   "crop": [
+    215,
+    297,
+    540,
+    964
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "d4811674db46"
+  },
+  "zhou_rui-portrait": {
+   "image": "/assets/rongguo/zhou_rui-portrait.png",
+   "width": 270,
+   "height": 600,
+   "anchor": [
+    134.405,
+    599.406
+   ],
+   "source": "art/source/zhou_rui-portrait_s10233014-01.png",
+   "matte": "art/matted/zhou_rui-portrait_s10233014-sam.png",
+   "crop": [
+    168,
+    142,
+    622,
+    1152
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "9d71bc2d8149"
+  },
+  "zhou_rui-chibi": {
+   "image": "/assets/rongguo/zhou_rui-chibi.png",
+   "width": 42,
+   "height": 116,
+   "anchor": [
+    21,
+    115.847
+   ],
+   "source": "art/source/zhou_rui-chibi_s10233025-01.png",
+   "matte": "art/matted/zhou_rui-chibi_s10233025-sam.png",
+   "crop": [
+    257,
+    200,
+    531,
+    960
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "6276a23b945a"
+  },
+  "ping_er-portrait": {
+   "image": "/assets/rongguo/ping_er-portrait.png",
+   "width": 250,
+   "height": 600,
+   "anchor": [
+    124.709,
+    599.417
+   ],
+   "source": "art/source/ping_er-portrait_s10233016-01.png",
+   "matte": "art/matted/ping_er-portrait_s10233016-sam.png",
+   "crop": [
+    176,
+    122,
+    605,
+    1152
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "78a416dbe314"
+  },
+  "ping_er-chibi": {
+   "image": "/assets/rongguo/ping_er-chibi.png",
+   "width": 35,
+   "height": 116,
+   "anchor": [
+    17.426,
+    116
+   ],
+   "source": "art/source/ping_er-chibi_s10233027-01.png",
+   "matte": "art/matted/ping_er-chibi_s10233027-sam.png",
+   "crop": [
+    255,
+    177,
+    492,
+    961
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "d952d2a0ad18"
+  },
+  "jia_rong-portrait": {
+   "image": "/assets/rongguo/jia_rong-portrait.png",
+   "width": 193,
+   "height": 600,
+   "anchor": [
+    96.21,
+    600
+   ],
+   "source": "art/source/jia_rong-portrait_s10233028-01.png",
+   "matte": "art/matted/jia_rong-portrait_s10233028-sam.png",
+   "crop": [
+    276,
+    101,
+    609,
+    1135
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "0238ad24a5b7"
+  },
+  "jia_rong-chibi": {
+   "image": "/assets/rongguo/jia_rong-chibi.png",
+   "width": 40,
+   "height": 116,
+   "anchor": [
+    19.861,
+    116
+   ],
+   "source": "art/source/jia_rong-chibi_s10233029-01.png",
+   "matte": "art/matted/jia_rong-chibi_s10233029-sam.png",
+   "crop": [
+    253,
+    131,
+    541,
+    960
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "91da57651e7f"
+  },
+  "taixu-arch": {
+   "image": "/assets/rongguo/taixu-arch.png",
+   "width": 520,
+   "height": 511,
+   "anchor": [
+    259.292,
+    510.292
+   ],
+   "source": "art/source/taixu-arch_s10300001-01.png",
+   "matte": "art/matted/taixu-arch_s10300001-sam.png",
+   "crop": [
+    149,
+    209,
+    883,
+    931
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "650676488643"
+  },
+  "taixu-gate": {
+   "image": "/assets/rongguo/taixu-gate.png",
+   "width": 560,
+   "height": 530,
+   "anchor": [
+    123.594,
+    528.907
+   ],
+   "source": "art/source/taixu-gate_s10300002-01.png",
+   "matte": "art/matted/taixu-gate_s10300002-sam.png",
+   "crop": [
+    0,
+    190,
+    1024,
+    1160
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "8ae70b74741c"
+  },
+  "taixu-hall": {
+   "image": "/assets/rongguo/taixu-hall.png",
+   "width": 1100,
+   "height": 784,
+   "anchor": [
+    570.971,
+    783.046
+   ],
+   "source": "art/source/taixu-hall_s10300003-01.png",
+   "matte": "art/matted/taixu-hall_s10300003-sam.png",
+   "crop": [
+    224,
+    78,
+    1378,
+    900
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "d08f9c1eaa40"
+  },
+  "taixu-cabinet": {
+   "image": "/assets/rongguo/taixu-cabinet.png",
+   "width": 170,
+   "height": 258,
+   "anchor": [
+    58.212,
+    257.485
+   ],
+   "source": "art/source/taixu-cabinet_s10300004-01.png",
+   "matte": "art/matted/taixu-cabinet_s10300004-sam.png",
+   "crop": [
+    91,
+    133,
+    421,
+    634
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "b2482250a13e"
+  },
+  "taixu-bed": {
+   "image": "/assets/rongguo/taixu-bed.png",
+   "width": 380,
+   "height": 378,
+   "anchor": [
+    211.464,
+    377.206
+   ],
+   "source": "art/source/taixu-bed_s10300005-01.png",
+   "matte": "art/matted/taixu-bed_s10300005-sam.png",
+   "crop": [
+    17,
+    87,
+    495,
+    563
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "1e1c3e16b600"
+  },
+  "taixu-chair": {
+   "image": "/assets/rongguo/taixu-chair.png",
+   "width": 130,
+   "height": 200,
+   "anchor": [
+    55.263,
+    199.474
+   ],
+   "source": "art/source/taixu-chair_s10300006-01.png",
+   "matte": "art/matted/taixu-chair_s10300006-sam.png",
+   "crop": [
+    72,
+    78,
+    319,
+    458
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "ed956143f054"
+  },
+  "taixu-table": {
+   "image": "/assets/rongguo/taixu-table.png",
+   "width": 260,
+   "height": 174,
+   "anchor": [
+    162.125,
+    173.398
+   ],
+   "source": "art/source/taixu-table_s10300007-01.png",
+   "matte": "art/matted/taixu-table_s10300007-sam.png",
+   "crop": [
+    105,
+    94,
+    538,
+    383
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "c693af5751ef"
+  },
+  "taixu-brazier": {
+   "image": "/assets/rongguo/taixu-brazier.png",
+   "width": 130,
+   "height": 240,
+   "anchor": [
+    64.177,
+    239.178
+   ],
+   "source": "art/source/taixu-brazier_s10300008-01.png",
+   "matte": "art/matted/taixu-brazier_s10300008-sam.png",
+   "crop": [
+    81,
+    53,
+    239,
+    345
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "cfd4b0ed8200"
+  },
+  "taixu-vase": {
+   "image": "/assets/rongguo/taixu-vase.png",
+   "width": 130,
+   "height": 179,
+   "anchor": [
+    65.741,
+    178.506
+   ],
+   "source": "art/source/taixu-vase_s10300009-01.png",
+   "matte": "art/matted/taixu-vase_s10300009-sam.png",
+   "crop": [
+    26,
+    37,
+    289,
+    399
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "83430672118f"
+  },
+  "taixu-pearl": {
+   "image": "/assets/rongguo/taixu-pearl.png",
+   "width": 110,
+   "height": 110,
+   "anchor": [
+    54.553,
+    111.789
+   ],
+   "source": "art/source/taixu-pearl_s10300198-01.png",
+   "matte": "art/matted/taixu-pearl_s10300198-sam.png",
+   "crop": [
+    3,
+    3,
+    126,
+    126
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "cb0f1a2a2911"
+  },
+  "taixu-tree": {
+   "image": "/assets/rongguo/taixu-tree.png",
+   "width": 280,
+   "height": 254,
+   "anchor": [
+    136.25,
+    253.688
+   ],
+   "source": "art/source/taixu-tree_s10300011-01.png",
+   "matte": "art/matted/taixu-tree_s10300011-sam.png",
+   "crop": [
+    59,
+    93,
+    955,
+    907
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "3e4f1be567e2"
+  },
+  "taixu-rock": {
+   "image": "/assets/rongguo/taixu-rock.png",
+   "width": 250,
+   "height": 305,
+   "anchor": [
+    123.134,
+    304.378
+   ],
+   "source": "art/source/taixu-rock_s10300012-01.png",
+   "matte": "art/matted/taixu-rock_s10300012-sam.png",
+   "crop": [
+    330,
+    147,
+    732,
+    637
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "1918f20b93d8"
+  },
+  "taixu-screen": {
+   "image": "/assets/rongguo/taixu-screen.png",
+   "width": 240,
+   "height": 255,
+   "anchor": [
+    119.554,
+    254.553
+   ],
+   "source": "art/source/taixu-screen_s10300013-01.png",
+   "matte": "art/matted/taixu-screen_s10300013-sam.png",
+   "crop": [
+    51,
+    130,
+    589,
+    701
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "bd190b2cdf02"
+  },
+  "wang-hall": {
+   "image": "/assets/rongguo/wang-hall.png",
+   "width": 1100,
+   "height": 772,
+   "anchor": [
+    652.294,
+    771.083
+   ],
+   "source": "art/source/wang-hall_s10300101-01.png",
+   "matte": "art/matted/wang-hall_s10300101-sam.png",
+   "crop": [
+    163,
+    47,
+    1362,
+    889
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "e4f400a055cc"
+  },
+  "wang-kang": {
+   "image": "/assets/rongguo/wang-kang.png",
+   "width": 480,
+   "height": 428,
+   "anchor": [
+    187.42,
+    426.305
+   ],
+   "source": "art/source/wang-kang_s10300102-01.png",
+   "matte": "art/matted/wang-kang_s10300102-sam.png",
+   "crop": [
+    103,
+    3,
+    669,
+    508
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "03dd0476c8dc"
+  },
+  "wang-kang-table": {
+   "image": "/assets/rongguo/wang-kang-table.png",
+   "width": 150,
+   "height": 103,
+   "anchor": [
+    78.035,
+    102.567
+   ],
+   "source": "art/source/wang-kang-table_s10300103-01.png",
+   "matte": "art/matted/wang-kang-table_s10300103-sam.png",
+   "crop": [
+    52,
+    46,
+    398,
+    284
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "73139dfb5783"
+  },
+  "wang-chair": {
+   "image": "/assets/rongguo/wang-chair.png",
+   "width": 110,
+   "height": 162,
+   "anchor": [
+    39.545,
+    161.546
+   ],
+   "source": "art/source/wang-chair_s10300104-01.png",
+   "matte": "art/matted/wang-chair_s10300104-sam.png",
+   "crop": [
+    85,
+    102,
+    327,
+    459
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "0534f147800c"
+  },
+  "wang-screen": {
+   "image": "/assets/rongguo/wang-screen.png",
+   "width": 280,
+   "height": 248,
+   "anchor": [
+    139.119,
+    247.412
+   ],
+   "source": "art/source/wang-screen_s10300105-01.png",
+   "matte": "art/matted/wang-screen_s10300105-sam.png",
+   "crop": [
+    80,
+    136,
+    557,
+    558
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "e10cb3704e48"
+  },
+  "wang-handwarmer": {
+   "image": "/assets/rongguo/wang-handwarmer.png",
+   "width": 90,
+   "height": 100,
+   "anchor": [
+    44.135,
+    99.13
+   ],
+   "source": "art/source/wang-handwarmer_s10300106-01.png",
+   "matte": "art/matted/wang-handwarmer_s10300106-sam.png",
+   "crop": [
+    108,
+    112,
+    212,
+    227
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "d4ba6e9da476"
+  },
+  "wang-clock": {
+   "image": "/assets/rongguo/wang-clock.png",
+   "width": 110,
+   "height": 255,
+   "anchor": [
+    63.115,
+    254.099
+   ],
+   "source": "art/source/wang-clock_s10300107-01.png",
+   "matte": "art/matted/wang-clock_s10300107-sam.png",
+   "crop": [
+    111,
+    90,
+    233,
+    373
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "83ec0286bd4a"
+  },
+  "wang-teatray": {
+   "image": "/assets/rongguo/wang-teatray.png",
+   "width": 90,
+   "height": 51,
+   "anchor": [
+    48.312,
+    50.608
+   ],
+   "source": "art/source/wang-teatray_s10300108-01.png",
+   "matte": "art/matted/wang-teatray_s10300108-sam.png",
+   "crop": [
+    45,
+    73,
+    276,
+    203
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "64cd7867ac4f"
+  },
+  "wang-curtain": {
+   "image": "/assets/rongguo/wang-curtain.png",
+   "width": 200,
+   "height": 233,
+   "anchor": [
+    146.009,
+    232.531
+   ],
+   "source": "art/source/wang-curtain_s10300109-01.png",
+   "matte": "art/matted/wang-curtain_s10300109-sam.png",
+   "crop": [
+    32,
+    57,
+    458,
+    554
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "e52394a916e6"
+  },
+  "wang-cabinet": {
+   "image": "/assets/rongguo/wang-cabinet.png",
+   "width": 170,
+   "height": 276,
+   "anchor": [
+    117.224,
+    275.493
+   ],
+   "source": "art/source/wang-cabinet_s10300110-01.png",
+   "matte": "art/matted/wang-cabinet_s10300110-sam.png",
+   "crop": [
+    95,
+    116,
+    430,
+    660
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "4ed0fcc34297"
+  },
+  "wang-tree": {
+   "image": "/assets/rongguo/wang-tree.png",
+   "width": 280,
+   "height": 285,
+   "anchor": [
+    156.119,
+    284.702
+   ],
+   "source": "art/source/wang-tree_s10300111-01.png",
+   "matte": "art/matted/wang-tree_s10300111-sam.png",
+   "crop": [
+    0,
+    0,
+    938,
+    955
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "389672877e3c"
+  },
+  "wang-gate": {
+   "image": "/assets/rongguo/wang-gate.png",
+   "width": 560,
+   "height": 537,
+   "anchor": [
+    95.678,
+    535.122
+   ],
+   "source": "art/source/wang-gate_s10300112-01.png",
+   "matte": "art/matted/wang-gate_s10300112-sam.png",
+   "crop": [
+    21,
+    137,
+    618,
+    709
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "bf4ca3a9b1bb"
+  },
+  "wang-rock": {
+   "image": "/assets/rongguo/wang-rock.png",
+   "width": 230,
+   "height": 318,
+   "anchor": [
+    109.183,
+    317.104
+   ],
+   "source": "art/source/wang-rock_s10300113-01.png",
+   "matte": "art/matted/wang-rock_s10300113-sam.png",
+   "crop": [
+    128,
+    74,
+    385,
+    429
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "f37e473c4df5"
+  },
+  "baoyu-portrait-v2": {
+   "image": "/assets/rongguo/baoyu-portrait-v2.png",
+   "width": 555,
+   "height": 963,
+   "anchor": [
+    276.498,
+    963
+   ],
+   "source": "art/source/baoyu-portrait-v2_s10222200-01.png",
+   "matte": "art/matted/baoyu-portrait-v2_s10222200-sam.png",
+   "crop": [
+    114,
+    63,
+    668,
+    1024
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "1a4098aa87db"
+  },
+  "estate-ruins-v2": {
+   "image": "/assets/rongguo/estate-ruins-v2.png",
+   "width": 900,
+   "height": 704,
+   "anchor": [
+    450,
+    704
+   ],
+   "source": "art/source/estate-ruins-v2_s10230402-01.png",
+   "matte": "art/matted/estate-ruins-v2_s10230402-sam.png",
+   "crop": [
+    63,
+    168,
+    964,
+    873
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "cf1ed9d3217d"
+  },
+  "zhen-house": {
+   "image": "/assets/rongguo/zhen-house.png",
+   "width": 900,
+   "height": 623,
+   "anchor": [
+    449.641,
+    623
+   ],
+   "source": "art/source/zhen-house_s10400001-01.png",
+   "matte": "art/matted/zhen-house_s10400001-sam.png",
+   "crop": [
+    159,
+    104,
+    1411,
+    971
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "ec003c1054e6"
+  },
+  "hulu-temple": {
+   "image": "/assets/rongguo/hulu-temple.png",
+   "width": 900,
+   "height": 564,
+   "anchor": [
+    449.647,
+    564
+   ],
+   "source": "art/source/hulu-temple_s10400002-01.png",
+   "matte": "art/matted/hulu-temple_s10400002-sam.png",
+   "crop": [
+    123,
+    154,
+    1398,
+    953
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "147e9e783f08"
+  },
+  "zhitong-temple": {
+   "image": "/assets/rongguo/zhitong-temple.png",
+   "width": 900,
+   "height": 511,
+   "anchor": [
+    450,
+    511.684
+   ],
+   "source": "art/source/zhitong-temple_s10400003-01.png",
+   "matte": "art/matted/zhitong-temple_s10400003-sam.png",
+   "crop": [
+    103,
+    153,
+    1419,
+    900
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "5e07fa66e15a"
+  },
+  "tavern-house": {
+   "image": "/assets/rongguo/tavern-house.png",
+   "width": 900,
+   "height": 492,
+   "anchor": [
+    449.34,
+    495.302
+   ],
+   "source": "art/source/tavern-house_s10400071-01.png",
+   "matte": "art/matted/tavern-house_s10400071-sam.png",
+   "crop": [
+    95,
+    140,
+    1458,
+    885
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "cdce6ef66281"
+  },
+  "yamen-hall": {
+   "image": "/assets/rongguo/yamen-hall.png",
+   "width": 900,
+   "height": 520,
+   "anchor": [
+    449.368,
+    520.632
+   ],
+   "source": "art/source/yamen-hall_s10400005-01.png",
+   "matte": "art/matted/yamen-hall_s10400005-sam.png",
+   "crop": [
+    62,
+    50,
+    1487,
+    873
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "85528d424349"
+  },
+  "fu-hall": {
+   "image": "/assets/rongguo/fu-hall.png",
+   "width": 900,
+   "height": 517,
+   "anchor": [
+    449.676,
+    520.897
+   ],
+   "source": "art/source/fu-hall_s10400006-01.png",
+   "matte": "art/matted/fu-hall_s10400006-sam.png",
+   "crop": [
+    86,
+    46,
+    1473,
+    842
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "713f48a7f710"
+  },
+  "farm-house": {
+   "image": "/assets/rongguo/farm-house.png",
+   "width": 900,
+   "height": 414,
+   "anchor": [
+    449.038,
+    415.284
+   ],
+   "source": "art/source/farm-house_s10400072-01.png",
+   "matte": "art/matted/farm-house_s10400072-sam.png",
+   "crop": [
+    67,
+    195,
+    1470,
+    840
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "796a92c7086a"
+  },
+  "ruined-house": {
+   "image": "/assets/rongguo/ruined-house.png",
+   "width": 900,
+   "height": 486,
+   "anchor": [
+    450,
+    486
+   ],
+   "source": "art/source/ruined-house_s10400073-01.png",
+   "matte": "art/matted/ruined-house_s10400073-sam.png",
+   "crop": [
+    91,
+    162,
+    1445,
+    893
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "ac9a4a28eb34"
+  },
+  "lantern-booth": {
+   "image": "/assets/rongguo/lantern-booth.png",
+   "width": 633,
+   "height": 636,
+   "anchor": [
+    316,
+    637
+   ],
+   "source": "art/source/lantern-booth_s10400009-01.png",
+   "matte": "art/matted/lantern-booth_s10400009-sam.png",
+   "crop": [
+    199,
+    69,
+    832,
+    705
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "02171c626f17"
+  },
+  "screen-wall": {
+   "image": "/assets/rongguo/screen-wall.png",
+   "width": 668,
+   "height": 633,
+   "anchor": [
+    333.5,
+    634
+   ],
+   "source": "art/source/screen-wall_s10400010-01.png",
+   "matte": "art/matted/screen-wall_s10400010-sam.png",
+   "crop": [
+    206,
+    48,
+    874,
+    681
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "96924c2c9e7e"
+  },
+  "stone-lion": {
+   "image": "/assets/rongguo/stone-lion.png",
+   "width": 768,
+   "height": 512,
+   "anchor": [
+    383.5,
+    512
+   ],
+   "source": "art/source/stone-lion_s10400074-01.png",
+   "matte": "art/matted/stone-lion_s10400074-sam.png",
+   "crop": [
+    0,
+    0,
+    768,
+    512
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "7f57fcabdaf1"
+  },
+  "mijing-raft": {
+   "image": "/assets/rongguo/mijing-raft.png",
+   "width": 575,
+   "height": 316,
+   "anchor": [
+    286.998,
+    316
+   ],
+   "source": "art/source/mijing-raft_s10400012-01.png",
+   "matte": "art/matted/mijing-raft_s10400012-sam.png",
+   "crop": [
+    113,
+    116,
+    686,
+    431
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "4e81c1ebba0e"
+  },
+  "mijing-thorn": {
+   "image": "/assets/rongguo/mijing-thorn.png",
+   "width": 685,
+   "height": 436,
+   "anchor": [
+    341.999,
+    437.002
+   ],
+   "source": "art/source/mijing-thorn_s10400013-01.png",
+   "matte": "art/matted/mijing-thorn_s10400013-sam.png",
+   "crop": [
+    39,
+    36,
+    722,
+    471
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "d975a96763fc"
+  },
+  "official-desk": {
+   "image": "/assets/rongguo/official-desk.png",
+   "width": 343,
+   "height": 335,
+   "anchor": [
+    170.497,
+    335
+   ],
+   "source": "art/source/official-desk_s10400014-01.png",
+   "matte": "art/matted/official-desk_s10400014-sam.png",
+   "crop": [
+    194,
+    117,
+    536,
+    451
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "0f8d59355065"
+  },
+  "altar-shrine": {
+   "image": "/assets/rongguo/altar-shrine.png",
+   "width": 233,
+   "height": 320,
+   "anchor": [
+    115.496,
+    321.003
+   ],
+   "source": "art/source/altar-shrine_s10400015-01.png",
+   "matte": "art/matted/altar-shrine_s10400015-sam.png",
+   "crop": [
+    214,
+    50,
+    446,
+    369
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "3597d1c5b36e"
+  },
+  "gruel-pot": {
+   "image": "/assets/rongguo/gruel-pot.png",
+   "width": 548,
+   "height": 326,
+   "anchor": [
+    274,
+    326
+   ],
+   "source": "art/source/gruel-pot_s10400016-01.png",
+   "matte": "art/matted/gruel-pot_s10400016-sam.png",
+   "crop": [
+    110,
+    109,
+    657,
+    434
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "cc98b17583f8"
+  },
+  "wine-jars": {
+   "image": "/assets/rongguo/wine-jars.png",
+   "width": 396,
+   "height": 362,
+   "anchor": [
+    197.5,
+    362
+   ],
+   "source": "art/source/wine-jars_s10400017-01.png",
+   "matte": "art/matted/wine-jars_s10400017-sam.png",
+   "crop": [
+    193,
+    73,
+    589,
+    435
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "e6ad6cb2b466"
+  },
+  "farm-stove": {
+   "image": "/assets/rongguo/farm-stove.png",
+   "width": 554,
+   "height": 305,
+   "anchor": [
+    276.498,
+    306.003
+   ],
+   "source": "art/source/farm-stove_s10400018-01.png",
+   "matte": "art/matted/farm-stove_s10400018-sam.png",
+   "crop": [
+    107,
+    154,
+    659,
+    458
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "9d4b78db4800"
+  },
+  "bookshelf": {
+   "image": "/assets/rongguo/bookshelf.png",
+   "width": 195,
+   "height": 343,
+   "anchor": [
+    96.495,
+    343
+   ],
+   "source": "art/source/bookshelf_s10400019-01.png",
+   "matte": "art/matted/bookshelf_s10400019-sam.png",
+   "crop": [
+    210,
+    50,
+    404,
+    391
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "a92256575c2a"
+  },
+  "plain-kang": {
+   "image": "/assets/rongguo/plain-kang.png",
+   "width": 566,
+   "height": 354,
+   "anchor": [
+    282.5,
+    355
+   ],
+   "source": "art/source/plain-kang_s10400020-01.png",
+   "matte": "art/matted/plain-kang_s10400020-sam.png",
+   "crop": [
+    101,
+    80,
+    667,
+    434
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "b2b64f6c9c37"
+  },
+  "qin-bed": {
+   "image": "/assets/rongguo/qin-bed.png",
+   "width": 406,
+   "height": 417,
+   "anchor": [
+    203,
+    418.002
+   ],
+   "source": "art/source/qin-bed_s10400021-01.png",
+   "matte": "art/matted/qin-bed_s10400021-sam.png",
+   "crop": [
+    182,
+    49,
+    587,
+    465
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "52576b6d2452"
+  },
+  "qin-mirror": {
+   "image": "/assets/rongguo/qin-mirror.png",
+   "width": 285,
+   "height": 397,
+   "anchor": [
+    141.496,
+    398.003
+   ],
+   "source": "art/source/qin-mirror_s10400022-01.png",
+   "matte": "art/matted/qin-mirror_s10400022-sam.png",
+   "crop": [
+    240,
+    61,
+    524,
+    457
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "88ee1d32ccf5"
+  },
+  "ning-hall": {
+   "image": "/assets/rongguo/ning-hall.png",
+   "width": 900,
+   "height": 556,
+   "anchor": [
+    449.641,
+    556.718
+   ],
+   "source": "art/source/ning-hall_s10400051-01.png",
+   "matte": "art/matted/ning-hall_s10400051-sam.png",
+   "crop": [
+    182,
+    101,
+    1434,
+    875
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "1104be9911d6"
+  },
+  "daybed": {
+   "image": "/assets/rongguo/daybed.png",
+   "width": 594,
+   "height": 370,
+   "anchor": [
+    297,
+    370
+   ],
+   "source": "art/source/daybed_s10400052-01.png",
+   "matte": "art/matted/daybed_s10400052-sam.png",
+   "crop": [
+    88,
+    95,
+    681,
+    464
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "cfdedf4430ea"
+  },
+  "lamp-stand": {
+   "image": "/assets/rongguo/lamp-stand.png",
+   "width": 724,
+   "height": 432,
+   "anchor": [
+    362,
+    432
+   ],
+   "source": "art/source/lamp-stand_s10400053-01.png",
+   "matte": "art/matted/lamp-stand_s10400053-sam.png",
+   "crop": [
+    22,
+    45,
+    745,
+    476
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "18a5871ebdc3"
+  },
+  "reeds": {
+   "image": "/assets/rongguo/reeds.png",
+   "width": 418,
+   "height": 356,
+   "anchor": [
+    208.498,
+    356
+   ],
+   "source": "art/source/reeds_s10400054-01.png",
+   "matte": "art/matted/reeds_s10400054-sam.png",
+   "crop": [
+    74,
+    80,
+    490,
+    434
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "bd11d848d43d"
+  },
+  "bamboo-cluster": {
+   "image": "/assets/rongguo/bamboo-cluster.png",
+   "width": 612,
+   "height": 338,
+   "anchor": [
+    306,
+    339.003
+   ],
+   "source": "art/source/bamboo-cluster_s10400055-01.png",
+   "matte": "art/matted/bamboo-cluster_s10400055-sam.png",
+   "crop": [
+    78,
+    118,
+    689,
+    455
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "09e07c8dc6a1"
+  },
+  "canal-quay": {
+   "image": "/assets/rongguo/canal-quay.png",
+   "width": 858,
+   "height": 712,
+   "anchor": [
+    429,
+    712
+   ],
+   "source": "art/source/canal-quay_s10400075-01.png",
+   "matte": "art/matted/canal-quay_s10400075-sam.png",
+   "crop": [
+    0,
+    11,
+    857,
+    722
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "a73c1aba54bf"
+  },
+  "qin-room": {
+   "image": "/assets/rongguo/qin-room.png",
+   "width": 900,
+   "height": 580,
+   "anchor": [
+    449.272,
+    580.728
+   ],
+   "source": "art/source/qin-room_s10400061-01.png",
+   "matte": "art/matted/qin-room_s10400061-sam.png",
+   "crop": [
+    152,
+    47,
+    1389,
+    844
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "hash": "631e8202292f"
+  },
   "baoyu-portrait-angry": {
    "image": "/assets/rongguo/baoyu-portrait-angry.png",
    "width": 346,

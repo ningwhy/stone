@@ -12,9 +12,12 @@ touches the hand-furnished estate stages.
 Usage: python3 scripts/build_travel_maps.py
 """
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'scripts'))
+from stage_defs import fit  # noqa: E402  (a roof is authored by how tall it should stand)
 manifest_path = ROOT / 'public/assets/rongguo/manifest.json'
 assets = json.loads(manifest_path.read_text())['assets']
 ts = json.loads((ROOT / 'maps/rongguo-art.tsj').read_text())
@@ -46,6 +49,7 @@ for key, s in design.items():
         {'name': 'anchor_ids', 'value': ','.join(route['anchors']), 'type': 'string'}]) for route in route_specs]
     art = []
     for asset, c, r, scale in s['props']:
+        scale = fit(asset, scale)
         if asset not in assets:
             continue
         a = assets[asset]
@@ -72,7 +76,12 @@ for key, s in design.items():
              {'name': 'theme', 'type': 'string', 'value': s['theme']}]
     if s.get('water'):
         props.append({'name': 'water', 'type': 'string', 'value': s['water']})
-    if s.get('flowerbeds') is False:
+    for flag in ('walls', 'terraces', 'beds'):
+        rows = s.get(flag)
+        if rows:
+            props.append({'name': 'flowerbeds' if flag == 'beds' else flag, 'type': 'string',
+                          'value': ';'.join(','.join(str(v) for v in row) for row in rows)})
+    if s.get('beds') == [] or s.get('flowerbeds') is False:
         props.append({'name': 'flowerbeds', 'type': 'bool', 'value': False})
     tmj = {'type': 'map', 'version': '1.10', 'orientation': 'isometric', 'renderorder': 'right-down', 'width': 40,
            'height': 40, 'tilewidth': 128, 'tileheight': 64, 'infinite': False, 'layers': layers,

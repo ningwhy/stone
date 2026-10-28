@@ -2,8 +2,13 @@ export type Point = { col: number; row: number };
 /** `indoor` marks a floor that belongs to a building's interior rather than open ground. */
 export type Zone = { id: string; name: string; col: number; row: number; width: number; height: number; indoor?: boolean };
 /** `interiorZone` on an `exterior` art names the floor it roofs over, so the roof can be
- *  lifted the moment somebody walks in without any per-scene script bookkeeping. */
-export type ArtObject = { name:string; asset:string; x:number; y:number; width:number; height:number; visibility:string; depthOffset:number; interiorZone?: string };
+ *  lifted the moment somebody walks in without any per-scene script bookkeeping.
+ *  `flat` marks a prop that is painted onto a wall rather than standing on the ground —
+ *  a hanging scroll, a plaque. Nobody can stand behind it, so it never goes translucent. */
+export type ArtObject = { name:string; asset:string; x:number; y:number; width:number; height:number; visibility:string; depthOffset:number; interiorZone?: string; flat?: boolean };
+/** A raised stone platform. `court` is a terrace with a plinth face, `path` a low walkway
+ *  joining two courts along the processional axis. */
+export type Terrace = { col:number; row:number; width:number; height:number; kind:'court'|'path' };
 export type MapData = {
   width: number; height: number; tilewidth: number; tileheight: number;
   anchors: Record<string, Point>; zones: Zone[]; blockers: Zone[];
@@ -13,9 +18,26 @@ export type MapData = {
   /** `water` lists the canal or pond rectangles (col,row,w,h in grid units) a river stage
    *  paints over the floor. A stage without it keeps the historic garden pond rectangle. */
   water: [number,number,number,number][];
-  /** The estate flowerbeds are a Rongguo-garden ornament; a stage whose floor they would
-   *  paint over (a canal, say) turns them off instead of moving them per scene. */
-  flowerbeds: boolean;
+  /** `terraces` are the stone platforms an otherworldly stage stands its props on. The
+   *  dream/myth/ruins themes skip the estate paving, which without a platform leaves every
+   *  screen, bed and censer floating on a blank wash — furniture with no floor to stand on. */
+  terraces: Terrace[];
+  /** `walls` are the courtyard enclosure lines, each `col1,row1,col2,row2` in grid units.
+   *  A Chinese courtyard reads as a courtyard only when it is walled: without them the
+   *  buildings stand on an open field and the stage looks like a car park. Gaps between
+   *  segments are the gates. */
+  walls: [number,number,number,number][];
+  /** Flowerbeds are a per-courtyard planting, not an estate-wide ornament. A string
+   *  property lists `col,row,w,h;…`; `false` turns them off (a canal, a lane of dust). */
+  beds: [number,number,number,number][];
+  /** `lights` are hanging lanterns, `col,row;…`. A 灯市 is a street of them: the painted
+   *  booths are bamboo frames, and the market only reads as a market once the lanterns
+   *  hang from them. Kept as positions rather than sprites because a lantern is four
+   *  shapes and a glow — cheaper and more consistent than another 1024 px render. */
+  lights: [number,number][];
+  /** `dusk` lays a cool veil over the paving only: a night street is dark underfoot and
+   *  warm at the lanterns, and sprites stay readable instead of being tinted flat. */
+  dusk: boolean;
 };
 export const cellKey = (col: number, row: number) => `${col},${row}`;
 
@@ -48,16 +70,38 @@ export function parseTiledMap(raw: TiledMap): MapData {
   }
   const boolProp = (o: TiledObject, name: string) => { const v = o.properties?.find(p => p.name === name)?.value; return v === true || v === 'true'; };
   const zones = (layer: string) => objects(layer).map(o => ({ id: o.name.split(' ')[0], name: o.name.slice(2), col: o.x / unit, row: o.y / unit, width: o.width / unit, height: o.height / unit, indoor: boolProp(o, 'indoor') || undefined }));
-  // A stage may declare its own water rectangles as "col,row,w,h;col,row,w,h" and switch the
-  // estate flowerbeds off; both fall back to the historic garden look when the property is absent.
-  const waterProp = raw.properties?.find(p => p.name === 'water')?.value;
-  const water: [number,number,number,number][] = typeof waterProp === 'string' && waterProp.trim()
-    ? waterProp.split(';').map(part => part.split(',').map(Number) as [number,number,number,number])
+  // A stage may declare its own water rectangles as "col,row,w,h;col,row,w,h", its own
+  // courtyard walls as "col1,row1,col2,row2;…" and its own flowerbeds; each falls back to
+  // the historic estate look only when the property is absent.
+  const rects = (name: string) => {
+    const value = raw.properties?.find(p => p.name === name)?.value;
+    if (value === false || value === 'false' || value === undefined) return [];
+    return typeof value === 'string' && value.trim()
+      ? value.split(';').map(part => part.split(',').map(Number) as [number,number,number,number])
+      : [];
+  };
+  const water = rects('water');
+  const walls = rects('walls');
+  // `lights` is a bare list of hanging points: "col,row;col,row".
+  const lightProp = raw.properties?.find(p => p.name === 'lights')?.value;
+  const lights: [number,number][] = typeof lightProp === 'string' && lightProp.trim()
+    ? lightProp.split(';').map(part => part.split(',').map(Number) as [number,number])
     : [];
-  const flowerProp = raw.properties?.find(p => p.name === 'flowerbeds')?.value;
-  const flowerbeds = !(flowerProp === false || flowerProp === 'false');
+  // `beds` absent keeps the seven historic Rongguo garden beds; an explicit list (even an
+  // empty one) replaces them, so every courtyard plants its own.
+  const bedProp = raw.properties?.find(p => p.name === 'flowerbeds')?.value;
+  const beds: [number,number,number,number][] = bedProp === undefined
+    ? [[6,24,3,6],[6,15,3,5],[27,16,3,6],[29,5,4,4],[15,10,2,3],[24,19,4,2],[6,6,5,4]]
+    : rects('flowerbeds');
+  // "col,row,w,h[,court|path]" per terrace. Absent for every estate stage, which already
+  // gets its paving from PlanZones.
+  const terraceProp = raw.properties?.find(p => p.name === 'terraces')?.value;
+  const terraces: Terrace[] = typeof terraceProp === 'string' && terraceProp.trim()
+    ? terraceProp.split(';').map(part => { const [col, row, width, height, kind] = part.split(',');
+        return { col: Number(col), row: Number(row), width: Number(width), height: Number(height), kind: kind === 'path' ? 'path' as const : 'court' as const }; })
+    : [];
   const map: MapData = { width: raw.width, height: raw.height, tilewidth: raw.tilewidth, tileheight: unit,
-    anchors, zones: zones('PlanZones'), blockers: zones('PlanBlockers'), routes: {}, walkable: new Set(), art: [],id:String(raw.properties?.find(p=>p.name==='sceneId')?.value??'entry'),title:String(raw.properties?.find(p=>p.name==='title')?.value??'荣国府 · 贾母院'),theme:String(raw.properties?.find(p=>p.name==='theme')?.value??'garden'),labels:[],water,flowerbeds };
+    anchors, zones: zones('PlanZones'), blockers: zones('PlanBlockers'), routes: {}, walkable: new Set(), art: [],id:String(raw.properties?.find(p=>p.name==='sceneId')?.value??'entry'),title:String(raw.properties?.find(p=>p.name==='title')?.value??'荣国府 · 贾母院'),theme:String(raw.properties?.find(p=>p.name==='theme')?.value??'garden'),labels:[],water,terraces,walls,beds,lights,dusk:raw.properties?.find(p=>p.name==='dusk')?.value===true };
   for(const o of raw.layers.find(l=>l.name==='Labels')?.objects??[])map.labels.push({text:o.name,point:{col:o.x/unit-.5,row:o.y/unit-.5}});
   for(const o of raw.layers.find(l=>l.name==='Art')?.objects??[]) {
     if(o.visible===false)continue;
@@ -65,7 +109,7 @@ export function parseTiledMap(raw: TiledMap): MapData {
     const prop=(name:string)=>o.properties?.find(p=>p.name===name)?.value;
     const asset=prop('asset');
     if(typeof asset!=='string' || o.width<=0 || o.height<=0)throw new Error(`素材 ${o.name} 缺少有效图像与尺寸`);
-    map.art.push({name:o.name,asset,x:o.x-o.y,y:(o.x+o.y)/2,width:o.width,height:o.height,visibility:String(prop('visibility')??'always'),depthOffset:Number(prop('depthOffset')??0),interiorZone:typeof prop('interiorZone')==='string'?String(prop('interiorZone')):undefined});
+    map.art.push({name:o.name,asset,x:o.x-o.y,y:(o.x+o.y)/2,width:o.width,height:o.height,visibility:String(prop('visibility')??'always'),depthOffset:Number(prop('depthOffset')??0),interiorZone:typeof prop('interiorZone')==='string'?String(prop('interiorZone')):undefined,flat:prop('flat')===true});
   }
   for(const o of raw.layers.find(l=>l.name==='ArtFootprints')?.objects??[])map.blockers.push({id:o.name,name:o.name,col:o.x/unit,row:o.y/unit,width:o.width/unit,height:o.height/unit});
   for (const o of objects('Routes')) {

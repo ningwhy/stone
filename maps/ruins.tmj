@@ -21,41 +21,31 @@
       "objects": [
         {
           "id": 1,
-          "name": "A0 姑苏 · 葫芦庙火后",
-          "x": 832,
-          "y": 768,
-          "width": 896,
-          "height": 832,
+          "name": "A1 姑苏 · 葫芦庙火后",
+          "x": 768,
+          "y": 640,
+          "width": 1152,
+          "height": 768,
           "rotation": 0,
           "visible": true
         },
         {
           "id": 2,
-          "name": "A1 姑苏 · 葫芦庙火后",
+          "name": "A2 姑苏 · 葫芦庙火后",
           "x": 1024,
-          "y": 1536,
+          "y": 1408,
           "width": 320,
-          "height": 576,
+          "height": 512,
           "rotation": 0,
           "visible": true
         },
         {
           "id": 3,
-          "name": "A2 姑苏 · 葫芦庙火后",
-          "x": 384,
-          "y": 1600,
-          "width": 640,
-          "height": 320,
-          "rotation": 0,
-          "visible": true
-        },
-        {
-          "id": 4,
           "name": "A3 姑苏 · 葫芦庙火后",
-          "x": 1536,
-          "y": 1600,
+          "x": 1664,
+          "y": 1152,
           "width": 512,
-          "height": 320,
+          "height": 384,
           "rotation": 0,
           "visible": true
         }
@@ -83,10 +73,10 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 5,
+          "id": 4,
           "name": "entry",
           "x": 1184.0,
-          "y": 1952.0,
+          "y": 1888.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -94,7 +84,7 @@
           "point": true
         },
         {
-          "id": 6,
+          "id": 5,
           "name": "path",
           "x": 1184.0,
           "y": 1568.0,
@@ -105,10 +95,21 @@
           "point": true
         },
         {
-          "id": 7,
+          "id": 6,
           "name": "guest",
-          "x": 1184.0,
-          "y": 1184.0,
+          "x": 1312.0,
+          "y": 1120.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 7,
+          "name": "host",
+          "x": 1248.0,
+          "y": 928.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -117,8 +118,8 @@
         },
         {
           "id": 8,
-          "name": "host",
-          "x": 1376.0,
+          "name": "left",
+          "x": 864.0,
           "y": 1056.0,
           "width": 0,
           "height": 0,
@@ -128,9 +129,9 @@
         },
         {
           "id": 9,
-          "name": "left",
-          "x": 992.0,
-          "y": 1120.0,
+          "name": "right",
+          "x": 1632.0,
+          "y": 992.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -139,17 +140,6 @@
         },
         {
           "id": 10,
-          "name": "right",
-          "x": 1568.0,
-          "y": 1184.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true
-        },
-        {
-          "id": 11,
           "name": "rear",
           "x": 1440.0,
           "y": 736.0,
@@ -160,10 +150,10 @@
           "point": true
         },
         {
-          "id": 12,
+          "id": 11,
           "name": "exit",
           "x": 1952.0,
-          "y": 1952.0,
+          "y": 1312.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -183,7 +173,7 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 13,
+          "id": 12,
           "name": "场景动线",
           "x": 0,
           "y": 0,
@@ -217,31 +207,146 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 14,
-          "name": "estate-ruins",
-          "x": 1445.8274999999999,
-          "y": 869.3612999999999,
-          "width": 840.0,
-          "height": 657.3000000000001,
+          "id": 13,
+          "name": "ruined-house",
+          "x": 1376.0,
+          "y": 800.0,
+          "width": 703.7037037037037,
+          "height": 380.0,
           "rotation": 0,
           "visible": true,
-          "gid": 99,
+          "gid": 170,
           "type": "art",
           "properties": [
             {
               "name": "asset",
-              "value": "estate-ruins",
+              "value": "ruined-house",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "exterior",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "ruined-house",
+          "x": 864.0,
+          "y": 992.0,
+          "width": 612.0,
+          "height": 330.48,
+          "rotation": 0,
+          "visible": true,
+          "gid": 170,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "ruined-house",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "exterior",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "garden-tree",
+          "x": 1766.09825,
+          "y": 1319.49039,
+          "width": 272.59999999999997,
+          "height": 236.88,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
               "type": "string"
             },
             {
               "name": "visibility",
               "value": "always",
               "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "garden-rock",
+          "x": 1062.63791,
+          "y": 1321.0983700000002,
+          "width": 163.4,
+          "height": 179.74,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "garden-rock",
+          "x": 1573.55732,
+          "y": 1383.61724,
+          "width": 136.79999999999998,
+          "height": 150.48,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "courtyard-wall",
+          "x": 1769.97928,
+          "y": 1195.1572,
+          "width": 388.8,
+          "height": 316.08,
+          "rotation": 0,
+          "visible": true,
+          "gid": 2,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "courtyard-wall",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
             }
           ]
         }
@@ -256,7 +361,30 @@
       "opacity": 1,
       "visible": false,
       "draworder": "topdown",
-      "objects": []
+      "objects": [
+        {
+          "id": 19,
+          "name": "garden-rock",
+          "x": 1024.0,
+          "y": 1280.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 20,
+          "name": "garden-rock",
+          "x": 1536.0,
+          "y": 1344.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        }
+      ]
     },
     {
       "id": 7,
@@ -268,10 +396,10 @@
       "visible": false,
       "objects": [
         {
-          "id": 15,
+          "id": 21,
           "name": "甄宅废墟",
-          "x": 1440.0,
-          "y": 864.0,
+          "x": 1312.0,
+          "y": 800.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -279,10 +407,10 @@
           "point": true
         },
         {
-          "id": 16,
+          "id": 22,
           "name": "葫芦庙遗址",
-          "x": 800.0,
-          "y": 1056.0,
+          "x": 736.0,
+          "y": 864.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -299,7 +427,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 17,
+  "nextobjectid": 23,
   "properties": [
     {
       "name": "sceneId",
@@ -315,6 +443,21 @@
       "name": "theme",
       "type": "string",
       "value": "ruins"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "17,21,3,9,path"
+    },
+    {
+      "name": "walls",
+      "type": "string",
+      "value": "12,10,30,10;12,10,12,20;30,10,30,16;20,22,26,22"
+    },
+    {
+      "name": "flowerbeds",
+      "type": "bool",
+      "value": false
     }
   ]
 }

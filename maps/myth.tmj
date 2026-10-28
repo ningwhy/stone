@@ -21,41 +21,31 @@
       "objects": [
         {
           "id": 1,
-          "name": "A0 大荒山 · 青埂峰（神话）",
-          "x": 832,
-          "y": 768,
-          "width": 896,
-          "height": 832,
+          "name": "A1 大荒山 · 青埂峰（神话）",
+          "x": 768,
+          "y": 512,
+          "width": 1024,
+          "height": 768,
           "rotation": 0,
           "visible": true
         },
         {
           "id": 2,
-          "name": "A1 大荒山 · 青埂峰（神话）",
-          "x": 1024,
-          "y": 1536,
+          "name": "A2 大荒山 · 青埂峰（神话）",
+          "x": 1088,
+          "y": 1216,
           "width": 320,
-          "height": 576,
+          "height": 704,
           "rotation": 0,
           "visible": true
         },
         {
           "id": 3,
-          "name": "A2 大荒山 · 青埂峰（神话）",
-          "x": 384,
-          "y": 1600,
-          "width": 640,
-          "height": 320,
-          "rotation": 0,
-          "visible": true
-        },
-        {
-          "id": 4,
           "name": "A3 大荒山 · 青埂峰（神话）",
-          "x": 1536,
-          "y": 1600,
+          "x": 1664,
+          "y": 1536,
           "width": 512,
-          "height": 320,
+          "height": 384,
           "rotation": 0,
           "visible": true
         }
@@ -83,10 +73,21 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 5,
+          "id": 4,
           "name": "entry",
-          "x": 1184.0,
-          "y": 1952.0,
+          "x": 1248.0,
+          "y": 1888.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 5,
+          "name": "path",
+          "x": 1248.0,
+          "y": 1504.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -95,17 +96,6 @@
         },
         {
           "id": 6,
-          "name": "path",
-          "x": 1184.0,
-          "y": 1568.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true
-        },
-        {
-          "id": 7,
           "name": "guest",
           "x": 1184.0,
           "y": 1184.0,
@@ -116,9 +106,20 @@
           "point": true
         },
         {
-          "id": 8,
+          "id": 7,
           "name": "host",
           "x": 1376.0,
+          "y": 992.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 8,
+          "name": "left",
+          "x": 928.0,
           "y": 1056.0,
           "width": 0,
           "height": 0,
@@ -128,17 +129,6 @@
         },
         {
           "id": 9,
-          "name": "left",
-          "x": 992.0,
-          "y": 1120.0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "visible": true,
-          "point": true
-        },
-        {
-          "id": 10,
           "name": "right",
           "x": 1568.0,
           "y": 1184.0,
@@ -149,10 +139,10 @@
           "point": true
         },
         {
-          "id": 11,
+          "id": 10,
           "name": "rear",
           "x": 1440.0,
-          "y": 736.0,
+          "y": 672.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -160,10 +150,10 @@
           "point": true
         },
         {
-          "id": 12,
+          "id": 11,
           "name": "exit",
           "x": 1952.0,
-          "y": 1952.0,
+          "y": 1696.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -183,7 +173,7 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 13,
+          "id": 12,
           "name": "场景动线",
           "x": 0,
           "y": 0,
@@ -217,12 +207,12 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 14,
+          "id": 13,
           "name": "spirit-stone",
-          "x": 1384.2386000000001,
-          "y": 807.7922,
-          "width": 468.0,
-          "height": 601.2,
+          "x": 1317.8925449101794,
+          "y": 869.5732634730538,
+          "width": 334.7305389221557,
+          "height": 430.0,
           "rotation": 0,
           "visible": true,
           "gid": 96,
@@ -237,21 +227,16 @@
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         },
         {
-          "id": 15,
+          "id": 14,
           "name": "garden-rock",
-          "x": 810.8059,
-          "y": 1070.8112999999998,
-          "width": 266.0,
-          "height": 292.59999999999997,
+          "x": 1256.1010199999998,
+          "y": 1024.73314,
+          "width": 174.8,
+          "height": 192.28,
           "rotation": 0,
           "visible": true,
           "gid": 5,
@@ -266,19 +251,110 @@
               "name": "visibility",
               "value": "always",
               "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "garden-rock",
+          "x": 1440.87287,
+          "y": 789.7910899999999,
+          "width": 193.8,
+          "height": 213.18,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
             }
           ]
         },
         {
           "id": 16,
           "name": "garden-rock",
-          "x": 1768.49035,
-          "y": 811.6374500000002,
+          "x": 1011.71169,
+          "y": 669.82883,
+          "width": 140.6,
+          "height": 154.66,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "garden-rock",
+          "x": 1658.32917,
+          "y": 1300.67519,
+          "width": 155.79999999999998,
+          "height": 171.38,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "garden-rock",
+          "x": 742.7922800000001,
+          "y": 1449.30996,
+          "width": 167.2,
+          "height": 183.92,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "garden-rock",
+          "x": 1832.49035,
+          "y": 1131.6374500000002,
           "width": 209.00000000000003,
           "height": 229.9,
           "rotation": 0,
@@ -295,21 +371,16 @@
               "name": "visibility",
               "value": "always",
               "type": "string"
-            },
-            {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
             }
           ]
         },
         {
-          "id": 17,
+          "id": 20,
           "name": "garden-tree",
-          "x": 615.7850000000001,
-          "y": 1577.5622,
-          "width": 348.0,
-          "height": 302.4,
+          "x": 872.304,
+          "y": 874.1996800000001,
+          "width": 371.2,
+          "height": 322.56,
           "rotation": 0,
           "visible": true,
           "gid": 3,
@@ -324,11 +395,54 @@
               "name": "visibility",
               "value": "always",
               "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "garden-tree",
+          "x": 1702.87675,
+          "y": 808.44661,
+          "width": 307.40000000000003,
+          "height": 267.12,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
             },
             {
-              "name": "depthOffset",
-              "value": 0,
-              "type": "float"
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "garden-tree",
+          "x": 1125.9685,
+          "y": 1575.33102,
+          "width": 266.8,
+          "height": 231.84,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
             }
           ]
         }
@@ -345,10 +459,10 @@
       "draworder": "topdown",
       "objects": [
         {
-          "id": 18,
+          "id": 23,
           "name": "garden-rock",
-          "x": 768,
-          "y": 1024,
+          "x": 1217.0,
+          "y": 983.0,
           "width": 64,
           "height": 64,
           "rotation": 0,
@@ -356,10 +470,54 @@
           "type": "collision"
         },
         {
-          "id": 19,
+          "id": 24,
           "name": "garden-rock",
-          "x": 1728,
-          "y": 768,
+          "x": 1401.0,
+          "y": 747.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 25,
+          "name": "garden-rock",
+          "x": 974.0,
+          "y": 630.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 26,
+          "name": "garden-rock",
+          "x": 1620.0,
+          "y": 1260.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 27,
+          "name": "garden-rock",
+          "x": 704.0,
+          "y": 1408.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 28,
+          "name": "garden-rock",
+          "x": 1792.0,
+          "y": 1088.0,
           "width": 64,
           "height": 64,
           "rotation": 0,
@@ -378,10 +536,10 @@
       "visible": false,
       "objects": [
         {
-          "id": 20,
+          "id": 29,
           "name": "青埂峰",
-          "x": 1376.0,
-          "y": 800.0,
+          "x": 1312.0,
+          "y": 736.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -389,10 +547,21 @@
           "point": true
         },
         {
-          "id": 21,
+          "id": 30,
           "name": "入世之路",
-          "x": 1184.0,
-          "y": 1824.0,
+          "x": 1248.0,
+          "y": 1696.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 31,
+          "name": "大荒山",
+          "x": 800.0,
+          "y": 608.0,
           "width": 0,
           "height": 0,
           "rotation": 0,
@@ -409,7 +578,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 22,
+  "nextobjectid": 32,
   "properties": [
     {
       "name": "sceneId",
@@ -425,6 +594,16 @@
       "name": "theme",
       "type": "string",
       "value": "myth"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "18,20,3,9,path;16,11,8,7,court"
+    },
+    {
+      "name": "flowerbeds",
+      "type": "bool",
+      "value": false
     }
   ]
 }
