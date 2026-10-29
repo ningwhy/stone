@@ -3071,10 +3071,10 @@
    "id": "stone-lion",
    "seed": 10400074,
    "anchor": [
-    383.5,
+    370,
     512
    ],
-   "width": 768
+   "height": 240
   },
   {
    "id": "mijing-raft",

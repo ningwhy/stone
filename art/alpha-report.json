@@ -1377,11 +1377,11 @@
   },
   {
     "asset": "stone-lion",
-    "visiblePixels": 346224,
-    "solidAlpha250Ratio": 1.0,
-    "faintAlphaRatio": 0.0,
-    "width": 768,
-    "height": 512
+    "visiblePixels": 24357,
+    "solidAlpha250Ratio": 0.97586,
+    "faintAlphaRatio": 0.01035,
+    "width": 148,
+    "height": 240
   },
   {
     "asset": "mijing-raft",

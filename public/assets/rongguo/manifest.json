@@ -4719,24 +4719,24 @@
   },
   "stone-lion": {
    "image": "/assets/rongguo/stone-lion.png",
-   "width": 768,
-   "height": 512,
+   "width": 148,
+   "height": 240,
    "anchor": [
-    383.5,
-    512
+    73.739,
+    240
    ],
    "source": "art/source/stone-lion_s10400074-01.png",
    "matte": "art/matted/stone-lion_s10400074-sam.png",
    "crop": [
-    0,
-    0,
-    768,
+    229,
+    53,
+    512,
     512
    ],
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "7f57fcabdaf1"
+   "hash": "bbd7b4a248ad"
   },
   "mijing-raft": {
    "image": "/assets/rongguo/mijing-raft.png",

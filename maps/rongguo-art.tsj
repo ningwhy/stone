@@ -2247,8 +2247,8 @@
     {
       "id": 172,
       "image": "../public/assets/rongguo/stone-lion.png",
-      "imagewidth": 768,
-      "imageheight": 512,
+      "imagewidth": 148,
+      "imageheight": 240,
       "properties": [
         {
           "name": "asset",
