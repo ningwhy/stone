@@ -1,56 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { chapters, bookNames, story } from './story.ts';
+import { chapters } from './story.ts';
+import { buildToc, searchToc, type TocSection } from './toc.ts';
 
-/** One section (段落) as the table of contents sees it. */
-export type TocSection = {
-  id: string; title: string; book: number; scene: string; start: string;
-  /** How much of this section the reader has been through: 0 = untouched, 1 = finished. */
-  read: number; total: number; place: string;
-};
-
-export type TocEntry = TocSection & { mark: string };
-
-/** Read marks: ○ 未读 · ◐ 读了一部分 · ● 读完. Same glyphs the old dropdown used,
- *  so a reader who learned one learns the other. */
-export function tocMark(read: number, total: number): string {
-  if (read === 0) return '○';
-  if (read >= total) return '●';
-  return '◐';
-}
-
-/** Group the sections by book, in reading order, with their progress.
- *  `readLog` is the set of node ids the reader has actually reached. */
-export function buildToc(readLog: Iterable<string>): { books: { book: number; name: string; sections: TocEntry[]; read: number; total: number }[] } {
-  const read = new Set(readLog);
-  const byBook = new Map<number, TocEntry[]>();
-  for (const section of chapters) {
-    const nodes = story.filter(node => node.chapter === section.id);
-    const done = nodes.filter(node => read.has(node.id)).length;
-    const entry: TocEntry = {
-      id: section.id, title: section.title, book: (section as { book: number }).book,
-      scene: section.scene, start: section.start,
-      read: done, total: nodes.length,
-      place: nodes[0]?.place ?? '',
-      mark: tocMark(done, nodes.length),
-    };
-    const bucket = byBook.get(entry.book) ?? [];
-    bucket.push(entry);
-    byBook.set(entry.book, bucket);
-  }
-  const books = [...byBook.entries()].sort((a, b) => a[0] - b[0]).map(([book, sections]) => ({
-    book, name: bookNames[book] ?? `第${book}回`, sections,
-    read: sections.reduce((sum, section) => sum + section.read, 0),
-    total: sections.reduce((sum, section) => sum + section.total, 0),
-  }));
-  return { books };
-}
-
-/** One line of search text per section: the title, the place and the book name.
- *  Searching the place is what lets a reader find 「梨香院」 without knowing which
- *  section it belongs to. */
-function searchText(entry: TocEntry, bookName: string): string {
-  return `${entry.title} ${entry.place} ${bookName} ${entry.id}`;
-}
+export type { TocEntry, TocSection, TocBook } from './toc.ts';
+export { buildToc, tocMark } from './toc.ts';
 
 /** The table of contents.
  *
@@ -87,16 +40,7 @@ export function Toc({ readLog, current, onPick }: {
   useEffect(() => { searchRef.current?.focus(); }, []);
 
   const needle = query.trim();
-  const hits = useMemo(() => {
-    if (!needle) return null;
-    const found: { book: number; entries: TocEntry[] }[] = [];
-    for (const group of books) {
-      const entries = group.sections.filter(entry => searchText(entry, group.name).includes(needle));
-      if (entries.length) found.push({ book: group.book, entries });
-    }
-    return found;
-  }, [books, needle]);
-
+  const hits = useMemo(() => (needle ? searchToc(books, needle) : null), [books, needle]);
   const visible = hits ?? books.filter(group => group.book === activeBook).map(group => ({ book: group.book, entries: group.sections }));
   const totalRead = books.reduce((sum, group) => sum + group.read, 0);
   const totalAll = books.reduce((sum, group) => sum + group.total, 0);
@@ -104,7 +48,7 @@ export function Toc({ readLog, current, onPick }: {
   return <div className="toc-body">
     <div className="toc-top">
       <input ref={searchRef} className="toc-search" type="search" value={query}
-        placeholder="搜段落、人物或地点（如「梨香院」「黛玉」「太虚」）"
+        placeholder="搜段落、人物或地点（如「梨香院」「宝钗」「太虚」）"
         aria-label="搜索剧情段落" onChange={event => setQuery(event.target.value)}
         onKeyDown={event=>{
           // A search box eats Escape to clear itself, so the first Escape would leave
@@ -145,11 +89,16 @@ export function Toc({ readLog, current, onPick }: {
                 className={`toc-card${entry.id === current ? ' current' : ''}${entry.read >= entry.total && entry.total ? ' read' : ''}`}
                 data-section={entry.id}
                 aria-current={entry.id === current ? 'true' : undefined}
-                aria-label={`${meta?.name ?? ''} · ${entry.title}${entry.place ? ' · ' + entry.place : ''}`}
+                aria-label={`${meta?.name ?? ''} · ${entry.title}${entry.place ? ' · ' + entry.place : ''}${entry.actors.length ? ' · ' + entry.actors.join('、') : ''}`}
                 onClick={() => onPick(entry)}>
                 <span className="toc-card-mark" aria-hidden="true">{entry.mark}</span>
                 <strong>{entry.title}</strong>
-                <small>{entry.place}</small>
+                <small className="toc-card-place" title={entry.places.join(' / ')}>
+                  {entry.places.length > 1 ? `${entry.places[0]} 等 ${entry.places.length} 处` : entry.places[0]}
+                </small>
+                {entry.actors.length > 0 && <small className="toc-card-actors" title={entry.actors.join('、')}>
+                  {entry.actors.length > 4 ? `${entry.actors.slice(0, 4).join('、')} 等 ${entry.actors.length} 人` : entry.actors.join('、')}
+                </small>}
                 <span className="toc-card-bar"><i style={{ width: `${entry.total ? Math.round(entry.read / entry.total * 100) : 0}%` }}/></span>
               </button>)}
             </div>

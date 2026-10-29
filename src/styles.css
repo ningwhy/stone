@@ -365,6 +365,13 @@ dialog.is-toc{width:min(980px,calc(100% - 30px));max-height:88vh}
 .toc-card.current{border-color:#7d9a72;background:#eef3e5;box-shadow:inset 0 0 0 1px #7d9a7226}
 .toc-card strong{font-family:"Songti SC",serif;font-size:13px;font-weight:500;line-height:1.5;color:#4f6350;padding-right:22px}
 .toc-card small{font-size:10px;color:#98a189;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* 地点一行、在场人物一行：段落卡片要能回答「这一段是谁在哪儿」，
+   否则读者搜到了人名也看不出该跳去哪。
+   地点与人物都可能较长，允许折成两行再截断——宁可少几个字，
+   也不要让整行变成省略号、读者什么也没看见。 */
+.toc-card small.toc-card-place{color:#8b957e;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.5;text-overflow:clip}
+.toc-card small.toc-card-actors{color:#7d8f72;letter-spacing:.2px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.5;text-overflow:clip}
+.toc-card small.toc-card-actors::before{content:"· ";color:#b6bdaa}
 .toc-card-mark{position:absolute;top:9px;right:11px;font-size:11px;color:#93a084}
 .toc-card.read .toc-card-mark{color:#5f7d58}
 .toc-card-bar{position:absolute;left:0;right:0;bottom:0;height:2px;background:#e8ecdd}

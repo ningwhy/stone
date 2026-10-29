@@ -48,6 +48,23 @@ try{
  assert.ok(hits>0,'searching a place must find its section');
  const books=await toc.locator('.toc-group h3').allTextContents();
  assert.equal(books.length,1,'a search that matches one book must show that book only');
+ // 搜人名：搜索框写着「搜段落、人物或地点」，人物就必须搜得到。
+ // 「宝钗」不出现在任何段落标题里，只能靠在场人物命中——这条断言守的就是它。
+ await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('宝钗');
+ await page.waitForTimeout(150);
+ const people=await toc.locator('.toc-card').count();
+ assert.ok(people>0,'searching a person must find their section');
+ const personLabels=await toc.locator('.toc-card-actors').allTextContents();
+ assert.ok(personLabels.some(t=>t.includes('宝钗')),'the found section must show who is on stage');
+ // 搜一个只在段内后半段出现的地点：多地点的段落不能只按第一个地点建索引。
+ await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('林府');
+ await page.waitForTimeout(150);
+ assert.ok(await toc.locator('.toc-card').count()>0,'a place in the middle of a section must be searchable');
+ // 搜一个原著前六回里根本没有的名字：必须找不到，不能凭空造出段落。
+ await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('妙玉');
+ await page.waitForTimeout(150);
+ assert.equal(await toc.locator('.toc-card').count(),0,'a name absent from the story must find nothing');
+ assert.ok(await toc.locator('.toc-empty').count()>0,'an empty result must say so');
  // 选了第六回、搜一下再清空：书栏必须还在第六回，不能弹回当前所在的第一回。
  await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('');
  await page.waitForTimeout(150);
