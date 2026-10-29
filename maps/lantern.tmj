@@ -233,8 +233,8 @@
         {
           "id": 14,
           "name": "lantern-booth",
-          "x": 927.6462264150942,
-          "y": 1055.4103773584905,
+          "x": 1055.6462264150944,
+          "y": 927.4103773584906,
           "width": 298.5849056603774,
           "height": 300.0,
           "rotation": 0,
@@ -349,6 +349,102 @@
               "type": "string"
             }
           ]
+        },
+        {
+          "id": 19,
+          "name": "wine-jars",
+          "x": 1632.125,
+          "y": 1183.875,
+          "width": 198.0,
+          "height": 181.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 179,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "wine-jars",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "vase-stand",
+          "x": 928.3052,
+          "y": 1184.3052,
+          "width": 77.0,
+          "height": 114.1,
+          "rotation": 0,
+          "visible": true,
+          "gid": 118,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "vase-stand",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "wine-jars",
+          "x": 1248.125,
+          "y": 991.875,
+          "width": 198.0,
+          "height": 181.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 179,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "wine-jars",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "vase-stand",
+          "x": 1504.2616,
+          "y": 1184.2616,
+          "width": 66.0,
+          "height": 97.8,
+          "rotation": 0,
+          "visible": true,
+          "gid": 118,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "vase-stand",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
         }
       ]
     },
@@ -373,7 +469,7 @@
       "visible": false,
       "objects": [
         {
-          "id": 19,
+          "id": 23,
           "name": "社火花灯",
           "x": 1440.0,
           "y": 928.0,
@@ -384,7 +480,7 @@
           "point": true
         },
         {
-          "id": 20,
+          "id": 24,
           "name": "失散处",
           "x": 1184.0,
           "y": 1184.0,
@@ -395,7 +491,7 @@
           "point": true
         },
         {
-          "id": 21,
+          "id": 25,
           "name": "仁清巷口",
           "x": 1184.0,
           "y": 1760.0,
@@ -415,7 +511,7 @@
     }
   ],
   "nextlayerid": 8,
-  "nextobjectid": 22,
+  "nextobjectid": 26,
   "properties": [
     {
       "name": "sceneId",

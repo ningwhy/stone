@@ -180,9 +180,13 @@ stage('suzhou', '姑苏 · 仁清巷与甄宅', 'garden',
           ('tea-table', *at(22, 17, 84, 30), .55, 'STUDY'),
           ('hulu-temple', *at(13, 22), .70),
           ('altar-shrine', *at(12, 25, -46, 6), .48),
-          ('garden-tree', *at(25, 21), 1.00),
-          ('bamboo-cluster', *at(17, 21), .92),
-          ('garden-rock', *at(19, 20), .74),
+          # 海棠：原摆在甄宅东南、正压住 host/guest 两个人物锚点（甄士隐的站位），
+          # 树冠不透明、淡到 45% 仍盖住人。改放到甄宅东侧空地，不挡任何走位。
+          ('garden-tree', *at(27, 14), 1.00),
+          # 竹丛原压 left 锚点（英莲/雨村的站位）；改放到葫芦庙院内西南角，
+          # 仍在取景框内且不再压任何走位。
+          ('bamboo-cluster', *at(13, 24), .92),
+          ('garden-rock', *at(19, 24), .74),
       ],
       walls=court(16, 14, 11, 8, gate=21, gw=3) + court(7, 20, 9, 8, gate=10, gw=3),
       beds=[[24, 17, 2, 3], [17, 19, 3, 2]],
@@ -196,11 +200,18 @@ stage('lantern', '姑苏 · 元宵灯市', 'night',
       labels=[['社火花灯', 22, 14], ['失散处', 18, 18], ['仁清巷口', 18, 27]],
       props=[
           ('lantern-booth', *at(24, 17), .92),
-          ('lantern-booth', *at(14, 16), .82),
+          # 原 (14,16) 的灯棚正压住 rear 锚点（霍启抱着英莲走到这里的站位），
+          # 大件压走位同属需要修掉的遮挡类；东移到 (16,14) 让出走道。
+          ('lantern-booth', *at(16, 14), .82),
           ('lantern-booth', *at(19, 13), .86),
           ('zhen-house', *at(10, 23), .66),
           ('garden-tree', *at(28, 25), 1.10),
           ('stone-lion', *at(11, 22, 0, 8), .52),
+          # 灯棚原是空竹架，补上货品：酒坛、青花瓷瓶架，让市集有陈列感。
+          ('wine-jars', *at(25, 18), .5),
+          ('vase-stand', *at(14, 18), .7),
+          ('wine-jars', *at(19, 15), .5),
+          ('vase-stand', *at(23, 18), .6),
       ],
       beds=[],
       # A string of lanterns along the street and one under each booth's beam: without them
