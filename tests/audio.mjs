@@ -4,6 +4,7 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {existsSync} from 'node:fs';
+import { seekSection } from './lib/toc.mjs';
 
 const chrome='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||(existsSync(chrome)?chrome:undefined),
@@ -82,15 +83,15 @@ try{
   // The piece follows the place, and each of the four books has one of its own. A courtyard
   // or a parlour has no piece of its own and takes its chapter's; a canal, a street and a
   // night speak for themselves.
-  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c1-home');
+  await seekSection(page, 'c1-home');
   await reading();
   await page.waitForFunction(()=>window.__audio&&window.__audio.current&&window.__audio.current.name==='bgm-book-one',null,{timeout:10000});
   assert.ok(audioRequests.some(u=>u.includes('/bgm-book-one.ogg')),'the first chapter piece was fetched');
-  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c2-dismissal');
+  await seekSection(page, 'c2-dismissal');
   await reading();
   await page.waitForFunction(()=>window.__audio&&window.__audio.current&&window.__audio.current.name==='bgm-book-two',null,{timeout:10000});
   assert.ok(audioRequests.some(u=>u.includes('/bgm-book-two.ogg')),'the second chapter piece was fetched');
-  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('night');
+  await seekSection(page, 'night');
   await reading();
   await page.waitForFunction(()=>window.__audio&&window.__audio.current&&window.__audio.current.name==='bgm-night',null,{timeout:10000});
   assert.ok(audioRequests.some(u=>u.includes('/bgm-night.ogg')),'the night piece was fetched');
@@ -106,7 +107,7 @@ try{
   assert.ok(audioRequests.some(u=>u.includes('/bgm-water.ogg')),'the water piece was fetched');
 
   // The capital is street-themed and now has its own market music instead of the courtyard.
-  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('arrival');
+  await seekSection(page, 'arrival');
   await reading();
   await page.waitForFunction(()=>window.__audio&&window.__audio.current&&window.__audio.current.name==='bgm-street',null,{timeout:10000});
   assert.ok(audioRequests.some(u=>u.includes('/bgm-street.ogg')),'the street piece was fetched');
@@ -114,20 +115,20 @@ try{
   // The Lin estate is themed river because there is water in its courtyard, but a
   // conversation about an appointment is not a voyage, so it does not take the canal's
   // piece: it falls through to the chapter it belongs to, the third book.
-  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('prologue');
+  await seekSection(page, 'prologue');
   await reading();
   await page.waitForFunction(()=>window.__audio&&window.__audio.current&&window.__audio.current.name==='bgm-book-three',null,{timeout:10000});
   assert.ok(audioRequests.some(u=>u.includes('/bgm-book-three.ogg')),'the third chapter piece was fetched');
 
   // The fourth book has a piece of its own too, and it is the one that carries the
   // judgement in the back room of the yamen.
-  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-court');
+  await seekSection(page, 'c4-court');
   await reading();
   await page.waitForFunction(()=>window.__audio&&window.__audio.current&&window.__audio.current.name==='bgm-book-four',null,{timeout:10000});
   assert.ok(audioRequests.some(u=>u.includes('/bgm-book-four.ogg')),'the fourth chapter piece was fetched');
 
   // A courtyard has no piece of its own either, so it takes the first book's.
-  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c1-home');
+  await seekSection(page, 'c1-home');
   await reading();
   await page.waitForFunction(()=>window.__audio&&window.__audio.current&&window.__audio.current.name==='bgm-book-one',null,{timeout:10000});
 
@@ -140,10 +141,10 @@ try{
   await page.waitForFunction(()=>window.__audio&&window.__audio.buffers.has('sfx-step-earth'),null,{timeout:10000});
   await seekVoyage();
   await page.waitForFunction(()=>window.__audio&&window.__audio.buffers.has('sfx-oar'),null,{timeout:10000});
-  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c2-dismissal');
+  await seekSection(page, 'c2-dismissal');
   await reading();
   await page.waitForFunction(()=>window.__audio&&window.__audio.buffers.has('sfx-step-board'),null,{timeout:10000});
-  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c1-home');
+  await seekSection(page, 'c1-home');
   await reading();
   await page.waitForFunction(()=>window.__audio&&window.__audio.buffers.has('sfx-step-stone'),null,{timeout:10000});
 

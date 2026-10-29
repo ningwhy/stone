@@ -1,5 +1,6 @@
 import { chromium } from 'playwright';
 import { existsSync, mkdirSync } from 'node:fs';
+import { seekSection } from './lib/toc.mjs';
 const exe = process.env.CHROME_PATH || (existsSync('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome') ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : undefined);
 const browser = await chromium.launch({ headless: true, executablePath: exe });
 const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
@@ -21,7 +22,7 @@ const sections = ['c5-meet', 'c5-scroll', 'c5-banquet', 'c5-boudoir'];
 const report = [];
 for (const s of sections) {
   try {
-    await page.getByRole('combobox', { name: '选择剧情段落' }).selectOption(s);
+    await seekSection(page, s);
     await read();
     const txt = (await page.locator('.dialogue-text').textContent())?.trim().slice(0, 40) ?? '';
     const spk = (await page.locator('.dialogue-speaker, .speaker').first().textContent().catch(() => '')) ?? '';

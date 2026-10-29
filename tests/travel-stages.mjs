@@ -1,6 +1,7 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {existsSync,mkdirSync} from 'node:fs';
+import { seekSection } from './lib/toc.mjs';
 /**
  * Outdoor travel stages: the two stretches the reader noticed were missing —
  * the canal run from Yangzhou to the capital (chapter three) and the out-of-town
@@ -68,7 +69,7 @@ try{
   await page.screenshot({path:`artifacts/travel-stages/${id}.png`});
  }
  // The new section has to appear in the dropdown and open at the out-of-town gate.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c2-guowai');
+ await seekSection(page, 'c2-guowai');
  await page.waitForFunction(()=>window.__mapScene&&window.__mapScene.mapData.id==='guowai',undefined,{timeout:30000});
  assert.equal(await page.evaluate(()=>window.__mapScene.engine.steps[window.__mapScene.engine.getSnapshot().index].id),'C2-013a');
  // The journey view lists the country walk as its own stage and can reopen it.

@@ -73,7 +73,7 @@ python3 scripts/verify_character_identities.py
 
 | 现象 | 优先查哪里 |
 | --- | --- |
-| 新回下拉没有出现 | story.ts import/chapters/bookNames、App 分组仍写死前三回 |
+| 新回没有出现在目录里 | story.ts import/chapters/bookNames、目录面板按 book 分组的数据 |
 | 新图缺失或启动失败 | maps 顶层、sceneId 唯一、必需层、focus 与格心 |
 | 演员忽然不见/不能走 | scene 切换会隐藏全部人；是否先 show、站点是否可走 |
 | 人物穿墙或抄近路 | Route 走廊先列后行补网格、PlanBlockers/ArtFootprints 缺失 |

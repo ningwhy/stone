@@ -1,6 +1,7 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdirSync} from 'node:fs';
+import { seekSection } from './lib/toc.mjs';
 /**
  * Interior reveal: an `exterior` building must disappear the moment somebody
  * stands on the floor it roofs over (`Art.interiorZone` -> `PlanZones.indoor`),
@@ -42,7 +43,7 @@ try{
  await page.goto(process.env.TEST_URL??'http://127.0.0.1:5173');await read();
  // Every exterior building must declare the floor it roofs over, and every floor
  // it covers must be flagged indoor, or the automatic reveal cannot work.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-hall');await read();
+ await seekSection(page, 'c4-hall');await read();
  const declared=await probe();
  for(const a of declared.art)assert.ok(a.interiorZone,`${a.name}: exterior art without interiorZone`);
  for(const zone of declared.indoors)assert.ok(declared.zones||true);
@@ -60,7 +61,7 @@ try{
    ['c4-pear',   'main-hall',  false],
  ];
  for(const [section,building,wantDrawn] of cases){
-   await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(section);await read();
+   await seekSection(page, section);await read();
    const info=await probe();
    const art=info.art.find(a=>a.name===building);
    assert.ok(art,`${section}: ${building} not on stage`);
@@ -68,13 +69,13 @@ try{
    await page.screenshot({path:`artifacts/interior-${section}.png`,fullPage:true});
  }
  // central carries two buildings; entering 荣禧堂 must lift only its own roof.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-hall');await read();
+ await seekSection(page, 'c4-hall');await read();
  const hall=await probe();
  assert.equal(hall.art.find(a=>a.name==='rongxi-hall').drawn,false,'荣禧堂外观应在有人入内时隐藏');
  assert.equal(hall.art.find(a=>a.name==='main-hall').drawn,true,'西厢外观不应被荣禧堂的室内占位影响');
  assert.ok(hall.actors.every(a=>a.zone!=='A2'||!a.indoor),'central: 有人站在西厢室内却未隐藏其外观');
  // Leaving the room restores the roof: rewind to the courtyard view of the court.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-court');await read();
+ await seekSection(page, 'c4-court');await read();
  assert.equal((await probe()).art.find(a=>a.name==='main-hall').drawn,true,'回到院外后刑堂外观应恢复');
  assert.deepEqual(errors,[]);
  console.log('Passed: exterior roofs lift on interior occupancy and restore on exit; per-building scope and roof overrides verified across eight chapter-four sections.');

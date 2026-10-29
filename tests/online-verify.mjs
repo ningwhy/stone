@@ -12,6 +12,7 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdirSync} from 'node:fs';
+import { seekSection, openToc } from './lib/toc.mjs';
 
 const direct=process.env.ORIGIN_DIRECT==='1';
 const profile=process.env.ONLINE_PROFILE??(direct?'/tmp/wb-direct-profile':'/tmp/wb-online-profile');
@@ -43,17 +44,20 @@ const reading=async()=>{
 const tag=direct?'origin':'online';
 try{
  await page.goto('https://stone.yan.pub/',{waitUntil:'commit',timeout:120000});
- await page.waitForSelector('.chapter-select',{timeout:240000});
+ await page.waitForSelector('.toc-trigger',{timeout:240000});
  await reading();
  console.log(`${tag} node:`,await page.locator('.node-label').textContent());
- const groups=await page.locator('.chapter-select optgroup').evaluateAll(os=>os.map(o=>o.label));
+ const toc=await openToc(page);
+ const groups=await toc.locator('.toc-book-name').allTextContents();
  console.log(`${tag} chapter groups:`,JSON.stringify(groups));
- assert.ok(groups.some(g=>g.includes('第四回')),'chapter four missing from the online selector');
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-court');await reading();
+ assert.ok(groups.some(g=>g.includes('第四回')),'chapter four missing from the online index');
+ await page.keyboard.press('Escape');
+ await page.locator('dialog[open]').waitFor({state:'detached',timeout:20000});
+ await seekSection(page, 'c4-court');await reading();
  assert.equal(await page.locator('.game-map').getAttribute('data-scene-ready'),'c4_yamen');
  console.log(`${tag} chapter-four stage: c4_yamen`);
  await page.screenshot({path:`artifacts/${tag}-chapter04.png`,fullPage:true});
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-xue');await reading();
+ await seekSection(page, 'c4-xue');await reading();
  for(let i=0;i<20;i++){
   const src=await page.locator('.speaker-portrait img').getAttribute('src');
   if(src&&src.includes('xuepan-portrait')){console.log(`${tag} xuepan portrait:`,src);break;}
@@ -66,7 +70,7 @@ try{
  await page.getByRole('button',{name:'当前场景',exact:true}).click();
  // Book five happens across the street in 宁国府, so its overview tab opens the atlas on the
  // 宁国府 level — not the 荣国府 plan the reader is not standing in, and not a generic trail.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c5-niang');await reading();
+ await seekSection(page, 'c5-niang');await reading();
  await page.getByRole('button',{name:'宁国府总览',exact:true}).click();
  await page.locator('.world-map').waitFor({timeout:30000});
  assert.equal(await page.locator('.journey-map').count(),0,'book five must open the atlas, not a generic trail');
@@ -84,7 +88,7 @@ try{
  await page.screenshot({path:`artifacts/${tag}-chapter05-atlas.png`,fullPage:true});
  await page.getByRole('button',{name:'当前场景',exact:true}).click();
  // The estate overview is the chapter-three page; its thumbnails used to 404 in production.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('reunion');await reading();
+ await seekSection(page, 'reunion');await reading();
  await page.getByRole('button',{name:'荣国府总览',exact:true}).click();
  await page.locator('.world-map').waitFor({timeout:60000});
  await page.waitForFunction(()=>document.querySelectorAll('.world-location image[data-loaded=true]').length===10,undefined,{timeout:120000});
@@ -98,7 +102,7 @@ try{
 
  // The new playback controls: one switch that reads 自动 while the reader drives and
  // 暂停 while the story drives itself, and the master sound switch beside it.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c1-home');await reading();
+ await seekSection(page, 'c1-home');await reading();
  assert.equal(await page.getByRole('button',{name:'暂停',exact:true}).count(),0,'a separate pause button is still in the toolbar');
  await page.getByRole('button',{name:'自动',exact:true}).click();
  await page.waitForTimeout(300);
@@ -136,7 +140,7 @@ try{
 
  // Each of the four books has a piece of its own, and the stage still overrides it.
  const piece=async(section,expected)=>{
-  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(section);await reading();
+  await seekSection(page, section);await reading();
   await page.waitForFunction(name=>window.__audio&&window.__audio.current&&window.__audio.current.name===name,expected,{timeout:30000});
   console.log(`${tag} piece ${section}:`,expected);
  };

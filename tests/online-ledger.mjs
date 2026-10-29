@@ -10,6 +10,7 @@ import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdirSync,readFileSync} from 'node:fs';
 import {dismissPickup} from './lib/pickup.mjs';
+import { seekSection } from './lib/toc.mjs';
 
 const direct=process.env.ORIGIN_DIRECT==='1';
 const profile=process.env.ONLINE_PROFILE??(direct?'/tmp/wb-direct-ledger':'/tmp/wb-online-ledger');
@@ -37,13 +38,13 @@ const reading=async()=>{
 
 try{
  await page.goto('https://stone.yan.pub/',{waitUntil:'commit',timeout:120000});
- await page.waitForSelector('.chapter-select',{timeout:240000});
+ await page.waitForSelector('.toc-trigger',{timeout:240000});
  await reading();
 
  // Read enough of the book to unlock a good share of the ledger, including the
  // people entries (a person is transferred, so their row carries their portrait).
  for(const section of ['arrival','reunion','uncles','c4-court','c4-truth']){
-   await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(section);
+   await seekSection(page, section);
    await reading();
    for(let i=0;i<12;i++){
      await dismiss();

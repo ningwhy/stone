@@ -2,6 +2,7 @@ import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {readFileSync,mkdirSync} from 'node:fs';
 import {dismissPickup} from './lib/pickup.mjs';
+import { seekSection } from './lib/toc.mjs';
 /**
  * Chapter-four visual acceptance: the two new stages must render, the three new
  * Xue-family characters must appear with painted portraits, and the chapter-four
@@ -23,13 +24,13 @@ try{
  // The four stages of chapter four must all open and report their own scene id.
  const expected=[['c4-court','c4_yamen'],['c4-xue','capital'],['c4-hall','central'],['c4-pear','c4_lixiang']];
  for(const [section,scene] of expected){
-  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(section);await read();
+  await seekSection(page, section);await read();
   assert.equal(await page.locator('.game-map').getAttribute('data-scene-ready'),scene);
  }
  // The new Xue family must stand on the street stage with painted portraits.
  // Xue Pan and Aunt Xue both speak in the lane; Baochai never speaks in chapter four —
  // she is only described and shown standing — so her portrait is checked in the directory.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-xue');await read();
+ await seekSection(page, 'c4-xue');await read();
  const portraits={};
  for(let i=0;i<20;i++){
   const src=await page.locator('.speaker-portrait img').getAttribute('src');
@@ -52,7 +53,7 @@ try{
  await page.keyboard.press('Escape');
  // The court stage must show the case parties in turn: the magistrate first, then
  // the plaintiff who kneels before him.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-court');await read();
+ await seekSection(page, 'c4-court');await read();
  const seen=[];
  for(let i=0;i<12;i++){
   const src=await page.locator('.speaker-portrait img').getAttribute('src');
@@ -69,9 +70,9 @@ try{
  assert.equal(await page.locator('.world-location').count(),10);
  await page.screenshot({path:'artifacts/chapter04-overview.png',fullPage:true});
  await page.getByRole('button',{name:'当前场景',exact:true}).click();
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-pear');await read();
+ await seekSection(page, 'c4-pear');await read();
  await page.screenshot({path:'artifacts/chapter04-lixiang.png',fullPage:true});
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-court');await read();
+ await seekSection(page, 'c4-court');await read();
  await page.screenshot({path:'artifacts/chapter04-yamen.png',fullPage:true});
  assert.equal(errors.length,0,JSON.stringify(errors));
  console.log(`Passed: chapter four opens the court, the street, Rongxi Hall and the Xue courtyard; the Xue family and the two court parties show painted portraits; the estate overview serves as this book's map tab.`);

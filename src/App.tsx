@@ -6,6 +6,7 @@ import { cast, story, chapters, bookNames } from './story.ts';
 import type { ActorId } from './story.ts';
 import { JourneyMap } from './JourneyMap.tsx';
 import { Portrait } from './Portrait.tsx';
+import { Toc } from './Toc.tsx';
 import { LoadingScreen, RotateHint, SceneLoadingCard } from './LoadingScreen.tsx';
 import { prefetchCast, prefetchUpcoming } from './prefetch.ts';
 import { WorldMap, worldLocations, travelRoute, worldLocationFor, levelForScene, levelTabName } from './WorldMap.tsx';
@@ -19,7 +20,7 @@ import { ledgerEntries, loadStoredLedger, saveStoredLedger, unlockedLedger, ledg
 import type { LedgerEntry } from './ledger.ts';
 import { artImage } from './art.ts';
 
-type Modal = 'history'|'settings'|'source'|'atlas'|'cast'|ActorId|null;
+type Modal = 'history'|'settings'|'source'|'atlas'|'cast'|'toc'|ActorId|null;
 function LedgerRow({entry,got,label}:{entry:LedgerEntry;got:boolean;label:string}) {
   const seal=bookNames[entry.book]??`第${entry.book}回`;
   // 器物账挂器物图，人物账挂那个被转手的人的立绘——账簿里人也得有脸。
@@ -116,6 +117,7 @@ function CardTile({card,got}:{card:CardDef;got:boolean}) {
 
 function Icon({name}: {name:string}) {  const shapes:Record<string,string>={
     map:'M3 5 9 3l6 2 6-2v16l-6 2-6-2-6 2V5Zm6-2v16m6-14v16',
+    toc:'M4 5h16M4 12h16M4 19h10',
     book:'M4 4h6c2 0 2 1 2 2v15c0-2-1-3-3-3H4V4Zm16 0h-6c-2 0-2 1-2 2v15c0-2 1-3 3-3h5V4Z',
     compass:'m16 8-3 5-5 3 3-5 5-3Zm5 4a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z',
     arrow:'M5 12h14m-5-5 5 5-5 5',
@@ -339,7 +341,6 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   const portrait:ActorId=step.speaker==='narrator'?(state.actors.daiyu.visible?'daiyu':(Object.keys(cast) as ActorId[]).find(id=>state.actors[id].visible&&id!=='sedan')??'daiyu'):step.speaker;
   // 章回列表的已读标注：○ 没读过、◐ 读了一部分、● 读完。读过的节点数直接从 readLog 数出来。
   const readSet=useMemo(()=>new Set(state.readLog??[]),[state.readLog]);
-  const chapterMarks=useMemo(()=>{const marks=new Map<string,string>();for(const c of chapters){const nodes=story.filter(s=>s.chapter===c.id);const read=nodes.filter(s=>readSet.has(s.id)).length;marks.set(c.id,read===0?'○ 没读':read>=nodes.length?'● 已读':`◐ ${read}/${nodes.length}`);}return marks;},[readSet]);
   const progress=Math.round(state.index/(story.length-1)*100);
   const inMotion=state.status==='moving'||!!travel,ended=state.status==='ended';
   // The reader's own freeze of the stage. An open panel also pauses the performance,
@@ -357,7 +358,15 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
     <RotateHint/>
     <header className="app-header">
       <a className="brand" href="./" aria-label="红楼一隅首页"><span className="brand-seal">红</span><span>红楼一隅</span></a>
-      <select className="chapter-select" aria-label="选择剧情段落" value={step.chapter} onChange={e=>{const chapter=chapters.find(c=>c.id===e.target.value)!;setAutomatic(false);setTravel(null);engine.seek(chapter.start);}}>{[1,2,3,4,5,6].map(book=><optgroup label={bookNames[book]} key={book}>{chapters.filter(c=>c.book===book).map(c=><option value={c.id} key={c.id}>{chapterMarks.get(c.id)} {bookNames[book]} · {c.title}</option>)}</optgroup>)}</select>
+      {/* 目录：51 个段落塞进一个原生下拉，在手机上要划很久才能到第六回，
+          而且没法搜。换成一枚目录按钮，弹出的面板里按回分栏、全局搜索。 */}
+      <button className="toc-trigger" aria-label="打开目录" aria-haspopup="dialog" onClick={()=>setModal('toc')}>
+        <Icon name="toc"/>
+        <span className="toc-trigger-text">
+          <strong>{bookNames[chapters.find(c=>c.id===step.chapter)?.book??1]}</strong>
+          <small>{step.title}</small>
+        </span>
+      </button>
       <span className="reading-progress" title={`${state.index+1} / ${story.length}`}>{progress}%<progress max="100" value={progress} aria-label="前五回剧情进度"/></span>
       <nav className="playback-controls" aria-label="演出控制">
         {/* One switch, not three. It reads 自动 while the story is waiting for the reader
@@ -455,8 +464,9 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
         </div>
       </section>
     </div>}
-    <dialog ref={dialog} className={modal==='atlas'?(atlasTab==='ledger'?'is-ledger':'is-atlas'):''} onCancel={event=>{event.preventDefault();setModal(null);}} onClick={event=>{if(event.target===dialog.current)setModal(null);}}>
-      <div className="modal-header"><h2>{modal==='history'?'对白回看':modal==='settings'?'阅读设置':modal==='source'?'原文与改编':modal==='atlas'?'前五回 · 册页':modal==='cast'?'前五回 · 人物图鉴':character?.fullName}</h2><button className="icon-button" aria-label="关闭弹窗" onClick={()=>setModal(null)}><Icon name="close"/></button></div>
+    <dialog ref={dialog} className={modal==='atlas'?(atlasTab==='ledger'?'is-ledger':'is-atlas'):modal==='toc'?'is-toc':''} onCancel={event=>{event.preventDefault();setModal(null);}} onClick={event=>{if(event.target===dialog.current)setModal(null);}}>
+      <div className="modal-header"><h2>{modal==='history'?'对白回看':modal==='settings'?'阅读设置':modal==='source'?'原文与改编':modal==='atlas'?'前五回 · 册页':modal==='cast'?'前五回 · 人物图鉴':modal==='toc'?'目录':character?.fullName}</h2><button className="icon-button" aria-label="关闭弹窗" onClick={()=>setModal(null)}><Icon name="close"/></button></div>
+      {modal==='toc'&&<Toc readLog={readSet} current={step.chapter} onPick={section=>{setModal(null);setAutomatic(false);setTravel(null);engine.seek(section.start);}}/>}
       {modal==='history'&&<div className="history-list">{engine.readHistory().map(entry=><article key={entry.id}><span>{entry.speaker}<small>{entry.id}</small></span><p>{entry.text}</p><button className="text-button" onClick={()=>{setModal(null);setAutomatic(false);engine.seek(entry.id);}}><Icon name="reset"/>回到此处</button></article>)}</div>}
       {modal==='settings'&&<div className="settings-body"><p>{storageError||savedLabel}</p><div className="save-actions"><button className="text-button" onClick={save} disabled={inMotion}>保存</button><button className="text-button" onClick={()=>{setModal(null);load();}}>读取</button><button className="text-button" onClick={()=>{setModal(null);restart();}}>重玩</button><button className="text-button" onClick={()=>setModal('source')}>原文与改编</button><button className="text-button" onClick={()=>setModal('atlas')}>册页</button><button className="text-button" onClick={()=>setModal('cast')}>人物图鉴</button></div><label>人物行走速度<select value={state.speed} onChange={e=>engine.setSpeed(Number(e.target.value))}><option value="0.5">慢行 · 0.5 倍</option><option value="1">常速 · 1 倍</option><option value="2">快行 · 2 倍</option></select></label><label className="check-label"><input type="checkbox" checked={showGuides} onChange={e=>{setShowGuides(e.target.checked);sceneRef.current?.guides(e.target.checked);}}/>显示地图上的引导路线</label><div className="audio-settings"><span className="audio-settings-title">声音</span><label className="check-label"><input type="checkbox" checked={!muted} onChange={e=>{const on=e.target.checked;setMuted(!on);audio.setMuted(!on);}}/>开启全部声音</label><label>背景音乐<input type="range" min="0" max="100" disabled={muted} value={Math.round(audioPrefs.bgm*100)} onChange={e=>{const v=Number(e.target.value)/100;setAudioPrefs(p=>({...p,bgm:v}));audio.setPrefs({bgm:v});}}/></label><label>音效<input type="range" min="0" max="100" disabled={muted} value={Math.round(audioPrefs.sfx*100)} onChange={e=>{const v=Number(e.target.value)/100;setAudioPrefs(p=>({...p,sfx:v}));audio.setPrefs({sfx:v});}}/></label><p className="audio-hint">关掉总开关后音乐与音效同时静默，两个滑杆仍记住原来的音量；重新打开即恢复。音乐随场景变换：园林、街市、运河、夜、室内、太虚各一曲，每一回另有专属的底乐。首次点击页面后开始播放。</p></div><p>打开设置、人物信息或对白记录时，演出会暂停；关掉弹窗后继续。标题栏的「自动」按钮同时管着自动播放：点它开始自动往下读，再点它停下来。</p><p>进度在每条对白到达后自动保存，刷新页面会恢复。隐私浏览或存储限制可能使保存失败。</p></div>}
       {modal==='source'&&<div className="source-body"><span className="source-badge">{bookNames[step.source.chapter]} · 完整剧情改编</span><p>前五回覆盖石头来历、绛珠还泪、甄家兴衰、雨村仕途、冷子兴演说、黛玉入府全程，第四回雨村判案、薛家入京住进梨香院，第五回宁府会芳园与太虚幻境：宝玉随秦可卿入梦，警幻仙姑引览金陵十二钗册籍与红楼梦十二支。第五回 123 个节点接入宁府卧房、太虚幻境、薄命司与迷津三处 40×40 舞台。第六回自秦氏卧房接续：宝玉梦醒后随袭人回贾母处，视角转到千里之外的刘家庄。刘姥姥连宗旧起，代女婿狗儿进荣国府攀亲，经后门投到周瑞家的门下，被引至凤姐上房，得二十两银子与一吊钱而去。第六回 161 个节点，新建刘家庄与荣府后门至凤姐院两处 40×40 舞台，另复用宁府卧房、贾母院与宁荣街三处。梦境、回忆和转述均另作标识，人物不会因此出现在当下场景。</p><p>底本参考维基文库《红楼梦》第一至五回，正文已存入项目资料。除诗词和少量短句，页面文字为便于交互阅读的改写；空间布局、尺度与演出为设计补充。</p><p>当前节点：{step.id}；对应原文段落起句：“{step.source.paragraphLead}”。</p><p>地图均为 40×40 等距舞台。总览以列增为东、行增为南；西角门按西墙方案布置，黑油大门开在南墙偏东。西角门具体墙面是设计选择，原文明确的是去程出西角门、往东过正门、入黑油大门的顺序；回程门名未明示，本版选择由正门进入。原文中仅被提及、没有实际到访的地点不安排人物进入；第三回宝玉庙里还愿与贾政斋戒只作叙述。</p><p>美术由本地 ComfyUI 生成，经抠图与定位校准接入。服饰与建筑为原创视觉演绎，有形出场的人物均配有立绘与 Q 版图像；只在谈话中提及的家族成员保留为转述。</p></div>}

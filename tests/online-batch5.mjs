@@ -10,6 +10,7 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdirSync} from 'node:fs';
+import { seekSection, openToc } from './lib/toc.mjs';
 
 const direct=process.env.ORIGIN_DIRECT==='1';
 const profile=process.env.ONLINE_PROFILE??(direct?'/tmp/wb-direct-batch5':'/tmp/wb-online-batch5');
@@ -33,23 +34,26 @@ const reading=async()=>{
 
 try{
  await page.goto('https://stone.yan.pub/',{waitUntil:'commit',timeout:120000});
- await page.waitForSelector('.chapter-select',{timeout:240000});
+ await page.waitForSelector('.toc-trigger',{timeout:240000});
  await reading();
 
- // (4) read marks in the chapter list, checked before anything gets read.
- const marks=await page.locator('.chapter-select option').allTextContents();
- assert.ok(marks.length>0,'the chapter list is empty');
- assert.ok(marks.every(m=>/[○◐●]/.test(m)),'every chapter must carry a read mark');
- assert.ok(marks.some(m=>/○/.test(m)),'unread chapters must be marked as unread');
- assert.ok(marks.some(m=>/[◐●]/.test(m)),'read chapters must be marked as read');
- console.log(`${tag} chapter marks:`,JSON.stringify(marks.slice(0,4)));
+ // (4) read marks in the index, checked before anything gets read.
+ const toc=await openToc(page);
+ const marks=await toc.locator('.toc-card-mark').allTextContents();
+ assert.ok(marks.length>0,'the index is empty');
+ assert.ok(marks.every(m=>/[○◐●]/.test(m)),'every section must carry a read mark');
+ assert.ok(marks.some(m=>/○/.test(m)),'unread sections must be marked as unread');
+ assert.ok(marks.some(m=>/[◐●]/.test(m)),'read sections must be marked as read');
+ console.log(`${tag} section marks:`,JSON.stringify(marks.slice(0,4)));
+ await page.keyboard.press('Escape');
+ await page.locator('dialog[open]').waitFor({state:'detached',timeout:20000});
 
  // (2)+(3) the ledger grid and the lazy card art. The cards live in the 见闻 tab.
  // A place card unlocks as soon as one paragraph on that map has been read, so
  // reading a few different maps fills the album with enough cards to judge the
  // lazy loading on.
  for(const section of ['arrival','reunion','uncles']){
-  await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(section);
+  await seekSection(page, section);
   await reading();
  }
  await page.getByRole('button',{name:'背包',exact:true}).click();
@@ -120,7 +124,7 @@ try{
  await page.waitForTimeout(200);
  // 'arrival' opens on the capital street; two lines later the story steps onto
  // the 贾府 map — exactly the cut the reader described.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('arrival');
+ await seekSection(page, 'arrival');
  await reading();
  let raced=0,walked=0,unlockedWindows=0;
  // Sample every frame: the engine's own coordinates tell whether anybody moved,

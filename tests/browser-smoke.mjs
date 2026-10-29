@@ -2,6 +2,7 @@ import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {existsSync,mkdirSync,readFileSync} from 'node:fs';
 import {dismissPickup} from './lib/pickup.mjs';
+import { seekSection, openToc } from './lib/toc.mjs';
 const story=[1,2,3,4].flatMap(n=>JSON.parse(readFileSync(`design/chapter0${n}-story.json`,'utf8')));
 const ledgerNodes=new Set(JSON.parse(readFileSync('design/ledger.json','utf8')).entries.map(e=>e.node));
 const chapters=[...JSON.parse(readFileSync('design/chapter03-sections.json','utf8')),...JSON.parse(readFileSync('design/chapter04-sections.json','utf8'))];
@@ -21,12 +22,46 @@ async function fit(){const control=await page.getByRole('button',{name:'继续�
 async function next(skip=true){await dismissPickup(page);const before=await node();await page.getByRole('button',{name:'继续剧情',exact:true}).click();await page.waitForFunction(id=>document.querySelector('.node-label')?.textContent!==id,before);const arrived=await node();await dismissPickup(page,ledgerNodes.has(arrived));const b=page.getByRole('button',{name:'跳过移动',exact:true});if(skip&&await b.isVisible())await b.click();await reading();}
 try{
  await page.goto(process.env.TEST_URL??'http://127.0.0.1:5173');await reading();assert.equal(await node(),'C1-001');await fit();await page.screenshot({path:'artifacts/chapter-opening.png',fullPage:true});
- // 章回下拉标注已读：读过的那段带 ◐ 或 ●，没读过的带 ○。
+ // 目录标注已读：读过的那段带 ◐ 或 ●，没读过的带 ○。
  // 这条检查必须在读完之前——读完一部书之后所有段落都已读，就再也看不到未读标记了。
- const marks=await page.locator('.chapter-select option').allTextContents();
- assert.ok(marks.every(m=>/[○◐●]/.test(m)),'every chapter must carry a read mark');
- assert.ok(marks.some(m=>/[◐●]/.test(m)),'the chapters already read must be marked as read');
- assert.ok(marks.some(m=>/○/.test(m)),'the chapters not read yet must be marked as unread');
+ const toc=await openToc(page);
+ // 六回都在左侧列出；右栏只摊开当前那一回——这是索引该有的样子，
+ // 51 段一次铺开反而没人看得下去。
+ assert.deepEqual(await toc.locator('.toc-book-name').allTextContents(),['第一回','第二回','第三回','第四回','第五回','第六回']);
+ const marks=await toc.locator('.toc-card-mark').allTextContents();
+ assert.ok(marks.length>0,'the index lists no section');
+ assert.ok(marks.every(m=>/[○◐●]/.test(m)),'every section must carry a read mark');
+ assert.ok(marks.some(m=>/[◐●]/.test(m)),'the sections already read must be marked as read');
+ assert.ok(marks.some(m=>/○/.test(m)),'the sections not read yet must be marked as unread');
+ // 逐回翻过去：每一回都摊得开，而且段落数与设计表一致。
+ const expected=await page.evaluate(async()=>{const m=await import('/design/chapter01-sections.json');return m.default.length;});
+ for(const book of ['第二回','第三回','第四回','第五回','第六回']){
+  await toc.locator('.toc-book',{hasText:book}).click();
+  await page.waitForTimeout(120);
+  assert.ok(await toc.locator('.toc-card').count()>0,`${book} lists no section`);
+ }
+ assert.ok(expected>0,'the section sheet is empty');
+ // 搜一个只属于某回的词：跨回命中，不再需要从头划到底。
+ await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('梨香院');
+ await page.waitForTimeout(150);
+ const hits=await toc.locator('.toc-card').count();
+ assert.ok(hits>0,'searching a place must find its section');
+ const books=await toc.locator('.toc-group h3').allTextContents();
+ assert.equal(books.length,1,'a search that matches one book must show that book only');
+ // 选了第六回、搜一下再清空：书栏必须还在第六回，不能弹回当前所在的第一回。
+ await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('');
+ await page.waitForTimeout(150);
+ const kept=await toc.locator('.toc-book.active .toc-book-name').textContent();
+ assert.equal(kept,'第六回',`the chosen book must survive a search, got ${kept}`);
+ // 搜索框有内容时 Esc 只清搜索，空的时候 Esc 关弹窗。
+ await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('太虚');
+ await page.waitForTimeout(120);
+ await page.keyboard.press('Escape');
+ await page.waitForTimeout(120);
+ assert.equal(await toc.getByRole('searchbox',{name:'搜索剧情段落'}).inputValue(),'','Escape must clear the search box');
+ assert.equal(await page.locator('dialog[open]').count(),1,'Escape must not close the panel while the search has text');
+ await page.keyboard.press('Escape');
+ await page.locator('dialog[open]').waitFor({state:'detached',timeout:20000});
  const visited=new Set();
  for(let i=0;i<story.length;i++){
   assert.equal(await node(),story[i].id);const data=await saved();assert.equal(data.node,story[i].id);visited.add(data.state.sceneId);assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),206);
@@ -39,11 +74,11 @@ try{
   if(i<story.length-1)await next();
  }
  // The prequel gets its own scene atlas and every section can be selected.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c1-home');await reading();await page.getByRole('button',{name:'本回行迹',exact:true}).click();await page.locator('.journey-sites').waitFor();assert.equal(await page.locator('.journey-site').count(),6);await page.screenshot({path:'artifacts/prequel-journey.png',fullPage:true});await page.getByRole('button',{name:'当前场景',exact:true}).click(); await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('letter');await reading();while(await node()!=='END')await next();
+ await seekSection(page, 'c1-home');await reading();await page.getByRole('button',{name:'本回行迹',exact:true}).click();await page.locator('.journey-sites').waitFor();assert.equal(await page.locator('.journey-site').count(),6);await page.screenshot({path:'artifacts/prequel-journey.png',fullPage:true});await page.getByRole('button',{name:'当前场景',exact:true}).click(); await seekSection(page, 'letter');await reading();while(await node()!=='END')await next();
  // The walk stops at the old chapter-three finale, so its history stops there too.
  // That finale is no longer the end of the book: reloading offers to continue, not restart.
  assert.equal(visited.size,22);assert.equal((await saved()).state.history.length,242);await page.reload();await reading();assert.equal(await node(),'END');await page.getByRole('button',{name:'继续剧情',exact:true}).waitFor();
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(chapters[2].id);await reading();assert.equal(await node(),'N005');const height=(await page.locator('.map-panel').boundingBox()).height;
+ await seekSection(page, chapters[2].id);await reading();assert.equal(await node(),'N005');const height=(await page.locator('.map-panel').boundingBox()).height;
  await page.getByRole('button',{name:'继续剧情',exact:true}).click();await page.getByRole('button',{name:'跳过移动',exact:true}).waitFor();assert.equal((await page.locator('.map-panel').boundingBox()).height,height);await page.locator('.map-action-cue').waitFor();await page.screenshot({path:'artifacts/chapter-action.png',fullPage:true});
  await page.getByRole('button',{name:'暂停演出',exact:true}).click();await page.waitForTimeout(120);const paused=await canvasPixels();await page.waitForTimeout(200);assert.equal(await canvasPixels(),paused);await page.getByRole('button',{name:'继续演出',exact:true}).click();await reading();assert.equal(await node(),'N006');
 
@@ -74,7 +109,7 @@ try{
  await page.screenshot({path:'artifacts/ningguo-overview.png',fullPage:true});
  await page.getByRole('button',{name:'当前场景',exact:true}).click();
  // A real sequential boundary must animate along the estate roads; pause freezes the token.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(chapters[3].id);await reading();
+ await seekSection(page, chapters[3].id);await reading();
  while(await node()!=='F015')await next();
  await page.getByRole('button',{name:'继续剧情',exact:true}).click();await page.locator('[data-testid=world-travel-route]').waitFor();
  await page.getByRole('button',{name:'暂停演出',exact:true}).click();const travelPosition=await page.locator('.world-traveler').getAttribute('transform');await page.waitForTimeout(200);assert.equal(await page.locator('.world-traveler').getAttribute('transform'),travelPosition);
@@ -84,7 +119,7 @@ try{
 
  // One switch, two readings: the button reads 自动 while the reader drives and 暂停 while
  // the story drives itself. There is no second button that looks live and does nothing.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c1-home');await reading();
+ await seekSection(page, 'c1-home');await reading();
  const auto=page.getByRole('button',{name:'自动',exact:true});
  assert.equal(await page.getByRole('button',{name:'暂停',exact:true}).count(),0,'there is no separate pause button in the toolbar');
  await auto.click();
@@ -143,6 +178,8 @@ try{
  assert.ok(fillRatios.every(d=>d<=2),`the art must fill the card face, max gap ${Math.max(...fillRatios)}px`);
  // 卡图按可见性才加载：册页一次 36 张大图同屏解码会卡死页面。
  // 断言口径是「已挂上 src 的图」——没进视口的卡只有占位，没有 src。
+ // 卡图是异步挂 src 的：断言必须等第一张真的挂上，否则读到的是 0 而不是「在加载」。
+ await page.waitForFunction(()=>document.querySelectorAll('.card-gallery .card-art[src]').length>0,undefined,{timeout:15000});
  const loadedPics=await page.locator('.card-gallery .card-art[src]').count();
  assert.ok(loadedPics>=1,'the pictures in view must still load');
  assert.ok(loadedPics<36,`the album must not load all 36 pictures at once, got ${loadedPics}`);
@@ -196,7 +233,7 @@ try{
  assert.equal(await page.locator('.cast-gallery article').count(),45);
  assert.equal(await page.locator('.cast-gallery img').count(),45);
  await page.screenshot({path:'artifacts/cast-directory.png',fullPage:true});
- await page.locator('.cast-gallery article').filter({has:page.locator('strong',{hasText:'冷子兴'})}).getByRole('button',{name:'定位出场 →',exact:true}).click();await reading();assert.equal((await saved()).state.actors.leng.visible,true);assert.ok((await node()).startsWith('C2-'));await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('prologue');await reading();await next();await next();await next();assert.equal(await node(),'P004');
+ await page.locator('.cast-gallery article').filter({has:page.locator('strong',{hasText:'冷子兴'})}).getByRole('button',{name:'定位出场 →',exact:true}).click();await reading();assert.equal((await saved()).state.actors.leng.visible,true);assert.ok((await node()).startsWith('C2-'));await seekSection(page, 'prologue');await reading();await next();await next();await next();assert.equal(await node(),'P004');
  assert.match(await page.locator('.speaker-portrait img').getAttribute('src'),/^\/assets\/rongguo\/leng-portrait\.webp\?v=[a-f0-9]+$/);
  await page.screenshot({path:'artifacts/leng-zixing.png',fullPage:true});
  // 扬州一节的「总览」落在第一级天下；下钻 京都 → 京城 → 荣国府 才到凤姐院门口。
@@ -215,7 +252,7 @@ try{
  await page.getByRole('button',{name:'当前场景',exact:true}).click();
  // Book four also unfolds inside the estate: the same overview tab opens there, and the
  // Xue family courtyard is a place on the map with its own path into the lane spine.
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('c4-pear');await reading();
+ await seekSection(page, 'c4-pear');await reading();
  await page.getByRole('button',{name:'荣国府总览',exact:true}).click();await page.locator('.world-map').waitFor();
  await page.waitForFunction(()=>document.querySelector('.world-location.current')?.getAttribute('data-asset')==='estate-lixiang',undefined,{timeout:30000});
  await page.getByRole('button',{name:'查看梨香院地点',exact:true}).click();
@@ -223,13 +260,13 @@ try{
  await page.getByRole('button',{name:'从此处剧情开始 →',exact:true}).click();await reading();assert.equal(await node(),'C04-104');
  await page.screenshot({path:'artifacts/lixiang-overview.png',fullPage:true});
  await page.getByRole('button',{name:'当前场景',exact:true}).click();
- await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(chapters[6].id);await reading();await page.setViewportSize({width:1280,height:720});await page.waitForTimeout(120);await fit();await page.screenshot({path:'artifacts/chapter-laptop.png',fullPage:true});
+ await seekSection(page, chapters[6].id);await reading();await page.setViewportSize({width:1280,height:720});await page.waitForTimeout(120);await fit();await page.screenshot({path:'artifacts/chapter-laptop.png',fullPage:true});
  await page.setViewportSize({width:390,height:844});await page.waitForTimeout(120);
 // Portrait phones get a rotate invitation; dismiss it to verify the compact layout beneath.
 await page.locator('.rotate-hint').waitFor({timeout:4000}).catch(()=>{});
 const rotateDismiss=page.getByRole('button',{name:'仍要竖屏浏览'});
 if(await rotateDismiss.isVisible())await rotateDismiss.click();
-await fit();assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),246);await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption('night');await reading();assert.equal(await node(),'T001');await fit();await page.screenshot({path:'artifacts/chapter-mobile.png',fullPage:true});
+await fit();assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),246);await seekSection(page, 'night');await reading();assert.equal(await node(),'T001');await fit();await page.screenshot({path:'artifacts/chapter-mobile.png',fullPage:true});
  await page.reload();await reading();assert.equal(await node(),'T001');
 // 获得弹窗：清掉账簿存档后重读「交到手上」的节点，货品卡像捡道具一样弹出；
 // 收下后写入存档，回头再读同一段不再弹第二次。

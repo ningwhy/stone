@@ -1,5 +1,6 @@
 import {chromium} from 'playwright';
 import {existsSync,mkdirSync} from 'node:fs';
+import { seekSection } from './lib/toc.mjs';
 /**
  * Layout probe for the chapter-six 凤姐院 stage (c6_wangchui).
  *
@@ -50,7 +51,7 @@ const probe=()=>page.evaluate(()=>{
 try{
   await page.goto(process.env.TEST_URL??'http://127.0.0.1:5173');await read();
   for(const section of ['c6-backgate','c6-zhourui','c6-feng','c6-audience','c6-gift']){
-    await page.getByRole('combobox',{name:'选择剧情段落'}).selectOption(section);await read();
+    await seekSection(page, section);await read();
     const info=await probe();
     console.log(`\n=== ${section} (${info.scene}) zoom=${info.zoom.toFixed(2)} canvas=${info.canvas.w}x${info.canvas.h} ===`);
     console.log('actors(screen):',info.actors.map(a=>`${a.id}@(${a.col},${a.row}) z=${a.zone} s=(${a.screen.x},${a.screen.y})`).join(' | '));

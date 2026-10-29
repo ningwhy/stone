@@ -7,7 +7,7 @@
 | 文件或目录 | 职责 |
 | --- | --- |
 | `design/chapterNN-story.json` | 运行时剧情节点、台词、演出动作、原文追踪 |
-| `design/chapterNN-sections.json` | 段落下拉选项和各段起点 |
+| `design/chapterNN-sections.json` | 目录面板的段落项和各段起点 |
 | `src/story.ts` | 角色注册、动作类型、剧情拼接、段落和回目名称 |
 | `src/engine.ts` | 状态机、寻路调度、暂停/跳过、回放、存档验证 |
 | `src/model.ts` | TMJ 读取、格心投影、可行走网格、四邻格 A* |

@@ -3,6 +3,7 @@
 // 用法：node tests/c5-node-shots.mjs c5-scroll:4 c5-banquet:6
 import { chromium } from 'playwright';
 import { existsSync, mkdirSync } from 'node:fs';
+import { seekSection } from './lib/toc.mjs';
 const exe = process.env.CHROME_PATH || (existsSync('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome') ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : undefined);
 const browser = await chromium.launch({ headless: true, executablePath: exe });
 const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
@@ -30,7 +31,7 @@ const jobs = process.argv.slice(2).map(a => { const [s, n] = a.split(':'); retur
 const report = [];
 for (const { s, n } of jobs) {
   try {
-    await page.getByRole('combobox', { name: '选择剧情段落' }).selectOption(s);
+    await seekSection(page, s);
     await settle();
     for (let i = 0; i < n; i++) {
       await page.getByRole('button', { name: /继续剧情/ }).click();
