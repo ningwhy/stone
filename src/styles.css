@@ -337,16 +337,20 @@ dialog.is-ledger .atlas-body{padding:14px 25px 26px}
 .toc-trigger-text strong{font-family:"Songti SC",serif;font-size:13px;font-weight:500;letter-spacing:1px;color:#4a6247}
 .toc-trigger-text small{font-size:10px;color:#8b957e;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .toc-trigger:hover{filter:brightness(.96)}
-dialog.is-toc{width:min(980px,calc(100% - 30px));max-height:88vh}
-.toc-body{display:flex;flex-direction:column;min-height:0}
-.toc-top{display:flex;align-items:center;gap:16px;padding:14px 25px;border-bottom:1px solid #e0e4d4}
+/* 目录面板的滚动结构：dialog 是唯一决定高度的地方，左右两栏各自滚动。
+   原来 dialog 只有 max-height 没有确定高度，flex 链拿不到约束，
+   .toc-books / .toc-sections 被 stretch 成内容高度（实测 1054px），
+   overflow:auto 永远不触发——真正在滚的是 dialog 自己，左栏于是无法单独滑动。 */
+dialog.is-toc{width:min(980px,calc(100% - 30px));height:min(760px,88vh);max-height:92vh;display:flex;flex-direction:column;overflow:hidden}
+.toc-body{display:flex;flex-direction:column;min-height:0;flex:1;overflow:hidden}
+.toc-top{display:flex;align-items:center;gap:16px;padding:14px 25px;border-bottom:1px solid #e0e4d4;flex-shrink:0}
 .toc-search{flex:1;min-width:0;border:1px solid #cbd4be;background:#f4f6ea;border-radius:5px;padding:9px 13px;font-size:13px;color:#4f6350}
 .toc-search::placeholder{color:#a2ab93}
 .toc-progress{display:flex;flex-direction:column;align-items:flex-end;line-height:1.35;flex-shrink:0}
 .toc-progress strong{font-size:15px;color:#4a6247;font-family:"Songti SC",serif}
 .toc-progress small{font-size:10px;color:#8b957e}
-.toc-layout{display:flex;min-height:0;flex:1}
-.toc-books{flex-shrink:0;width:132px;border-right:1px solid #e0e4d4;padding:12px 10px;overflow:auto;display:flex;flex-direction:column;gap:5px}
+.toc-layout{display:flex;min-height:0;flex:1;overflow:hidden}
+.toc-books{flex-shrink:0;width:132px;border-right:1px solid #e0e4d4;padding:12px 10px;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;display:flex;flex-direction:column;gap:5px;min-height:0}
 .toc-book{display:flex;flex-direction:column;align-items:flex-start;gap:4px;border:1px solid transparent;background:transparent;border-radius:5px;padding:9px 11px;text-align:left;color:#6b7a62}
 .toc-book:hover{background:#f0f3e4}
 .toc-book.active{background:#e8eee0;border-color:#c2cfb4}
@@ -355,9 +359,25 @@ dialog.is-toc{width:min(980px,calc(100% - 30px));max-height:88vh}
 .toc-book-count{font-size:9px;color:#98a189}
 .toc-book-bar{display:block;width:100%;height:3px;background:#e2e7d6;border-radius:2px;overflow:hidden}
 .toc-book-bar i{display:block;height:100%;background:#8b9a77}
-.toc-sections{flex:1;min-width:0;overflow:auto;padding:16px 25px 24px}
-.toc-group+.toc-group{margin-top:22px}
-.toc-group h3{font-family:"Songti SC",serif;font-weight:500;font-size:16px;letter-spacing:2px;color:#4a6247;margin:0 0 11px;display:flex;align-items:baseline;gap:9px}
+.toc-sections{flex:1;min-width:0;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;padding:16px 25px 24px;scroll-padding-top:38px;position:relative}
+/* 吸顶的关键：分组外壳用 display:contents 溶解掉。
+   sticky 的包含块是「最近滚动祖先的最近块级祖先」——外壳在时是 .toc-group，
+   标题会跟着整组一起被推出视野，粘不住。contents 之后标题成了滚动列的
+   直接子元素，sticky 才对着右栏生效。
+   间距改由 .toc-grid 的上外边距承担（外壳不再产生盒子）。 */
+.toc-group{display:contents}
+/* 吸顶由脚本定位：标题绝对定位，位置由 Toc.tsx 按滚动位置逐帧算出来。
+   用 sticky 试过两轮都不行——sticky 的包含块是分组外壳，标题会跟着整组
+   被推出视野；display:contents 溶解外壳之后 sticky 能吸住了，可所有越线的
+   标题又都钉在同一处叠成一摞，sticky 自己不会「交接」。
+   绝对定位把标题从文档流里摘出来，所以要给它留一行等高占位。 */
+.toc-group-head{position:absolute;left:25px;right:25px;z-index:3;font-family:"Songti SC",serif;font-weight:500;font-size:16px;letter-spacing:2px;color:#4a6247;margin:0;display:flex;align-items:baseline;gap:9px;background:#f9f7ed;padding:6px 0 7px;box-shadow:0 1px 0 #e0e4d4;pointer-events:none}
+.toc-group-head small{font-size:10px;color:#98a189;letter-spacing:0}
+/* 标题被摘出文档流后留下的空位。 */
+.toc-group-slot{display:block;height:35px;margin-bottom:11px}
+/* 外壳溶解后没有盒子了，回目之间的间距由占位空位的上外边距承担。 */
+.toc-sections>.toc-group-slot{margin-top:0}
+.toc-sections>.toc-group-slot:not(:first-child){margin-top:22px}
 .toc-group h3 small{font-size:10px;color:#98a189;letter-spacing:0}
 .toc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:9px}
 .toc-card{position:relative;display:flex;flex-direction:column;gap:3px;border:1px solid #dde3d0;background:#faf9f1;border-radius:6px;padding:11px 13px 13px;text-align:left;color:#5c6d55;overflow:hidden}
@@ -377,13 +397,32 @@ dialog.is-toc{width:min(980px,calc(100% - 30px));max-height:88vh}
 .toc-card-bar{position:absolute;left:0;right:0;bottom:0;height:2px;background:#e8ecdd}
 .toc-card-bar i{display:block;height:100%;background:#8b9a77}
 .toc-empty{padding:40px 0;text-align:center;font-size:12px;color:#98a189}
+/* 吸底：面板最下面常驻的一行，写明「现在选的是哪一回」。
+   它不属于任何一栏，所以左栏右栏怎么滚它都在原地；
+   读者把所选回目划出视野后，这行是唯一还在的答案。 */
+.toc-foot{display:flex;align-items:center;gap:12px;flex-shrink:0;padding:11px 25px;border-top:1px solid #e0e4d4;background:#f3f5e9}
+.toc-foot-label{font-size:10px;color:#98a189;letter-spacing:2px;flex-shrink:0}
+.toc-foot-name{font-family:"Songti SC",serif;font-size:15px;font-weight:500;letter-spacing:1px;color:#3d5a3f;white-space:nowrap}
+.toc-foot-meta{font-size:10px;color:#8b957e;white-space:nowrap}
+.toc-foot-bar{display:block;flex:1;min-width:40px;max-width:220px;height:3px;background:#e2e7d6;border-radius:2px;overflow:hidden}
+.toc-foot-bar i{display:block;height:100%;background:#8b9a77}
+.toc-foot-jump{flex-shrink:0;border:1px solid #cbd4be;background:#faf9f1;border-radius:4px;padding:5px 11px;font-size:11px;color:#5f7357;white-space:nowrap}
+.toc-foot-jump:hover:not(:disabled){background:#eef1e2}
+.toc-foot-jump:disabled{opacity:.4;cursor:default}
 @media(max-width:1050px){.toc-trigger{max-width:210px}.toc-trigger-text small{display:none}}
 @media(max-width:700px){.toc-trigger{flex:1;max-width:calc(100% - 130px);border-left:0;padding:2px 4px}.toc-trigger-text strong{font-size:12px}.toc-trigger-text small{display:block;font-size:9px}
-  dialog.is-toc{width:calc(100% - 12px);max-height:92vh}
+  dialog.is-toc{width:calc(100% - 12px);height:auto;max-height:92vh}
   .toc-top{padding:11px 13px;gap:10px}.toc-search{font-size:12px;padding:8px 11px}
   .toc-layout{flex-direction:column}
-  .toc-books{width:auto;flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid #e0e4d4;padding:9px 12px;gap:6px}
+  /* 手机上两栏改成上下：书目变成横向一排，段落列表吃掉剩下的高度。
+     横向排列的书目条不滚（15 回数得下），要滚的是下面的段落列表。 */
+  .toc-books{width:auto;flex-direction:row;overflow-x:auto;overflow-y:hidden;border-right:0;border-bottom:1px solid #e0e4d4;padding:9px 12px;gap:6px;min-height:0}
   .toc-book{flex-shrink:0;min-width:88px;padding:7px 9px}
-  .toc-sections{padding:13px 13px 20px}
+  .toc-sections{padding:13px 13px 20px;scroll-padding-top:34px}
+  .toc-group h3{font-size:14px;padding:5px 0 6px}
   .toc-grid{grid-template-columns:1fr 1fr;gap:7px}
-  .toc-card{padding:9px 10px 11px}.toc-card strong{font-size:12px;padding-right:18px}.toc-card small{font-size:9px}}
+  .toc-card{padding:9px 10px 11px}.toc-card strong{font-size:12px;padding-right:18px}.toc-card small{font-size:9px}
+  /* 吸底行在窄屏上排两行：回目名独占一行，进度与按钮下一行。 */
+  .toc-foot{flex-wrap:wrap;gap:6px 10px;padding:9px 13px}
+  .toc-foot-name{font-size:14px}
+  .toc-foot-bar{max-width:none;order:3;flex-basis:100%}}

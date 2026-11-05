@@ -1,14 +1,18 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { buildToc, searchToc, tocMark, nodeActors } from '../src/toc.ts';
-import { chapters, story, cast } from '../src/story.ts';
+import { chapters, story, cast, bookNames } from '../src/story.ts';
 
 const { books } = buildToc([]);
 const flat = books.flatMap(book => book.sections);
 const ids = (needle: string) => searchToc(books, needle).flatMap(group => group.entries.map(entry => entry.id));
+// 回目名从数据实读：写死成九回的话，每补一回就要改一次断言，改漏了就会把
+// 「新的一回没进目录」这件事掩盖过去。
+const expectedBooks = [...new Set(chapters.map(candidate => candidate.book))]
+  .sort((a, b) => a - b).map(book => bookNames[book]);
 
-test('目录按回分组，六回齐全，每段都归到正确的回', () => {
-  assert.deepEqual(books.map(book => book.name), ['第一回','第二回','第三回','第四回','第五回','第六回']);
+test('目录按回分组，每一回齐全，每段都归到正确的回', () => {
+  assert.deepEqual(books.map(book => book.name), expectedBooks);
   assert.equal(flat.length, chapters.length, 'every section must appear in the index');
   assert.equal(new Set(flat.map(entry => entry.id)).size, chapters.length, 'no section may appear twice');
   for (const entry of flat) {
@@ -40,7 +44,7 @@ test('搜索能命中人物：placeholder 承诺「搜人物」，人物就必�
   // 要判的是「她在哪一回真的在台上」，不是「哪一回提到她」。
   const onStage = flat.filter(entry => entry.actors.includes('宝钗')).map(entry => entry.id);
   assert.ok(onStage.length > 0, '宝钗 must be on stage somewhere');
-  assert.ok(onStage.every(id => id.startsWith('c4-') || id.startsWith('c5-')), '宝钗 belongs to the fourth and fifth books');
+  assert.ok(onStage.every(id => id.startsWith('c4-') || id.startsWith('c5-') || id.startsWith('c7-') || id.startsWith('c8-')), '宝钗 belongs to the fourth, fifth, seventh and eighth books');
   assert.ok(onStage.some(id => id.startsWith('c4-')), 'she is on stage in the fourth book');
   // 刘姥姥只出现在第六回。
   const onStageLiu = flat.filter(entry => entry.actors.includes('刘姥姥')).map(entry => entry.id);

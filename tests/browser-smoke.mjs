@@ -1,12 +1,26 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
-import {existsSync,mkdirSync,readFileSync} from 'node:fs';
+import {existsSync,mkdirSync,readFileSync,readdirSync} from 'node:fs';
 import {dismissPickup} from './lib/pickup.mjs';
 import { seekSection, openToc } from './lib/toc.mjs';
 const story=[1,2,3,4].flatMap(n=>JSON.parse(readFileSync(`design/chapter0${n}-story.json`,'utf8')));
-const ledgerNodes=new Set(JSON.parse(readFileSync('design/ledger.json','utf8')).entries.map(e=>e.node));
+const ledgerEntries=JSON.parse(readFileSync('design/ledger.json','utf8')).entries;
+const ledgerNodes=new Set(ledgerEntries.map(e=>e.node));
+// 同地图数一样：账簿笔数从数据实读，写死的话补回目会把「新账没收进背包」掩盖过去。
+const ledgerTotal=ledgerEntries.length;
 const chapters=[...JSON.parse(readFileSync('design/chapter03-sections.json','utf8')),...JSON.parse(readFileSync('design/chapter04-sections.json','utf8'))];
 const chrome='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+// 册页「地图」页逐张列出 maps/ 下的每一张舞台，数量得跟着地图走：写死数字的话，
+// 每加一回就要改一次断言，改漏了就会把「新地图没进册页」这件事掩盖过去。
+const mapCount=readdirSync('maps').filter(f=>f.endsWith('.tmj')).length;
+// 人物图鉴列出的是每一个画了立绘的人：数字从 manifest 实读，写死 51 的话，
+// 每新增一批人物就要改一次断言，改漏了就会把「新人物没进图鉴」这件事掩盖过去。
+const castCount=Object.keys(JSON.parse(readFileSync('public/assets/rongguo/manifest.json')).assets).filter(k=>k.endsWith('-portrait')).length;
+// 回目名也从数据实读：目录左侧那一列写死成九回的话，补一回就要改一次断言，
+// 改漏了就会把「新的一回没列进目录」这件事掩盖过去。
+const bookCount=readdirSync('design').filter(f=>/^chapter\d+-sections\.json$/.test(f)).length;
+const CN=['零','一','二','三','四','五','六','七','八','九','十'];
+const allBooks=Array.from({length:bookCount},(_,i)=>i+1<=10?`第${CN[i+1]}回`:`第十${CN[i-9]}回`);
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||(existsSync(chrome)?chrome:undefined)});
 const context=await browser.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'});
 const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});mkdirSync('artifacts',{recursive:true});
@@ -25,17 +39,87 @@ try{
  // 目录标注已读：读过的那段带 ◐ 或 ●，没读过的带 ○。
  // 这条检查必须在读完之前——读完一部书之后所有段落都已读，就再也看不到未读标记了。
  const toc=await openToc(page);
- // 六回都在左侧列出；右栏只摊开当前那一回——这是索引该有的样子，
- // 51 段一次铺开反而没人看得下去。
- assert.deepEqual(await toc.locator('.toc-book-name').allTextContents(),['第一回','第二回','第三回','第四回','第五回','第六回']);
+ // 每一回都在左侧列出；右栏只摊开当前那一回——这是索引该有的样子，
+ // 88 段一次铺开反而没人看得下去。
+ assert.deepEqual(await toc.locator('.toc-book-name').allTextContents(),allBooks);
  const marks=await toc.locator('.toc-card-mark').allTextContents();
  assert.ok(marks.length>0,'the index lists no section');
  assert.ok(marks.every(m=>/[○◐●]/.test(m)),'every section must carry a read mark');
  assert.ok(marks.some(m=>/[◐●]/.test(m)),'the sections already read must be marked as read');
  assert.ok(marks.some(m=>/○/.test(m)),'the sections not read yet must be marked as unread');
+ // 面板的滚动结构：dialog 不再滚动，左右两栏各自滚动。
+ // 原来 dialog 只有 max-height，flex 链拿不到确定高度，两栏被撑到内容高度
+ // （实测 1054px），overflow:auto 永远不触发——真正在滚的是 dialog 自己，
+ // 于是左栏无法单独滑动。判据是：dialog 自身不可滚，左栏可滚。
+ const scrollShape=await page.evaluate(()=>{
+  const dlg=document.querySelector('dialog[open]'),books=document.querySelector('.toc-books'),secs=document.querySelector('.toc-sections');
+  return {dialogScrolls:dlg.scrollHeight>dlg.clientHeight,booksScrolls:books.scrollHeight>books.clientHeight,secsScrolls:secs.scrollHeight>secs.clientHeight};
+ });
+ assert.ok(!scrollShape.dialogScrolls,'the dialog itself must not scroll — the two columns do');
+ assert.ok(scrollShape.booksScrolls,'the book column must scroll on its own');
+ // 左栏真的能滑：把鼠标放在左栏上滚滚轮，只有左栏的 scrollTop 变。
+ const wheelBefore=await page.evaluate(()=>document.querySelector('.toc-books').scrollTop);
+ const booksBox=await page.locator('.toc-books').boundingBox();
+ await page.mouse.move(booksBox.x+booksBox.width/2,booksBox.y+booksBox.height/2);
+ await page.mouse.wheel(0,300);await page.waitForTimeout(250);
+ const wheelAfter=await page.evaluate(()=>({books:document.querySelector('.toc-books').scrollTop,dialog:document.querySelector('dialog[open]').scrollTop,sections:document.querySelector('.toc-sections').scrollTop}));
+ assert.ok(wheelAfter.books>wheelBefore,`the book column must scroll by itself, got ${wheelAfter.books}`);
+ assert.equal(wheelAfter.dialog,0,'the dialog must not scroll while the book column does');
+ assert.equal(wheelAfter.sections,0,'the section column must not scroll while the book column does');
+ await page.evaluate(()=>{document.querySelector('.toc-books').scrollTop=0;});
+ // 吸底：面板最下面那一行常驻，写明所选回目。
+ const foot=await page.locator('.toc-foot').textContent();
+ assert.match(foot,/所选回目/,'the bottom bar must name the chosen book');
+ assert.match(foot,new RegExp(allBooks[0]),'the bottom bar must name the chosen book by name');
+ const footBox=await page.locator('.toc-foot').boundingBox(),dlgBox=await page.locator('dialog[open]').boundingBox();
+ assert.ok(footBox.y+footBox.height<=dlgBox.y+dlgBox.height+1,'the bottom bar must sit inside the panel');
+ // 吸顶：右栏的回目标题钉在栏顶，滚到哪儿都不离开。
+ // 跨回搜索才会出现多组标题，交接也只在多组时才有意义。
+ await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('宝玉');
+ await page.waitForTimeout(400);
+ const sticky=await page.evaluate(async()=>{
+  const secs=document.querySelector('.toc-sections');
+  const samples=[];
+  for(const frac of [0.35,0.5,0.65]){
+   secs.scrollTop=Math.floor((secs.scrollHeight-secs.clientHeight)*frac);
+   await new Promise(r=>setTimeout(r,350));
+   const rail=secs.getBoundingClientRect().top+parseFloat(getComputedStyle(secs).paddingTop||'0');
+   const heads=[...document.querySelectorAll('.toc-group-head')].map(h=>{const r=h.getBoundingClientRect();return {top:r.top,bottom:r.bottom,txt:h.textContent};});
+   // 交接的不变量：栏顶那一行必须始终被标题占着（读者不会失去位置），
+   // 且顶部区域不得有任何两个标题互相压住。交接途中活跃标题正让位上移、
+   // 下一个正滚进来，两者边缘相接，所以判据是「栏顶被覆盖」而不是「顶边对齐」。
+   const covering=heads.filter(h=>h.top<=rail&&h.bottom>rail);
+   // 交接处不能叠成一摞：顶部区域里的标题必须边缘相接，不得互相压住。
+   const near=heads.filter(h=>h.bottom>rail-2&&h.top<rail+80);
+   let overlap=false;
+   // 交接处允许 1px 的亚像素误差：判据是「不得互相压住」，
+   // 而不是「不得有一像素的重合」。
+   for(let i=0;i<near.length;i++)for(let j=i+1;j<near.length;j++)if(near[i].top<near[j].bottom-2&&near[j].top<near[i].bottom-2)overlap=true;
+   samples.push({frac,coveringCount:covering.length,coveringText:covering.map(h=>h.txt),overlap,near:near.map(h=>`${h.txt} ${Math.round(h.top)}~${Math.round(h.bottom)}`)});
+  }
+  return samples;
+ });
+ for(const s of sticky){
+  assert.equal(s.coveringCount,1,`exactly one heading must cover the rail at ${s.frac}, got ${s.coveringCount} (${s.coveringText})`);
+  assert.ok(!s.overlap,`the headings must hand over, not pile up at ${s.frac}: ${s.near.join(' / ')}`);
+ }
+ await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('');
+ await page.waitForTimeout(300);
+ // 单回模式下只有一个标题，它必须一直钉在栏顶。
+ await toc.locator('.toc-book',{hasText:allBooks[14]}).click();
+ await page.waitForTimeout(300);
+ const single=await page.evaluate(async()=>{
+  const secs=document.querySelector('.toc-sections');
+  const head=document.querySelector('.toc-group-head');
+  const rail=secs.getBoundingClientRect().top+parseFloat(getComputedStyle(secs).paddingTop||'0');
+  const at=[];
+  for(const frac of [0,0.5,1]){secs.scrollTop=Math.floor((secs.scrollHeight-secs.clientHeight)*frac);await new Promise(r=>setTimeout(r,250));at.push(Math.round(head.getBoundingClientRect().top-rail));}
+  return at;
+ });
+ assert.ok(single.every(d=>Math.abs(d)<=2),`the heading must stay at the rail, offsets ${single.join('/')}`);
  // 逐回翻过去：每一回都摊得开，而且段落数与设计表一致。
  const expected=await page.evaluate(async()=>{const m=await import('/design/chapter01-sections.json');return m.default.length;});
- for(const book of ['第二回','第三回','第四回','第五回','第六回']){
+ for(const book of allBooks.slice(1)){
   await toc.locator('.toc-book',{hasText:book}).click();
   await page.waitForTimeout(120);
   assert.ok(await toc.locator('.toc-card').count()>0,`${book} lists no section`);
@@ -47,7 +131,15 @@ try{
  const hits=await toc.locator('.toc-card').count();
  assert.ok(hits>0,'searching a place must find its section');
  const books=await toc.locator('.toc-group h3').allTextContents();
- assert.equal(books.length,1,'a search that matches one book must show that book only');
+ // 梨香院第四回（薛家迁入）、第七回（送宫花）与第八回（金莺微露意）都有，命中必须按回分组、按书序排。
+ // 分组标题带着段数（"第四回2 段"），取回目名要用正则整段抠——原来按 slice(0,3) 取，
+ // 遇上「第十一回」只会拿到「第十一」，命中回一多就对不上。
+ const bookNames=(await toc.locator('.toc-group h3').allTextContents()).map(t=>t.match(/^第[一二三四五六七八九十]+回/)[0]);
+ assert.ok(bookNames.includes('第四回'),`梨香院 must find the fourth book, got ${books}`);
+ assert.ok(bookNames.includes('第七回'),`梨香院 must find the seventh book, got ${books}`);
+ const order=bookNames.map(b=>allBooks.indexOf(b));
+ assert.ok(order.every(i=>i>=0),`a matched book is not in the index: ${bookNames}`);
+ assert.deepEqual(order,[...order].sort((a,b)=>a-b),'the matched books stay in reading order');
  // 搜人名：搜索框写着「搜段落、人物或地点」，人物就必须搜得到。
  // 「宝钗」不出现在任何段落标题里，只能靠在场人物命中——这条断言守的就是它。
  await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('宝钗');
@@ -65,11 +157,11 @@ try{
  await page.waitForTimeout(150);
  assert.equal(await toc.locator('.toc-card').count(),0,'a name absent from the story must find nothing');
  assert.ok(await toc.locator('.toc-empty').count()>0,'an empty result must say so');
- // 选了第六回、搜一下再清空：书栏必须还在第六回，不能弹回当前所在的第一回。
+ // 选了最后一回、搜一下再清空：书栏必须还在那一回，不能弹回当前所在的第一回。
  await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('');
  await page.waitForTimeout(150);
  const kept=await toc.locator('.toc-book.active .toc-book-name').textContent();
- assert.equal(kept,'第六回',`the chosen book must survive a search, got ${kept}`);
+ assert.equal(kept,allBooks.at(-1),`the chosen book must survive a search, got ${kept}`);
  // 搜索框有内容时 Esc 只清搜索，空的时候 Esc 关弹窗。
  await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('太虚');
  await page.waitForTimeout(120);
@@ -173,7 +265,7 @@ try{
  await page.getByRole('tab',{name:'地图'}).click(); // 复位页签，后面的册页断言默认从地图起
  await page.keyboard.press('Escape');
 
- await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'册页',exact:true}).click();assert.equal(await page.locator('.atlas-body article').count(),27);
+ await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'册页',exact:true}).click();assert.equal(await page.locator('.atlas-body article').count(),mapCount);
  // 见闻标签：32 张卡（22 地志 + 6 金句 + 4 信物），读过的部分已入册，收集数与页签一致。
  await page.getByRole('tab',{name:/见闻/}).click();
  assert.equal(await page.locator('.card-gallery .card-item').count(),36,'the album must list every card');
@@ -202,10 +294,11 @@ try{
  assert.ok(loadedPics<36,`the album must not load all 36 pictures at once, got ${loadedPics}`);
  const pendingPics=await page.locator('.card-gallery .card-thumb .card-art-placeholder').count();
  assert.ok(pendingPics>0,'the pictures outside the view must wait for their turn');
- // 账簿标签：24 笔流转（银两、衣物、物件、人、人情），页签计数与实际入账一致。
- await page.getByRole('tab',{name:/账簿/}).click();
- assert.equal(await page.locator('.ledger-book .ledger-row').count(),24,'the ledger must list every transfer');
- const ledgerShown=Number((await page.getByRole('tab',{name:/账簿/}).textContent()).match(/(\d+)\/24/)[1]);
+// 账簿标签：每一笔流转（银两、衣物、物件、人、人情），页签计数与实际入账一致。
+await page.getByRole('tab',{name:/账簿/}).click();
+assert.equal(await page.locator('.ledger-book .ledger-row').count(),ledgerTotal,'the ledger must list every transfer');
+const ledgerShown=Number((await page.getByRole('tab',{name:/账簿/}).textContent()).match(/(\d+)\/(\d+)/)[1]);
+assert.equal(Number((await page.getByRole('tab',{name:/账簿/}).textContent()).match(/(\d+)\/(\d+)/)[2]),ledgerTotal,'the tab total must match the ledger data');
  assert.equal(await page.locator('.ledger-book .ledger-row.unlocked').count(),ledgerShown,'the ledger tab count must equal its unlocked rows');
  assert.ok(await page.locator('.ledger-people button').count()>=8,'the ledger must name everyone with a balance');
  await page.locator('.ledger-people button').filter({hasText:'贾雨村'}).click();
@@ -242,13 +335,13 @@ try{
  await page.locator('.ledger-people button').filter({hasText:'英莲'}).click();
  assert.match(await page.locator('.ledger-book h3').textContent(),/英莲的流转链/);
  assert.equal(await page.locator('.ledger-book .ledger-row').count(),3,'the chain lists every transfer of one item');
- await page.getByRole('tab',{name:'地图'}).click();assert.equal(await page.locator('.atlas-body article').count(),27);
+ await page.getByRole('tab',{name:'地图'}).click();assert.equal(await page.locator('.atlas-body article').count(),mapCount);
  await page.keyboard.press('Escape');
 
  // A complete painted cast directory makes early characters discoverable after resuming.
  await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('button',{name:'人物图鉴',exact:true}).click();
- assert.equal(await page.locator('.cast-gallery article').count(),45);
- assert.equal(await page.locator('.cast-gallery img').count(),45);
+ assert.equal(await page.locator('.cast-gallery article').count(),castCount);
+ assert.equal(await page.locator('.cast-gallery img').count(),castCount);
  await page.screenshot({path:'artifacts/cast-directory.png',fullPage:true});
  await page.locator('.cast-gallery article').filter({has:page.locator('strong',{hasText:'冷子兴'})}).getByRole('button',{name:'定位出场 →',exact:true}).click();await reading();assert.equal((await saved()).state.actors.leng.visible,true);assert.ok((await node()).startsWith('C2-'));await seekSection(page, 'prologue');await reading();await next();await next();await next();assert.equal(await node(),'P004');
  assert.match(await page.locator('.speaker-portrait img').getAttribute('src'),/^\/assets\/rongguo\/leng-portrait\.webp\?v=[a-f0-9]+$/);
@@ -302,5 +395,5 @@ await page.evaluate(()=>window.__mapScene.engine.seek('C1-033'));
 await page.waitForTimeout(500);
 assert.equal(await page.locator('.pickup-overlay').count(),0,'collected goods do not pop twice');
 await page.evaluate(()=>localStorage.setItem('honglou-five-six-chapters:v5','{bad'));await page.reload();await reading();assert.equal(await node(),'C1-001');
- assert.equal(errors.length,0,JSON.stringify(errors));console.log('Passed: all 354 nodes, twenty-two maps, complete history, chapter 1–4 selection, cross-scene save/reload, offscreen reveal, natural movement, pause, settings, atlas, stable map area, minimum readable sprites/labels, zoom hit targets, overview browsing, paused estate travel, controls visible at 1440×900 / 1280×720 / 390×844, corrupt-save recovery.');
+ assert.equal(errors.length,0,JSON.stringify(errors));console.log(`Passed: all ${story.length} nodes, ${mapCount} maps, complete history, chapter 1–4 selection, cross-scene save/reload, offscreen reveal, natural movement, pause, settings, atlas, stable map area, minimum readable sprites/labels, zoom hit targets, overview browsing, paused estate travel, controls visible at 1440×900 / 1280×720 / 390×844, corrupt-save recovery.`);
 }catch(e){console.error('Browser errors:',errors);console.error((await page.locator('body').innerText()).slice(0,3500));await page.screenshot({path:'artifacts/browser-failure.png',fullPage:true});throw e;}finally{await context.close();await browser.close();}
