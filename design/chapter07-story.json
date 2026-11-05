@@ -1,0 +1,710 @@
+[
+ {
+  "chapter": "c7-xue",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "entry",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "话说周瑞家的送了刘姥姥去后，便上来回王夫人话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-001",
+  "speaker": "narrator",
+  "text": "周瑞家的送罢刘姥姥，来回王夫人话，却知王夫人往梨香院薛姨妈处说话去了，便过东院前来。",
+  "title": "往梨香院",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "entry"
+   }
+  ]
+ },
+ {
+  "chapter": "c7-xue",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "entry",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "话说周瑞家的送了刘姥姥去后，便上来回王夫人话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-002",
+  "speaker": "narrator",
+  "text": "刚至院前，听见房里一阵笑声，却是贾琏的声音；平儿拿了大铜盆出来，叫丰儿舀水进去。",
+  "title": "院前听得",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "zhou_rui",
+    "via": [
+     "entry",
+     "yard"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c7-xue",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "entry",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "话说周瑞家的送了刘姥姥去后，便上来回王夫人话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-003",
+  "speaker": "xueyima",
+  "text": "薛姨妈见周瑞家的，拿出十二支宫里的新鲜纱堆花儿，道：“这是宫里头的新鲜样法，白放着可惜了儿的，何不给他们姊妹们戴去。”",
+  "title": "托花",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xueyima",
+    "at": "xueyima"
+   },
+   {
+    "type": "show",
+    "actor": "wang",
+    "at": "wang"
+   },
+   {
+    "type": "show",
+    "actor": "baochai",
+    "at": "baochai"
+   }
+  ]
+ },
+ {
+  "chapter": "c7-xue",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "entry",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "话说周瑞家的送了刘姥姥去后，便上来回王夫人话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-004",
+  "speaker": "wang",
+  "text": "王夫人道：“留着给宝丫头戴罢，又想着他们作什么。”",
+  "title": "王夫人说",
+  "actions": []
+ },
+ {
+  "chapter": "c7-xue",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "entry",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "话说周瑞家的送了刘姥姥去后，便上来回王夫人话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-005",
+  "speaker": "xueyima",
+  "text": "薛姨妈道：“姨娘不知道，宝丫头古怪着呢，他从来不爱这些花儿粉儿的。”",
+  "title": "宝钗不戴花",
+  "actions": []
+ },
+ {
+  "chapter": "c7-xue",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "entry",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "话说周瑞家的送了刘姥姥去后，便上来回王夫人话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-006",
+  "speaker": "xueyima",
+  "text": "薛姨妈便分派：“你家的三位姑娘，每人一对；剩下六枝，送林姑娘两枝，那四枝给了凤哥罢。”",
+  "title": "分派",
+  "actions": []
+ },
+ {
+  "chapter": "c7-xue",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "entry",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "话说周瑞家的送了刘姥姥去后，便上来回王夫人话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-007",
+  "speaker": "zhou_rui",
+  "text": "周瑞家的答应了，拿了匣子出来，问金钏儿那香菱是谁；正说时，香菱笑嘻嘻走来。（香菱待立绘，本轮以旁白带过）",
+  "title": "问香菱",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "zhou_rui",
+    "via": [
+     "yard",
+     "zhou"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c7-san",
+  "scene": "c7_sanchun",
+  "place": "三春院 · 迎春探春惜春",
+  "focus": "yingchun",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "周瑞家的因问智能儿：“你是什么时候来的？你师父那秃歪剌往那里去了？”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-010",
+  "speaker": "narrator",
+  "text": "周瑞家的往三春院来，迎春、探春正在窗下围棋，便将花送上。",
+  "title": "送迎春探春",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "zhou"
+   },
+   {
+    "type": "show",
+    "actor": "yingchun",
+    "at": "yingchun"
+   },
+   {
+    "type": "show",
+    "actor": "tanchun",
+    "at": "tanchun"
+   }
+  ]
+ },
+ {
+  "chapter": "c7-san",
+  "scene": "c7_sanchun",
+  "place": "三春院 · 迎春探春惜春",
+  "focus": "yingchun",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "周瑞家的因问智能儿：“你是什么时候来的？你师父那秃歪剌往那里去了？”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-011",
+  "speaker": "yingchun",
+  "text": "迎春、探春忙住了棋，都欠身道谢。",
+  "title": "道谢",
+  "actions": []
+ },
+ {
+  "chapter": "c7-san",
+  "scene": "c7_sanchun",
+  "place": "三春院 · 迎春探春惜春",
+  "focus": "yingchun",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "周瑞家的因问智能儿：“你是什么时候来的？你师父那秃歪剌往那里去了？”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-012",
+  "speaker": "tanchun",
+  "text": "探春笑问：“这花却好，只是我屋里没有这么个体面东西插他。”",
+  "title": "探春笑问",
+  "actions": []
+ },
+ {
+  "chapter": "c7-san",
+  "scene": "c7_sanchun",
+  "place": "三春院 · 迎春探春惜春",
+  "focus": "yingchun",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "周瑞家的因问智能儿：“你是什么时候来的？你师父那秃歪剌往那里去了？”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-013",
+  "speaker": "narrator",
+  "text": "又说一回闲话，往惜春处来；惜春正同水月庵智能儿一处顽笑。",
+  "title": "往惜春处",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xichun",
+    "at": "xichun"
+   },
+   {
+    "type": "hide",
+    "actor": "yingchun"
+   },
+   {
+    "type": "hide",
+    "actor": "tanchun"
+   }
+  ]
+ },
+ {
+  "chapter": "c7-san",
+  "scene": "c7_sanchun",
+  "place": "三春院 · 迎春探春惜春",
+  "focus": "yingchun",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "周瑞家的因问智能儿：“你是什么时候来的？你师父那秃歪剌往那里去了？”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-014",
+  "speaker": "xichun",
+  "text": "惜春笑道：“我这里正和智能儿说，我明儿也剃了头同他作姑子去呢，可巧又送了花儿来；若剃了头，可把这花儿戴在那里呢。”",
+  "title": "惜春玩笑",
+  "actions": []
+ },
+ {
+  "chapter": "c7-san",
+  "scene": "c7_sanchun",
+  "place": "三春院 · 迎春探春惜春",
+  "focus": "yingchun",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "周瑞家的因问智能儿：“你是什么时候来的？你师父那秃歪剌往那里去了？”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-015",
+  "speaker": "zhou_rui",
+  "text": "周瑞家的笑说：“你这小嘴，越发刁了。”便将花递与惜春。",
+  "title": "递花",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "xichun"
+   },
+   {
+    "type": "move",
+    "actor": "zhou_rui",
+    "via": [
+     "zhou",
+     "room"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c7-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "送至贾母处，凤姐正与王夫人说闲话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-020",
+  "speaker": "narrator",
+  "text": "周瑞家的来至凤姐院，凤姐正与平儿说闲话。（贾琏在房中戏耍，本轮以旁白带过，不置角色于场上）",
+  "title": "来至凤姐院",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "platform"
+   },
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c7-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "送至贾母处，凤姐正与王夫人说闲话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-021",
+  "speaker": "feng",
+  "text": "凤姐听完周瑞家的来意，便命平儿将花儿收了。",
+  "title": "凤姐命收",
+  "actions": []
+ },
+ {
+  "chapter": "c7-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "送至贾母处，凤姐正与王夫人说闲话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-022",
+  "speaker": "ping_er",
+  "text": "平儿答应，接了匣子，拣出两枝，替凤姐收下。",
+  "title": "平儿收花",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ping_er",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c7-feng",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 堂屋",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "送至贾母处，凤姐正与王夫人说闲话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-023",
+  "speaker": "narrator",
+  "text": "周瑞家的又往黛玉处来，打听着凤姐与贾琏戏耍，在窗外站了一回。",
+  "title": "往黛玉处",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "zhou_rui"
+   },
+   {
+    "type": "hide",
+    "actor": "feng"
+   },
+   {
+    "type": "hide",
+    "actor": "ping_er"
+   }
+  ]
+ },
+ {
+  "chapter": "c7-dai",
+  "scene": "night",
+  "place": "贾母院 · 黛玉房中",
+  "focus": "daiyu_bed",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "周瑞家的又往黛玉处来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-030",
+  "speaker": "narrator",
+  "text": "周瑞家的往贾母处来，黛玉正在宝玉房中顽耍。",
+  "title": "往贾母处",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "daiyu_bed"
+   },
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "daiyu_bed"
+   },
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "baoyu_bed"
+   }
+  ]
+ },
+ {
+  "chapter": "c7-dai",
+  "scene": "night",
+  "place": "贾母院 · 黛玉房中",
+  "focus": "daiyu_bed",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "周瑞家的又往黛玉处来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-031",
+  "speaker": "zhou_rui",
+  "text": "周瑞家的道：“林姑娘，姨太太着我送花儿与姑娘戴。”",
+  "title": "送花与黛玉",
+  "actions": []
+ },
+ {
+  "chapter": "c7-dai",
+  "scene": "night",
+  "place": "贾母院 · 黛玉房中",
+  "focus": "daiyu_bed",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "周瑞家的又往黛玉处来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-032",
+  "speaker": "baoyu",
+  "text": "宝玉听说，便先问：“什么花儿？拿来给我。”接了花，送与黛玉。",
+  "title": "宝玉先问",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "baoyu_bed",
+     "daiyu_bed"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c7-dai",
+  "scene": "night",
+  "place": "贾母院 · 黛玉房中",
+  "focus": "daiyu_bed",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "周瑞家的又往黛玉处来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-033",
+  "speaker": "daiyu",
+  "text": "黛玉只就宝玉手中看了一看，便问：“还是单送我一个人的，还是别的姑娘们都有了？”",
+  "title": "黛玉问",
+  "actions": []
+ },
+ {
+  "chapter": "c7-dai",
+  "scene": "night",
+  "place": "贾母院 · 黛玉房中",
+  "focus": "daiyu_bed",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "周瑞家的又往黛玉处来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-034",
+  "speaker": "zhou_rui",
+  "text": "周瑞家的道：“各位都有了，这两枝是姑娘的。”",
+  "title": "周瑞家的答",
+  "actions": []
+ },
+ {
+  "chapter": "c7-dai",
+  "scene": "night",
+  "place": "贾母院 · 黛玉房中",
+  "focus": "daiyu_bed",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "周瑞家的又往黛玉处来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-035",
+  "speaker": "daiyu",
+  "text": "黛玉冷笑道：“我就知道，别人不挑剩下的也不给我。”",
+  "title": "黛玉冷笑",
+  "actions": []
+ },
+ {
+  "chapter": "c7-dai",
+  "scene": "night",
+  "place": "贾母院 · 黛玉房中",
+  "focus": "daiyu_bed",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "周瑞家的又往黛玉处来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-036",
+  "speaker": "narrator",
+  "text": "周瑞家的出去了。宝玉见黛玉如此，只默默的；袭人、雪雁在旁，也不好言语。",
+  "title": "出去",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "zhou_rui"
+   },
+   {
+    "type": "hide",
+    "actor": "daiyu"
+   },
+   {
+    "type": "hide",
+    "actor": "baoyu"
+   }
+  ]
+ },
+ {
+  "chapter": "c7-ning",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 会芳园",
+  "focus": "garden_center",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "且说宁国府中，这日贾珍之妻尤氏请贾母、邢夫人、王夫人等赏花吃酒",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-040",
+  "speaker": "narrator",
+  "text": "宁国府中，尤氏请贾母、邢王二夫人赏花吃酒；宝玉随了凤姐来至宁府。（秦钟、贾珍、尤氏待立绘，本轮以旁白带过）",
+  "title": "宁府赴宴",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "garden_center"
+   },
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "garden_center"
+   }
+  ]
+ },
+ {
+  "chapter": "c7-ning",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 会芳园",
+  "focus": "garden_center",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "且说宁国府中，这日贾珍之妻尤氏请贾母、邢夫人、王夫人等赏花吃酒",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-041",
+  "speaker": "jia_rong",
+  "text": "秦氏引了尤氏、贾蓉之妻来拜见。贾蓉陪笑，引宝玉往园中顽耍。",
+  "title": "秦氏引见",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_rong",
+    "at": "garden_entry"
+   }
+  ]
+ },
+ {
+  "chapter": "c7-ning",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 会芳园",
+  "focus": "garden_center",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "且说宁国府中，这日贾珍之妻尤氏请贾母、邢夫人、王夫人等赏花吃酒",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-042",
+  "speaker": "baoyu",
+  "text": "宝玉见秦氏之弟秦钟，生得眉清目秀、粉面朱唇，便有些留恋之意；秦钟亦自思慕，二人你言我语，十分相投。",
+  "title": "宝玉会秦钟",
+  "actions": []
+ },
+ {
+  "chapter": "c7-ning",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 会芳园",
+  "focus": "garden_center",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "且说宁国府中，这日贾珍之妻尤氏请贾母、邢夫人、王夫人等赏花吃酒",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-043",
+  "speaker": "narrator",
+  "text": "二人约定同入贾家家塾读书，自此情同手足。",
+  "title": "约定同窗",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "baoyu"
+   },
+   {
+    "type": "hide",
+    "actor": "feng"
+   },
+   {
+    "type": "hide",
+    "actor": "jia_rong"
+   }
+  ]
+ },
+ {
+  "chapter": "c7-jiao",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 门前",
+  "focus": "garden_center",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "却说宁国府中老仆焦大，从小儿跟着太爷出过三四回兵",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-050",
+  "speaker": "narrator",
+  "text": "宁府老仆焦大，从小儿随太爷出兵，从死人堆里把太爷背了出来。（焦大待立绘，本轮以旁白叙述）这日因喝了酒，越发无礼起来。",
+  "title": "焦大醉酒",
+  "actions": []
+ },
+ {
+  "chapter": "c7-jiao",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 门前",
+  "focus": "garden_center",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "却说宁国府中老仆焦大，从小儿跟着太爷出过三四回兵",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-051",
+  "speaker": "narrator",
+  "text": "焦大当着众小厮的面，趁着酒兴骂道：“爬灰的爬灰，养小叔子的养小叔子，我什么不知道？咱们胳膊折了往袖子里藏！”",
+  "title": "焦大醉骂",
+  "actions": []
+ },
+ {
+  "chapter": "c7-jiao",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 门前",
+  "focus": "garden_center",
+  "source": {
+   "chapter": 7,
+   "paragraphLead": "却说宁国府中老仆焦大，从小儿跟着太爷出过三四回兵",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C07-052",
+  "speaker": "narrator",
+  "text": "众小厮听他说出这些没天日的话，唬得魂飞魄散，忙将他捆起来，用土和马粪满满填了他一嘴。",
+  "title": "捆起塞粪",
+  "actions": []
+ }
+]

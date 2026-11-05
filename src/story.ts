@@ -11,6 +11,24 @@ import script5 from '../design/chapter05-story.json' with { type:'json' };
 import sections5 from '../design/chapter05-sections.json' with { type:'json' };
 import script6 from '../design/chapter06-story.json' with { type:'json' };
 import sections6 from '../design/chapter06-sections.json' with { type:'json' };
+import script7 from '../design/chapter07-story.json' with { type:'json' };
+import sections7 from '../design/chapter07-sections.json' with { type:'json' };
+import script8 from '../design/chapter08-story.json' with { type:'json' };
+import sections8 from '../design/chapter08-sections.json' with { type:'json' };
+import script9 from '../design/chapter09-story.json' with { type:'json' };
+import sections9 from '../design/chapter09-sections.json' with { type:'json' };
+import script10 from '../design/chapter10-story.json' with { type:'json' };
+import sections10 from '../design/chapter10-sections.json' with { type:'json' };
+import script11 from '../design/chapter11-story.json' with { type:'json' };
+import sections11 from '../design/chapter11-sections.json' with { type:'json' };
+import script12 from '../design/chapter12-story.json' with { type:'json' };
+import sections12 from '../design/chapter12-sections.json' with { type:'json' };
+import script13 from '../design/chapter13-story.json' with { type:'json' };
+import sections13 from '../design/chapter13-sections.json' with { type:'json' };
+import script14 from '../design/chapter14-story.json' with { type:'json' };
+import sections14 from '../design/chapter14-sections.json' with { type:'json' };
+import script15 from '../design/chapter15-story.json' with { type:'json' };
+import sections15 from '../design/chapter15-sections.json' with { type:'json' };
 export const cast = {
   oldmonk:{"name": "智通寺老僧", "fullName": "智通寺老僧", "color": 8885375, "css": "#87947f", "relation": "寺中煮粥人", "description": "龙钟衰老，回答雨村时答非所问；与癞头和尚分列。"},
   huoqi:{"name": "霍启", "fullName": "霍启", "color": 8885375, "css": "#87947f", "relation": "甄家家人", "description": "带英莲看灯，暂离后失去孩子，惧罪逃走。"},
@@ -58,6 +76,29 @@ export const cast = {
   zhou_rui:{name:'周瑞家的',fullName:'周瑞家的',color:0x8a7da0,css:'#8a7da0',relation:'王夫人陪房 · 凤姐之下',description:'王夫人的陪房媳妇，丈夫周瑞。昔年争买田地多得狗儿之父之力，故引刘姥姥去见凤姐，是荣府对外的接引人。'},
   ping_er:{name:'平儿',fullName:'平儿',color:0xb59a7a,css:'#b59a7a',relation:'凤姐心腹通房大丫头',description:'凤姐的心腹通房大丫头，处事妥帖。刘姥姥初进院时误认她为凤姐；奉凤姐命取二十两银子与一吊钱周济刘姥姥。'},
   jia_rong:{name:'贾蓉',fullName:'贾蓉',color:0x6f8fb0,css:'#6f8fb0',relation:'贾珍之子 · 秦可卿之夫',description:'宁国府贾珍之子，秦可卿之夫。十七八岁，轻裘宝带、美服华冠。来向凤姐借玻璃炕屏，于刘姥姥在场时闯入，令其坐立不安。'},
+  ying_er:{name:'莺儿',fullName:'黄金莺',color:0xd8a0a0,css:'#d8a0a0',relation:'宝钗贴身大丫鬟',description:'薛宝钗的贴身大丫鬟，本名黄金莺，聪明伶俐、口齿爽利。第八回中替宝钗捧出金锁，失言点破金玉良缘之配。'},
+  qin_zhong:{name:'秦钟',fullName:'秦钟',color:0x9aa8d8,css:'#9aa8d8',relation:'秦可卿之弟',description:'秦业之子，秦可卿之弟，眉清目秀、举止风流，与宝玉气味相投。第九回附学贾府家塾，与宝玉同窗。'},
+  jia_rui:{name:'贾瑞',fullName:'贾瑞',color:0xa0a060,css:'#a0a060',relation:'贾代儒之孙',description:'贾代儒之孙，管着家塾，图便宜没刚性。受薛蟠银钱便假公济私，第九回闹学堂中一味弹压不力。'},
+  jin_rong:{name:'金荣',fullName:'金荣',color:0xc09060,css:'#c09060',relation:'金氏之侄',description:'贾府正派玄孙，父母早亡，跟着寡母过活，性泼皮。与薛蟠旧有纠葛，第九回当面讥讽秦钟、宝玉。'},
+  ming_yan:{name:'茗烟',fullName:'茗烟',color:0x88b0a0,css:'#88b0a0',relation:'宝玉小厮',description:'宝玉最得用的小厮，机灵忠勇。第九回闻主子受辱，闯进家塾与金荣扭打。'},
+  li_gui:{name:'李贵',fullName:'李贵',color:0xb08868,css:'#b08868',relation:'宝玉奶兄',description:'宝玉的奶兄，老实粗壮，在宝玉房中管事。第九回闹学堂时赶来喝住众顽童。'},
+  you_shi:{name:'尤氏',fullName:'尤氏',color:0xa88fa0,css:'#a88fa0',relation:'贾珍之妻 · 宁府当家奶奶',description:'宁国府贾珍的继室，当家奶奶。性子圆融能持事，待下宽和。第十回里对璜大奶奶细说秦可卿的病，第十一回主持贾敬寿辰的家宴。'},
+  jia_zhen:{name:'贾珍',fullName:'贾珍',color:0x8a6f5a,css:'#8a6f5a',relation:'宁国府当家',description:'宁国府当家，贾敬之子、贾蓉之父，世袭三品爵威烈将军。一味高乐、不理家事，于秦可卿之病却着实焦心，第十回听冯紫英荐了张友士来诊。'},
+  jin_shi:{name:'金氏',fullName:'璜大奶奶',color:0xc08570,css:'#c08570',relation:'贾璜之妻 · 金荣姑母',description:'贾璜之妻，人称璜大奶奶，金荣的姑母。守着些小产业，时常到宁荣二府请安、奉承凤姐与尤氏。第十回听得侄儿受欺，怒冲冲要往宁府理论。'},
+  hu_shi:{name:'胡氏',fullName:'金寡妇',color:0x9a8f80,css:'#9a8f80',relation:'金荣之母',description:'金荣的母亲，守寡多年，靠人周济度日。第十回里劝儿子忍气吞声：这一处念书的地方来得不易，闹出去比登天还难。'},
+  zhang_youshi:{name:'张友士',fullName:'张友士',color:0x7a8f88,css:'#7a8f88',relation:'冯紫英之师 · 儒医',description:'冯紫英幼时从学的先生，学问渊博、医理极精。第十回上京为儿子捐官，受荐为秦可卿诊脉，论病源断为忧虑伤脾、肝木忒旺，开益气养荣补脾和肝汤。'},
+  jia_qiang:{name:'贾蔷',fullName:'贾蔷',color:0x8fa8c0,css:'#8fa8c0',relation:'贾府正派玄孙',description:'贾府正派玄孙，父母早亡，随贾珍过活，与贾蓉交好。第十一回在宁府帮着照应宾客，第十二回受凤姐指派捉弄贾瑞。'},
+  dai_quan:{name:'戴权',fullName:'戴权',color:0x8a7f9a,css:'#8a7f9a',relation:'大明宫掌宫内相',description:'大明宫掌宫内相，掌内廷之职。第十三回首七第四日亲来宁府上祭，贾珍趁机求他为贾蓉捐龙禁尉，约定「平准一千二百两银子，送到我家就完了」。'},
+  bao_zhu:{name:'宝珠',fullName:'宝珠',color:0xb59ab0,css:'#b59ab0',relation:'秦氏义女',description:'秦氏身前的小丫鬟。因见秦氏身无所出，甘心愿为义女，誓任摔丧驾灵之任；贾珍传下，从此皆呼宝珠为小姐，按未嫁女之丧在灵前哀哀欲绝。'},
+  lai_sheng:{name:'来升',fullName:'来升',color:0x8d8a72,css:'#8d8a72',relation:'宁国府总管',description:'宁国府中都总管。第十四回因凤姐协理而传齐同事人等，说「那是个有名的烈货，脸酸心硬」，又传凤姐「卯正二刻我来点卯」的定规。'},
+  zhao_er:{name:'昭儿',fullName:'昭儿',color:0x9aa8b8,css:'#9aa8b8',relation:'贾琏小厮',description:'贾琏打发回京报信的小厮。第十四回报林如海九月初三日巳时去世、贾琏送林姑娘同送灵到苏州；凤姐连夜打点大毛衣服交付他带回扬州。'},
+  shui_rong:{name:'水溶',fullName:'北静王水溶',color:0x6f8fb0,css:'#6f8fb0',relation:'北静王 · 四王之一',description:'北静郡王，年未弱冠，形容秀美，情性谦和，不以王位自居。第十四回为秦氏之丧设路奠，第十五回路谒时问「那一位是衔宝而诞者」，并以圣上亲赐的鹡鸰香念珠赠宝玉。'},
+  jing_xu:{name:'净虚',fullName:'净虚',color:0x9c8ea6,css:'#9c8ea6',relation:'水月庵老尼',description:'馒头庵（水月庵）住持。第十五回求凤姐出头替长安县张家退亲事，愿出三千银子；凤姐应下后，净虚奉承她越发受用。'},
+  zhi_neng:{name:'智能儿',fullName:'智能儿',color:0xd8a0a0,css:'#d8a0a0',relation:'水月庵小尼 · 秦钟所恋',description:'净虚的徒弟。第十五回渐知风月，看上秦钟人物风流，二人情投意合；夜里秦钟来寻智能，被宝玉撞破。'},
+  er_ya_tou:{name:'二丫头',fullName:'二丫头',color:0xc9a86a,css:'#c9a86a',relation:'村庄纺车丫头',description:'铁槛寺附近村庄的丫头，十七八岁，纺车纺线。第十五回与宝玉、秦钟在庄上相遇，纺车被宝玉拧转作耍。'},
+  wang_er:{name:'旺儿',fullName:'旺儿',color:0xb08868,css:'#b08868',relation:'凤姐小厮',description:'凤姐的小厮。第十五回奉命修书长安，托主文相公假托贾琏所嘱向节度使云光说合张家退亲之事，两日妥协。'},
+  qin_ye:{name:'秦业',fullName:'秦业',color:0x8a8278,css:'#8a8278',relation:'秦钟之父',description:'秦钟之父，年迈多病。第十三回携秦钟来宁府吊唁；第十五回因年迈多病不能随众住在铁槛寺，只命秦钟等待安灵。'},
+  jia_dairu:{name:'贾代儒',fullName:'贾代儒',color:0x8a8278,css:'#8a8278',relation:'家塾塾师 · 贾瑞祖父',description:'贾家义学的塾师，贾瑞的祖父。素日教训最严，不许贾瑞多走一步。第十二回因子孙一夜不归动了家法，后又为孙儿的重病各处请医。'},
 };
 export type ActorId=keyof typeof cast;
 export type FacingSide='left'|'right';
@@ -96,15 +137,15 @@ export const paintedFacingOf=(assetKey:string,actor:ActorId,kind:ArtKind):Facing
 /** True when the painted head already faces the given side, so no mirror is needed. */
 export const facesSide=(actor:ActorId,kind:ArtKind,side:FacingSide)=>paintedFacing(actor,kind)===side;
 export type Move={type:'move';actor:ActorId;via:string[]};
-export type Action=Move|{type:'parallel';moves:Move[]}|{type:'show';actor:ActorId;at:string}|{type:'hide';actor:ActorId}|{type:'roof';visible:boolean}|{type:'effect';actor:ActorId;kind:'jade'|'greet'|'rest';duration:number};
+export type Action=Move|{type:'parallel';moves:Move[]}|{type:'show';actor:ActorId;at:string}|{type:'hide';actor:ActorId}|{type:'roof';visible:boolean}|{type:'effect';actor:ActorId;kind:'jade'|'greet'|'rest'|'idle'|'anger';duration:number};
 export type StoryStep={id:string;chapter:string;scene:string;title:string;place:string;focus:string;speaker:ActorId|'narrator';text:string;mood?:string;offscreen?:boolean;actions:Action[];source:{chapter:number;paragraphLead:string;textKind:string;layer?:string}};
 export const chapter3Story=script as StoryStep[];
-export const story=[...script1,...script2,...script,...script4,...script5,...script6] as StoryStep[];
+export const story=[...script1,...script2,...script,...script4,...script5,...script6,...script7,...script8,...script9,...script10,...script11,...script12,...script13,...script14,...script15] as StoryStep[];
 /** Index of the last chapter-three node inside `story`; saves taken before chapter four
  * end here, and a saved ending at or before it must reopen as an ordinary reading state. */
 export const LAST_LEGACY_INDEX=([...script1,...script2,...script] as StoryStep[]).length-1;
-export const chapters=[...sections1,...sections2,...sections.map(s=>({...s,book:3})),...sections4,...sections5.map(s=>({...s,book:5})),...sections6.map(s=>({...s,book:6}))];
-export const bookNames:Record<number,string>={1:"第一回",2:"第二回",3:"第三回",4:"第四回",5:"第五回",6:"第六回"};
+export const chapters=[...sections1,...sections2,...sections.map(s=>({...s,book:3})),...sections4,...sections5.map(s=>({...s,book:5})),...sections6.map(s=>({...s,book:6})),...sections7.map(s=>({...s,book:7})),...sections8.map(s=>({...s,book:8})),...sections9.map(s=>({...s,book:9})),...sections10.map(s=>({...s,book:10})),...sections11.map(s=>({...s,book:11})),...sections12.map(s=>({...s,book:12})),...sections13.map(s=>({...s,book:13})),...sections14.map(s=>({...s,book:14})),...sections15.map(s=>({...s,book:15}))];
+export const bookNames:Record<number,string>={1:"第一回",2:"第二回",3:"第三回",4:"第四回",5:"第五回",6:"第六回",7:"第七回",8:"第八回",9:"第九回",10:"第十回",11:"第十一回",12:"第十二回",13:"第十三回",14:"第十四回",15:"第十五回"};
 
 /** Consecutive move actions for different actors describe one shared walk; play them together
  * so a two-person errand no longer costs twice the stage time. Same-actor neighbours stay

@@ -1,0 +1,1301 @@
+[
+ {
+  "chapter": "c11-birthday",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 会芳园",
+  "focus": "garden_entry",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "话说是日贾敬的寿辰，贾珍先将上等可吃的东西，稀奇些的果品，装了十六大捧盒，着贾蓉带领家下人等",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-001",
+  "speaker": "narrator",
+  "text": "是日贾敬的寿辰。贾珍先将上等可吃的东西、稀奇些的果品，装了十六大捧盒，着贾蓉带领家下人等与贾敬送去。",
+  "title": "十六大捧盒",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_zhen",
+    "at": "garden_entry"
+   },
+   {
+    "type": "show",
+    "actor": "jia_rong",
+    "at": "garden_center"
+   }
+  ]
+ },
+ {
+  "chapter": "c11-birthday",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 会芳园",
+  "focus": "garden_entry",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "话说是日贾敬的寿辰，贾珍先将上等可吃的东西，稀奇些的果品，装了十六大捧盒，着贾蓉带领家下人等",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-002",
+  "speaker": "jia_zhen",
+  "text": "贾珍向贾蓉说道：“你留神看太爷喜欢不喜欢，你就行了礼来。你说：我父亲遵太爷的话未敢来，在家里率领合家都朝上行了礼了。”",
+  "title": "着贾蓉送去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_zhen",
+    "kind": "greet",
+    "duration": 1.8
+   },
+   {
+    "type": "move",
+    "actor": "jia_rong",
+    "via": [
+     "garden_center",
+     "garden_entry"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c11-birthday",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 会芳园",
+  "focus": "garden_entry",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "话说是日贾敬的寿辰，贾珍先将上等可吃的东西，稀奇些的果品，装了十六大捧盒，着贾蓉带领家下人等",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-003",
+  "speaker": "narrator",
+  "text": "贾蓉听罢，即率领家人去了。（贾敬在原著中始终未回府，只在道观里，此处只由贾珍、贾蓉转述，不上场。）",
+  "title": "贾蓉领命去了",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_rong",
+    "via": [
+     "garden_entry",
+     "garden_center"
+    ]
+   },
+   {
+    "type": "hide",
+    "actor": "jia_rong"
+   }
+  ]
+ },
+ {
+  "chapter": "c11-guests",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "这里渐渐的就有人来了。先是贾琏，贾蔷到来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-010",
+  "speaker": "narrator",
+  "text": "这里渐渐的就有人来了。先是贾琏、贾蔷到来，先看了各处的座位，并问：“有什么顽意儿没有？”（贾琏在原著中只列名，无台词、不上场。）",
+  "title": "贾琏贾蔷先到",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_qiang",
+    "at": "garden_entry"
+   },
+   {
+    "type": "move",
+    "actor": "jia_qiang",
+    "via": [
+     "garden_center"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c11-guests",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "这里渐渐的就有人来了。先是贾琏，贾蔷到来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-011",
+  "speaker": "narrator",
+  "text": "家人答道：“我们爷原算计请太爷今日来家来，所以未敢预备顽意儿。前日听见太爷又不来了，现叫奴才们找了一班小戏儿并一档子打十番的，都在园子里戏台上预备着呢。”",
+  "title": "园子里预备着戏",
+  "actions": [],
+  "offscreen": true
+ },
+ {
+  "chapter": "c11-guests",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "这里渐渐的就有人来了。先是贾琏，贾蔷到来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-012",
+  "speaker": "narrator",
+  "text": "次后邢夫人、王夫人、凤姐儿、宝玉都来了，贾珍并尤氏接了进去。",
+  "title": "邢王二夫人到",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xing",
+    "at": "garden_entry"
+   },
+   {
+    "type": "show",
+    "actor": "wang",
+    "at": "garden_center"
+   },
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "upper_room_door"
+   },
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "garden_center"
+   },
+   {
+    "type": "show",
+    "actor": "you_shi",
+    "at": "upper_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c11-guests",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "这里渐渐的就有人来了。先是贾琏，贾蔷到来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-013",
+  "speaker": "you_shi",
+  "text": "尤氏说道：“老太太原是老祖宗，我父亲又是侄儿，这样日子，原不敢请他老人家，但是这个时候，天气正凉爽，满园的菊花又盛开，请老祖宗过来散散闷。谁知老祖宗又不肯赏脸。”",
+  "title": "请老祖宗散散闷",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "you_shi",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-guests",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "这里渐渐的就有人来了。先是贾琏，贾蔷到来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-014",
+  "speaker": "feng",
+  "text": "凤姐儿未等王夫人开口，先说道：“老太太昨日还说要来着呢，因为晚上看着宝兄弟他们吃桃儿，老人家又嘴馋，吃了有大半个，五更天的时候就一连起来了两次，今日早晨略觉身子倦些。”",
+  "title": "老太太身子倦",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-guests",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "这里渐渐的就有人来了。先是贾琏，贾蔷到来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-015",
+  "speaker": "jia_zhen",
+  "text": "贾珍听了笑道：“我说老祖宗是爱热闹的，今日不来，必定有个原故，若是这么着就是了。”",
+  "title": "贾珍解嘲",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_zhen",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-illness",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "王夫人道：“前日听见你大妹妹说",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-020",
+  "speaker": "wang",
+  "text": "王夫人道：“前日听见你大妹妹说，蓉哥儿媳妇儿身上有些不大好，到底是怎么样？”",
+  "title": "王夫人问病",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "wang",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-illness",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "王夫人道：“前日听见你大妹妹说",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-021",
+  "speaker": "you_shi",
+  "text": "尤氏道：“他这个病得的也奇。上月中秋还跟着老太太、太太们顽了半夜，回家来好好的。到了二十后，一日比一日觉懒，也懒待吃东西，这将近有半个多月了。经期又有两个月没来。”",
+  "title": "尤氏说病程",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "you_shi",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-illness",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "王夫人道：“前日听见你大妹妹说",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-022",
+  "speaker": "you_shi",
+  "text": "尤氏道：“昨日冯紫英荐了他从学过的一个先生，医道很好，瞧了说不是喜，竟是很大的一个症候。昨日开了方子，吃了一剂药，今日头眩的略好些，别的仍不见怎么样大见效。”",
+  "title": "吃了药头眩略好",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "you_shi",
+    "kind": "rest",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-illness",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "王夫人道：“前日听见你大妹妹说",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-023",
+  "speaker": "feng",
+  "text": "凤姐儿听了，眼圈儿红了半天，半日方说道：“真是天有不测风云，人有旦夕祸福。这个年纪，倘或就因这个病上怎么样了，人还活着有甚么趣儿！”",
+  "title": "天有不测风云",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-illness",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "王夫人道：“前日听见你大妹妹说",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-024",
+  "speaker": "narrator",
+  "text": "正说话间，贾蓉进来，给邢夫人、王夫人、凤姐儿前都请了安。",
+  "title": "贾蓉进来请安",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_rong",
+    "at": "upper_room_door"
+   },
+   {
+    "type": "move",
+    "actor": "jia_rong",
+    "via": [
+     "upper_room_door",
+     "upper_room"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c11-illness",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "王夫人道：“前日听见你大妹妹说",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-025",
+  "speaker": "feng",
+  "text": "凤姐儿说：“蓉哥儿，你且站住。你媳妇今日到底是怎么着？”",
+  "title": "问蓉哥儿",
+  "actions": []
+ },
+ {
+  "chapter": "c11-illness",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "王夫人道：“前日听见你大妹妹说",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-026",
+  "speaker": "jia_rong",
+  "text": "贾蓉皱皱眉说道：“不好么！婶子回来瞧瞧去就知道了。”",
+  "title": "贾蓉皱眉",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rong",
+    "kind": "anger",
+    "duration": 1.8
+   },
+   {
+    "type": "move",
+    "actor": "jia_rong",
+    "via": [
+     "upper_room",
+     "upper_room_door"
+    ]
+   },
+   {
+    "type": "hide",
+    "actor": "jia_rong"
+   }
+  ]
+ },
+ {
+  "chapter": "c11-gifts",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "于是，尤氏的母亲并邢夫人，王夫人，凤姐儿都吃毕饭，漱了口，净了手，才说要往园子里去，贾蓉进来向尤氏说道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-027",
+  "speaker": "narrator",
+  "text": "于是，尤氏的母亲并邢夫人、王夫人、凤姐儿都吃毕饭，漱了口、净了手，才说要往园子里去，贾蓉进来向尤氏回话。",
+  "title": "饭毕贾蓉进来回话",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_rong",
+    "at": "upper_room_door"
+   },
+   {
+    "type": "move",
+    "actor": "jia_rong",
+    "via": [
+     "upper_room_door",
+     "upper_room"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c11-gifts",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "于是，尤氏的母亲并邢夫人，王夫人，凤姐儿都吃毕饭，漱了口，净了手，才说要往园子里去，贾蓉进来向尤氏说道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-028",
+  "speaker": "jia_rong",
+  "text": "贾蓉说道：“老爷们并众位叔叔哥哥兄弟们也都吃了饭了。大老爷说家里有事，二老爷是不爱听戏又怕人闹的慌，都才去了。”",
+  "title": "老爷们才去了",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_rong",
+    "via": [
+     "upper_room",
+     "upper_room_door"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c11-gifts",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "于是，尤氏的母亲并邢夫人，王夫人，凤姐儿都吃毕饭，漱了口，净了手，才说要往园子里去，贾蓉进来向尤氏说道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-029",
+  "speaker": "jia_rong",
+  "text": "贾蓉又道：“方才南安郡王、东平郡王、西宁郡王、北静郡王四家王爷，并镇国公牛府等六家，忠靖侯史府等八家，都差人持了名帖送寿礼来，俱回了我父亲，先收在帐房里了，礼单都上上档子了。”",
+  "title": "各家送寿礼来",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_rong",
+    "via": [
+     "upper_room_door",
+     "upper_room"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_rong",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-visit",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿，宝玉方和贾蓉到秦氏这边来了",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-030",
+  "speaker": "narrator",
+  "text": "凤姐儿、宝玉方和贾蓉到秦氏这边来了。进了房门，悄悄的走到里间房门口，秦氏见了就要站起来。",
+  "title": "到秦氏这边来",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "bedchamber_door"
+   },
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "bedchamber"
+   },
+   {
+    "type": "show",
+    "actor": "jia_rong",
+    "at": "bedchamber"
+   },
+   {
+    "type": "show",
+    "actor": "qin_ke",
+    "at": "screen_bed"
+   }
+  ]
+ },
+ {
+  "chapter": "c11-visit",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿，宝玉方和贾蓉到秦氏这边来了",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-031",
+  "speaker": "feng",
+  "text": "凤姐儿说：“快别起来，看起猛了头晕。”于是紧走了两步，拉住秦氏的手，说道：“我的奶奶！怎么几日不见，就瘦的这么着了！”",
+  "title": "瘦的这么着了",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "feng",
+    "via": [
+     "bedchamber",
+     "screen_bed"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c11-visit",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿，宝玉方和贾蓉到秦氏这边来了",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-032",
+  "speaker": "qin_ke",
+  "text": "秦氏拉着凤姐儿的手，强笑道：“这都是我没福。这样人家，公公婆婆当自己的女孩儿似的待。这如今得了这个病，把我那要强的心一分也没了。我自想着，未必熬的过年去呢。”",
+  "title": "未必熬的过年去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qin_ke",
+    "kind": "rest",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-visit",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "bedchamber",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿，宝玉方和贾蓉到秦氏这边来了",
+   "textKind": "adaptation",
+   "layer": "recollection"
+  },
+  "id": "C11-033",
+  "speaker": "narrator",
+  "text": "宝玉正眼瞅着那《海棠春睡图》并那秦太虚写的“嫩寒锁梦因春冷，芳气笼人是酒香”的对联，不觉想起在这里睡晌觉梦到太虚幻境的事来，正自出神。",
+  "title": "海棠春睡图",
+  "actions": []
+ },
+ {
+  "chapter": "c11-visit",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿，宝玉方和贾蓉到秦氏这边来了",
+   "textKind": "adaptation",
+   "layer": "recollection"
+  },
+  "id": "C11-034",
+  "speaker": "narrator",
+  "text": "宝玉听得秦氏说了这些话，如万箭攒心，那眼泪不知不觉就流下来了。",
+  "title": "宝玉落泪",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-visit",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿，宝玉方和贾蓉到秦氏这边来了",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-035",
+  "speaker": "feng",
+  "text": "凤姐儿见宝玉这个样子，因说道：“宝兄弟，你忒婆婆妈妈的了。他病人不过是这么说，那里就到得这个田地了？”又向贾蓉道：“你先同你宝叔叔过去罢，我还略坐一坐儿。”",
+  "title": "凤姐支开宝玉",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-visit",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿，宝玉方和贾蓉到秦氏这边来了",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-036",
+  "speaker": "qin_ke",
+  "text": "凤姐儿劝解了一番，秦氏笑道：“任凭神仙也罢，治得病治不得命。婶子，我知道我这病不过是挨日子。”",
+  "title": "治得病治不得命",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "baoyu"
+   },
+   {
+    "type": "hide",
+    "actor": "jia_rong"
+   },
+   {
+    "type": "effect",
+    "actor": "qin_ke",
+    "kind": "rest",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-garden",
+  "scene": "c5_ningfu",
+  "place": "会芳园",
+  "focus": "garden_center",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿正自看园中的景致",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-040",
+  "speaker": "narrator",
+  "text": "凤姐儿带领跟来的婆子丫头，从里头绕进园子的便门来。但见石中清流激湍，篱落飘香，树头红叶翩翻，疏林如画。",
+  "title": "园中景致",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "garden_entry"
+   },
+   {
+    "type": "move",
+    "actor": "feng",
+    "via": [
+     "garden_center"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c11-garden",
+  "scene": "c5_ningfu",
+  "place": "会芳园",
+  "focus": "garden_center",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿正自看园中的景致",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-041",
+  "speaker": "narrator",
+  "text": "凤姐儿正自看园中的景致，一步步行来赞赏。猛然从假山石后走过一个人来，向前对凤姐儿说道：“请嫂子安。”",
+  "title": "假山石后走出人来",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_rui",
+    "at": "plum_grove"
+   }
+  ]
+ },
+ {
+  "chapter": "c11-garden",
+  "scene": "c5_ningfu",
+  "place": "会芳园",
+  "focus": "plum_grove",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿正自看园中的景致",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-042",
+  "speaker": "feng",
+  "text": "凤姐儿猛然见了，将身子望后一退，说道：“这是瑞大爷不是？”",
+  "title": "猛然一退",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-garden",
+  "scene": "c5_ningfu",
+  "place": "会芳园",
+  "focus": "garden_center",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿正自看园中的景致",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-043",
+  "speaker": "jia_rui",
+  "text": "贾瑞说道：“嫂子连我也不认得了？不是我是谁！”",
+  "title": "嫂子连我也不认得",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_rui",
+    "via": [
+     "garden_center"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-garden",
+  "scene": "c5_ningfu",
+  "place": "会芳园",
+  "focus": "garden_center",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿正自看园中的景致",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-044",
+  "speaker": "jia_rui",
+  "text": "贾瑞道：“也是合该我与嫂子有缘。我方才偷出了席，在这个清净地方略散一散，不想就遇见嫂子也从这里来。这不是有缘么？”一面说着，一面拿眼睛不住的觑着凤姐儿。",
+  "title": "合该我与嫂子有缘",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-garden",
+  "scene": "c5_ningfu",
+  "place": "会芳园",
+  "focus": "garden_center",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿正自看园中的景致",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-045",
+  "speaker": "feng",
+  "text": "凤姐儿是个聪明人，见他这个光景，如何不猜透八九分呢，因向贾瑞假意含笑道：“怨不得你哥哥时常提你，说你很好。今日见了，听你说这几句话儿，就知道你是个聪明和气的人了。”",
+  "title": "假意含笑",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-garden",
+  "scene": "c5_ningfu",
+  "place": "会芳园",
+  "focus": "garden_center",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿正自看园中的景致",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-046",
+  "speaker": "feng",
+  "text": "（凤姐心里暗忖）这才是知人知面不知心呢，那里有这样禽兽的人呢。他如果如此，几时叫他死在我的手里，他才知道我的手段！",
+  "title": "几时叫他死在我手里",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-opera",
+  "scene": "c11_tianxiang",
+  "place": "天香楼 · 看楼",
+  "focus": "box",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿听了，款步提衣上了楼",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-050",
+  "speaker": "narrator",
+  "text": "凤姐儿款步提衣上了楼，见尤氏已在楼梯口等着呢。",
+  "title": "上了楼",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "gate"
+   },
+   {
+    "type": "show",
+    "actor": "you_shi",
+    "at": "stair"
+   },
+   {
+    "type": "move",
+    "actor": "feng",
+    "via": [
+     "yard",
+     "stair"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c11-opera",
+  "scene": "c11_tianxiang",
+  "place": "天香楼 · 看楼",
+  "focus": "box",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿听了，款步提衣上了楼",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-051",
+  "speaker": "you_shi",
+  "text": "尤氏笑说道：“你们娘儿两个忒好了，见了面总舍不得来了。你明日搬来和他住着罢。你坐下，我先敬你一钟。”",
+  "title": "尤氏敬酒",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "you_shi",
+    "via": [
+     "box"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "you_shi",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-opera",
+  "scene": "c11_tianxiang",
+  "place": "天香楼 · 看楼",
+  "focus": "box",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿听了，款步提衣上了楼",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-052",
+  "speaker": "narrator",
+  "text": "尤氏叫拿戏单来，让凤姐儿点戏。凤姐儿说道：“亲家太太和太太们在这里，我如何敢点。”（尤氏的母亲在原著中只列名，不另造人出场。）",
+  "title": "让凤姐点戏",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xing",
+    "at": "box"
+   },
+   {
+    "type": "show",
+    "actor": "wang",
+    "at": "box"
+   }
+  ]
+ },
+ {
+  "chapter": "c11-opera",
+  "scene": "c11_tianxiang",
+  "place": "天香楼 · 看楼",
+  "focus": "box",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿听了，款步提衣上了楼",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-053",
+  "speaker": "feng",
+  "text": "凤姐儿立起身来答应了一声，方接过戏单，从头一看，点了一出《还魂》，一出《弹词》，递过戏单去说：“现在唱的这《双官诰》，唱完了，再唱这两出，也就是时候了。”",
+  "title": "点还魂与弹词",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "feng",
+    "via": [
+     "box"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-winter",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "且说贾瑞到荣府来了几次",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-060",
+  "speaker": "narrator",
+  "text": "此后凤姐儿不时亲自来看秦氏。秦氏也有几日好些，也有几日仍是那样。贾珍、尤氏、贾蓉好不焦心。",
+  "title": "不时来看秦氏",
+  "actions": []
+ },
+ {
+  "chapter": "c11-winter",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "且说贾瑞到荣府来了几次",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-061",
+  "speaker": "narrator",
+  "text": "且说贾瑞到荣府来了几次，偏都遇见凤姐儿往宁府那边去了。这年正是十一月三十日冬至。",
+  "title": "贾瑞来了几次",
+  "actions": [],
+  "offscreen": true
+ },
+ {
+  "chapter": "c11-winter",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "且说贾瑞到荣府来了几次",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C11-062",
+  "speaker": "narrator",
+  "text": "到交节的那几日，贾母、王夫人、凤姐儿日日差人去看秦氏。回来的人都说：“这几日也没见添病，也不见甚好。”",
+  "title": "交节那几日",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "bedchamber_door"
+   }
+  ]
+ },
+ {
+  "chapter": "c11-winter",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "且说贾瑞到荣府来了几次",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-063",
+  "speaker": "narrator",
+  "text": "到了初二日，吃了早饭，凤姐儿来到宁府，看见秦氏的光景，虽未甚添病，但是那脸上身上的肉全瘦干了。",
+  "title": "身上的肉全瘦干了",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "qin_ke",
+    "at": "screen_bed"
+   },
+   {
+    "type": "move",
+    "actor": "feng",
+    "via": [
+     "bedchamber",
+     "screen_bed"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c11-winter",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "且说贾瑞到荣府来了几次",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-064",
+  "speaker": "qin_ke",
+  "text": "秦氏说道：“好不好，春天就知道了。如今现过了冬至，又没怎么样，或者好的了也未可知。婶子回老太太、太太放心罢。”",
+  "title": "春天就知道了",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qin_ke",
+    "kind": "rest",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-winter",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "且说贾瑞到荣府来了几次",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-065",
+  "speaker": "narrator",
+  "text": "凤姐儿到了尤氏上房坐下。尤氏道：“你冷眼瞧媳妇是怎么样？”凤姐儿低了半日头，说道：“这实在没法儿了。你也该将一应的后事用的东西给他料理料理，冲一冲也好。”",
+  "title": "该料理后事了",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "you_shi",
+    "at": "bedchamber_door"
+   }
+  ]
+ },
+ {
+  "chapter": "c11-ping",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿答应着出来，见过了王夫人",
+   "textKind": "adaptation",
+   "layer": "reported"
+  },
+  "id": "C11-070",
+  "speaker": "narrator",
+  "text": "凤姐儿回到家中，见了贾母，只说蓉哥儿媳妇请老太太安、说好些了，求老祖宗放心——她怕吓着老人家，把实情瞒下了。",
+  "title": "瞒着贾母",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "back_gate"
+   },
+   {
+    "type": "move",
+    "actor": "feng",
+    "via": [
+     "back_gate",
+     "feng_room"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c11-ping",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿答应着出来，见过了王夫人",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-071",
+  "speaker": "narrator",
+  "text": "凤姐儿答应着出来，见过了王夫人，到了家中，平儿将烘的家常的衣服给凤姐儿换了。",
+  "title": "平儿换衣",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ping_er",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c11-ping",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿答应着出来，见过了王夫人",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-072",
+  "speaker": "ping_er",
+  "text": "平儿方端了茶来，说道：“没有什么事。就是那三百银子的利银，旺儿媳妇送进来，我收了。再有瑞大爷使人来打听奶奶在家没有，他要来请安说话。”",
+  "title": "瑞大爷使人来打听",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ping_er",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-ping",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿答应着出来，见过了王夫人",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-073",
+  "speaker": "feng",
+  "text": "凤姐儿听了，哼了一声，说道：“这畜生合该作死，看他来了怎么样！”",
+  "title": "这畜生合该作死",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-ping",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿答应着出来，见过了王夫人",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-074",
+  "speaker": "ping_er",
+  "text": "平儿说道：“癞蛤蟆想天鹅肉吃，没人伦的混帐东西，起这个念头，叫他不得好死！”",
+  "title": "癞蛤蟆想天鹅肉",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ping_er",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c11-ping",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 11,
+   "paragraphLead": "凤姐儿答应着出来，见过了王夫人",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C11-075",
+  "speaker": "feng",
+  "text": "凤姐儿道：“等他来了，我自有道理。”",
+  "title": "我自有道理",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ }
+]

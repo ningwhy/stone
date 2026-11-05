@@ -1,0 +1,557 @@
+[
+ {
+  "chapter": "c8-pear",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "yard",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "宝玉便一溜烟跑了来，一直到了梨香院门口",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-001",
+  "speaker": "narrator",
+  "text": "宝玉听说宝钗的病犯了，便辞了贾母，一溜烟往梨香院来。",
+  "title": "往梨香院",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "entry"
+   }
+  ]
+ },
+ {
+  "chapter": "c8-pear",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "yard",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "宝玉便一溜烟跑了来，一直到了梨香院门口",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-002",
+  "speaker": "narrator",
+  "text": "进了院门，宝钗正与薛姨妈说话；宝玉相见，问宝钗之病。",
+  "title": "相见问病",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baochai",
+    "at": "baochai"
+   },
+   {
+    "type": "show",
+    "actor": "xueyima",
+    "at": "xueyima"
+   },
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "entry",
+     "yard",
+     "room"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c8-pear",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "yard",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "宝玉便一溜烟跑了来，一直到了梨香院门口",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-003",
+  "speaker": "baochai",
+  "text": "宝钗道：“我的病已大好了，多亏姨妈疼我，请了大夫，吃了两剂药。”",
+  "title": "病已大好",
+  "actions": []
+ },
+ {
+  "chapter": "c8-pear",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "yard",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "宝玉便一溜烟跑了来，一直到了梨香院门口",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-004",
+  "speaker": "narrator",
+  "text": "宝玉见宝钗唇不点而红，眉不画而翠，脸若银盆，眼如水杏，比别个不同，   便患上几分留意。",
+  "title": "宝钗之态",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baochai",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c8-pear",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "yard",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "宝玉便一溜烟跑了来，一直到了梨香院门口",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-005",
+  "speaker": "baochai",
+  "text": "宝钗道：“你那块玉，我倒没仔细瞧过，今儿你来了，必得给我看看。”",
+  "title": "要看通灵玉",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "room",
+     "baochai"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c8-gold",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 宝钗房中",
+  "focus": "baochai",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "宝玉听说莺儿来了，转过头来，就把手伸了伸",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-010",
+  "speaker": "narrator",
+  "text": "宝玉便把玉解下来，递与宝钗；宝钗翻来覆去念道：“莫失莫忘，仙寿恒昌。”",
+  "title": "通灵玉八字",
+  "actions": []
+ },
+ {
+  "chapter": "c8-gold",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 宝钗房中",
+  "focus": "baochai",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "宝玉听说莺儿来了，转过头来，就把手伸了伸",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-011",
+  "speaker": "baochai",
+  "text": "宝钗笑道：“我也有一个是和尚给的，你看看。”说毕，莺儿便捧了金锁出来。",
+  "title": "金锁出场",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ying_er",
+    "at": "baochai"
+   }
+  ]
+ },
+ {
+  "chapter": "c8-gold",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 宝钗房中",
+  "focus": "baochai",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "宝玉听说莺儿来了，转过头来，就把手伸了伸",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-012",
+  "speaker": "ying_er",
+  "text": "莺儿笑道：“是个癞头和尚送的，他说必须錾在金器上——”",
+  "title": "莺儿失言",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ying_er",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c8-gold",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 宝钗房中",
+  "focus": "baochai",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "宝玉听说莺儿来了，转过头来，就把手伸了伸",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-013",
+  "speaker": "baochai",
+  "text": "宝钗猛回头嗔道：“你这丫头，疯了！还不出去？”莺儿嘻嘻笑着退下。",
+  "title": "宝钗嗔莺儿",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "ying_er",
+    "via": [
+     "baochai",
+     "yard"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c8-gold",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 宝钗房中",
+  "focus": "baochai",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "宝玉听说莺儿来了，转过头来，就把手伸了伸",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-014",
+  "speaker": "narrator",
+  "text": "宝玉看那金锁，两面錾着八个字：“不离不弃，芳龄永继。”笑道：“姐姐这八个字，   倒真与我的是一对。”",
+  "title": "金玉一对",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "baochai"
+   }
+  ]
+ },
+ {
+  "chapter": "c8-sour",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 宝钗房中",
+  "focus": "baochai",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "正说着，只听外面一阵脚步响，黛玉来了",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-020",
+  "speaker": "narrator",
+  "text": "正说着，外面一阵脚步响，黛玉来了；一进门便笑道：“我来得不巧了！”",
+  "title": "黛玉赶到",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "entry"
+   },
+   {
+    "type": "move",
+    "actor": "daiyu",
+    "via": [
+     "entry",
+     "yard",
+     "room"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c8-sour",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 宝钗房中",
+  "focus": "baochai",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "正说着，只听外面一阵脚步响，黛玉来了",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-021",
+  "speaker": "daiyu",
+  "text": "黛玉笑道：“你既吃了我们家的茶，怎么还不给我们家作媳妇？”说罢，拿眼睛瞟着宝玉。",
+  "title": "半含酸",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c8-sour",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 宝钗房中",
+  "focus": "baochai",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "正说着，只听外面一阵脚步响，黛玉来了",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-022",
+  "speaker": "narrator",
+  "text": "宝玉见宝钗腕上笼着红麝串，要看时宝钗褪将下来，宝玉看着宝钗雪白一段酥臂，   不觉看呆了。",
+  "title": "看红麝串",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "baochai"
+   }
+  ]
+ },
+ {
+  "chapter": "c8-sour",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 宝钗房中",
+  "focus": "baochai",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "正说着，只听外面一阵脚步响，黛玉来了",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-023",
+  "speaker": "daiyu",
+  "text": "忽见雪雁送手炉来，黛玉便借话敲打：“也亏你倒听她的话。我平日和你说的，   全当耳旁风。”雪雁红了脸。",
+  "title": "敲打雪雁",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xueyan",
+    "at": "yard"
+   }
+  ]
+ },
+ {
+  "chapter": "c8-lunch",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "room",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "薛姨妈便命摆酒饭，宝玉吃了半碗酸笋鸡皮汤",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-030",
+  "speaker": "narrator",
+  "text": "薛姨妈留饭，摆上酒果；宝玉高兴，便要喝两盅。",
+  "title": "薛姨妈留饭",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "room"
+   },
+   {
+    "type": "show",
+    "actor": "xueyima",
+    "at": "xueyima"
+   }
+  ]
+ },
+ {
+  "chapter": "c8-lunch",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "room",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "薛姨妈便命摆酒饭，宝玉吃了半碗酸笋鸡皮汤",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-031",
+  "speaker": "baochai",
+  "text": "宝钗笑道：“宝兄弟，你妈天天叫你不要喝酒，姨妈这里你便依不得。”",
+  "title": "宝钗劝酒",
+  "actions": []
+ },
+ {
+  "chapter": "c8-lunch",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "room",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "薛姨妈便命摆酒饭，宝玉吃了半碗酸笋鸡皮汤",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-032",
+  "speaker": "narrator",
+  "text": "宝玉吃了半碗酸笋鸡皮汤，高兴道：“这个汤倒好！”薛姨妈又拿鹅掌鸭信与他下酒。",
+  "title": "酸笋鸡皮汤",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c8-lunch",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 薛姨妈处",
+  "focus": "room",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "薛姨妈便命摆酒饭，宝玉吃了半碗酸笋鸡皮汤",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-033",
+  "speaker": "daiyu",
+  "text": "黛玉冷眼瞧着，故意道：“落雪时行酒令，也是你赢的，偏今儿连冷酒也不敢吃。”   宝玉听这话有因，便放下冷酒。",
+  "title": "借酒敲打",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "daiyu",
+    "via": [
+     "room",
+     "xueyima"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c8-anger",
+  "scene": "night",
+  "place": "贾母院 · 宝玉房中",
+  "focus": "baoyu_bed",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "那李嬷嬷又来找宝玉",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-040",
+  "speaker": "narrator",
+  "text": "宝玉带着酒兴回到贾母院，在房中歪着歇息。",
+  "title": "回贾母院",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "outer_door"
+   },
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "outer_door",
+     "baoyu_bed"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c8-anger",
+  "scene": "night",
+  "place": "贾母院 · 宝玉房中",
+  "focus": "baoyu_bed",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "那李嬷嬷又来找宝玉",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-041",
+  "speaker": "nurse_li",
+  "text": "李嬷嬷上来拦道：“你可反了！爷们回来了，怎么不通报一声，就歪在这里？”",
+  "title": "李嬷嬷拦",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "nurse_li",
+    "at": "xiren_place"
+   }
+  ]
+ },
+ {
+  "chapter": "c8-anger",
+  "scene": "night",
+  "place": "贾母院 · 宝玉房中",
+  "focus": "baoyu_bed",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "那李嬷嬷又来找宝玉",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-042",
+  "speaker": "nurse_li",
+  "text": "李嬷嬷又拿前日枫露茶、奶酪的事数落，一句紧似一句；宝玉本带着酒，心中早不耐烦。",
+  "title": "旧账重提",
+  "actions": []
+ },
+ {
+  "chapter": "c8-anger",
+  "scene": "night",
+  "place": "贾母院 · 宝玉房中",
+  "focus": "baoyu_bed",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "那李嬷嬷又来找宝玉",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-043",
+  "speaker": "baoyu",
+  "text": "宝玉腾地摔了手边茶钟，怒道：“撵出去！谁许你这般放肆！”",
+  "title": "摔杯大怒",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c8-anger",
+  "scene": "night",
+  "place": "贾母院 · 宝玉房中",
+  "focus": "baoyu_bed",
+  "source": {
+   "chapter": 8,
+   "paragraphLead": "那李嬷嬷又来找宝玉",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C08-044",
+  "speaker": "xiren",
+  "text": "袭人忙起身按住宝玉，陪笑向李嬷嬷道：“姨奶奶别恼，他今儿吃多了，我慢慢劝。”   扶了宝玉睡下。",
+  "title": "袭人解劝",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xiren",
+    "at": "xiren_place"
+   }
+  ]
+ }
+]

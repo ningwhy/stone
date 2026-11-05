@@ -1,0 +1,743 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "PlanZones",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 1,
+          "name": "A0 出城大路 · 铁槛寺道",
+          "x": 704,
+          "y": 768,
+          "width": 1280,
+          "height": 896,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": true,
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "A1 出城大路 · 铁槛寺道",
+          "x": 832,
+          "y": 512,
+          "width": 768,
+          "height": 256,
+          "rotation": 0,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PlanBlockers",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 3,
+      "name": "Anchors",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 3,
+          "name": "street",
+          "x": 1312.0,
+          "y": 1632.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 4,
+          "name": "gate",
+          "x": 1312.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 5,
+          "name": "road",
+          "x": 1312.0,
+          "y": 1248.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 6,
+          "name": "carriage",
+          "x": 1440.0,
+          "y": 1120.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 7,
+          "name": "horse",
+          "x": 1120.0,
+          "y": 1120.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 8,
+          "name": "tent",
+          "x": 1184.0,
+          "y": 672.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 9,
+          "name": "field",
+          "x": 1696.0,
+          "y": 992.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Routes",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 10,
+          "name": "动线 main",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "main",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "street,gate,road,carriage",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "动线 to_horse",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "to_horse",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "road,horse",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "动线 to_tent",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "to_tent",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "road,tent",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "动线 to_field",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "to_field",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "road,field",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Art",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 14,
+          "name": "sedan-chair",
+          "x": 1568.4442399999998,
+          "y": 1184.31752,
+          "width": 165.6,
+          "height": 117.36,
+          "rotation": 0,
+          "visible": true,
+          "gid": 36,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "sedan-chair",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A0",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "canopy-bed",
+          "x": 1250.1075,
+          "y": 993.9797,
+          "width": 180.0,
+          "height": 220.2,
+          "rotation": 0,
+          "visible": true,
+          "gid": 41,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "canopy-bed",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A0",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "stage-platform",
+          "x": 1056.59218,
+          "y": 928.59218,
+          "width": 243.6,
+          "height": 254.04,
+          "rotation": 0,
+          "visible": true,
+          "gid": 218,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "stage-platform",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A0",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "official-desk",
+          "x": 1632.3009,
+          "y": 863.6991,
+          "width": 205.79999999999998,
+          "height": 201.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 176,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "official-desk",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A0",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "round-stool",
+          "x": 928.23464,
+          "y": 864.23464,
+          "width": 39.2,
+          "height": 52.080000000000005,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "round-stool",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A0",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "square-table",
+          "x": 1120.32022,
+          "y": 672.32022,
+          "width": 89.10000000000001,
+          "height": 88.56,
+          "rotation": 0,
+          "visible": true,
+          "gid": 110,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "square-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "tea-table",
+          "x": 1312.4634999999998,
+          "y": 672.4635,
+          "width": 65.0,
+          "height": 57.5,
+          "rotation": 0,
+          "visible": true,
+          "gid": 43,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "tea-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "lamp-stand",
+          "x": 992.0,
+          "y": 736.0,
+          "width": 405.44000000000005,
+          "height": 241.92000000000002,
+          "rotation": 0,
+          "visible": true,
+          "gid": 187,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "lamp-stand",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "name": "wine-jars",
+          "x": 1440.13,
+          "y": 671.87,
+          "width": 205.92000000000002,
+          "height": 188.24,
+          "rotation": 0,
+          "visible": true,
+          "gid": 179,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "wine-jars",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "name": "garden-tree",
+          "x": 870.09825,
+          "y": 1319.49039,
+          "width": 272.59999999999997,
+          "height": 236.88,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "garden-tree",
+          "x": 1829.9685,
+          "y": 1191.33102,
+          "width": 266.8,
+          "height": 231.84,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "name": "bamboo-cluster",
+          "x": 1887.0973,
+          "y": 1503.0973,
+          "width": 550.8000000000001,
+          "height": 304.2,
+          "rotation": 0,
+          "visible": true,
+          "gid": 189,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "bamboo-cluster",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "garden-rock",
+          "x": 869.8660600000001,
+          "y": 1576.04042,
+          "width": 144.4,
+          "height": 158.84,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "name": "stone-lion",
+          "x": 1696.06786,
+          "y": 1375.93214,
+          "width": 76.96000000000001,
+          "height": 124.80000000000001,
+          "rotation": 0,
+          "visible": true,
+          "gid": 173,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "stone-lion",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ArtFootprints",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 20,
+          "name": "square-table",
+          "x": 1088.0,
+          "y": 640.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 22,
+          "name": "tea-table",
+          "x": 1280.0,
+          "y": 640.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 29,
+          "name": "garden-rock",
+          "x": 832.0,
+          "y": 1536.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Labels",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "objects": [
+        {
+          "id": 31,
+          "name": "出城大路",
+          "x": 1312.0,
+          "y": 928.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 32,
+          "name": "祭棚",
+          "x": 1248.0,
+          "y": 608.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "rongguo-art.tsj"
+    }
+  ],
+  "nextlayerid": 8,
+  "nextobjectid": 33,
+  "properties": [
+    {
+      "name": "sceneId",
+      "type": "string",
+      "value": "c15_road"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "value": "出城大路 · 铁槛寺道"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "value": "street"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "18,18,5,5,path"
+    },
+    {
+      "name": "walls",
+      "type": "string",
+      "value": "11,12,31,12;11,12,11,26;31,12,31,26;11,26,31,26"
+    },
+    {
+      "name": "flowerbeds",
+      "type": "bool",
+      "value": false
+    }
+  ]
+}

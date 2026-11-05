@@ -1,0 +1,1479 @@
+[
+ {
+  "chapter": "c12-visit",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "话说凤姐正与平儿说话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-001",
+  "speaker": "narrator",
+  "text": "凤姐正与平儿说话，只见有人回说：“瑞大爷来了。”凤姐急命快请进来。贾瑞见往里让，心中喜出望外，急忙进来，见了凤姐，满面陪笑，连连问好。",
+  "title": "瑞大爷来了",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "feng_room"
+   },
+   {
+    "type": "show",
+    "actor": "ping_er",
+    "at": "feng_room"
+   },
+   {
+    "type": "show",
+    "actor": "jia_rui",
+    "at": "back_gate"
+   },
+   {
+    "type": "move",
+    "actor": "jia_rui",
+    "via": [
+     "market",
+     "zhou_court",
+     "zhou_room",
+     "daoting",
+     "yingbi",
+     "platform",
+     "feng_room"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c12-visit",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "话说凤姐正与平儿说话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-002",
+  "speaker": "feng",
+  "text": "凤姐儿也假意殷勤，让茶让坐。（她心里早已定了主意，只是脸上不露。）",
+  "title": "假意殷勤",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-visit",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "话说凤姐正与平儿说话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-003",
+  "speaker": "jia_rui",
+  "text": "贾瑞饧了眼问道：“二哥哥怎么还不回来？”凤姐道：“不知什么原故。”贾瑞笑道：“别是路上有人绊住了脚了，舍不得回来也未可知？”",
+  "title": "二哥哥还不回来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-visit",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "话说凤姐正与平儿说话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-004",
+  "speaker": "jia_rui",
+  "text": "贾瑞听了喜的抓耳挠腮，又道：“嫂子天天也闷的很。”凤姐道：“正是呢，只盼个人来说话解解闷儿。”贾瑞笑道：“我倒天天闲着，天天过来替嫂子解解闲闷可好不好？”",
+  "title": "替嫂子解闷",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-visit",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "话说凤姐正与平儿说话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-005",
+  "speaker": "feng",
+  "text": "凤姐笑道：“你哄我呢，你那里肯往我这里来。”贾瑞道：“我在嫂子跟前，若有一点谎话，天打雷劈！-死了也愿意！”",
+  "title": "死了也愿意",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-visit",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "话说凤姐正与平儿说话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-006",
+  "speaker": "feng",
+  "text": "凤姐笑道：“果然你是个明白人，比贾蓉两个强远了。我看他那样清秀，只当他们心里明白，谁知竟是两个胡涂虫，一点不知人心。”",
+  "title": "比贾蓉两个强远了",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-visit",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "话说凤姐正与平儿说话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-007",
+  "speaker": "feng",
+  "text": "凤姐又悄悄的道：“大天白日，人来人往，你就在这里也不方便。你且去，等着晚上起了更你来，悄悄的在西边穿堂儿等我。”",
+  "title": "约在西边穿堂",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-visit",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "话说凤姐正与平儿说话",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-008",
+  "speaker": "jia_rui",
+  "text": "贾瑞听了，如得珍宝，忙问道：“你别哄我。但只那里人过的多，怎么好躲的？”凤姐道：“我把上夜的小厮们都放了假，两边门一关，再没别人了。”贾瑞喜之不尽，忙忙的告辞而去，心内以为得手。",
+  "title": "如得珍宝",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "greet",
+    "duration": 1.8
+   },
+   {
+    "type": "move",
+    "actor": "jia_rui",
+    "via": [
+     "platform",
+     "back_gate"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c12-tryst",
+  "scene": "c12_passage",
+  "place": "荣府 · 西边穿堂",
+  "focus": "passage",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "盼到晚上，果然黑地里摸入荣府",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-010",
+  "speaker": "narrator",
+  "text": "盼到晚上，贾瑞果然黑地里摸入荣府，趁掩门时，钻入穿堂。果见漆黑无一人，往贾母那边去的门户已倒锁，只有向东的门未关。",
+  "title": "摸入穿堂",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_rui",
+    "at": "gate"
+   },
+   {
+    "type": "move",
+    "actor": "jia_rui",
+    "via": [
+     "yard",
+     "passage_door"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c12-tryst",
+  "scene": "c12_passage",
+  "place": "荣府 · 西边穿堂",
+  "focus": "passage",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "盼到晚上，果然黑地里摸入荣府",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-011",
+  "speaker": "narrator",
+  "text": "贾瑞侧耳听着，半日不见人来。忽听咯噔一声，东边的门也倒关了。贾瑞急的也不敢则声，只得悄悄的出来，将门撼了撼，关的铁桶一般。",
+  "title": "东边门也倒关了",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_rui",
+    "via": [
+     "passage"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-tryst",
+  "scene": "c12_passage",
+  "place": "荣府 · 西边穿堂",
+  "focus": "passage",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "盼到晚上，果然黑地里摸入荣府",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-012",
+  "speaker": "narrator",
+  "text": "此时要求出去亦不能够，南北皆是大房墙，要跳亦无攀援。这屋内又是过门风，空落落，现是腊月天气，夜又长，朔风凛凛，侵肌裂骨，一夜几乎不曾冻死。",
+  "title": "朔风凛凛侵肌裂骨",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "rest",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-tryst",
+  "scene": "c12_passage",
+  "place": "荣府 · 西边穿堂",
+  "focus": "passage",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "盼到晚上，果然黑地里摸入荣府",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-013",
+  "speaker": "narrator",
+  "text": "好容易盼到早晨，只见一个老婆子先将东门开了，进去叫西门。贾瑞瞅他背着脸，一溜烟抱着肩跑了出来，幸而天气尚早，人都未起，从后门一径跑回家去。",
+  "title": "一溜烟跑回家",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_rui",
+    "via": [
+     "passage_door",
+     "gate"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c12-tryst",
+  "scene": "c12_passage",
+  "place": "荣府 · 西边穿堂",
+  "focus": "passage",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "盼到晚上，果然黑地里摸入荣府",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-014",
+  "speaker": "jia_dairu",
+  "text": "原来贾瑞父母早亡，只有他祖父代儒教养。代儒素日教训最严，今忽见他一夜不归，只料定他在外非饮即赌，那里想到这段公案，因此气了一夜。",
+  "title": "代儒气了一夜",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_dairu",
+    "at": "yard"
+   },
+   {
+    "type": "effect",
+    "actor": "jia_dairu",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-tryst",
+  "scene": "c12_passage",
+  "place": "荣府 · 西边穿堂",
+  "focus": "passage",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "盼到晚上，果然黑地里摸入荣府",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-015",
+  "speaker": "jia_dairu",
+  "text": "代儒道：“自来出门，非禀我不敢擅出，如何昨日私自去了？据此亦该打，何况是撒谎。”因此发狠到底打了三四十扳，不许吃饭，令他跪在院内读文章。",
+  "title": "打了三四十扳",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_dairu",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-second",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "此时贾瑞前心犹是未改",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-020",
+  "speaker": "narrator",
+  "text": "此时贾瑞前心犹是未改，再想不到是凤姐捉弄他。过后两日，得了空，便仍来找凤姐。",
+  "title": "前心犹是未改",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_rui",
+    "at": "feng_room"
+   },
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "feng_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c12-second",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "此时贾瑞前心犹是未改",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-021",
+  "speaker": "feng",
+  "text": "凤姐故意抱怨他失信，贾瑞急的赌身发誓。凤姐因见他自投罗网，少不得再寻别计令他知改。",
+  "title": "故意抱怨失信",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-second",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "此时贾瑞前心犹是未改",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-022",
+  "speaker": "feng",
+  "text": "凤姐故又约他道：“今日晚上，你别在那里了。你在我这房后小过道子里那间空屋里等我，可别冒撞了。”",
+  "title": "约在房后空屋",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-second",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "此时贾瑞前心犹是未改",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-023",
+  "speaker": "jia_rui",
+  "text": "贾瑞道：“来，来，来。死也要来！”凤姐道：“这会子你先去罢。”贾瑞料定晚间必妥，此时先去了。",
+  "title": "死也要来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "greet",
+    "duration": 1.8
+   },
+   {
+    "type": "move",
+    "actor": "jia_rui",
+    "via": [
+     "feng_room",
+     "hall"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c12-second",
+  "scene": "c6_wangchui",
+  "place": "凤姐院 · 房内",
+  "focus": "feng_room",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "此时贾瑞前心犹是未改",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-024",
+  "speaker": "feng",
+  "text": "凤姐在这里便点兵派将，设下圈套。（贾蔷、贾蓉二人是她叫来的，这一段原著未写在当场对话里，按回目「毒设相思局」演出。）",
+  "title": "点兵派将设下圈套",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-trap",
+  "scene": "c12_passage",
+  "place": "荣府 · 房后空屋",
+  "focus": "empty",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "那贾瑞只盼不到晚上",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-030",
+  "speaker": "narrator",
+  "text": "那贾瑞只盼不到晚上，偏生家里亲戚又来了，直等吃了晚饭才去，那天已有掌灯时候。又等他祖父安歇了，方溜进荣府，直往那夹道中屋子里来等着，热锅上的蚂蚁一般，只是干转。",
+  "title": "热锅上的蚂蚁",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_rui",
+    "at": "gate"
+   },
+   {
+    "type": "move",
+    "actor": "jia_rui",
+    "via": [
+     "yard",
+     "empty_door"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c12-trap",
+  "scene": "c12_passage",
+  "place": "荣府 · 房后空屋",
+  "focus": "empty",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "那贾瑞只盼不到晚上",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-031",
+  "speaker": "narrator",
+  "text": "左等不见人影，右听也没声响，心下自思：“别是又不来了，又冻我一夜不成？”正自胡猜，只见黑魆魆的来了一个人，贾瑞便意定是凤姐，不管皂白，饿虎一般，等那人刚至门前，便如猫捕鼠的一般，抱住叫道：“亲嫂子，等死我了。”",
+  "title": "黑魆魆的来了一个人",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_rui",
+    "via": [
+     "empty"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-trap",
+  "scene": "c12_passage",
+  "place": "荣府 · 房后空屋",
+  "focus": "empty",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "那贾瑞只盼不到晚上",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-032",
+  "speaker": "narrator",
+  "text": "说着，抱到屋里炕上就亲嘴扯裤子，满口里亲娘亲爹的乱叫起来。那人只不作声。忽见灯光一闪，只见贾蔷举着个捻子照道：“谁在屋里？”只见炕上那人笑道：“瑞大叔要臊我呢。”",
+  "title": "灯光一闪",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_qiang",
+    "at": "empty"
+   },
+   {
+    "type": "show",
+    "actor": "jia_rong",
+    "at": "empty"
+   },
+   {
+    "type": "effect",
+    "actor": "jia_qiang",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-trap",
+  "scene": "c12_passage",
+  "place": "荣府 · 房后空屋",
+  "focus": "empty",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "那贾瑞只盼不到晚上",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-033",
+  "speaker": "narrator",
+  "text": "贾瑞一见，却是贾蓉，真臊的无地可入，不知要怎么样才好，回身就要跑，被贾蔷一把揪住。",
+  "title": "臊的无地可入",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-trap",
+  "scene": "c12_passage",
+  "place": "荣府 · 房后空屋",
+  "focus": "empty",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "那贾瑞只盼不到晚上",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-034",
+  "speaker": "jia_qiang",
+  "text": "贾蔷一把揪住道：“别走！如今琏二嫂已经告到太太跟前，说你无故调戏他。他暂用了个脱身计，哄你在这边等着，太太气死过去，因此叫我来拿你。”",
+  "title": "琏二嫂告到太太跟前",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_qiang",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-extort",
+  "scene": "c12_passage",
+  "place": "荣府 · 房后空屋",
+  "focus": "corner",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞听了，魂不附体",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-040",
+  "speaker": "jia_rui",
+  "text": "贾瑞听了，魂不附体，只说：“好侄儿，只说没有见我，明日我重重的谢你。”",
+  "title": "明日重重的谢你",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-extort",
+  "scene": "c12_passage",
+  "place": "荣府 · 房后空屋",
+  "focus": "corner",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞听了，魂不附体",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-041",
+  "speaker": "jia_qiang",
+  "text": "贾蔷道：“你若谢我，放你不值什么，只不知你谢我多少？况且口说无凭，写一文契来。”贾瑞道：“这如何落纸呢？”贾蔷道：“写一个赌钱输了外人帐目，借头家银若干两便罢。”",
+  "title": "写一文契来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_qiang",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-extort",
+  "scene": "c12_passage",
+  "place": "荣府 · 房后空屋",
+  "focus": "corner",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞听了，魂不附体",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-042",
+  "speaker": "narrator",
+  "text": "贾蔷翻身出来，纸笔现成，拿来命贾瑞写。他两个作好作歹，只写了五十两，然后画了押，贾蔷收起来；然后又撕逻贾蓉，也写了一张五十两欠契才罢。",
+  "title": "两张五十两欠契",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rong",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-extort",
+  "scene": "c12_passage",
+  "place": "荣府 · 房后空屋",
+  "focus": "corner",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞听了，魂不附体",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-043",
+  "speaker": "jia_qiang",
+  "text": "贾蔷又道：“如今要放你，我就担着不是。老太太那边的门早已关了，如今只好走后门。这屋你还藏不得，少时就来堆东西。”",
+  "title": "这屋还藏不得",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_qiang",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-extort",
+  "scene": "c12_passage",
+  "place": "荣府 · 房后空屋",
+  "focus": "corner",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞听了，魂不附体",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-044",
+  "speaker": "narrator",
+  "text": "贾蔷拉着贾瑞，仍熄了灯，出至院外，摸着大台矶底下，说道：“这窝儿里好，你只蹲着，别哼一声，等我们来再动。”说毕，二人去了。",
+  "title": "蹲在大台矶底下",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_rui",
+    "via": [
+     "corner"
+    ]
+   },
+   {
+    "type": "hide",
+    "actor": "jia_qiang"
+   },
+   {
+    "type": "hide",
+    "actor": "jia_rong"
+   }
+  ]
+ },
+ {
+  "chapter": "c12-extort",
+  "scene": "c12_passage",
+  "place": "荣府 · 房后空屋",
+  "focus": "corner",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞听了，魂不附体",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-045",
+  "speaker": "narrator",
+  "text": "贾瑞此时身不由己，只得蹲在那里。心下正盘算，只听头顶上一声响，唿喇喇一净桶尿粪从上面直泼下来，可巧浇了他一身一头。",
+  "title": "一净桶尿粪泼下来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-extort",
+  "scene": "c12_passage",
+  "place": "荣府 · 房后空屋",
+  "focus": "corner",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞听了，魂不附体",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-046",
+  "speaker": "narrator",
+  "text": "贾瑞掌不住嗳哟了一声，忙又掩住口，不敢声张，满头满脸浑身皆是尿屎，冰冷打战。只见贾蔷跑来叫：“快走，快走！”贾瑞如得了命，三步两步从后门跑到家里。",
+  "title": "三步两步跑回家",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_rui",
+    "via": [
+     "empty_door",
+     "gate"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c12-illness",
+  "scene": "c12_sickbed",
+  "place": "贾瑞书房 · 病榻",
+  "focus": "bed",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "那贾瑞此时要命心甚切",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-050",
+  "speaker": "narrator",
+  "text": "自此贾瑞满心想凤姐，只不敢往荣府去了。贾蓉两个又常常的来索银子，他又怕祖父知道。正是相思尚且难禁，更又添了债务，日间工课又紧，因此三五下里夹攻，不觉就得了一病。",
+  "title": "三五下里夹攻",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_rui",
+    "at": "bed"
+   }
+  ]
+ },
+ {
+  "chapter": "c12-illness",
+  "scene": "c12_sickbed",
+  "place": "贾瑞书房 · 病榻",
+  "focus": "bed",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "那贾瑞此时要命心甚切",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-051",
+  "speaker": "narrator",
+  "text": "那贾瑞此时要命心甚切，无药不吃，只是白花钱，不见效。",
+  "title": "无药不吃",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_rui",
+    "via": [
+     "bed",
+     "bedside"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c12-ginseng",
+  "scene": "wang",
+  "place": "东廊三间 · 王夫人起居处",
+  "focus": "guest_seat",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "代儒也着了忙，各处请医疗治，皆不见效。因后来吃\"独参汤\"，代儒如何有这力量，只得往荣府来寻",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-056",
+  "speaker": "narrator",
+  "text": "代儒也着了忙，各处请医疗治，皆不见效。因后来要吃「独参汤」，代儒如何有这力量，只得往荣府来寻。",
+  "title": "只得往荣府来寻",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_dairu",
+    "at": "court_entry"
+   },
+   {
+    "type": "move",
+    "actor": "jia_dairu",
+    "via": [
+     "court_entry",
+     "guest_seat"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c12-ginseng",
+  "scene": "wang",
+  "place": "东廊三间 · 王夫人起居处",
+  "focus": "guest_seat",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "代儒也着了忙，各处请医疗治，皆不见效。因后来吃\"独参汤\"，代儒如何有这力量，只得往荣府来寻",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-057",
+  "speaker": "wang",
+  "text": "王夫人命凤姐秤二两给他。凤姐回说：“前儿新近都替老太太配了药，那整的太太又说留着送杨提督的太太配药，偏生昨儿我已送了去了。”",
+  "title": "命凤姐秤二两",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "wang",
+    "at": "wang_host"
+   },
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "tea_seat"
+   },
+   {
+    "type": "move",
+    "actor": "wang",
+    "via": [
+     "wang_host",
+     "guest_seat"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c12-ginseng",
+  "scene": "wang",
+  "place": "东廊三间 · 王夫人起居处",
+  "focus": "guest_seat",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "代儒也着了忙，各处请医疗治，皆不见效。因后来吃\"独参汤\"，代儒如何有这力量，只得往荣府来寻",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-058",
+  "speaker": "wang",
+  "text": "王夫人道：“就是咱们这边没了，你打发个人往你婆婆那边问问，或是你珍大哥哥那府里再寻些来，凑着给人家。吃好了，救人一命，也是你的好处。”",
+  "title": "再寻些来凑着给人家",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "wang",
+    "kind": "idle",
+    "duration": 1.8
+   },
+   {
+    "type": "move",
+    "actor": "feng",
+    "via": [
+     "tea_seat",
+     "wang_host"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c12-ginseng",
+  "scene": "wang",
+  "place": "东廊三间 · 王夫人起居处",
+  "focus": "guest_seat",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "代儒也着了忙，各处请医疗治，皆不见效。因后来吃\"独参汤\"，代儒如何有这力量，只得往荣府来寻",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-059",
+  "speaker": "feng",
+  "text": "凤姐听了，也不遣人去寻，只得将些渣末泡须凑了几钱，命人送去，只说：“太太送来的，再也没了。”然后回王夫人，只说：“都寻了来，共凑了有二两送去。”",
+  "title": "只将渣末凑了几钱",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.8
+   },
+   {
+    "type": "hide",
+    "actor": "feng"
+   },
+   {
+    "type": "hide",
+    "actor": "wang"
+   },
+   {
+    "type": "hide",
+    "actor": "jia_dairu"
+   }
+  ]
+ },
+ {
+  "chapter": "c12-taoist",
+  "scene": "c12_sickbed",
+  "place": "贾瑞书房 · 病榻",
+  "focus": "bed",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "忽然这日有个跛足道人来化斋",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-052",
+  "speaker": "narrator",
+  "text": "忽然这日有个跛足道人来化斋，口称专治冤业之症。贾瑞偏生在内就听见了，直着声叫喊说：“快请进那位菩萨来救我！”一面叫，一面在枕上叩首。",
+  "title": "跛足道人来化斋",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_rui",
+    "at": "bed"
+   },
+   {
+    "type": "show",
+    "actor": "taoist",
+    "at": "door"
+   },
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-taoist",
+  "scene": "c12_sickbed",
+  "place": "贾瑞书房 · 病榻",
+  "focus": "bed",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "忽然这日有个跛足道人来化斋",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-053",
+  "speaker": "taoist",
+  "text": "那道士叹道：“你这病非药可医。我有个宝贝与你，你天天看时，此命可保矣。”说毕，从褡裢中取出一面镜子来——两面皆可照人，镜把上面錾着风月宝鉴四字。",
+  "title": "取出一面镜子来",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "taoist",
+    "via": [
+     "bedside"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "taoist",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-taoist",
+  "scene": "c12_sickbed",
+  "place": "贾瑞书房 · 病榻",
+  "focus": "bed",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "忽然这日有个跛足道人来化斋",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-054",
+  "speaker": "taoist",
+  "text": "道士递与贾瑞道：“这物出自太虚幻境空灵殿上，警幻仙子所制，专治邪思妄动之症。千万不可照正面，只照他的背面，要紧，要紧！三日后吾来收取，管叫你好了。”",
+  "title": "千万不可照正面",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "taoist",
+    "via": [
+     "mirror"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "taoist",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-taoist",
+  "scene": "c12_sickbed",
+  "place": "贾瑞书房 · 病榻",
+  "focus": "bed",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "忽然这日有个跛足道人来化斋",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-055",
+  "speaker": "narrator",
+  "text": "说毕，道士佯常而去，众人苦留不住。",
+  "title": "佯常而去",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "taoist"
+   }
+  ]
+ },
+ {
+  "chapter": "c12-mirror",
+  "scene": "c12_sickbed",
+  "place": "贾瑞书房 · 病榻",
+  "focus": "mirror",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞收了镜子",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-060",
+  "speaker": "jia_rui",
+  "text": "贾瑞收了镜子，想道：“这道士倒有意思，我何不照一照试试。”想毕，拿起风月鉴来，向反面一照，只见一个骷髅立在里面。",
+  "title": "反面一照是骷髅",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_rui",
+    "at": "bedside"
+   },
+   {
+    "type": "move",
+    "actor": "jia_rui",
+    "via": [
+     "mirror"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-mirror",
+  "scene": "c12_sickbed",
+  "place": "贾瑞书房 · 病榻",
+  "focus": "mirror",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞收了镜子",
+   "textKind": "adaptation",
+   "layer": "dream"
+  },
+  "id": "C12-061",
+  "speaker": "jia_rui",
+  "text": "贾瑞唬得连忙掩了，骂：“道士混帐，如何吓我！我倒再照照正面是什么。”想着，又将正面一照，只见凤姐站在里面招手叫他。",
+  "title": "正面一照是凤姐",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-mirror",
+  "scene": "c12_sickbed",
+  "place": "贾瑞书房 · 病榻",
+  "focus": "mirror",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞收了镜子",
+   "textKind": "adaptation",
+   "layer": "dream"
+  },
+  "id": "C12-062",
+  "speaker": "narrator",
+  "text": "贾瑞心中一喜，荡悠悠的觉得进了镜子，与凤姐云雨一番，凤姐仍送他出来。到了床上，哎哟了一声，一睁眼，镜子从手里掉过来，仍是反面立着一个骷髅。",
+  "title": "荡悠悠进了镜子",
+  "actions": []
+ },
+ {
+  "chapter": "c12-mirror",
+  "scene": "c12_sickbed",
+  "place": "贾瑞书房 · 病榻",
+  "focus": "mirror",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞收了镜子",
+   "textKind": "adaptation",
+   "layer": "dream"
+  },
+  "id": "C12-063",
+  "speaker": "narrator",
+  "text": "贾瑞心中到底不足，又翻过正面来，只见凤姐还招手叫他，他又进去。如此三四次。",
+  "title": "如此三四次",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-mirror",
+  "scene": "c12_sickbed",
+  "place": "贾瑞书房 · 病榻",
+  "focus": "mirror",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞收了镜子",
+   "textKind": "adaptation",
+   "layer": "dream"
+  },
+  "id": "C12-064",
+  "speaker": "narrator",
+  "text": "到了这次，刚要出镜子来，只见两个人走来，拿铁锁把他套住，拉了就走。贾瑞叫道：“让我拿了镜子再走。”只说了这句，就再不能说话了。",
+  "title": "拿铁锁把他套住",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-mirror",
+  "scene": "c12_sickbed",
+  "place": "贾瑞书房 · 病榻",
+  "focus": "mirror",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞收了镜子",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-065",
+  "speaker": "narrator",
+  "text": "旁边伏侍贾瑞的众人，只见他先还拿着镜子照，落下来，仍睁开眼拾在手内，末后镜子落下来便不动了。众人上来看看，已没了气。",
+  "title": "已没了气",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "rest",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-mirror",
+  "scene": "c12_sickbed",
+  "place": "贾瑞书房 · 病榻",
+  "focus": "mirror",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞收了镜子",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-066",
+  "speaker": "narrator",
+  "text": "代儒夫妇哭的死去活来，大骂道士：“是何妖镜！”遂命架火来烧，只听镜内哭道：“谁叫你们瞧正面了！你们自己以假为真，何苦来烧我？”",
+  "title": "是何妖镜",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_dairu",
+    "at": "door"
+   },
+   {
+    "type": "effect",
+    "actor": "jia_dairu",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ],
+  "offscreen": true
+ },
+ {
+  "chapter": "c12-mirror",
+  "scene": "c12_sickbed",
+  "place": "贾瑞书房 · 病榻",
+  "focus": "mirror",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "贾瑞收了镜子",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-067",
+  "speaker": "taoist",
+  "text": "只见那跛足道人从外面跑来，喊道：“谁毁风月鉴，吾来救也！”说着，直入中堂，抢入手内，飘然去了。",
+  "title": "吾来救也",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "taoist",
+    "at": "door"
+   },
+   {
+    "type": "effect",
+    "actor": "taoist",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ],
+  "offscreen": true
+ },
+ {
+  "chapter": "c12-depart",
+  "scene": "night",
+  "place": "贾母院 · 碧纱橱外间",
+  "focus": "grandmother_bed",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "谁知这年冬底，林如海的书信寄来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-070",
+  "speaker": "narrator",
+  "text": "当下代儒料理丧事，各处去报丧。三日起经，七日发引，寄灵于铁槛寺，日后带回原籍。",
+  "title": "寄灵于铁槛寺",
+  "actions": [],
+  "offscreen": true
+ },
+ {
+  "chapter": "c12-depart",
+  "scene": "night",
+  "place": "贾母院 · 碧纱橱外间",
+  "focus": "grandmother_bed",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "谁知这年冬底，林如海的书信寄来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-071",
+  "speaker": "narrator",
+  "text": "谁知这年冬底，林如海的书信寄来，却为身染重疾，写书特来接林黛玉回去。贾母听了，未免又加忧闷，只得忙忙的打点黛玉起身。",
+  "title": "林如海的书信寄来",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "grandmother",
+    "at": "grandmother_bed"
+   },
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "daiyu_bed"
+   }
+  ]
+ },
+ {
+  "chapter": "c12-depart",
+  "scene": "night",
+  "place": "贾母院 · 碧纱橱外间",
+  "focus": "grandmother_bed",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "谁知这年冬底，林如海的书信寄来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-072",
+  "speaker": "grandmother",
+  "text": "（贾母定要贾琏送他去，仍叫带回来。一应土仪盘缠，自然要妥贴。）贾母道：“作了速，择了日期，就打发他们去罢。”",
+  "title": "定要贾琏送他去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-depart",
+  "scene": "night",
+  "place": "贾母院 · 碧纱橱外间",
+  "focus": "grandmother_bed",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "谁知这年冬底，林如海的书信寄来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-073",
+  "speaker": "narrator",
+  "text": "宝玉大不自在，争奈父女之情，也不好拦劝。（贾琏在原著中只列名，无台词、不另造人出场。）",
+  "title": "宝玉大不自在",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "baoyu_bed"
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c12-depart",
+  "scene": "night",
+  "place": "贾母院 · 碧纱橱外间",
+  "focus": "grandmother_bed",
+  "source": {
+   "chapter": 12,
+   "paragraphLead": "谁知这年冬底，林如海的书信寄来",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C12-074",
+  "speaker": "narrator",
+  "text": "作速择了日期，贾琏与林黛玉辞别了贾母等，带领仆从，登舟往扬州去了。",
+  "title": "登舟往扬州去了",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "daiyu",
+    "via": [
+     "outer_door"
+    ]
+   }
+  ]
+ }
+]

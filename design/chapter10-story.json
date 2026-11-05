@@ -1,0 +1,1013 @@
+[
+ {
+  "chapter": "c10-home",
+  "scene": "c10_jinhome",
+  "place": "金荣家 · 里屋",
+  "focus": "room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "话说金荣因人多势众，又兼贾瑞勒令，赔了不是，给秦钟磕了头，宝玉方才不吵闹了。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-001",
+  "speaker": "narrator",
+  "text": "金荣散了学回到家中，越想越气。他咕咕嘟嘟地说：秦钟不过是贾蓉的小舅子，又不是贾家的子孙，附学读书也不过和自己一样；如今仗着宝玉和他好，就目中无人。",
+  "title": "金荣回家越想越气",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jin_rong",
+    "at": "gate"
+   },
+   {
+    "type": "move",
+    "actor": "jin_rong",
+    "via": [
+     "yard",
+     "room_door"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c10-home",
+  "scene": "c10_jinhome",
+  "place": "金荣家 · 里屋",
+  "focus": "room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "话说金荣因人多势众，又兼贾瑞勒令，赔了不是，给秦钟磕了头，宝玉方才不吵闹了。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-002",
+  "speaker": "jin_rong",
+  "text": "金荣跺脚道：“今日他又去勾搭人，偏偏的撞在我眼睛里。就是闹出事来，我还怕什么不成？”",
+  "title": "金荣不服",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jin_rong",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-home",
+  "scene": "c10_jinhome",
+  "place": "金荣家 · 里屋",
+  "focus": "room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "话说金荣因人多势众，又兼贾瑞勒令，赔了不是，给秦钟磕了头，宝玉方才不吵闹了。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-003",
+  "speaker": "narrator",
+  "text": "他母亲胡氏听见了，忙问他又争什么闲气。",
+  "title": "胡氏听见",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "hu_shi",
+    "at": "room"
+   }
+  ]
+ },
+ {
+  "chapter": "c10-home",
+  "scene": "c10_jinhome",
+  "place": "金荣家 · 里屋",
+  "focus": "room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "话说金荣因人多势众，又兼贾瑞勒令，赔了不是，给秦钟磕了头，宝玉方才不吵闹了。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-004",
+  "speaker": "hu_shi",
+  "text": "胡氏叹道：“好容易我望你姑妈说了，你姑妈千方百计的才向他们西府里的琏二奶奶跟前说了，你才得了这个念书的地方。若不是仗着人家，咱们家里还有力量请的起先生？”",
+  "title": "胡氏劝子",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "hu_shi",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-home",
+  "scene": "c10_jinhome",
+  "place": "金荣家 · 里屋",
+  "focus": "room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "话说金荣因人多势众，又兼贾瑞勒令，赔了不是，给秦钟磕了头，宝玉方才不吵闹了。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-005",
+  "speaker": "hu_shi",
+  "text": "胡氏又道：“况且人家学里，茶也是现成的，饭也是现成的。你这二年在那里念书，家里也省好大的嚼用呢。再者，不是因你在那里念书，你就认得什么薛大爷了？那薛大爷这二年也帮了咱们有七八十两银子。”",
+  "title": "算计嚼用",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "hu_shi",
+    "kind": "rest",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-home",
+  "scene": "c10_jinhome",
+  "place": "金荣家 · 里屋",
+  "focus": "room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "话说金荣因人多势众，又兼贾瑞勒令，赔了不是，给秦钟磕了头，宝玉方才不吵闹了。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-006",
+  "speaker": "hu_shi",
+  "text": "胡氏道：“你如今要闹出了这个学房，再要找这么个地方，我告诉你说罢，比登天还难呢！”",
+  "title": "比登天还难",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "hu_shi",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-home",
+  "scene": "c10_jinhome",
+  "place": "金荣家 · 里屋",
+  "focus": "room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "话说金荣因人多势众，又兼贾瑞勒令，赔了不是，给秦钟磕了头，宝玉方才不吵闹了。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-007",
+  "speaker": "narrator",
+  "text": "于是金荣忍气吞声，不多一时自去睡了。次日仍旧上学去了。",
+  "title": "忍气吞声",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "hu_shi"
+   },
+   {
+    "type": "hide",
+    "actor": "jin_rong"
+   }
+  ]
+ },
+ {
+  "chapter": "c10-aunt",
+  "scene": "c10_jinhome",
+  "place": "金荣家 · 小院",
+  "focus": "yard",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说他姑娘，原聘给的是贾家玉字辈的嫡派，名唤贾璜。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-010",
+  "speaker": "narrator",
+  "text": "金荣的姑妈原聘给贾家“玉”字辈的嫡派贾璜。这贾璜夫妻守着些小小的产业，又时常到宁荣二府里去请安，又会奉承凤姐儿并尤氏，所以凤姐儿、尤氏也时常资助他。",
+  "title": "璜大奶奶的家世",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jin_shi",
+    "at": "gate"
+   },
+   {
+    "type": "move",
+    "actor": "jin_shi",
+    "via": [
+     "yard"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c10-aunt",
+  "scene": "c10_jinhome",
+  "place": "金荣家 · 小院",
+  "focus": "yard",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说他姑娘，原聘给的是贾家玉字辈的嫡派，名唤贾璜。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-011",
+  "speaker": "narrator",
+  "text": "这一日天气晴明，家中无事，璜大奶奶带了一个婆子坐车来，瞧瞧寡嫂并侄儿。",
+  "title": "姑嫂闲话",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "hu_shi",
+    "at": "room_door"
+   }
+  ]
+ },
+ {
+  "chapter": "c10-aunt",
+  "scene": "c10_jinhome",
+  "place": "金荣家 · 小院",
+  "focus": "yard",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说他姑娘，原聘给的是贾家玉字辈的嫡派，名唤贾璜。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-012",
+  "speaker": "hu_shi",
+  "text": "胡氏闲话之间，偏提起昨日贾家学房里的那事，从头至尾、一五一十都向小姑子说了。",
+  "title": "提起学房之事",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "hu_shi",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-aunt",
+  "scene": "c10_jinhome",
+  "place": "金荣家 · 小院",
+  "focus": "yard",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说他姑娘，原聘给的是贾家玉字辈的嫡派，名唤贾璜。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-013",
+  "speaker": "jin_shi",
+  "text": "璜大奶奶一时怒从心上起，说道：“这秦钟小崽子是贾门的亲戚，难道荣儿不是贾门的亲戚？人都别忒势利了！”",
+  "title": "怒从心上起",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jin_shi",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-aunt",
+  "scene": "c10_jinhome",
+  "place": "金荣家 · 小院",
+  "focus": "yard",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说他姑娘，原聘给的是贾家玉字辈的嫡派，名唤贾璜。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-014",
+  "speaker": "jin_shi",
+  "text": "璜大奶奶道：“等我去到东府瞧瞧我们珍大奶奶，再向秦钟他姐姐说说，叫他评评这个理。”",
+  "title": "要往东府理论",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jin_shi",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-aunt",
+  "scene": "c10_jinhome",
+  "place": "金荣家 · 小院",
+  "focus": "yard",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说他姑娘，原聘给的是贾家玉字辈的嫡派，名唤贾璜。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-015",
+  "speaker": "hu_shi",
+  "text": "胡氏急的了不得，忙道：“这都是我的嘴快，告诉了姑奶奶了，求姑奶奶别去！倘或闹起来，怎么在那里站得住？”",
+  "title": "胡氏急劝",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "hu_shi",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-aunt",
+  "scene": "c10_jinhome",
+  "place": "金荣家 · 小院",
+  "focus": "yard",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说他姑娘，原聘给的是贾家玉字辈的嫡派，名唤贾璜。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-016",
+  "speaker": "narrator",
+  "text": "璜大奶奶哪里肯听，一面叫老婆子瞧了车，就坐上往宁府里来。",
+  "title": "坐车往宁府",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "hu_shi"
+   },
+   {
+    "type": "move",
+    "actor": "jin_shi",
+    "via": [
+     "gate"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c10-ning",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "到了宁府，进了车门，到了东边小角门前下了车，进去见了贾珍之妻尤氏。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-020",
+  "speaker": "narrator",
+  "text": "璜大奶奶到了宁府，进了东边小角门下车，进去见了尤氏。她原是带着气来的，见了尤氏却未敢气高，只殷殷勤勤叙过寒温。",
+  "title": "见尤氏",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jin_shi",
+    "at": "garden_entry"
+   },
+   {
+    "type": "show",
+    "actor": "you_shi",
+    "at": "upper_room"
+   },
+   {
+    "type": "move",
+    "actor": "jin_shi",
+    "via": [
+     "garden_center",
+     "upper_room_door"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c10-ning",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "到了宁府，进了车门，到了东边小角门前下了车，进去见了贾珍之妻尤氏。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-021",
+  "speaker": "jin_shi",
+  "text": "璜大奶奶说了些闲话，方问道：“今日怎么没见蓉大奶奶？”",
+  "title": "问起蓉大奶奶",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jin_shi",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-ning",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "到了宁府，进了车门，到了东边小角门前下了车，进去见了贾珍之妻尤氏。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-022",
+  "speaker": "you_shi",
+  "text": "尤氏说道：“他这些日子不知怎么着，经期有两个多月没来。叫大夫瞧了，又说并不是喜。那两日，到了下半天就懒待动，话也懒待说，眼神也发眩。”",
+  "title": "尤氏说病",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "you_shi",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-ning",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "到了宁府，进了车门，到了东边小角门前下了车，进去见了贾珍之妻尤氏。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-023",
+  "speaker": "you_shi",
+  "text": "尤氏又道：“婶子，你是知道那媳妇的：虽则见了人有说有笑，会行事儿，他可心细，心又重，不拘听见个什么话儿，都要度量个三日五夜才罢。这病就是打这个秉性上头思虑出来的。”",
+  "title": "病从思虑上来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "you_shi",
+    "kind": "rest",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-ning",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "到了宁府，进了车门，到了东边小角门前下了车，进去见了贾珍之妻尤氏。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-024",
+  "speaker": "you_shi",
+  "text": "尤氏道：“他听了这事，今日索性连早饭也没吃。我方才看着他吃了半盏燕窝汤，才过来了。婶子，你说我心焦不心焦？你们知道有什么好大夫没有？”",
+  "title": "问有好大夫没有",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "you_shi",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-ning",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "到了宁府，进了车门，到了东边小角门前下了车，进去见了贾珍之妻尤氏。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-025",
+  "speaker": "narrator",
+  "text": "金氏听了这半日话，把方才在嫂子家那一团要向秦氏理论的盛气，早吓的都丢在爪洼国去了。",
+  "title": "盛气丢在爪洼国",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jin_shi",
+    "kind": "rest",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-ning",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "到了宁府，进了车门，到了东边小角门前下了车，进去见了贾珍之妻尤氏。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-026",
+  "speaker": "jin_shi",
+  "text": "金氏连忙答道：“我们这么听着，实在也没见人说有个好大夫。如今听起大奶奶这个来，定不得还是喜呢。嫂子倒别教人混治。”",
+  "title": "转怒为歉",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jin_shi",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-physician",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "金氏去后，贾珍方过来坐下，问尤氏道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-030",
+  "speaker": "narrator",
+  "text": "正说话间，贾珍从外进来，见了金氏便问尤氏：“这不是璜大奶奶么？”金氏向前给贾珍请了安。",
+  "title": "贾珍进来",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_zhen",
+    "at": "upper_room_door"
+   },
+   {
+    "type": "move",
+    "actor": "jia_zhen",
+    "via": [
+     "upper_room_door",
+     "upper_room"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c10-physician",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "金氏去后，贾珍方过来坐下，问尤氏道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-031",
+  "speaker": "jia_zhen",
+  "text": "贾珍向尤氏说道：“让这大妹妹吃了饭去。”说着话，就过那屋里去了。",
+  "title": "让大妹妹吃饭",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_zhen",
+    "kind": "greet",
+    "duration": 1.8
+   },
+   {
+    "type": "move",
+    "actor": "jia_zhen",
+    "via": [
+     "upper_room",
+     "upper_room_door"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c10-physician",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "金氏去后，贾珍方过来坐下，问尤氏道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-032",
+  "speaker": "narrator",
+  "text": "金氏此来原要向秦氏说说秦钟欺负了他侄儿的事，听见秦氏有病，不但不能说，亦且不敢提了；况且贾珍、尤氏又待的很好，便反转怒为喜，又说了一会子话儿，方家去了。",
+  "title": "反转怒为喜",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "jin_shi"
+   }
+  ]
+ },
+ {
+  "chapter": "c10-physician",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "金氏去后，贾珍方过来坐下，问尤氏道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-033",
+  "speaker": "you_shi",
+  "text": "尤氏道：“如今且说媳妇这病，你到那里寻一个好大夫来与他瞧瞧要紧，可别耽误了。现今咱们家走的这群大夫，那里要得？”",
+  "title": "求好大夫",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "you_shi",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-physician",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "金氏去后，贾珍方过来坐下，问尤氏道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-034",
+  "speaker": "jia_zhen",
+  "text": "贾珍道：“衣裳任凭是什么好的，可又值什么，孩子的身子要紧。我正进来要告诉你：方才冯紫英来看我，他说起有个幼时从学的先生，姓张名友士，学问最渊博的，更兼医理极深。”（冯紫英在原著中只被转述，不在场上。）",
+  "title": "冯紫英荐张友士",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_zhen",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-physician",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "金氏去后，贾珍方过来坐下，问尤氏道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-035",
+  "speaker": "jia_zhen",
+  "text": "贾珍道：“今年他是上京给他儿子来捐官，现在冯家住着呢。我已差人拿我的名帖请去了，等这个张先生来瞧了再说罢。”",
+  "title": "差人拿名帖去请",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_zhen",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-physician",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "金氏去后，贾珍方过来坐下，问尤氏道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-036",
+  "speaker": "you_shi",
+  "text": "尤氏听了心中甚喜，因说道：“后日是太爷的寿日，到底怎么办？”",
+  "title": "问太爷寿日",
+  "actions": []
+ },
+ {
+  "chapter": "c10-physician",
+  "scene": "c5_ningfu",
+  "place": "宁国府 · 上房",
+  "focus": "upper_room",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "金氏去后，贾珍方过来坐下，问尤氏道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-037",
+  "speaker": "jia_zhen",
+  "text": "贾珍道：“我方才到了太爷那里去请安。太爷说：`我是清净惯了的，我不愿意往你们那是非场中去闹去。你们必定说是我的生日，莫过你把我从前注的《阴骘文》给我令人好好的写出来刻了。’”（贾敬在原著中只被转述，不回府、不上场。）",
+  "title": "太爷要刻阴骘文",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_zhen",
+    "kind": "rest",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-diagnose",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说次日午间，人回道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-040",
+  "speaker": "narrator",
+  "text": "次日午间，人回道：“请的那张先生来了。”贾珍遂延入大厅坐下，说道：“就请先生进去看看儿妇，仰仗高明，以释下怀。”",
+  "title": "张先生来了",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhang_youshi",
+    "at": "bedchamber_door"
+   },
+   {
+    "type": "show",
+    "actor": "jia_rong",
+    "at": "bedchamber"
+   },
+   {
+    "type": "show",
+    "actor": "qin_ke",
+    "at": "screen_bed"
+   }
+  ]
+ },
+ {
+  "chapter": "c10-diagnose",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说次日午间，人回道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-041",
+  "speaker": "zhang_youshi",
+  "text": "张先生道：“依小弟的意思，竟先看过脉再说的为是。如今看了脉息，看小弟说的是不是，再将这些日子的病势讲一讲，大家斟酌一个方儿。”",
+  "title": "先看脉",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zhang_youshi",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-diagnose",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说次日午间，人回道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-042",
+  "speaker": "narrator",
+  "text": "家下媳妇们捧过大迎枕来，拉着袖口露出脉来。先生伸手按在右手脉上，宁神细诊了有半刻的工夫，方换过左手，亦复如是。",
+  "title": "凝神细诊",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "zhang_youshi",
+    "via": [
+     "bedchamber",
+     "screen_bed"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c10-diagnose",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说次日午间，人回道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-043",
+  "speaker": "zhang_youshi",
+  "text": "先生道：“看得尊夫人这脉息：左寸沉数，左关沉伏，右寸细而无力，右关需而无神。或以这个脉为喜脉，则小弟不敢从其教也。”",
+  "title": "断脉非喜",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zhang_youshi",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-diagnose",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说次日午间，人回道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-044",
+  "speaker": "narrator",
+  "text": "旁边贴身伏侍的婆子道：“真正先生说的如神，倒不用我们告诉了。”",
+  "title": "婆子称如神",
+  "actions": [],
+  "offscreen": true
+ },
+ {
+  "chapter": "c10-diagnose",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说次日午间，人回道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-045",
+  "speaker": "zhang_youshi",
+  "text": "先生道：“大奶奶是个心性高强、聪明不过的人。聪明忒过，则不如意事常有；不如意事常有，则思虑太过。此病是忧虑伤脾，肝木忒旺，经血所以不能按时而至。”",
+  "title": "论病源",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zhang_youshi",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-diagnose",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说次日午间，人回道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-046",
+  "speaker": "zhang_youshi",
+  "text": "先生又问：“大奶奶从前的行经的日子问一问，断不是常缩，必是常长的。是不是？”",
+  "title": "问行经日子",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zhang_youshi",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-diagnose",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说次日午间，人回道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-047",
+  "speaker": "narrator",
+  "text": "那婆子答道：“可不是，从没有缩过，或是长两日三日，以至十日都长过。”先生听了道：“妙啊！这就是病源了。”",
+  "title": "这就是病源",
+  "actions": [],
+  "offscreen": true
+ },
+ {
+  "chapter": "c10-diagnose",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说次日午间，人回道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-048",
+  "speaker": "zhang_youshi",
+  "text": "于是先生写了方子递与贾蓉，上写的是“益气养荣补脾和肝汤”。",
+  "title": "开方",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zhang_youshi",
+    "kind": "rest",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-diagnose",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说次日午间，人回道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-049",
+  "speaker": "jia_rong",
+  "text": "贾蓉看了说：“高明的很。还要请教先生，这病与性命终久有妨无妨？”",
+  "title": "问性命有妨无妨",
+  "actions": []
+ },
+ {
+  "chapter": "c10-diagnose",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说次日午间，人回道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-050",
+  "speaker": "zhang_youshi",
+  "text": "先生笑道：“大爷是最高明的人。人病到这个地位，非一朝一夕的症候，吃了这药也要看医缘了。依小弟看来，今年一冬是不相干的。总是过了春分，就可望全愈了。”",
+  "title": "过春分可望全愈",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zhang_youshi",
+    "kind": "greet",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c10-diagnose",
+  "scene": "c5_ningfu",
+  "place": "秦氏卧房",
+  "focus": "screen_bed",
+  "source": {
+   "chapter": 10,
+   "paragraphLead": "且说次日午间，人回道",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C10-051",
+  "speaker": "jia_zhen",
+  "text": "贾珍道：“他那方子上有人参，就用前日买的那一斤好的罢。”贾蓉出来叫人打药去煎给秦氏吃。",
+  "title": "用那斤好人参",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_zhen",
+    "at": "bedchamber_door"
+   }
+  ]
+ }
+]

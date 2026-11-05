@@ -5,8 +5,8 @@
  "assets": {
   "flower-gate": {
    "image": "/assets/rongguo/flower-gate.png",
-   "width": 974,
-   "height": 840,
+   "width": 600,
+   "height": 631,
    "anchor": [
     279.671,
     486.314
@@ -17,12 +17,12 @@
     50,
     184,
     1024,
-    1024
+    1208
    ],
    "shear": -0.24,
    "mirror": true,
    "bodyCompress": null,
-   "hash": "6cf3719111d9"
+   "hash": "513b11c034c3"
   },
   "courtyard-wall": {
    "image": "/assets/rongguo/courtyard-wall.png",
@@ -68,8 +68,8 @@
   },
   "main-hall": {
    "image": "/assets/rongguo/main-hall.png",
-   "width": 1328,
-   "height": 871,
+   "width": 1100,
+   "height": 888,
    "anchor": [
     443.976,
     677.39
@@ -80,12 +80,12 @@
     119,
     153,
     1447,
-    1024
+    1225
    ],
    "shear": 0.25,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "39c784ce91d6"
+   "hash": "256c76e7837c"
   },
   "garden-rock": {
    "image": "/assets/rongguo/garden-rock.png",
@@ -2999,8 +2999,8 @@
   },
   "manor-main-gate": {
    "image": "/assets/rongguo/manor-main-gate.png",
-   "width": 920,
-   "height": 662,
+   "width": 650,
+   "height": 528,
    "anchor": [
     287.554,
     400.347
@@ -3011,12 +3011,12 @@
     64,
     362,
     984,
-    1024
+    1109
    ],
    "shear": -0.2,
    "mirror": true,
    "bodyCompress": null,
-   "hash": "86c0d63e7c9b"
+   "hash": "a01571aaf988"
   },
   "estate-ruins": {
    "image": "/assets/rongguo/estate-ruins.png",

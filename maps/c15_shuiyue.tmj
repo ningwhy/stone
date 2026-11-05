@@ -1,0 +1,698 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "PlanZones",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 1,
+          "name": "A0 水月庵（馒头庵）",
+          "x": 768,
+          "y": 576,
+          "width": 1152,
+          "height": 704,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": true,
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "B 水月庵（馒头庵）",
+          "x": 896,
+          "y": 1344,
+          "width": 768,
+          "height": 448,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": true,
+              "type": "bool"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PlanBlockers",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 3,
+      "name": "Anchors",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 3,
+          "name": "gate",
+          "x": 1312.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 4,
+          "name": "court",
+          "x": 1312.0,
+          "y": 1248.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 5,
+          "name": "hall_door",
+          "x": 1312.0,
+          "y": 1056.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 6,
+          "name": "hall",
+          "x": 1312.0,
+          "y": 864.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 7,
+          "name": "nun_seat",
+          "x": 1056.0,
+          "y": 800.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 8,
+          "name": "back_room",
+          "x": 1184.0,
+          "y": 1568.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 9,
+          "name": "side",
+          "x": 1632.0,
+          "y": 864.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Routes",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 10,
+          "name": "动线 main",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "main",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "gate,court,hall_door,hall",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "动线 to_nun",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "to_nun",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "hall,nun_seat",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "动线 to_back",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "to_back",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "gate,back_room",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "动线 to_side",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "to_side",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "hall,side",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Art",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 14,
+          "name": "zhitong-temple",
+          "x": 1311.5212,
+          "y": 1279.5212,
+          "width": 630.0,
+          "height": 357.7,
+          "rotation": 0,
+          "visible": true,
+          "gid": 165,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "zhitong-temple",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "exterior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A0",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "altar-shrine",
+          "x": 1503.75952,
+          "y": 735.2776,
+          "width": 111.83999999999999,
+          "height": 153.6,
+          "rotation": 0,
+          "visible": true,
+          "gid": 177,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "altar-shrine",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A0",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "brazier",
+          "x": 1120.28296,
+          "y": 928.28296,
+          "width": 48.6,
+          "height": 62.64,
+          "rotation": 0,
+          "visible": true,
+          "gid": 117,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "brazier",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A0",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "official-chair",
+          "x": 1056.2752799999998,
+          "y": 800.27528,
+          "width": 62.0,
+          "height": 85.56,
+          "rotation": 0,
+          "visible": true,
+          "gid": 113,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "official-chair",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A0",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "round-stool",
+          "x": 1568.24302,
+          "y": 928.2430199999999,
+          "width": 40.599999999999994,
+          "height": 53.94,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "round-stool",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A0",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "tea-table",
+          "x": 1312.48204,
+          "y": 1056.48204,
+          "width": 67.60000000000001,
+          "height": 59.800000000000004,
+          "rotation": 0,
+          "visible": true,
+          "gid": 43,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "tea-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "A0",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "plain-kang",
+          "x": 1183.565,
+          "y": 1567.275,
+          "width": 328.28,
+          "height": 205.32,
+          "rotation": 0,
+          "visible": true,
+          "gid": 182,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "plain-kang",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "B",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "tea-table",
+          "x": 1440.4635,
+          "y": 1568.4635,
+          "width": 65.0,
+          "height": 57.5,
+          "rotation": 0,
+          "visible": true,
+          "gid": 43,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "tea-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "B",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "wood-screen",
+          "x": 992.3016,
+          "y": 1568.3016,
+          "width": 110.19999999999999,
+          "height": 99.75999999999999,
+          "rotation": 0,
+          "visible": true,
+          "gid": 39,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "wood-screen",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "B",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "name": "bamboo-cluster",
+          "x": 1695.11736,
+          "y": 1695.11736,
+          "width": 538.5600000000001,
+          "height": 297.44,
+          "rotation": 0,
+          "visible": true,
+          "gid": 189,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "bamboo-cluster",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "garden-tree",
+          "x": 870.09825,
+          "y": 1255.49039,
+          "width": 272.59999999999997,
+          "height": 236.88,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ArtFootprints",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 22,
+          "name": "tea-table",
+          "x": 1408.0,
+          "y": 1536.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 24,
+          "name": "wood-screen",
+          "x": 960.0,
+          "y": 1536.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Labels",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "objects": [
+        {
+          "id": 27,
+          "name": "水月庵",
+          "x": 1312.0,
+          "y": 672.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 28,
+          "name": "殿上",
+          "x": 1312.0,
+          "y": 928.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 29,
+          "name": "净室",
+          "x": 1120.0,
+          "y": 1504.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "rongguo-art.tsj"
+    }
+  ],
+  "nextlayerid": 8,
+  "nextobjectid": 30,
+  "properties": [
+    {
+      "name": "sceneId",
+      "type": "string",
+      "value": "c15_shuiyue"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "value": "水月庵（馒头庵）"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "value": "interior"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "19,21,3,5,path"
+    },
+    {
+      "name": "walls",
+      "type": "string",
+      "value": "14,21,26,21;14,21,14,28;26,21,26,28"
+    },
+    {
+      "name": "flowerbeds",
+      "type": "bool",
+      "value": false
+    }
+  ]
+}

@@ -1,0 +1,481 @@
+[
+ {
+  "chapter": "c9-enter",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "gate",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "却原来宝玉和秦钟两个你来我往的越发亲密",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-001",
+  "speaker": "narrator",
+  "text": "宝玉与秦钟越发亲密，秦钟意欲附学读书；宝玉大喜，引他去拜见塾师贾代儒。",
+  "title": "秦钟欲附学",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "yard"
+   },
+   {
+    "type": "show",
+    "actor": "qin_zhong",
+    "at": "gate"
+   }
+  ]
+ },
+ {
+  "chapter": "c9-enter",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "gate",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "却原来宝玉和秦钟两个你来我往的越发亲密",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-002",
+  "speaker": "narrator",
+  "text": "贾代儒见秦钟眉清目秀、举止斯文，便应允了；秦钟收拾书囊，与宝玉同窗而处。",
+  "title": "代儒允入塾",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_dairu",
+    "at": "teacher"
+   },
+   {
+    "type": "move",
+    "actor": "qin_zhong",
+    "via": [
+     "yard",
+     "hall",
+     "teacher"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c9-enter",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "gate",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "却原来宝玉和秦钟两个你来我往的越发亲密",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-003",
+  "speaker": "qin_zhong",
+  "text": "秦钟拱手道：“钟儿久慕家塾藏书，今日得附骥尾，幸甚。”宝玉拉他同坐。",
+  "title": "秦钟谢座",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qin_zhong",
+    "kind": "idle",
+    "duration": 1.8
+   },
+   {
+    "type": "parallel",
+    "moves": [
+     {
+      "type": "move",
+      "actor": "qin_zhong",
+      "via": [
+       "desk_a"
+      ]
+     },
+     {
+      "type": "move",
+      "actor": "baoyu",
+      "via": [
+       "desk_a"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c9-roll",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "hall",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "那薛蟠又看上两个小厮",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-010",
+  "speaker": "narrator",
+  "text": "薛蟠本是浮萍心性，又看上学堂里两个小厮香怜、玉爱，便时时招惹。",
+  "title": "薛蟠招惹二童",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xuepan",
+    "at": "hall"
+   }
+  ]
+ },
+ {
+  "chapter": "c9-roll",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "hall",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "那薛蟠又看上两个小厮",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-011",
+  "speaker": "narrator",
+  "text": "香怜、玉爱原是些没正经的，见了薛蟠的银钱，便与他眉来眼去；宝玉在旁，早看不过。",
+  "title": "二童逢迎",
+  "actions": []
+ },
+ {
+  "chapter": "c9-roll",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "hall",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "那薛蟠又看上两个小厮",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-012",
+  "speaker": "baoyu",
+  "text": "宝玉皱眉道：“越发不成体统了。”便拉了秦钟避到一隅，不与他们厮混。",
+  "title": "宝玉不屑",
+  "actions": [
+   {
+    "type": "parallel",
+    "moves": [
+     {
+      "type": "move",
+      "actor": "baoyu",
+      "via": [
+       "desk_c"
+      ]
+     },
+     {
+      "type": "move",
+      "actor": "qin_zhong",
+      "via": [
+       "desk_c"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c9-plot",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "teacher",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "那贾瑞管着学堂，图薛蟠的谢礼",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-020",
+  "speaker": "narrator",
+  "text": "贾瑞讨了代儒的权，管起学堂来；他原是个图便宜没刚性的，见薛蟠撒漫使钱，便一心回护。",
+  "title": "贾瑞管学堂",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_rui",
+    "at": "teacher"
+   }
+  ]
+ },
+ {
+  "chapter": "c9-plot",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "teacher",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "那贾瑞管着学堂，图薛蟠的谢礼",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-021",
+  "speaker": "jia_rui",
+  "text": "贾瑞板着脸假意申斥几句，转脸却向薛蟠使个眼色，悄悄受了他的东道。",
+  "title": "假公济私",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_rui",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c9-plot",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "teacher",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "那贾瑞管着学堂，图薛蟠的谢礼",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-022",
+  "speaker": "narrator",
+  "text": "金荣在旁看得分明，素与薛蟠不睦，心中早存了几分不忿。",
+  "title": "金荣生怨",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_rui",
+    "via": [
+     "teacher",
+     "hall"
+    ]
+   },
+   {
+    "type": "show",
+    "actor": "jin_rong",
+    "at": "desk_b"
+   }
+  ]
+ },
+ {
+  "chapter": "c9-clash",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "hall",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "金荣是和薛蟠有些旧怨的",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-030",
+  "speaker": "narrator",
+  "text": "金荣借着昨日的由头，又见秦钟、宝玉亲厚，便当着众人出言讥讽，语带污蔑。",
+  "title": "金荣起衅",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jin_rong",
+    "via": [
+     "desk_b",
+     "hall"
+    ]
+   },
+   {
+    "type": "show",
+    "actor": "qin_zhong",
+    "at": "desk_a"
+   }
+  ]
+ },
+ {
+  "chapter": "c9-clash",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "hall",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "金荣是和薛蟠有些旧怨的",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-031",
+  "speaker": "jin_rong",
+  "text": "金荣冷笑道：“姓秦的，不过是个……也配在我们跟前充什么斯文！”满堂哗然。",
+  "title": "当面羞辱",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jin_rong",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c9-clash",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "hall",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "金荣是和薛蟠有些旧怨的",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-032",
+  "speaker": "baoyu",
+  "text": "宝玉拍案怒道：“休得胡言乱语，伤犯我友！”秦钟涨红了脸，低头不语。",
+  "title": "宝玉护友",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "desk_c",
+     "hall"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "anger",
+    "duration": 1.8
+   }
+  ]
+ },
+ {
+  "chapter": "c9-clash",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "hall",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "金荣是和薛蟠有些旧怨的",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-033",
+  "speaker": "narrator",
+  "text": "金荣撒起泼来，拍桌蹬凳，学堂里登时乱作一团；贾瑞假意弹压，却并不认真。",
+  "title": "学堂大乱",
+  "actions": []
+ },
+ {
+  "chapter": "c9-quit",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "yard",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "茗烟便大闹学堂",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-040",
+  "speaker": "narrator",
+  "text": "茗烟在门外听得主子受辱，哪里忍得，闯进学堂便骂。",
+  "title": "茗烟闯入",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ming_yan",
+    "at": "gate"
+   }
+  ]
+ },
+ {
+  "chapter": "c9-quit",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "yard",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "茗烟便大闹学堂",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-041",
+  "speaker": "ming_yan",
+  "text": "茗烟叫道：“姓金的算什么东西，也敢欺负我们二爷！”扑上去与金荣扭作一团。",
+  "title": "茗烟揪打",
+  "actions": [
+   {
+    "type": "parallel",
+    "moves": [
+     {
+      "type": "move",
+      "actor": "ming_yan",
+      "via": [
+       "gate",
+       "yard"
+      ]
+     },
+     {
+      "type": "move",
+      "actor": "jin_rong",
+      "via": [
+       "hall",
+       "yard"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c9-quit",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "yard",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "茗烟便大闹学堂",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-042",
+  "speaker": "li_gui",
+  "text": "李贵赶来，一把扯开二人，喝道：“作死的小崽子！这是读书的地方，也由得你们撒野？”",
+  "title": "李贵喝住",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "li_gui",
+    "at": "door"
+   }
+  ]
+ },
+ {
+  "chapter": "c9-quit",
+  "scene": "c9_school",
+  "place": "贾家家塾",
+  "focus": "yard",
+  "source": {
+   "chapter": 9,
+   "paragraphLead": "茗烟便大闹学堂",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C09-043",
+  "speaker": "narrator",
+  "text": "李贵连推带拽分开众人，贾瑞也来装腔作势弹压；众顽童方才悻悻散了学。",
+  "title": "散学",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "li_gui",
+    "via": [
+     "door",
+     "yard"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "li_gui",
+    "kind": "idle",
+    "duration": 1.8
+   }
+  ]
+ }
+]

@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "stage-platform_s10243101-01",
+  "seed": 10243101,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩与不透明水粉，细腻纸张纹理，清晰精细的手绘轮廓与丰富材质细节，低饱和青灰、松绿、暖米白、赭石与暗朱红，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏素材，清代宅院戏台一座，方形台基上立四根朱红立柱，柱顶承歇山式黛瓦顶棚，柱间悬暗红帷幕与横楣，台面铺木板，台前一对方形石阶，无人物无桌椅无灯笼。二比一菱形正交等距俯视，无透视消失点，完整居中，四周留白。纯白背景，无地面平台，无周围建筑，无文字牌匾，无签名。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": null,
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "a2f1be23-4f20-4152-a7e4-3d3c8ff6b7b1",
+  "generated_at": "2026-11-01 00:35:21",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "1k-1k"
+}

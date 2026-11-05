@@ -24,3 +24,19 @@ art/matted/_backup/
 art/cards/source/*_v[0-9]*.png
 art/cards/source/_rejected-*/
 art/cards/gen_*.log
+
+# The `.bak` copies are what the matting pipeline saved before it re-cut a head:
+# intermediates, reproducible from the source image plus the calibration file.
+art/source/*.bak
+art/matted/*.bak
+
+# Scratch folders for generation runs. They hold the raw takes of the new cast and
+# the card passes; the surviving take is copied into art/source and art/cards.
+art/tmp_*/
+
+# Playwright CLI session logs and the test runner's scratch output.
+.playwright-cli/
+test-results/
+
+# Staging copies of chapter data kept while a chapter is being wired in.
+artifacts/staging/

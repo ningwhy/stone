@@ -24,6 +24,7 @@ ITEMS = [
     ('cabinet', 10224107),
     ('brazier', 10224108),
     ('vase-stand', 10224109),
+    ('stage-platform', 10243101),
 ]
 
 

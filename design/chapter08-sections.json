@@ -1,0 +1,37 @@
+[
+ {
+  "id": "c8-pear",
+  "title": "梨香院 · 探宝钗",
+  "scene": "c7_lixiang",
+  "start": "C08-001",
+  "book": 8
+ },
+ {
+  "id": "c8-gold",
+  "title": "梨香院 · 金莺微露意",
+  "scene": "c7_lixiang",
+  "start": "C08-010",
+  "book": 8
+ },
+ {
+  "id": "c8-sour",
+  "title": "梨香院 · 黛玉半含酸",
+  "scene": "c7_lixiang",
+  "start": "C08-020",
+  "book": 8
+ },
+ {
+  "id": "c8-lunch",
+  "title": "梨香院 · 酸笋鸡皮汤",
+  "scene": "c7_lixiang",
+  "start": "C08-030",
+  "book": 8
+ },
+ {
+  "id": "c8-anger",
+  "title": "贾母院 · 摔杯怒李嬷嬷",
+  "scene": "night",
+  "start": "C08-040",
+  "book": 8
+ }
+]

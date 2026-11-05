@@ -402,57 +402,417 @@
     159
   ],
   "menzi-chibi": [
-    22,
-    16,
+    24,
+    15,
     43,
-    31
+    32
   ],
   "plaintiff-portrait": [
-    9,
-    45,
-    66,
-    106
+    6,
+    48,
+    240,
+    312
   ],
   "plaintiff-chibi": [
-    72,
-    9,
-    92,
-    28
+    5,
+    5,
+    97,
+    60
   ],
   "xuepan-portrait": [
-    68,
-    10,
-    124,
-    72
+    69,
+    3,
+    138,
+    99
   ],
   "xuepan-chibi": [
-    25,
-    3,
-    45,
-    24
+    23,
+    1,
+    48,
+    30
   ],
   "xueyima-portrait": [
     78,
     42,
     162,
-    171
+    168
   ],
   "xueyima-chibi": [
-    17,
+    18,
     13,
-    35,
-    32
+    36,
+    33
   ],
   "baochai-portrait": [
     105,
     72,
-    216,
-    216
+    213,
+    213
   ],
   "baochai-chibi": [
-    16,
+    19,
     14,
+    37,
+    33
+  ],
+  "jinghuan-portrait": [
+    96,
+    45,
+    150,
+    141
+  ],
+  "jinghuan-chibi": [
+    34,
+    14,
+    51,
+    35
+  ],
+  "qin_ke-portrait": [
+    102,
+    75,
+    192,
+    303
+  ],
+  "qin_ke-chibi": [
+    9,
+    16,
+    28,
+    46
+  ],
+  "liu_lao-portrait": [
+    177,
+    45,
+    297,
+    198
+  ],
+  "liu_lao-chibi": [
+    13,
+    15,
+    52,
+    60
+  ],
+  "ban_er-portrait": [
+    48,
+    24,
+    162,
+    159
+  ],
+  "ban_er-chibi": [
+    8,
+    5,
+    54,
+    60
+  ],
+  "zhou_rui-portrait": [
+    90,
+    39,
+    183,
+    177
+  ],
+  "zhou_rui-chibi": [
+    0,
+    33,
+    16,
+    60
+  ],
+  "ping_er-portrait": [
+    75,
+    60,
+    171,
+    180
+  ],
+  "ping_er-chibi": [
+    1,
+    32,
+    34,
+    60
+  ],
+  "jia_rong-portrait": [
+    54,
+    39,
+    114,
+    126
+  ],
+  "jia_rong-chibi": [
+    7,
+    19,
+    35,
+    44
+  ],
+  "ying_er-portrait": [
+    12,
+    60,
+    228,
+    312
+  ],
+  "ying_er-chibi": [
+    12,
+    20,
+    46,
+    50
+  ],
+  "qin_zhong-portrait": [
+    108,
+    54,
+    210,
+    186
+  ],
+  "qin_zhong-chibi": [
+    12,
+    20,
+    41,
+    47
+  ],
+  "jia_rui-portrait": [
+    90,
+    0,
+    174,
+    147
+  ],
+  "jia_rui-chibi": [
+    13,
+    0,
     38,
+    40
+  ],
+  "jin_rong-portrait": [
+    81,
+    42,
+    216,
+    213
+  ],
+  "jin_rong-chibi": [
+    13,
+    0,
+    51,
+    47
+  ],
+  "ming_yan-portrait": [
+    81,
+    51,
+    201,
+    201
+  ],
+  "ming_yan-chibi": [
+    11,
+    20,
+    55,
+    54
+  ],
+  "li_gui-portrait": [
+    123,
+    12,
+    219,
+    153
+  ],
+  "li_gui-chibi": [
+    24,
+    7,
+    48,
+    37
+  ],
+  "you_shi-portrait": [
+    72,
+    39,
+    132,
+    126
+  ],
+  "you_shi-chibi": [
+    17,
+    12,
+    34,
+    30
+  ],
+  "jia_zhen-portrait": [
+    87,
+    39,
+    147,
+    126
+  ],
+  "jia_zhen-chibi": [
+    23,
+    13,
+    39,
+    34
+  ],
+  "jin_shi-portrait": [
+    96,
+    66,
+    192,
+    189
+  ],
+  "jin_shi-chibi": [
+    16,
+    17,
+    39,
+    45
+  ],
+  "hu_shi-portrait": [
+    81,
+    36,
+    186,
+    180
+  ],
+  "hu_shi-chibi": [
+    20,
+    15,
+    41,
+    34
+  ],
+  "zhang_youshi-portrait": [
+    87,
+    42,
+    156,
+    147
+  ],
+  "zhang_youshi-chibi": [
+    19,
+    12,
+    37,
+    37
+  ],
+  "jia_qiang-portrait": [
+    84,
+    54,
+    162,
+    156
+  ],
+  "jia_qiang-chibi": [
+    14,
+    20,
+    40,
+    45
+  ],
+  "jia_dairu-portrait": [
+    93,
+    42,
+    168,
+    153
+  ],
+  "jia_dairu-chibi": [
+    19,
+    18,
+    45,
+    47
+  ],
+  "dai_quan-portrait": [
+    81,
+    0,
+    147,
+    114
+  ],
+  "dai_quan-chibi": [
+    22,
+    0,
+    40,
     32
+  ],
+  "bao_zhu-portrait": [
+    75,
+    42,
+    177,
+    192
+  ],
+  "bao_zhu-chibi": [
+    11,
+    13,
+    40,
+    46
+  ],
+  "lai_sheng-portrait": [
+    96,
+    54,
+    189,
+    180
+  ],
+  "lai_sheng-chibi": [
+    17,
+    14,
+    44,
+    45
+  ],
+  "zhao_er-portrait": [
+    81,
+    0,
+    189,
+    171
+  ],
+  "zhao_er-chibi": [
+    12,
+    1,
+    53,
+    51
+  ],
+  "shui_rong-portrait": [
+    123,
+    81,
+    207,
+    189
+  ],
+  "shui_rong-chibi": [
+    17,
+    21,
+    42,
+    46
+  ],
+  "jing_xu-portrait": [
+    111,
+    12,
+    225,
+    243
+  ],
+  "jing_xu-chibi": [
+    11,
+    8,
+    35,
+    43
+  ],
+  "zhi_neng-portrait": [
+    81,
+    0,
+    219,
+    219
+  ],
+  "zhi_neng-chibi": [
+    0,
+    1,
+    48,
+    55
+  ],
+  "er_ya_tou-portrait": [
+    87,
+    54,
+    201,
+    183
+  ],
+  "er_ya_tou-chibi": [
+    13,
+    10,
+    45,
+    42
+  ],
+  "wang_er-portrait": [
+    105,
+    12,
+    213,
+    171
+  ],
+  "wang_er-chibi": [
+    30,
+    3,
+    58,
+    40
+  ],
+  "qin_ye-portrait": [
+    117,
+    21,
+    216,
+    195
+  ],
+  "qin_ye-chibi": [
+    20,
+    7,
+    39,
+    38
   ]
 }

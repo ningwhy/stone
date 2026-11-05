@@ -82,6 +82,7 @@ def is_shell(asset):
 MAX_TALL = {'main-hall': 430, 'rongxi-hall': 430, 'wang-hall': 400, 'yamen-hall': 380,
             'fu-hall': 380, 'lixiang-hall': 360, 'main-gate': 340, 'manor-main-gate': 340,
             'screen-wall': 320, 'lantern-booth': 300, 'tavern-house': 350, 'farm-house': 320,
+            'stage-platform': 400,
             'zhen-house': 360, 'hulu-temple': 330, 'zhitong-temple': 360, 'ruined-house': 380,
             'ning-hall': 360, 'qin-room': 320, 'taixu-arch': 340, 'taixu-hall': 380, 'spirit-stone': 430}
 

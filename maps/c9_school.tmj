@@ -1,0 +1,572 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "PlanZones",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 1,
+          "name": "A0 贾家家塾",
+          "x": 640,
+          "y": 1024,
+          "width": 1280,
+          "height": 1152,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 2,
+          "name": "HALL 贾家家塾",
+          "x": 896,
+          "y": 1088,
+          "width": 768,
+          "height": 576,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": true,
+              "type": "bool"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PlanBlockers",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 3,
+      "name": "Anchors",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 3,
+          "name": "gate",
+          "x": 1312.0,
+          "y": 2016.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 4,
+          "name": "yard",
+          "x": 1312.0,
+          "y": 1824.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 5,
+          "name": "hall",
+          "x": 1312.0,
+          "y": 1568.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 6,
+          "name": "teacher",
+          "x": 992.0,
+          "y": 1376.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 7,
+          "name": "desk_a",
+          "x": 1184.0,
+          "y": 1312.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 8,
+          "name": "desk_b",
+          "x": 1440.0,
+          "y": 1312.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 9,
+          "name": "desk_c",
+          "x": 1568.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 10,
+          "name": "door",
+          "x": 1312.0,
+          "y": 1120.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Routes",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 11,
+          "name": "动线 main",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "main",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "gate,yard,hall",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "动线 inner",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "inner",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "yard,hall,door",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Art",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 13,
+          "name": "qin-room",
+          "x": 1311.7991724137933,
+          "y": 1663.3975172413793,
+          "width": 496.55172413793105,
+          "height": 320.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 191,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "qin-room",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "exterior",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "HALL",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "writing-desk",
+          "x": 1184.4061,
+          "y": 1312.4061,
+          "width": 111.6,
+          "height": 91.14,
+          "rotation": 0,
+          "visible": true,
+          "gid": 112,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "writing-desk",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "HALL",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "writing-desk",
+          "x": 1440.4061,
+          "y": 1312.4061,
+          "width": 111.6,
+          "height": 91.14,
+          "rotation": 0,
+          "visible": true,
+          "gid": 112,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "writing-desk",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "HALL",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "writing-desk",
+          "x": 1568.3799,
+          "y": 1440.3799,
+          "width": 104.39999999999999,
+          "height": 85.25999999999999,
+          "rotation": 0,
+          "visible": true,
+          "gid": 112,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "writing-desk",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "HALL",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "official-chair",
+          "x": 992.2575199999999,
+          "y": 1376.2575199999999,
+          "width": 57.99999999999999,
+          "height": 80.03999999999999,
+          "rotation": 0,
+          "visible": true,
+          "gid": 113,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "official-chair",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "HALL",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "official-desk",
+          "x": 992.3009,
+          "y": 1247.6991,
+          "width": 205.79999999999998,
+          "height": 201.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 176,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "official-desk",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "HALL",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "bookshelf",
+          "x": 1120.2613,
+          "y": 1119.7387,
+          "width": 101.4,
+          "height": 178.36,
+          "rotation": 0,
+          "visible": true,
+          "gid": 181,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "bookshelf",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            },
+            {
+              "name": "interiorZone",
+              "value": "HALL",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "flower-gate",
+          "x": 1392.52226,
+          "y": 2085.95118,
+          "width": 312.0,
+          "height": 328.12,
+          "rotation": 0,
+          "visible": true,
+          "gid": 1,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "flower-gate",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "garden-tree",
+          "x": 1764.671,
+          "y": 1765.73732,
+          "width": 208.79999999999998,
+          "height": 181.44,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ArtFootprints",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 7,
+      "name": "Labels",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "objects": [
+        {
+          "id": 22,
+          "name": "家塾",
+          "x": 1312.0,
+          "y": 1952.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 23,
+          "name": "塾室",
+          "x": 1312.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 24,
+          "name": "塾师席",
+          "x": 992.0,
+          "y": 1248.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "rongguo-art.tsj"
+    }
+  ],
+  "nextlayerid": 8,
+  "nextobjectid": 25,
+  "properties": [
+    {
+      "name": "sceneId",
+      "type": "string",
+      "value": "c9_school"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "value": "贾家家塾"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "value": "interior"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "18,28,5,6,path"
+    },
+    {
+      "name": "walls",
+      "type": "string",
+      "value": "10,16,30,16;10,16,10,33;30,16,30,33;10,33,18,33;22,33,30,33"
+    }
+  ]
+}

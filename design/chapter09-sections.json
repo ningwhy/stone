@@ -1,0 +1,37 @@
+[
+ {
+  "id": "c9-enter",
+  "title": "家塾 · 秦钟入塾",
+  "scene": "c9_school",
+  "start": "C09-001",
+  "book": 9
+ },
+ {
+  "id": "c9-roll",
+  "title": "家塾 · 薛蟠与香怜玉爱",
+  "scene": "c9_school",
+  "start": "C09-010",
+  "book": 9
+ },
+ {
+  "id": "c9-plot",
+  "title": "家塾 · 贾瑞图私利",
+  "scene": "c9_school",
+  "start": "C09-020",
+  "book": 9
+ },
+ {
+  "id": "c9-clash",
+  "title": "家塾 · 金荣起衅",
+  "scene": "c9_school",
+  "start": "C09-030",
+  "book": 9
+ },
+ {
+  "id": "c9-quit",
+  "title": "家塾 · 顽童闹学堂",
+  "scene": "c9_school",
+  "start": "C09-040",
+  "book": 9
+ }
+]
