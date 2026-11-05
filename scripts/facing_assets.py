@@ -82,6 +82,11 @@ CROP_SHAPES = {
     'tight': (0.0, 0.0, 0.0, 0.0),
     'wide': (0.6, 0.5, 0.6, 0.7),
     'wider': (1.0, 0.8, 1.0, 1.0),
+    # A crop that keeps only the head and a little of the shoulders. The
+    # tighter crops above can cut the hair line off, and a face whose hair is
+    # cut off is one the detector refuses to fit; this one is the shape that
+    # reads the heads the other shapes miss.
+    'head': (0.30, 0.25, 0.30, 0.35),
 }
 
 
@@ -92,6 +97,17 @@ def classify(key: str) -> str:
     if '-portrait-' in key:
         return 'emotion'
     return 'portrait'
+
+
+AUTO_BOXES = os.path.join(ROOT, 'art', 'identity', 'auto-face-boxes.json')
+
+
+def auto_face_box(key: str):
+    """The proposed face box for a head that has no reviewed one."""
+    if not os.path.exists(AUTO_BOXES):
+        return None
+    with open(AUTO_BOXES, encoding='utf-8') as fh:
+        return json.load(fh).get(key)
 
 
 def load(entry):
@@ -105,6 +121,15 @@ def crop_variants(key: str, entry, image):
     """The bitmaps the face is measured on, as (name, image) pairs."""
     kind = classify(key)
     box = (entry.get('identity') or {}).get('faceBox')
+    if not box:
+        # A character that never went through the identity pipeline has no
+        # reviewed face box — the characters painted after that pipeline was
+        # set up. scripts/inspect_face_boxes.py proposes one for every painted
+        # head from the skin tones alone; it is a proposal, not a review, so it
+        # is only used to give the detector a crop to work on, never as a
+        # reading. Without it a chibi sprite is measured whole and the
+        # detector finds no face at all.
+        box = auto_face_box(key)
     if not box:
         # A portrait with no recorded face box is measured whole.
         return [('whole', image)]

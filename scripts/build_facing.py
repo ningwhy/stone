@@ -113,6 +113,54 @@ REVIEWED = {
     'xichun-chibi': ('right', 'single crop read; confirmed by eye'),
     'yucun-chibi': ('right', 'single crop read; confirmed by eye'),
     'zheng-chibi': ('right', 'single crop read; confirmed by eye'),
+    # The chapter 13-15 cast was painted outside the identity pipeline, so the
+    # detector had no proposed head box for it and read no face at all. The
+    # boxes were proposed afterwards by scripts/inspect_face_boxes.py, and the
+    # heads below were then read by eye on the enlarged crop that
+    # scripts/facing_review_zoom.py renders, with the head's horizontal centre
+    # drawn on it. A face whose nose and mouth sit to the right of that line
+    # turns to the image's right.
+    'bao_zhu-chibi': ('right', 'detector reads no face in any crop; painted head '
+                               'read by eye, it turns right'),
+    'lai_sheng-portrait': ('left', 'detector reads no face in any crop; painted head '
+                                   'read by eye, it turns left'),
+    'lai_sheng-chibi': ('right', 'detector reads no face in any crop; painted head '
+                                'read by eye, it turns right'),
+    'zhao_er-chibi': ('right', 'detector reads no face in any crop; painted head '
+                              'read by eye, it turns right'),
+    'jing_xu-portrait': ('left', 'detector reads no face in any crop; painted head '
+                                 'read by eye, it turns left'),
+    'jing_xu-chibi': ('right', 'detector reads no face in any crop; painted head '
+                               'read by eye, it turns right'),
+    'er_ya_tou-chibi': ('right', 'detector reads no face in any crop; painted head '
+                                 'read by eye, it turns right'),
+    'wang_er-portrait': ('left', 'detector reads no face in any crop; painted head '
+                                 'read by eye, it turns left'),
+    # Liu Lao and Ban Er walk the village in chapter 6. Their chibi faces were
+    # never measured, and the left default mirrored them against the way they
+    # were painted, so they walked backwards. Read on the matted sprites: the
+    # headscarf knot sits at the back and the body strides right; the boy's
+    # pupils and stride both turn right.
+    'liu_lao-chibi': ('right', 'detector reads no face in any crop; painted head '
+                               'read by eye, headscarf knot at the back-left and '
+                               'the body strides right'),
+    'ban_er-chibi': ('right', 'detector reads no face in any crop; painted head '
+                              'read by eye, pupils shifted right and the body '
+                              'strides right'),
+    'grandmother-portrait-mourning': ('left', 'detector reads no face in any crop; '
+                                              'painted head read by eye, it turns left'),
+    # Chibi faces the detector cannot read, kept from the earlier eye pass over
+    # the review sheet so a re-measure cannot silently flip them.
+    'jinghuan-chibi': ('right', 'detector reads no face in any crop; painted head '
+                                'read by eye, it turns right'),
+    'ping_er-chibi': ('right', 'detector reads no face in any crop; painted head '
+                               'read by eye, it turns right'),
+    'qin_ke-chibi': ('right', 'detector reads no face in any crop; painted head '
+                              'read by eye, it turns right'),
+    'jia_rong-chibi': ('left', 'detector reads no face in any crop; painted head '
+                               'read by eye, face and stride turn left'),
+    'zhou_rui-chibi': ('left', 'detector reads no face in any crop; painted head '
+                               'read by eye, nose and face turn left'),
 }
 
 # Vehicles are cast members but not a single face: the sedan is carried by four
@@ -135,7 +183,14 @@ def main():
     if os.path.exists(MEASURED):
         with open(MEASURED, encoding='utf-8') as fh:
             for row in json.load(fh):
-                measured[row['asset']] = row
+                # facing_measure.py keys each row by actor + kind; the table here
+                # is keyed by the asset that carries the picture, so the two are
+                # joined on `{actor}-{kind}`. Reading `row['asset']` instead
+                # raises KeyError, and the fallback quietly paints every head
+                # facing left — which is the same mistake this table exists
+                # to prevent.
+                key = row.get('asset') or f"{row['actor']}-{row['kind']}"
+                measured[key] = row
 
     # Every painted character, from the cast the runtime knows about.
     story = open(os.path.join(ROOT, 'src', 'story.ts'), encoding='utf-8').read()

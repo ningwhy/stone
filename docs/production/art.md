@@ -171,7 +171,7 @@ builder 顺序是原 SAM alpha ≥110 二值化 → 恢复道具 → 裁切/清�
 
 原图脸部朝向并不一致，立绘与 Q 版不能靠同一条全局规则镜像。`design/character-facing.json` 是权威朝向表，**按资产键**记录（`left` / `right`），并附 `evidence`（测量值与方法）：`actors` 下每个角色分 `portrait` 与 `chibi`，`variants` 下每张表情变体各一条。运行时经 `src/story.ts` 的 `paintedFacingOf(assetKey, actor, kind)` 查询：对话框立绘按讲话人/听众位置决定是否 `scaleX(-1)`，地图 Q 版整图左右镜像（`setFlipX`，模拟向后转），且镜像条件不再是"只在行走时"——`direction` 停止后、跨场景/跨段落都保持，由引擎在 `show` 与移动到达时按站位写入（见 `docs/design.md` 的朝向演出规则）。
 
-**逐张清单见 [facing-list.md](./facing-list.md)**——那是由 `scripts/build_facing_doc.py` 从权威 JSON 自动展开的 92 张位图逐行清单（38 立绘 + 38 Q 版 + 16 表情变体），可直接核对哪张朝左、依据是实测还是目视。
+**逐张清单见 [facing-list.md](./facing-list.md)**——那是由 `scripts/build_facing_doc.py` 从权威 JSON 自动展开的逐行清单（2026-10 为 121 张位图：51 立绘 + 51 Q 版 + 19 表情变体），可直接核对哪张朝左、依据是实测还是目视。
 
 载具是唯一不按人脸记的条目：轿子由四名轿夫抬着，轿夫的脸都朝内对着轿身，整组没有单一朝向，所以 `sedan` 记 `evidence.method = default-vehicle-group`、取左为默认，运行时按行进方向整图翻转。它不计入那 92 张。
 
@@ -247,3 +247,20 @@ SAM 与 SDMatte 都保留，但 builder 当前读取 `*-sam.png`。若采用 SDM
 - 清单要**逐条对照母题写**，不能凭印象列。母题里写了什么，画面里就允许出现什么——多出来的每一件都要能在母题里找到出处。
 - 批量图用**拼图**审，不是一张张看（14 张各看一遍容易漏，4×4 网格一眼能看出哪格多东西）。
 - 同理，人物资产的「已目检」要写明是查了**同脸辨识**、**朝向**、**锚点**还是**透明度**——只查了其中一项就只写那一项。
+
+## 新增人物必须走同一条管线（2026-10，第八九回返工）
+
+第八、九回新出场的 6 人（莺儿、秦钟、贾瑞、金荣、茗烟、李贵）第一版画风和旧 45 人对不上，返工一轮才修好。四个坑都不在生成质量上，而在**换管线时忘了同步下游契约**：
+
+**一、不能用另一套模型图快。** 旧 45 人走 `generate_art.py` → Z-Image turbo（`z_image_turbo_bf16`）+ `generation-plan.json['style']` 的共享风格锚点（工笔重彩、低饱和青灰松绿暖米白）。新角色改用 Qwen Image 2.1 后，画风成了水墨单色写意，取景也从半身变成全身站像——**模型、风格锚点、取景三者错一个就整批不统一**。新角色一律复用 `generation-plan.json` 的 style 与旧提示词尾句（portrait「半身立绘，头顶至腰下完整，人物正面略向左」，chibi 三头身脚底清楚），只换角色脸描述。改截断措辞会让模型把人画得更高（「大腿中部」比「腰下」高出约 200px），尾句照抄旧模板，不要自己发挥。
+
+**二、锚点是原图像素，换画布就失效。** 这是最隐蔽的一条。6 人先按 Qwen 大图校准（`ying_er` anchor `[364,1138]`），改画 Z-Image 的 768×1024 后**锚点没重测**，旧坐标直接落到新画布外：`ying_er-portrait` 锚点 y=878 而图只有 779 高，`jia_rui-portrait` 锚点 x=57 跑到画面左缘。地图上表现为人物悬空、沉地或偏出自己的格子。
+→ **任何重画之后都要重测锚点**，见 `scripts/recalibrate_new_chars.py`（从当前 `art/matted/*-sam.png` 重测脚底，并校验输出锚点落在位图内）。`build_new_char_assets.py` 是幂等的（已有校准条目会跳过），重画不会自动更新它。
+
+**三、缩放键用 `height`，不是 `width`。** 旧 45 人里 44 个 portrait 是 `height:600`、42 个 chibi 是 `height:116`——人人等高，只有胖瘦改变宽度。新角色写成 `width:300` 后高度散在 561–779，站在一起高矮不齐。改用 `height` 后宽度自然落在 231–321，与旧人 206–346 同一区间。
+
+**四、Q 版要带 `bodyCompress`。** 旧 chibi 里 38 个带下半身压缩（factor 主流 0.64，split ≈ 脚底锚点 × 0.42），这是「大头小身」的来源。新角色漏了这一项，Q 版比例偏正常、不够 Q。补上后实测 2 头身、无压扁断裂。
+
+**朝向不要用目检定。** 50px 的 Q 版放大后 Vision 仍测不到脸，同一张图目检两次能给出左右相反的答案。用 `scripts/facing_measure.py`（Vision 语义 landmark，nose/mouth 双特征交叉验证）实测，把 `noseOffset`/`mouthOffset` 写进 `design/character-facing.json` 的 `evidence`。测不到的 Q 版按同提示词立绘同向推定，`method` 写 `visual-review` 并在 `reason` 里写明**是推定不是实测**。
+
+**抠图会偶发空白。** `qwen21 --variant bg-removal` 有概率返回 0% 不透明的空图，静默产出空资产。重画脚本必须校验抠图的不透明占比再落盘（`regen_new_characters.py` 的 `matte_with_retry`，<5% 重试至多 3 次）。

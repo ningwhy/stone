@@ -1,5 +1,13 @@
 [
  {
+  "actor": "bao_zhu",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.1294,
+  "mouthOffset": 0.1264,
+  "confidence": 0.1264
+ },
+ {
   "actor": "baochai",
   "kind": "portrait",
   "facing": "right",
@@ -16,6 +24,22 @@
   "confidence": 0.1035
  },
  {
+  "actor": "dai_quan",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.6736,
+  "mouthOffset": 0.5122,
+  "confidence": 0.5122
+ },
+ {
+  "actor": "dai_quan",
+  "kind": "portrait",
+  "facing": "left",
+  "noseOffset": -0.0015,
+  "mouthOffset": -0.0703,
+  "confidence": 0.0015
+ },
+ {
   "actor": "daiyu",
   "kind": "chibi",
   "facing": "right",
@@ -30,6 +54,14 @@
   "noseOffset": 0.3067,
   "mouthOffset": 0.1211,
   "confidence": 0.1211
+ },
+ {
+  "actor": "er_ya_tou",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.2655,
+  "mouthOffset": 0.1449,
+  "confidence": 0.1449
  },
  {
   "actor": "feng",
@@ -112,6 +144,14 @@
   "confidence": 0.0021
  },
  {
+  "actor": "hu_shi",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.1071,
+  "mouthOffset": 0.0675,
+  "confidence": 0.0675
+ },
+ {
   "actor": "huoqi",
   "kind": "chibi",
   "facing": "right",
@@ -128,6 +168,54 @@
   "confidence": 0.1715
  },
  {
+  "actor": "jia_dairu",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.015,
+  "mouthOffset": -0.059,
+  "confidence": 0.015
+ },
+ {
+  "actor": "jia_qiang",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.3598,
+  "mouthOffset": 0.1436,
+  "confidence": 0.1436
+ },
+ {
+  "actor": "jia_rong",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0616,
+  "mouthOffset": 0.0328,
+  "confidence": 0.0328
+ },
+ {
+  "actor": "jia_rui",
+  "kind": "portrait",
+  "facing": "left",
+  "noseOffset": -0.0325,
+  "mouthOffset": -0.0922,
+  "confidence": 0.0325
+ },
+ {
+  "actor": "jia_zhen",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.3739,
+  "mouthOffset": 0.1509,
+  "confidence": 0.1509
+ },
+ {
+  "actor": "jia_zhen",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.4208,
+  "mouthOffset": 0.1925,
+  "confidence": 0.1925
+ },
+ {
   "actor": "jiaoxing",
   "kind": "portrait",
   "facing": "right",
@@ -136,12 +224,52 @@
   "confidence": 0.0859
  },
  {
+  "actor": "jin_rong",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0291,
+  "mouthOffset": -0.0776,
+  "confidence": 0.0291
+ },
+ {
+  "actor": "jin_shi",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0996,
+  "mouthOffset": 0.0793,
+  "confidence": 0.0793
+ },
+ {
+  "actor": "jing_xu",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0732,
+  "mouthOffset": -0.0125,
+  "confidence": 0.0125
+ },
+ {
+  "actor": "jinghuan",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.089,
+  "mouthOffset": 0.1257,
+  "confidence": 0.089
+ },
+ {
   "actor": "kongkong",
   "kind": "portrait",
   "facing": "right",
   "noseOffset": 0.3101,
   "mouthOffset": 0.0107,
   "confidence": 0.0107
+ },
+ {
+  "actor": "lai_sheng",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0187,
+  "mouthOffset": -0.0595,
+  "confidence": 0.0187
  },
  {
   "actor": "leng",
@@ -158,6 +286,22 @@
   "noseOffset": 0.0237,
   "mouthOffset": -0.1308,
   "confidence": 0.0237
+ },
+ {
+  "actor": "li_gui",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.058,
+  "mouthOffset": -0.1076,
+  "confidence": 0.058
+ },
+ {
+  "actor": "liu_lao",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0116,
+  "mouthOffset": -0.062,
+  "confidence": 0.0116
  },
  {
   "actor": "liwan",
@@ -198,6 +342,14 @@
   "noseOffset": 0.1434,
   "mouthOffset": 0.1521,
   "confidence": 0.1434
+ },
+ {
+  "actor": "ming_yan",
+  "kind": "portrait",
+  "facing": "left",
+  "noseOffset": -0.0201,
+  "mouthOffset": -0.0571,
+  "confidence": 0.0201
  },
  {
   "actor": "monk",
@@ -264,21 +416,52 @@
   "confidence": 0.0487
  },
  {
+  "actor": "ping_er",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.1658,
+  "mouthOffset": 0.1697,
+  "confidence": 0.1658
+ },
+ {
   "actor": "plaintiff",
   "kind": "chibi",
-  "facing": "left",
-  "noseOffset": -2.0157,
-  "mouthOffset": -4.6401,
-  "confidence": 2.0157
+  "facing": "right",
+  "noseOffset": 0.2041,
+  "mouthOffset": -0.3133,
+  "confidence": 0.2041
  },
  {
   "actor": "plaintiff",
   "kind": "portrait",
-  "facing": "left",
+  "facing": "right",
   "noseOffset": 0.3856,
   "mouthOffset": 0.6761,
-  "confidence": 0.3856,
-  "review": "vision fit lands on the robe (nose tip on the chest); read by eye against the painted body lean"
+  "confidence": 0.3856
+ },
+ {
+  "actor": "qin_ke",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.2267,
+  "mouthOffset": 0.1673,
+  "confidence": 0.1673
+ },
+ {
+  "actor": "qin_ye",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.4726,
+  "mouthOffset": 0.2299,
+  "confidence": 0.2299
+ },
+ {
+  "actor": "qin_zhong",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.3398,
+  "mouthOffset": 0.1005,
+  "confidence": 0.1005
  },
  {
   "actor": "ruhai",
@@ -303,6 +486,14 @@
   "noseOffset": 0.4173,
   "mouthOffset": 0.1574,
   "confidence": 0.1574
+ },
+ {
+  "actor": "shui_rong",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.2707,
+  "mouthOffset": 0.023,
+  "confidence": 0.023
  },
  {
   "actor": "tanchun",
@@ -351,6 +542,22 @@
   "noseOffset": 0.0546,
   "mouthOffset": 0.0446,
   "confidence": 0.0446
+ },
+ {
+  "actor": "wang_er",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.4726,
+  "mouthOffset": 0.3295,
+  "confidence": 0.3295
+ },
+ {
+  "actor": "wang_er",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0235,
+  "mouthOffset": -0.0654,
+  "confidence": 0.0235
  },
  {
   "actor": "xichun",
@@ -417,6 +624,14 @@
   "confidence": 0.0596
  },
  {
+  "actor": "ying_er",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.2925,
+  "mouthOffset": 0.1643,
+  "confidence": 0.1643
+ },
+ {
   "actor": "yingchun",
   "kind": "portrait",
   "facing": "right",
@@ -449,6 +664,14 @@
   "confidence": 0.1444
  },
  {
+  "actor": "you_shi",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.064,
+  "mouthOffset": 0.0308,
+  "confidence": 0.0308
+ },
+ {
   "actor": "yucun",
   "kind": "chibi",
   "facing": "right",
@@ -473,6 +696,22 @@
   "confidence": 0.0643
  },
  {
+  "actor": "zhang_youshi",
+  "kind": "portrait",
+  "facing": "left",
+  "noseOffset": -0.0231,
+  "mouthOffset": -0.0367,
+  "confidence": 0.0231
+ },
+ {
+  "actor": "zhao_er",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.3236,
+  "mouthOffset": 0.1751,
+  "confidence": 0.1751
+ },
+ {
   "actor": "zheng",
   "kind": "chibi",
   "facing": "right",
@@ -487,5 +726,29 @@
   "noseOffset": 0.0585,
   "mouthOffset": -0.032,
   "confidence": 0.032
+ },
+ {
+  "actor": "zhi_neng",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.2906,
+  "mouthOffset": 0.1526,
+  "confidence": 0.1526
+ },
+ {
+  "actor": "zhi_neng",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0873,
+  "mouthOffset": 0.0783,
+  "confidence": 0.0783
+ },
+ {
+  "actor": "zhou_rui",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.0675,
+  "mouthOffset": 0.0048,
+  "confidence": 0.0048
  }
 ]
