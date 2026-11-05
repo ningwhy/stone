@@ -26,7 +26,7 @@ function anchorNames(map:MapData) {
   return names;
 }
 
-const EFFECT_TEXT={jade:'怒掷通灵玉',greet:'上前见礼',rest:'稍事歇息'} as const;
+const EFFECT_TEXT={jade:'怒掷通灵玉',greet:'上前见礼',rest:'稍事歇息',idle:'静立场中',anger:'怒形于色'} as const;
 
 /** "大荒山 · 青埂峰（神话）" reads like a map title; stage talk wants "青埂峰". */
 function shortPlace(name:string) {

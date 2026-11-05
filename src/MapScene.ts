@@ -626,6 +626,10 @@ export class MapScene extends Phaser.Scene {
         const x=p.x+Math.sin(t*Math.PI)*115,y=p.y-65+90*t-Math.sin(t*Math.PI)*70;
         halo.fillStyle(0xc7e2cf);halo.lineStyle(2,0x668675);halo.fillEllipse(x,y,14,21);halo.strokeEllipse(x,y,14,21);
         if(t>.65){halo.lineStyle(2,0xc7a36c,(1-t)*2);halo.strokeEllipse(p.x+65,p.y+20,50+(t-.65)*170,20+(t-.65)*70);}
+      }else if(effect.kind==='anger') {
+        const r=30+t*40;
+        halo.lineStyle(3,0xc0392b,.85);halo.strokeEllipse(p.x,p.y+4,58,26);
+        halo.lineStyle(3,0xe74c3c,1-t);halo.strokeEllipse(p.x,p.y+3,r,r*0.45);
       }else{halo.lineStyle(2,0xb99859,1-t);halo.strokeEllipse(p.x,p.y+3,55+t*50,24+t*20);}
     }
     for(const route of this.engine.movementPaths()) {

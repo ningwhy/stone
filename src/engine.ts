@@ -1,12 +1,12 @@
 import { cellKey, findPath, nearestFreeCell } from './model.ts';
 import type { MapData, Point } from './model.ts';
-import { stagedStory, chapter3Story, cast } from './story.ts';
+import { stagedStory, cast } from './story.ts';
 import type { ActorId, Action, Move, StoryStep } from './story.ts';
 
 export type ActorState = Point & { visible: boolean; moving: boolean; direction: number };
 export type HistoryEntry = {id: string; speaker: string; text: string};
 export type StoryState = {
-  sceneId:string; effect:{actor:ActorId;kind:'jade'|'greet'|'rest';elapsed:number;duration:number}|null;
+  sceneId:string; effect:{actor:ActorId;kind:'jade'|'greet'|'rest'|'idle'|'anger';elapsed:number;duration:number}|null;
   index: number; status: 'moving'|'reading'|'ended'|'error'; paused: boolean;
   actors: Record<ActorId, ActorState>; roofVisible: boolean;
   focus: string; history: HistoryEntry[]; error: string | null; speed: number;
@@ -291,7 +291,12 @@ export class StoryEngine {
     const legacy=data?.version===3&&data.chapter==='first-three'||data?.version===2&&data.chapter==='chapter03';
     if (!data || (!current&&!recent&&!legacy) || !data.state) throw new Error('存档版本不兼容');
     const state=data.state, index=this.steps.findIndex(s=>s.id===data.node);
-    if (index<0 || (legacy?chapter3Story.findIndex(s=>s.id===data.node):index)!==state.index || !['reading','ended'].includes(state.status)) throw new Error('存档剧情节点无效');
+    // A save is anchored by its node id, not by the node's position in the story
+    // array. Reordering or extending chapters (e.g. inserting the ginseng scene
+    // before the taoist scene in chapter twelve) shifts every later index, so an
+    // old save's stored index no longer matches. We locate the node by id and
+    // accept that position instead of rejecting the save.
+    if (index<0 || !['reading','ended'].includes(state.status)) throw new Error('存档剧情节点无效');
     // Nodes of chapter four were appended after the old finale; a save that ended there must
     // reopen as ordinary reading so the story can continue instead of pretending to be over.
     const status=(index===this.steps.length-1)!==(state.status==='ended')?'reading':state.status;

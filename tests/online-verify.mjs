@@ -115,12 +115,16 @@ try{
  // The sound master switch is one click from the story, and it is remembered.
  await page.locator('.dialogue-text').click();
  await page.waitForFunction(()=>window.__audio&&window.__audio.ready===true,null,{timeout:20000});
- await page.getByRole('button',{name:'关闭声音'}).click();
+ // The persistent profile may already carry a remembered mute, so the test
+ // reads the current side first and toggles from there — the switch must work
+ // in both directions whichever way the profile was left.
+ const mutedBefore=await page.evaluate(()=>window.__audio.muted);
+ await page.getByRole('button',{name:mutedBefore?'开启声音':'关闭声音'}).click();
  await page.waitForTimeout(400);
- assert.equal(await page.evaluate(()=>window.__audio.muted),true,'the toolbar switch silences the game');
- await page.getByRole('button',{name:'开启声音'}).click();
+ assert.equal(await page.evaluate(()=>window.__audio.muted),!mutedBefore,'the toolbar switch flips the game sound');
+ await page.getByRole('button',{name:mutedBefore?'关闭声音':'开启声音'}).click();
  await page.waitForTimeout(300);
- assert.equal(await page.evaluate(()=>window.__audio.muted),false,'the toolbar switch brings the sound back');
+ assert.equal(await page.evaluate(()=>window.__audio.muted),mutedBefore,'the toolbar switch restores the sound');
  console.log(`${tag} master sound switch: silences and restores`);
 
  // 回看 can send the reader back to any line they have read.

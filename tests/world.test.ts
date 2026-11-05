@@ -129,3 +129,15 @@ test('v4 saves round-trip and unknown versions still fail cleanly',()=>{
  assert.throws(()=>r.restore({version:9,chapter:'nine',node:'C04-006',state:saved.state}),/存档版本不兼容/);
  assert.throws(()=>r.restore(null),/存档/);
 });
+
+test('a v5 save with a drifting stored index still restores by node id',()=>{
+ // Chapter twelve gained a new scene (ginseng) inserted before the taoist scene,
+ // which shifts every later node's array index. An older save therefore carries a
+ // stale `state.index`; the node id is the stable anchor and must win.
+ const e=new StoryEngine(maps());e.seek('C12-052');
+ const drifted=JSON.parse(JSON.stringify(e.serialize()));
+ drifted.state.index=0; // deliberately wrong: stale position from an older build
+ const r=new StoryEngine(maps());r.restore(drifted);
+ assert.equal(r.step.id,'C12-052','node id is the anchor, not the stored index');
+ assert.equal(r.getSnapshot().index,story.findIndex(s=>s.id==='C12-052'));
+});
