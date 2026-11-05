@@ -2,7 +2,7 @@
 """Calibrate RGBA assets; export one shared Tiled/runtime placement contract.
 Run with a Python having Pillow and numpy. Source images are never overwritten.
 """
-import json,math
+import json,math,sys
 from pathlib import Path
 import numpy as np
 from PIL import Image,ImageDraw,ImageFilter
@@ -91,23 +91,35 @@ for i,(key,a) in enumerate(assets.items()):
 ts={'type':'tileset','version':'1.10','name':'荣国府手绘素材','tilewidth':max(a['width'] for a in assets.values()),'tileheight':max(a['height'] for a in assets.values()),'tilecount':len(assets),'columns':0,'objectalignment':'bottom','tiles':tiles}
 (ROOT/'maps/rongguo-art.tsj').write_text(json.dumps(ts,ensure_ascii=False,indent=2)+'\n')
 path=ROOT/'maps/rongguo-entry.tmj';tmj=json.loads(path.read_text())
-# Explicit rebuild command replaces generated Art only. Normal Tiled edits are read directly.
-tmj['layers']=[l for l in tmj['layers'] if l['name'] not in ('Art','ArtFootprints')]
-objects=[];blockers=[];nextid=max(o['id'] for l in tmj['layers'] for o in l.get('objects',[]))+1
-for p in config['placements']:
- a=assets[p['asset']];s=p.get('scale',1);w,h=a['width']*s,a['height']*s
- groundx=(p['col']-p['row'])*64;groundy=(p['col']+p['row']+1)*32
- bx=groundx+(a['width']/2-a['anchor'][0])*s;by=groundy+(a['height']-a['anchor'][1])*s
- props=[{'name':'asset','type':'string','value':p['asset']},{'name':'visibility','type':'string','value':p.get('visibility','always')},{'name':'depthOffset','type':'float','value':p.get('depthOffset',0)}]
- objects.append({'id':nextid,'name':p['name'],'type':'art','gid':gids[p['asset']],'x':by+bx/2,'y':by-bx/2,'width':w,'height':h,'rotation':0,'visible':True,'properties':props});nextid+=1
- if 'collision' in p:
-  c,r,cw,rh=p['collision'];blockers.append({'id':nextid,'name':p['name'],'type':'collision','x':c*64,'y':r*64,'width':cw*64,'height':rh*64,'rotation':0,'visible':True});nextid+=1
-for name,entries,visible in [('Art',objects,True),('ArtFootprints',blockers,False)]:
- tmj['layers'].append({'id':max(l['id'] for l in tmj['layers'])+1,'name':name,'type':'objectgroup','x':0,'y':0,'opacity':1,'visible':visible,'draworder':'topdown','objects':entries})
-tmj['tilesets']=[{'firstgid':1,'source':'rongguo-art.tsj'}];tmj['nextobjectid']=nextid;tmj['nextlayerid']=max(l['id'] for l in tmj['layers'])+1
-for p in tmj['properties']:
- if p['name']=='status':p['value']='art-sample'
-path.write_text(json.dumps(tmj,ensure_ascii=False,indent=2)+'\n')
+# rongguo-entry 早就是一张真正上场的地图（贾母院，第十二回「黛玉回扬州」就在上面），
+# 它的 Art 层是手摆的。下面这段却会把它整层换成 calibration.json['placements'] 里的
+# 样例摆位，再顺手把 status 改成 'art-sample' —— 裸跑一次就把入口地图冲掉了，
+# 而且不报错：只有 npm run map:framing 会跳出来。所以除非显式加 --entry-art，
+# 一律不动它。（scripts/build_ch1012_assets.py 以前靠跑完再拷一份备份回来绕开，
+# 那个绕法只有记得跑它的人才管用。）
+exported=0
+if '--entry-art' not in sys.argv:
+ print('skip maps/rongguo-entry.tmj: pass --entry-art to overwrite the hand-placed Art layer')
+ path=None
+if path is not None:
+ # Explicit rebuild command replaces generated Art only. Normal Tiled edits are read directly.
+ tmj['layers']=[l for l in tmj['layers'] if l['name'] not in ('Art','ArtFootprints')]
+ objects=[];blockers=[];nextid=max(o['id'] for l in tmj['layers'] for o in l.get('objects',[]))+1
+ for p in config['placements']:
+  a=assets[p['asset']];s=p.get('scale',1);w,h=a['width']*s,a['height']*s
+  groundx=(p['col']-p['row'])*64;groundy=(p['col']+p['row']+1)*32
+  bx=groundx+(a['width']/2-a['anchor'][0])*s;by=groundy+(a['height']-a['anchor'][1])*s
+  props=[{'name':'asset','type':'string','value':p['asset']},{'name':'visibility','type':'string','value':p.get('visibility','always')},{'name':'depthOffset','type':'float','value':p.get('depthOffset',0)}]
+  objects.append({'id':nextid,'name':p['name'],'type':'art','gid':gids[p['asset']],'x':by+bx/2,'y':by-bx/2,'width':w,'height':h,'rotation':0,'visible':True,'properties':props});nextid+=1
+  if 'collision' in p:
+   c,r,cw,rh=p['collision'];blockers.append({'id':nextid,'name':p['name'],'type':'collision','x':c*64,'y':r*64,'width':cw*64,'height':rh*64,'rotation':0,'visible':True});nextid+=1
+ for name,entries,visible in [('Art',objects,True),('ArtFootprints',blockers,False)]:
+  tmj['layers'].append({'id':max(l['id'] for l in tmj['layers'])+1,'name':name,'type':'objectgroup','x':0,'y':0,'opacity':1,'visible':visible,'draworder':'topdown','objects':entries})
+ tmj['tilesets']=[{'firstgid':1,'source':'rongguo-art.tsj'}];tmj['nextobjectid']=nextid;tmj['nextlayerid']=max(l['id'] for l in tmj['layers'])+1
+ for p in tmj['properties']:
+  if p['name']=='status':p['value']='art-sample'
+ path.write_text(json.dumps(tmj,ensure_ascii=False,indent=2)+'\n')
+ exported=len(objects)
 # Contact sheet includes actual alpha on a contrasting ground and calibrated anchors.
 sheet=Image.new('RGB',(1200,math.ceil(len(assets)/4)*360),'#ece6d8');d=ImageDraw.Draw(sheet)
 for i,(key,a) in enumerate(assets.items()):
@@ -119,5 +131,5 @@ for i,(key,a) in enumerate(assets.items()):
  ax=px+a['anchor'][0]*s;ay=py+a['anchor'][1]*s;d.line((ax-8,ay,ax+8,ay),fill='#f4be6b',width=2);d.line((ax,ay-8,ax,ay+8),fill='#f4be6b',width=2)
  d.text((x+12,y+330),key,fill='#344b42')
 sheet.save(ROOT/'art/asset-contact.png')
-print(f'Calibrated {len(assets)} assets; exported {len(objects)} Tiled image objects.')
+print(f'Calibrated {len(assets)} assets; exported {exported} Tiled image objects.')
 print(json.dumps(reports,indent=2))

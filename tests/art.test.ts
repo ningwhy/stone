@@ -46,3 +46,21 @@ test('every human actor has a painted portrait and chibi; estate sites use archi
  for(const site of world.locations.filter((s:{external:boolean})=>!s.external)){assert.ok(/^(estate-|flower-gate$|west-wall-gate$|rongxi-hall$)/.test(site.asset),`${site.name} uses furniture`);assert.ok(artAssets[site.asset]);}
  const feng=world.locations.find((s:{id:string})=>s.id==='feng');assert.equal(feng.start,'U019');assert.equal(feng.scene,'wang');assert.equal(feng.focus,'feng_room');
 });
+
+test('paired stone lions stand on opposite sides of the gate, not on top of each other',()=>{
+ // The two stone lions in front of the yamen gate are placed by col/row, so a
+ // re-matte that changes the bitmap size must move the foot point with it.
+ // A previous fix resized both objects but re-seated them on the same cell,
+ // which left the lions stacked on each other: the size assertions passed
+ // because only the pixel box was checked, and nothing compared the two
+ // placements against each other. This asserts they are apart.
+ const raw4=JSON.parse(readFileSync(new URL('../maps/c4_yamen.tmj',import.meta.url),'utf8'));
+ const lions=parseTiledMap(raw4).art.filter(o=>o.asset==='stone-lion');
+ assert.equal(lions.length,2,'both stone lions must be on the stage');
+ const [a,b]=lions;
+ const dx=Math.abs(a.x-b.x),dy=Math.abs(a.y-b.y);
+ assert.ok(dx>400||dy>200,`the two stone lions must not overlap: dx=${dx} dy=${dy}`);
+ // They flank the gate: they sit on the same row of the isometric grid, so
+ // one is to the left of the doorway and the other to the right of it.
+ assert.equal(a.y-b.y,-384,'the lions stand on the same grid row, apart across the doorway');
+});
