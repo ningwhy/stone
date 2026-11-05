@@ -1,6 +1,6 @@
 import ledgerData from '../design/ledger.json' with { type:'json' };
 
-/** 流转账簿：前四回里每一样「给」出去的东西——银两、衣物、物件、人、人情——
+/** 流转账簿：前八回里每一样「给」出去的东西——银两、衣物、物件、人、人情——
  *  在谁与谁之间、以何种方式、什么情形下转手，价钱几何。与册页卡片同源同解锁：
  *  读到对应剧情节点，这一笔才入账。 */
 export type LedgerMode = 'granted' | 'sold' | 'taken' | 'paid';

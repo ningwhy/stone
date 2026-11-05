@@ -66,9 +66,10 @@ test('多人转手按顿号拆分：书信二封给贾政与王子腾，两人�
   assert.ok(ledgerFor('王子腾').got.some(({ entry }) => entry.id === 'ledger.yucun-letters'));
 });
 
-test('只有原文明确写出两数的账计净额：两封、许多不折算', () => {
+test('只有原文明确写出两数的账计净额：两封、许多、一吊钱不折算', () => {
   const priced = ledgerEntries.filter(e => e.amount != null).map(e => e.amount as number);
-  assert.deepEqual(priced.sort((a, b) => a - b), [2, 50, 100], '五十两、二两、百金——其余原文未写价');
+  // 二十两是第六回凤姐给刘姥姥的一笔，原文「這是二十兩銀子，暫且給這孩子做件冬衣罷」明写，计入
+  assert.deepEqual(priced.sort((a, b) => a - b), [2, 20, 50, 100], '五十两、二十两、二两、百金——其余原文未写价');
 });
 
 test('localStorage 存取容错：坏数据不致命', () => {

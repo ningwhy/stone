@@ -211,7 +211,7 @@ dialog.is-ledger .atlas-body{padding:14px 25px 26px}
 .bond-note{margin:0;font-size:10.5px;line-height:1.7;color:#e2e3d2;max-height:5.2em;overflow:hidden;
   display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;text-shadow:0 1px 3px rgba(0,0,0,.45)}
 
-/* ---- 账簿：前四回里每一笔「给」——银两、衣物、物件、人、人情。 ---- */
+/* ---- 账簿：前八回里每一笔「给」——银两、衣物、物件、人、人情。 ---- */
 /* 人物/物品选择器：左图右文的「账页」行样式。
    账本是索引，不该像册页那样摊大画；每行一张小账页，图在左、名字与统计在右，整齐也密实。
    固定卡高 78px，名字不论一两行整张卡都齐平——这正是要修的「大的大小的小」。 */
