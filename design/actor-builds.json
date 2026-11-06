@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "note": "On-stage height of every chibi, as a multiple of the standard adult figure. The chibi bitmaps are all drawn on the same ~116px canvas and the map renders them one-to-one, so a child and an elder come out exactly as tall as a grown woman unless the ratio says otherwise. This is the size hierarchy the novel implies: a five-year-old is not the height of a matriarch, and a stooped village grandmother is not the height of a young maid.",
+  "scale": 1.0,
+  "builds": {
+    "child": {
+      "scale": 0.72,
+      "label": "孩童"
+    },
+    "teen": {
+      "scale": 0.88,
+      "label": "少年"
+    },
+    "adult": {
+      "scale": 1.0,
+      "label": "成人"
+    },
+    "elder": {
+      "scale": 0.9,
+      "label": "老者"
+    }
+  },
+  "actors": {
+    "ban_er": "child",
+    "yinglian": "child",
+    "xueyan": "teen",
+    "zhi_neng": "teen",
+    "er_ya_tou": "teen",
+    "liu_lao": "elder",
+    "oldmonk": "elder",
+    "nurse_wang": "elder",
+    "nurse_li": "elder",
+    "guide": "elder",
+    "jing_xu": "elder",
+    "qin_ye": "elder",
+    "jia_dairu": "elder",
+    "hu_shi": "elder",
+    "grandmother": "elder",
+    "taoist": "elder",
+    "monk": "elder",
+    "kongkong": "elder",
+    "xichun": "teen",
+    "bao_zhu": "teen",
+    "jia_qiang": "teen",
+    "qin_zhong": "teen",
+    "qin_ke": "adult",
+    "jia_rong": "teen",
+    "jia_rui": "teen",
+    "jin_rong": "teen",
+    "shui_rong": "teen",
+    "xuepan": "teen",
+    "baochai": "teen",
+    "baoyu": "teen",
+    "daiyu": "teen",
+    "xiren": "teen",
+    "tanchun": "teen",
+    "yingchun": "teen",
+    "yingge": "teen",
+    "ying_er": "teen",
+    "ming_yan": "teen",
+    "zhao_er": "teen",
+    "wang_er": "teen"
+  }
+}

@@ -1,4 +1,5 @@
 import facingTable from '../design/character-facing.json' with { type:'json' };
+import buildTable from '../design/actor-builds.json' with { type:'json' };
 import sections from '../design/chapter03-sections.json' with { type:'json' };
 import script from '../design/chapter03-story.json' with { type:'json' };
 import script1 from '../design/chapter01-story.json' with { type:'json' };
@@ -103,6 +104,24 @@ export const cast = {
 export type ActorId=keyof typeof cast;
 export type FacingSide='left'|'right';
 export type ArtKind='portrait'|'chibi';
+
+/** How tall a character stands on the map, as a multiple of the standard adult
+ *  figure.
+ *
+ *  Every chibi bitmap is drawn on the same ~116px canvas and the map renders
+ *  them one to one, so without this a five-year-old and a matriarch come out
+ *  exactly as tall as a grown woman. The novel is full of that kind of
+ *  contrast — 板儿 is a child who cannot keep up with the adults around him,
+ *  刘姥姥 is a stooped village grandmother — and it reads on the stage only if
+ *  the heights differ. */
+const buildScaleOf=(build:string|undefined):number=>{
+  if(!build)return 1;
+  const entry=(buildTable.builds as Record<string,{scale:number}>)[build];
+  return entry?entry.scale:1;
+};
+export const actorBuildScale=(id:ActorId):number=>
+  buildScaleOf((buildTable.actors as Record<string,string>)[id]);
+
 
 /** Which side each painted head is drawn facing.
  *

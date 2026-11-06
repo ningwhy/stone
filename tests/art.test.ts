@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { parseTiledMap, project, cellKey } from '../src/model.ts';
 import { artAssets, artGround } from '../src/art.ts';
+import { cast } from '../src/story.ts';
 const raw=JSON.parse(readFileSync(new URL('../maps/rongguo-entry.tmj',import.meta.url),'utf8'));
 
 test('Tiled image object, calibrated anchor and logical cell coincide',()=>{
@@ -63,4 +64,29 @@ test('paired stone lions stand on opposite sides of the gate, not on top of each
  // They flank the gate: they sit on the same row of the isometric grid, so
  // one is to the left of the doorway and the other to the right of it.
  assert.equal(a.y-b.y,-384,'the lions stand on the same grid row, apart across the doorway');
+});
+
+test('every build entry names a real actor and a real build',()=>{
+ // The build table is a hand-written file, so it drifts: a character is renamed,
+ // a key is misspelled, or a build name is invented. An unknown key would
+ // silently fall back to the adult scale and put a child back on stage at
+ // full height, and an unknown build would do the same for the whole row.
+ const builds=JSON.parse(readFileSync(new URL('../design/actor-builds.json',import.meta.url),'utf8'));
+ const kinds=Object.keys(builds.builds);
+ assert.ok(kinds.length>0,'the build table must define at least one build');
+ for(const [id,build] of Object.entries(builds.actors as Record<string,string>)){
+  assert.ok(id in cast,`build table names an unknown actor: ${id}`);
+  assert.ok(kinds.includes(build),`build table gives ${id} an unknown build: ${build}`);
+ }
+ // The ratios have to be ordered, or the hierarchy inverts: a child taller
+ // than the adult he stands next to is the very bug the table exists to fix.
+ const scale=(k:string)=>(builds.builds as Record<string,{scale:number}>)[k].scale;
+ assert.ok(scale('child')<scale('teen'),'a child must be shorter than a teenager');
+ assert.ok(scale('teen')<scale('adult'),'a teenager must be shorter than an adult');
+ assert.ok(scale('elder')<scale('adult'),'an elder must be shorter than an adult');
+ assert.ok(scale('child')>0&&scale('adult')===1,'the adult build is the unit of measurement');
+ // 板儿 is the case the reader noticed: five or six years old, and the novel
+ // keeps him beside grown women. He has to stay visibly short.
+ assert.equal(builds.actors.ban_er,'child');
+ assert.ok(scale('child')<=0.8,`板儿 must be clearly shorter than an adult, got ${scale('child')}`);
 });

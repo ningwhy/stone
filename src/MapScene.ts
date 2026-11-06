@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import { artAssets, artGround, artImage } from './art.ts';
 import { project, zoneAt } from './model.ts';
 import type { ArtObject, MapData } from './model.ts';
-import { cast, paintedFacingOf } from './story.ts';
+import { cast, paintedFacingOf, actorBuildScale } from './story.ts';
 import { audio } from './audio.ts';
 import { STEP_FILE } from './audio.ts';
 import type { StepSurface } from './audio.ts';
@@ -492,7 +492,13 @@ export class MapScene extends Phaser.Scene {
       const zoom=this.cameras.main.zoom;
       const asset=artAssets[id==='sedan'?'sedan-chair':`${id}-chibi`];
       const bodyHeight=asset?.height??85;
-      const scale=Math.max(1,48/(bodyHeight*zoom));
+      // The chibi bitmaps are all painted on the same canvas and the map draws them
+      // one to one, so without a size hierarchy a five-year-old stands as tall as a
+      // matriarch. The build scale shortens the figure: the foot stays on the ground
+      // because the sprite's origin is its foot anchor, and the whole container
+      // scales, so the contact shadow shrinks with the person.
+      const build=actorBuildScale(id);
+      const scale=Math.max(1,48/(bodyHeight*zoom))*build;
       // Walkers sort against buildings and furniture by their isometric ground point,
       // like the artwork does, so a person north of a table stands behind it instead
       // of riding on top of it.
