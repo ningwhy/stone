@@ -426,3 +426,49 @@ dialog.is-toc{width:min(980px,calc(100% - 30px));height:min(760px,88vh);max-heig
   .toc-foot{flex-wrap:wrap;gap:6px 10px;padding:9px 13px}
   .toc-foot-name{font-size:14px}
   .toc-foot-bar{max-width:none;order:3;flex-basis:100%}}
+
+/* ── 回目封面与封底 ──────────────────────────────────────────────
+   一回就是一本小书：前面有封面，后面有封底。这一页盖在舞台之上，
+   底下那张等距地图还在，读者看见的是「这一回就要开场」，而不是被
+   打断。纸用宣纸色，题字用宋体，四周留白与古籍同。 */
+.leaf-sheet{position:fixed;inset:0;z-index:58;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(36,32,22,.5);backdrop-filter:blur(3px);animation:leaf-fade .34s ease-out}
+.leaf-inner{width:min(560px,94vw);max-height:90vh;overflow:auto;position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:34px 30px 28px;background:linear-gradient(168deg,#f7f1de 0%,#efe6cc 52%,#e7dcbe 100%);border:1px solid #c3b48c;border-radius:4px;box-shadow:0 22px 70px rgba(18,13,4,.45),inset 0 0 60px rgba(196,176,132,.22)}
+/* 纸的四边压一道细边，像古籍的书框。 */
+.leaf-inner::before{content:"";position:absolute;inset:9px;border:1px solid rgba(150,132,90,.32);border-radius:2px;pointer-events:none}
+.leaf-book{font-family:"Songti SC",serif;font-size:13px;letter-spacing:6px;color:#9a8a63;margin:0 0 16px}
+.leaf-title{font-family:"Songti SC",serif;font-weight:500;font-size:29px;line-height:1.75;letter-spacing:5px;color:#3b3226;margin:0;display:flex;flex-direction:column;gap:2px}
+.leaf-title span{display:block}
+.leaf-title-end{font-size:24px;letter-spacing:8px;color:#5a4d38}
+.leaf-rule{display:flex;align-items:center;gap:9px;margin:16px 0 4px;width:100%;justify-content:center}
+.leaf-rule i{display:block;height:1px;background:linear-gradient(90deg,transparent,#b6a37a,transparent);width:78px}
+.leaf-rule::before,.leaf-rule::after{content:"◆";font-size:8px;color:#b6a37a}
+.leaf-caption{font-size:11px;letter-spacing:4px;color:#a2916a;margin:16px 0 10px}
+/* 封面的人物：立绘小像一排，像画册里的人名页。 */
+.leaf-cast{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:12px 14px;margin:0;padding:0}
+.leaf-cast li{display:flex;flex-direction:column;align-items:center;gap:2px;width:56px}
+.leaf-cast-face{display:block;width:56px;height:74px;overflow:hidden;border:1px solid rgba(150,132,90,.4);border-radius:2px;background:linear-gradient(180deg,#e6ddc4,#d8cdaf);position:relative}
+.leaf-cast-face .portrait-svg{position:absolute;left:50%;top:0;transform:translateX(-50%);height:100%;width:auto;max-width:none}
+.leaf-cast li span:last-child{font-size:11px;color:#6a5c44;letter-spacing:1px}
+.leaf-cast-rest{font-size:11px;color:#9c8f72;margin:14px 0 0;line-height:1.9;letter-spacing:.5px}
+.leaf-open{margin-top:26px;align-self:center;font-family:"Songti SC",serif;letter-spacing:3px}
+/* 封底：下一回的回目名居中，按钮在它下面——读者的手在最后一步。 */
+.leaf-next{display:flex;flex-direction:column;align-items:center;width:100%}
+.leaf-next-name{font-family:"Songti SC",serif;font-size:17px;letter-spacing:4px;color:#5d5039;margin:0 0 8px}
+.leaf-next-title{font-family:"Songti SC",serif;font-size:19px;line-height:1.9;letter-spacing:4px;color:#3f3628;margin:0}
+.leaf-final{font-size:16px;color:#8a7d61;letter-spacing:3px;margin-top:22px}
+@keyframes leaf-fade{from{opacity:0}to{opacity:1}}
+.leaf-sheet.leaf-cover .leaf-inner{animation:leaf-rise .42s cubic-bezier(.2,.8,.3,1)}
+@keyframes leaf-rise{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+@media (max-width:640px){
+  .leaf-sheet{padding:12px}
+  .leaf-inner{padding:26px 18px 22px}
+  .leaf-title{font-size:22px;letter-spacing:3px}
+  .leaf-cast{gap:9px 10px}
+  .leaf-cast li{width:46px}
+  .leaf-cast-face{width:46px;height:62px}
+}
+/* 封底出现时，顶栏那一格不装按钮，改为一行提示：读者的下一步在封底上。 */
+.next-button-hint{font-size:12px;color:#8d987f;letter-spacing:1px;white-space:nowrap}
+/* 封底可以收起来：读者读完了这一回，也许想回头再看一眼最后那几行。 */
+.leaf-fold{margin-top:14px;border:0;background:none;font-size:11px;color:#a1916f;letter-spacing:1px;padding:6px 10px;border-radius:3px}
+.leaf-fold:hover{color:#6f6248;text-decoration:underline;text-underline-offset:3px}

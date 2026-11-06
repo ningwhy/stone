@@ -8,6 +8,8 @@ import { JourneyMap } from './JourneyMap.tsx';
 import { Portrait } from './Portrait.tsx';
 import { Toc } from './Toc.tsx';
 import { LoadingScreen, RotateHint, SceneLoadingCard } from './LoadingScreen.tsx';
+import { ChapterBackCover, ChapterCover } from './Leaves.tsx';
+import { chapterLeaf, leafTrigger } from './leaves.ts';
 import { prefetchCast, prefetchUpcoming } from './prefetch.ts';
 import { WorldMap, worldLocations, travelRoute, worldLocationFor, levelForScene, levelTabName } from './WorldMap.tsx';
 import type { Travel } from './WorldMap.tsx';
@@ -224,6 +226,46 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
     setPickup(null);
   };
   const [overview,setOverview]=useState(false),[travel,setTravel]=useState<Travel|null>(null);
+  // 回目封面与封底：一回就像一本小书，前面有封面，后面有封底。
+  // 读者自己翻页——封面要按「展开本回」才进入，封底要按「开启下一回」才走。
+  // 触发点是节点本身：读到某回的第一个节点就出封面，读完某回的最后一个
+  // 节点就出封底，回与回之间因此有了一次停顿，而不是一路滑过去。
+  const [leaf,setLeaf]=useState<'cover'|'back'|null>(null);
+  const book=chapters.find(c=>c.id===step.chapter)?.book??1;
+  const leafData=useMemo(()=>chapterLeaf(book),[book]);
+  const nextBook=useMemo(()=>{
+    // 下一回是哪一回：按回次往后找第一回有剧情的。
+    for(let b=book+1;b<=15;b++)if(chapterLeaf(b))return b;
+    return null;
+  },[book]);
+  // 读到的节点落在封面或封底的位置上时，把那一页推出来。
+  // 用节点 id 判定，而不是用「第几个节点」：跳读、回看和读档都会让序号
+  // 对不上，节点 id 是唯一不会骗人的标记。
+  //
+  // 只有自然推进才翻页。目录里跳读时也会落到这些节点上，但读者是去
+  // 找一段戏，不是去翻书——中途弹出封底会把他从要找的地方拽走。
+  const lastIndex=useRef(state.index);
+  useEffect(()=>{
+    const advanced=state.index===lastIndex.current+1;
+    const atStart=lastIndex.current===0;
+    lastIndex.current=state.index;
+    const trigger=leafTrigger({nodeId:step.id,leaf:leafData,advanced,atStart});
+    if(trigger)setLeaf(trigger);
+  },[step.id,leafData,state.index]);
+  const closeLeaf=()=>{setLeaf(null);audio.play('sfx-page',.7);};
+  // 封底可以收起来：读者读完最后一段，也许想回头再看一眼那几行。按 Escape
+  // 或点纸页以外的地方，封底就退下去，人还停在本回的最后一句。
+  // 封面不行——封面是这一回的开场，得按「展开本回」才进去。
+  useEffect(()=>{
+    if(leaf!=='back')return;
+    const handler=(event:KeyboardEvent)=>{
+      if(event.key!=='Escape')return;
+      event.preventDefault();
+      closeLeaf();
+    };
+    window.addEventListener('keydown',handler);
+    return ()=>window.removeEventListener('keydown',handler);
+  },[leaf]);
   const [loadProgress,setLoadProgress]=useState(0),[loaded,setLoaded]=useState(false),[overlay,setOverlay]=useState(true);
   const [sceneProgress,setSceneProgress]=useState(0),[sceneReady,setSceneReady]=useState(false),[sceneSlow,setSceneSlow]=useState(false);
   const [snapshot,setSnapshot]=useState('');
@@ -304,22 +346,25 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   },[engine]);
   useEffect(()=>{if(state.status==='reading'||state.status==='ended')save();},[state.index,state.status,save]);
   useEffect(()=>{
+    // 封面与封底不算遮罩：它们不暂停演出，因为封底要靠 advance() 走进下一回，
+    // 而引擎在暂停时会把 advance() 直接挡掉。自动播放另有拦截（见下面的
+    // 定时器条件），舞台输入则单独关掉，免得读者隔着纸页点了台上的角色。
     engine.overlay(modal!==null||pickup!==null);
-    if(sceneRef.current)sceneRef.current.input.enabled=modal===null&&pickup===null;
+    if(sceneRef.current)sceneRef.current.input.enabled=modal===null&&pickup===null&&leaf===null;
     if(modal && dialog.current && !dialog.current.open){dialog.current.showModal();dialog.current.scrollTop=0;}
     if(!modal && dialog.current?.open)dialog.current.close();
-  },[modal,pickup,engine]);
+  },[modal,pickup,leaf,engine]);
   useEffect(()=>{
     // Opening a panel pauses the performance through the engine's overlay flag, which
     // would otherwise switch the auto-play off as a side effect of looking at the
     // settings. The reader's own choice is kept: auto resumes when the panel closes.
-    if(!automatic||travel||state.paused||state.status!=='reading'||pickup)return;
+    if(!automatic||travel||state.paused||state.status!=='reading'||pickup||leaf)return;
     const timer=setTimeout(()=>engine.advance(),Math.max(3800,step.text.length*130));
     return ()=>clearTimeout(timer);
-  },[automatic,state.paused,state.status,state.index,step.text,engine,travel,pickup]);
+  },[automatic,state.paused,state.status,state.index,step.text,engine,travel,pickup,leaf]);
   useEffect(()=>{
     const handler=(event:KeyboardEvent)=>{
-      if(event.code!=='Space'||event.repeat||modal||pickup||['BUTTON','INPUT','SELECT','TEXTAREA'].includes((event.target as HTMLElement)?.tagName))return;
+      if(event.code!=='Space'||event.repeat||modal||pickup||leaf||['BUTTON','INPUT','SELECT','TEXTAREA'].includes((event.target as HTMLElement)?.tagName))return;
       event.preventDefault();
       // Space is the same key the reader already uses to turn the page, so it has to
       // do the obvious thing in both states: while somebody is walking, it cuts the
@@ -331,7 +376,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
       audio.play('sfx-page');engine.advance();
     };
     window.addEventListener('keydown',handler);return ()=>window.removeEventListener('keydown',handler);
-  },[engine,modal,travel,state.status]);
+  },[engine,modal,travel,state.status,leaf]);
   useEffect(()=>{if(!notice)return;const t=setTimeout(()=>setNotice(''),4500);return ()=>clearTimeout(t);},[notice]);
   const load=()=>{
     try {const value=localStorage.getItem(SAVE_KEY);if(!value)throw new Error('还没有保存的进度');engine.restore(JSON.parse(value));setAutomatic(false);setNotice('已恢复地图与对白进度');}
@@ -394,7 +439,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           onClick={()=>{const next=!muted;setMuted(next);audio.setMuted(next);}}>
           <Icon name={muted?'mute':'sound'}/>
         </button>
-        {ended?<button className="next-button" onClick={restart}>再走一回 <Icon name="reset"/></button>:inMotion?<button className="next-button secondary" disabled={state.paused} onClick={()=>{if(travel)setTravel(null);else engine.skip();}}>跳过移动 <Icon name="chevron"/></button>:<button className="next-button" disabled={state.paused||state.status==='error'} onClick={()=>{audio.play('sfx-page');engine.advance();}}>继续剧情 <Icon name="arrow"/></button>}
+        {ended?<button className="next-button" onClick={restart}>再走一回 <Icon name="reset"/></button>:inMotion?<button className="next-button secondary" disabled={state.paused} onClick={()=>{if(travel)setTravel(null);else engine.skip();}}>跳过移动 <Icon name="chevron"/></button>:leaf==='back'?<span className="next-button-hint">本回目完 · 请在封底开启下一回</span>:<button className="next-button" disabled={state.paused||state.status==='error'} onClick={()=>{audio.play('sfx-page');engine.advance();}}>继续剧情 <Icon name="arrow"/></button>}
         <button className="icon-button" aria-label="设置" onClick={()=>setModal('settings')}><Icon name="settings"/></button>
       </nav>
     </header>
@@ -443,6 +488,15 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           </div>
         </section>
     </div>
+    {/* 封面与封底：盖在舞台之上的一页纸。读者翻过去才继续，目录与回看不
+        受影响——这一页只挡住演出，不挡住别的操作。 */}
+    {leaf==='cover'&&<ChapterCover book={book} onOpen={closeLeaf}/>}
+    {leaf==='back'&&<ChapterBackCover book={book} nextBook={nextBook} onOpen={()=>{
+      // 封底之后就是下一回的开头：往下走一步，接着那一回的封面就翻出来。
+      // 翻页音由 closeLeaf 放一次就好——这里再放一次就成了叠音。
+      closeLeaf();
+      engine.advance();
+    }}/>}
     {notice&&<div className="toast" role="status">{notice}</div>}
     {pickup&&<div className="pickup-overlay" role="dialog" aria-modal="true" aria-label="获得物品">
       <section className="pickup-card">

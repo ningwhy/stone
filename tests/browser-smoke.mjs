@@ -1,7 +1,7 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {existsSync,mkdirSync,readFileSync,readdirSync} from 'node:fs';
-import {dismissPickup} from './lib/pickup.mjs';
+import {dismissPickup, dismissLeaf} from './lib/pickup.mjs';
 import { seekSection, openToc } from './lib/toc.mjs';
 const story=[1,2,3,4].flatMap(n=>JSON.parse(readFileSync(`design/chapter0${n}-story.json`,'utf8')));
 const ledgerEntries=JSON.parse(readFileSync('design/ledger.json','utf8')).entries;
@@ -31,9 +31,33 @@ const node=()=>page.locator('.node-label').textContent();
 // the canvas layer, and that re-rasterisation shows GPU rounding noise even when the
 // painted frame is byte-identical, so it would report a false difference.
 const canvasPixels=()=>page.evaluate(()=>{const canvas=document.querySelector('canvas');const data=canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data;let hash=2166136261;for(let i=0;i<data.length;i++){hash^=data[i];hash=Math.imul(hash,16777619);}return hash>>>0;});
-const reading=async()=>{await dismissPickup(page);await page.locator('.loading-screen').waitFor({state:'detached',timeout:20000});for(let i=0;i<4;i++){const skip=page.getByRole('button',{name:'跳过移动',exact:true});if(await skip.isVisible()){await skip.click();await page.waitForTimeout(60);}}await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim());await page.locator('.game-map[data-scene-ready]').waitFor();};
-async function fit(){const control=await page.getByRole('button',{name:'继续剧情',exact:true}).boundingBox();assert.ok(control);const viewport=page.viewportSize();assert.ok(control.y+control.height<=viewport.height,`controls below screen: ${control.y+control.height}>${viewport.height}`);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
-async function next(skip=true){await dismissPickup(page);const before=await node();await page.getByRole('button',{name:'继续剧情',exact:true}).click();await page.waitForFunction(id=>document.querySelector('.node-label')?.textContent!==id,before);const arrived=await node();await dismissPickup(page,ledgerNodes.has(arrived));const b=page.getByRole('button',{name:'跳过移动',exact:true});if(skip&&await b.isVisible())await b.click();await reading();}
+const reading=async()=>{await dismissPickup(page);await page.locator('.loading-screen').waitFor({state:'detached',timeout:20000});for(let i=0;i<4;i++){const skip=page.getByRole('button',{name:'跳过移动',exact:true});if(await skip.isVisible()){await skip.click();await page.waitForTimeout(60);}}await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim());await page.locator('.game-map[data-scene-ready]').waitFor();await dismissLeaf(page,false);};
+// 封底时顶栏那一格是提示而不是按钮，所以量按钮要能退回到提示行；否则一回读
+// 完，布局检查会因为「找不到继续剧情」而误报成控件跑出屏幕。
+async function fit(){const control=(await page.getByRole('button',{name:'继续剧情',exact:true}).boundingBox())??(await page.locator('.next-button-hint').boundingBox());assert.ok(control);const viewport=page.viewportSize();assert.ok(control.y+control.height<=viewport.height,`controls below screen: ${control.y+control.height}>${viewport.height}`);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
+// 推进到下一个节点。
+//
+//  封底插在中间：读到某回的最后一个节点时，那一页会盖在舞台上，而它自己
+// 的按钮才是通往下一回的路。所以推进分成两拍——先把剧情翻到下一句，
+// 若是回末就多按一次封底上的按钮。封面只是把它收起来，不推进剧情。
+async function next(skip=true){
+  await dismissPickup(page);
+  const before=await node();
+  await dismissLeaf(page,false);
+  await page.getByRole('button',{name:'继续剧情',exact:true}).click();
+  await page.waitForFunction(id=>document.querySelector('.node-label')?.textContent!==id,before);
+  // 走完一回的末节点，下一句就是下一回的开头：封底与封面都可能在这一刻
+  // 翻出来（都是 React 的 effect，比节点标签晚一帧）。收起来，免得挡住下一步。
+  // 封底不按「开启下一回」——那个按钮会把故事推到下一回的第一句，而这一步
+  // 只该走一句；测试要走的路线由它自己控制。
+  await dismissLeaf(page,false,true);
+  await page.waitForTimeout(120);
+  await dismissLeaf(page,false,true);
+  const arrived=await node();
+  await dismissPickup(page,ledgerNodes.has(arrived));
+  const b=page.getByRole('button',{name:'跳过移动',exact:true});if(skip&&await b.isVisible())await b.click();
+  await reading();
+}
 try{
  await page.goto(process.env.TEST_URL??'http://127.0.0.1:5173');await reading();assert.equal(await node(),'C1-001');await fit();await page.screenshot({path:'artifacts/chapter-opening.png',fullPage:true});
  // 目录标注已读：读过的那段带 ◐ 或 ●，没读过的带 ○。

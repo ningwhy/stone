@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "note": "The title couplet of every book, as the book's own front page carries it. A Chinese novel opens each chapter with a couplet that names the whole chapter in half a dozen words; this is the page the reader sees before the chapter and after it, so it belongs on the cover and the back cover. The text follows the source drafts in docs/chapterNN-source.txt where they carry the title, and the received text elsewhere.",
+  "books": {
+    "1": {
+      "first": "甄士隐梦幻识通灵",
+      "second": "贾雨村风尘怀闺秀"
+    },
+    "2": {
+      "first": "贾夫人仙逝扬州城",
+      "second": "冷子兴演说荣国府"
+    },
+    "3": {
+      "first": "贾雨村夤缘复旧职",
+      "second": "林黛玉抛父进京都"
+    },
+    "4": {
+      "first": "薄命女偏逢薄命郎",
+      "second": "葫芦僧乱判葫芦案"
+    },
+    "5": {
+      "first": "开生面梦演红楼梦",
+      "second": "立新场情传幻境情"
+    },
+    "6": {
+      "first": "贾宝玉初试云雨情",
+      "second": "刘姥姥一进荣国府"
+    },
+    "7": {
+      "first": "送宫花贾琏戏熙凤",
+      "second": "宴宁府宝玉会秦钟"
+    },
+    "8": {
+      "first": "比通灵金莺微露意",
+      "second": "探宝钗黛玉半含酸"
+    },
+    "9": {
+      "first": "恋风流情友入家塾",
+      "second": "起嫌疑顽童闹学堂"
+    },
+    "10": {
+      "first": "金寡妇贪利权受辱",
+      "second": "张太医论病细穷源"
+    },
+    "11": {
+      "first": "庆寿辰宁府排家宴",
+      "second": "见熙凤贾瑞起淫心"
+    },
+    "12": {
+      "first": "王熙凤毒设相思局",
+      "second": "贾天祥正照风月鉴"
+    },
+    "13": {
+      "first": "秦可卿死封龙禁尉",
+      "second": "王熙凤协理宁国府"
+    },
+    "14": {
+      "first": "林如海捐馆扬州城",
+      "second": "贾宝玉路谒北静王"
+    },
+    "15": {
+      "first": "王凤姐弄权铁槛寺",
+      "second": "秦鲸卿得趣馒头庵"
+    }
+  }
+}

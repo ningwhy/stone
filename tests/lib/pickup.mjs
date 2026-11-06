@@ -24,3 +24,53 @@ export async function dismissPickup(page, expect = false) {
     await button.waitFor({state:'detached',timeout:5000}).catch(() => {});
   }
 }
+
+/** The cover and the back cover of a chapter are modal sheets too.
+ *
+ *  They lie over the stage and swallow every click, so a test that walks the
+ *  story has to put them away the way a reader does: press the button on the
+ *  page.
+ *
+ *  `advance` decides what a back cover does. With it, the back cover's button
+ *  is pressed and the story moves on into the next chapter. Without it, the
+ *  sheet is only cleared from the way — a cover is closed, and a back cover
+ *  that has no way forward is folded away.
+ *
+ *  `wait` makes it wait for the sheet to show up. The sheet is a React effect,
+ *  so it lands a frame after the node label does; a test that has just moved
+ *  to a node has to give it that frame, while a test that is only clearing
+ *  the way should not wait at all. */
+export async function dismissLeaf(page, advance = false, wait = false) {
+  for (let i = 0; i < 4; i++) {
+    const sheet = page.locator('.leaf-sheet');
+    const shown = await sheet.count() > 0 || (wait && await sheet.waitFor({ state: 'visible', timeout: 600 }).then(() => true).catch(() => false));
+    if (!shown) return;
+    const isBack = await page.locator('.leaf-sheet.leaf-back').count() > 0;
+    if (isBack) {
+      // The back cover either carries the story into the next chapter, or it is
+      // folded away so the reader can look back at the lines just read.
+      if (advance) {
+        const forward = page.locator('.leaf-back .leaf-open');
+        if (await forward.count() && await forward.isVisible().catch(() => false)) {
+          await forward.click();
+          await page.waitForTimeout(200);
+          continue;
+        }
+      }
+      const fold = page.locator('.leaf-fold');
+      if (await fold.count() && await fold.isVisible().catch(() => false)) {
+        await fold.click();
+        await page.waitForTimeout(200);
+        continue;
+      }
+      return;
+    }
+    const button = page.locator('.leaf-cover .leaf-open');
+    if (await button.count() && await button.isVisible().catch(() => false)) {
+      await button.click();
+      await page.waitForTimeout(200);
+      continue;
+    }
+    return;
+  }
+}
