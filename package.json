@@ -8,7 +8,7 @@
     "build": "tsc --noEmit && vite build && node scripts/prune_dist.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
-    "test:browser": "node tests/browser-smoke.mjs",
+    "test:browser": "node --experimental-strip-types tests/browser-smoke.mjs",
     "test:online": "node tests/online-verify.mjs",
     "check:content": "node --experimental-strip-types scripts/check_content.mjs",
     "art:webp": "node scripts/build_webp.mjs",

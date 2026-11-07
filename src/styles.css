@@ -443,9 +443,13 @@ dialog.is-toc{width:min(980px,calc(100% - 30px));height:min(760px,88vh);max-heig
 .leaf-rule i{display:block;height:1px;background:linear-gradient(90deg,transparent,#b6a37a,transparent);width:78px}
 .leaf-rule::before,.leaf-rule::after{content:"◆";font-size:8px;color:#b6a37a}
 .leaf-caption{font-size:11px;letter-spacing:4px;color:#a2916a;margin:16px 0 10px}
-/* 封面的人物：立绘小像一排，像画册里的人名页。 */
-.leaf-cast{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:12px 14px;margin:0;padding:0}
-.leaf-cast li{display:flex;flex-direction:column;align-items:center;gap:2px;width:56px}
+/* 封面的人物：立绘小像一排，像画册里的人名页。
+   每行最多四个，人数多的人换行往下排。用 flex 而不是 grid：grid 的列是
+   固定的，末行剩下的人会挤在前几列里，看着偏在一边；flex 每一行各自
+   居中。容器限宽 266px（四个 56px 加三个 14px 的缝），一行就放不下
+   第五个人，于是自然断成四列。 */
+.leaf-cast{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:266px;margin:0 auto;padding:0}
+.leaf-cast li{display:flex;flex-direction:column;align-items:center;gap:2px;width:56px;flex:0 0 auto}
 .leaf-cast-face{display:block;width:56px;height:74px;overflow:hidden;border:1px solid rgba(150,132,90,.4);border-radius:2px;background:linear-gradient(180deg,#e6ddc4,#d8cdaf);position:relative}
 .leaf-cast-face .portrait-svg{position:absolute;left:50%;top:0;transform:translateX(-50%);height:100%;width:auto;max-width:none}
 .leaf-cast li span:last-child{font-size:11px;color:#6a5c44;letter-spacing:1px}
@@ -463,7 +467,7 @@ dialog.is-toc{width:min(980px,calc(100% - 30px));height:min(760px,88vh);max-heig
   .leaf-sheet{padding:12px}
   .leaf-inner{padding:26px 18px 22px}
   .leaf-title{font-size:22px;letter-spacing:3px}
-  .leaf-cast{gap:9px 10px}
+  .leaf-cast{max-width:214px;gap:10px}
   .leaf-cast li{width:46px}
   .leaf-cast-face{width:46px;height:62px}
 }

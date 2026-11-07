@@ -3,7 +3,11 @@ import assert from 'node:assert/strict';
 import {existsSync,mkdirSync,readFileSync,readdirSync} from 'node:fs';
 import {dismissPickup, dismissLeaf} from './lib/pickup.mjs';
 import { seekSection, openToc } from './lib/toc.mjs';
+import { chapterLeaves } from '../src/leaves.ts';
 const story=[1,2,3,4].flatMap(n=>JSON.parse(readFileSync(`design/chapter0${n}-story.json`,'utf8')));
+// 每一回的首末节点：直接用产品代码算，改了分节也不会让断言失真。
+const leafBounds={first:new Set(),last:new Set()};
+for(const leaf of chapterLeaves().values()){leafBounds.first.add(leaf.firstNode);leafBounds.last.add(leaf.lastNode);}
 const ledgerEntries=JSON.parse(readFileSync('design/ledger.json','utf8')).entries;
 const ledgerNodes=new Set(ledgerEntries.map(e=>e.node));
 // 同地图数一样：账簿笔数从数据实读，写死的话补回目会把「新账没收进背包」掩盖过去。
@@ -43,23 +47,52 @@ async function fit(){const control=(await page.getByRole('button',{name:'继续�
 async function next(skip=true){
   await dismissPickup(page);
   const before=await node();
-  await dismissLeaf(page,false);
+  // 收掉可能还留在台上的纸页。等一等再收：纸页是 React 的 effect，比节点
+  // 标签晚一帧才挂上来，急着收会收了个寂寞，纸页随后盖在舞台上把顶栏的
+  // 「继续剧情」挡住，点击穿透之下剧情就多走了一步。
+  await dismissLeaf(page,false,true);
   await page.getByRole('button',{name:'继续剧情',exact:true}).click();
   await page.waitForFunction(id=>document.querySelector('.node-label')?.textContent!==id,before);
   // 走完一回的末节点，下一句就是下一回的开头：封底与封面都可能在这一刻
-  // 翻出来（都是 React 的 effect，比节点标签晚一帧）。收起来，免得挡住下一步。
-  // 封底不按「开启下一回」——那个按钮会把故事推到下一回的第一句，而这一步
-  // 只该走一句；测试要走的路线由它自己控制。
+  // 翻出来（都是 React 的 effect，比节点标签晚一帧）。
+  //
+  // 收之前先等它真的挂上来，再看一眼该有的那页在不在：封面与封底是这页纸
+  // 存在的理由，只查「不该出现时别出现」是查不出它被拆掉的。首末节点用产品
+  // 代码算，改了分节也不会让断言失真。
+  //
+  // 这里必须等，不能收得太早：纸页是 React 的 effect，比节点标签晚一帧才
+  // 挂上来。急着收会收了个寂寞——纸页随后才盖在舞台上，把顶栏的「继续剧
+  // 情」一起挡住，测试点按钮时点击穿透，剧情就多走了一步（曾经一路错到
+  // A003 才暴露）。
+  //
+  // 只在回首与回末等：其余节点本来就没有纸页，等下去是白等——三百多步
+  // 各等三秒，一轮测试要多花十几分钟。
+  const arrived=await node();
+  const wantsCover=leafBounds.first.has(arrived);
+  const wantsBack=leafBounds.last.has(arrived);
+  if(wantsCover||wantsBack)await page.waitForFunction(()=>!!document.querySelector('.leaf-sheet'),undefined,{timeout:3000}).catch(()=>{});
+  if(wantsCover)assert.equal(await page.locator('.leaf-sheet.leaf-cover').count(),1,`${arrived} must open with a cover`);
+  if(wantsBack)assert.equal(await page.locator('.leaf-sheet.leaf-back').count(),1,`${arrived} must close with a back cover`);
+  // 然后收起来，免得挡住下一步。封底不按「开启下一回」——那个按钮会把故事
+  // 推到下一回的第一句，而这一步只该走一句；测试要走的路线由它自己控制。
   await dismissLeaf(page,false,true);
   await page.waitForTimeout(120);
   await dismissLeaf(page,false,true);
-  const arrived=await node();
   await dismissPickup(page,ledgerNodes.has(arrived));
   const b=page.getByRole('button',{name:'跳过移动',exact:true});if(skip&&await b.isVisible())await b.click();
   await reading();
 }
 try{
- await page.goto(process.env.TEST_URL??'http://127.0.0.1:5173');await reading();assert.equal(await node(),'C1-001');await fit();await page.screenshot({path:'artifacts/chapter-opening.png',fullPage:true});
+ await page.goto(process.env.TEST_URL??'http://127.0.0.1:5173');
+ // 开书第一格就该有封面：这一页是这一回的开场，读者得先看见它才进得去。
+ // 断言放在 reading() 之前——reading() 收纸页，收完就看不见了。
+ await page.locator('.loading-screen').waitFor({state:'detached',timeout:20000});
+ await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim(),undefined,{timeout:60000});
+ await page.waitForFunction(()=>!!document.querySelector('.leaf-sheet.leaf-cover'),undefined,{timeout:5000});
+ assert.equal(await page.locator('.leaf-sheet.leaf-cover').count(),1,'the book must open with the first cover');
+ assert.ok((await page.locator('.leaf-title').textContent())?.includes('甄士隐梦幻识通灵'),'the cover carries the chapter title');
+ await page.screenshot({path:'artifacts/chapter-cover.png',fullPage:true});
+ await reading();assert.equal(await node(),'C1-001');await fit();await page.screenshot({path:'artifacts/chapter-opening.png',fullPage:true});
  // 目录标注已读：读过的那段带 ◐ 或 ●，没读过的带 ○。
  // 这条检查必须在读完之前——读完一部书之后所有段落都已读，就再也看不到未读标记了。
  const toc=await openToc(page);
@@ -207,7 +240,12 @@ try{
   if(i<story.length-1)await next();
  }
  // The prequel gets its own scene atlas and every section can be selected.
- await seekSection(page, 'c1-home');await reading();await page.getByRole('button',{name:'本回行迹',exact:true}).click();await page.locator('.journey-sites').waitFor();assert.equal(await page.locator('.journey-site').count(),6);await page.screenshot({path:'artifacts/prequel-journey.png',fullPage:true});await page.getByRole('button',{name:'当前场景',exact:true}).click(); await seekSection(page, 'letter');await reading();while(await node()!=='END')await next();
+ await seekSection(page, 'c1-home');await reading();
+ // 跳读之后不该留着封面或封底。翻页的规矩是「该有就有、该无就无」：
+ // 上一版只在出现时才更新状态，纸页会赖在舞台上，连顶栏的「继续剧情」
+ // 一起挡住——读下去像是按钮坏了。
+ assert.equal(await page.locator('.leaf-sheet').count(),0,`jumping must not leave a cover or back cover on screen, got ${await page.locator('.leaf-sheet').count()}`);
+ await page.getByRole('button',{name:'本回行迹',exact:true}).click();await page.locator('.journey-sites').waitFor();assert.equal(await page.locator('.journey-site').count(),6);await page.screenshot({path:'artifacts/prequel-journey.png',fullPage:true});await page.getByRole('button',{name:'当前场景',exact:true}).click(); await seekSection(page, 'letter');await reading();while(await node()!=='END')await next();
  // The walk stops at the old chapter-three finale, so its history stops there too.
  // That finale is no longer the end of the book: reloading offers to continue, not restart.
  assert.equal(visited.size,22);assert.equal((await saved()).state.history.length,242);await page.reload();await reading();assert.equal(await node(),'END');await page.getByRole('button',{name:'继续剧情',exact:true}).waitFor();

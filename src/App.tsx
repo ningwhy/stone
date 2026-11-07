@@ -250,7 +250,13 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
     const atStart=lastIndex.current===0;
     lastIndex.current=state.index;
     const trigger=leafTrigger({nodeId:step.id,leaf:leafData,advanced,atStart});
-    if(trigger)setLeaf(trigger);
+    // 该收就收：该出现时出现，不该出现时收干净。
+    //
+    // 上一版只在出现时才 setLeaf，页面因此会留着上一张纸：读者在目录里
+    // 跳到别处，封面还盖在舞台上，把顶栏的「继续剧情」也一起挡住——读
+    // 下去会以为按钮坏了。翻页的规矩是「该有就有、该无就无」，所以这
+    // 里两种情况都要落到 setLeaf 上。
+    setLeaf(trigger);
   },[step.id,leafData,state.index]);
   const closeLeaf=()=>{setLeaf(null);audio.play('sfx-page',.7);};
   // 封底可以收起来：读者读完最后一段，也许想回头再看一眼那几行。按 Escape
