@@ -420,18 +420,18 @@ export class MapScene extends Phaser.Scene {
     const spriteKey=id==='sedan'?'sedan-chair':`${id}-chibi`;
     const spriteAsset=artAssets[spriteKey];
     if(spriteAsset) {
-      g.fillStyle(0x546b55,.16);g.fillEllipse(0,2,id==='sedan'?110:40,16);
+      g.fillStyle(0x546b55,.12);g.fillEllipse(0,3,id==='sedan'?150:56,24);g.fillStyle(0x546b55,.26);g.fillEllipse(0,2,id==='sedan'?110:42,17);
       const sprite=this.add.image(0,0,spriteKey).setOrigin(spriteAsset.anchor[0]/spriteAsset.width,spriteAsset.anchor[1]/spriteAsset.height);
       container.add(sprite);this.actorSprites.set(id,sprite);
     } else if(id==='sedan') {
       g.fillStyle(0xa36f5a);g.fillRoundedRect(-30,-60,60,58,5);g.fillStyle(0x7b584a);g.fillTriangle(-37,-60,37,-60,0,-85);
     } else if(id==='daiyu') {
-      g.fillStyle(0x546b55,.16);g.fillEllipse(0,2,38,14);
+      g.fillStyle(0x546b55,.12);g.fillEllipse(0,3,56,24);g.fillStyle(0x546b55,.26);g.fillEllipse(0,2,42,17);
       const asset=artAssets['daiyu-chibi'];
       const sprite=this.add.image(0,0,'daiyu-chibi').setOrigin(asset.anchor[0]/asset.width,asset.anchor[1]/asset.height);
       container.add(sprite);this.actorSprites.set(id,sprite);
     } else {
-      g.fillStyle(0x546b55,.18);g.fillEllipse(0,1,39,15);
+      g.fillStyle(0x546b55,.12);g.fillEllipse(0,2,56,24);g.fillStyle(0x546b55,.28);g.fillEllipse(0,1,42,17);
       g.fillStyle(actor.color);g.fillTriangle(-18,-9,18,-9,0,-50);g.fillRoundedRect(-13,-34,26,23,5);
       g.lineStyle(3,0xe0cda8,.9);g.lineBetween(-6,-34,5,-17);g.lineBetween(6,-34,-3,-17);
       g.fillStyle(0xeee0c7);g.fillCircle(0,-52,16);g.fillStyle(id==='grandmother'?0x8a8680:0x434d45);g.fillEllipse(0,-65,33,20);g.fillCircle(-14,-55,7);g.fillCircle(14,-55,7);

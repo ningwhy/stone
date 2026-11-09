@@ -2719,10 +2719,10 @@
     "features": "骨瘦凹陷老脸；垂白眉；深陷半闭眼；长弯鼻；瘪嘴，迟钝衰老",
     "seed": 10232064,
     "faceBox": [
-     228,
-     3,
-     381,
-     273
+     214,
+     5,
+     400,
+     205
     ],
     "revision": "def017f9cb2e",
     "source": "art/identity/oldmonk-portrait/request.json"
@@ -3644,7 +3644,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "938f22b7e868"
+   "hash": "938f22b7e868",
+   "identity": {"character": "jinghuan", "faceBox": [96, 45, 150, 141]}
   },
   "jinghuan-chibi": {
    "image": "/assets/rongguo/jinghuan-chibi.png",
@@ -3686,7 +3687,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "92cb95a85b11"
+   "hash": "92cb95a85b11",
+   "identity": {"character": "qin_ke", "faceBox": [102, 75, 192, 303]}
   },
   "qin_ke-chibi": {
    "image": "/assets/rongguo/qin_ke-chibi.png",
@@ -3728,7 +3730,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "b708a282a475"
+   "hash": "b708a282a475",
+   "identity": {"character": "liu_lao", "faceBox": [177, 45, 297, 198]}
   },
   "liu_lao-chibi": {
    "image": "/assets/rongguo/liu_lao-chibi.png",
@@ -3770,7 +3773,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "d2f74ad257a6"
+   "hash": "d2f74ad257a6",
+   "identity": {"character": "ban_er", "faceBox": [48, 24, 162, 159]}
   },
   "ban_er-chibi": {
    "image": "/assets/rongguo/ban_er-chibi.png",
@@ -3812,7 +3816,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "9d71bc2d8149"
+   "hash": "9d71bc2d8149",
+   "identity": {"character": "zhou_rui", "faceBox": [90, 39, 183, 177]}
   },
   "zhou_rui-chibi": {
    "image": "/assets/rongguo/zhou_rui-chibi.png",
@@ -3854,7 +3859,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "78a416dbe314"
+   "hash": "78a416dbe314",
+   "identity": {"character": "ping_er", "faceBox": [75, 60, 171, 180]}
   },
   "ping_er-chibi": {
    "image": "/assets/rongguo/ping_er-chibi.png",
@@ -3896,7 +3902,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "0238ad24a5b7"
+   "hash": "0238ad24a5b7",
+   "identity": {"character": "jia_rong", "faceBox": [54, 39, 114, 126]}
   },
   "jia_rong-chibi": {
    "image": "/assets/rongguo/jia_rong-chibi.png",
@@ -5135,7 +5142,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "ddf111425b97"
+   "hash": "ddf111425b97",
+   "identity": {"character": "ying_er", "faceBox": [55, 20, 180, 185]}
   },
   "ying_er-chibi": {
    "image": "/assets/rongguo/ying_er-chibi.png",
@@ -5180,7 +5188,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "e99afe11e5e6"
+   "hash": "e99afe11e5e6",
+   "identity": {"character": "qin_zhong", "faceBox": [108, 54, 210, 186]}
   },
   "qin_zhong-chibi": {
    "image": "/assets/rongguo/qin_zhong-chibi.png",
@@ -5225,7 +5234,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "6e60cec3e3ee"
+   "hash": "6e60cec3e3ee",
+   "identity": {"character": "jia_rui", "faceBox": [90, 0, 174, 147]}
   },
   "jia_rui-chibi": {
    "image": "/assets/rongguo/jia_rui-chibi.png",
@@ -5270,7 +5280,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "2976b94d9fda"
+   "hash": "2976b94d9fda",
+   "identity": {"character": "jin_rong", "faceBox": [81, 42, 216, 213]}
   },
   "jin_rong-chibi": {
    "image": "/assets/rongguo/jin_rong-chibi.png",
@@ -5315,7 +5326,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "f3459908b43d"
+   "hash": "f3459908b43d",
+   "identity": {"character": "ming_yan", "faceBox": [81, 51, 201, 201]}
   },
   "ming_yan-chibi": {
    "image": "/assets/rongguo/ming_yan-chibi.png",
@@ -5360,7 +5372,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "a0c6950a5919"
+   "hash": "a0c6950a5919",
+   "identity": {"character": "li_gui", "faceBox": [123, 12, 219, 153]}
   },
   "li_gui-chibi": {
    "image": "/assets/rongguo/li_gui-chibi.png",
@@ -5405,7 +5418,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "2413a565e8ba"
+   "hash": "2413a565e8ba",
+   "identity": {"character": "you_shi", "faceBox": [72, 39, 132, 126]}
   },
   "you_shi-chibi": {
    "image": "/assets/rongguo/you_shi-chibi.png",
@@ -5450,7 +5464,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "24ffc19508e5"
+   "hash": "24ffc19508e5",
+   "identity": {"character": "jia_zhen", "faceBox": [87, 39, 147, 126]}
   },
   "jia_zhen-chibi": {
    "image": "/assets/rongguo/jia_zhen-chibi.png",
@@ -5495,7 +5510,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "fc6fd7d86bcb"
+   "hash": "fc6fd7d86bcb",
+   "identity": {"character": "jin_shi", "faceBox": [96, 66, 192, 189]}
   },
   "jin_shi-chibi": {
    "image": "/assets/rongguo/jin_shi-chibi.png",
@@ -5540,7 +5556,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "944196613cda"
+   "hash": "944196613cda",
+   "identity": {"character": "hu_shi", "faceBox": [81, 36, 186, 180]}
   },
   "hu_shi-chibi": {
    "image": "/assets/rongguo/hu_shi-chibi.png",
@@ -5585,7 +5602,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "0777da5c3635"
+   "hash": "0777da5c3635",
+   "identity": {"character": "zhang_youshi", "faceBox": [87, 42, 156, 147]}
   },
   "zhang_youshi-chibi": {
    "image": "/assets/rongguo/zhang_youshi-chibi.png",
@@ -5630,7 +5648,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "21378da85412"
+   "hash": "21378da85412",
+   "identity": {"character": "jia_qiang", "faceBox": [84, 54, 162, 156]}
   },
   "jia_qiang-chibi": {
    "image": "/assets/rongguo/jia_qiang-chibi.png",
@@ -5675,7 +5694,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "4fef546338a1"
+   "hash": "4fef546338a1",
+   "identity": {"character": "jia_dairu", "faceBox": [93, 42, 168, 153]}
   },
   "jia_dairu-chibi": {
    "image": "/assets/rongguo/jia_dairu-chibi.png",
@@ -5741,7 +5761,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "7532d70bebc0"
+   "hash": "7532d70bebc0",
+   "identity": {"character": "dai_quan", "faceBox": [81, 0, 147, 114]}
   },
   "dai_quan-chibi": {
    "image": "/assets/rongguo/dai_quan-chibi.png",
@@ -5786,7 +5807,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "1a1d0cd4939e"
+   "hash": "1a1d0cd4939e",
+   "identity": {"character": "bao_zhu", "faceBox": [75, 42, 177, 192]}
   },
   "bao_zhu-chibi": {
    "image": "/assets/rongguo/bao_zhu-chibi.png",
@@ -5831,7 +5853,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "f05b142c57e2"
+   "hash": "f05b142c57e2",
+   "identity": {"character": "lai_sheng", "faceBox": [96, 54, 189, 180]}
   },
   "lai_sheng-chibi": {
    "image": "/assets/rongguo/lai_sheng-chibi.png",
@@ -5876,7 +5899,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "9363800721e4"
+   "hash": "9363800721e4",
+   "identity": {"character": "zhao_er", "faceBox": [81, 0, 189, 171]}
   },
   "zhao_er-chibi": {
    "image": "/assets/rongguo/zhao_er-chibi.png",
@@ -5921,7 +5945,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "08bc60cabc7f"
+   "hash": "08bc60cabc7f",
+   "identity": {"character": "shui_rong", "faceBox": [123, 81, 207, 189]}
   },
   "shui_rong-chibi": {
    "image": "/assets/rongguo/shui_rong-chibi.png",
@@ -5966,7 +5991,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "4da20bfd06bc"
+   "hash": "4da20bfd06bc",
+   "identity": {"character": "jing_xu", "faceBox": [111, 12, 225, 243]}
   },
   "jing_xu-chibi": {
    "image": "/assets/rongguo/jing_xu-chibi.png",
@@ -6011,7 +6037,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "307a18b22dfd"
+   "hash": "307a18b22dfd",
+   "identity": {"character": "zhi_neng", "faceBox": [81, 0, 219, 219]}
   },
   "zhi_neng-chibi": {
    "image": "/assets/rongguo/zhi_neng-chibi.png",
@@ -6056,7 +6083,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "e7071c4dcf53"
+   "hash": "e7071c4dcf53",
+   "identity": {"character": "er_ya_tou", "faceBox": [87, 54, 201, 183]}
   },
   "er_ya_tou-chibi": {
    "image": "/assets/rongguo/er_ya_tou-chibi.png",
@@ -6101,7 +6129,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "94f76731de01"
+   "hash": "94f76731de01",
+   "identity": {"character": "wang_er", "faceBox": [105, 12, 213, 171]}
   },
   "wang_er-chibi": {
    "image": "/assets/rongguo/wang_er-chibi.png",
@@ -6146,7 +6175,8 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "ddd90c4843f6"
+   "hash": "ddd90c4843f6",
+   "identity": {"character": "qin_ye", "faceBox": [117, 21, 216, 195]}
   },
   "qin_ye-chibi": {
    "image": "/assets/rongguo/qin_ye-chibi.png",

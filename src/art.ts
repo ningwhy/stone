@@ -1,7 +1,7 @@
 import manifest from '../public/assets/rongguo/manifest.json' with { type: 'json' };
 import type { ArtObject } from './model.ts';
 
-export const artAssets: Record<string,{image:string;width:number;height:number;anchor:number[];hash?:string;identity?:{character:string;features:string;seed:number;faceBox:number[];revision:string;source:string}}> = manifest.assets;
+export const artAssets: Record<string,{image:string;width:number;height:number;anchor:number[];hash?:string;identity?:{character:string;features?:string;seed?:number;faceBox:number[];revision?:string;source?:string}}> = manifest.assets;
 
 /** Identity revision invalidates cached portraits and Phaser textures after an art rebuild.
  * The manifest keeps the PNG originals as source of truth for calibration and content checks;
@@ -22,7 +22,7 @@ export function artImage(key:string) {
 
 /** The production build prunes PNG originals, so every runtime reference must ask for the
  * WebP sibling. Callers that already hold an asset record use this instead of `.image`. */
-export function assetImage(asset:{image:string;hash?:string;identity?:{revision:string}}):string {
+export function assetImage(asset:{image:string;hash?:string;identity?:{revision?:string}}):string {
   const image=asset.image.replace(/\.png$/,'.webp');
   const version=asset.hash??asset.identity?.revision;
   return version?`${image}?v=${version}`:image;

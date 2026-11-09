@@ -34,6 +34,6 @@ try{
  await seekSection(page, 'feng');await reading();
  for(let i=0;i<8&&(await page.locator('.node-label').textContent())!=='F006';i++){await page.getByRole('button',{name:'继续剧情',exact:true}).click();await reading();}
  assert.equal(await page.locator('.node-label').textContent(),'F006');assert.match(await page.locator('.speaker-portrait img').getAttribute('src'),/feng-portrait\.webp\?v=/);await page.screenshot({path:'artifacts/character-identity-feng.png'});
-const manifest=JSON.parse(readFileSync('public/assets/rongguo/manifest.json'));assert.equal(Object.values(manifest.assets).filter(a=>a.identity).length,92);assert.deepEqual(errors,[]);
-console.log(`Passed: ${castCount} versioned portraits (${portraitWithFaceBox} face close-ups; ${castCount-portraitWithFaceBox} 缺 faceBox 以全身像呈现), paired 92-asset manifest (76 cast bitmaps plus the 16 portrait emotion variants), fixed dialogue frame and new Feng portrait in live scene.`);
+const manifest=JSON.parse(readFileSync('public/assets/rongguo/manifest.json'));const totalIdentity=Object.values(manifest.assets).filter(a=>a.identity).length;const nonPortraitIdentity=Object.entries(manifest.assets).filter(([k,a])=>a.identity&&!k.endsWith('-portrait')).length;assert.equal(totalIdentity,portraitWithFaceBox+nonPortraitIdentity,`identity 总数 ${totalIdentity} 须等于 带faceBox立绘 ${portraitWithFaceBox} + 非立绘identity ${nonPortraitIdentity}（写死 92 会在每批新角色接入时失效）`);assert.deepEqual(errors,[]);
+console.log(`Passed: ${castCount} versioned portraits, 全部 ${portraitWithFaceBox} 张带 faceBox 并已裁成脸部特写（无缺元数据全身像）；manifest 共 ${totalIdentity} 个 identity 块（${portraitWithFaceBox} 立绘 + ${nonPortraitIdentity} 非立绘）。`);
 }finally{await browser.close();}
