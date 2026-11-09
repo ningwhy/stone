@@ -3,24 +3,21 @@
 // The local smoke test covers the same DOM, but only this one runs against
 // stone.yan.pub, where a stale bundle or a pruned asset would show up.
 //
-// The Cloudflare edge applies a bot challenge to automated clients, so the run
-// resolves stone.yan.pub straight to the origin IP, exactly as online-verify
-// does, and checks the deployed bytes themselves.
+// The run goes to stone-direct.yan.pub, the DNS-only address to the origin,
+// so the check measures the site rather than the Cloudflare challenge.
 //
 // Usage: node tests/online-album.mjs
-//        ORIGIN_DIRECT=1 node tests/online-album.mjs
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
-import {mkdirSync} from 'node:fs';
+import {mkdirSync,readdirSync} from 'node:fs';
+import { onlineUrl, onlineArgs, ignoreTlsErrors, onlineProfile } from './lib/online.mjs';
+import { dismissLeaf } from './lib/pickup.mjs';
 
-const direct=process.env.ORIGIN_DIRECT==='1';
-const url=process.env.TEST_URL??'https://stone.yan.pub/';
-const profile=process.env.ONLINE_PROFILE??(direct?'/tmp/wb-direct-album-profile':'/tmp/wb-online-album-profile');
-const args=['--disable-blink-features=AutomationControlled'];
-if(direct)args.push('--host-resolver-rules=MAP stone.yan.pub 154.8.237.35');
+const url=onlineUrl();
+const profile=onlineProfile('album');
 const context=await chromium.launchPersistentContext(profile,{
   headless:false,channel:'chrome',viewport:{width:1440,height:900},reducedMotion:'reduce',
-  ignoreHTTPSErrors:direct,args});
+  ignoreHTTPSErrors:ignoreTlsErrors(),args:onlineArgs()});
 const page=await context.newPage();
 const errors=[];
 page.on('pageerror',e=>errors.push(e.message));
@@ -34,9 +31,15 @@ try{
   await page.evaluate(()=>localStorage.removeItem('honglou.collection.v1'));
   await page.reload();
   await page.locator('.loading-screen').waitFor({state:'detached',timeout:30000});
+  // The book opens with the chapter's cover: a modal sheet that hides the
+  // header, so it goes away before the settings can be opened.
+  await dismissLeaf(page,false,true);
   await page.getByRole('button',{name:'设置',exact:true}).click();
   await page.getByRole('button',{name:'册页',exact:true}).click();
-  assert.equal(await page.locator('.atlas-body article').count(),22,'the map tab must keep its 22 scenes');
+  // The scene list is read from the data, not written down: the atlas tab shows
+  // every map the site ships, and the map files are the source of truth.
+  const mapCount=readdirSync('maps').filter(f=>f.endsWith('.tmj')).length;
+  assert.equal(await page.locator('.atlas-body article').count(),mapCount,`the map tab must list all ${mapCount} scenes`);
 
   await page.getByRole('tab',{name:/见闻/}).click();
   assert.equal(await page.locator('.card-gallery .card-item').count(),36,'the album must list every card online');

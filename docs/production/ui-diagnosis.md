@@ -133,9 +133,20 @@
 | 单元 | `npm test` | 引擎、动作、美术、地理规则 |
 | 内容 | `npm run check:content` | 节点/段落/地图/资产引用、账簿门禁 |
 | 浏览器 | `node tests/browser-smoke.mjs` 等 | 真实 DOM 下的尺寸、命中、懒加载 |
-| 线上 | `ORIGIN_DIRECT=1 TEST_URL=https://stone.yan.pub/ node tests/online-ledger.mjs` | 部署后的真实资源与样式 |
+| 线上 | `npm run test:online` | 部署后的真实资源与样式 |
 
-线上复验要带 `ORIGIN_DIRECT=1` 直连源站绕过 CF Bot 质询；新 profile 首次访问正式域名会 `ERR_TIMED_OUT`，需预热 profile 或删掉旧 profile 目录（内存里存着旧存档会导致场景 id 对不上）。
+线上复验走 **`stone-direct.yan.pub`**：DNS-only 直连源站，自带 Let's Encrypt 证书，不过 Cloudflare 的 Bot 质询。
+
+正式域名 `stone.yan.pub` 在 CF 后面，托管挑战会把所有自动化客户端（`curl` 和有头 Chrome 一样）挡成 403 挑战页。直连域名拿到的是同一批部署字节，只是绕开了挑战——验的是站点，不是挑战。
+
+域名选择集中在 `tests/lib/online.mjs`：`TEST_URL` 可改指向（本地 dev server、挑战解除后的正式域名），`ORIGIN_DIRECT=1` 保留旧的「把正式域名解析到源站 IP」做法。
+
+**踩过的坑**：
+
+- 新 profile 首次访问正式域名会 `ERR_TIMED_OUT`，需预热 profile 或删掉旧 profile 目录（内存里存着旧存档会导致场景 id 对不上）。
+- 旧 profile 里存着读过的存档，开书会落在回中间，自然没有封面——线上脚本要清存档或用一次性 profile。
+- 走直连后**不再有 403 噪音**，`failed requests` 的判断比走 CF 时准得多。
+- 封面/封底是模态纸页，会吞掉所有点击、也挡住顶栏。线上脚本凡是要点顶栏或开目录，都得先 `dismissLeaf`。
 
 **规则**：
 

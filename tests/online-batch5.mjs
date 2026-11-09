@@ -6,24 +6,23 @@
 //   4. the chapter list must mark read and unread sections;
 //   5. leaving a room must not let the walker run ahead of the map.
 //
-// Usage: ORIGIN_DIRECT=1 node tests/online-batch5.mjs
+// Usage: node tests/online-batch5.mjs
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdirSync} from 'node:fs';
 import { seekSection, openToc } from './lib/toc.mjs';
+import { dismissLeaf } from './lib/pickup.mjs';
+import { onlineUrl, onlineTag, onlineArgs, ignoreTlsErrors, onlineProfile } from './lib/online.mjs';
 
-const direct=process.env.ORIGIN_DIRECT==='1';
-const profile=process.env.ONLINE_PROFILE??(direct?'/tmp/wb-direct-batch5':'/tmp/wb-online-batch5');
-const args=['--disable-blink-features=AutomationControlled'];
-if(direct)args.push('--host-resolver-rules=MAP stone.yan.pub 154.8.237.35');
+const profile=onlineProfile('batch5');
 const context=await chromium.launchPersistentContext(profile,{
   headless:false,channel:'chrome',viewport:{width:1440,height:900},reducedMotion:'reduce',
-  ignoreHTTPSErrors:direct,args});
+  ignoreHTTPSErrors:ignoreTlsErrors(),args:onlineArgs()});
 const page=await context.newPage(),errors=[];
 page.on('pageerror',e=>errors.push(e.message));
 page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
 mkdirSync('artifacts',{recursive:true});
-const tag=direct?'origin':'online';
+const tag=onlineTag();
 
 const reading=async()=>{
   await page.locator('.loading-screen').waitFor({state:'detached',timeout:120000});
@@ -33,9 +32,13 @@ const reading=async()=>{
 };
 
 try{
- await page.goto('https://stone.yan.pub/',{waitUntil:'commit',timeout:120000});
+ await page.goto(onlineUrl(),{waitUntil:'commit',timeout:120000});
  await page.waitForSelector('.toc-trigger',{timeout:240000});
  await reading();
+
+ // The book opens with the chapter's cover: a modal sheet that hides the
+ // header, so it goes away before the index can be opened.
+ await dismissLeaf(page,false,true);
 
  // (4) read marks in the index, checked before anything gets read.
  const toc=await openToc(page);
@@ -53,9 +56,11 @@ try{
  // reading a few different maps fills the album with enough cards to judge the
  // lazy loading on.
  for(const section of ['arrival','reunion','uncles']){
+  await dismissLeaf(page,false,true);
   await seekSection(page, section);
   await reading();
  }
+ await dismissLeaf(page,false,true);
  await page.getByRole('button',{name:'背包',exact:true}).click();
  await page.getByRole('tab',{name:/见闻/}).click();
  await page.locator('.card-item').first().waitFor({timeout:30000});
@@ -124,6 +129,7 @@ try{
  await page.waitForTimeout(200);
  // 'arrival' opens on the capital street; two lines later the story steps onto
  // the 贾府 map — exactly the cut the reader described.
+ await dismissLeaf(page,false,true);
  await seekSection(page, 'arrival');
  await reading();
  let raced=0,walked=0,unlockedWindows=0;
@@ -148,6 +154,7 @@ try{
  });
  // Step the story forward across the scene boundary.
  for(let i=0;i<5;i++){
+  await dismissLeaf(page,false,true);
   const button=page.getByRole('button',{name:'继续剧情',exact:true});
   if(await button.isEnabled())await button.click();
   await page.waitForTimeout(700);

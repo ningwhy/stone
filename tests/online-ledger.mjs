@@ -5,25 +5,24 @@
 //   3. the pictures must actually load from the origin, not 404;
 //   4. the people grid must show portraits, complete faces, one size for all.
 //
-// Usage: ORIGIN_DIRECT=1 node tests/online-ledger.mjs
+// Usage: node tests/online-ledger.mjs
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdirSync,readFileSync} from 'node:fs';
 import {dismissPickup} from './lib/pickup.mjs';
 import { seekSection } from './lib/toc.mjs';
+import { dismissLeaf } from './lib/pickup.mjs';
+import { onlineUrl, onlineTag, onlineArgs, ignoreTlsErrors, onlineProfile } from './lib/online.mjs';
 
-const direct=process.env.ORIGIN_DIRECT==='1';
-const profile=process.env.ONLINE_PROFILE??(direct?'/tmp/wb-direct-ledger':'/tmp/wb-online-ledger');
-const args=['--disable-blink-features=AutomationControlled'];
-if(direct)args.push('--host-resolver-rules=MAP stone.yan.pub 154.8.237.35');
+const profile=onlineProfile('ledger');
 const context=await chromium.launchPersistentContext(profile,{
   headless:false,channel:'chrome',viewport:{width:1440,height:900},reducedMotion:'reduce',
-  ignoreHTTPSErrors:direct,args});
+  ignoreHTTPSErrors:ignoreTlsErrors(),args:onlineArgs()});
 const page=await context.newPage(),errors=[];
 page.on('pageerror',e=>errors.push(e.message));
 page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
 mkdirSync('artifacts',{recursive:true});
-const tag=direct?'origin':'online';
+const tag=onlineTag();
 
 const ledger=JSON.parse(readFileSync('design/ledger.json','utf8'));
 const ledgerArt=ledger.entries.filter(e=>e.art).map(e=>e.art.replace(/^\//,''));
@@ -37,23 +36,29 @@ const reading=async()=>{
 };
 
 try{
- await page.goto('https://stone.yan.pub/',{waitUntil:'commit',timeout:120000});
+ await page.goto(onlineUrl(),{waitUntil:'commit',timeout:120000});
  await page.waitForSelector('.toc-trigger',{timeout:240000});
  await reading();
 
  // Read enough of the book to unlock a good share of the ledger, including the
  // people entries (a person is transferred, so their row carries their portrait).
  for(const section of ['arrival','reunion','uncles','c4-court','c4-truth']){
+   // The chapter cover and the back cover are modal sheets: they hide the
+   // header and swallow every click, so they go away before the index is
+   // opened and before the story is advanced.
+   await dismissLeaf(page,false,true);
    await seekSection(page, section);
    await reading();
    for(let i=0;i<12;i++){
      await dismiss();
+     await dismissLeaf(page,false,true);
      const b=page.getByRole('button',{name:'继续剧情',exact:true});
      if(await b.isEnabled())await b.click();
      await page.waitForTimeout(280);
    }
  }
  await dismiss();
+ await dismissLeaf(page,false,true);
 
  await page.getByRole('button',{name:'背包',exact:true}).click();
  await page.getByRole('tab',{name:/账簿/}).click();

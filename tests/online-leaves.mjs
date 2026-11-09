@@ -12,23 +12,21 @@
 // only updated the sheet state when a sheet was about to appear, so the cover
 // stayed on the stage after a jump and hid the "继续剧情" button.
 //
-// Usage: ORIGIN_DIRECT=1 node tests/online-leaves.mjs
+// Usage: node tests/online-leaves.mjs
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdirSync,rmSync} from 'node:fs';
 import {seekSection} from './lib/toc.mjs';
 import {chapterLeaves} from '../src/leaves.ts';
+import {onlineUrl,onlineArgs,ignoreTlsErrors,onlineProfile} from './lib/online.mjs';
 
-const direct=process.env.ORIGIN_DIRECT==='1';
-const profile=process.env.ONLINE_PROFILE??(direct?'/tmp/wb-direct-profile-leaf':'/tmp/wb-online-profile-leaf');
+const profile=onlineProfile('leaves');
 // A throwaway profile: this script clears the save on purpose, and it must not
 // touch the profile the other online checks use.
 if(process.env.ONLINE_PROFILE===undefined)rmSync(profile,{recursive:true,force:true});
-const args=['--disable-blink-features=AutomationControlled'];
-if(direct)args.push('--host-resolver-rules=MAP stone.yan.pub 154.8.237.35');
 const context=await chromium.launchPersistentContext(profile,{
   headless:false,channel:'chrome',viewport:{width:1440,height:900},reducedMotion:'reduce',
-  ignoreHTTPSErrors:direct,args});
+  ignoreHTTPSErrors:ignoreTlsErrors(),args:onlineArgs()});
 const page=await context.newPage(),errors=[];
 page.on('pageerror',e=>errors.push(e.message));
 page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
@@ -54,7 +52,7 @@ const first=leaves.get(1);
 assert.ok(first,'chapter one must have a leaf record');
 
 try{
- await page.goto('https://stone.yan.pub/',{waitUntil:'commit',timeout:120000});
+ await page.goto(onlineUrl(),{waitUntil:'commit',timeout:120000});
  await page.locator('.loading-screen').waitFor({state:'detached',timeout:120000});
  // The profile is persistent, so a previous run's save would open the book in
  // the middle of a chapter — and a book opened mid-chapter rightly has no cover.

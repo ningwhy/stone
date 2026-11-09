@@ -38,9 +38,15 @@
 - `~/.config/yanpub/cf_token` 只有 DNS 读写与 zone 读权限：zone settings、WAF、page rules、缓存 purge 全部
   返回 `9109 Unauthorized`。要改安全级别/关掉 Managed Challenge，只能由用户在 CF 面板操作，或换成带
   `Zone Settings:Edit` / `Zone WAF:Edit` 的 token。
-- 线上验收：`ORIGIN_DIRECT=1 node tests/online-verify.mjs`（用 `--host-resolver-rules` 把域名指到源站 IP，
-  绕开挑战；`tests/online-verify.mjs` 同时校验六回分组、第四章新舞台、肖像、总览缩略图、播放开关、回看、
+- **线上验收一律走 `stone-direct.yan.pub`**（用户指定）：DNS-only 直连源站，不过 CF 的 Bot 质询，
+  拿到的就是同一批部署字节。命令：`npm run test:online`（主验收）、`npm run test:online:leaves`
+  （封面封底）、`:album`、`:ledger`、`:batch5`。域名选择集中在 `tests/lib/online.mjs`，
+  `TEST_URL` 可改指向，`ORIGIN_DIRECT=1` 保留旧的「解析到源站 IP」做法。
+  `tests/online-verify.mjs` 同时校验六回分组、第四章新舞台、肖像、总览缩略图、播放开关、回看、
   每回 BGM，以及**第五回必须给「本回行迹」而不是荣国府总览**）。
+- 走直连的好处之一是**没有 403 噪音**：`failed requests` 的判断比走 CF 时准得多。
+- 线上脚本的坑：旧 profile 存着读过的存档，开书会落在回中间（自然没有封面）；封面/封底是模态纸页，
+  会吞掉所有点击也挡住顶栏，凡要点顶栏或开目录都先 `dismissLeaf`。
 
 ## 每次交付
 
