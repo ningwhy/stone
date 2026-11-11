@@ -3766,6 +3766,138 @@
     "split": 401,
     "factor": 0.64
    }
+  },
+  {
+   "id": "yuanchun-portrait",
+   "seed": 10234000,
+   "anchor": [
+    423.0,
+    1023.0
+   ],
+   "height": 600
+  },
+  {
+   "id": "yuanchun-chibi",
+   "seed": 10234001,
+   "anchor": [
+    393.0,
+    963.0
+   ],
+   "height": 116,
+   "bodyCompress": {
+    "split": 404,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "jia_lian-portrait",
+   "seed": 10234002,
+   "anchor": [
+    436.0,
+    984.0
+   ],
+   "height": 600
+  },
+  {
+   "id": "jia_lian-chibi",
+   "seed": 10234003,
+   "anchor": [
+    354.0,
+    970.0
+   ],
+   "height": 116,
+   "bodyCompress": {
+    "split": 407,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "jia_huan-portrait",
+   "seed": 10234010,
+   "anchor": [
+    449,
+    1112
+   ],
+   "height": 600
+  },
+  {
+   "id": "jia_huan-chibi",
+   "seed": 10234011,
+   "anchor": [
+    443,
+    947
+   ],
+   "height": 116,
+   "bodyCompress": {
+    "split": 398,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "zhao_yiniang-portrait",
+   "seed": 10234020,
+   "anchor": [
+    344,
+    1125
+   ],
+   "height": 600
+  },
+  {
+   "id": "zhao_yiniang-chibi",
+   "seed": 10234021,
+   "anchor": [
+    416,
+    936
+   ],
+   "height": 116,
+   "bodyCompress": {
+    "split": 393,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "shi_xiangyun-portrait",
+   "seed": 10234030,
+   "anchor": [
+    401,
+    1121
+   ],
+   "height": 600
+  },
+  {
+   "id": "shi_xiangyun-chibi",
+   "seed": 10234031,
+   "anchor": [
+    474,
+    960
+   ],
+   "height": 116,
+   "bodyCompress": {
+    "split": 403,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "she_yue-portrait",
+   "seed": 10234040,
+   "anchor": [
+    359,
+    1115
+   ],
+   "height": 600
+  },
+  {
+   "id": "she_yue-chibi",
+   "seed": 10234041,
+   "anchor": [
+    394,
+    951
+   ],
+   "height": 116,
+   "bodyCompress": {
+    "split": 399,
+    "factor": 0.64
+   }
   }
  ],
  "placements": [

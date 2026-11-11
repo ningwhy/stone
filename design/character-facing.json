@@ -6,15 +6,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.4041,
-     "mouthOffset": 0.0487,
+     "noseOffset": 0.4357,
+     "mouthOffset": 0.0491,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.7109,
-     "mouthOffset": 0.3233,
-     "votes": 5,
+     "noseOffset": 0.5367,
+     "mouthOffset": 0.1537,
+     "votes": 7,
      "method": "vision-landmark-geometry"
     }
    },
@@ -24,15 +24,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.4026,
-     "mouthOffset": 0.1744,
+     "noseOffset": 0.3971,
+     "mouthOffset": 0.1708,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.3158,
-     "mouthOffset": 0.139,
-     "votes": 5,
+     "noseOffset": 0.3187,
+     "mouthOffset": 0.1357,
+     "votes": 7,
      "method": "vision-landmark-geometry"
     }
    },
@@ -42,8 +42,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.315,
-     "mouthOffset": 0.0147,
+     "noseOffset": 0.3106,
+     "mouthOffset": 0.0104,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -58,16 +58,14 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.5916,
-     "mouthOffset": 0.3866,
+     "noseOffset": 0.5743,
+     "mouthOffset": 0.3821,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.6314,
-     "mouthOffset": 0.3892,
-     "votes": 2,
-     "method": "vision-landmark-geometry"
+     "method": "visual-review",
+     "reason": "detector reads no face in any crop; painted head read by eye, it turns right"
     }
    },
    "chibi": "right"
@@ -76,15 +74,15 @@
    "portrait": "left",
    "evidence": {
     "portrait": {
-     "noseOffset": -0.0562,
-     "mouthOffset": -0.1119,
+     "noseOffset": -0.0746,
+     "mouthOffset": -0.1232,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.5343,
-     "mouthOffset": 0.3526,
-     "votes": 5,
+     "noseOffset": 0.4978,
+     "mouthOffset": 0.2924,
+     "votes": 7,
      "method": "vision-landmark-geometry"
     }
    },
@@ -94,15 +92,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.5066,
-     "mouthOffset": 0.2344,
+     "noseOffset": 0.5071,
+     "mouthOffset": 0.2405,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.3955,
-     "mouthOffset": 0.1717,
-     "votes": 5,
+     "noseOffset": 0.3767,
+     "mouthOffset": 0.1702,
+     "votes": 7,
      "method": "vision-landmark-geometry"
     }
    },
@@ -112,15 +110,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.2843,
-     "mouthOffset": 0.0859,
+     "noseOffset": 0.277,
+     "mouthOffset": 0.0793,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.3878,
-     "mouthOffset": 0.2154,
-     "votes": 3,
+     "noseOffset": 0.271,
+     "mouthOffset": 0.0946,
+     "votes": 4,
      "method": "vision-landmark-geometry"
     }
    },
@@ -130,8 +128,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.2774,
-     "mouthOffset": 0.1444,
+     "noseOffset": 0.2773,
+     "mouthOffset": 0.144,
      "votes": 2,
      "method": "vision-landmark-geometry"
     },
@@ -146,15 +144,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.3508,
-     "mouthOffset": 0.1407,
+     "noseOffset": 0.3497,
+     "mouthOffset": 0.1426,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.8147,
-     "mouthOffset": 0.4099,
-     "votes": 3,
+     "noseOffset": 0.4423,
+     "mouthOffset": 0.2585,
+     "votes": 6,
      "method": "vision-landmark-geometry"
     }
    },
@@ -164,14 +162,14 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.4188,
-     "mouthOffset": 0.1721,
+     "noseOffset": 0.4215,
+     "mouthOffset": 0.167,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.6421,
-     "mouthOffset": 0.4925,
+     "noseOffset": 0.3594,
+     "mouthOffset": 0.1604,
      "votes": 3,
      "method": "vision-landmark-geometry"
     }
@@ -182,15 +180,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.3223,
-     "mouthOffset": 0.1277,
+     "noseOffset": 0.3337,
+     "mouthOffset": 0.1363,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.6548,
-     "mouthOffset": 0.3572,
-     "votes": 3,
+     "noseOffset": 0.5254,
+     "mouthOffset": 0.3228,
+     "votes": 6,
      "method": "vision-landmark-geometry"
     }
    },
@@ -204,9 +202,9 @@
      "reason": "nose and mouth disagree in every crop; painted head read by eye, it turns left"
     },
     "chibi": {
-     "noseOffset": 0.362,
-     "mouthOffset": 0.1614,
-     "votes": 5,
+     "noseOffset": 0.3295,
+     "mouthOffset": 0.1408,
+     "votes": 7,
      "method": "vision-landmark-geometry"
     }
    },
@@ -216,8 +214,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.2467,
-     "mouthOffset": 0.1035,
+     "noseOffset": 0.2446,
+     "mouthOffset": 0.1041,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -232,8 +230,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.099,
-     "mouthOffset": 0.165,
+     "noseOffset": 0.1149,
+     "mouthOffset": 0.1645,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -248,15 +246,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.0546,
-     "mouthOffset": 0.0514,
+     "noseOffset": 0.0595,
+     "mouthOffset": 0.0455,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.4297,
-     "mouthOffset": 0.1511,
-     "votes": 5,
+     "noseOffset": 0.3277,
+     "mouthOffset": 0.0919,
+     "votes": 7,
      "method": "vision-landmark-geometry"
     }
    },
@@ -266,15 +264,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.0908,
-     "mouthOffset": 0.0587,
+     "noseOffset": 0.0888,
+     "mouthOffset": 0.0514,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.9077,
-     "mouthOffset": 0.6284,
-     "votes": 3,
+     "noseOffset": 0.5899,
+     "mouthOffset": 0.434,
+     "votes": 5,
      "method": "vision-landmark-geometry"
     }
    },
@@ -284,8 +282,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.3059,
-     "mouthOffset": 0.1729,
+     "noseOffset": 0.2962,
+     "mouthOffset": 0.1759,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -300,15 +298,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.1454,
-     "mouthOffset": 0.0847,
+     "noseOffset": 0.1414,
+     "mouthOffset": 0.0836,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.626,
-     "mouthOffset": 0.5953,
-     "votes": 3,
+     "noseOffset": 0.2862,
+     "mouthOffset": 0.1052,
+     "votes": 6,
      "method": "vision-landmark-geometry"
     }
    },
@@ -318,15 +316,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.1261,
-     "mouthOffset": 0.144,
+     "noseOffset": 0.1283,
+     "mouthOffset": 0.1457,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.6231,
-     "mouthOffset": 0.2401,
-     "votes": 3,
+     "noseOffset": 0.6434,
+     "mouthOffset": 0.3768,
+     "votes": 5,
      "method": "vision-landmark-geometry"
     }
    },
@@ -336,8 +334,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.1593,
-     "mouthOffset": 0.1475,
+     "noseOffset": 0.1647,
+     "mouthOffset": 0.1456,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -352,8 +350,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.1933,
-     "mouthOffset": 0.2026,
+     "noseOffset": 0.189,
+     "mouthOffset": 0.2031,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -368,15 +366,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.2826,
-     "mouthOffset": 0.1415,
+     "noseOffset": 0.2852,
+     "mouthOffset": 0.1384,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.5351,
-     "mouthOffset": 0.2531,
-     "votes": 4,
+     "noseOffset": 0.4966,
+     "mouthOffset": 0.3877,
+     "votes": 5,
      "method": "vision-landmark-geometry"
     }
    },
@@ -386,15 +384,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.2994,
-     "mouthOffset": 0.2365,
+     "noseOffset": 0.3129,
+     "mouthOffset": 0.2368,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.9847,
-     "mouthOffset": 0.7683,
-     "votes": 3,
+     "noseOffset": 0.5137,
+     "mouthOffset": 0.5188,
+     "votes": 4,
      "method": "vision-landmark-geometry"
     }
    },
@@ -404,8 +402,8 @@
    "portrait": "left",
    "evidence": {
     "portrait": {
-     "noseOffset": -0.0155,
-     "mouthOffset": -0.1094,
+     "noseOffset": -0.0207,
+     "mouthOffset": -0.1185,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -420,8 +418,8 @@
    "portrait": "left",
    "evidence": {
     "portrait": {
-     "noseOffset": -0.0933,
-     "mouthOffset": -0.1954,
+     "noseOffset": -0.0999,
+     "mouthOffset": -0.1993,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -450,8 +448,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.079,
-     "mouthOffset": 0.096,
+     "noseOffset": 0.0898,
+     "mouthOffset": 0.097,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -470,9 +468,9 @@
      "reason": "detector reads no face in any crop; painted head read by eye, it turns right"
     },
     "chibi": {
-     "noseOffset": 0.3255,
-     "mouthOffset": 0.1112,
-     "votes": 5,
+     "noseOffset": 0.3279,
+     "mouthOffset": 0.1388,
+     "votes": 7,
      "method": "vision-landmark-geometry"
     }
    },
@@ -482,15 +480,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.0489,
-     "mouthOffset": 0.0031,
+     "noseOffset": 0.037,
+     "mouthOffset": 0.0047,
      "votes": 2,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.7,
-     "mouthOffset": 0.4939,
-     "votes": 5,
+     "noseOffset": 0.366,
+     "mouthOffset": 0.2027,
+     "votes": 7,
      "method": "vision-landmark-geometry"
     }
    },
@@ -500,8 +498,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.081,
-     "mouthOffset": 0.0552,
+     "noseOffset": 0.0736,
+     "mouthOffset": 0.0507,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -516,8 +514,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.1434,
-     "mouthOffset": 0.1521,
+     "noseOffset": 0.1436,
+     "mouthOffset": 0.1485,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -532,8 +530,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.3166,
-     "mouthOffset": 0.4536,
+     "noseOffset": 0.3028,
+     "mouthOffset": 0.4576,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -552,9 +550,9 @@
      "reason": "detector reads no face in any crop; painted head read by eye, it turns left"
     },
     "chibi": {
-     "noseOffset": 0.2754,
-     "mouthOffset": 0.0698,
-     "votes": 4,
+     "noseOffset": 0.2674,
+     "mouthOffset": 0.0787,
+     "votes": 6,
      "method": "vision-landmark-geometry"
     }
    },
@@ -572,15 +570,15 @@
    "portrait": "left",
    "evidence": {
     "portrait": {
-     "noseOffset": -0.0287,
-     "mouthOffset": -0.0227,
+     "noseOffset": -0.0369,
+     "mouthOffset": -0.0279,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.8991,
-     "mouthOffset": 0.7264,
-     "votes": 4,
+     "noseOffset": 0.3469,
+     "mouthOffset": 0.1408,
+     "votes": 5,
      "method": "vision-landmark-geometry"
     }
    },
@@ -590,8 +588,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.3934,
-     "mouthOffset": 0.6956,
+     "noseOffset": 0.3956,
+     "mouthOffset": 0.6936,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -610,9 +608,9 @@
      "reason": "detector reads no face in any crop; painted head read by eye, it turns right"
     },
     "chibi": {
-     "noseOffset": 0.3504,
-     "mouthOffset": 0.1835,
-     "votes": 4,
+     "noseOffset": 0.352,
+     "mouthOffset": 0.2987,
+     "votes": 6,
      "method": "vision-landmark-geometry"
     }
    },
@@ -622,15 +620,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.0997,
-     "mouthOffset": 0.0705,
+     "noseOffset": 0.0987,
+     "mouthOffset": 0.0685,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.8726,
-     "mouthOffset": 0.6324,
-     "votes": 3,
+     "noseOffset": 0.3582,
+     "mouthOffset": 0.1465,
+     "votes": 6,
      "method": "vision-landmark-geometry"
     }
    },
@@ -640,15 +638,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.3072,
-     "mouthOffset": 0.1718,
+     "noseOffset": 0.3018,
+     "mouthOffset": 0.1696,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 1.3459,
-     "mouthOffset": 1.4154,
-     "votes": 3,
+     "noseOffset": 0.6755,
+     "mouthOffset": 0.5252,
+     "votes": 6,
      "method": "vision-landmark-geometry"
     }
    },
@@ -658,8 +656,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.1065,
-     "mouthOffset": 0.1338,
+     "noseOffset": 0.1222,
+     "mouthOffset": 0.1528,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -674,8 +672,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.2267,
-     "mouthOffset": 0.1781,
+     "noseOffset": 0.2262,
+     "mouthOffset": 0.1744,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -703,9 +701,9 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.1942,
-     "mouthOffset": 0.0375,
-     "votes": 2,
+     "noseOffset": 0.2059,
+     "mouthOffset": 0.0384,
+     "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
@@ -719,8 +717,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.0679,
-     "mouthOffset": 0.012,
+     "noseOffset": 0.0772,
+     "mouthOffset": 0.0133,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -735,8 +733,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.1728,
-     "mouthOffset": 0.1759,
+     "noseOffset": 0.1666,
+     "mouthOffset": 0.1714,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -751,8 +749,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.0616,
-     "mouthOffset": 0.0352,
+     "noseOffset": 0.0807,
+     "mouthOffset": 0.0445,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -767,15 +765,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.2976,
-     "mouthOffset": 0.1769,
+     "noseOffset": 0.2967,
+     "mouthOffset": 0.1712,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.383,
-     "mouthOffset": 0.2801,
-     "votes": 2,
+     "noseOffset": 0.3921,
+     "mouthOffset": 0.1692,
+     "votes": 3,
      "method": "vision-landmark-geometry"
     }
    },
@@ -785,15 +783,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.3448,
-     "mouthOffset": 0.1005,
+     "noseOffset": 0.3501,
+     "mouthOffset": 0.1072,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.3323,
-     "mouthOffset": 0.0297,
-     "votes": 1,
+     "noseOffset": 0.3526,
+     "mouthOffset": 0.1886,
+     "votes": 6,
      "method": "vision-landmark-geometry"
     }
    },
@@ -803,16 +801,19 @@
    "portrait": "left",
    "evidence": {
     "portrait": {
-     "noseOffset": -0.0325,
-     "mouthOffset": -0.0946,
+     "noseOffset": -0.0429,
+     "mouthOffset": -0.1066,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "method": "default-unmeasured"
+     "noseOffset": 0.3176,
+     "mouthOffset": 0.1557,
+     "votes": 1,
+     "method": "vision-landmark-geometry"
     }
    },
-   "chibi": "left"
+   "chibi": "right"
   },
   "jin_rong": {
    "portrait": "left",
@@ -830,9 +831,9 @@
    "portrait": "left",
    "evidence": {
     "portrait": {
-     "noseOffset": -0.0201,
-     "mouthOffset": -0.0655,
-     "votes": 3,
+     "noseOffset": -0.0333,
+     "mouthOffset": -0.0817,
+     "votes": 2,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
@@ -857,14 +858,12 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.064,
-     "mouthOffset": 0.033,
-     "votes": 3,
-     "method": "vision-landmark-geometry"
+     "method": "visual-review",
+     "reason": "the detector fits the face but its nose and mouth disagree in every crop; painted head read by eye, it turns right"
     },
     "chibi": {
-     "noseOffset": 0.6705,
-     "mouthOffset": 0.5036,
+     "noseOffset": 0.3218,
+     "mouthOffset": 0.0821,
      "votes": 1,
      "method": "vision-landmark-geometry"
     }
@@ -875,15 +874,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.4208,
-     "mouthOffset": 0.1925,
+     "noseOffset": 0.4146,
+     "mouthOffset": 0.1999,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.3739,
-     "mouthOffset": 0.1509,
-     "votes": 1,
+     "noseOffset": 0.358,
+     "mouthOffset": 0.1042,
+     "votes": 2,
      "method": "vision-landmark-geometry"
     }
    },
@@ -893,15 +892,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.105,
-     "mouthOffset": 0.0798,
+     "noseOffset": 0.1,
+     "mouthOffset": 0.0788,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.421,
-     "mouthOffset": 0.2025,
-     "votes": 3,
+     "noseOffset": 0.4567,
+     "mouthOffset": 0.2252,
+     "votes": 6,
      "method": "vision-landmark-geometry"
     }
    },
@@ -911,29 +910,32 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.1289,
-     "mouthOffset": 0.0778,
+     "noseOffset": 0.1142,
+     "mouthOffset": 0.0697,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "method": "default-unmeasured"
+     "noseOffset": 0.4774,
+     "mouthOffset": 0.1238,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
     }
    },
-   "chibi": "left"
+   "chibi": "right"
   },
   "zhang_youshi": {
    "portrait": "left",
    "evidence": {
     "portrait": {
-     "noseOffset": -0.0291,
-     "mouthOffset": -0.0564,
+     "noseOffset": -0.041,
+     "mouthOffset": -0.0544,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.4247,
-     "mouthOffset": 0.27,
+     "noseOffset": 0.4017,
+     "mouthOffset": 0.1455,
      "votes": 2,
      "method": "vision-landmark-geometry"
     }
@@ -944,8 +946,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.3649,
-     "mouthOffset": 0.1436,
+     "noseOffset": 0.3705,
+     "mouthOffset": 0.1473,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -959,15 +961,15 @@
    "portrait": "left",
    "evidence": {
     "portrait": {
-     "noseOffset": -0.0015,
-     "mouthOffset": -0.0703,
-     "votes": 1,
+     "noseOffset": -0.012,
+     "mouthOffset": -0.0658,
+     "votes": 2,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.6736,
-     "mouthOffset": 0.5122,
-     "votes": 2,
+     "noseOffset": 0.2686,
+     "mouthOffset": 0.0417,
+     "votes": 3,
      "method": "vision-landmark-geometry"
     }
    },
@@ -977,8 +979,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.1442,
-     "mouthOffset": 0.1366,
+     "noseOffset": 0.1377,
+     "mouthOffset": 0.1363,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -1007,8 +1009,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.338,
-     "mouthOffset": 0.1751,
+     "noseOffset": 0.3416,
+     "mouthOffset": 0.1817,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -1023,16 +1025,14 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.288,
-     "mouthOffset": 0.0303,
+     "noseOffset": 0.2716,
+     "mouthOffset": 0.0348,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.3041,
-     "mouthOffset": 0.0839,
-     "votes": 1,
-     "method": "vision-landmark-geometry"
+     "method": "visual-review",
+     "reason": "the nose fit sits on the eye midpoint and carries no signal, so only the mouth decides the sign; painted head read by eye, nose and mouth sit right of the eye midpoint, it turns right"
     }
    },
    "chibi": "right"
@@ -1055,14 +1055,14 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.1069,
-     "mouthOffset": 0.0826,
+     "noseOffset": 0.1153,
+     "mouthOffset": 0.0836,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.3578,
-     "mouthOffset": 0.2093,
+     "noseOffset": 0.2516,
+     "mouthOffset": 0.0718,
      "votes": 5,
      "method": "vision-landmark-geometry"
     }
@@ -1073,8 +1073,8 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.2887,
-     "mouthOffset": 0.1559,
+     "noseOffset": 0.2833,
+     "mouthOffset": 0.1552,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
@@ -1093,9 +1093,9 @@
      "reason": "detector reads no face in any crop; painted head read by eye, it turns left"
     },
     "chibi": {
-     "noseOffset": 0.4726,
-     "mouthOffset": 0.3295,
-     "votes": 2,
+     "noseOffset": 0.5162,
+     "mouthOffset": 0.3642,
+     "votes": 4,
      "method": "vision-landmark-geometry"
     }
    },
@@ -1105,15 +1105,15 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.4856,
-     "mouthOffset": 0.2579,
+     "noseOffset": 0.4892,
+     "mouthOffset": 0.2671,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.6139,
-     "mouthOffset": 0.3631,
-     "votes": 1,
+     "noseOffset": 0.5449,
+     "mouthOffset": 0.4444,
+     "votes": 2,
      "method": "vision-landmark-geometry"
     }
    },
@@ -1123,15 +1123,114 @@
    "portrait": "left",
    "evidence": {
     "portrait": {
-     "noseOffset": -0.0039,
-     "mouthOffset": -0.0582,
+     "method": "default-unmeasured"
+    },
+    "chibi": {
+     "noseOffset": 0.3814,
+     "mouthOffset": 0.1869,
+     "votes": 4,
+     "method": "vision-landmark-geometry"
+    }
+   },
+   "chibi": "right"
+  },
+  "yuanchun": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.1041,
+     "mouthOffset": 0.0627,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "noseOffset": 0.3313,
+     "mouthOffset": 0.3467,
+     "votes": 2,
+     "method": "vision-landmark-geometry"
+    }
+   },
+   "chibi": "right"
+  },
+  "jia_huan": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.3357,
+     "mouthOffset": 0.3191,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "read by the wide multi-crop sweep; the nose and the mouth sit right of the eye midpoint in all 33 readings that fit, so the head turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "zhao_yiniang": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.4048,
+     "mouthOffset": 0.177,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "noseOffset": 0.1655,
+     "mouthOffset": 0.091,
+     "votes": 1,
+     "method": "vision-landmark-geometry"
+    }
+   },
+   "chibi": "right"
+  },
+  "shi_xiangyun": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.2565,
+     "mouthOffset": 0.2098,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "read by the wide multi-crop sweep; the readings that fit failed the region-name check, and both the nose and the mouth then sit left of the eye midpoint, so the head turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "she_yue": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.1608,
+     "mouthOffset": 0.2083,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "read by the wide multi-crop sweep; the only readings that fit failed the region-name check, and both the nose and the mouth then sit left of the eye midpoint, so the head turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "jia_lian": {
+   "portrait": "left",
+   "evidence": {
+    "portrait": {
+     "noseOffset": -0.0027,
+     "mouthOffset": -0.0571,
      "votes": 1,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.4044,
-     "mouthOffset": 0.2131,
-     "votes": 2,
+     "noseOffset": 0.2294,
+     "mouthOffset": 0.1002,
+     "votes": 3,
      "method": "vision-landmark-geometry"
     }
    },
@@ -1142,8 +1241,8 @@
   "baoyu-portrait-angry": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.2624,
-    "mouthOffset": 0.1278,
+    "noseOffset": 0.2598,
+    "mouthOffset": 0.1311,
     "votes": 3,
     "method": "vision-landmark-geometry"
    }
@@ -1151,8 +1250,8 @@
   "baoyu-portrait-joy": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.2414,
-    "mouthOffset": 0.1035,
+    "noseOffset": 0.2471,
+    "mouthOffset": 0.1076,
     "votes": 3,
     "method": "vision-landmark-geometry"
    }
@@ -1160,8 +1259,8 @@
   "baoyu-portrait-mourning": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.2416,
-    "mouthOffset": 0.1152,
+    "noseOffset": 0.2453,
+    "mouthOffset": 0.1154,
     "votes": 1,
     "method": "vision-landmark-geometry"
    }
@@ -1169,8 +1268,8 @@
   "baoyu-portrait-sad": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.2395,
-    "mouthOffset": 0.1035,
+    "noseOffset": 0.2517,
+    "mouthOffset": 0.1032,
     "votes": 3,
     "method": "vision-landmark-geometry"
    }
@@ -1178,8 +1277,8 @@
   "baoyu-portrait-surprise": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.2294,
-    "mouthOffset": 0.1215,
+    "noseOffset": 0.2295,
+    "mouthOffset": 0.12,
     "votes": 3,
     "method": "vision-landmark-geometry"
    }
@@ -1187,8 +1286,8 @@
   "baoyu-portrait-v2": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.244,
-    "mouthOffset": 0.1128,
+    "noseOffset": 0.2417,
+    "mouthOffset": 0.108,
     "votes": 1,
     "method": "vision-landmark-geometry"
    }
@@ -1196,8 +1295,8 @@
   "daiyu-portrait-angry": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.3304,
-    "mouthOffset": 0.1316,
+    "noseOffset": 0.331,
+    "mouthOffset": 0.1314,
     "votes": 3,
     "method": "vision-landmark-geometry"
    }
@@ -1205,8 +1304,8 @@
   "daiyu-portrait-joy": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.3184,
-    "mouthOffset": 0.119,
+    "noseOffset": 0.3178,
+    "mouthOffset": 0.1102,
     "votes": 3,
     "method": "vision-landmark-geometry"
    }
@@ -1214,8 +1313,8 @@
   "daiyu-portrait-sad": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.3352,
-    "mouthOffset": 0.1408,
+    "noseOffset": 0.3336,
+    "mouthOffset": 0.1429,
     "votes": 3,
     "method": "vision-landmark-geometry"
    }
@@ -1223,8 +1322,8 @@
   "daiyu-portrait-surprise": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.3178,
-    "mouthOffset": 0.1378,
+    "noseOffset": 0.3234,
+    "mouthOffset": 0.1339,
     "votes": 3,
     "method": "vision-landmark-geometry"
    }
@@ -1232,8 +1331,8 @@
   "feng-portrait-angry": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.1244,
-    "mouthOffset": 0.1607,
+    "noseOffset": 0.1324,
+    "mouthOffset": 0.1615,
     "votes": 3,
     "method": "vision-landmark-geometry"
    }
@@ -1241,8 +1340,8 @@
   "feng-portrait-joy": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.1763,
-    "mouthOffset": 0.1952,
+    "noseOffset": 0.158,
+    "mouthOffset": 0.1876,
     "votes": 3,
     "method": "vision-landmark-geometry"
    }
@@ -1250,17 +1349,15 @@
   "feng-portrait-mourning": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.1604,
-    "mouthOffset": 0.182,
-    "votes": 1,
-    "method": "vision-landmark-geometry"
+    "method": "visual-review",
+    "reason": "detector reads no face in any crop after the variant was re-cut; painted head read by eye, it turns right"
    }
   },
   "feng-portrait-sad": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.1307,
-    "mouthOffset": 0.1922,
+    "noseOffset": 0.1161,
+    "mouthOffset": 0.1863,
     "votes": 3,
     "method": "vision-landmark-geometry"
    }
@@ -1268,8 +1365,8 @@
   "feng-portrait-surprise": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.128,
-    "mouthOffset": 0.1543,
+    "noseOffset": 0.1342,
+    "mouthOffset": 0.1581,
     "votes": 3,
     "method": "vision-landmark-geometry"
    }
@@ -1312,8 +1409,8 @@
   "shui_rong-portrait-mourning": {
    "facing": "right",
    "evidence": {
-    "noseOffset": 0.2802,
-    "mouthOffset": 0.0313,
+    "noseOffset": 0.2831,
+    "mouthOffset": 0.0327,
     "votes": 1,
     "method": "vision-landmark-geometry"
    }

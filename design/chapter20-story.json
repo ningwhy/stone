@@ -1,0 +1,1060 @@
+[
+ {
+  "chapter": "c20-momo",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "daiyu_bed",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "忽听他房中嚷起来，大家侧耳听了一听，林黛玉先笑道：「这是你妈妈和袭人叫嚷呢。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-001",
+  "speaker": "narrator",
+  "text": "忽听他房中嚷起来，大家侧耳听了一听，林黛玉先笑道：「这是你妈妈和袭人叫嚷呢。那袭人也罢了，你妈妈再要认真排场他，可见老背晦了。」",
+  "title": "房中嚷起来，大家侧耳听了一听",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "daiyu_bed"
+   },
+   {
+    "type": "show",
+    "actor": "baochai",
+    "at": "yingge_place"
+   }
+  ]
+ },
+ {
+  "chapter": "c20-momo",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "outer_door",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "宝玉忙要赶过来，宝钗忙一把拉住道：「你别和你妈妈吵才是，他老糊涂了，倒要让他一步为是。」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-002",
+  "speaker": "narrator",
+  "text": "宝玉忙要赶过来，宝钗忙一把拉住道：「你别和你妈妈吵才是，他老糊涂了，倒要让他一步为是。」宝玉道：「我知道了。」",
+  "title": "宝玉忙要赶过来，宝钗忙一把拉住",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "outer_door"
+   },
+   {
+    "type": "effect",
+    "actor": "baochai",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-momo",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "xiren_place",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "说毕走来，只见李嬷嬷拄著拐棍，在当地骂袭人：「忘了本的小娼妇！",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-003",
+  "speaker": "narrator",
+  "text": "说毕走来，只见李嬷嬷拄著拐棍，在当地骂袭人：「忘了本的小娼妇！",
+  "title": "李嬷嬷拄著拐棍，在当地骂袭人",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "nurse_li",
+    "at": "xiren_place"
+   },
+   {
+    "type": "show",
+    "actor": "xiren",
+    "at": "baoyu_bed"
+   }
+  ]
+ },
+ {
+  "chapter": "c20-momo",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "xiren_place",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "我抬举起你来，这会子我来了，你大模大样的躺在炕上，见我来也不理一理。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-004",
+  "speaker": "nurse_li",
+  "text": "我抬举起你来，这会子我来了，你大模大样的躺在炕上，见我来也不理一理。一心只想妆狐媚子哄宝玉，哄的宝玉不理我，听你们的话。你不过是几两臭银子买来的毛丫头，这屋里你就作耗，如何使得！好不好拉出去配一个小子，看你还妖精似的哄宝玉不哄！」",
+  "title": "忘了本的小娼妇",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "nurse_li",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c20-momo",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "xiren_place",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "袭人先只道李嬷嬷不过为他躺著生气，少不得分辨说「病了，才出汗，蒙著头，原没看见你老人家」等语。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-005",
+  "speaker": "narrator",
+  "text": "袭人先只道李嬷嬷不过为他躺著生气，少不得分辨说「病了，才出汗，蒙著头，原没看见你老人家」等语。后来只管听他说「哄宝玉」，「妆狐媚」，又说「配小子」等，由不得又愧又委屈，禁不住哭起来。",
+  "title": "由不得又愧又委屈，禁不住哭起来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiren",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c20-fengjie",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "outer_door",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "宝玉虽听了这些话，也不好怎样，少不得替袭人分辨病了吃药等话，又说：「你不信，只问别的丫头们。」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-006",
+  "speaker": "baoyu",
+  "text": "宝玉虽听了这些话，也不好怎样，少不得替袭人分辨病了吃药等话，又说：「你不信，只问别的丫头们。」",
+  "title": "你不信，只问别的丫头们",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "outer_door"
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-fengjie",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "outer_door",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "李嬷嬷听了这话，益发气起来了，说道：「你只护著那起狐狸，那里认得我了，叫我问谁去？",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-007",
+  "speaker": "nurse_li",
+  "text": "李嬷嬷听了这话，益发气起来了，说道：「你只护著那起狐狸，那里认得我了，叫我问谁去？谁不帮著你呢，谁不是袭人拿下马来的！我都知道那些事。我只和你在老太太，太太跟前去讲了。把你奶了这么大，到如今吃不著奶了，把我丢在一旁，逞著丫头们要我的强。」一面说，一面也哭起来。",
+  "title": "你只护著那起狐狸",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "nurse_li",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c20-fengjie",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "daiyu_bed",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "彼时黛玉宝钗等也走过来劝说：「妈妈你老人家担待他们一点子就完了。」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-008",
+  "speaker": "narrator",
+  "text": "彼时黛玉宝钗等也走过来劝说：「妈妈你老人家担待他们一点子就完了。」李嬷嬷见他二人来了，便拉住诉委屈，将当日吃茶，茜雪出去，与昨日酥酪等事，唠唠叨叨说个不清。",
+  "title": "彼时黛玉宝钗等也走过来劝说",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "daiyu_bed"
+   },
+   {
+    "type": "show",
+    "actor": "baochai",
+    "at": "yingge_place"
+   }
+  ]
+ },
+ {
+  "chapter": "c20-fengjie",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "outer_door",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "可巧凤姐正在上房算完输赢帐，听得后面声嚷，便知是李嬷嬷老病发了，排揎宝玉的人。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-009",
+  "speaker": "narrator",
+  "text": "可巧凤姐正在上房算完输赢帐，听得后面声嚷，便知是李嬷嬷老病发了，排揎宝玉的人。——正值他今儿输了钱，迁怒于人。",
+  "title": "便知是李嬷嬷老病发了",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "outer_door"
+   }
+  ]
+ },
+ {
+  "chapter": "c20-fengjie",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "xiren_place",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "便连忙赶过来，拉了李嬷嬷，笑道：「好妈妈，别生气。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-010",
+  "speaker": "feng",
+  "text": "便连忙赶过来，拉了李嬷嬷，笑道：「好妈妈，别生气。大节下老太太才喜欢了一日，你是个老人家，别人高声，你还要管他们呢，难道你反不知道规矩，在这里嚷起来，叫老太太生气不成？你只说谁不好，我替你打他。我家里烧的滚热的野鸡，快来跟我吃酒去。」",
+  "title": "好妈妈，别生气",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "feng",
+    "via": [
+     "outer_door",
+     "xiren_place"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c20-fengjie",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "xiren_place",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "一时杂使的老婆子煎了二和药来。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-011",
+  "speaker": "narrator",
+  "text": "一时杂使的老婆子煎了二和药来。宝玉见他才有汗意，不肯叫他起来，自己便端著就枕与他吃了，即命小丫头子们铺炕。袭人道：「你吃饭不吃饭，到底老太太，太太跟前坐一会子，和姑娘们顽一会子再回来。我就静静的躺一躺也好。」",
+  "title": "宝玉替他吃了药，命小丫头子们铺炕",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-shuyao",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "yingge_place",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "同贾母吃毕饭，贾母犹欲同那几个老管家嬷嬷斗牌解闷，宝玉记著袭人，便回至房中，见袭人朦朦睡去。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-012",
+  "speaker": "narrator",
+  "text": "同贾母吃毕饭，贾母犹欲同那几个老管家嬷嬷斗牌解闷，宝玉记著袭人，便回至房中，见袭人朦朦睡去。自己要睡，天气尚早。彼时晴雯，绮霰，秋纹，碧痕都寻热闹，找鸳鸯琥珀等耍戏去了，独见麝月一个人在外间房里灯下抹骨牌。",
+  "title": "独见麝月一个人在外间房里灯下抹骨牌",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "she_yue",
+    "at": "yingge_place"
+   }
+  ]
+ },
+ {
+  "chapter": "c20-shuyao",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "bedside",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "宝玉笑问道：「你怎不同他们顽去？」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-013",
+  "speaker": "she_yue",
+  "text": "宝玉笑问道：「你怎不同他们顽去？」麝月道：「没有钱。」",
+  "title": "没有钱",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "bedside"
+   },
+   {
+    "type": "effect",
+    "actor": "she_yue",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-shuyao",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "bedside",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "宝玉道：「床底下堆著那么些，还不够你输的？」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-014",
+  "speaker": "narrator",
+  "text": "宝玉道：「床底下堆著那么些，还不够你输的？」麝月道：「都顽去了，这屋里交给谁呢？那一个又病了。满屋里上头是灯，地下是火。那些老妈妈子们，老天拔地，伏侍一天，也该叫他们歇歇，小丫头子们也是伏侍了一天，这会子还不叫他们顽顽去。所以让他们都去罢，我在这里看著。」",
+  "title": "那一个又病了，满屋里上头是灯",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "she_yue",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-shuyao",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "bedside",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "宝玉听了这话，公然又是一个袭人。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-015",
+  "speaker": "narrator",
+  "text": "宝玉听了这话，公然又是一个袭人。因笑道：「我在这里坐著，你放心去罢。」",
+  "title": "公然又是一个袭人",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-shuyao",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "yingge_place",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "麝月道：「你既在这里，越发不用去了，咱们两个说话顽笑岂不好？」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-016",
+  "speaker": "baoyu",
+  "text": "麝月道：「你既在这里，越发不用去了，咱们两个说话顽笑岂不好？」宝玉笑道：「咱两个作什么呢？怪没意思的，也罢了，早上你说头痒，这会子没什么事，我替你篦头罢。」麝月听了便道：「就是这样。」说著，将文具镜匣搬来，卸去钗钏，打开头发，宝玉拿了篦子替他一一的梳篦。",
+  "title": "我替你篦头罢",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "bedside",
+     "yingge_place"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-shuyao",
+  "scene": "night",
+  "place": "怡红院 · 外间",
+  "focus": "outer_door",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "只篦了三五下，只见晴雯忙忙走进来取钱。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-017",
+  "speaker": "narrator",
+  "text": "只篦了三五下，只见晴雯忙忙走进来取钱。一见了他两个，便冷笑道：「哦，交杯盏还没吃，倒上头了！」宝玉笑道：「你来，我也替你篦一篦。」晴雯道：「我没那么大福。」说著，拿了钱，便摔帘子出去了。",
+  "title": "晴雯冷笑：交杯盏还没吃，倒上头了",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "messenger",
+    "at": "outer_door"
+   },
+   {
+    "type": "effect",
+    "actor": "messenger",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-jinghuan",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 廊下",
+  "focus": "yard",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "宝玉放了心，因饭后走到薛姨妈这边来闲逛。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-018",
+  "speaker": "narrator",
+  "text": "宝玉放了心，因饭后走到薛姨妈这边来闲逛。彼时正月内，学房中放年学，闺阁中忌针，却都是闲时。贾环也过来顽，正遇见宝钗，香菱，莺儿三个赶围棋作耍，贾环见了也要顽。宝钗素习看他亦如宝玉，并没他意。今儿听他要顽，让他上来坐了一处。一磊十个钱，头一回自己赢了，心中十分欢喜。",
+  "title": "宝钗香菱莺儿三个赶围棋作耍",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_huan",
+    "at": "yard"
+   },
+   {
+    "type": "show",
+    "actor": "baochai",
+    "at": "room"
+   },
+   {
+    "type": "show",
+    "actor": "ying_er",
+    "at": "room"
+   }
+  ]
+ },
+ {
+  "chapter": "c20-jinghuan",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 廊下",
+  "focus": "yard",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "后来接连输了几盘，便有些著急。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-019",
+  "speaker": "narrator",
+  "text": "后来接连输了几盘，便有些著急。赶著这盘正该自己掷骰子，若掷个七点便赢，若掷个六点，下该莺儿掷三点就赢了。因拿起骰子来，狠命一掷，一个作定了五，那一个乱转。",
+  "title": "若掷个七点便赢，若掷个六点",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_huan",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-jinghuan",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 廊下",
+  "focus": "yard",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "莺儿拍著手只叫「幺」，贾环便瞪著眼，「六——七——八」混叫。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-020",
+  "speaker": "narrator",
+  "text": "莺儿拍著手只叫「幺」，贾环便瞪著眼，「六——七——八」混叫。那骰子偏生转出幺来。贾环急了，伸手便抓起骰子来，然后就拿钱，说是个六点。",
+  "title": "贾环急了，伸手便抓起骰子来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_huan",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-jinghuan",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 廊下",
+  "focus": "yard",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "莺儿满心委屈，见宝钗说，不敢则声，只得放下钱来，口内嘟囔说：「一个作爷的，还赖我们这几个钱，连我也不放在眼里。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-021",
+  "speaker": "ying_er",
+  "text": "莺儿满心委屈，见宝钗说，不敢则声，只得放下钱来，口内嘟囔说：「一个作爷的，还赖我们这几个钱，连我也不放在眼里。前儿我和宝二爷顽，他输了那些，也没著急。下剩的钱，还是几个小丫头子们一抢，他一笑就罢了。」",
+  "title": "一个作爷的，还赖我们这几个钱",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ying_er",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-jinghuan",
+  "scene": "c7_lixiang",
+  "place": "梨香院 · 廊下",
+  "focus": "yard",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "宝钗不等说完，连忙断喝。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-022",
+  "speaker": "jia_huan",
+  "text": "宝钗不等说完，连忙断喝。贾环道：「我拿什么比宝玉呢。你们怕他，都和他好，都欺负我不是太太养的。」说著，便哭了。",
+  "title": "你们怕他，都和他好",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_huan",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c20-tanyi",
+  "scene": "wang",
+  "place": "王夫人院 · 东廊",
+  "focus": "east_corridor",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "赵姨娘啐道：「谁叫你上高台盘去了？",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-023",
+  "speaker": "narrator",
+  "text": "赵姨娘啐道：「谁叫你上高台盘去了？下流没脸的东西！那里顽不得？谁叫你跑了去讨没意思！」",
+  "title": "赵姨娘啐骂下流没脸的东西",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhao_yiniang",
+    "at": "east_corridor"
+   },
+   {
+    "type": "show",
+    "actor": "jia_huan",
+    "at": "east_corridor"
+   },
+   {
+    "type": "effect",
+    "actor": "zhao_yiniang",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c20-tanyi",
+  "scene": "wang",
+  "place": "王夫人院 · 东廊",
+  "focus": "south_passage",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "便隔窗说道：「大正月又怎么了？",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-024",
+  "speaker": "feng",
+  "text": "便隔窗说道：「大正月又怎么了？环兄弟小孩子家，一半点儿错了，你只教导他，说这些淡话作什么！凭他怎么去，还有太太老爷管他呢，就大口啐他！他现是主子，不好了，横竖有教导他的人，与你什么相干！环兄弟，出来，跟我顽去。」",
+  "title": "大正月又怎么了",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "south_passage"
+   },
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c20-tanyi",
+  "scene": "wang",
+  "place": "王夫人院 · 东廊",
+  "focus": "south_passage",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "贾环素日怕凤姐比怕王夫人更甚，听见叫他，忙唯唯的出来。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-025",
+  "speaker": "narrator",
+  "text": "贾环素日怕凤姐比怕王夫人更甚，听见叫他，忙唯唯的出来。赵姨娘也不敢则声。",
+  "title": "他现是主子，与你什么相干",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zhao_yiniang",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-tanyi",
+  "scene": "wang",
+  "place": "王夫人院 · 东廊",
+  "focus": "south_passage",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "凤姐向贾环道：「你也是个没气性的！",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-026",
+  "speaker": "feng",
+  "text": "凤姐向贾环道：「你也是个没气性的！时常说给你：要吃，要喝，要顽，要笑，只爱同那一个姐姐妹妹哥哥嫂子顽，就同那个顽。你不听我的话，反叫这些人教的歪心邪意，狐媚子霸道的。自己不尊重，要往下流走，安著坏心，还只管怨人家偏心。输了几个钱？就这么个样儿！」",
+  "title": "输了几个钱，就这么个样儿",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_huan",
+    "via": [
+     "east_corridor",
+     "south_passage"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c20-tanyi",
+  "scene": "wang",
+  "place": "王夫人院 · 东廊",
+  "focus": "south_passage",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "喝命：「去罢！」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-027",
+  "speaker": "narrator",
+  "text": "喝命：「去罢！」贾环诺诺的跟了丰儿，得了钱，自己和迎春等顽去。不在话下。",
+  "title": "贾环诺诺的跟了丰儿，得了钱",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "zhao_yiniang"
+   },
+   {
+    "type": "effect",
+    "actor": "jia_huan",
+    "kind": "rest",
+    "duration": 1.0
+   }
+  ]
+ },
+ {
+  "chapter": "c20-xiangyun",
+  "scene": "dinner",
+  "place": "贾母院 · 堂前",
+  "focus": "grandmother_greet",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "且说宝玉正和宝钗顽笑，忽见人说：「史大姑娘来了。」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-028",
+  "speaker": "narrator",
+  "text": "且说宝玉正和宝钗顽笑，忽见人说：「史大姑娘来了。」宝玉听了，抬身就走。宝钗笑道：「等著，咱们两个一齐走，瞧瞧他去。」说著，下了炕，同宝玉一齐来至贾母这边。",
+  "title": "忽见人说：史大姑娘来了",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "grandmother_greet"
+   },
+   {
+    "type": "show",
+    "actor": "baochai",
+    "at": "wang_place"
+   },
+   {
+    "type": "show",
+    "actor": "shi_xiangyun",
+    "at": "grandmother_greet"
+   },
+   {
+    "type": "effect",
+    "actor": "shi_xiangyun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c20-xiangyun",
+  "scene": "dinner",
+  "place": "贾母院 · 堂前",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "正值林黛玉在旁，因问宝玉：「在那里的？」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-029",
+  "speaker": "daiyu",
+  "text": "正值林黛玉在旁，因问宝玉：「在那里的？」宝玉便说：「在宝姐姐家的。」",
+  "title": "在那里的",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "daiyu_place"
+   },
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-xiangyun",
+  "scene": "dinner",
+  "place": "贾母院 · 堂前",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "黛玉冷笑道：「我说呢，亏在那里绊住，不然早就飞了来了。」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-030",
+  "speaker": "daiyu",
+  "text": "黛玉冷笑道：「我说呢，亏在那里绊住，不然早就飞了来了。」宝玉笑道：「只许同你顽，替你解闷儿。不过偶然去他那里一趟，就说这话。」",
+  "title": "亏在那里绊住，不然早就飞了来了",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c20-xiangyun",
+  "scene": "dinner",
+  "place": "贾母院 · 堂前",
+  "focus": "back_door",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "林黛玉道：「好没意思的话！",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-031",
+  "speaker": "narrator",
+  "text": "林黛玉道：「好没意思的话！去不去管我什么事，我又没叫你替我解闷儿。可许你从此不理我呢！」说著，便赌气回房去了。",
+  "title": "便赌气回房去了",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "daiyu",
+    "via": [
+     "daiyu_place",
+     "back_door"
+    ]
+   }
+  ]
+ },
+ {
+  "chapter": "c20-qiaoyu",
+  "scene": "dinner",
+  "place": "贾母院 · 堂前",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "宝玉忙跟了来，问道：「好好的又生气了？",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-032",
+  "speaker": "narrator",
+  "text": "宝玉忙跟了来，问道：「好好的又生气了？就是我说错了，你到底也还坐在那里，和别人说笑一会子。又来自己纳闷。」",
+  "title": "宝玉忙跟了来",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "grandmother_greet",
+     "daiyu_place"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-qiaoyu",
+  "scene": "dinner",
+  "place": "贾母院 · 堂前",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "林黛玉道：「我作践坏了身子，我死，与你何干！」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-033",
+  "speaker": "daiyu",
+  "text": "林黛玉道：「我作践坏了身子，我死，与你何干！」",
+  "title": "我作践坏了身子，我死，与你何干",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c20-qiaoyu",
+  "scene": "dinner",
+  "place": "贾母院 · 堂前",
+  "focus": "wang_place",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "正说著，宝钗走来道：「史大妹妹等你呢。」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-034",
+  "speaker": "narrator",
+  "text": "正说著，宝钗走来道：「史大妹妹等你呢。」说著，便推宝玉走了。",
+  "title": "宝钗走来推宝玉走了",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baochai",
+    "at": "wang_place"
+   },
+   {
+    "type": "effect",
+    "actor": "baochai",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-qiaoyu",
+  "scene": "dinner",
+  "place": "贾母院 · 堂前",
+  "focus": "wang_place",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "这里黛玉越发气闷，只向窗前流泪。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-035",
+  "speaker": "narrator",
+  "text": "这里黛玉越发气闷，只向窗前流泪。",
+  "title": "黛玉越发气闷，只向窗前流泪",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c20-qiaoyu",
+  "scene": "dinner",
+  "place": "贾母院 · 堂前",
+  "focus": "wang_place",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "宝玉听了忙上来悄悄的说道：「你这么个明白人，难道连『亲不间疏，先不僭后』也不知道？",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-036",
+  "speaker": "narrator",
+  "text": "宝玉听了忙上来悄悄的说道：「你这么个明白人，难道连『亲不间疏，先不僭后』也不知道？我虽糊涂，却明白这两句话。头一件，咱们是姑舅姊妹，宝姐姐是两姨姊妹，论亲戚，他比你疏。第二件，你先来，咱们两个一桌吃，一床睡，长的这么大了，他是才来的，岂有个为他疏你的？」",
+  "title": "亲不间疏，先不僭后",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-qiaoyu",
+  "scene": "dinner",
+  "place": "贾母院 · 堂前",
+  "focus": "grandmother_greet",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "二人正说著，只见湘云走来，笑道：「二哥哥，林姐姐，你们天天一处顽，我好容易来了，也不理我一理儿。」",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-037",
+  "speaker": "narrator",
+  "text": "二人正说著，只见湘云走来，笑道：「二哥哥，林姐姐，你们天天一处顽，我好容易来了，也不理我一理儿。」",
+  "title": "湘云走来笑说：也不理我一理儿",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "shi_xiangyun",
+    "at": "grandmother_greet"
+   },
+   {
+    "type": "effect",
+    "actor": "shi_xiangyun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c20-qiaoyu",
+  "scene": "dinner",
+  "place": "贾母院 · 堂前",
+  "focus": "grandmother_greet",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "黛玉笑道：「偏是咬舌子爱说话，连个『二』哥哥也叫不出来，只是『爱』哥哥『爱』哥哥的。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-038",
+  "speaker": "daiyu",
+  "text": "黛玉笑道：「偏是咬舌子爱说话，连个『二』哥哥也叫不出来，只是『爱』哥哥『爱』哥哥的。回来赶围棋儿，又该你闹『幺爱三四五』了。」",
+  "title": "偏是咬舌子爱说话",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c20-qiaoyu",
+  "scene": "dinner",
+  "place": "贾母院 · 堂前",
+  "focus": "grandmother_greet",
+  "source": {
+   "chapter": 20,
+   "paragraphLead": "湘云笑道：「这一辈子我自然比不上你。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C20-039",
+  "speaker": "narrator",
+  "text": "湘云笑道：「这一辈子我自然比不上你。我只保佑著明儿得一个咬舌的林姐夫，时时刻刻你可听『爱』『厄』去。阿弥陀佛，那才现在我眼里！」说的众人一笑，湘云忙回身跑了。",
+  "title": "我只保佑著明儿得一个咬舌的林姐夫",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "shi_xiangyun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ }
+]

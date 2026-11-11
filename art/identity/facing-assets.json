@@ -1,1662 +1,1983 @@
 [
- {
-  "asset": "ban_er-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 2,
-  "voteDetail": [
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.1942,
-  "mouthOffset": 0.0375,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "bao_zhu-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.1442,
-  "mouthOffset": 0.1366,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "baochai-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "tight:right",
-   "wide:right",
-   "head:right"
-  ],
-  "noseOffset": 1.3459,
-  "mouthOffset": 1.4154,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "baochai-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.3072,
-  "mouthOffset": 0.1718,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "baoyu-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 2,
-  "voteDetail": [
-   "tight:right",
-   "head:right"
-  ],
-  "noseOffset": 0.7243,
-  "mouthOffset": 0.7131,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "baoyu-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.2467,
-  "mouthOffset": 0.1035,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "baoyu-portrait-angry",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.2624,
-  "mouthOffset": 0.1278,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "baoyu-portrait-joy",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.2414,
-  "mouthOffset": 0.1035,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "baoyu-portrait-mourning",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "whole:right"
-  ],
-  "noseOffset": 0.2416,
-  "mouthOffset": 0.1152,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "baoyu-portrait-sad",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.2395,
-  "mouthOffset": 0.1035,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "baoyu-portrait-surprise",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.2294,
-  "mouthOffset": 0.1215,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "baoyu-portrait-v2",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "whole:right"
-  ],
-  "noseOffset": 0.244,
-  "mouthOffset": 0.1128,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "dai_quan-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 2,
-  "voteDetail": [
-   "wide:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.6736,
-  "mouthOffset": 0.5122,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "dai_quan-portrait",
-  "kind": "portrait",
-  "facing": "left",
-  "votes": 1,
-  "voteDetail": [
-   "whole:left",
-   "tight:conflict",
-   "wide:conflict"
-  ],
-  "noseOffset": -0.0015,
-  "mouthOffset": -0.0703,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "daiyu-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "tight:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.6548,
-  "mouthOffset": 0.3572,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "daiyu-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.3223,
-  "mouthOffset": 0.1277,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "daiyu-portrait-angry",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.3304,
-  "mouthOffset": 0.1316,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "daiyu-portrait-joy",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.3184,
-  "mouthOffset": 0.119,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "daiyu-portrait-sad",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.3352,
-  "mouthOffset": 0.1408,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "daiyu-portrait-surprise",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.3178,
-  "mouthOffset": 0.1378,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "er_ya_tou-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.2887,
-  "mouthOffset": 0.1559,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "feng-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "wider:conflict",
-   "whole:right"
-  ],
-  "noseOffset": 0.5759,
-  "mouthOffset": 0.1179,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "feng-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.099,
-  "mouthOffset": 0.165,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "feng-portrait-angry",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.1244,
-  "mouthOffset": 0.1607,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "feng-portrait-joy",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.1763,
-  "mouthOffset": 0.1952,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "feng-portrait-mourning",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "whole:right"
-  ],
-  "noseOffset": 0.1604,
-  "mouthOffset": 0.182,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "feng-portrait-sad",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.1307,
-  "mouthOffset": 0.1922,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "feng-portrait-surprise",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.128,
-  "mouthOffset": 0.1543,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "fengshi-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "tight:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.8147,
-  "mouthOffset": 0.4099,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "fengshi-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.3508,
-  "mouthOffset": 0.1407,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "fengsu-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 5,
-  "voteDetail": [
-   "tight:right",
-   "wide:right",
-   "wider:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.3955,
-  "mouthOffset": 0.1717,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "fengsu-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.5066,
-  "mouthOffset": 0.2344,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "grandmother-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 5,
-  "voteDetail": [
-   "tight:right",
-   "wide:right",
-   "wider:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.362,
-  "mouthOffset": 0.1614,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "grandmother-portrait-joy",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "whole:conflict",
-   "tight:conflict",
-   "wide:right"
-  ],
-  "noseOffset": 0.0639,
-  "mouthOffset": 0.003,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "guide-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 5,
-  "voteDetail": [
-   "tight:right",
-   "wide:right",
-   "wider:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.7,
-  "mouthOffset": 0.4939,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "guide-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 2,
-  "voteDetail": [
-   "whole:right",
-   "tight:conflict",
-   "wide:right"
-  ],
-  "noseOffset": 0.0489,
-  "mouthOffset": 0.0031,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "hu_shi-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.1289,
-  "mouthOffset": 0.0778,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "huoqi-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 5,
-  "voteDetail": [
-   "tight:right",
-   "wide:right",
-   "wider:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.3158,
-  "mouthOffset": 0.139,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "huoqi-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.4026,
-  "mouthOffset": 0.1744,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "jia_dairu-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 2,
-  "voteDetail": [
-   "tight:right",
-   "head:right"
-  ],
-  "noseOffset": 0.4044,
-  "mouthOffset": 0.2131,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "jia_dairu-portrait",
-  "kind": "portrait",
-  "facing": "left",
-  "votes": 1,
-  "voteDetail": [
-   "whole:conflict",
-   "tight:conflict",
-   "wide:left"
-  ],
-  "noseOffset": -0.0039,
-  "mouthOffset": -0.0582,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "jia_qiang-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.3649,
-  "mouthOffset": 0.1436,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "jia_rong-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.0616,
-  "mouthOffset": 0.0352,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "jia_rui-portrait",
-  "kind": "portrait",
-  "facing": "left",
-  "votes": 3,
-  "voteDetail": [
-   "whole:left",
-   "tight:left",
-   "wide:left"
-  ],
-  "noseOffset": -0.0325,
-  "mouthOffset": -0.0946,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "jia_zhen-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "whole:right"
-  ],
-  "noseOffset": 0.3739,
-  "mouthOffset": 0.1509,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "jia_zhen-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.4208,
-  "mouthOffset": 0.1925,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "jiaoxing-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "tight:right",
-   "wide:right",
-   "head:right"
-  ],
-  "noseOffset": 0.3878,
-  "mouthOffset": 0.2154,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "jiaoxing-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.2843,
-  "mouthOffset": 0.0859,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "jin_shi-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "wide:right",
-   "wider:right",
-   "head:right"
-  ],
-  "noseOffset": 0.421,
-  "mouthOffset": 0.2025,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "jin_shi-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.105,
-  "mouthOffset": 0.0798,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "jinghuan-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.1065,
-  "mouthOffset": 0.1338,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "kongkong-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "tight:right"
-  ],
-  "noseOffset": 0.4461,
-  "mouthOffset": 0.1619,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "kongkong-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.315,
-  "mouthOffset": 0.0147,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "leng-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 5,
-  "voteDetail": [
-   "tight:right",
-   "wide:right",
-   "wider:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.3255,
-  "mouthOffset": 0.1112,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "liwan-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.3059,
-  "mouthOffset": 0.1729,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "maid-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 2,
-  "voteDetail": [
-   "tight:right",
-   "head:right"
-  ],
-  "noseOffset": 0.5993,
-  "mouthOffset": 0.4904,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "maid-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.081,
-  "mouthOffset": 0.0552,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "menzi-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 4,
-  "voteDetail": [
-   "wide:right",
-   "wider:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.8991,
-  "mouthOffset": 0.7264,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "menzi-portrait",
-  "kind": "portrait",
-  "facing": "left",
-  "votes": 3,
-  "voteDetail": [
-   "whole:left",
-   "tight:left",
-   "wide:left"
-  ],
-  "noseOffset": -0.0287,
-  "mouthOffset": -0.0227,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "messenger-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "tight:right"
-  ],
-  "noseOffset": 0.6112,
-  "mouthOffset": 0.4978,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "messenger-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.1434,
-  "mouthOffset": 0.1521,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "ming_yan-portrait",
-  "kind": "portrait",
-  "facing": "left",
-  "votes": 3,
-  "voteDetail": [
-   "whole:left",
-   "tight:left",
-   "wide:left"
-  ],
-  "noseOffset": -0.0201,
-  "mouthOffset": -0.0655,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "monk-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 5,
-  "voteDetail": [
-   "tight:right",
-   "wide:right",
-   "wider:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.5343,
-  "mouthOffset": 0.3526,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "monk-portrait",
-  "kind": "portrait",
-  "facing": "left",
-  "votes": 3,
-  "voteDetail": [
-   "whole:left",
-   "tight:left",
-   "wide:left"
-  ],
-  "noseOffset": -0.0562,
-  "mouthOffset": -0.1119,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "nurse_li-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 4,
-  "voteDetail": [
-   "tight:right",
-   "wider:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.2754,
-  "mouthOffset": 0.0698,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "nurse_wang-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.3166,
-  "mouthOffset": 0.4536,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "oldmonk-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 5,
-  "voteDetail": [
-   "tight:right",
-   "wide:right",
-   "wider:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.7109,
-  "mouthOffset": 0.3233,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "oldmonk-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.4041,
-  "mouthOffset": 0.0487,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "ping_er-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.1728,
-  "mouthOffset": 0.1759,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "plaintiff-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.3934,
-  "mouthOffset": 0.6956,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "qin_ke-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.2267,
-  "mouthOffset": 0.1781,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "qin_ye-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "head:right"
-  ],
-  "noseOffset": 0.6139,
-  "mouthOffset": 0.3631,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "qin_ye-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.4856,
-  "mouthOffset": 0.2579,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "qin_zhong-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "head:right"
-  ],
-  "noseOffset": 0.3323,
-  "mouthOffset": 0.0297,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "qin_zhong-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.3448,
-  "mouthOffset": 0.1005,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "ruhai-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 2,
-  "voteDetail": [
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.68,
-  "mouthOffset": 0.5364,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "ruhai-portrait",
-  "kind": "portrait",
-  "facing": "left",
-  "votes": 3,
-  "voteDetail": [
-   "whole:left",
-   "tight:left",
-   "wide:left"
-  ],
-  "noseOffset": -0.0933,
-  "mouthOffset": -0.1954,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "shiyin-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "wide:right",
-   "wider:right",
-   "head:right"
-  ],
-  "noseOffset": 0.6421,
-  "mouthOffset": 0.4925,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "shiyin-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.4188,
-  "mouthOffset": 0.1721,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "shui_rong-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "head:right"
-  ],
-  "noseOffset": 0.3041,
-  "mouthOffset": 0.0839,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "shui_rong-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.288,
-  "mouthOffset": 0.0303,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "shui_rong-portrait-mourning",
-  "kind": "emotion",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "whole:right"
-  ],
-  "noseOffset": 0.2802,
-  "mouthOffset": 0.0313,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "tanchun-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "tight:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.6231,
-  "mouthOffset": 0.2401,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "tanchun-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.1261,
-  "mouthOffset": 0.144,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "taoist-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 2,
-  "voteDetail": [
-   "wider:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.6314,
-  "mouthOffset": 0.3892,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "taoist-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.5916,
-  "mouthOffset": 0.3866,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "wang-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 5,
-  "voteDetail": [
-   "tight:right",
-   "wide:right",
-   "wider:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.4297,
-  "mouthOffset": 0.1511,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "wang-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.0546,
-  "mouthOffset": 0.0514,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "wang_er-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 2,
-  "voteDetail": [
-   "tight:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.4726,
-  "mouthOffset": 0.3295,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "xichun-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "tight:right"
-  ],
-  "noseOffset": 0.5526,
-  "mouthOffset": 0.2706,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "xichun-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.1593,
-  "mouthOffset": 0.1475,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "xing-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "wide:right",
-   "wider:right",
-   "head:right"
-  ],
-  "noseOffset": 0.9077,
-  "mouthOffset": 0.6284,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "xing-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.0908,
-  "mouthOffset": 0.0587,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "xiren-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "wider:misidentified",
-   "head:right"
-  ],
-  "noseOffset": 0.6405,
-  "mouthOffset": 0.2747,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "xiren-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.1933,
-  "mouthOffset": 0.2026,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "xuepan-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 4,
-  "voteDetail": [
-   "wide:right",
-   "wider:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.3504,
-  "mouthOffset": 0.1835,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "xueyan-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 4,
-  "voteDetail": [
-   "tight:right",
-   "wide:right",
-   "wider:right",
-   "head:right"
-  ],
-  "noseOffset": 0.5351,
-  "mouthOffset": 0.2531,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "xueyan-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.2826,
-  "mouthOffset": 0.1415,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "xueyima-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "wider:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.8726,
-  "mouthOffset": 0.6324,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "xueyima-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.0997,
-  "mouthOffset": 0.0705,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "ying_er-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 2,
-  "voteDetail": [
-   "tight:right",
-   "head:right"
-  ],
-  "noseOffset": 0.383,
-  "mouthOffset": 0.2801,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "ying_er-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.2976,
-  "mouthOffset": 0.1769,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "yingchun-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "wide:right",
-   "wider:right",
-   "head:right"
-  ],
-  "noseOffset": 0.626,
-  "mouthOffset": 0.5953,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "yingchun-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.1454,
-  "mouthOffset": 0.0847,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "yingge-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "tight:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.9847,
-  "mouthOffset": 0.7683,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "yingge-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.2994,
-  "mouthOffset": 0.2365,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "yinglian-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 2,
-  "voteDetail": [
-   "whole:right",
-   "tight:right"
-  ],
-  "noseOffset": 0.2774,
-  "mouthOffset": 0.1444,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "you_shi-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "tight:right"
-  ],
-  "noseOffset": 0.6705,
-  "mouthOffset": 0.5036,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "you_shi-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.064,
-  "mouthOffset": 0.033,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "yucun-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "whole:right"
-  ],
-  "noseOffset": 0.6719,
-  "mouthOffset": 0.5559,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "yucun-portrait",
-  "kind": "portrait",
-  "facing": "left",
-  "votes": 3,
-  "voteDetail": [
-   "whole:left",
-   "tight:left",
-   "wide:left"
-  ],
-  "noseOffset": -0.0155,
-  "mouthOffset": -0.1094,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "zhang-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 1,
-  "voteDetail": [
-   "head:right"
-  ],
-  "noseOffset": 0.4646,
-  "mouthOffset": 0.0937,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "zhang-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.079,
-  "mouthOffset": 0.096,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "zhang_youshi-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 2,
-  "voteDetail": [
-   "wide:right",
-   "head:right"
-  ],
-  "noseOffset": 0.4247,
-  "mouthOffset": 0.27,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "zhang_youshi-portrait",
-  "kind": "portrait",
-  "facing": "left",
-  "votes": 3,
-  "voteDetail": [
-   "whole:left",
-   "tight:left",
-   "wide:left"
-  ],
-  "noseOffset": -0.0291,
-  "mouthOffset": -0.0564,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "zhao_er-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.338,
-  "mouthOffset": 0.1751,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "zheng-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 2,
-  "voteDetail": [
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.4302,
-  "mouthOffset": 0.144,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "zhi_neng-chibi",
-  "kind": "chibi",
-  "facing": "right",
-  "votes": 5,
-  "voteDetail": [
-   "tight:right",
-   "wide:right",
-   "wider:right",
-   "head:right",
-   "whole:right"
-  ],
-  "noseOffset": 0.3578,
-  "mouthOffset": 0.2093,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "zhi_neng-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.1069,
-  "mouthOffset": 0.0826,
-  "method": "vision-landmark-geometry"
- },
- {
-  "asset": "zhou_rui-portrait",
-  "kind": "portrait",
-  "facing": "right",
-  "votes": 3,
-  "voteDetail": [
-   "whole:right",
-   "tight:right",
-   "wide:right"
-  ],
-  "noseOffset": 0.0679,
-  "mouthOffset": 0.012,
-  "method": "vision-landmark-geometry"
- }
+  {
+    "asset": "ban_er-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.2059,
+    "mouthOffset": 0.0384,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "bao_zhu-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "head:right",
+      "low:conflict",
+      "lower:conflict"
+    ],
+    "noseOffset": 0.2721,
+    "mouthOffset": 0.065,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "bao_zhu-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1377,
+    "mouthOffset": 0.1363,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "baochai-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 6,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.6755,
+    "mouthOffset": 0.5252,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "baochai-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3018,
+    "mouthOffset": 0.1696,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "baoyu-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "tight:right",
+      "wide:conflict",
+      "head:conflict",
+      "low:conflict",
+      "lower:conflict"
+    ],
+    "noseOffset": 0.3745,
+    "mouthOffset": 0.3334,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "baoyu-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.2446,
+    "mouthOffset": 0.1041,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "baoyu-portrait-angry",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.2598,
+    "mouthOffset": 0.1311,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "baoyu-portrait-joy",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.2471,
+    "mouthOffset": 0.1076,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "baoyu-portrait-mourning",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "whole:right"
+    ],
+    "noseOffset": 0.2453,
+    "mouthOffset": 0.1154,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "baoyu-portrait-sad",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.2517,
+    "mouthOffset": 0.1032,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "baoyu-portrait-surprise",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.2295,
+    "mouthOffset": 0.12,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "baoyu-portrait-v2",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "whole:right"
+    ],
+    "noseOffset": 0.2417,
+    "mouthOffset": 0.108,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "dai_quan-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "head:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.2686,
+    "mouthOffset": 0.0417,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "dai_quan-portrait",
+    "kind": "portrait",
+    "facing": "left",
+    "votes": 2,
+    "voteDetail": [
+      "whole:left",
+      "tight:conflict",
+      "wide:left"
+    ],
+    "noseOffset": -0.012,
+    "mouthOffset": -0.0658,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "daiyu-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 6,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.5254,
+    "mouthOffset": 0.3228,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "daiyu-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3337,
+    "mouthOffset": 0.1363,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "daiyu-portrait-angry",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.331,
+    "mouthOffset": 0.1314,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "daiyu-portrait-joy",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3178,
+    "mouthOffset": 0.1102,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "daiyu-portrait-sad",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3336,
+    "mouthOffset": 0.1429,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "daiyu-portrait-surprise",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3234,
+    "mouthOffset": 0.1339,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "er_ya_tou-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.2833,
+    "mouthOffset": 0.1552,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "feng-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "tight:right",
+      "head:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.4206,
+    "mouthOffset": 0.0838,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "feng-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1149,
+    "mouthOffset": 0.1645,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "feng-portrait-angry",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1324,
+    "mouthOffset": 0.1615,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "feng-portrait-joy",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.158,
+    "mouthOffset": 0.1876,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "feng-portrait-sad",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1161,
+    "mouthOffset": 0.1863,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "feng-portrait-surprise",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1342,
+    "mouthOffset": 0.1581,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "fengshi-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 6,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.4423,
+    "mouthOffset": 0.2585,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "fengshi-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3497,
+    "mouthOffset": 0.1426,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "fengsu-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 7,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.3767,
+    "mouthOffset": 0.1702,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "fengsu-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.5071,
+    "mouthOffset": 0.2405,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "grandmother-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 7,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.3295,
+    "mouthOffset": 0.1408,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "grandmother-portrait-joy",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "whole:conflict",
+      "tight:conflict",
+      "wide:right"
+    ],
+    "noseOffset": 0.0633,
+    "mouthOffset": 0.0044,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "guide-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 7,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.366,
+    "mouthOffset": 0.2027,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "guide-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 2,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:conflict"
+    ],
+    "noseOffset": 0.037,
+    "mouthOffset": 0.0047,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "hu_shi-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "tight:right",
+      "head:right",
+      "low:right"
+    ],
+    "noseOffset": 0.4774,
+    "mouthOffset": 0.1238,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "hu_shi-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1142,
+    "mouthOffset": 0.0697,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "huoqi-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 7,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.3187,
+    "mouthOffset": 0.1357,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "huoqi-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3971,
+    "mouthOffset": 0.1708,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jia_dairu-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 4,
+    "voteDetail": [
+      "tight:right",
+      "head:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.3814,
+    "mouthOffset": 0.1869,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jia_huan-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3357,
+    "mouthOffset": 0.3191,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jia_lian-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "head:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.2294,
+    "mouthOffset": 0.1002,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jia_lian-portrait",
+    "kind": "portrait",
+    "facing": "left",
+    "votes": 1,
+    "voteDetail": [
+      "whole:conflict",
+      "tight:conflict",
+      "wide:left"
+    ],
+    "noseOffset": -0.0027,
+    "mouthOffset": -0.0571,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jia_qiang-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3705,
+    "mouthOffset": 0.1473,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jia_rong-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 2,
+    "voteDetail": [
+      "head:right",
+      "low:conflict",
+      "lower:right"
+    ],
+    "noseOffset": 0.2124,
+    "mouthOffset": 0.0621,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jia_rong-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.0807,
+    "mouthOffset": 0.0445,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jia_rui-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "head:right"
+    ],
+    "noseOffset": 0.3176,
+    "mouthOffset": 0.1557,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jia_rui-portrait",
+    "kind": "portrait",
+    "facing": "left",
+    "votes": 3,
+    "voteDetail": [
+      "whole:left",
+      "tight:left",
+      "wide:left"
+    ],
+    "noseOffset": -0.0429,
+    "mouthOffset": -0.1066,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jia_zhen-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 2,
+    "voteDetail": [
+      "head:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.358,
+    "mouthOffset": 0.1042,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jia_zhen-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.4146,
+    "mouthOffset": 0.1999,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jiaoxing-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 4,
+    "voteDetail": [
+      "wide:right",
+      "head:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.271,
+    "mouthOffset": 0.0946,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jiaoxing-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.277,
+    "mouthOffset": 0.0793,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jin_shi-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 6,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.4567,
+    "mouthOffset": 0.2252,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jin_shi-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1,
+    "mouthOffset": 0.0788,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jing_xu-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 5,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "head:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.5296,
+    "mouthOffset": 0.3449,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jinghuan-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "tight:conflict",
+      "head:conflict",
+      "low:right",
+      "lower:conflict"
+    ],
+    "noseOffset": 0.156,
+    "mouthOffset": 0.0093,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jinghuan-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1222,
+    "mouthOffset": 0.1528,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "kongkong-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 2,
+    "voteDetail": [
+      "tight:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.2859,
+    "mouthOffset": 0.0653,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "kongkong-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3106,
+    "mouthOffset": 0.0104,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "lai_sheng-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "head:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.3577,
+    "mouthOffset": 0.2025,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "leng-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 7,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.3279,
+    "mouthOffset": 0.1388,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "liwan-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "tight:right",
+      "head:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.6629,
+    "mouthOffset": 0.562,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "liwan-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.2962,
+    "mouthOffset": 0.1759,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "maid-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 4,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "wider:right",
+      "head:right"
+    ],
+    "noseOffset": 0.4113,
+    "mouthOffset": 0.2508,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "maid-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.0736,
+    "mouthOffset": 0.0507,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "menzi-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 5,
+    "voteDetail": [
+      "tight:conflict",
+      "wide:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.3469,
+    "mouthOffset": 0.1408,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "menzi-portrait",
+    "kind": "portrait",
+    "facing": "left",
+    "votes": 3,
+    "voteDetail": [
+      "whole:left",
+      "tight:left",
+      "wide:left"
+    ],
+    "noseOffset": -0.0369,
+    "mouthOffset": -0.0279,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "messenger-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 2,
+    "voteDetail": [
+      "tight:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.2906,
+    "mouthOffset": 0.1453,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "messenger-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1436,
+    "mouthOffset": 0.1485,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "ming_yan-portrait",
+    "kind": "portrait",
+    "facing": "left",
+    "votes": 2,
+    "voteDetail": [
+      "whole:left",
+      "tight:conflict",
+      "wide:left"
+    ],
+    "noseOffset": -0.0333,
+    "mouthOffset": -0.0817,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "monk-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 7,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.4978,
+    "mouthOffset": 0.2924,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "monk-portrait",
+    "kind": "portrait",
+    "facing": "left",
+    "votes": 3,
+    "voteDetail": [
+      "whole:left",
+      "tight:left",
+      "wide:left"
+    ],
+    "noseOffset": -0.0746,
+    "mouthOffset": -0.1232,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "nurse_li-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 6,
+    "voteDetail": [
+      "tight:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.2674,
+    "mouthOffset": 0.0787,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "nurse_wang-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3028,
+    "mouthOffset": 0.4576,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "oldmonk-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 7,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.5367,
+    "mouthOffset": 0.1537,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "oldmonk-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.4357,
+    "mouthOffset": 0.0491,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "ping_er-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1666,
+    "mouthOffset": 0.1714,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "plaintiff-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3956,
+    "mouthOffset": 0.6936,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "qin_ke-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "low:right"
+    ],
+    "noseOffset": 0.4642,
+    "mouthOffset": 0.2013,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "qin_ke-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.2262,
+    "mouthOffset": 0.1744,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "qin_ye-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 2,
+    "voteDetail": [
+      "head:right",
+      "low:right"
+    ],
+    "noseOffset": 0.5449,
+    "mouthOffset": 0.4444,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "qin_ye-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.4892,
+    "mouthOffset": 0.2671,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "qin_zhong-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 6,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.3526,
+    "mouthOffset": 0.1886,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "qin_zhong-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3501,
+    "mouthOffset": 0.1072,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "ruhai-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "head:right"
+    ],
+    "noseOffset": 0.2348,
+    "mouthOffset": 0.0698,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "ruhai-portrait",
+    "kind": "portrait",
+    "facing": "left",
+    "votes": 3,
+    "voteDetail": [
+      "whole:left",
+      "tight:left",
+      "wide:left"
+    ],
+    "noseOffset": -0.0999,
+    "mouthOffset": -0.1993,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "she_yue-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1608,
+    "mouthOffset": 0.2083,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "shi_xiangyun-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.2565,
+    "mouthOffset": 0.2098,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "shiyin-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "head:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.3594,
+    "mouthOffset": 0.1604,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "shiyin-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.4215,
+    "mouthOffset": 0.167,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "shui_rong-chibi",
+    "kind": "chibi",
+    "facing": "left",
+    "votes": 2,
+    "voteDetail": [
+      "head:conflict",
+      "low:left",
+      "lower:left"
+    ],
+    "noseOffset": -0.0178,
+    "mouthOffset": -0.3118,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "shui_rong-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.2716,
+    "mouthOffset": 0.0348,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "shui_rong-portrait-mourning",
+    "kind": "emotion",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "whole:right"
+    ],
+    "noseOffset": 0.2831,
+    "mouthOffset": 0.0327,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "tanchun-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 5,
+    "voteDetail": [
+      "tight:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.6434,
+    "mouthOffset": 0.3768,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "tanchun-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1283,
+    "mouthOffset": 0.1457,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "taoist-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.5743,
+    "mouthOffset": 0.3821,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "wang-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 7,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.3277,
+    "mouthOffset": 0.0919,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "wang-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.0595,
+    "mouthOffset": 0.0455,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "wang_er-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 4,
+    "voteDetail": [
+      "tight:right",
+      "wider:right",
+      "low:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.5162,
+    "mouthOffset": 0.3642,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "xichun-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 2,
+    "voteDetail": [
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.2491,
+    "mouthOffset": 0.155,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "xichun-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1647,
+    "mouthOffset": 0.1456,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "xing-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 5,
+    "voteDetail": [
+      "tight:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.5899,
+    "mouthOffset": 0.434,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "xing-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.0888,
+    "mouthOffset": 0.0514,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "xiren-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "head:conflict",
+      "low:conflict",
+      "lower:conflict",
+      "whole:right"
+    ],
+    "noseOffset": 0.2497,
+    "mouthOffset": 0.034,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "xiren-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.189,
+    "mouthOffset": 0.2031,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "xuepan-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 6,
+    "voteDetail": [
+      "wide:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.352,
+    "mouthOffset": 0.2987,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "xueyan-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 5,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "head:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.4966,
+    "mouthOffset": 0.3877,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "xueyan-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.2852,
+    "mouthOffset": 0.1384,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "xueyima-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 6,
+    "voteDetail": [
+      "tight:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:right"
+    ],
+    "noseOffset": 0.3582,
+    "mouthOffset": 0.1465,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "xueyima-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.0987,
+    "mouthOffset": 0.0685,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "ying_er-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "wide:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.3921,
+    "mouthOffset": 0.1692,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "ying_er-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.2967,
+    "mouthOffset": 0.1712,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "yingchun-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 6,
+    "voteDetail": [
+      "tight:right",
+      "wide:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.2862,
+    "mouthOffset": 0.1052,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "yingchun-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1414,
+    "mouthOffset": 0.0836,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "yingge-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 4,
+    "voteDetail": [
+      "tight:right",
+      "head:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.5137,
+    "mouthOffset": 0.5188,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "yingge-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3129,
+    "mouthOffset": 0.2368,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "yinglian-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 2,
+    "voteDetail": [
+      "whole:right",
+      "tight:right"
+    ],
+    "noseOffset": 0.2773,
+    "mouthOffset": 0.144,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "you_shi-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "tight:right"
+    ],
+    "noseOffset": 0.3218,
+    "mouthOffset": 0.0821,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "yuanchun-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 2,
+    "voteDetail": [
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.3313,
+    "mouthOffset": 0.3467,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "yuanchun-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1041,
+    "mouthOffset": 0.0627,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "yucun-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "low:right"
+    ],
+    "noseOffset": 0.2535,
+    "mouthOffset": 0.0462,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "yucun-portrait",
+    "kind": "portrait",
+    "facing": "left",
+    "votes": 3,
+    "voteDetail": [
+      "whole:left",
+      "tight:left",
+      "wide:left"
+    ],
+    "noseOffset": -0.0207,
+    "mouthOffset": -0.1185,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "zhang-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "head:right",
+      "low:right",
+      "lower:right"
+    ],
+    "noseOffset": 0.2837,
+    "mouthOffset": 0.1218,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "zhang-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.0898,
+    "mouthOffset": 0.097,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "zhang_youshi-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 2,
+    "voteDetail": [
+      "wide:right",
+      "head:right"
+    ],
+    "noseOffset": 0.4017,
+    "mouthOffset": 0.1455,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "zhang_youshi-portrait",
+    "kind": "portrait",
+    "facing": "left",
+    "votes": 3,
+    "voteDetail": [
+      "whole:left",
+      "tight:left",
+      "wide:left"
+    ],
+    "noseOffset": -0.041,
+    "mouthOffset": -0.0544,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "zhao_er-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "tight:right"
+    ],
+    "noseOffset": 0.5131,
+    "mouthOffset": 0.2668,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "zhao_er-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.3416,
+    "mouthOffset": 0.1817,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "zhao_yiniang-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 1,
+    "voteDetail": [
+      "low:right"
+    ],
+    "noseOffset": 0.1655,
+    "mouthOffset": 0.091,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "zhao_yiniang-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.4048,
+    "mouthOffset": 0.177,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "zheng-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "head:right",
+      "low:right",
+      "lower:conflict",
+      "whole:right"
+    ],
+    "noseOffset": 0.3965,
+    "mouthOffset": 0.0963,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "zhi_neng-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 5,
+    "voteDetail": [
+      "wide:right",
+      "wider:right",
+      "head:right",
+      "low:right",
+      "lower:right",
+      "whole:conflict"
+    ],
+    "noseOffset": 0.2516,
+    "mouthOffset": 0.0718,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "zhi_neng-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.1153,
+    "mouthOffset": 0.0836,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "zhou_rui-portrait",
+    "kind": "portrait",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "whole:right",
+      "tight:right",
+      "wide:right"
+    ],
+    "noseOffset": 0.0772,
+    "mouthOffset": 0.0133,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "jia_huan-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 33,
+    "voteDetail": [
+      "multi-crop:33 ok-readings, nose and mouth both positive in every one"
+    ],
+    "noseOffset": 0.4463,
+    "mouthOffset": 0.5173,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "she_yue-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 3,
+    "voteDetail": [
+      "multi-crop:3 swapped-readings, nose and mouth both negative in every one"
+    ],
+    "noseOffset": -0.8781,
+    "mouthOffset": -0.8891,
+    "method": "vision-landmark-geometry"
+  },
+  {
+    "asset": "shi_xiangyun-chibi",
+    "kind": "chibi",
+    "facing": "right",
+    "votes": 24,
+    "voteDetail": [
+      "multi-crop:24 swapped-readings, nose and mouth both negative in every one"
+    ],
+    "noseOffset": -0.4565,
+    "mouthOffset": -0.4117,
+    "method": "vision-landmark-geometry"
+  }
 ]

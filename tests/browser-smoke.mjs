@@ -24,7 +24,24 @@ const castCount=Object.keys(JSON.parse(readFileSync('public/assets/rongguo/manif
 // 改漏了就会把「新的一回没列进目录」这件事掩盖过去。
 const bookCount=readdirSync('design').filter(f=>/^chapter\d+-sections\.json$/.test(f)).length;
 const CN=['零','一','二','三','四','五','六','七','八','九','十'];
-const allBooks=Array.from({length:bookCount},(_,i)=>i+1<=10?`第${CN[i+1]}回`:`第十${CN[i-9]}回`);
+// 回次名从产品代码实读（src/story.ts 的 bookNames）。这里原来自己拼中文数字，
+// 拼到第二十回就断了——「第十${CN[11]}」拼出「第十undefined」，测试于是报
+// 目录少了一回，其实目录是对的、测试的期望值是错的。实读之后就没有第二份
+// 中文数字表可以漂移了。
+const {bookNames}=await import('../src/story.ts');
+const allBooks=Object.keys(bookNames).map(Number).sort((a,b)=>a-b).map(n=>bookNames[n]);
+assert.equal(allBooks.length,bookCount,`bookNames must cover every chapter, got ${allBooks.length} of ${bookCount}`);
+// 「查无此人」的那个样本名，必须在**全部**回目的正文里一个字都没出现过。
+// 这个样本随回目推移而失效：妙玉被第十八回推翻、晴雯被第十九回推翻、
+// 麝月被第二十回推翻。每加一回都要重挑一个，并在下面这条静态断言里
+// 立刻发现「样本已经被某一回用掉了」——否则断言会误判成搜索功能坏了。
+const absentSample='紫鹃';
+{
+  const all=readdirSync('design').filter(f=>/^chapter\d+-story\.json$/.test(f))
+    .map(f=>readFileSync(`design/${f}`,'utf8')).join('');
+  const hits=all.split(absentSample).length-1;
+  assert.equal(hits,0,`the absent-name sample 「${absentSample}」 must not appear in any chapter, found ${hits}`);
+}
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||(existsSync(chrome)?chrome:undefined)});
 const context=await browser.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'});
 const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});mkdirSync('artifacts',{recursive:true});
@@ -70,6 +87,10 @@ async function next(skip=true){
   const arrived=await node();
   const wantsCover=leafBounds.first.has(arrived);
   const wantsBack=leafBounds.last.has(arrived);
+  // A walk that lands on the wrong line is a failure of the stage, not of the
+  // assertion: the engine may have been mid-move when the button was pressed.
+  // Record the landing so a drift can be traced to the step that caused it.
+  if(process.env.SMOKE_TRACE)console.log(`TRACE ${before} -> ${arrived}`);
   if(wantsCover||wantsBack)await page.waitForFunction(()=>!!document.querySelector('.leaf-sheet'),undefined,{timeout:3000}).catch(()=>{});
   if(wantsCover)assert.equal(await page.locator('.leaf-sheet.leaf-cover').count(),1,`${arrived} must open with a cover`);
   if(wantsBack)assert.equal(await page.locator('.leaf-sheet.leaf-back').count(),1,`${arrived} must close with a back cover`);
@@ -209,8 +230,12 @@ try{
  await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('林府');
  await page.waitForTimeout(150);
  assert.ok(await toc.locator('.toc-card').count()>0,'a place in the middle of a section must be searchable');
- // 搜一个原著前六回里根本没有的名字：必须找不到，不能凭空造出段落。
- await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('妙玉');
+ // 搜一个剧情里根本没有的名字：必须找不到，不能凭空造出段落。
+ // 这个名字必须在前二十回里从未出现——「妙玉」被第十八回推翻，
+ // 「晴雯」被第十九回推翻（她恰在第十九回登场），「麝月」又被第二十回推翻
+ // （她恰在第二十回登场，还守着篦头那一场）。这里改用「紫鹃」：
+ // 她是黛玉的丫鬟，要到第二十一回以后才出场，前二十回一个字都没出现。
+ await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('紫鹃');
  await page.waitForTimeout(150);
  assert.equal(await toc.locator('.toc-card').count(),0,'a name absent from the story must find nothing');
  assert.ok(await toc.locator('.toc-empty').count()>0,'an empty result must say so');
@@ -230,6 +255,18 @@ try{
  await page.locator('dialog[open]').waitFor({state:'detached',timeout:20000});
  const visited=new Set();
  for(let i=0;i<story.length;i++){
+  // When the walk drifts off the script, the failure has to say where it was
+  // and what the board looked like at that moment: a bare "expected C1-030,
+  // got C1-029" does not tell the reader whether the stage was moving, whether
+  // a sheet was covering it, or whether the engine sat on a different index.
+  if(await node()!==story[i].id){
+   const dump=await page.evaluate(()=>{
+    const s=JSON.parse(localStorage.getItem('honglou-five-six-chapters:v5')??'null');
+    const btn=[...document.querySelectorAll('nav button')].map(b=>b.textContent?.trim()).find(t=>t&&(t.includes('继续剧情')||t.includes('跳过移动')))??null;
+    return {label:document.querySelector('.node-label')?.textContent??null,btn,savedNode:s?.node??null,savedIndex:s?.state?.index??null,savedStatus:s?.state?.status??null,savedScene:s?.state?.sceneId??null,sheets:[...document.querySelectorAll('.leaf-sheet')].map(e=>e.className),pickup:document.querySelectorAll('.pickup-overlay').length,bodyText:document.body.innerText.slice(0,400)};
+   });
+   console.error('DRIFT at step',i,JSON.stringify(dump,null,1));
+  }
   assert.equal(await node(),story[i].id);const data=await saved();assert.equal(data.node,story[i].id);visited.add(data.state.sceneId);assert.equal(Math.round((await page.locator('.dialogue-panel').boundingBox()).height),206);
   if(story[i].id==='F001'){assert.equal(data.state.actors.feng.visible,false);assert.equal(await page.locator('.dialogue-type').textContent(),'画外');}
   if(['C1-012','C1-025','C1-039','C2-018','C2-023'].includes(story[i].id))await page.screenshot({path:`artifacts/prequel-${story[i].id}.png`,fullPage:true});

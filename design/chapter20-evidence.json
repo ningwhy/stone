@@ -1,0 +1,672 @@
+{
+ "schemaVersion": 1,
+ "template": false,
+ "chapter": 20,
+ "source": {
+  "edition": "维基文库《紅樓夢》第 020 回（繁体原文页）",
+  "url": "https://zh.wikisource.org/w/index.php?title=紅樓夢/第020回&action=raw",
+  "retrievedAt": "2026-11-11",
+  "localText": "docs/chapter20-source.txt",
+  "processing": "MediaWiki action=raw 取回 wikitext，去模板与导航行，OpenCC 转简体；回目行与正文之间补空行，回目自成一段；正文未作增删。"
+ },
+ "paragraphCount": 12,
+ "nodeCount": 39,
+ "sectionCount": 7,
+ "mapCount": 4,
+ "evidence": [
+  {
+   "id": "C20-E001",
+   "classification": "explicit",
+   "paragraphLead": "忽听他房中嚷起来，大家侧耳听了一听，林黛玉先笑道：「这是你妈妈和袭人叫嚷呢。",
+   "excerpt": "忽听他房中嚷起来，大家侧耳听了一听，林黛玉先笑道：「这是你妈妈和袭人叫嚷呢。那袭人也罢了，你妈妈再要认真排场他，可见老背晦了。」",
+   "claim": "房中嚷起来，大家侧耳听了一听",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-001"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E002",
+   "classification": "explicit",
+   "paragraphLead": "宝玉忙要赶过来，宝钗忙一把拉住道：「你别和你妈妈吵才是，他老糊涂了，倒要让他一步为是。」",
+   "excerpt": "宝玉忙要赶过来，宝钗忙一把拉住道：「你别和你妈妈吵才是，他老糊涂了，倒要让他一步为是。」宝玉道：「我知道了。」",
+   "claim": "宝玉忙要赶过来，宝钗忙一把拉住",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-002"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E003",
+   "classification": "explicit",
+   "paragraphLead": "说毕走来，只见李嬷嬷拄著拐棍，在当地骂袭人：「忘了本的小娼妇！",
+   "excerpt": "说毕走来，只见李嬷嬷拄著拐棍，在当地骂袭人：「忘了本的小娼妇！",
+   "claim": "李嬷嬷拄著拐棍，在当地骂袭人",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-003"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E004",
+   "classification": "explicit",
+   "paragraphLead": "我抬举起你来，这会子我来了，你大模大样的躺在炕上，见我来也不理一理。",
+   "excerpt": "我抬举起你来，这会子我来了，你大模大样的躺在炕上，见我来也不理一理。一心只想妆狐媚子哄宝玉，哄的宝玉不理我，听你们的话。你不过是几两臭银子买来的毛丫头，这屋里你就作耗，如何使得！好不好拉出去配一个小子，看你还妖精似的哄宝玉不哄！」",
+   "claim": "忘了本的小娼妇",
+   "narrativeLayer": "present",
+   "speaker": "nurse_li",
+   "appliesTo": [
+    "C20-004"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E005",
+   "classification": "explicit",
+   "paragraphLead": "袭人先只道李嬷嬷不过为他躺著生气，少不得分辨说「病了，才出汗，蒙著头，原没看见你老人家」等语。",
+   "excerpt": "袭人先只道李嬷嬷不过为他躺著生气，少不得分辨说「病了，才出汗，蒙著头，原没看见你老人家」等语。后来只管听他说「哄宝玉」，「妆狐媚」，又说「配小子」等，由不得又愧又委屈，禁不住哭起来。",
+   "claim": "由不得又愧又委屈，禁不住哭起来",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-005"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E006",
+   "classification": "explicit",
+   "paragraphLead": "宝玉虽听了这些话，也不好怎样，少不得替袭人分辨病了吃药等话，又说：「你不信，只问别的丫头们。」",
+   "excerpt": "宝玉虽听了这些话，也不好怎样，少不得替袭人分辨病了吃药等话，又说：「你不信，只问别的丫头们。」",
+   "claim": "你不信，只问别的丫头们",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C20-006"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E007",
+   "classification": "explicit",
+   "paragraphLead": "李嬷嬷听了这话，益发气起来了，说道：「你只护著那起狐狸，那里认得我了，叫我问谁去？",
+   "excerpt": "李嬷嬷听了这话，益发气起来了，说道：「你只护著那起狐狸，那里认得我了，叫我问谁去？谁不帮著你呢，谁不是袭人拿下马来的！我都知道那些事。我只和你在老太太，太太跟前去讲了。把你奶了这么大，到如今吃不著奶了，把我丢在一旁，逞著丫头们要我的强。」一…",
+   "claim": "你只护著那起狐狸",
+   "narrativeLayer": "present",
+   "speaker": "nurse_li",
+   "appliesTo": [
+    "C20-007"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E008",
+   "classification": "explicit",
+   "paragraphLead": "彼时黛玉宝钗等也走过来劝说：「妈妈你老人家担待他们一点子就完了。」",
+   "excerpt": "彼时黛玉宝钗等也走过来劝说：「妈妈你老人家担待他们一点子就完了。」李嬷嬷见他二人来了，便拉住诉委屈，将当日吃茶，茜雪出去，与昨日酥酪等事，唠唠叨叨说个不清。",
+   "claim": "彼时黛玉宝钗等也走过来劝说",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-008"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E009",
+   "classification": "explicit",
+   "paragraphLead": "可巧凤姐正在上房算完输赢帐，听得后面声嚷，便知是李嬷嬷老病发了，排揎宝玉的人。",
+   "excerpt": "可巧凤姐正在上房算完输赢帐，听得后面声嚷，便知是李嬷嬷老病发了，排揎宝玉的人。——正值他今儿输了钱，迁怒于人。",
+   "claim": "便知是李嬷嬷老病发了",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-009"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E010",
+   "classification": "explicit",
+   "paragraphLead": "便连忙赶过来，拉了李嬷嬷，笑道：「好妈妈，别生气。",
+   "excerpt": "便连忙赶过来，拉了李嬷嬷，笑道：「好妈妈，别生气。大节下老太太才喜欢了一日，你是个老人家，别人高声，你还要管他们呢，难道你反不知道规矩，在这里嚷起来，叫老太太生气不成？你只说谁不好，我替你打他。我家里烧的滚热的野鸡，快来跟我吃酒去。」",
+   "claim": "好妈妈，别生气",
+   "narrativeLayer": "present",
+   "speaker": "feng",
+   "appliesTo": [
+    "C20-010"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E011",
+   "classification": "explicit",
+   "paragraphLead": "一时杂使的老婆子煎了二和药来。",
+   "excerpt": "一时杂使的老婆子煎了二和药来。宝玉见他才有汗意，不肯叫他起来，自己便端著就枕与他吃了，即命小丫头子们铺炕。袭人道：「你吃饭不吃饭，到底老太太，太太跟前坐一会子，和姑娘们顽一会子再回来。我就静静的躺一躺也好。」",
+   "claim": "宝玉替他吃了药，命小丫头子们铺炕",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-011"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E012",
+   "classification": "explicit",
+   "paragraphLead": "同贾母吃毕饭，贾母犹欲同那几个老管家嬷嬷斗牌解闷，宝玉记著袭人，便回至房中，见袭人朦朦睡去。",
+   "excerpt": "同贾母吃毕饭，贾母犹欲同那几个老管家嬷嬷斗牌解闷，宝玉记著袭人，便回至房中，见袭人朦朦睡去。自己要睡，天气尚早。彼时晴雯，绮霰，秋纹，碧痕都寻热闹，找鸳鸯琥珀等耍戏去了，独见麝月一个人在外间房里灯下抹骨牌。",
+   "claim": "独见麝月一个人在外间房里灯下抹骨牌",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-012"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E013",
+   "classification": "explicit",
+   "paragraphLead": "宝玉笑问道：「你怎不同他们顽去？」",
+   "excerpt": "宝玉笑问道：「你怎不同他们顽去？」麝月道：「没有钱。」",
+   "claim": "没有钱",
+   "narrativeLayer": "present",
+   "speaker": "she_yue",
+   "appliesTo": [
+    "C20-013"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E014",
+   "classification": "explicit",
+   "paragraphLead": "宝玉道：「床底下堆著那么些，还不够你输的？」",
+   "excerpt": "宝玉道：「床底下堆著那么些，还不够你输的？」麝月道：「都顽去了，这屋里交给谁呢？那一个又病了。满屋里上头是灯，地下是火。那些老妈妈子们，老天拔地，伏侍一天，也该叫他们歇歇，小丫头子们也是伏侍了一天，这会子还不叫他们顽顽去。所以让他们都去罢，…",
+   "claim": "那一个又病了，满屋里上头是灯",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-014"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E015",
+   "classification": "explicit",
+   "paragraphLead": "宝玉听了这话，公然又是一个袭人。",
+   "excerpt": "宝玉听了这话，公然又是一个袭人。因笑道：「我在这里坐著，你放心去罢。」",
+   "claim": "公然又是一个袭人",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-015"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E016",
+   "classification": "explicit",
+   "paragraphLead": "麝月道：「你既在这里，越发不用去了，咱们两个说话顽笑岂不好？」",
+   "excerpt": "麝月道：「你既在这里，越发不用去了，咱们两个说话顽笑岂不好？」宝玉笑道：「咱两个作什么呢？怪没意思的，也罢了，早上你说头痒，这会子没什么事，我替你篦头罢。」麝月听了便道：「就是这样。」说著，将文具镜匣搬来，卸去钗钏，打开头发，宝玉拿了篦子替…",
+   "claim": "我替你篦头罢",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C20-016"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E017",
+   "classification": "explicit",
+   "paragraphLead": "只篦了三五下，只见晴雯忙忙走进来取钱。",
+   "excerpt": "只篦了三五下，只见晴雯忙忙走进来取钱。一见了他两个，便冷笑道：「哦，交杯盏还没吃，倒上头了！」宝玉笑道：「你来，我也替你篦一篦。」晴雯道：「我没那么大福。」说著，拿了钱，便摔帘子出去了。",
+   "claim": "晴雯冷笑：交杯盏还没吃，倒上头了",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-017"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E018",
+   "classification": "explicit",
+   "paragraphLead": "宝玉放了心，因饭后走到薛姨妈这边来闲逛。",
+   "excerpt": "宝玉放了心，因饭后走到薛姨妈这边来闲逛。彼时正月内，学房中放年学，闺阁中忌针，却都是闲时。贾环也过来顽，正遇见宝钗，香菱，莺儿三个赶围棋作耍，贾环见了也要顽。宝钗素习看他亦如宝玉，并没他意。今儿听他要顽，让他上来坐了一处。一磊十个钱，头一回…",
+   "claim": "宝钗香菱莺儿三个赶围棋作耍",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-018"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E019",
+   "classification": "explicit",
+   "paragraphLead": "后来接连输了几盘，便有些著急。",
+   "excerpt": "后来接连输了几盘，便有些著急。赶著这盘正该自己掷骰子，若掷个七点便赢，若掷个六点，下该莺儿掷三点就赢了。因拿起骰子来，狠命一掷，一个作定了五，那一个乱转。",
+   "claim": "若掷个七点便赢，若掷个六点",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-019"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E020",
+   "classification": "explicit",
+   "paragraphLead": "莺儿拍著手只叫「幺」，贾环便瞪著眼，「六——七——八」混叫。",
+   "excerpt": "莺儿拍著手只叫「幺」，贾环便瞪著眼，「六——七——八」混叫。那骰子偏生转出幺来。贾环急了，伸手便抓起骰子来，然后就拿钱，说是个六点。",
+   "claim": "贾环急了，伸手便抓起骰子来",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-020"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E021",
+   "classification": "explicit",
+   "paragraphLead": "莺儿满心委屈，见宝钗说，不敢则声，只得放下钱来，口内嘟囔说：「一个作爷的，还赖我们这几个钱，连我也不放在眼里。",
+   "excerpt": "莺儿满心委屈，见宝钗说，不敢则声，只得放下钱来，口内嘟囔说：「一个作爷的，还赖我们这几个钱，连我也不放在眼里。前儿我和宝二爷顽，他输了那些，也没著急。下剩的钱，还是几个小丫头子们一抢，他一笑就罢了。」",
+   "claim": "一个作爷的，还赖我们这几个钱",
+   "narrativeLayer": "present",
+   "speaker": "ying_er",
+   "appliesTo": [
+    "C20-021"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E022",
+   "classification": "explicit",
+   "paragraphLead": "宝钗不等说完，连忙断喝。",
+   "excerpt": "宝钗不等说完，连忙断喝。贾环道：「我拿什么比宝玉呢。你们怕他，都和他好，都欺负我不是太太养的。」说著，便哭了。",
+   "claim": "你们怕他，都和他好",
+   "narrativeLayer": "present",
+   "speaker": "jia_huan",
+   "appliesTo": [
+    "C20-022"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E023",
+   "classification": "explicit",
+   "paragraphLead": "赵姨娘啐道：「谁叫你上高台盘去了？",
+   "excerpt": "赵姨娘啐道：「谁叫你上高台盘去了？下流没脸的东西！那里顽不得？谁叫你跑了去讨没意思！」",
+   "claim": "赵姨娘啐骂下流没脸的东西",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-023"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E024",
+   "classification": "explicit",
+   "paragraphLead": "便隔窗说道：「大正月又怎么了？",
+   "excerpt": "便隔窗说道：「大正月又怎么了？环兄弟小孩子家，一半点儿错了，你只教导他，说这些淡话作什么！凭他怎么去，还有太太老爷管他呢，就大口啐他！他现是主子，不好了，横竖有教导他的人，与你什么相干！环兄弟，出来，跟我顽去。」",
+   "claim": "大正月又怎么了",
+   "narrativeLayer": "present",
+   "speaker": "feng",
+   "appliesTo": [
+    "C20-024"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E025",
+   "classification": "explicit",
+   "paragraphLead": "贾环素日怕凤姐比怕王夫人更甚，听见叫他，忙唯唯的出来。",
+   "excerpt": "贾环素日怕凤姐比怕王夫人更甚，听见叫他，忙唯唯的出来。赵姨娘也不敢则声。",
+   "claim": "他现是主子，与你什么相干",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-025"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E026",
+   "classification": "explicit",
+   "paragraphLead": "凤姐向贾环道：「你也是个没气性的！",
+   "excerpt": "凤姐向贾环道：「你也是个没气性的！时常说给你：要吃，要喝，要顽，要笑，只爱同那一个姐姐妹妹哥哥嫂子顽，就同那个顽。你不听我的话，反叫这些人教的歪心邪意，狐媚子霸道的。自己不尊重，要往下流走，安著坏心，还只管怨人家偏心。输了几个钱？就这么个样…",
+   "claim": "输了几个钱，就这么个样儿",
+   "narrativeLayer": "present",
+   "speaker": "feng",
+   "appliesTo": [
+    "C20-026"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E027",
+   "classification": "explicit",
+   "paragraphLead": "喝命：「去罢！」",
+   "excerpt": "喝命：「去罢！」贾环诺诺的跟了丰儿，得了钱，自己和迎春等顽去。不在话下。",
+   "claim": "贾环诺诺的跟了丰儿，得了钱",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-027"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E028",
+   "classification": "explicit",
+   "paragraphLead": "且说宝玉正和宝钗顽笑，忽见人说：「史大姑娘来了。」",
+   "excerpt": "且说宝玉正和宝钗顽笑，忽见人说：「史大姑娘来了。」宝玉听了，抬身就走。宝钗笑道：「等著，咱们两个一齐走，瞧瞧他去。」说著，下了炕，同宝玉一齐来至贾母这边。",
+   "claim": "忽见人说：史大姑娘来了",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-028"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E029",
+   "classification": "explicit",
+   "paragraphLead": "正值林黛玉在旁，因问宝玉：「在那里的？」",
+   "excerpt": "正值林黛玉在旁，因问宝玉：「在那里的？」宝玉便说：「在宝姐姐家的。」",
+   "claim": "在那里的",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C20-029"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E030",
+   "classification": "explicit",
+   "paragraphLead": "黛玉冷笑道：「我说呢，亏在那里绊住，不然早就飞了来了。」",
+   "excerpt": "黛玉冷笑道：「我说呢，亏在那里绊住，不然早就飞了来了。」宝玉笑道：「只许同你顽，替你解闷儿。不过偶然去他那里一趟，就说这话。」",
+   "claim": "亏在那里绊住，不然早就飞了来了",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C20-030"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E031",
+   "classification": "explicit",
+   "paragraphLead": "林黛玉道：「好没意思的话！",
+   "excerpt": "林黛玉道：「好没意思的话！去不去管我什么事，我又没叫你替我解闷儿。可许你从此不理我呢！」说著，便赌气回房去了。",
+   "claim": "便赌气回房去了",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-031"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E032",
+   "classification": "explicit",
+   "paragraphLead": "宝玉忙跟了来，问道：「好好的又生气了？",
+   "excerpt": "宝玉忙跟了来，问道：「好好的又生气了？就是我说错了，你到底也还坐在那里，和别人说笑一会子。又来自己纳闷。」",
+   "claim": "宝玉忙跟了来",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-032"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E033",
+   "classification": "explicit",
+   "paragraphLead": "林黛玉道：「我作践坏了身子，我死，与你何干！」",
+   "excerpt": "林黛玉道：「我作践坏了身子，我死，与你何干！」",
+   "claim": "我作践坏了身子，我死，与你何干",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C20-033"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E034",
+   "classification": "explicit",
+   "paragraphLead": "正说著，宝钗走来道：「史大妹妹等你呢。」",
+   "excerpt": "正说著，宝钗走来道：「史大妹妹等你呢。」说著，便推宝玉走了。",
+   "claim": "宝钗走来推宝玉走了",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-034"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E035",
+   "classification": "explicit",
+   "paragraphLead": "这里黛玉越发气闷，只向窗前流泪。",
+   "excerpt": "这里黛玉越发气闷，只向窗前流泪。",
+   "claim": "黛玉越发气闷，只向窗前流泪",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-035"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E036",
+   "classification": "explicit",
+   "paragraphLead": "宝玉听了忙上来悄悄的说道：「你这么个明白人，难道连『亲不间疏，先不僭后』也不知道？",
+   "excerpt": "宝玉听了忙上来悄悄的说道：「你这么个明白人，难道连『亲不间疏，先不僭后』也不知道？我虽糊涂，却明白这两句话。头一件，咱们是姑舅姊妹，宝姐姐是两姨姊妹，论亲戚，他比你疏。第二件，你先来，咱们两个一桌吃，一床睡，长的这么大了，他是才来的，岂有个…",
+   "claim": "亲不间疏，先不僭后",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-036"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E037",
+   "classification": "explicit",
+   "paragraphLead": "二人正说著，只见湘云走来，笑道：「二哥哥，林姐姐，你们天天一处顽，我好容易来了，也不理我一理儿。」",
+   "excerpt": "二人正说著，只见湘云走来，笑道：「二哥哥，林姐姐，你们天天一处顽，我好容易来了，也不理我一理儿。」",
+   "claim": "湘云走来笑说：也不理我一理儿",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-037"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E038",
+   "classification": "explicit",
+   "paragraphLead": "黛玉笑道：「偏是咬舌子爱说话，连个『二』哥哥也叫不出来，只是『爱』哥哥『爱』哥哥的。",
+   "excerpt": "黛玉笑道：「偏是咬舌子爱说话，连个『二』哥哥也叫不出来，只是『爱』哥哥『爱』哥哥的。回来赶围棋儿，又该你闹『幺爱三四五』了。」",
+   "claim": "偏是咬舌子爱说话",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C20-038"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-E039",
+   "classification": "explicit",
+   "paragraphLead": "湘云笑道：「这一辈子我自然比不上你。",
+   "excerpt": "湘云笑道：「这一辈子我自然比不上你。我只保佑著明儿得一个咬舌的林姐夫，时时刻刻你可听『爱』『厄』去。阿弥陀佛，那才现在我眼里！」说的众人一笑，湘云忙回身跑了。",
+   "claim": "我只保佑著明儿得一个咬舌的林姐夫",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-039"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C20-D001",
+   "classification": "design",
+   "paragraphLead": "忽听他房中嚷起来，大家侧耳听了一听，林黛玉先笑道：「这是你妈妈和袭人叫嚷呢。",
+   "excerpt": null,
+   "claim": "怡红院借用 night 图（贾母院碧纱橱与外间）占位",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-001",
+    "C20-002",
+    "C20-003",
+    "C20-004",
+    "C20-005"
+   ],
+   "designDecision": "用 night 的 outer_door/xiren_place/yingge_place/baoyu_bed/bedside 表现外间、炕前与灯前。",
+   "uncertainty": "原文是宝玉房中（外间、炕、灯下抹骨牌）；项目尚无怡红院专图。"
+  },
+  {
+   "id": "C20-D002",
+   "classification": "design",
+   "paragraphLead": "宝玉放了心，因饭后走到薛姨妈这边来闲逛。",
+   "excerpt": null,
+   "claim": "赶围棋一场借用 c7_lixiang 图（梨香院 · 薛姨妈处）",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-018",
+    "C20-019",
+    "C20-020",
+    "C20-021",
+    "C20-022"
+   ],
+   "designDecision": "c7_lixiang 正是薛姨妈处，有 baochai/zhou（莺儿位）/room/yard 锚点，可表现廊下围棋。",
+   "uncertainty": "原文说宝玉饭后到薛姨妈这边闲逛，正遇见宝钗、香菱、莺儿三个赶围棋作耍。"
+  },
+  {
+   "id": "C20-D003",
+   "classification": "design",
+   "paragraphLead": "赵姨娘啐道：「谁叫你上高台盘去了？",
+   "excerpt": null,
+   "claim": "赵姨娘与贾环一场借用 wang 图（王夫人院 · 东廊三间）",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-023",
+    "C20-024",
+    "C20-025",
+    "C20-026",
+    "C20-027"
+   ],
+   "designDecision": "用 wang 的 east_corridor/south_passage 表现窗外过与隔窗说话的位置关系。",
+   "uncertainty": "原文只说「可巧凤姐在窗外过」并「隔窗说道」，未给平面；赵姨娘住贾政外院偏所。"
+  },
+  {
+   "id": "C20-D004",
+   "classification": "design",
+   "paragraphLead": "且说宝玉正和宝钗顽笑，忽见人说：「史大姑娘来了。」",
+   "excerpt": null,
+   "claim": "贾母院借用 dinner 图占位；黛玉处沿用 dinner 的 daiyu_place",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-028",
+    "C20-029",
+    "C20-030",
+    "C20-031"
+   ],
+   "designDecision": "用 dinner 的 grandmother_greet/daiyu_place/back_door/room 表现堂前与回房。",
+   "uncertainty": "原文写「同宝玉一齐来至贾母这边」，此后黛玉赌气回房（此时黛玉仍在贾母院碧纱橱）。"
+  },
+  {
+   "id": "C20-D005",
+   "classification": "design",
+   "paragraphLead": "同贾母吃毕饭，贾母犹欲同那几个老管家嬷嬷斗牌解闷，宝玉记著袭人，便回至房中，见袭人朦朦睡去。",
+   "excerpt": null,
+   "claim": "晴雯、绮霰、秋纹、碧痕、鸳鸯、琥珀、丰儿以 messenger 代指",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-012",
+    "C20-013",
+    "C20-014",
+    "C20-015",
+    "C20-016",
+    "C20-017"
+   ],
+   "designDecision": "避免美术膨胀：晴雯用 messenger 承担两句冷语，其余丫鬟只在叙述中出现、不 show。",
+   "uncertainty": "底本点名七名丫鬟，但除晴雯有两句台词外均无独立戏份。"
+  },
+  {
+   "id": "C20-D006",
+   "classification": "design",
+   "paragraphLead": "宝玉放了心，因饭后走到薛姨妈这边来闲逛。",
+   "excerpt": null,
+   "claim": "香菱以 maid 代指",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C20-018",
+    "C20-019",
+    "C20-020",
+    "C20-021",
+    "C20-022"
+   ],
+   "designDecision": "香菱不 show，由宝钗与莺儿代表这一组人。",
+   "uncertainty": "底本香菱只在「宝钗，香菱，莺儿三个赶围棋作耍」一句里出现，无台词。"
+  }
+ ]
+}

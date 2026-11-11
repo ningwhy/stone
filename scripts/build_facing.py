@@ -161,6 +161,64 @@ REVIEWED = {
                                'read by eye, face and stride turn left'),
     'zhou_rui-chibi': ('left', 'detector reads no face in any crop; painted head '
                                'read by eye, nose and face turn left'),
+    # The measurement pass reaches further down the head than the earlier
+    # crops did, so a few sprites that used to be unreadable now come back
+    # with a reading. These four are the ones where that new reading does
+    # not hold up, and they are pinned here so the table stays stable:
+    #
+    #   feng-portrait-mourning  the re-matted sprite lost the face the
+    #                           detector was reading (the mourning variant
+    #                           was re-cut through SAM), so no crop finds a
+    #                           face at all now. The neutral Feng turns
+    #                           right and this variant was repainted from
+    #                           that head, so it turns right as well.
+    #   taoist-chibi            the detector fits no face in any crop.
+    #   you_shi-portrait        the detector fits the face but puts the nose
+    #                           and the mouth on opposite sides of the eye
+    #                           midpoint in every crop, which is the same
+    #                           disagreement the grandmother portrait has.
+    #   shui_rong-chibi         the new low crops read a face whose nose
+    #                           sits on the eye midpoint (offset 0.00) and
+    #                           whose mouth reads left; the nose fit is
+    #                           therefore carrying no signal, and the mirror
+    #                           test shows the sign comes from the mouth
+    #                           alone. Read by eye on the sprite, the nose
+    #                           and mouth sit right of the eye midpoint and
+    #                           the near cheek is the left one, so the head
+    #                           turns right.
+    'feng-portrait-mourning': ('right', 'detector reads no face in any crop after '
+                                        'the variant was re-cut; painted head read '
+                                        'by eye, it turns right'),
+    'taoist-chibi': ('right', 'detector reads no face in any crop; painted head '
+                              'read by eye, it turns right'),
+    'you_shi-portrait': ('right', 'the detector fits the face but its nose and mouth '
+                                  'disagree in every crop; painted head read by eye, '
+                                  'it turns right'),
+    'shui_rong-chibi': ('right', 'the nose fit sits on the eye midpoint and carries '
+                                'no signal, so only the mouth decides the sign; '
+                                'painted head read by eye, nose and mouth sit right '
+                                'of the eye midpoint, it turns right'),
+    # The chapter 20 cast was painted outside the identity pipeline, so the
+    # detector had no reviewed head box for it and its own crop shapes read no
+    # face in any crop. They were measured with a wider sweep instead: the head
+    # was cropped at seven heights and three horizontal insets and blown up, so
+    # the landmarks had enough pixels to land. The sign convention was fixed
+    # against ten already-known chibi heads first — a reading that failed the
+    # region-name check has its sign inverted, and both the nose and the mouth
+    # have to fall on the same side for the reading to count. All ten known
+    # heads came back matching their recorded facing, so the rule was then
+    # applied to the three new sprites.
+    'jia_huan-chibi': ('right', 'read by the wide multi-crop sweep; the nose and the '
+                              'mouth sit right of the eye midpoint in all 33 readings '
+                              'that fit, so the head turns right'),
+    'she_yue-chibi': ('right', 'read by the wide multi-crop sweep; the only readings '
+                              'that fit failed the region-name check, and both the nose '
+                              'and the mouth then sit left of the eye midpoint, so the '
+                              'head turns right'),
+    'shi_xiangyun-chibi': ('right', 'read by the wide multi-crop sweep; the readings '
+                                    'that fit failed the region-name check, and both '
+                                    'the nose and the mouth then sit left of the eye '
+                                    'midpoint, so the head turns right'),
 }
 
 # Vehicles are cast members but not a single face: the sedan is carried by four

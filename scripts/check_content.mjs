@@ -89,10 +89,29 @@ for(const key of Object.keys(manifest)){
  requireThat(facingKeys.has(key),`${key}: no facing recorded, the sprite would be mirrored by accident`);
 }
 const sourceCode=readFileSync(resolve(root,'src/story.ts'),'utf8');
+const stripMarks=text=>text.replace(/[\s，。、；：？！」』“”‘’「」『』（）()…—·《》〈〉\-]/g,'');
 for(const book of books.keys()){
  const number=String(book).padStart(2,'0');
  for(const kind of ['story','sections'])requireThat(sourceCode.includes(`chapter${number}-${kind}.json`),`Chapter ${book}: missing explicit ${kind} import`);
  requireThat(existsSync(resolve(root,`docs/chapter${number}-source.txt`)),`Chapter ${book}: missing local source text`);
+}
+// Every node names the paragraph it adapts. When the lead is the opening words
+// of that paragraph, a reader can find it in the archived base text — a lead
+// written as a paraphrase of the scene cannot be checked against anything, and
+// the "original text" claim behind the node stops being verifiable. The bases
+// for chapters 1-15 are editorial notes rather than the book's own words, so
+// only the chapters whose base text is the original are checked here.
+const VERBATIM_BASE=new Set([16,17,18,19,20]);
+for(const book of books.keys()){
+ if(!VERBATIM_BASE.has(book))continue;
+ const basePath=resolve(root,`docs/chapter${String(book).padStart(2,'0')}-source.txt`);
+ if(!existsSync(basePath))continue;
+ const stripped=stripMarks(readFileSync(basePath,'utf8'));
+ for(const step of story.filter(s=>s.source?.chapter===book)){
+  const lead=String(step.source?.paragraphLead??'');
+  requireThat(lead.length>0,`${step.id}: missing source paragraph lead`);
+  requireThat(stripped.includes(stripMarks(lead)),`${step.id}: paragraph lead not found in the base text of chapter ${book} (${lead})`);
+ }
 }
 for(const file of readdirSync(resolve(root,'design')).filter(f=>/^chapter\d+-story\.json$/.test(f)))if(!sourceCode.includes(file))warnings.push(`Unregistered chapter draft: design/${file}`);
 // Evidence table: every node needs a source entry whose lead is locatable in the

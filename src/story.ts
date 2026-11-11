@@ -30,6 +30,16 @@ import script14 from '../design/chapter14-story.json' with { type:'json' };
 import sections14 from '../design/chapter14-sections.json' with { type:'json' };
 import script15 from '../design/chapter15-story.json' with { type:'json' };
 import sections15 from '../design/chapter15-sections.json' with { type:'json' };
+import script16 from '../design/chapter16-story.json' with { type:'json' };
+import sections16 from '../design/chapter16-sections.json' with { type:'json' };
+import script17 from '../design/chapter17-story.json' with { type:'json' };
+import sections17 from '../design/chapter17-sections.json' with { type:'json' };
+import script18 from '../design/chapter18-story.json' with { type:'json' };
+import sections18 from '../design/chapter18-sections.json' with { type:'json' };
+import script19 from '../design/chapter19-story.json' with { type:'json' };
+import sections19 from '../design/chapter19-sections.json' with { type:'json' };
+import script20 from '../design/chapter20-story.json' with { type:'json' };
+import sections20 from '../design/chapter20-sections.json' with { type:'json' };
 export const cast = {
   oldmonk:{"name": "智通寺老僧", "fullName": "智通寺老僧", "color": 8885375, "css": "#87947f", "relation": "寺中煮粥人", "description": "龙钟衰老，回答雨村时答非所问；与癞头和尚分列。"},
   huoqi:{"name": "霍启", "fullName": "霍启", "color": 8885375, "css": "#87947f", "relation": "甄家家人", "description": "带英莲看灯，暂离后失去孩子，惧罪逃走。"},
@@ -100,6 +110,12 @@ export const cast = {
   wang_er:{name:'旺儿',fullName:'旺儿',color:0xb08868,css:'#b08868',relation:'凤姐小厮',description:'凤姐的小厮。第十五回奉命修书长安，托主文相公假托贾琏所嘱向节度使云光说合张家退亲之事，两日妥协。'},
   qin_ye:{name:'秦业',fullName:'秦业',color:0x8a8278,css:'#8a8278',relation:'秦钟之父',description:'秦钟之父，年迈多病。第十三回携秦钟来宁府吊唁；第十五回因年迈多病不能随众住在铁槛寺，只命秦钟等待安灵。'},
   jia_dairu:{name:'贾代儒',fullName:'贾代儒',color:0x8a8278,css:'#8a8278',relation:'家塾塾师 · 贾瑞祖父',description:'贾家义学的塾师，贾瑞的祖父。素日教训最严，不许贾瑞多走一步。第十二回因子孙一夜不归动了家法，后又为孙儿的重病各处请医。'},
+  yuanchun:{name:'元春',fullName:'贾元春',color:0x9a5a78,css:'#9a5a78',relation:'宝玉的姐姐 · 才选凤藻宫',description:'贾政与王夫人的长女，贤孝才德，选入宫中。第十六回晋封凤藻宫尚书，加封贤德妃，荣国府由此筹备省亲。'},
+  jia_huan:{name:'贾环',fullName:'贾环',color:0x7d8a9c,css:'#7d8a9c',relation:'贾政庶子 · 赵姨娘所出',description:'贾政与赵姨娘所生，宝玉同父异母的弟弟。少年心性狭窄，因围棋赖钱被赵姨娘责骂，又被凤姐当众数落。'},
+  zhao_yiniang:{name:'赵姨娘',fullName:'赵姨娘',color:0x9c8878,css:'#9c8878',relation:'贾政之妾 · 贾环生母',description:'贾政之妾，贾环生母。性情乖僻，忌刻正房，见儿子受委屈便迁怒辱骂。'},
+  shi_xiangyun:{name:'湘云',fullName:'史湘云',color:0xc98a72,css:'#c98a72',relation:'宝玉的表姐 · 史湘云',description:'贾母侄孙女，父母早亡，寄养于叔婶。性情爽朗豪阔，爱说爱笑，口齿带一点咬舌。第二十回正式登场。'},
+  she_yue:{name:'麝月',fullName:'麝月',color:0x8a9bb0,css:'#8a9bb0',relation:'宝玉房中丫鬟',description:'怡红院中较稳重的丫鬟。众姊妹顽耍时独守外间看屋，宝玉为她篦头。'},
+  jia_lian:{name:'贾琏',fullName:'贾琏',color:0x6f8fb0,css:'#6f8fb0',relation:'凤姐之夫 · 黛玉的表兄',description:'贾赦之子，协助料理荣府外务。第十四回送黛玉往扬州奔丧，第十六回事毕带黛玉回京。'},
 };
 export type ActorId=keyof typeof cast;
 export type FacingSide='left'|'right';
@@ -159,12 +175,12 @@ export type Move={type:'move';actor:ActorId;via:string[]};
 export type Action=Move|{type:'parallel';moves:Move[]}|{type:'show';actor:ActorId;at:string}|{type:'hide';actor:ActorId}|{type:'roof';visible:boolean}|{type:'effect';actor:ActorId;kind:'jade'|'greet'|'rest'|'idle'|'anger';duration:number};
 export type StoryStep={id:string;chapter:string;scene:string;title:string;place:string;focus:string;speaker:ActorId|'narrator';text:string;mood?:string;offscreen?:boolean;actions:Action[];source:{chapter:number;paragraphLead:string;textKind:string;layer?:string}};
 export const chapter3Story=script as StoryStep[];
-export const story=[...script1,...script2,...script,...script4,...script5,...script6,...script7,...script8,...script9,...script10,...script11,...script12,...script13,...script14,...script15] as StoryStep[];
+export const story=[...script1,...script2,...script,...script4,...script5,...script6,...script7,...script8,...script9,...script10,...script11,...script12,...script13,...script14,...script15,...script16,...script17,...script18,...script19,...script20] as StoryStep[];
 /** Index of the last chapter-three node inside `story`; saves taken before chapter four
  * end here, and a saved ending at or before it must reopen as an ordinary reading state. */
 export const LAST_LEGACY_INDEX=([...script1,...script2,...script] as StoryStep[]).length-1;
-export const chapters=[...sections1,...sections2,...sections.map(s=>({...s,book:3})),...sections4,...sections5.map(s=>({...s,book:5})),...sections6.map(s=>({...s,book:6})),...sections7.map(s=>({...s,book:7})),...sections8.map(s=>({...s,book:8})),...sections9.map(s=>({...s,book:9})),...sections10.map(s=>({...s,book:10})),...sections11.map(s=>({...s,book:11})),...sections12.map(s=>({...s,book:12})),...sections13.map(s=>({...s,book:13})),...sections14.map(s=>({...s,book:14})),...sections15.map(s=>({...s,book:15}))];
-export const bookNames:Record<number,string>={1:"第一回",2:"第二回",3:"第三回",4:"第四回",5:"第五回",6:"第六回",7:"第七回",8:"第八回",9:"第九回",10:"第十回",11:"第十一回",12:"第十二回",13:"第十三回",14:"第十四回",15:"第十五回"};
+export const chapters=[...sections1,...sections2,...sections.map(s=>({...s,book:3})),...sections4,...sections5.map(s=>({...s,book:5})),...sections6.map(s=>({...s,book:6})),...sections7.map(s=>({...s,book:7})),...sections8.map(s=>({...s,book:8})),...sections9.map(s=>({...s,book:9})),...sections10.map(s=>({...s,book:10})),...sections11.map(s=>({...s,book:11})),...sections12.map(s=>({...s,book:12})),...sections13.map(s=>({...s,book:13})),...sections14.map(s=>({...s,book:14})),...sections15.map(s=>({...s,book:15})),...sections16.map(s=>({...s,book:16})),...sections17.map(s=>({...s,book:17})),...sections18.map(s=>({...s,book:18})),...sections19.map(s=>({...s,book:19})),...sections20.map(s=>({...s,book:20}))];
+export const bookNames:Record<number,string>={1:"第一回",2:"第二回",3:"第三回",4:"第四回",5:"第五回",6:"第六回",7:"第七回",8:"第八回",9:"第九回",10:"第十回",11:"第十一回",12:"第十二回",13:"第十三回",14:"第十四回",15:"第十五回",16:"第十六回",17:"第十七回",18:"第十八回",19:"第十九回",20:"第二十回"};
 
 /** Consecutive move actions for different actors describe one shared walk; play them together
  * so a two-person errand no longer costs twice the stage time. Same-actor neighbours stay

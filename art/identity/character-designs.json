@@ -396,6 +396,48 @@
       "features": "秦钟之父的清癯长脸；花白长眉；深陷老眼；瘦长鼻；薄唇，六十余岁慈而病",
       "prompt": "a gaunt long elderly man face, greying long eyebrows, deep-set tired old eyes, a thin long nose, thin pale lips; a frail kindly sixty-something father of Qin Zhong, retain a greying beard",
       "seed": 10232110
+    },
+    {
+      "id": "yuanchun",
+      "name": "贾元春",
+      "features": "贵妃端丽长鹅蛋脸；柳叶凤眉；凤目含威；直鼻；樱唇；丰润华贵，二十岁上下",
+      "prompt": "a dignified oblong oval imperial-concubine face, slender willow-phoenix eyebrows, majestic phoenix eyes with calm authority, a straight noble nose, small cherry lips, a rich graceful twenty-something imperial princess, lavish palace headdress with a gold phoenix hairpin and pearl drops",
+      "seed": 10234000
+    },
+    {
+      "id": "jia_lian",
+      "name": "贾琏",
+      "features": "贵族公子清俊方脸；浓眉；明朗桃花眼；直鼻；薄唇；微带纨绔，二十余岁",
+      "prompt": "a clear handsome square-ish young noble face, bold dark eyebrows, bright peach-blossom eyes, a straight nose, thin lips, a slightly dandified twenty-something aristocrat son, black hair crown",
+      "seed": 10234002
+    },
+    {
+      "id": "jia_huan",
+      "name": "贾环",
+      "features": "少年庶出，尖削小脸；细眉吊梢；三角眼带忌刻；薄鼻薄唇；衣色暗沉，十二三岁",
+      "prompt": "a narrow sharp-jawed boyish face of a jealous young teenage half-brother, thin slanting brows, triangular wary eyes with hidden resentment, thin nose and thin lips, sallow complexion, plainly dressed twelve-year-old boy in dark plain Qing-dynasty clothes, a plain black cap",
+      "seed": 10234010
+    },
+    {
+      "id": "zhao_yiniang",
+      "name": "赵姨娘",
+      "features": "妾室中年，薄长脸；稀眉细眼；颧骨略高；薄唇惯撇；衣色半旧带俗艳，三十余岁",
+      "prompt": "a thin long-faced concubine woman in her thirties, sparse thin eyebrows, narrow sharp eyes, slightly high cheekbones, habitually pursed thin lips, half-old clothes with a garish touch, Qing-dynasty consort of a master, sour envious expression",
+      "seed": 10234020
+    },
+    {
+      "id": "shi_xiangyun",
+      "name": "史湘云",
+      "features": "少女圆润苹果脸；浓眉大眼；鼻直口阔笑意常开；健康红润；英气洒脱着男装也宜，十四五岁",
+      "prompt": "a round apple-cheeked cheerful girl of fourteen, thick lively eyebrows, big sparkling eyes, straight nose and a wide smiling mouth, rosy healthy complexion, spirited boyish charm, Qing-dynasty young lady robes slightly loose, laughing merrily",
+      "seed": 10234030
+    },
+    {
+      "id": "she_yue",
+      "name": "麝月",
+      "features": "少女清秀鹅蛋脸；细长眉；眼尾微垂含蓄；薄唇；神情安静守分，十七八岁",
+      "prompt": "a gentle oval-faced maid of seventeen, fine long eyebrows, softly downturned almond eyes, thin lips, a quiet composed and dutiful expression, neat low hair with a simple knot, plain modest Qing-dynasty maid clothing in soft muted blue",
+      "seed": 10234040
     }
   ]
 }
