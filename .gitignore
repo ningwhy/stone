@@ -49,6 +49,11 @@ artifacts/*.mjs
 artifacts/*.json
 artifacts/*.log
 artifacts/*.py
+# …and the same one level down: per-chapter scratch folders like artifacts/ch21/.
+artifacts/*/*.mjs
+artifacts/*/*.json
+artifacts/*/*.log
+artifacts/*/*.py
 
 # The SAM head cutouts are intermediate mattes: reproducible from art/source + the
 # calibration file, and the runtime never reads them.

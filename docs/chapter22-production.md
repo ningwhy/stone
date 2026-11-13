@@ -278,12 +278,16 @@ waiting for getByRole('button', { name: '继续剧情', exact: true })
 ## 七、验收
 
 - `npm run check:content`：全部通过（0 ERROR）。
+- `npm run check:anchors`：**通过**（342 个路线锚点全部可通行且两两连通，
+  36 个装饰锚点按设计不可站人）。这个门禁是本轮新加的，见第六节之五。
 - `npx tsc --noEmit`：通过。
 - `npm run test:locator`：通过（45 scenes mapped）。
 - `node --experimental-strip-types tests/chapter22.mjs`：
   `Passed: chapter 22 — 8 sections walked, 218 nodes, 7 stages, TOC search, back cover correct, all node text verbatim.`
 - `node --experimental-strip-types tests/character-identities.mjs`：
   `Passed: 78 versioned portraits, 全部 78 张带 faceBox 并已裁成脸部特写…`
+- `npm test`：84/84 全过（含新增的 `tests/cnnumber.test.ts`）。
+- `npm run test:browser`：`Passed: all 354 nodes, 45 maps, …corrupt-save recovery.`
 - 第 18-22 回回归：**全部通过**（第 20 回那一轮先红过一次，是测试自身的缺陷，
   排查过程见第六节之三）。
 
@@ -382,14 +386,105 @@ ssh lighthouse "curl -sk -o /dev/null -w '%{http_code}' -H 'Host: stone-direct.y
    挡在底下（`intercepts pointer events`）。循环里每次 reload 后都要补收一次封面
    （`dismissLeaf(page,false,true)`），不能只在循环外收一次。
 
+### 六之五、一个定时炸弹：路线走廊被道具切断了（**下一回务必跑 `check:anchors`**）
+
+这一回上线后做入库整理时，顺手把 `probe21.mjs`（锚点可通行性检查）归位到
+`scripts/`，结果它报出一件**从来没被任何测试发现过**的事：
+
+```
+DISCONNECTED to_outer: yard -> outer_room
+DISCONNECTED to_outer: yard -> mirror_place
+DISCONNECTED to_outer: yard -> zijun_place
+DISCONNECTED to_outer: yard -> cui_lv_place
+DISCONNECTED to_outer: yard -> baochai_place
+DISCONNECTED to_outer: yard -> baoyu_outer
+```
+
+**`yihong`（第 21 回新建的怡红院）的 `to_outer` 路线是断的。**
+
+### 为什么之前全是绿的
+
+- 第 21、22 回的剧情**根本没走这条路线**：怡红院的戏走的是
+  `to_inner`（`baoyu_outer → curtain → inner_room → …`），那条路是通的。
+- 浏览器回归只覆盖**剧情实际走过的路径**，没覆盖**路线表里声明的路径**。
+
+所以它是一颗**定时炸弹**：哪天有人写一段剧情让人从院子走到外厅，
+引擎就会抛 `没有可行走路线：21,26 → 18,25`，读者点到那一步就走不动。
+
+### 根因
+
+引擎的路线走廊生成（`src/model.ts` 的 `parseTiledMap`）：
+
+```js
+for (const route of Object.values(map.routes)) {
+  for (let i = 1; i < route.length; i++) {
+    const from = anchors[route[i-1]], to = anchors[route[i]];
+    let c = from.col, r = from.row;
+    map.walkable.add(cellKey(c, r));
+    while (c !== to.col) { c += Math.sign(to.col - c); map.walkable.add(cellKey(c, r)); }
+    while (r !== to.row) { r += Math.sign(to.row - r); map.walkable.add(cellKey(c, r)); }
+  }
+}
+// ↓ 在这之后才删 blocker
+for (const b of map.blockers) … map.walkable.delete(cellKey(c, r));
+```
+
+三个要点叠在一起：
+
+1. 走廊是 **L 形**：先沿**行**走到底，再沿**列**走到底（`to.col` 先收敛）。
+2. 走廊生成**在 blocker 删除之前**，删 blocker 会把刚画好的走廊切断。
+3. `yard` 在 (21,26)，`outer_room` 在 (18,25)。L 形走廊第一步必然是
+   `(20,26)`——而那正是 **`tea-table` 的 ArtFootprints**。
+
+于是从 `yard` 出发的任何横向走廊都被茶几一刀两断。
+
+> 顺带记一个坐标坑：Tiled 网格是 **128×64 的菱形**，`unit = tileheight = 64`，
+> 不是 `tilewidth`。锚点换算是 `col = x/64 - 0.5`（`row` 同），
+> footprint 是 `col = x/64`（不带 -0.5）。用 `tilewidth` 换算会全错。
+
+### 修法
+
+**把茶几挪走**（不是改路线表）——改路线表会让「院中茶席」这个陈设失去意义，
+而挪家具是零成本的：茶几从 (20,26) 挪到 (21,25)，紧邻 `yard` 一格，
+正是院中待客处，且 (21,25) 不在任何路线的走廊上。圆凳同步位移。
+
+挪完后 `yihong` 的 **16 段路线全部可达**（用引擎自己的 `findPath` 逐段验过）。
+
+### 为什么不能只改这一张图
+
+因为**同类问题会在每一张新地图上重演**。所以把它做成了门禁：
+
+```bash
+npm run check:anchors
+# all route anchors walkable and connected — 342 route anchors, 36 decorative anchors
+```
+
+`scripts/check_anchors_walkable.mjs` 做三件事：
+
+1. **区分两类锚点**——
+   - **路线锚点**（出现在某条 route 的 `anchor_ids` 里）：必须可通行，且同 route
+     内两两连通。**硬门禁**。
+   - **装饰锚点**（不在任何 route 里）：挂画、戏台、桌案一类，设计上就不可站人
+     （`c11_tianxiang:stage`、`c5_ningfu:portrait_wall`、`c10_jinhome:kang/table`、
+     `c6_village:table`、`c12_sickbed:window`），**不算问题**。
+2. **连通性直接用引擎的 `findPath` 判定**，别自己重写一套 BFS——
+   引擎的走廊是 L 形且要扣 blocker，自己写的 BFS 与引擎实际可达性可能不一致。
+3. **退出码非 0**，可以直接挂进 CI 或验收链。
+
+> **下一回照做**：新建地图后**必须**跑 `npm run check:anchors`。
+> 它能抓到浏览器回归抓不到的那类问题——**剧情没走到的断路**。
+
 ## 八、留给下一位
 
 1. **第 23 回加进来时，别忘了 `design/chapter-titles.json`**——
    漏了会让第 22 回的封底误显「全书至此」，见第六节。
-2. **「查无此人」的样本已换成「彩云」**（`tests/browser-smoke.mjs`）。
+2. **新建地图后必须跑 `npm run check:anchors`**——
+   浏览器回归只覆盖剧情**实际走过**的路径，覆盖不到路线表里**声明了但没走**的断路。
+   `yihong` 的 `to_outer` 就是这么藏了整整两回，详见第六节之五。
+3. **「查无此人」的样本已换成「彩云」**（`tests/browser-smoke.mjs`）。
    判据要覆盖**所有可搜路径**：正文、标题、地点、在场人物、段 id。
    只查正文不够——名字出现在地点或人物表里照样能命中。
-3. **美术服务器离线时的替代通道**（这一回实战用上了，值得记住）：
+4. **美术服务器离线时的替代通道**（这一回实战用上了，值得记住）：
    - `192.168.4.66` 整台机器脱网了（ARP `incomplete`、路由 `REJECT`），
      不是端口或防火墙问题；Tailscale 地址同样不通；网段内也没有备用主机。
    - 替代路径：内置的图像生成能力出**白底全身像** → `scripts/cutout_white_backdrop.py`
@@ -397,3 +492,8 @@ ssh lighthouse "curl -sk -o /dev/null -w '%{http_code}' -H 'Host: stone-direct.y
    - 画风要与既有素材对齐：柔和水墨线条、淡彩、全身、手交、鞋履可见；
      竖构图比方构图更贴近既有立绘。
    - 详见第五节之二。
+5. **提交前先 `git status`**：这一轮整理时发现**第 16–22 回的工作全部没提交**
+   （本地 HEAD 还停在第 20 回，远端更停在第 19 回之前）。
+   `AGENTS.md` 里写的「本仓库的工作树长期处于大量未提交状态」是**历史遗留的描述**，
+   别当成可以一直不提交的许可证——那意味着几轮回目的成果随时可能丢。
+   一次推上去：217 个文件、42367 行。
