@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "note": "场景转场用的叙事方位表。每个 scene 在三级舆图里属于哪一层、等距格坐标是多少、天下图上归哪个区域、以及给读者看的中文地名。这是「让读者知道这段戏发生在哪儿」的示意，不是考据地图：早期回目借图严重（如 night 既当碧纱橱又当黛玉房），一律按该场景的 Tiled 地图标题与主要 place 归类，并在 note 里写明。不要拿它反推原著地理。",
+  "crumbs": {
+    "realm": ["天下舆图"],
+    "capital": ["天下舆图", "京城总览"],
+    "rongguo": ["天下舆图", "京城总览", "荣国府总览"],
+    "ningguo": ["天下舆图", "京城总览", "宁国府总览"],
+    "daguanyuan": ["天下舆图", "京城总览", "荣国府总览", "大观园"]
+  },
+  "regions": {
+    "qinggeng": {"name": "大荒山 · 青埂峰", "col": 5, "row": 7, "tone": "myth"},
+    "taixu": {"name": "太虚幻境", "col": 34, "row": 5, "tone": "myth"},
+    "capital": {"name": "京都 · 神京", "col": 22, "row": 9, "tone": "city"},
+    "jinling": {"name": "应天府 · 金陵", "col": 8, "row": 31, "tone": "city"},
+    "yangzhou": {"name": "扬州 · 维扬", "col": 17, "row": 27, "tone": "town"},
+    "gusu": {"name": "姑苏 · 阊门", "col": 21, "row": 35, "tone": "town"},
+    "jingdong": {"name": "京东 · 刘家庄", "col": 32, "row": 15, "tone": "rural"},
+    "suburb": {"name": "京郊 · 铁槛寺道", "col": 24, "row": 21, "tone": "rural"},
+    "canal": {"name": "运河 · 北上", "col": 20, "row": 18, "tone": "water"},
+    "daru": {"name": "大如州 · 封家田庄", "col": 28, "row": 33, "tone": "rural"}
+  },
+  "levels": {
+    "realm": {"name": "天下舆图", "origin": [520, 40], "scale": 15},
+    "capital": {"name": "京城总览", "origin": [500, 96], "scale": 19},
+    "rongguo": {"name": "荣国府总览", "origin": [500, 96], "scale": 18},
+    "ningguo": {"name": "宁国府总览", "origin": [500, 96], "scale": 18},
+    "daguanyuan": {"name": "大观园", "origin": [500, 96], "scale": 18}
+  },
+  "scenes": {
+    "myth": {"level": "realm", "region": "qinggeng", "col": 5, "row": 7, "name": "大荒山 · 青埂峰", "note": "神话开篇，女娲补天遗石"},
+    "dream": {"level": "realm", "region": "taixu", "col": 33, "row": 4, "name": "太虚幻境 · 灵河（梦中）", "note": "甄士隐梦中，非实地"},
+    "suzhou": {"level": "realm", "region": "gusu", "col": 21, "row": 35, "name": "姑苏 · 仁清巷", "note": "甄士隐宅、葫芦庙"},
+    "lantern": {"level": "realm", "region": "gusu", "col": 23, "row": 34, "name": "姑苏 · 元宵灯市", "note": "英莲走失处"},
+    "ruins": {"level": "realm", "region": "gusu", "col": 22, "row": 36, "name": "姑苏 · 葫芦庙火后", "note": "第一回过场，两个节点、未单独成段"},
+    "farm": {"level": "realm", "region": "daru", "col": 28, "row": 33, "name": "大如州 · 封家田庄", "note": "封肃田庄"},
+    "guowai": {"level": "realm", "region": "yangzhou", "col": 15, "row": 29, "name": "扬州郭外 · 出城山道"},
+    "lin": {"level": "realm", "region": "yangzhou", "col": 17, "row": 27, "name": "扬州 · 林府与江岸", "note": "雨村客寓、林府书斋"},
+    "tavern": {"level": "realm", "region": "yangzhou", "col": 14, "row": 30, "name": "扬州郭外 · 村肆"},
+    "zhitong": {"level": "realm", "region": "yangzhou", "col": 16, "row": 25, "name": "扬州郭外 · 智通寺", "note": "雨村见「身后有余忘缩手」"},
+    "yamen": {"level": "realm", "region": "jinling", "col": 9, "row": 29, "name": "知府衙署 · 雨村仕途"},
+    "c4_yamen": {"level": "realm", "region": "jinling", "col": 8, "row": 31, "name": "应天府 · 刑堂", "note": "葫芦僧乱判葫芦案"},
+    "canal": {"level": "realm", "region": "canal", "col": 20, "row": 18, "name": "运河 · 舟行北上", "note": "黛玉进京、第十八回归省舟中"},
+    "c6_village": {"level": "realm", "region": "jingdong", "col": 32, "row": 15, "name": "京东 · 刘家庄", "note": "狗儿家，刘姥姥一进荣国府的起点"},
+    "c5_taixu": {"level": "realm", "region": "taixu", "col": 34, "row": 5, "name": "太虚幻境 · 孽海情天", "note": "宝玉梦游，非实地"},
+    "c5_mijing": {"level": "realm", "region": "taixu", "col": 33, "row": 8, "name": "迷津 · 黑溪", "note": "梦境尽头"},
+    "c15_road": {"level": "realm", "region": "suburb", "col": 26, "row": 18, "name": "出城大路 · 铁槛寺道"},
+    "c15_tiejian": {"level": "realm", "region": "suburb", "col": 27, "row": 16, "name": "铁槛寺 · 停灵"},
+    "c15_shuiyue": {"level": "realm", "region": "suburb", "col": 29, "row": 14, "name": "水月庵（馒头庵）"},
+    "c15_village": {"level": "realm", "region": "suburb", "col": 30, "row": 18, "name": "铁槛寺下 · 村庄", "note": "二丫头纺线处"},
+
+    "capital": {"level": "capital", "region": "capital", "col": 20, "row": 10, "name": "京城 · 宁荣街", "note": "街口、换轿、西角门外"},
+    "xiren_home": {"level": "capital", "region": "capital", "col": 13, "row": 13, "name": "袭人家 · 院与里屋", "note": "第十九回花家，在京城内、荣府外"},
+    "c10_jinhome": {"level": "capital", "region": "capital", "col": 27, "row": 13, "name": "金荣家 · 小院", "note": "家塾附读人家，府外"},
+
+    "entry": {"level": "rongguo", "region": "capital", "col": 12, "row": 26, "name": "荣国府 · 垂花门 · 贾母院", "note": "进府第一进，黛玉初到"},
+    "night": {"level": "rongguo", "region": "capital", "col": 12, "row": 23, "name": "贾母院 · 碧纱橱", "note": "早期借作宝玉黛玉住处；第二十一回「黛玉房」亦借此时，按地图标题归一"},
+    "dinner": {"level": "rongguo", "region": "capital", "col": 10, "row": 18, "name": "贾母院 · 后房与晚膳", "note": "第十八回后亦借作大观园正殿"},
+    "central": {"level": "rongguo", "region": "capital", "col": 23, "row": 25, "name": "荣禧堂 · 五间大正房"},
+    "wang": {"level": "rongguo", "region": "capital", "col": 27, "row": 22, "name": "王夫人院 · 东廊三间"},
+    "east": {"level": "rongguo", "region": "capital", "col": 35, "row": 27, "name": "贾赦东院 · 黑油大门"},
+    "c4_lixiang": {"level": "rongguo", "region": "capital", "col": 34, "row": 6, "name": "荣府东北角 · 梨香院", "note": "薛家初入京住处"},
+    "c7_lixiang": {"level": "rongguo", "region": "capital", "col": 34, "row": 8, "name": "梨香院 · 薛姨妈处", "note": "与 c4_lixiang 同院，坐标略错开便于分辨"},
+    "c6_wangchui": {"level": "rongguo", "region": "capital", "col": 17, "row": 10, "name": "王熙凤院 · 荣府后门", "note": "刘姥姥、周瑞家的走这条线"},
+    "c7_sanchun": {"level": "rongguo", "region": "capital", "col": 20, "row": 14, "name": "三春院 · 迎探惜处"},
+    "c9_school": {"level": "rongguo", "region": "capital", "col": 20, "row": 30, "name": "贾家家塾"},
+    "yucun": {"level": "rongguo", "region": "capital", "col": 23, "row": 32, "name": "贾政书房", "note": "第三回过场，两个节点、未单独成段"},
+    "c12_passage": {"level": "rongguo", "region": "capital", "col": 14, "row": 28, "name": "荣府 · 西边穿堂与房后空屋", "note": "贾瑞冻一夜处"},
+    "c12_sickbed": {"level": "rongguo", "region": "capital", "col": 16, "row": 30, "name": "贾瑞书房 · 风月宝鉴", "note": "第十六回亦借作秦钟病榻"},
+    "jialian_home": {"level": "rongguo", "region": "capital", "col": 25, "row": 19, "name": "荣国府 · 贾琏院", "note": "第二十一回新建，王熙凤院东邻"},
+
+    "c5_ningfu": {"level": "ningguo", "region": "capital", "col": 26, "row": 25, "name": "宁国府 · 会芳园与秦氏卧房"},
+    "c11_tianxiang": {"level": "ningguo", "region": "capital", "col": 18, "row": 15, "name": "天香楼 · 戏台与看楼", "note": "第十一回敬寿辰演戏；place 有借写梨香院，按地图标题归宁府"},
+    "c13_baosha": {"level": "ningguo", "region": "capital", "col": 24, "row": 20, "name": "宁国府 · 三间抱厦", "note": "秦氏丧，凤姐协理处"},
+    "c13_funeral": {"level": "ningguo", "region": "capital", "col": 26, "row": 22, "name": "宁国府 · 上房与停灵"},
+    "c14_funeral": {"level": "ningguo", "region": "capital", "col": 12, "row": 16, "name": "会芳园 · 灵前"},
+    "c14_office": {"level": "ningguo", "region": "capital", "col": 28, "row": 24, "name": "宁国府 · 理事堂"},
+
+    "yihong": {"level": "daguanyuan", "region": "capital", "col": 20, "row": 20, "name": "大观园 · 怡红院", "note": "第二十一回新建，宝玉住处"}
+  }
+}

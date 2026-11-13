@@ -25,8 +25,13 @@
 ## 上线与线上可达性
 
 线上站点是 `https://stone.yan.pub/`（腾讯云 154.8.237.35，站点根 `/www/wwwroot/stone`，`*.yan.pub` 走 CF Tunnel）。
-部署：`bash ~/.workbuddy/skills/yanpub-deploy/scripts/deploy.sh stone <项目>/dist --no-build`，部署前先 `cp -a` 一份
-`/www/wwwroot/stone.bak-<时间戳>` 作回滚点。
+**部署本项目不要用通用 `yanpub-deploy` 脚本**——它会建错 `/www/wwwroot/stone-direct` 目录，
+并用共享通配证书覆盖 `stone-direct` 的独立证书，破坏现有 vhost。正确做法：
+`rsync -az --delete dist/ root@154.8.237.35:/www/wwwroot/stone.new/`，
+再原子换名 `mv /www/wwwroot/stone /www/wwwroot/stone.prev && mv /www/wwwroot/stone.new /www/wwwroot/stone`。
+vhost（`/etc/nginx/conf.d/stone-direct-yan-pub-ssl.conf` → `root /www/wwwroot/stone;`）与独立证书
+`/etc/nginx/ssl/stone-direct.yan.pub.pem` **不动，也不需要 nginx reload**。
+服务器端回环 `curl -sk -H 'Host: stone-direct.yan.pub' https://127.0.0.1/` 返回 200 才算部署成功。
 
 - **CF 的托管挑战会拦住 HTML，且不只拦 curl**：`curl https://stone.yan.pub/` 与**有头 Chrome** 都只拿到
   `403` + `cf-mitigated: challenge`（页面里是 `managed`，即 Managed Challenge）。静态资源不过挑战，`.js/.webp/.css/.ogg`

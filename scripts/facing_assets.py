@@ -87,6 +87,14 @@ CROP_SHAPES = {
     # cut off is one the detector refuses to fit; this one is the shape that
     # reads the heads the other shapes miss.
     'head': (0.30, 0.25, 0.30, 0.35),
+    # Two shapes that reach further down than 'head' does, keeping the pad on
+    # the sides narrow. A face whose hair line is cut off is one the detector
+    # refuses to fit, and on a small chibi the hair sits high and wide, so
+    # the shape that reads it has to carry the head down to the chin without
+    # padding the cheeks away. These two read the heads the shapes above
+    # miss; a reading is only accepted when the two features agree.
+    'low': (0.20, 0.0, 0.20, 0.40),
+    'lower': (0.20, 0.0, 0.20, 0.60),
 }
 
 
@@ -178,6 +186,19 @@ def source_bitmap(key: str):
 
 
 def upscale(image):
+    """Grow a crop to a size the detector accepts, on an opaque ground.
+
+    The crop is flattened onto a paper-coloured background first. Vision
+    reads the pixels it is given, and a transparent pixel carries no skin
+    tone for it to fit a face to: a chibi sprite cropped straight from its
+    RGBA bitmap comes back as "no face measured" even though the very same
+    crop, flattened, reads cleanly. Compositing first is what lets the
+    detector see the head.
+    """
+    if image.mode == 'RGBA':
+        ground = Image.new('RGBA', image.size, (252, 251, 245, 255))
+        ground.alpha_composite(image)
+        image = ground.convert('RGB')
     scale = MIN_FACE_SPAN / max(image.size)
     if scale <= 1:
         return image

@@ -4,7 +4,7 @@
  *  验的是「这一回特有的东西」，不是把全链路再跑一遍：
  *  - 目录里有没有第二十回、七段；
  *  - 七段能否逐段推进、场景是否与设计一致；
- *  - 封底是不是全书终幕（第二十一回还不存在）；
+ *  - 封底与「下一回有没有上线」相称；
  *  - 图鉴里这一回新出场四人（贾环、赵姨娘、史湘云、麝月）的立绘是否画得出来。
  *
  *  存档用一次性 profile：持久化 profile 里存着读过的档，开书会落在回中间。
@@ -14,6 +14,7 @@ import assert from 'node:assert/strict';
 import {existsSync,readFileSync,mkdirSync,rmSync} from 'node:fs';
 import {dismissPickup, dismissLeaf} from './lib/pickup.mjs';
 import {seekSection, openToc} from './lib/toc.mjs';
+import {assertBackCover, isBookFinalNode} from './lib/backcover.mjs';
 import {onlineUrl, onlineTag, onlineArgs, ignoreTlsErrors} from './lib/online.mjs';
 
 const sections=JSON.parse(readFileSync('design/chapter20-sections.json','utf8'));
@@ -42,7 +43,7 @@ async function reading(){
   await page.locator('.loading-screen').waitFor({state:'detached',timeout:120000});
   for(let i=0;i<5;i++){
     const b=page.getByRole('button',{name:'跳过移动',exact:true});
-    if(await b.isVisible().catch(()=>false)){await b.click();await page.waitForTimeout(80);}
+    if(await b.isVisible().catch(()=>false)){await b.click({timeout:1500}).catch(()=>{});await page.waitForTimeout(80);}
   }
   await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim(),undefined,{timeout:60000});
   await page.locator('.game-map[data-scene-ready]').waitFor({timeout:120000});
@@ -86,7 +87,7 @@ try{
   console.log(`${tag} chapter-20 stages walked:`,[...scenes].sort().join(' / '));
   assert.equal(scenes.size,4,'all four chapter-20 stages must be reachable online');
 
-  // ---- 三、封底是全书终幕 ----
+  // ---- 三、封底与「下一回有没有上线」相称 ----
   const lastNode=story[story.length-1].id, beforeLast=story[story.length-2].id;
   await seekSection(page,'c20-qiaoyu');
   await reading();
@@ -96,14 +97,15 @@ try{
   await page.waitForTimeout(300);
   await dismissLeaf(page,false,true);
   const skip=page.getByRole('button',{name:'跳过移动',exact:true});
-  if(await skip.isVisible().catch(()=>false)){await skip.click();await page.waitForTimeout(200);}
+  if(await skip.isVisible().catch(()=>false)){await skip.click({timeout:1500}).catch(()=>{});await page.waitForTimeout(200);}
   await page.getByRole('button',{name:'继续剧情',exact:true}).click();
-  await page.waitForFunction(()=>document.querySelector('.node-label')?.textContent==='终幕',undefined,{timeout:30000});
-  await page.waitForFunction(()=>!!document.querySelector('.leaf-sheet.leaf-back'),undefined,{timeout:15000});
-  const backText=await page.locator('.leaf-sheet.leaf-back').innerText();
+  // 等「走到这一回的末节点」，不等「终幕」标签——终幕只标在全书末节点上
+  // （src/App.tsx 的 state.index===story.length-1）。用共享判定读产品代码的
+  // story 来分「全书末回」与「中间回」，新回上线时这两条都不会踩坑。
+  const endLabel=isBookFinalNode(lastNode)?'终幕':lastNode;
+  await page.waitForFunction(label=>document.querySelector('.node-label')?.textContent===label,endLabel,{timeout:30000});
+  const {backText}=await assertBackCover(page,20);
   console.log(`${tag} back cover:`,backText.replace(/\n+/g,' | ').slice(0,120));
-  assert.ok(backText.includes('全书至此'),'the online back cover must end the book');
-  assert.equal(await page.locator('.leaf-back .leaf-open').count(),0,'the online back cover must not offer a next book');
   await page.screenshot({path:`artifacts/${tag}-c20-back-cover.png`,fullPage:true});
 
   // ---- 四、图鉴里的立绘都画得出来 ----

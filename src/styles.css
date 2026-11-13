@@ -476,3 +476,46 @@ dialog.is-toc{width:min(980px,calc(100% - 30px));height:min(760px,88vh);max-heig
 /* 封底可以收起来：读者读完了这一回，也许想回头再看一眼最后那几行。 */
 .leaf-fold{margin-top:14px;border:0;background:none;font-size:11px;color:#a1916f;letter-spacing:1px;padding:6px 10px;border-radius:3px}
 .leaf-fold:hover{color:#6f6248;text-decoration:underline;text-underline-offset:3px}
+
+/* ---- 大地图定位转场（换场景 / 回目开篇）--------------------------------
+   只盖住 map-panel 的地图部分，给对白面板留出原来的位置。整层不吃指针，
+   只有「跳过」按钮接事件——读者随时能点顶栏的「继续剧情」，浏览器测试
+   也不会被一层看不见的遮罩拦住。z-index 6 压住小场景图，但仍在
+   map-navigation(5)、map-tools(10)、对白面板(4) 与封面/封底(58) 之下。 */
+.scene-locator{position:absolute;inset:0 0 226px;z-index:6;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 42%,#f7f1df,#e6e8d5 78%);
+  animation:locator-in .28s ease both;overflow:hidden}
+@keyframes locator-in{from{opacity:0}to{opacity:1}}
+/* 转场期间把小场景图藏掉：两层图叠在一起会变成一堆看不懂的影子。
+   用 opacity 而不是 visibility：Playwright 把 visibility:hidden 判为不可见，
+   几十个既有测试都在等 .game-map[data-scene-ready] visible，改 visibility 会让
+   它们每次换场景白等一整个转场。上面那层不透明背景已经完整盖住了小图。 */
+.scene-locator-visible .local-map{opacity:0;pointer-events:none}
+/* 转场盖住地图时，视图切换与暂停工具条仍要能点、能看见。 */
+.scene-locator-visible .map-navigation{z-index:7}
+/* 大舆图自带等距方位，小场景那个「北↗东↘」罗盘在转场时该让位。 */
+.scene-locator-visible .local-compass{display:none}
+.locator-svg{position:absolute;inset:96px 0 18px;width:100%;height:calc(100% - 114px)}
+.locator-grid line{vector-effect:non-scaling-stroke}
+.locator-region text,.locator-dot-label{font-family:"Songti SC",serif;letter-spacing:.5px;paint-order:stroke;stroke:#f2ecd9;stroke-width:3px;stroke-linejoin:round}
+/* 顶部信息卡：居中放，避开左侧视图切换、右侧缩放工具条、下方两侧立绘。 */
+.locator-head{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:2;
+  display:flex;align-items:center;justify-content:center;gap:10px 14px;flex-wrap:nowrap;
+  width:max-content;max-width:min(1020px,calc(100% - 330px));
+  background:#fbf6e8f2;border:1px solid #d3c6a3;border-radius:8px;
+  box-shadow:0 4px 20px #4a5c3f1c;padding:9px 14px}
+.locator-kicker{font-family:"Songti SC",serif;font-size:13px;letter-spacing:2px;color:#7a6034;
+  background:#f3e7cc;border-radius:4px;padding:5px 9px;white-space:nowrap}
+.locator-crumbs{display:flex;align-items:center;gap:4px;font-size:11px;color:#9aa38d;letter-spacing:1px;white-space:nowrap}
+.locator-crumbs i{font-style:normal;margin:0 4px;color:#b6bba6}
+.locator-crumbs span.lit{color:#476a55;font-weight:700}
+.locator-head .locator-place-name{border-left:1px solid #d6cfb8;padding-left:14px}
+.locator-place-name{font-family:"Songti SC",serif;font-size:20px;font-weight:600;letter-spacing:2px;color:#405c48;white-space:nowrap}
+.locator-head .locator-place-meta{border-left:1px solid #d6cfb8;padding-left:14px}
+.locator-place-meta{font-size:10px;color:#8b8a6f;letter-spacing:.5px;max-width:260px;line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.locator-skip{pointer-events:auto;border:1px solid #c8d0b7;background:#f4f6e9;color:#4f6a4b;
+  border-radius:5px;padding:6px 11px;font-size:11px;white-space:nowrap;letter-spacing:1px}
+.locator-skip:hover{border-color:#9cae8b;background:#e9efdc}
+@media(max-width:1050px){.locator-head{max-width:calc(100% - 300px);gap:6px 9px;padding:7px 10px}.locator-kicker{font-size:11px;letter-spacing:1px}.locator-place-name{font-size:17px}.locator-place-meta{display:none}.locator-svg{inset:88px 0 18px;height:calc(100% - 106px)}}
+@media(max-width:700px){.scene-locator{inset:0 0 262px}.locator-head{left:10px;right:10px;top:60px;transform:none;width:auto;max-width:none;gap:4px 8px;padding:6px 9px}.locator-kicker{font-size:10px;letter-spacing:0;padding:3px 6px}.locator-crumbs{font-size:9px}.locator-place-name{font-size:14px;letter-spacing:1px}.locator-skip{font-size:10px;padding:4px 7px}.locator-svg{inset:120px 0 18px;height:calc(100% - 138px)}}
+@media(prefers-reduced-motion:reduce){.scene-locator{animation:none}}

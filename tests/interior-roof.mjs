@@ -2,6 +2,7 @@ import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdirSync} from 'node:fs';
 import { seekSection } from './lib/toc.mjs';
+import { clickSkipIfShown } from './lib/pickup.mjs';
 /**
  * Interior reveal: an `exterior` building must disappear the moment somebody
  * stands on the floor it roofs over (`Art.interiorZone` -> `PlanZones.indoor`),
@@ -19,7 +20,7 @@ page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
 mkdirSync('artifacts',{recursive:true});
 const read=async()=>{
   await page.locator('.loading-screen').waitFor({state:'detached',timeout:60000});
-  for(let i=0;i<10;i++){const b=page.getByRole('button',{name:'跳过移动',exact:true});if(await b.isVisible()){await b.click();await page.waitForTimeout(60);}}
+  await clickSkipIfShown(page,10,60);
   await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim(),undefined,{timeout:60000});
   await page.locator('.game-map[data-scene-ready]').waitFor({timeout:60000});
   await page.waitForTimeout(500);

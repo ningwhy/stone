@@ -13,6 +13,9 @@ import { chapterLeaf, leafTrigger } from './leaves.ts';
 import { prefetchCast, prefetchUpcoming } from './prefetch.ts';
 import { WorldMap, worldLocations, travelRoute, worldLocationFor, levelForScene, levelTabName } from './WorldMap.tsx';
 import type { Travel } from './WorldMap.tsx';
+import { SceneLocator } from './SceneLocator.tsx';
+import type { Locator } from './SceneLocator.tsx';
+import { placeOf } from './scenePlaces.ts';
 import { actionNarration } from './narration.ts';
 import { emotionOf } from './emotion.ts';
 import { audio } from './audio.ts';
@@ -21,8 +24,18 @@ import type { CardDef } from './collection.ts';
 import { ledgerEntries, loadStoredLedger, saveStoredLedger, unlockedLedger, ledgerActors, ledgerFor, ledgerItemTraces, ledgerPortrait, ledgerEntryArt, modeNames, categoryNames } from './ledger.ts';
 import type { LedgerEntry } from './ledger.ts';
 import { artImage } from './art.ts';
+import { cnNumber } from './cnNumber.ts';
 
 type Modal = 'history'|'settings'|'source'|'atlas'|'cast'|'toc'|ActorId|null;
+/** 大地图定位转场的开关。只存「off」，缺省即开启，老存档不受影响。 */
+const LOCATOR_KEY='honglou.scene-locator';
+
+/** 回数写成中文数字：二十二、二十五、三十、一百零三。
+ *
+ *  面板标题上的「前 N 回」要跟着实际回数走。这句话曾经是用一张查表算的，
+ *  查表有个上限：上限一满就得回去加一条，加漏了标题上就露出阿拉伯数字
+ *  （写着「前22回 · 人物图鉴」）。回数会一直往上加，所以这里按位算，
+ *  不设上限。实现在 src/cnNumber.ts，有单元测试钉住。 */
 function LedgerRow({entry,got,label}:{entry:LedgerEntry;got:boolean;label:string}) {
   const seal=bookNames[entry.book]??`第${entry.book}回`;
   // 器物账挂器物图，人物账挂那个被转手的人的立绘——账簿里人也得有脸。
@@ -226,16 +239,38 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
     setPickup(null);
   };
   const [overview,setOverview]=useState(false),[travel,setTravel]=useState<Travel|null>(null);
+  // 换场景 / 回目开篇的大地图定位转场。开关记在 localStorage 里，读者关掉后
+  // 刷新页面仍然关着。默认开启。
+  const [locatorEnabled,setLocatorEnabled]=useState(()=>{
+    try{return localStorage.getItem(LOCATOR_KEY)!=='off';}catch{return true;}
+  });
+  const [locator,setLocator]=useState<Locator|null>(null);
+  const pendingLocator=useRef<Locator|null>(null);
+  const leafRef=useRef<'cover'|'back'|null>(null);
+  const reducedMotion=useMemo(()=>{
+    try{return window.matchMedia?.('(prefers-reduced-motion: reduce)').matches??false;}catch{return false;}
+  },[]);
   // 回目封面与封底：一回就像一本小书，前面有封面，后面有封底。
   // 读者自己翻页——封面要按「展开本回」才进入，封底要按「开启下一回」才走。
   // 触发点是节点本身：读到某回的第一个节点就出封面，读完某回的最后一个
   // 节点就出封底，回与回之间因此有了一次停顿，而不是一路滑过去。
   const [leaf,setLeaf]=useState<'cover'|'back'|null>(null);
+  // 触发 effect 读取当前封面状态但不把它列进依赖（否则收封面也会触发一次定位）。
+  leafRef.current=leaf;
   const book=chapters.find(c=>c.id===step.chapter)?.book??1;
   const leafData=useMemo(()=>chapterLeaf(book),[book]);
+  // 面板标题里「前 N 回」这种说法要跟着实际回数走，写死数字会在新增回目后
+  // 变成一句假话（写着「前十五回 · 人物图鉴」，里头其实已经有第十七回的人）。
+  const bookTotal=useMemo(()=>Math.max(...Object.keys(bookNames).map(Number)),[]);
+  // 中文数字由回数**算**出来，不查表：查表的做法上限一满就得回来加一条，
+  // 加漏了标题上就露出阿拉伯数字（这个坑已经犯过一次）。
+  const bookTotalCn=useMemo(()=>cnNumber(bookTotal),[bookTotal]);
+  const bookScope=`前${bookTotalCn}回`;
   const nextBook=useMemo(()=>{
-    // 下一回是哪一回：按回次往后找第一回有剧情的。
-    for(let b=book+1;b<=15;b++)if(chapterLeaf(b))return b;
+    // 下一回是哪一回：按回次往后找第一回有剧情的。上限取自 bookNames，
+    // 写死数字会在新增回目后悄悄截断链条（第 15 回封底后就没有「开启下一回」了）。
+    const lastBook=Math.max(...Object.keys(bookNames).map(Number));
+    for(let b=book+1;b<=lastBook;b++)if(chapterLeaf(b))return b;
     return null;
   },[book]);
   // 读到的节点落在封面或封底的位置上时，把那一页推出来。
@@ -257,16 +292,29 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
     // 下去会以为按钮坏了。翻页的规矩是「该有就有、该无就无」，所以这
     // 里两种情况都要落到 setLeaf 上。
     setLeaf(trigger);
+    // 「收起过」这个标记只在本回末节点上有意义：读者停在这儿、把封底
+    // 收了起来，于是推进按钮要让出位置给「回到封底」。一离开这个节点
+    // （往回翻、目录跳读、或走进下一回），标记就作废——否则在别的节点上
+    // 按钮会莫名其妙地变成「回到封底」。
+    if(!leafData||step.id!==leafData.lastNode)setFoldedBack(false);
   },[step.id,leafData,state.index]);
   const closeLeaf=()=>{setLeaf(null);audio.play('sfx-page',.7);};
   // 封底可以收起来：读者读完最后一段，也许想回头再看一眼那几行。按 Escape
   // 或点纸页以外的地方，封底就退下去，人还停在本回的最后一句。
   // 封面不行——封面是这一回的开场，得按「展开本回」才进去。
+  //
+  // ★ 收起之后按钮让位给「回到封底」，但**只在全书末节点**如此：那里没有
+  //   下一回可进，「继续剧情」按下去只会重走一遍已经读完的戏，与其给一个
+  //   走不通的按钮，不如把封底重新翻出来。非末节点照旧可以推进——下一回的
+  //   封面是到达那一回首个节点时自己翻出来的（见 leaves.ts 的 leafTrigger），
+  //   收起封底并不会跳过它。
+  const [foldedBack,setFoldedBack]=useState(false);
   useEffect(()=>{
     if(leaf!=='back')return;
     const handler=(event:KeyboardEvent)=>{
       if(event.key!=='Escape')return;
       event.preventDefault();
+      setFoldedBack(true);
       closeLeaf();
     };
     window.addEventListener('keydown',handler);
@@ -337,6 +385,54 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
     else if(prev.index!==state.index)setTravel(null);
   },[worldId,state.index]);
   useEffect(()=>{if(!travel||state.paused)return;const timer=setInterval(()=>setTravel(t=>t?(t.progress>=1?null:{...t,progress:Math.min(1,t.progress+.025*state.speed)}):null),50);return ()=>clearInterval(timer);},[!!travel,state.paused,state.speed]);
+
+  // ---- 大地图定位转场：换场景或翻开新一回时，先交代「这段戏在哪儿」 ----
+  // 与上面的 travel 是两件事：travel 是荣国府内沿路走的演出，只在第 3–6 回、
+  // 9 个府内地点、且必须自然 +1 步时才触发；定位转场是给**全部**回目用的
+  // 层级交代，跳读、读档、回看造成的场景跳变也要算，所以判据是
+  // 「scene 变了 / chapter 变了」，不是 index 差多少。
+  // 哨兵初值：开卷第一帧没有「从上一处变过来」，但那正是一次回目开篇，
+  // 也该交代方位。否则第一回的读者永远看不到第一次定位。
+  const locatorPrev=useRef({scene:'',chapter:0,enabled:false});
+  useEffect(()=>{
+    const prev=locatorPrev.current;
+    locatorPrev.current={scene:state.sceneId,chapter:step.source.chapter,enabled:locatorEnabled};
+    if(!locatorEnabled)return;
+    const sceneChanged=prev.scene!==state.sceneId;
+    const chapterStart=prev.chapter!==step.source.chapter;
+    // 读者在设置里把开关重新打开时立刻补一次，让开关的效果当场看得见。
+    const justEnabled=!prev.enabled;
+    if(!sceneChanged&&!chapterStart&&!justEnabled)return;
+    // 表里没有坐标的场景不该弹一张空图；check_content 会在构建前拦住这种情况。
+    if(!placeOf(state.sceneId))return;
+    const next:Locator={
+      scene:state.sceneId,fromScene:prev.scene,
+      book:chapters.find(c=>c.id===step.chapter)?.book??step.source.chapter,
+      bookName:bookNames[chapters.find(c=>c.id===step.chapter)?.book??step.source.chapter]??`第${step.source.chapter}回`,
+      reason:chapterStart?'chapter':'scene',progress:0,
+    };
+    // 回目开篇时封面正盖在舞台上，定位动画会被压在暗色毛玻璃下白播一次。
+    // 先挂起，等读者收起封面再放（见下面盯 leaf 的 effect）。
+    if(leafRef.current)pendingLocator.current=next;
+    else setLocator(next);
+  },[state.sceneId,step.source.chapter,locatorEnabled]);
+  useEffect(()=>{
+    if(leaf===null&&pendingLocator.current){setLocator(pendingLocator.current);pendingLocator.current=null;}
+  },[leaf]);
+  // 计时推进。封面/封底期间冻结，免得读者还没翻页图就自己淡出了。
+  // progress 到 1 后再停一拍，让终点高亮与地名能被看清。
+  useEffect(()=>{
+    if(!locator||leaf!==null||state.paused)return;
+    if(locator.progress>=1){const t=setTimeout(()=>setLocator(null),reducedMotion?900:420);return ()=>clearTimeout(t);}
+    const stepSize=reducedMotion?.12:.032;
+    const t=setInterval(()=>setLocator(l=>l?{...l,progress:Math.min(1,l.progress+stepSize*state.speed)}:null),50);
+    return ()=>clearInterval(t);
+  },[!!locator,(locator?.progress??0)>=1,leaf,state.paused,state.speed,reducedMotion]);
+  const skipLocator=useCallback(()=>{pendingLocator.current=null;setLocator(null);},[]);
+  useEffect(()=>{
+    if(locatorEnabled)return;
+    pendingLocator.current=null;setLocator(null);
+  },[locatorEnabled]);
   const travelRef=useRef(false);travelRef.current=!!travel;
   const onScene=useCallback((scene:MapScene|null)=>{sceneRef.current=scene;if(scene){scene.presentationPaused=travelRef.current;scene.input.enabled=!document.querySelector('dialog[open]');setLoaded(true);readyRef.current=true;setSceneReady(true);
     // QA hook: the browser smoke tests read the live stage through this handle.
@@ -364,10 +460,12 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
     // Opening a panel pauses the performance through the engine's overlay flag, which
     // would otherwise switch the auto-play off as a side effect of looking at the
     // settings. The reader's own choice is kept: auto resumes when the panel closes.
-    if(!automatic||travel||state.paused||state.status!=='reading'||pickup||leaf)return;
+    if(!automatic||travel||!!locator||state.paused||state.status!=='reading'||pickup||leaf)return;
     const timer=setTimeout(()=>engine.advance(),Math.max(3800,step.text.length*130));
     return ()=>clearTimeout(timer);
-  },[automatic,state.paused,state.status,state.index,step.text,engine,travel,pickup,leaf]);
+    // 只依赖 !!locator：转场期间 progress 每 50ms 变一次，若依赖整个对象，
+    // 这个定时器会被反复重建、自动播放永远等不到触发。
+  },[automatic,state.paused,state.status,state.index,step.text,engine,travel,!!locator,pickup,leaf]);
   useEffect(()=>{
     const handler=(event:KeyboardEvent)=>{
       if(event.code!=='Space'||event.repeat||modal||pickup||leaf||['BUTTON','INPUT','SELECT','TEXTAREA'].includes((event.target as HTMLElement)?.tagName))return;
@@ -377,12 +475,15 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
       // walk short (the same as the 跳过移动 button); while the dialogue is waiting,
       // it turns the page. Travelling between two places on the estate map is a
       // journey of its own, and space ends that too.
+      // 定位转场盖在地图上时，空格先把它收掉，不同时翻页——否则读者刚想
+      // 看清地名，剧情已经走到下一句了。
+      if(locator){skipLocator();return;}
       if(travel){setTravel(null);return;}
       if(state.status==='moving'){engine.skip();return;}
       audio.play('sfx-page');engine.advance();
     };
     window.addEventListener('keydown',handler);return ()=>window.removeEventListener('keydown',handler);
-  },[engine,modal,travel,state.status,leaf]);
+  },[engine,modal,travel,!!locator,skipLocator,state.status,leaf]);
   useEffect(()=>{if(!notice)return;const t=setTimeout(()=>setNotice(''),4500);return ()=>clearTimeout(t);},[notice]);
   const load=()=>{
     try {const value=localStorage.getItem(SAVE_KEY);if(!value)throw new Error('还没有保存的进度');engine.restore(JSON.parse(value));setAutomatic(false);setNotice('已恢复地图与对白进度');}
@@ -418,7 +519,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           <small>{step.title}</small>
         </span>
       </button>
-      <span className="reading-progress" title={`${state.index+1} / ${story.length}`}>{progress}%<progress max="100" value={progress} aria-label="前十五回剧情进度"/></span>
+      <span className="reading-progress" title={`${state.index+1} / ${story.length}`}>{progress}%<progress max="100" value={progress} aria-label={`${bookScope}剧情进度`}/></span>
       <nav className="playback-controls" aria-label="演出控制">
         {/* One switch, not three. It reads 自动 while the story is waiting for the reader
             and 暂停 while the story is running itself -- the label always names what the
@@ -445,12 +546,23 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
           onClick={()=>{const next=!muted;setMuted(next);audio.setMuted(next);}}>
           <Icon name={muted?'mute':'sound'}/>
         </button>
-        {ended?<button className="next-button" onClick={restart}>再走一回 <Icon name="reset"/></button>:inMotion?<button className="next-button secondary" disabled={state.paused} onClick={()=>{if(travel)setTravel(null);else engine.skip();}}>跳过移动 <Icon name="chevron"/></button>:leaf==='back'?<span className="next-button-hint">本回目完 · 请在封底开启下一回</span>:<button className="next-button" disabled={state.paused||state.status==='error'} onClick={()=>{audio.play('sfx-page');engine.advance();}}>继续剧情 <Icon name="arrow"/></button>}
+        {/* 顶栏这个按钮是「读者下一步能做什么」。
+            ★ 「回到封底」只在**全书末节点**折叠时接管按钮：那里没有下一回可进，
+              「继续剧情」按下去只会重走一遍已经读完的戏；读者收起封底后想回头
+              再看一眼那几行，得有个东西能把封底重新翻出来。
+              非末节点收起封底后照旧推进——下一回的封面是到达那一回首个节点时
+              自己翻出来的（leaves.ts 的 leafTrigger），收起封底不会跳过它。
+            ★ 「回到封底」必须排在「再走一回」前面：全书末节点时引擎状态是
+              'ended'，原先 ended 优先，读者一收起封底，按钮就变成「再走一回」，
+              再也回不到那页纸上——「收起封底，回看本回」这个动作就丢了去处。
+            ★ 「再走一回」在封底展开时仍然保留（末回分支），所以它没有变成
+              不可达的动作：回到封底 → 封底翻回 → 顶栏又是「再走一回」。 */}
+        {foldedBack&&ended?<button className="next-button" onClick={()=>{setLeaf('back');}}>回到封底 <Icon name="arrow"/></button>:inMotion?<button className="next-button secondary" disabled={state.paused} onClick={()=>{if(travel)setTravel(null);else engine.skip();}}>跳过移动 <Icon name="chevron"/></button>:leaf==='back'?(ended?<button className="next-button" onClick={restart}>再走一回 <Icon name="reset"/></button>:<span className="next-button-hint">本回目完 · 请在封底开启下一回</span>):ended?<button className="next-button" onClick={restart}>再走一回 <Icon name="reset"/></button>:<button className="next-button" disabled={state.paused||state.status==='error'} onClick={()=>{audio.play('sfx-page');engine.advance();}}>继续剧情 <Icon name="arrow"/></button>}
         <button className="icon-button" aria-label="设置" onClick={()=>setModal('settings')}><Icon name="settings"/></button>
       </nav>
     </header>
     <div className="story-stage">
-        <section className={`map-panel ${inMotion?'map-action':''}`} aria-label="地图演出" data-paused={state.paused}>
+        <section className={`map-panel ${inMotion?'map-action':''} ${locator&&leaf===null?'scene-locator-visible':''}`} aria-label="地图演出" data-paused={state.paused}>
           <div className={overview||travel?'local-map concealed':'local-map'}>
             {snapshot&&<img className="map-snapshot" src={snapshot} alt="" aria-hidden="true" data-fade={sceneReady}/>}
             <GameMap sceneId={state.sceneId} engine={engine} onScene={onScene} onActor={onActor} onProgress={onMapProgress} onSnapshot={setSnapshot}/>
@@ -461,6 +573,9 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
               books 5–6 happen in 宁国府, 太虚幻境 and 刘家庄 — both get the ordered trail
               of that book's stages instead. */}
           {overview&&!atlasLevel?<JourneyMap chapter={step.source.chapter} sceneId={state.sceneId} maps={engine.maps} onVisit={node=>{setOverview(false);setAutomatic(false);engine.seek(node);}}/>:(overview||travel)&&<WorldMap sceneId={worldId} travel={travel} onVisit={id=>{const place=worldLocations.find(l=>l.id===id);const scene=place?.scene??id;const target=place?.start?story.find(s=>s.id===place.start):story.find(s=>s.source.chapter===step.source.chapter&&s.scene===scene)??story.find(s=>s.source.chapter===3&&s.scene===scene);if(target){setTravel(null);setOverview(false);setAutomatic(false);engine.seek(target.id);}}}/>}
+          {/* 换场景 / 回目开篇的方位交代。刻意不进 inMotion：它是给地图区域
+              换一层画面，不是一次演出，顶栏按钮、对白与存档状态机都不该变。 */}
+          {locator&&!overview&&!travel&&leaf===null&&<SceneLocator locator={locator} reducedMotion={reducedMotion} onSkip={skipLocator}/>}
           <div className="map-navigation">
             <div className="view-switch" aria-label="地图视图"><button aria-pressed={!overview&&!travel} onClick={()=>{setTravel(null);setOverview(false);}}>当前场景</button><button aria-pressed={overview||!!travel} onClick={()=>setOverview(true)}>{overviewLabel}</button></div>
             <span className="current-place">{travel?`${worldLocations.find(l=>l.id===travel.from)?.name} → ${worldLocations.find(l=>l.id===travel.to)?.name}`:step.place}</span>
@@ -497,10 +612,15 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
     {/* 封面与封底：盖在舞台之上的一页纸。读者翻过去才继续，目录与回看不
         受影响——这一页只挡住演出，不挡住别的操作。 */}
     {leaf==='cover'&&<ChapterCover book={book} onOpen={closeLeaf}/>}
-    {leaf==='back'&&<ChapterBackCover book={book} nextBook={nextBook} onOpen={()=>{
+    {leaf==='back'&&<ChapterBackCover book={book} nextBook={nextBook} onFold={()=>{setFoldedBack(true);closeLeaf();}} onOpen={()=>{
       // 封底之后就是下一回的开头：往下走一步，接着那一回的封面就翻出来。
       // 翻页音由 closeLeaf 放一次就好——这里再放一次就成了叠音。
       closeLeaf();
+      // 封底是在末节点的演出结束时翻出来的，但读者可能手快：本回最后一个
+      // 节点还带着一段效果或走动时，引擎仍停在「演出中」，而 advance 只在
+      // 「读完」时才肯往前走一步——那一下会什么也不发生。先把这一段收掉，
+      // 再走这一步。
+      if (engine.getSnapshot().status==='moving') engine.skip();
       engine.advance();
     }}/>}
     {notice&&<div className="toast" role="status">{notice}</div>}
@@ -525,11 +645,11 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
       </section>
     </div>}
     <dialog ref={dialog} className={modal==='atlas'?(atlasTab==='ledger'?'is-ledger':'is-atlas'):modal==='toc'?'is-toc':''} onCancel={event=>{event.preventDefault();setModal(null);}} onClick={event=>{if(event.target===dialog.current)setModal(null);}}>
-      <div className="modal-header"><h2>{modal==='history'?'对白回看':modal==='settings'?'阅读设置':modal==='source'?'原文与改编':modal==='atlas'?'前十五回 · 册页':modal==='cast'?'前十五回 · 人物图鉴':modal==='toc'?'目录':character?.fullName}</h2><button className="icon-button" aria-label="关闭弹窗" onClick={()=>setModal(null)}><Icon name="close"/></button></div>
+      <div className="modal-header"><h2>{modal==='history'?'对白回看':modal==='settings'?'阅读设置':modal==='source'?'原文与改编':modal==='atlas'?`${bookScope} · 册页`:modal==='cast'?`${bookScope} · 人物图鉴`:modal==='toc'?'目录':character?.fullName}</h2><button className="icon-button" aria-label="关闭弹窗" onClick={()=>setModal(null)}><Icon name="close"/></button></div>
       {modal==='toc'&&<Toc readLog={readSet} current={step.chapter} onPick={section=>{setModal(null);setAutomatic(false);setTravel(null);engine.seek(section.start);}}/>}
       {modal==='history'&&<div className="history-list">{engine.readHistory().map(entry=><article key={entry.id}><span>{entry.speaker}<small>{entry.id}</small></span><p>{entry.text}</p><button className="text-button" onClick={()=>{setModal(null);setAutomatic(false);engine.seek(entry.id);}}><Icon name="reset"/>回到此处</button></article>)}</div>}
-      {modal==='settings'&&<div className="settings-body"><p>{storageError||savedLabel}</p><div className="save-actions"><button className="text-button" onClick={save} disabled={inMotion}>保存</button><button className="text-button" onClick={()=>{setModal(null);load();}}>读取</button><button className="text-button" onClick={()=>{setModal(null);restart();}}>重玩</button><button className="text-button" onClick={()=>setModal('source')}>原文与改编</button><button className="text-button" onClick={()=>setModal('atlas')}>册页</button><button className="text-button" onClick={()=>setModal('cast')}>人物图鉴</button></div><label>人物行走速度<select value={state.speed} onChange={e=>engine.setSpeed(Number(e.target.value))}><option value="0.5">慢行 · 0.5 倍</option><option value="1">常速 · 1 倍</option><option value="2">快行 · 2 倍</option></select></label><label className="check-label"><input type="checkbox" checked={showGuides} onChange={e=>{setShowGuides(e.target.checked);sceneRef.current?.guides(e.target.checked);}}/>显示地图上的引导路线</label><div className="audio-settings"><span className="audio-settings-title">声音</span><label className="check-label"><input type="checkbox" checked={!muted} onChange={e=>{const on=e.target.checked;setMuted(!on);audio.setMuted(!on);}}/>开启全部声音</label><label>背景音乐<input type="range" min="0" max="100" disabled={muted} value={Math.round(audioPrefs.bgm*100)} onChange={e=>{const v=Number(e.target.value)/100;setAudioPrefs(p=>({...p,bgm:v}));audio.setPrefs({bgm:v});}}/></label><label>音效<input type="range" min="0" max="100" disabled={muted} value={Math.round(audioPrefs.sfx*100)} onChange={e=>{const v=Number(e.target.value)/100;setAudioPrefs(p=>({...p,sfx:v}));audio.setPrefs({sfx:v});}}/></label><p className="audio-hint">关掉总开关后音乐与音效同时静默，两个滑杆仍记住原来的音量；重新打开即恢复。音乐随场景变换：园林、街市、运河、夜、室内、太虚各一曲，每一回另有专属的底乐。首次点击页面后开始播放。</p></div><p>打开设置、人物信息或对白记录时，演出会暂停；关掉弹窗后继续。标题栏的「自动」按钮同时管着自动播放：点它开始自动往下读，再点它停下来。</p><p>进度在每条对白到达后自动保存，刷新页面会恢复。隐私浏览或存储限制可能使保存失败。</p></div>}
-      {modal==='source'&&<div className="source-body"><span className="source-badge">{bookNames[step.source.chapter]} · 完整剧情改编</span><p>前十五回覆盖石头来历、绛珠还泪、甄家兴衰、雨村仕途、冷子兴演说、黛玉入府全程，第四回雨村判案、薛家入京住进梨香院，第五回宁府会芳园与太虚幻境：宝玉随秦可卿入梦，警幻仙姑引览金陵十二钗册籍与红楼梦十二支。第五回 123 个节点接入宁府卧房、太虚幻境、薄命司与迷津三处 40×40 舞台。第六回自秦氏卧房接续：宝玉梦醒后随袭人回贾母处，视角转到千里之外的刘家庄。刘姥姥连宗旧起，代女婿狗儿进荣国府攀亲，经后门投到周瑞家的门下，被引至凤姐上房，得二十两银子与一吊钱而去。第六回 161 个节点，新建刘家庄与荣府后门至凤姐院两处 40×40 舞台，另复用宁府卧房、贾母院与宁荣街三处。第七回自送宫花起：周瑞家的奉薛姨妈之命分送宫花，顺路经三春院、凤姐院至贾母院黛玉处，黛玉冷笑“别人不挑剩下的也不给我”；宁府宴上宝玉初会秦钟。第七回新建梨香院与三春院两处 40×40 舞台，另复用凤姐院、贾母院与宁国府三处。第八回比通灵金莺微露意、探宝钗黛玉半含酸：宝玉探宝钗之病，莺儿捧出金锁、失言点破金玉良缘之配；黛玉赶到半含酸，借雪雁送手炉与冷酒敲打宝玉；薛姨妈留饭，宝玉带酒回贾母院，摔杯怒李嬷嬷。第八回复用梨香院与贾母院两处舞台。第九回恋风流情友入家塾、起嫌疑顽童闹学堂：秦钟附学贾府家塾，与宝玉同窗；薛蟠招惹香怜玉爱，贾瑞假公济私，金荣当面讥讽，茗烟大闹学堂、李贵赶来喝住。第九回新建贾家家塾一处 40×40 舞台。第十回金寡妇贪利权受辱、张太医论病细穷源：金荣回家向寡母胡氏诉屈，胡氏劝他忍气；其姑母璜大奶奶听得侄儿受欺，怒冲冲赶往宁府理论，见了尤氏却未敢气高，听得秦可卿病重，一团盛气早丢在爪洼国去，反转怒为喜而回；贾珍因冯紫英荐了张友士，延入为可卿诊脉，张先生细论病源，断为忧虑伤脾、肝木忒旺，开益气养荣补脾和肝汤。第十回新建金荣家一处 40×40 舞台，另复用宁国府。第十一回庆寿辰宁府排家宴、见熙凤贾瑞起淫心：贾敬寿辰，贾珍备十六大捧盒着贾蓉送去；邢王二夫人与凤姐、宝玉到宁府，尤氏说起可卿之病；凤姐探病，可卿自道任凭神仙也罢、治得病治不得命；凤姐自园中便门出来，猛然从假山石后走出贾瑞，她假意含笑，心里已定下手段。第十一回新建天香楼一处 40×40 舞台，另复用宁国府与凤姐院。第十二回王熙凤毒设相思局、贾天祥正照风月鉴：贾瑞两次赴约，先被关在西边穿堂冻了一夜、又遭代儒家法，后被赚入房后空屋，为贾蔷、贾蓉拿住，写下两张五十两欠契，还挨了一头一身尿粪；羞愤成病，跛足道人授风月宝鉴，嘱只照背面，贾瑞偏照正面，反复不已而亡；年底林如海书信来接黛玉，贾琏陪送回扬州。第十二回新建西边穿堂与房后空屋、贾瑞书房两处 40×40 舞台，另复用凤姐院与贾母院。第十三回秦可卿死封龙禁尉、王熙凤协理宁国府：凤姐夜梦秦氏托付祭田与家塾之议，云板报丧，宝玉呕血赶赴宁府；薛蟠以潢海铁网山的樯木作棺，戴权为贾蓉捐龙禁尉，贾珍平准一千二百两；宝玉荐凤姐协理，凤姐当众点出五件弊病。第十三回新建宁国府会芳园停灵与三间抱厦两处 40×40 舞台，另复用凤姐院与贾母院。第十四回林如海捐馆扬州城、贾宝玉路谒北静王：凤姐卯正二刻点卯理事，定则例、误事者打二十板子并革来升一月银米；昭儿报林如海九月初三日去世；发丧北静王水溶路奠。第十四回新建宁国府理事堂与会芳园两处 40×40 舞台。第十五回王凤姐弄权铁槛寺、秦鲸卿得趣馒头庵：水溶以圣上亲赐的鹡鸰香念珠赠宝玉，凤姐邀宝玉同车出城，村庄打尖、纺车与二丫头，铁槛寺安灵，水月庵智能儿倒茶，净虚为张家金哥退亲事求托三千银子，秦钟与智能儿被宝玉撞破，旺儿连夜修书长安。第十五回新建出城大路、铁槛寺下村庄、铁槛寺与水月庵四处 40×40 舞台。梦境、回忆和转述均另作标识，人物不会因此出现在当下场景。</p><p>底本参考维基文库《红楼梦》，第一至十二回正文已存入项目资料；第十至十二回底本抓取后经乱码校改（累掯、黑魆魆、唿喇喇三处）；第十三至十五回底本直接入库。除诗词和少量短句，页面文字为便于交互阅读的改写；空间布局、尺度与演出为设计补充。</p><p>当前节点：{step.id}；对应原文段落起句：“{step.source.paragraphLead}”。</p><p>地图均为 40×40 等距舞台。总览以列增为东、行增为南；西角门按西墙方案布置，黑油大门开在南墙偏东。西角门具体墙面是设计选择，原文明确的是去程出西角门、往东过正门、入黑油大门的顺序；回程门名未明示，本版选择由正门进入。原文中仅被提及、没有实际到访的地点不安排人物进入；第三回宝玉庙里还愿与贾政斋戒只作叙述。</p><p>美术由本地 ComfyUI 生成，经抠图与定位校准接入。服饰与建筑为原创视觉演绎，有形出场的人物均配有立绘与 Q 版图像；只在谈话中提及的家族成员保留为转述。</p></div>}
+      {modal==='settings'&&<div className="settings-body"><p>{storageError||savedLabel}</p><div className="save-actions"><button className="text-button" onClick={save} disabled={inMotion}>保存</button><button className="text-button" onClick={()=>{setModal(null);load();}}>读取</button><button className="text-button" onClick={()=>{setModal(null);restart();}}>重玩</button><button className="text-button" onClick={()=>setModal('source')}>原文与改编</button><button className="text-button" onClick={()=>setModal('atlas')}>册页</button><button className="text-button" onClick={()=>setModal('cast')}>人物图鉴</button></div><label>人物行走速度<select value={state.speed} onChange={e=>engine.setSpeed(Number(e.target.value))}><option value="0.5">慢行 · 0.5 倍</option><option value="1">常速 · 1 倍</option><option value="2">快行 · 2 倍</option></select></label><label className="check-label"><input type="checkbox" checked={showGuides} onChange={e=>{setShowGuides(e.target.checked);sceneRef.current?.guides(e.target.checked);}}/>显示地图上的引导路线</label><label className="check-label"><input type="checkbox" aria-label="换场景时显示大地图定位" checked={locatorEnabled} onChange={e=>{const on=e.target.checked;setLocatorEnabled(on);try{localStorage.setItem(LOCATOR_KEY,on?'on':'off');}catch{/* 隐私模式下只影响本次会话 */}}}/>换场景时显示大地图定位</label><div className="audio-settings"><span className="audio-settings-title">声音</span><label className="check-label"><input type="checkbox" checked={!muted} onChange={e=>{const on=e.target.checked;setMuted(!on);audio.setMuted(!on);}}/>开启全部声音</label><label>背景音乐<input type="range" min="0" max="100" disabled={muted} value={Math.round(audioPrefs.bgm*100)} onChange={e=>{const v=Number(e.target.value)/100;setAudioPrefs(p=>({...p,bgm:v}));audio.setPrefs({bgm:v});}}/></label><label>音效<input type="range" min="0" max="100" disabled={muted} value={Math.round(audioPrefs.sfx*100)} onChange={e=>{const v=Number(e.target.value)/100;setAudioPrefs(p=>({...p,sfx:v}));audio.setPrefs({sfx:v});}}/></label><p className="audio-hint">关掉总开关后音乐与音效同时静默，两个滑杆仍记住原来的音量；重新打开即恢复。音乐随场景变换：园林、街市、运河、夜、室内、太虚各一曲，每一回另有专属的底乐。首次点击页面后开始播放。</p></div><p>打开设置、人物信息或对白记录时，演出会暂停；关掉弹窗后继续。标题栏的「自动」按钮同时管着自动播放：点它开始自动往下读，再点它停下来。</p><p>进度在每条对白到达后自动保存，刷新页面会恢复。隐私浏览或存储限制可能使保存失败。</p></div>}
+      {modal==='source'&&<div className="source-body"><span className="source-badge">{bookNames[step.source.chapter]} · 完整剧情改编</span><p>前十九回覆盖石头来历、绛珠还泪、甄家兴衰、雨村仕途、冷子兴演说、黛玉入府全程，第四回雨村判案、薛家入京住进梨香院，第五回宁府会芳园与太虚幻境：宝玉随秦可卿入梦，警幻仙姑引览金陵十二钗册籍与红楼梦十二支。第五回 123 个节点接入宁府卧房、太虚幻境、薄命司与迷津三处 40×40 舞台。第六回自秦氏卧房接续：宝玉梦醒后随袭人回贾母处，视角转到千里之外的刘家庄。刘姥姥连宗旧起，代女婿狗儿进荣国府攀亲，经后门投到周瑞家的门下，被引至凤姐上房，得二十两银子与一吊钱而去。第六回 161 个节点，新建刘家庄与荣府后门至凤姐院两处 40×40 舞台，另复用宁府卧房、贾母院与宁荣街三处。第七回自送宫花起：周瑞家的奉薛姨妈之命分送宫花，顺路经三春院、凤姐院至贾母院黛玉处，黛玉冷笑“别人不挑剩下的也不给我”；宁府宴上宝玉初会秦钟。第七回新建梨香院与三春院两处 40×40 舞台，另复用凤姐院、贾母院与宁国府三处。第八回比通灵金莺微露意、探宝钗黛玉半含酸：宝玉探宝钗之病，莺儿捧出金锁、失言点破金玉良缘之配；黛玉赶到半含酸，借雪雁送手炉与冷酒敲打宝玉；薛姨妈留饭，宝玉带酒回贾母院，摔杯怒李嬷嬷。第八回复用梨香院与贾母院两处舞台。第九回恋风流情友入家塾、起嫌疑顽童闹学堂：秦钟附学贾府家塾，与宝玉同窗；薛蟠招惹香怜玉爱，贾瑞假公济私，金荣当面讥讽，茗烟大闹学堂、李贵赶来喝住。第九回新建贾家家塾一处 40×40 舞台。第十回金寡妇贪利权受辱、张太医论病细穷源：金荣回家向寡母胡氏诉屈，胡氏劝他忍气；其姑母璜大奶奶听得侄儿受欺，怒冲冲赶往宁府理论，见了尤氏却未敢气高，听得秦可卿病重，一团盛气早丢在爪洼国去，反转怒为喜而回；贾珍因冯紫英荐了张友士，延入为可卿诊脉，张先生细论病源，断为忧虑伤脾、肝木忒旺，开益气养荣补脾和肝汤。第十回新建金荣家一处 40×40 舞台，另复用宁国府。第十一回庆寿辰宁府排家宴、见熙凤贾瑞起淫心：贾敬寿辰，贾珍备十六大捧盒着贾蓉送去；邢王二夫人与凤姐、宝玉到宁府，尤氏说起可卿之病；凤姐探病，可卿自道任凭神仙也罢、治得病治不得命；凤姐自园中便门出来，猛然从假山石后走出贾瑞，她假意含笑，心里已定下手段。第十一回新建天香楼一处 40×40 舞台，另复用宁国府与凤姐院。第十二回王熙凤毒设相思局、贾天祥正照风月鉴：贾瑞两次赴约，先被关在西边穿堂冻了一夜、又遭代儒家法，后被赚入房后空屋，为贾蔷、贾蓉拿住，写下两张五十两欠契，还挨了一头一身尿粪；羞愤成病，跛足道人授风月宝鉴，嘱只照背面，贾瑞偏照正面，反复不已而亡；年底林如海书信来接黛玉，贾琏陪送回扬州。第十二回新建西边穿堂与房后空屋、贾瑞书房两处 40×40 舞台，另复用凤姐院与贾母院。第十三回秦可卿死封龙禁尉、王熙凤协理宁国府：凤姐夜梦秦氏托付祭田与家塾之议，云板报丧，宝玉呕血赶赴宁府；薛蟠以潢海铁网山的樯木作棺，戴权为贾蓉捐龙禁尉，贾珍平准一千二百两；宝玉荐凤姐协理，凤姐当众点出五件弊病。第十三回新建宁国府会芳园停灵与三间抱厦两处 40×40 舞台，另复用凤姐院与贾母院。第十四回林如海捐馆扬州城、贾宝玉路谒北静王：凤姐卯正二刻点卯理事，定则例、误事者打二十板子并革来升一月银米；昭儿报林如海九月初三日去世；发丧北静王水溶路奠。第十四回新建宁国府理事堂与会芳园两处 40×40 舞台。第十五回王凤姐弄权铁槛寺、秦鲸卿得趣馒头庵：水溶以圣上亲赐的鹡鸰香念珠赠宝玉，凤姐邀宝玉同车出城，村庄打尖、纺车与二丫头，铁槛寺安灵，水月庵智能儿倒茶，净虚为张家金哥退亲事求托三千银子，秦钟与智能儿被宝玉撞破，旺儿连夜修书长安。第十五回新建出城大路、铁槛寺下村庄、铁槛寺与水月庵四处 40×40 舞台。第十六回贾政生辰，六宫都太监降旨，宝玉往宁府赏梅访妙玉时听得秦钟病重，贾政命贾琏送海棠花去怡红院，袭人抱而泣，探春一见便知其意；元春晋封贤德妃，秦钟夭逝于黄泉路。第十七回大观园试才题对额，贾政率众清客入园，宝玉以「有凤来仪」「蘅芷清芬」「杏帘在望」等题额压倒元白，赐名怡红快绿、蘅芷苑、稻香村、浣葛山庄，正殿玉题「顾恩思义」，限明日题完园中全部亭台；至一大桥前沁芳闸边，宝玉见蕉叶覆鹿、芭蕉分绿，题「西风此木独扶」。第十六回复用宁府卧房、荣国府西角门、怡红院与正厅四处舞台；第十七回复用正厅一处舞台，六段全部发生在大观园之内。第十八回林黛玉误剪香囊袋、贾元春归省庆元宵：宝玉自贾政处回园，小厮解去佩物，黛玉误剪香囊赌气，贾母命姊妹一处顽顽；贾蔷自姑苏采买十二个女戏入梨香院教演，妙玉以「侯门公府，必以贵势压人」辞帖；十月尽备办停当，贾政择日题本，奉准上元之日恩准贾妃省亲；元宵关防设伏，太监指示何处更衣、何处跪受，何处开宴；迎驾时贾母率合族女眷跪于大门外，版舆入仪门，见「体仁沐德」灯匾；贾妃进园登舟，游至石牌坊，命换「天仙宝境」为「省亲别墅」；行宫受礼毕，至贾母正室行家礼，携手呜咽，宝玉因无谕不敢擅入；园中赐名题诗，宝玉作「怡红快绿」「潇湘馆」「蘅芜苑」三首，黛玉代作「杏帘在望」，宝钗见「绿玉春犹卷」而悄推宝玉改「绿蜡」，元春称赏薛林二妹；点戏四出《豪宴》《乞巧》《仙缘》《离魂》，龄官另受赐物，奉谕再作两出戏，龄官自执意不作《游园》《惊梦》，定要作《相约》《相骂》；贾妃题「苦海慈航」匾，另恩幽尼女道，按等例赐物，忍痛回銮，众人扶出园门。第十八回 135 个节点，分十六段，复用荣国府西角门、贾母院后房、王夫人东廊、荣禧堂、宁荣街、运河、梨香院七处既有舞台，未新建地图，亦未新增人物美术。第十九回情切切良宵花解语、意绵绵静日玉生香：贾妃赐出糖蒸酥酪，宝玉往宁府看戏，戏文《丁郎认父》《孙行者大闹天宫》锣鼓喧天；小书房撞破茗烟与卍儿之事，宝玉放那丫头去了；茗烟引路出城，半里路到袭人家，花自芳母子「茅檐草舍，又窄又脏」殷勤待客，袭人用自己的手炉脚炉茶杯待宝玉，又摘通灵玉与姊妹们传看，雇小轿送归；归后李嬷嬷吃了留给袭人的酥酪，自道「丈八的灯台——照见人家，照不见自家」，提起茜雪之茶赌气而去；袭人假说家里要赎身，以「两姨妹子」出嫁之语试探，说出自幼卖作死契的来历，劝下三件事：不说化灰化烟、在老爷跟前作出喜读书的样子、再不可毁僧谤道吃人嘴上胭脂；次日袭人感寒，宝玉往探黛玉，黛玉歇午不起，二人对面躺著说鬼话，宝玉闻得黛玉袖中幽香，「暖香」「冷香」互相打趣，又编「扬州有一座黛山」「山上有个林子洞」的故典，被黛玉拧嘴，宝钗走来笑他「凡该用故典之时，他偏就忘了」。第十九回 78 个节点，分八段，新建袭人家一处 40×40 舞台，另复用宁国府会芳园、贾母院碧纱橱（作怡红院）、贾母院后房（作黛玉歇午处）四处舞台。梦境、回忆和转述均另作标识，人物不会因此出现在当下场景。</p><p>底本参考维基文库《红楼梦》，第一至十二回正文已存入项目资料；第十至十二回底本抓取后经乱码校改（累掯、黑魆魆、唿喇喇三处）；第十三至十五回底本直接入库；第十六、十七、十八、十九回底本亦为维基文库原文全文，该四回每个节点的「原文段落起句」均可在底本中逐字查得，且节点正文本身亦逐字取自底本，仅引号样式作统一排版处理。除诗词和少量短句，页面文字为便于交互阅读的改写；空间布局、尺度与演出为设计补充。</p><p>当前节点：{step.id}；对应原文段落起句：“{step.source.paragraphLead}”。</p><p>地图均为 40×40 等距舞台。总览以列增为东、行增为南；西角门按西墙方案布置，黑油大门开在南墙偏东。西角门具体墙面是设计选择，原文明确的是去程出西角门、往东过正门、入黑油大门的顺序；回程门名未明示，本版选择由正门进入。原文中仅被提及、没有实际到访的地点不安排人物进入；第三回宝玉庙里还愿与贾政斋戒只作叙述。</p><p>美术由本地 ComfyUI 生成，经抠图与定位校准接入。服饰与建筑为原创视觉演绎，有形出场的人物均配有立绘与 Q 版图像；只在谈话中提及的家族成员保留为转述。</p></div>}
       {modal==='atlas'&&<div className="atlas-body">
         <div className="atlas-tabs" role="tablist" aria-label="册页视图">
           <button role="tab" aria-selected={atlasTab==='maps'} onClick={()=>setAtlasTab('maps')}>地图</button>

@@ -5,9 +5,9 @@
 
 ## 总览
 
-- 位图总数 **171**（立绘 75、Q版 75、表情变体 21）
-- 朝左 **27**，朝右 **144**
-- 依据：实测 **114**、目视裁决 **49**
+- 位图总数 **179**（立绘 79、Q版 79、表情变体 21）
+- 朝左 **27**，朝右 **152**
+- 依据：实测 **121**、目视裁决 **50**
 
 「朝左 / 朝右」指的是**原图**里脸偏向画面的哪一侧——不是角色在剧情里该朝哪边。
 运行时用它决定该用原图还是左右镜像：要求显示的一侧与原图不符时才镜像。
@@ -20,6 +20,8 @@
 | `ban_er-portrait` | ban_er | 立绘 | **朝右** | 实测·3票 |
 | `bao_zhu-chibi` | bao_zhu | Q版 | **朝右** | 目视 |
 | `bao_zhu-portrait` | bao_zhu | 立绘 | **朝右** | 实测·3票 |
+| `cui_lv-chibi` | cui_lv | Q版 | **朝右** | 目视 |
+| `cui_lv-portrait` | cui_lv | 立绘 | **朝右** | 实测·3票 |
 | `dai_quan-chibi` | dai_quan | Q版 | **朝右** | 实测·3票 |
 | `dai_quan-portrait` | dai_quan | 立绘 | **朝左** | 实测·2票 |
 | `er_ya_tou-chibi` | er_ya_tou | Q版 | **朝右** | 目视 |
@@ -30,6 +32,8 @@
 | `jia_dairu-portrait` | jia_dairu | 立绘 | **朝左** | default-unmeasured |
 | `jia_huan-chibi` | jia_huan | Q版 | **朝右** | 目视 |
 | `jia_huan-portrait` | jia_huan | 立绘 | **朝右** | 实测·3票 |
+| `jia_lan-chibi` | jia_lan | Q版 | **朝右** | 实测·2票 |
+| `jia_lan-portrait` | jia_lan | 立绘 | **朝右** | 实测·3票 |
 | `jia_lian-chibi` | jia_lian | Q版 | **朝右** | 实测·3票 |
 | `jia_lian-portrait` | jia_lian | 立绘 | **朝左** | 实测·1票 |
 | `jia_qiang-chibi` | jia_qiang | Q版 | **朝左** | default-unmeasured |
@@ -71,6 +75,8 @@
 | `shui_rong-chibi` | shui_rong | Q版 | **朝右** | 目视 |
 | `shui_rong-portrait-mourning` | shui_rong | 变体·mourning | **朝右** | 实测·1票 |
 | `shui_rong-portrait` | shui_rong | 立绘 | **朝右** | 实测·3票 |
+| `si_er-chibi` | si_er | Q版 | **朝右** | 实测·1票 |
+| `si_er-portrait` | si_er | 立绘 | **朝右** | 实测·3票 |
 | `wang_er-chibi` | wang_er | Q版 | **朝右** | 实测·4票 |
 | `wang_er-portrait` | wang_er | 立绘 | **朝左** | 目视 |
 | `ying_er-chibi` | ying_er | Q版 | **朝右** | 实测·3票 |
@@ -89,6 +95,8 @@
 | `zhi_neng-portrait` | zhi_neng | 立绘 | **朝右** | 实测·3票 |
 | `zhou_rui-chibi` | zhou_rui | Q版 | **朝左** | 目视 |
 | `zhou_rui-portrait` | zhou_rui | 立绘 | **朝右** | 实测·3票 |
+| `zijun-chibi` | zijun | Q版 | **朝右** | 实测·1票 |
+| `zijun-portrait` | zijun | 立绘 | **朝右** | 实测·3票 |
 | `maid-chibi` | 丫鬟 | Q版 | **朝右** | 目视 |
 | `maid-portrait` | 丫鬟 | 立绘 | **朝右** | 实测·3票 |
 | `messenger-chibi` | 传话人 | Q版 | **朝右** | 目视 |

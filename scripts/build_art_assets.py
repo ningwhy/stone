@@ -74,9 +74,21 @@ if manifest_path.exists():
     except json.JSONDecodeError: existing={}
 calibrated=set(assets)
 for key,entry in existing.items():
-    if key in calibrated: continue
-    if not (ROOT/'public'/entry.get('image','').lstrip('/')).exists(): continue
-    assets[key]=entry
+ if key in calibrated:
+  # A character that was painted by the identity pipeline but is not in
+  # approved.json keeps its face box in the manifest only. The calibration run
+  # above cannot reproduce that block (apply_identity has no record for it), so
+  # carrying it over is the only way the album keeps cropping the face. The
+  # geometry must still match the pixel the box was measured on, otherwise the
+  # crop would drift, so a mismatch is reported instead of carried silently.
+  old_identity=entry.get('identity');new_identity=assets[key].get('identity')
+  if old_identity and not new_identity:
+   if old_identity.get('faceBox') and (entry.get('width'),entry.get('height'))!=(assets[key].get('width'),assets[key].get('height')):
+    print(f'WARNING {key}: geometry changed {entry.get("width")}x{entry.get("height")} -> {assets[key].get("width")}x{assets[key].get("height")}; identity face box may drift')
+   assets[key]['identity']=old_identity
+  continue
+ if not (ROOT/'public'/entry.get('image','').lstrip('/')).exists(): continue
+ assets[key]=entry
 manifest={'version':1,'tilewidth':128,'tileheight':64,'assets':assets}
 # indent=1 matches build_emotions.py and restore_emotion_manifest.py, so whichever
 # of the three writers runs last the file keeps the same shape and the diff stays

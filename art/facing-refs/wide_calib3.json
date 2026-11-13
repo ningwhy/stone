@@ -1,0 +1,125 @@
+{
+ "baochai-chibi": {
+  "votes": {
+   "left": 0,
+   "right": 2
+  },
+  "details": [
+   "tight:right",
+   "wide:right"
+  ]
+ },
+ "daiyu-chibi": {
+  "votes": {
+   "left": 0,
+   "right": 2
+  },
+  "details": [
+   "tight:right",
+   "wide:right"
+  ]
+ },
+ "feng-chibi": {
+  "votes": {
+   "left": 0,
+   "right": 2
+  },
+  "details": [
+   "tight:right",
+   "wide:right"
+  ]
+ },
+ "baoyu-chibi": {
+  "votes": {
+   "left": 0,
+   "right": 3
+  },
+  "details": [
+   "tight:right",
+   "wide:right",
+   "wider:right"
+  ]
+ },
+ "dai_quan-portrait": {
+  "votes": {
+   "left": 1,
+   "right": 0
+  },
+  "details": [
+   "wide:left"
+  ]
+ },
+ "jia_lian-portrait": {
+  "votes": {
+   "left": 0,
+   "right": 0
+  },
+  "details": []
+ },
+ "jia_rui-portrait": {
+  "votes": {
+   "left": 3,
+   "right": 0
+  },
+  "details": [
+   "tight:left",
+   "wide:left",
+   "wider:left"
+  ]
+ },
+ "menzi-portrait": {
+  "votes": {
+   "left": 3,
+   "right": 0
+  },
+  "details": [
+   "tight:left",
+   "wide:left",
+   "wider:left"
+  ]
+ },
+ "ming_yan-portrait": {
+  "votes": {
+   "left": 3,
+   "right": 0
+  },
+  "details": [
+   "tight:left",
+   "wide:left",
+   "wider:left"
+  ]
+ },
+ "monk-portrait": {
+  "votes": {
+   "left": 3,
+   "right": 0
+  },
+  "details": [
+   "tight:left",
+   "wide:left",
+   "wider:left"
+  ]
+ },
+ "ruhai-portrait": {
+  "votes": {
+   "left": 3,
+   "right": 0
+  },
+  "details": [
+   "tight:left",
+   "wide:left",
+   "wider:left"
+  ]
+ },
+ "yucun-portrait": {
+  "votes": {
+   "left": 3,
+   "right": 0
+  },
+  "details": [
+   "tight:left",
+   "wide:left",
+   "wider:left"
+  ]
+ }
+}

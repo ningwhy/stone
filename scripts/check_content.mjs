@@ -101,7 +101,7 @@ for(const book of books.keys()){
 // the "original text" claim behind the node stops being verifiable. The bases
 // for chapters 1-15 are editorial notes rather than the book's own words, so
 // only the chapters whose base text is the original are checked here.
-const VERBATIM_BASE=new Set([16,17,18,19,20]);
+const VERBATIM_BASE=new Set([16,17,18,19,20,21,22]);
 for(const book of books.keys()){
  if(!VERBATIM_BASE.has(book))continue;
  const basePath=resolve(root,`docs/chapter${String(book).padStart(2,'0')}-source.txt`);
@@ -244,6 +244,22 @@ for(const file of docFiles){
     if(!text.includes(claim))warnings.push(`collection: ${card.id} quotes text not found in docs/chapter${chapter}-source.txt`);
    }
   }
+ }
+}
+// 场景方位表：换场景/回目开篇的定位动画靠它把 scene 落到大舆图上。
+// 新增回目若用了新 scene 却忘了补表，动画会静默退化成「无坐标」——
+// 读者看不到方位，而所有其它检查还是绿的。所以这里做静态门禁。
+{
+ const placeData=read('design/scene-places.json');
+ const table=placeData.scenes;
+ const used=new Set([...story.map(s=>s.scene),...chapters.map(c=>c.scene)]);
+ for(const scene of used)requireThat(!!table[scene],`scene-places.json: scene ${scene} has no map position`);
+ for(const [scene,entry] of Object.entries(table)){
+  requireThat(used.has(scene),`scene-places.json: ${scene} is not used by any node or section`);
+  requireThat(!!placeData.levels[entry.level],`scene-places.json: ${scene} points at unknown level ${entry.level}`);
+  requireThat(!!placeData.regions[entry.region],`scene-places.json: ${scene} points at unknown region ${entry.region}`);
+  requireThat(!!placeData.crumbs[entry.level],`scene-places.json: level ${entry.level} has no breadcrumb chain`);
+  requireThat(Number.isFinite(entry.col)&&Number.isFinite(entry.row)&&!!entry.name,`scene-places.json: ${scene} has incomplete geometry or name`);
  }
 }
 // 流转账簿：与卡片同一门禁原则——先 WARN 后 FAIL。账面是最不能悄悄腐烂的：

@@ -20,7 +20,13 @@ node tests/asset-scenes.mjs
 node tests/character-identities.mjs
 node tests/interior-roof.mjs      # 外观随室内占位隐藏/恢复、按栋隔离、roof 覆盖
 node tests/actor-facing.mjs       # 全剧情行走帧与对话框立绘的镜像方向（含表情变体）
+npm run test:locator              # 大地图定位转场：45 场景方位表、触发链、两拍动画、跳过/设置
 ```
+
+`test:locator` 见 [大地图定位转场](scene-locator.md)：既查 `design/scene-places.json`
+的静态覆盖，也在浏览器里验回目开篇 / 换场景两种触发、天下层推镜与府内层下钻、
+跳过与自动收起、设置开关、指针透传，以及普通动效下的逐帧单调推进。支持 `TEST_URL`，
+线上可跑 `TEST_URL=https://stone-direct.yan.pub npm run test:locator`。
 
 人物位图新增或重画后，朝向表按下面两步重建，再跑 `actor-facing`：
 
@@ -56,6 +62,7 @@ python3 scripts/verify_character_identities.py
 | 资产/新人物 | 原图参数/候选留存、透明度报告、暗底接触表、脸部灰度与配对、位置/尺寸、浏览器加载 |
 | AI 生图贴图 | 逐条对照母题验收（画面里每件东西都能在母题找到出处）、拼图审图、webp 与生效源图 MSE 对齐，见 [生图纪律](art-prompting.md) |
 | 页面/CSS | 三视口、换立绘不跳高、按钮命中、缩放可读性、弹窗暂停、键盘操作；尺寸类问题加 DOM 实测（`getBoundingClientRect`），详见 [UI 改造的诊断纪律](ui-diagnosis.md) |
+| 定位转场 / 新增 scene | `check:content`（方位表覆盖门禁）、`npm run test:locator`、`npm run test:browser`；新增 scene 必须先在 `design/scene-places.json` 补坐标，见 [大地图定位转场](scene-locator.md) |
 | 新回/存档 | 全流程、新旧中段及旧终幕迁移、坏档恢复、所有演员状态、回看历史无重复 |
 
 不能为了通过测试而把“必须有废墟建筑”改成任意占位；也不能把每张图都必须有两个道具当成美术质量标准。测试应验证实际语义与不变量。截图用于人工判断，新运行成功证据与旧基线截图分别记录。
@@ -82,11 +89,21 @@ python3 scripts/verify_character_identities.py
 | 生成后仍看到旧脸 | 是否 builder 应用 approved；artImage 内容版本；浏览器重新载入 |
 | 面部重建报校准变化 | 原图校准与存档补丁不同，重新评审补丁，不绕校验 |
 | 新回让旧档无法恢复 | 旧 index/终幕 ended 校验、新演员缺状态、没有版本迁移 |
+| 新回上线后**上一回**的封底说「全书至此」 | `design/chapter-titles.json` 缺新回目的回目联 → `Leaves.tsx` 的 `chapterTitle(nextBook)` 返回 null → 走 else 分支。**先在 Node 里实读 `chapterLeaves()`/`bookNames` 确认「下一回是哪一回」算对了，再看组件读的是什么**：数据层对、组件层错 = 某个 lookup 返 null |
+| 收起封底后「回到封底」按钮不见了 | `src/App.tsx` 顶栏按钮的三态判断顺序：凡按**全书状态**判定的分支（如 `ended`，只在全书末节点为真）排在 `foldedBack` 前面，就会在末回把「回到封底」顶掉。**这类分支在非末回永远走不到 = 藏着的缺陷**，加一回当末回时才暴露。修法：`foldedBack && ended` 提到最前面（**且只在末回接管**——见下一条） |
+| 收起封底后读者推不动了 | 反过来：把 `foldedBack` 无条件接到最前面，顶栏被锁成「回到封底」，读者收起封底 → 点「回到封底」翻回纸页 → 再收起，又是「回到封底」，**回末节点上再无前进的路**。而且它挡着的那个理由（「会跳过下一回封面」）**实测不成立**：封面是到达下一回首节点时由 `src/leaves.ts` 的 `leafTrigger` 翻出来的，与封底收没收起无关。修法：`foldedBack` 只在**末回**接管按钮，非末回照旧推进 |
+| 断言把另一个缺陷挡在后面 | `tests/lib/backcover.mjs` 的 `assertFoldedBackIsNotAPassThrough` 曾断言「收起封底后『继续剧情』必须消失」，理由是防「跳过封面」——那条理由是假的，于是断言逼出了一个真缺陷（顶栏死路），还把 `browser-smoke` 弄红了。**改断言前先问「它的理由实测成立吗」**；断言挡住的也许是另一个缺陷，而不是它自己声称的那个 |
+| 渲染机连不上 | 先分清**端口不通**（服务没起：`curl /system_stats` 超时但 ping 得通）与**主机不通**（`route` 报 `REJECT`、`arp` 报 `incomplete` = 整台脱网）。后者要另找出图通道：内置图像生成 → `scripts/cutout_white_backdrop.py` 抠白底（纯白底不需要 SAM）→ 校准 → manifest |
+| 回归报「走到了这一回不该有的场景」 | **先分清是产品的错还是测试的错**。第 20 回曾报 `unexpected stage yihong`（第 21 回的新图）：产品行为是对的，**是测试点错了按钮**——顶栏那**一个**按钮在「跳过移动」/「继续剧情」之间换身份且占同一位置，`if(await skip.isVisible())await skip.click()` 的时间窗里 React 换了按钮，Playwright 重新解析 locator 后那一下落在「继续剧情」上 → **剧情多走一步** → 跨过本回末节点（封底没翻出来、下一回封面也没翻）。修法：改用 `tests/lib/pickup.mjs` 的 `clickSkipIfShown`/`clickForwardIfShown`（按**当下真实文案**取元素 + `dispatchEvent`）。**排查靠探针不靠猜**：插桩 `engine.advance` 看索引、查 DOM 与 `engine.step` 是否撕裂、用 `page.exposeFunction` 把点击实时送回 Node 侧统一时钟对齐事件流（`performance.now()` 跨 `page.evaluate` 不可比） |
+| 线上测试报 `Failed to fetch dynamically imported module: /design/xxx.json` | **`design/` 是开发目录，不随 `dist` 部署**，线上必然 404。测试**不要**在浏览器上下文里 `import('/design/...')` 或 `fetch('/design/...')`——设计数据在测试机上现成，一律在 Node 侧 `readFileSync` 读。`browser-smoke.mjs` 的「第 1 回段落数」曾这么写，线上第一步就挂 |
 | Qwen 图与参考无关 | 官方 API/点分图槽/未删示例槽、prompt 图号、实际保存节点 |
 | ComfyUI 卡住 | 当前队列/服务与网络；不清别人任务、不并行轰炸 |
 | 表情变体不生效 | `manifest.json` 里有没有该 `*-portrait-<emotion>` 条目；`build_art_assets.py` 重建 manifest 会抹掉非校准来源的条目，现已改为合并保留；`check:content` 会检查磁盘上每个 PNG 都已登记 |
 | 某张脸朝向反了 | 该位图在 `design/character-facing.json` 里的记录；先跑 `scripts/facing_assets.py` 重测，再看 `scripts/facing_review_sheet.py` 的目检表；表情变体按自己的键查表，不继承基础立绘 |
 | 改完样式别的界面乱了 | 改了全局选择器却漏了使用点；`grep -rn "\.xxx" src/` 查全使用方，优先加限定而非改基类 |
+| 换场景后大地图切到一片没名字的点 | 该 scene 是 `realm` 层（姑苏/扬州/太虚/京郊…），不该下钻；查 `drill = level !== 'realm'` 与 `detailOpacity`，见 [大地图定位转场](scene-locator.md) |
+| 转场一开，几十个旧测试各自慢一拍 | 小场景图被设成了 `visibility:hidden`；Playwright 判为不可见。改用 `opacity:0`，上面的覆盖层本来就不透明 |
+| 「跳过移动」点击挂 30 秒超时 | 它是一次性演出按钮，会在 `isVisible()` 与 `click()` 之间自己收起。给它短超时并吞掉：跳过是可选加速，不是必经步骤。第 18–21 回及四份线上脚本已统一 |
 | 贴图一直不加载 | 给 `IntersectionObserver` 的 root（`dialog`）或其祖先加了 `overflow`；视口内外各验一次 |
 | 文字排版看着都一样大 | 祖先的通用规则特异性更高（`.atlas-body p` 0,1,1 压过 `.bond-note` 0,1,0）；补同等特异度，改后实测计算字号 |
 | 卡片大小不一 | 内容字数不同导致外框变化；同类卡片外框尺寸必须唯一，文字折行数固定 |

@@ -24,7 +24,8 @@ FACE_BOXES = json.loads((ROOT / 'art/identity/auto-face-boxes.json').read_text()
 
 # Characters drawn by scripts/gen_new_characters.py / gen_ch20_characters.py,
 # outside the calibration pipeline that owns the manifest.
-NEW_CHARACTERS = ['yuanchun', 'jia_lian', 'jia_huan', 'zhao_yiniang', 'shi_xiangyun', 'she_yue']
+NEW_CHARACTERS = ['yuanchun', 'jia_lian', 'jia_huan', 'zhao_yiniang', 'shi_xiangyun', 'she_yue',
+                  'zijun', 'cui_lv', 'si_er', 'jia_lan']
 
 
 def entry_for(character: str, kind: str) -> dict:

@@ -105,6 +105,14 @@ REVIEWED = {
     # Heads read from a single crop. The eye confirms each one, and the
     # confirmation is what makes one measurement enough here.
     'baoyu-chibi': ('right', 'single crop read; confirmed by eye'),
+    # 第二十一回的翠缕 Q 版：检测器在 tight/wide/wider 三种裁切与 900/1400
+    # 两种放大下都读不出脸（全部 NONE）。目视比对：她的鼻尖与嘴基本落在
+    # 两眼中点上，只有极轻微偏右，比 baochai-chibi、si_er-chibi（均为朝右）
+    # 的偏转量级小得多——接近正对。按「鼻嘴同号、正号朝右」的规则记为朝右。
+    'cui_lv-chibi': ('right', 'detector reads no face in any crop; the painted head '
+                              'read by eye against two right-facing chibi as '
+                              'references, the nose and mouth sit on the eye '
+                              'midpoint and lean slightly right'),
     'feng-chibi': ('right', 'single crop read; confirmed by eye'),
     'kongkong-chibi': ('right', 'single crop read; confirmed by eye'),
     'maid-chibi': ('right', 'single crop read; confirmed by eye'),

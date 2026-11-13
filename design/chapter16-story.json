@@ -1,0 +1,843 @@
+[
+  {
+    "chapter": "c16-birth",
+    "scene": "dinner",
+    "place": "荣国府 · 正堂寿宴",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "一日正是贾政的生辰，宁荣二处人丁都齐集庆贺",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-001",
+    "speaker": "narrator",
+    "text": "一日正是贾政的生辰，宁荣二处人丁都齐集庆贺。荣国府正堂之上，贾母坐了首位，邢、王二夫人并凤姐、李纨、迎春、探春、惜春等俱在两侧相陪，宝玉也随在贾母身边，黛玉依在贾母身傍。",
+    "title": "宁荣二处齐集庆贺",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "grandmother",
+        "at": "grandmother_place"
+      },
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "baoyu_greet"
+      },
+      {
+        "type": "show",
+        "actor": "wang",
+        "at": "wang_place"
+      },
+      {
+        "type": "show",
+        "actor": "xing",
+        "at": "liwan_place"
+      },
+      {
+        "type": "show",
+        "actor": "feng",
+        "at": "feng_place"
+      },
+      {
+        "type": "show",
+        "actor": "liwan",
+        "at": "tea_place"
+      },
+      {
+        "type": "show",
+        "actor": "yingchun",
+        "at": "yingchun_place"
+      },
+      {
+        "type": "show",
+        "actor": "tanchun",
+        "at": "tanchun_place"
+      },
+      {
+        "type": "show",
+        "actor": "xichun",
+        "at": "xichun_place"
+      },
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "grandmother_greet"
+      },
+      {
+        "type": "show",
+        "actor": "daiyu",
+        "at": "daiyu_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c16-birth",
+    "scene": "dinner",
+    "place": "荣国府 · 正堂寿宴",
+    "focus": "feng_place",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "一日正是贾政的生辰，宁荣二处人丁都齐集庆贺",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-002",
+    "speaker": "narrator",
+    "text": "堂上张灯结彩，寿筵齐备。凤姐最是理事的，迎来送往、指拨仆妇，比平日更显干练。宝玉因秦钟病中，终不免有些悬心，只是当着贾母，不好露出声色。",
+    "title": "凤姐料理，宝玉悬心",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "feng",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-birth",
+    "scene": "dinner",
+    "place": "荣国府 · 正堂寿宴",
+    "focus": "grandmother_greet",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "一日正是贾政的生辰，宁荣二处人丁都齐集庆贺",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-003",
+    "speaker": "baoyu",
+    "text": "宝玉暗想：「秦钟这几日病势沉重，我须得早去望他才是。只是今日是老爷寿辰，须陪着老太太，不好擅离。」",
+    "title": "须得早去望他",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "baoyu",
+        "kind": "idle",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-birth",
+    "scene": "dinner",
+    "place": "荣国府 · 正堂寿宴",
+    "focus": "back_door",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "一日正是贾政的生辰，宁荣二处人丁都齐集庆贺",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-004",
+    "speaker": "narrator",
+    "text": "正热闹间，忽听门外一片声喧，似有朝廷人马到来，合府不知吉凶，都屏息静候。宝玉也收了笑容，随众人往外张望。",
+    "title": "忽听门外一片声喧",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "baoyu",
+        "via": [
+          "grandmother_greet",
+          "back_door"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "c16-edict",
+    "scene": "central",
+    "place": "荣国府 · 正堂阶下",
+    "focus": "rongxi_door",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "一日正是贾政的生辰，宁荣二处人丁都齐集庆贺",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-010",
+    "speaker": "narrator",
+    "text": "只见门吏慌忙进来，至席前报道：「有六宫都太监夏老爷来降旨。」满堂登时寂静，贾政忙整衣冠，率众出迎。",
+    "title": "六宫都太监来降旨",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "rongxi_center"
+      },
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "rongxi_door"
+      },
+      {
+        "type": "show",
+        "actor": "grandmother",
+        "at": "west_room"
+      },
+      {
+        "type": "show",
+        "actor": "wang",
+        "at": "rongxi_steps"
+      },
+      {
+        "type": "show",
+        "actor": "xing",
+        "at": "east_door"
+      }
+    ]
+  },
+  {
+    "chapter": "c16-edict",
+    "scene": "central",
+    "place": "荣国府 · 正堂阶下",
+    "focus": "rongxi_center",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "早见六宫都太监夏守忠乘马而至",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-011",
+    "speaker": "narrator",
+    "text": "夏太监乘马而至，一班小内监捧着龙旌御辇，到了荣府门前。贾政等按品大妆，躬身接旨。那夏守忠高声宣道：「奉朱谕：立刻宣贾政入朝，临敬殿陛见。」",
+    "title": "奉朱谕宣贾政入朝",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "messenger",
+        "via": [
+          "rongxi_door",
+          "rongxi_steps",
+          "rongxi_center"
+        ]
+      },
+      {
+        "type": "effect",
+        "actor": "messenger",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-edict",
+    "scene": "central",
+    "place": "荣国府 · 正堂阶下",
+    "focus": "rongxi_center",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "贾母等合家人等心中皆惶惶不定",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-012",
+    "speaker": "zheng",
+    "text": "贾政听得「入朝」二字，心下忐忑，不知是祸是福，只得趋步随太监去了。临行回头，只低声道：「老太太并太太们，且安心等候消息。」",
+    "title": "不知是祸是福",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "zheng",
+        "kind": "idle",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-edict",
+    "scene": "central",
+    "place": "荣国府 · 正堂阶下",
+    "focus": "west_room",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "贾母等合家人等心中皆惶惶不定",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-013",
+    "speaker": "narrator",
+    "text": "阖府上下，皆不知是祸是福。邢、王二夫人并凤姐等，只在堂前徘徊守候，连寿筵也撤了，只巴巴的等信。",
+    "title": "只在堂前守候",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "wang",
+        "kind": "rest",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-palace",
+    "scene": "central",
+    "place": "荣国府 · 正堂",
+    "focus": "rongxi_center",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "忽见赖大等三四个管家喘吁吁跑进仪门报喜",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-020",
+    "speaker": "narrator",
+    "text": "不多时，赖大等三四个管家喘吁吁跑进来说道：「老爷进内复奏，已蒙恩旨：咱们家的大小姐晋封为凤藻宫尚书，加封贤德妃了！」",
+    "title": "大小姐晋封贤德妃",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "grandmother",
+        "at": "rongxi_center"
+      },
+      {
+        "type": "move",
+        "actor": "zheng",
+        "via": [
+          "rongxi_center",
+          "rongxi_steps",
+          "rongxi_door"
+        ]
+      },
+      {
+        "type": "show",
+        "actor": "wang",
+        "at": "west_room"
+      },
+      {
+        "type": "show",
+        "actor": "feng",
+        "at": "rongxi_steps"
+      },
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "rongxi_door"
+      }
+    ]
+  },
+  {
+    "chapter": "c16-palace",
+    "scene": "central",
+    "place": "荣国府 · 正堂",
+    "focus": "rongxi_center",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "忽见赖大等三四个管家喘吁吁跑进仪门报喜",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-021",
+    "speaker": "grandmother",
+    "text": "贾母听到「贤德妃」三字，方才一块石头落地，喜得满脸泪痕，连声念佛道：「好了，好了！这孩子总算熬出头了。」",
+    "title": "喜得满脸泪痕",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "grandmother",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-palace",
+    "scene": "central",
+    "place": "荣国府 · 正堂",
+    "focus": "rongxi_center",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "那时贾母正心神不定，在大堂廊下伫立",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-022",
+    "speaker": "narrator",
+    "text": "于是都按品大妆，贾母率领邢、王夫人等，进宫谢恩。宁荣两府，从头里外，无不欢腾。又有许多世交亲友，都来送礼庆贺，荣府门前车马填咽。",
+    "title": "进宫谢恩，无不欢腾",
+    "actions": [
+      {
+        "type": "move",
+        "actor": "grandmother",
+        "via": [
+          "rongxi_center",
+          "rongxi_steps",
+          "rongxi_door"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "c16-palace",
+    "scene": "central",
+    "place": "荣国府 · 正堂",
+    "focus": "rongxi_steps",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "贾琏笑道：“虽不十分准，也有八分准了。”",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-023",
+    "speaker": "feng",
+    "text": "凤姐笑向王夫人道：「这可是天大的喜事。既蒙圣恩准归省，咱们须得早些预备起来——采办行宫、起造省亲别院、置买彩缎帘栊，才是正理。迟了，叫人笑话咱们家没见过大阵仗。」",
+    "title": "须得早些预备起来",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "feng",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-palace",
+    "scene": "central",
+    "place": "荣国府 · 正堂",
+    "focus": "west_room",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "贾政不惯于俗务，只凭贾赦，贾珍，贾琏，赖大",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-024",
+    "speaker": "narrator",
+    "text": "王夫人点头称是。自此荣府上下，一面打点进宫朝贺，一面筹划起造大观园、采聘教习、置办彩缎帘栊等事，堆山凿池、起楼竖阁，忙得不可开交。",
+    "title": "筹划起造大观园",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "wang",
+        "kind": "idle",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-qinfather",
+    "scene": "c12_sickbed",
+    "place": "秦业 · 病榻",
+    "focus": "bed",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "谁知近日水月庵的智能私逃进城",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-030",
+    "speaker": "narrator",
+    "text": "且说秦钟之父秦业，年迈多病。近日闻得儿子在铁槛寺与智能儿做出不才之事，又兼秦钟本身怯弱带病，老人家一气之下，旧病复发，倒在床上起不来了。",
+    "title": "秦业旧病复发",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "qin_ye",
+        "at": "bed"
+      },
+      {
+        "type": "show",
+        "actor": "maid",
+        "at": "door"
+      }
+    ]
+  },
+  {
+    "chapter": "c16-qinfather",
+    "scene": "c12_sickbed",
+    "place": "秦业 · 病榻",
+    "focus": "bed",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "谁知近日水月庵的智能私逃进城",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-031",
+    "speaker": "qin_ye",
+    "text": "秦业拍床叹道：「我秦门不幸，生此不肖之子！好好一个书香人家，竟做出这等败行。我年迈之人，教我九泉之下，何颜见祖宗！」言毕，喘做一团。",
+    "title": "我秦门不幸",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "qin_ye",
+        "kind": "anger",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-qinfather",
+    "scene": "c12_sickbed",
+    "place": "秦业 · 病榻",
+    "focus": "bedside",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "谁知近日水月庵的智能私逃进城",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-032",
+    "speaker": "narrator",
+    "text": "秦业本已风中之烛，经此一气，医药不效，不过三五日光景，竟是呜呼死了。秦钟哀毁骨立，扶柩守灵，病体更添了一层，连起身都艰难。",
+    "title": "三五日光景，呜呼死了",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "qin_ye",
+        "kind": "rest",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-qinzhong",
+    "scene": "c12_sickbed",
+    "place": "秦钟 · 病榻",
+    "focus": "bed",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "且说宝玉近因家中有这等大事",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-040",
+    "speaker": "narrator",
+    "text": "秦钟自那日受了风寒，又与智能儿私会，失于调养，回来便咳嗽伤风，懒进饮食，大有不胜之态。宝玉闻信，急来探视，见他面黄肌瘦，不由得掉下泪来。",
+    "title": "宝玉急来探视",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "qin_zhong",
+        "at": "bed"
+      },
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "bedside"
+      },
+      {
+        "type": "effect",
+        "actor": "baoyu",
+        "kind": "idle",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-qinzhong",
+    "scene": "c12_sickbed",
+    "place": "秦钟 · 病榻",
+    "focus": "bed",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "此时秦钟已发过两三次昏了",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-041",
+    "speaker": "qin_zhong",
+    "text": "秦钟见宝玉来，强挣起身，拉了他的手，泪如雨下：「宝玉，你我自小儿一处，不想我竟先你而去。家中老父，又为我气死，我真是死有余辜。」",
+    "title": "不想我竟先你而去",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "qin_zhong",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-qinzhong",
+    "scene": "c12_sickbed",
+    "place": "秦钟 · 病榻",
+    "focus": "bed",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "此时秦钟已发过两三次昏了",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-042",
+    "speaker": "qin_zhong",
+    "text": "秦钟喘息道：「以前你我自谓高过世人，如今我才知是自误了。以后还该立志功名，以荣耀显达为是——万不可再做那毁僧谤道、调唆人家子弟的勾当。我今日一句，你可牢牢的记着。」",
+    "title": "还该立志功名",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "qin_zhong",
+        "kind": "idle",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-qinzhong",
+    "scene": "c12_sickbed",
+    "place": "秦钟 · 病榻",
+    "focus": "bedside",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "此时秦钟已发过两三次昏了",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-043",
+    "speaker": "baoyu",
+    "text": "宝玉听了，如万箭攒心，哽咽道：「鲸兄何出此言！你且将养，必定会好的。等你好了，咱们还同窗读书去。」",
+    "title": "如万箭攒心",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "baoyu",
+        "kind": "anger",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-qinzhong",
+    "scene": "c12_sickbed",
+    "place": "秦钟 · 病榻",
+    "focus": "bed",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "此时秦钟已发过两三次昏了",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-044",
+    "speaker": "narrator",
+    "text": "秦钟话犹未了，一口痰涌上来，已然厥去。宝玉等哭喊不醒，少时，竟是夭逝了。宝玉痛哭失声，几番晕厥，被人扶住，方才稳住。",
+    "title": "竟是夭逝了",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "qin_zhong",
+        "kind": "rest",
+        "duration": 1.8
+      },
+      {
+        "type": "hide",
+        "actor": "qin_zhong"
+      }
+    ]
+  },
+  {
+    "chapter": "c16-return",
+    "scene": "entry",
+    "place": "荣国府 · 大门",
+    "focus": "west_gate",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "好容易盼至明日午错",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-050",
+    "speaker": "narrator",
+    "text": "且说林如海已于去岁病故，贾琏送黛玉奔丧扬州，料理丧事已毕。这日无事，忽有府中家人飞马来报：贾琏陪着林姑娘，不日就到。",
+    "title": "贾琏陪着林姑娘不日就到",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zhao_er",
+        "at": "maid_wait"
+      },
+      {
+        "type": "show",
+        "actor": "grandmother",
+        "at": "grandmother_seat"
+      },
+      {
+        "type": "show",
+        "actor": "wang",
+        "at": "wang_seat"
+      },
+      {
+        "type": "show",
+        "actor": "feng",
+        "at": "feng_meet"
+      }
+    ]
+  },
+  {
+    "chapter": "c16-return",
+    "scene": "entry",
+    "place": "荣国府 · 大门",
+    "focus": "maid_wait",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "好容易盼至明日午错",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-051",
+    "speaker": "zhao_er",
+    "text": "昭儿叩头报道：「琏二爷与林姑娘的船已到了张家湾，明儿晌午就能进府。二爷特命小的先回来报信，打点安置姑娘的院子。」",
+    "title": "明儿晌午就能进府",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "zhao_er",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-return",
+    "scene": "entry",
+    "place": "荣国府 · 大门",
+    "focus": "feng_meet",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "且说贾琏自回家参见过众人",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-052",
+    "speaker": "feng",
+    "text": "凤姐笑道：「可巧这当口回来，正是双喜临门。快去把林姑娘的院子收拾干净，被褥帘帐一概换新，莫教外孙女儿觉得冷淡了。」",
+    "title": "正是双喜临门",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "feng",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-return",
+    "scene": "entry",
+    "place": "荣国府 · 西角门",
+    "focus": "flower_gate",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "且说贾琏自回家参见过众人",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-053",
+    "speaker": "narrator",
+    "text": "次早，宝玉听见贾琏陪着林妹妹都回来了，心里喜之不禁，早赶到角门等候。只见一乘小轿，簇拥着进了西角门；贾琏骑着马，随后进来。",
+    "title": "喜之不禁，早来等候",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "flower_gate"
+      },
+      {
+        "type": "show",
+        "actor": "jia_lian",
+        "at": "courtyard_center"
+      },
+      {
+        "type": "show",
+        "actor": "daiyu",
+        "at": "daiyu_seat"
+      },
+      {
+        "type": "move",
+        "actor": "jia_lian",
+        "via": [
+          "west_gate",
+          "flower_gate",
+          "courtyard_center"
+        ]
+      },
+      {
+        "type": "move",
+        "actor": "daiyu",
+        "via": [
+          "flower_gate",
+          "daiyu_seat"
+        ]
+      },
+      {
+        "type": "effect",
+        "actor": "baoyu",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-return",
+    "scene": "entry",
+    "place": "荣国府 · 西角门",
+    "focus": "courtyard_center",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "且说贾琏自回家参见过众人",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-054",
+    "speaker": "jia_lian",
+    "text": "贾琏下马，与黛玉进来，先给贾母、王夫人请安。贾母见黛玉回来，又悲又喜，拉着手只是掉泪，说道：「好孩子，可回来了，外祖母想得你紧。」",
+    "title": "外祖母想得你紧",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "jia_lian",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-return",
+    "scene": "entry",
+    "place": "荣国府 · 西角门",
+    "focus": "daiyu_seat",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "好容易盼至明日午错",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-055",
+    "speaker": "daiyu",
+    "text": "黛玉含泪道：「外祖奶奶放心，父亲大事已经妥办，女儿回来了。」宝玉立在旁边，见她比去时消瘦了好些，眉间添了忧戚，心中又疼又喜，一时说不出话来。",
+    "title": "父亲大事已经妥办",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "daiyu",
+        "kind": "rest",
+        "duration": 1.8
+      }
+    ]
+  },
+  {
+    "chapter": "c16-return",
+    "scene": "entry",
+    "place": "荣国府 · 西角门",
+    "focus": "grandmother_seat",
+    "source": {
+      "chapter": 16,
+      "paragraphLead": "贾政不惯于俗务，只凭贾赦，贾珍，贾琏，赖大",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C16-056",
+    "speaker": "narrator",
+    "text": "自此黛玉仍在贾母身边住下，宝玉依旧同姊妹们一处。只是秦钟已逝，元春将归，荣国府里外，一场更热闹的兴衰，才正要开场。",
+    "title": "一场更热闹的兴衰正要开场",
+    "actions": [
+      {
+        "type": "effect",
+        "actor": "grandmother",
+        "kind": "greet",
+        "duration": 1.8
+      }
+    ]
+  }
+]

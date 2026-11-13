@@ -3213,12 +3213,13 @@
   },
   {
    "id": "bamboo-cluster",
-   "seed": 10400055,
+   "seed": 10400571,
    "anchor": [
-    383.5,
-    456
+    349.5,
+    471
    ],
-   "width": 612
+   "width": 366,
+   "matteKind": "white"
   },
   {
    "id": "canal-quay",
@@ -3896,6 +3897,94 @@
    "height": 116,
    "bodyCompress": {
     "split": 399,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "zijun-portrait",
+   "seed": 10234050,
+   "anchor": [
+    369,
+    1121
+   ],
+   "height": 600
+  },
+  {
+   "id": "zijun-chibi",
+   "seed": 10234051,
+   "anchor": [
+    351,
+    938
+   ],
+   "height": 116,
+   "bodyCompress": {
+    "split": 394,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "cui_lv-portrait",
+   "seed": 10234060,
+   "anchor": [
+    427,
+    1119
+   ],
+   "height": 600
+  },
+  {
+   "id": "cui_lv-chibi",
+   "seed": 10234061,
+   "anchor": [
+    358,
+    953
+   ],
+   "height": 116,
+   "bodyCompress": {
+    "split": 400,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "si_er-portrait",
+   "seed": 10234070,
+   "anchor": [
+    361,
+    1114
+   ],
+   "height": 600
+  },
+  {
+   "id": "si_er-chibi",
+   "seed": 10234071,
+   "anchor": [
+    347,
+    990
+   ],
+   "height": 116,
+   "bodyCompress": {
+    "split": 416,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "jia_lan-portrait",
+   "seed": 10234080,
+   "height": 600,
+   "anchor": [
+    227,
+    1130
+   ]
+  },
+  {
+   "id": "jia_lan-chibi",
+   "seed": 10234081,
+   "height": 116,
+   "anchor": [
+    652,
+    988
+   ],
+   "bodyCompress": {
+    "split": 415,
     "factor": 0.64
    }
   }

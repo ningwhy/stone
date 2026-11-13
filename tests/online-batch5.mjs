@@ -11,7 +11,7 @@ import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdirSync} from 'node:fs';
 import { seekSection, openToc } from './lib/toc.mjs';
-import { dismissLeaf } from './lib/pickup.mjs';
+import { dismissLeaf, clickSkipIfShown} from './lib/pickup.mjs';
 import { onlineUrl, onlineTag, onlineArgs, ignoreTlsErrors, onlineProfile } from './lib/online.mjs';
 
 const profile=onlineProfile('batch5');
@@ -26,7 +26,7 @@ const tag=onlineTag();
 
 const reading=async()=>{
   await page.locator('.loading-screen').waitFor({state:'detached',timeout:120000});
-  for(let i=0;i<5;i++){const b=page.getByRole('button',{name:'跳过移动',exact:true});if(await b.isVisible()){await b.click();await page.waitForTimeout(60);}}
+  await clickSkipIfShown(page,5,60);
   await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim(),undefined,{timeout:60000});
   await page.locator('.game-map[data-scene-ready]').waitFor({timeout:120000});
 };

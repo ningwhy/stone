@@ -40,3 +40,21 @@ test-results/
 
 # Staging copies of chapter data kept while a chapter is being wired in.
 artifacts/staging/
+
+# One-off diagnostic scripts and logs. They are throwaway probes written to chase a
+# single symptom; the conclusion always lands in docs/ and the memory notes, so the
+# script itself has no lasting value. Keep the folder for screenshots (artifacts/**/*.png
+# is already ignored) but do not let scratch .mjs/.json/.log/.py accumulate in history.
+artifacts/*.mjs
+artifacts/*.json
+artifacts/*.log
+artifacts/*.py
+
+# The SAM head cutouts are intermediate mattes: reproducible from art/source + the
+# calibration file, and the runtime never reads them.
+art/identity/originals/*-sam.png
+art/identity/face-box-*-sam.png
+
+# Fix-up renders for a shared asset (the bamboo cluster was repainted): the raw takes
+# are iteration leftovers. The shipped result lives in art/source + public/assets.
+art/fix_bamboo/

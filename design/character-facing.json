@@ -1235,6 +1235,76 @@
     }
    },
    "chibi": "right"
+  },
+  "zijun": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.1933,
+     "mouthOffset": 0.1769,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "noseOffset": null,
+     "mouthOffset": null,
+     "votes": 1,
+     "method": "vision-landmark-geometry"
+    }
+   },
+   "chibi": "right"
+  },
+  "cui_lv": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.0866,
+     "mouthOffset": 0.0593,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face in any crop; the painted head read by eye against two right-facing chibi as references, the nose and mouth sit on the eye midpoint and lean slightly right"
+    }
+   },
+   "chibi": "right"
+  },
+  "si_er": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.2246,
+     "mouthOffset": 0.2339,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "noseOffset": 0.4343,
+     "mouthOffset": 0.3792,
+     "votes": 1,
+     "method": "vision-landmark-geometry"
+    }
+   },
+   "chibi": "right"
+  },
+  "jia_lan": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": null,
+     "mouthOffset": null,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "noseOffset": null,
+     "mouthOffset": null,
+     "votes": 2,
+     "method": "vision-landmark-geometry"
+    }
+   },
+   "chibi": "right"
   }
  },
  "variants": {

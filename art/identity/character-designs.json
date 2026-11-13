@@ -1,443 +1,471 @@
 {
-  "version": 1,
-  "server": "http://192.168.4.66:8188",
-  "model": "qwen_image_2.1_int8_convrot",
-  "method": "Head-detail edit with face-outline freedom, portrait-led identity reference for chibi, pixel-preserving composite outside face mask",
-  "note": "第三回明确外貌描述优先；其余五官为原创设计，不冒充原文规定。只检查头发、衣服、色彩以外的面部差异。",
-  "characters": [
-    {
-      "id": "daiyu",
-      "name": "黛玉",
-      "features": "清瘦长鹅蛋脸；细长含愁眉；眼尾微垂的含露杏眼；窄鼻梁；薄小唇；敏感、克制，眼下轻淡倦意",
-      "prompt": "a slender elongated oval face, narrow temples, fine long slightly knitted brows, wide-set almond eyes with gently drooping outer corners and moist thoughtful gaze, slender straight nose, small thin lips, delicate pale cheeks without rosy roundness, a restrained wistful expression",
-      "seed": 10232000
-    },
-    {
-      "id": "baoyu",
-      "name": "宝玉",
-      "features": "饱满短鹅蛋脸；宽额；浓长平眉；明亮桃花眼；圆润鼻尖；饱满弓唇，喜悦灵动",
-      "prompt": "a short full oval face, broad smooth forehead, long dark almost horizontal eyebrows, large luminous peach-blossom eyes with rounded inner corners and gently lifted outer corners, a short rounded nose tip, full well-shaped cupid-bow lips, plump youthful cheeks and lively open warmth; a young BOY rather than a woman",
-      "seed": 10232002
-    },
-    {
-      "id": "feng",
-      "name": "王熙凤",
-      "features": "颧骨鲜明的菱形脸；高挑柳叶眉；细长上挑凤眼；挺直鼻梁；薄唇偏侧笑，锐利干练",
-      "prompt": "an angular diamond face with distinct high cheekbones and a tapering pointed chin, boldly arched eyebrows with sharp high peaks, long narrow phoenix eyes with strongly upturned outer corners and penetrating gaze, a high straight nose bridge, small thin lips with an asymmetric knowing smile; youthful adult intelligence and authority",
-      "seed": 10232004
-    },
-    {
-      "id": "grandmother",
-      "name": "贾母",
-      "features": "宽阔圆方脸；丰颊重下颌；长寿眉；笑眼但目光有威；宽鼻头；笑纹深而温厚",
-      "prompt": "a broad round-square elderly face, substantial full cheeks and heavy rounded jaw, long sparse pale eyebrows, small smiling deep-set eyes with authoritative focus, broad fleshy nose tip, generous mouth, pronounced crow feet and smile creases; warm commanding matriarch, not frail",
-      "seed": 10232006
-    },
-    {
-      "id": "wang",
-      "name": "王夫人",
-      "features": "端正方圆脸；低平眉；厚眼睑；内收沉静目光；宽直鼻；嘴角平收，稳重含蓄",
-      "prompt": "a mature broad square-oval face with a wide lower jaw, low straight medium brows, small deep-set eyes with heavy upper lids, a broad straight nose, medium full tightly composed lips with horizontal corners, dignified reserved and solemn; visible mature cheek folds",
-      "seed": 10232008
-    },
-    {
-      "id": "xing",
-      "name": "邢夫人",
-      "features": "长方脸；颧面偏平；略下垂眉；细小眼睛；长鼻；窄嘴，拘谨审视",
-      "prompt": "a long rectangular mature face with flat cheek planes, slightly drooping angled eyebrows, narrow small observant eyes set close together, a long narrow nose, a thin compressed mouth and a squared chin; cautious assessing expression, subtle nasolabial creases",
-      "seed": 10232010
-    },
-    {
-      "id": "liwan",
-      "name": "李纨",
-      "features": "细长柔和脸；淡平眉；深静细眼；长鼻；唇淡而窄，清寂内敛",
-      "prompt": "a long narrow softly tapered adult face, faint straight eyebrows, quiet narrow eyes with relaxed lowered lids and wide spacing, a long fine nose, pale narrow lips and a rounded modest chin; serene restrained expression without coyness",
-      "seed": 10232012
-    },
-    {
-      "id": "yingchun",
-      "name": "迎春",
-      "features": "短圆脸；丰颊圆下巴；短淡弯眉；眼距略宽的柔缓垂眼；短圆鼻；圆小嘴，温厚怯弱",
-      "prompt": "a distinctly SHORT ROUND face with wide FULL LOWER CHEEKS and a broad ROUND CHIN, cheek width nearly equal to forehead width, short faint gently curved brows, widely spaced SMALL SOFT DROOPING EYES with relaxed heavy upper lids, a SHORT low round nose, a small modest rounded mouth; gentle passive hesitant warmth, NO tapered pointed jaw, NO elongated face, NO winged eyeliner",
-      "seed": 10232014
-    },
-    {
-      "id": "tanchun",
-      "name": "探春",
-      "features": "长鸭蛋脸与圆阔下颏；低平舒展长眉；眼距较宽的俊朗平眼；挺直长鼻；宽嘴与饱满下唇，自信爽朗",
-      "prompt": "an elongated duck-egg oval face with a broad softly rounded lower jaw and rounded chin, distinctly LONG LOW HORIZONTAL STRAIGHT eyebrows rather than arched brows, widely spaced horizontally broad open eyes with LEVEL outer corners rather than upturned phoenix eyes, a long high straight nose, a WIDE mouth with a full lower lip; forthright confident energetic gaze, natural plain lips, NO winged eyeliner, NO pointed triangular chin",
-      "seed": 10232016
-    },
-    {
-      "id": "xichun",
-      "name": "惜春",
-      "features": "幼圆短脸；短直眉；圆眼偏冷静；小翘鼻；短小嘴，稚气而疏离",
-      "prompt": "a very young short round face with a small compact lower half, short straight eyebrows, clear round eyes with a cool steady gaze rather than a smile, tiny slightly upturned nose and tiny straight mouth, short small chin; childlike yet detached",
-      "seed": 10232018
-    },
-    {
-      "id": "xiren",
-      "name": "袭人",
-      "features": "丰润梨形脸；细弯眉；细长温和笑眼；小圆鼻；厚薄适中唇，稳妥亲切",
-      "prompt": "a full pear-shaped young adult face with wider lower cheeks and a rounded chin, fine gently curved eyebrows, narrow kind smiling eyes, a small rounded nose, a softly broad mouth with moderately full lips; grounded calm reassuring warmth",
-      "seed": 10232020
-    },
-    {
-      "id": "xueyan",
-      "name": "雪雁",
-      "features": "短圆幼脸；短淡眉；略下垂大眼；小塌鼻；鼓腮小嘴，童稚谨慎",
-      "prompt": "a ten-year-old girl with a short round child face, large slightly downturned eyes and short faint brows, a low tiny round nose, soft chubby cheeks and a tiny pursed mouth; cautious innocent child expression, no makeup",
-      "seed": 10232022
-    },
-    {
-      "id": "yingge",
-      "name": "鹦哥",
-      "features": "小巧瓜子脸；弯眉一高一低；机敏长眼；细翘鼻；唇角轻上扬，伶俐",
-      "prompt": "a small sharply tapered triangular face, one arched eyebrow slightly higher than the other, keen narrow almond eyes with lifted corners, a fine slightly upturned nose, a small wide smiling mouth; quick attentive lively expression",
-      "seed": 10232024
-    },
-    {
-      "id": "yucun",
-      "name": "贾雨村",
-      "features": "宽方脸；浓剑眉；星眼深而锐；直鼻权腮；宽口方下颌，雄壮带算计",
-      "prompt": "a broad powerful square face with wide strong cheekbones and a heavy squared jaw, thick sharply rising sword eyebrows, deep-set bright piercing eyes, a high straight large nose and a wide firm mouth; ambitious calculating confidence, not a thin elegant scholar; retain his existing mustache and beard",
-      "seed": 10232026
-    },
-    {
-      "id": "ruhai",
-      "name": "林如海",
-      "features": "瘦长椭圆脸；疏长眉；眼窝较深而柔；修长鼻；薄唇清癯，下颌细",
-      "prompt": "a thin elongated scholarly face with hollow temples, long sparse gently curved brows, slightly sunken gentle eyes with tired lower lids, a long delicate narrow nose, thin understated lips, narrow chin and subtle cheek hollows; cultivated tired tenderness; retain existing facial hair",
-      "seed": 10232028
-    },
-    {
-      "id": "zheng",
-      "name": "贾政",
-      "features": "端正长方脸；浓平眉；眼裂短而严；挺宽鼻；方唇方颏，肃穆",
-      "prompt": "a stern upright rectangular face, flat broad forehead, thick level brows close to the eyes, short narrow unsmiling eyes, a broad high straight nose, a tight square mouth and firm square chin; formal solemn authority; retain existing facial hair",
-      "seed": 10232030
-    },
-    {
-      "id": "zhang",
-      "name": "张如圭",
-      "features": "窄长脸；拱眉；外凸明亮小眼；尖长鼻；窄唇，热切利落",
-      "prompt": "a narrow long face with a high slender nose and pointed nose tip, high arched slim eyebrows, slightly prominent small bright eyes set close together, thin mobile lips and a narrow pointed jaw; eager alert expression; retain his short beard",
-      "seed": 10232032
-    },
-    {
-      "id": "leng",
-      "name": "冷子兴",
-      "features": "宽圆脸；短弯粗眉；眯笑小眼；肉鼻头；阔嘴厚下唇，精明健谈",
-      "prompt": "a wide round fleshy face with plump cheekbones, short thick curved eyebrows, small twinkling smiling slit eyes, a wide bulbous nose tip, a broad mouth with a thick lower lip and smile folds; shrewd convivial antique merchant, retain mustache",
-      "seed": 10232034
-    },
-    {
-      "id": "guide",
-      "name": "引路嬷嬷",
-      "features": "瘦长老脸；颧骨高；稀眉；深眼窝；弯鼻；薄嘴与缺齿笑，慈和",
-      "prompt": "a lean long elderly face with pronounced high cheekbones and hollow cheeks, sparse uneven brows, small deep-set kindly eyes, a slightly hooked long nose, thin smiling lips and a recessed chin, deep age lines; weathered but benevolent",
-      "seed": 10232036
-    },
-    {
-      "id": "maid",
-      "name": "通报丫鬟",
-      "features": "宽额小方脸；粗短眉；大圆眼；短鼻；圆唇，精神利落",
-      "prompt": "a youthful small square face with a broad forehead and compact square chin, short thick horizontal eyebrows, large clear round eyes, a short straight nose, small full round lips; brisk bright alert expression",
-      "seed": 10232038
-    },
-    {
-      "id": "messenger",
-      "name": "传话妇人",
-      "features": "宽扁脸；平直淡眉；细缝眼；鼻翼宽；薄阔嘴，朴实恭谨",
-      "prompt": "a broad flat middle-aged face with wide cheek planes, faint straight brows, small narrow hooded eyes, a low broad nose with wide nostrils, a wide thin-lipped mouth and blunt chin; humble practical expression and subtle uneven sun-tanned skin",
-      "seed": 10232040
-    },
-    {
-      "id": "nurse_wang",
-      "name": "王嬷嬷",
-      "features": "极瘦小老脸；凹颊尖颏；淡短眉；眼尾下垂；小尖鼻；干瘪唇，老迈慈爱",
-      "prompt": "a very thin small elderly face with deeply hollow cheeks and a tiny pointed chin, short sparse pale brows, drooping watery eyes, a small pointed nose, thin sunken lips with fine vertical wrinkles; fragile old affectionate expression",
-      "seed": 10232042
-    },
-    {
-      "id": "nurse_li",
-      "name": "李嬷嬷",
-      "features": "饱满圆方脸；粗平眉；厚眼皮；宽肉鼻；紧闭厚唇，老练严肃",
-      "prompt": "a stout mature round-square face with a broad chin and heavy lower cheeks, thick low straight eyebrows, narrow eyes under heavy drooping lids, a broad fleshy nose, thick tightly closed lips and pronounced folds beside the mouth; stern experienced nurse",
-      "seed": 10232044
-    },
-    {
-      "id": "shiyin",
-      "name": "甄士隐",
-      "features": "宽额瘦颊；细长眉；深静下垂眼；长而微弯鼻；柔和薄唇，恬淡",
-      "prompt": "a high broad forehead above thin hollow cheeks, long delicate downward-curving brows, deep calm eyes with drooping outer corners, a long slightly curved nose bridge, soft thin lips and a narrow rounded chin; gentle contemplative worn scholarly face; retain beard",
-      "seed": 10232046
-    },
-    {
-      "id": "fengshi",
-      "name": "封氏",
-      "features": "宽颊长鹅蛋脸；低弯眉；细长柔眼；低圆鼻；厚唇，温柔忧愁",
-      "prompt": "a mature long oval face with broad soft cheeks and a rounded jaw, low gently curved brows, narrow tender eyes with slightly swollen tired lower lids, a low round nose, a wide mouth with full soft lips; motherly sadness without girlish coyness",
-      "seed": 10232048
-    },
-    {
-      "id": "yinglian",
-      "name": "甄英莲",
-      "features": "真正三岁幼童脸；极短面中；高额宽眼距；圆眼小鼻；圆下巴；眉心胭脂痣",
-      "prompt": "a THREE-YEAR-OLD toddler face with a large domed forehead, extremely short midface, widely spaced large round eyes, very short faint brows, tiny button nose, chubby baby cheeks and a tiny rosebud mouth, round small chin; one tiny red birthmark centered between the eyebrows; no makeup, no adult facial proportions",
-      "seed": 10232050
-    },
-    {
-      "id": "jiaoxing",
-      "name": "娇杏",
-      "features": "微方杏仁脸；浓柔眉；弯月笑眼；略宽鼻头；丰唇，亲切坦然",
-      "prompt": "a young softly square face with full lower cheeks and a broad short chin, dark softly curved eyebrows, crescent smiling eyes with visible lower lids, a slightly broad rounded nose tip, full natural lips and subtle cheek dimples; unpretentious friendly self-possession",
-      "seed": 10232052
-    },
-    {
-      "id": "fengsu",
-      "name": "封肃",
-      "features": "梯形阔下颌；稀短眉；眼小聚拢；蒜鼻；厚唇，下颏肉厚而世故",
-      "prompt": "a heavy trapezoid elderly face with a lower jaw wider than the forehead, short patchy eyebrows, small close-set suspicious eyes, a large wide garlic-shaped nose, thick protruding lips and fleshy double chin; sly calculating rural patriarch, retain facial hair",
-      "seed": 10232054
-    },
-    {
-      "id": "monk",
-      "name": "癞头和尚",
-      "features": "宽额尖下颏；颧骨突出；一高一低弯眉；细长笑眼；大耳宽鼻；豁达诙谐",
-      "prompt": "a broad forehead tapering to a pointed chin, prominent cheekbones and sunken cheeks, asymmetrically high curved brows, long narrow laughing eyes, a wide short nose, large projecting ears and a broad irreverent grin with laugh folds; eccentric middle-aged monk, not a sweet-faced girl",
-      "seed": 10232056
-    },
-    {
-      "id": "taoist",
-      "name": "跛足道人",
-      "features": "狭长骨相；高额；斜飞长眉；深长眼；鹰钩鼻；薄唇，疏狂",
-      "prompt": "a very long bony face with hollow temples, high forehead, long obliquely raised thin brows, deep-set narrow intense eyes, a prominent hooked aquiline nose, a thin asymmetrically smiling mouth and a sharp angular chin; wild detached eccentricity, retain existing beard",
-      "seed": 10232058
-    },
-    {
-      "id": "kongkong",
-      "name": "空空道人",
-      "features": "方额长脸；平直长眉；宽眼距静眼；方直鼻；薄而平口，沉思",
-      "prompt": "an elongated face with a broad square forehead and narrow squared chin, long level straight brows, widely spaced calm small eyes behind soft heavy lids, a straight broad squared nose bridge, thin horizontal lips; patient reflective analytical expression, retain long beard",
-      "seed": 10232060
-    },
-    {
-      "id": "huoqi",
-      "name": "霍启",
-      "features": "短方脸；粗短低眉；小圆眼；扁鼻；厚唇，笨拙朴实",
-      "prompt": "a short wide square face with a low forehead and broad jaw, thick short low eyebrows, small round close-set eyes, a flattened short nose with wide nostrils, thick broad lips and a blunt chin; ordinary awkward honest male servant, visibly distinct from an elegant scholar",
-      "seed": 10232062
-    },
-    {
-      "id": "oldmonk",
-      "name": "智通寺老僧",
-      "features": "骨瘦凹陷老脸；垂白眉；深陷半闭眼；长弯鼻；瘪嘴，迟钝衰老",
-      "prompt": "an extremely gaunt eighty-year-old face, sharply hollow cheeks, drooping long white eyebrows, deeply recessed half-closed eyes, a long curved drooping nose, a sunken toothless mouth and protruding bony chin; asymmetrical deep wrinkles and frail distracted expression",
-      "seed": 10232064
-    },
-    {
-      "id": "ying_er",
-      "name": "莺儿",
-      "features": "圆润清秀丫鬟脸；双丫髻；弯眉灵眼；小翘鼻；丰唇带俏，伶俐活泼",
-      "prompt": "a young round-cheeked pretty maidservant face with a double topknot, finely arched lively eyebrows, round bright clever eyes, a small slightly upturned nose, full rosy lips with a playful smile; quick lively expression",
-      "seed": 10232066
-    },
-    {
-      "id": "qin_zhong",
-      "name": "秦钟",
-      "features": "清秀俊美少年男相；细长含情眼；窄鼻；薄唇温润；肤色白皙，风流俊俏",
-      "prompt": "a delicate beautiful YOUNG BOY face, fine long tender eyes with gently drooping corners, a slender straight nose, small soft lips, pale clear luminous skin, refined pretty features; a gentle warm expression, a youth not a woman",
-      "seed": 10232068
-    },
-    {
-      "id": "jia_rui",
-      "name": "贾瑞",
-      "features": "瘦长寒酸脸；稀眉；小眼带谄；长鼻；薄唇歪笑，猥琐好色",
-      "prompt": "a thin long shabby adult face, sparse uneven eyebrows, small covetous eyes, a long narrow nose, thin lips with a lopsided leering smile, sallow pinched skin; lascivious calculating expression",
-      "seed": 10232070
-    },
-    {
-      "id": "jin_rong",
-      "name": "金荣",
-      "features": "粗野横肉少年脸；浓横眉；圆瞪眼；扁鼻；厚唇蛮横，泼皮气",
-      "prompt": "a coarse sturdy teenage boy face with thick horizontal eyebrows, round glaring eyes, a flat broad nose, thick lips and a bullying snarl; rough ruffian expression",
-      "seed": 10232072
-    },
-    {
-      "id": "ming_yan",
-      "name": "茗烟",
-      "features": "机灵小厮圆脸；短眉圆眼；小翘鼻；利落嘴，忠勇活泼",
-      "prompt": "a quick-witted young page boy with a round face, short straight eyebrows, round alert eyes, a small upturned nose, a brisk mouth; loyal lively expression",
-      "seed": 10232074
-    },
-    {
-      "id": "li_gui",
-      "name": "李贵",
-      "features": "粗壮朴实成年脸；浓平眉；小眼憨厚；宽鼻；厚唇老实，忠厚本分",
-      "prompt": "a stout plain mature man face, thick level eyebrows, small honest eyes, a broad nose, thick simple lips; steady dependable expression, a nurse-maid's son and page chief",
-      "seed": 10232076
-    },
-    {
-      "id": "you_shi",
-      "name": "尤氏",
-      "features": "宁府当家奶奶的丰满方圆脸；低平弯眉；温厚含笑眼；圆润鼻头；厚薄适中唇，圆融能持事",
-      "prompt": "a mature round-square woman face with full soft cheeks and a rounded jaw, low gently curved eyebrows, warm placid smiling eyes with calm lowered lids, a rounded nose tip, medium full composed lips; gracious capable matronly warmth, no maidenly coyness",
-      "seed": 10232078
-    },
-    {
-      "id": "jia_zhen",
-      "name": "贾珍",
-      "features": "宁府当家的长方阔脸；浓剑眉略散；眼大而浮；直挺鼻；薄唇带纵欲之色，三十余岁纨绔",
-      "prompt": "a broad long rectangular man face, thick loosely arched sword eyebrows somewhat disordered, large floating restless eyes, a high straight nose, thin lips with a self-indulgent slack set; a dissolute thirty-something aristocrat, retain mustache and short beard",
-      "seed": 10232080
-    },
-    {
-      "id": "jin_shi",
-      "name": "金氏（璜大奶奶）",
-      "features": "小户人家媳妇的方圆脸；粗短眉；眼亮而外凸；鼻头略圆；薄唇快语，泼辣能争",
-      "prompt": "a square-round commoner woman face with compact features, short thick eyebrows, prominent bright quick eyes, a slightly bulbous round nose tip, thin fast-talking lips; sharp-tongued aggressive alertness, a petty household wife not a great lady",
-      "seed": 10232082
-    },
-    {
-      "id": "hu_shi",
-      "name": "胡氏（金寡妇）",
-      "features": "寡居贫妇的瘦长脸；淡稀眉；眼尾下垂含愁；长鼻；薄唇紧抿，愁苦隐忍",
-      "prompt": "a thin elongated poor widow face with sunken cheeks, faint sparse brows, downturned worry-worn eyes with tired heavy lower lids, a long narrow nose, thin tightly pressed lips; careworn resigned hardship, middle-aged and plainly dressed",
-      "seed": 10232084
-    },
-    {
-      "id": "zhang_youshi",
-      "name": "张友士",
-      "features": "儒医的清瘦长方脸；疏淡长眉；沉静细长眼；挺直鼻；薄唇，四十余岁学者气",
-      "prompt": "a lean elongated scholar-physician face, sparse long level brows, calm narrow observant eyes, a high straight nose, thin precise lips; a composed scholarly physician in his forties, retain a neat short beard",
-      "seed": 10232086
-    },
-    {
-      "id": "jia_qiang",
-      "name": "贾蔷",
-      "features": "贾府正派玄孙的俊俏少年脸；修长弯眉；灵活俊眼；挺直鼻；薄唇带笑，十六七岁",
-      "prompt": "a handsome slender teenage boy face, long gracefully curved eyebrows, lively intelligent eyes, a straight refined nose, thin smiling lips; a pretty clever sixteen-year-old youth, an aristocratic boy not a woman",
-      "seed": 10232088
-    },
-    {
-      "id": "jia_dairu",
-      "name": "贾代儒",
-      "features": "老塾师的瘦削长脸；垂白长眉；老花细眼；长鼻；瘪薄唇，六十余岁威严而衰",
-      "prompt": "a gaunt elongated elderly man face, drooping long pale eyebrows, small aged narrow eyes behind tired lids, a long narrow nose, thin sunken lips; a stern failing sixty-something private tutor, retain a sparse white beard",
-      "seed": 10232090
-    },
-    {
-      "id": "dai_quan",
-      "name": "戴权",
-      "features": "大明宫掌宫内相的清瘦长脸；稀疏短眉；细长含笑眼；窄直鼻；薄唇机敏，五十余岁老宦",
-      "prompt": "a lean long elderly eunuch minister face, sparse short eyebrows, narrow smiling knowing eyes, a thin straight nose, thin alert lips; a shrewd experienced palace intendant of the Ming Palace, retain a thin mustache",
-      "seed": 10232092
-    },
-    {
-      "id": "bao_zhu",
-      "name": "宝珠",
-      "features": "十四五岁丫鬟的短圆幼脸；双丫髻；弯眉大眼；小鼻；圆嘴，稚拙而孝切",
-      "prompt": "a fourteen-year-old maidservant face, short round child face with a double topknot, softly arched large earnest eyes, a small button nose, a small round mouth; innocent devoted loyalty, a young girl not a woman",
-      "seed": 10232094
-    },
-    {
-      "id": "lai_sheng",
-      "name": "来升",
-      "features": "宁府总管的方正中年脸；粗平眉；细长眼；宽鼻；薄唇拘谨，五十许",
-      "prompt": "a square middle-aged steward face, thick level brows, narrow observant eyes, a broad nose, thin restrained lips; an exact cautious household manager of the Ning household, in his fifties",
-      "seed": 10232096
-    },
-    {
-      "id": "zhao_er",
-      "name": "昭儿",
-      "features": "十六七岁小厮的圆润少年脸；短眉圆眼；小翘鼻；厚唇伶俐，忠厚怕事",
-      "prompt": "a sixteen-year-old page boy face, round and full, short straight brows, round alert eyes, a small upturned nose, full boyish lips; a quick but timid loyal servant",
-      "seed": 10232098
-    },
-    {
-      "id": "shui_rong",
-      "name": "北静王水溶",
-      "features": "年轻亲王的俊美长脸；修长弯眉；明澈长眼；挺直鼻；薄唇含笑，未弱冠",
-      "prompt": "a strikingly handsome young prince face, long graceful curved eyebrows, clear long intelligent eyes, a high straight nose, thin smiling lips; a gentle refined ruler not yet twenty, retain a soft scholarly air",
-      "seed": 10232100
-    },
-    {
-      "id": "jing_xu",
-      "name": "净虚",
-      "features": "老尼的瘦削长脸；深眼窝；稀疏细眉；长鼻；薄唇微敛，老成圆滑",
-      "prompt": "a gaunt elderly nun face with hollow cheeks, deep-set eyes, sparse fine eyebrows, a long narrow nose, thin pursed lips; a shrewd experienced old nun of a temple",
-      "seed": 10232102
-    },
-    {
-      "id": "zhi_neng",
-      "name": "智能儿",
-      "features": "十六七岁小尼的圆润少女脸；细弯眉；含情杏眼；小翘鼻；樱桃小嘴，青春活泼",
-      "prompt": "a sixteen-year-old young nun face, round and full, finely arched brows, almond eyes with an amorous glint, a small upturned nose, cherry lips; a blossoming girl who has just discovered love",
-      "seed": 10232104
-    },
-    {
-      "id": "er_ya_tou",
-      "name": "二丫头",
-      "features": "十七八岁村姑的圆润少女脸；碎刘海；含笑大眼；小圆鼻；厚唇，爽朗健壮",
-      "prompt": "a seventeen-year-old village girl face, round and sun-touched, wispy bangs, large smiling eyes, a small round nose, full lips; a frank sturdy country lass",
-      "seed": 10232106
-    },
-    {
-      "id": "wang_er",
-      "name": "旺儿",
-      "features": "二十余岁小厮的结实圆脸；短浓眉；机灵眼；宽鼻；厚唇麻利，精明强干",
-      "prompt": "a sturdy twenty-something page boy face, round and broad, short thick brows, sharp clever eyes, a wide nose, full lips; a brisk capable servant who gets things done",
-      "seed": 10232108
-    },
-    {
-      "id": "qin_ye",
-      "name": "秦业",
-      "features": "秦钟之父的清癯长脸；花白长眉；深陷老眼；瘦长鼻；薄唇，六十余岁慈而病",
-      "prompt": "a gaunt long elderly man face, greying long eyebrows, deep-set tired old eyes, a thin long nose, thin pale lips; a frail kindly sixty-something father of Qin Zhong, retain a greying beard",
-      "seed": 10232110
-    },
-    {
-      "id": "yuanchun",
-      "name": "贾元春",
-      "features": "贵妃端丽长鹅蛋脸；柳叶凤眉；凤目含威；直鼻；樱唇；丰润华贵，二十岁上下",
-      "prompt": "a dignified oblong oval imperial-concubine face, slender willow-phoenix eyebrows, majestic phoenix eyes with calm authority, a straight noble nose, small cherry lips, a rich graceful twenty-something imperial princess, lavish palace headdress with a gold phoenix hairpin and pearl drops",
-      "seed": 10234000
-    },
-    {
-      "id": "jia_lian",
-      "name": "贾琏",
-      "features": "贵族公子清俊方脸；浓眉；明朗桃花眼；直鼻；薄唇；微带纨绔，二十余岁",
-      "prompt": "a clear handsome square-ish young noble face, bold dark eyebrows, bright peach-blossom eyes, a straight nose, thin lips, a slightly dandified twenty-something aristocrat son, black hair crown",
-      "seed": 10234002
-    },
-    {
-      "id": "jia_huan",
-      "name": "贾环",
-      "features": "少年庶出，尖削小脸；细眉吊梢；三角眼带忌刻；薄鼻薄唇；衣色暗沉，十二三岁",
-      "prompt": "a narrow sharp-jawed boyish face of a jealous young teenage half-brother, thin slanting brows, triangular wary eyes with hidden resentment, thin nose and thin lips, sallow complexion, plainly dressed twelve-year-old boy in dark plain Qing-dynasty clothes, a plain black cap",
-      "seed": 10234010
-    },
-    {
-      "id": "zhao_yiniang",
-      "name": "赵姨娘",
-      "features": "妾室中年，薄长脸；稀眉细眼；颧骨略高；薄唇惯撇；衣色半旧带俗艳，三十余岁",
-      "prompt": "a thin long-faced concubine woman in her thirties, sparse thin eyebrows, narrow sharp eyes, slightly high cheekbones, habitually pursed thin lips, half-old clothes with a garish touch, Qing-dynasty consort of a master, sour envious expression",
-      "seed": 10234020
-    },
-    {
-      "id": "shi_xiangyun",
-      "name": "史湘云",
-      "features": "少女圆润苹果脸；浓眉大眼；鼻直口阔笑意常开；健康红润；英气洒脱着男装也宜，十四五岁",
-      "prompt": "a round apple-cheeked cheerful girl of fourteen, thick lively eyebrows, big sparkling eyes, straight nose and a wide smiling mouth, rosy healthy complexion, spirited boyish charm, Qing-dynasty young lady robes slightly loose, laughing merrily",
-      "seed": 10234030
-    },
-    {
-      "id": "she_yue",
-      "name": "麝月",
-      "features": "少女清秀鹅蛋脸；细长眉；眼尾微垂含蓄；薄唇；神情安静守分，十七八岁",
-      "prompt": "a gentle oval-faced maid of seventeen, fine long eyebrows, softly downturned almond eyes, thin lips, a quiet composed and dutiful expression, neat low hair with a simple knot, plain modest Qing-dynasty maid clothing in soft muted blue",
-      "seed": 10234040
-    }
-  ]
+ "version": 1,
+ "server": "http://192.168.4.66:8188",
+ "model": "qwen_image_2.1_int8_convrot",
+ "method": "Head-detail edit with face-outline freedom, portrait-led identity reference for chibi, pixel-preserving composite outside face mask",
+ "note": "第三回明确外貌描述优先；其余五官为原创设计，不冒充原文规定。只检查头发、衣服、色彩以外的面部差异。",
+ "characters": [
+  {
+   "id": "daiyu",
+   "name": "黛玉",
+   "features": "清瘦长鹅蛋脸；细长含愁眉；眼尾微垂的含露杏眼；窄鼻梁；薄小唇；敏感、克制，眼下轻淡倦意",
+   "prompt": "a slender elongated oval face, narrow temples, fine long slightly knitted brows, wide-set almond eyes with gently drooping outer corners and moist thoughtful gaze, slender straight nose, small thin lips, delicate pale cheeks without rosy roundness, a restrained wistful expression",
+   "seed": 10232000
+  },
+  {
+   "id": "baoyu",
+   "name": "宝玉",
+   "features": "饱满短鹅蛋脸；宽额；浓长平眉；明亮桃花眼；圆润鼻尖；饱满弓唇，喜悦灵动",
+   "prompt": "a short full oval face, broad smooth forehead, long dark almost horizontal eyebrows, large luminous peach-blossom eyes with rounded inner corners and gently lifted outer corners, a short rounded nose tip, full well-shaped cupid-bow lips, plump youthful cheeks and lively open warmth; a young BOY rather than a woman",
+   "seed": 10232002
+  },
+  {
+   "id": "feng",
+   "name": "王熙凤",
+   "features": "颧骨鲜明的菱形脸；高挑柳叶眉；细长上挑凤眼；挺直鼻梁；薄唇偏侧笑，锐利干练",
+   "prompt": "an angular diamond face with distinct high cheekbones and a tapering pointed chin, boldly arched eyebrows with sharp high peaks, long narrow phoenix eyes with strongly upturned outer corners and penetrating gaze, a high straight nose bridge, small thin lips with an asymmetric knowing smile; youthful adult intelligence and authority",
+   "seed": 10232004
+  },
+  {
+   "id": "grandmother",
+   "name": "贾母",
+   "features": "宽阔圆方脸；丰颊重下颌；长寿眉；笑眼但目光有威；宽鼻头；笑纹深而温厚",
+   "prompt": "a broad round-square elderly face, substantial full cheeks and heavy rounded jaw, long sparse pale eyebrows, small smiling deep-set eyes with authoritative focus, broad fleshy nose tip, generous mouth, pronounced crow feet and smile creases; warm commanding matriarch, not frail",
+   "seed": 10232006
+  },
+  {
+   "id": "wang",
+   "name": "王夫人",
+   "features": "端正方圆脸；低平眉；厚眼睑；内收沉静目光；宽直鼻；嘴角平收，稳重含蓄",
+   "prompt": "a mature broad square-oval face with a wide lower jaw, low straight medium brows, small deep-set eyes with heavy upper lids, a broad straight nose, medium full tightly composed lips with horizontal corners, dignified reserved and solemn; visible mature cheek folds",
+   "seed": 10232008
+  },
+  {
+   "id": "xing",
+   "name": "邢夫人",
+   "features": "长方脸；颧面偏平；略下垂眉；细小眼睛；长鼻；窄嘴，拘谨审视",
+   "prompt": "a long rectangular mature face with flat cheek planes, slightly drooping angled eyebrows, narrow small observant eyes set close together, a long narrow nose, a thin compressed mouth and a squared chin; cautious assessing expression, subtle nasolabial creases",
+   "seed": 10232010
+  },
+  {
+   "id": "liwan",
+   "name": "李纨",
+   "features": "细长柔和脸；淡平眉；深静细眼；长鼻；唇淡而窄，清寂内敛",
+   "prompt": "a long narrow softly tapered adult face, faint straight eyebrows, quiet narrow eyes with relaxed lowered lids and wide spacing, a long fine nose, pale narrow lips and a rounded modest chin; serene restrained expression without coyness",
+   "seed": 10232012
+  },
+  {
+   "id": "yingchun",
+   "name": "迎春",
+   "features": "短圆脸；丰颊圆下巴；短淡弯眉；眼距略宽的柔缓垂眼；短圆鼻；圆小嘴，温厚怯弱",
+   "prompt": "a distinctly SHORT ROUND face with wide FULL LOWER CHEEKS and a broad ROUND CHIN, cheek width nearly equal to forehead width, short faint gently curved brows, widely spaced SMALL SOFT DROOPING EYES with relaxed heavy upper lids, a SHORT low round nose, a small modest rounded mouth; gentle passive hesitant warmth, NO tapered pointed jaw, NO elongated face, NO winged eyeliner",
+   "seed": 10232014
+  },
+  {
+   "id": "tanchun",
+   "name": "探春",
+   "features": "长鸭蛋脸与圆阔下颏；低平舒展长眉；眼距较宽的俊朗平眼；挺直长鼻；宽嘴与饱满下唇，自信爽朗",
+   "prompt": "an elongated duck-egg oval face with a broad softly rounded lower jaw and rounded chin, distinctly LONG LOW HORIZONTAL STRAIGHT eyebrows rather than arched brows, widely spaced horizontally broad open eyes with LEVEL outer corners rather than upturned phoenix eyes, a long high straight nose, a WIDE mouth with a full lower lip; forthright confident energetic gaze, natural plain lips, NO winged eyeliner, NO pointed triangular chin",
+   "seed": 10232016
+  },
+  {
+   "id": "xichun",
+   "name": "惜春",
+   "features": "幼圆短脸；短直眉；圆眼偏冷静；小翘鼻；短小嘴，稚气而疏离",
+   "prompt": "a very young short round face with a small compact lower half, short straight eyebrows, clear round eyes with a cool steady gaze rather than a smile, tiny slightly upturned nose and tiny straight mouth, short small chin; childlike yet detached",
+   "seed": 10232018
+  },
+  {
+   "id": "xiren",
+   "name": "袭人",
+   "features": "丰润梨形脸；细弯眉；细长温和笑眼；小圆鼻；厚薄适中唇，稳妥亲切",
+   "prompt": "a full pear-shaped young adult face with wider lower cheeks and a rounded chin, fine gently curved eyebrows, narrow kind smiling eyes, a small rounded nose, a softly broad mouth with moderately full lips; grounded calm reassuring warmth",
+   "seed": 10232020
+  },
+  {
+   "id": "xueyan",
+   "name": "雪雁",
+   "features": "短圆幼脸；短淡眉；略下垂大眼；小塌鼻；鼓腮小嘴，童稚谨慎",
+   "prompt": "a ten-year-old girl with a short round child face, large slightly downturned eyes and short faint brows, a low tiny round nose, soft chubby cheeks and a tiny pursed mouth; cautious innocent child expression, no makeup",
+   "seed": 10232022
+  },
+  {
+   "id": "yingge",
+   "name": "鹦哥",
+   "features": "小巧瓜子脸；弯眉一高一低；机敏长眼；细翘鼻；唇角轻上扬，伶俐",
+   "prompt": "a small sharply tapered triangular face, one arched eyebrow slightly higher than the other, keen narrow almond eyes with lifted corners, a fine slightly upturned nose, a small wide smiling mouth; quick attentive lively expression",
+   "seed": 10232024
+  },
+  {
+   "id": "yucun",
+   "name": "贾雨村",
+   "features": "宽方脸；浓剑眉；星眼深而锐；直鼻权腮；宽口方下颌，雄壮带算计",
+   "prompt": "a broad powerful square face with wide strong cheekbones and a heavy squared jaw, thick sharply rising sword eyebrows, deep-set bright piercing eyes, a high straight large nose and a wide firm mouth; ambitious calculating confidence, not a thin elegant scholar; retain his existing mustache and beard",
+   "seed": 10232026
+  },
+  {
+   "id": "ruhai",
+   "name": "林如海",
+   "features": "瘦长椭圆脸；疏长眉；眼窝较深而柔；修长鼻；薄唇清癯，下颌细",
+   "prompt": "a thin elongated scholarly face with hollow temples, long sparse gently curved brows, slightly sunken gentle eyes with tired lower lids, a long delicate narrow nose, thin understated lips, narrow chin and subtle cheek hollows; cultivated tired tenderness; retain existing facial hair",
+   "seed": 10232028
+  },
+  {
+   "id": "zheng",
+   "name": "贾政",
+   "features": "端正长方脸；浓平眉；眼裂短而严；挺宽鼻；方唇方颏，肃穆",
+   "prompt": "a stern upright rectangular face, flat broad forehead, thick level brows close to the eyes, short narrow unsmiling eyes, a broad high straight nose, a tight square mouth and firm square chin; formal solemn authority; retain existing facial hair",
+   "seed": 10232030
+  },
+  {
+   "id": "zhang",
+   "name": "张如圭",
+   "features": "窄长脸；拱眉；外凸明亮小眼；尖长鼻；窄唇，热切利落",
+   "prompt": "a narrow long face with a high slender nose and pointed nose tip, high arched slim eyebrows, slightly prominent small bright eyes set close together, thin mobile lips and a narrow pointed jaw; eager alert expression; retain his short beard",
+   "seed": 10232032
+  },
+  {
+   "id": "leng",
+   "name": "冷子兴",
+   "features": "宽圆脸；短弯粗眉；眯笑小眼；肉鼻头；阔嘴厚下唇，精明健谈",
+   "prompt": "a wide round fleshy face with plump cheekbones, short thick curved eyebrows, small twinkling smiling slit eyes, a wide bulbous nose tip, a broad mouth with a thick lower lip and smile folds; shrewd convivial antique merchant, retain mustache",
+   "seed": 10232034
+  },
+  {
+   "id": "guide",
+   "name": "引路嬷嬷",
+   "features": "瘦长老脸；颧骨高；稀眉；深眼窝；弯鼻；薄嘴与缺齿笑，慈和",
+   "prompt": "a lean long elderly face with pronounced high cheekbones and hollow cheeks, sparse uneven brows, small deep-set kindly eyes, a slightly hooked long nose, thin smiling lips and a recessed chin, deep age lines; weathered but benevolent",
+   "seed": 10232036
+  },
+  {
+   "id": "maid",
+   "name": "通报丫鬟",
+   "features": "宽额小方脸；粗短眉；大圆眼；短鼻；圆唇，精神利落",
+   "prompt": "a youthful small square face with a broad forehead and compact square chin, short thick horizontal eyebrows, large clear round eyes, a short straight nose, small full round lips; brisk bright alert expression",
+   "seed": 10232038
+  },
+  {
+   "id": "messenger",
+   "name": "传话妇人",
+   "features": "宽扁脸；平直淡眉；细缝眼；鼻翼宽；薄阔嘴，朴实恭谨",
+   "prompt": "a broad flat middle-aged face with wide cheek planes, faint straight brows, small narrow hooded eyes, a low broad nose with wide nostrils, a wide thin-lipped mouth and blunt chin; humble practical expression and subtle uneven sun-tanned skin",
+   "seed": 10232040
+  },
+  {
+   "id": "nurse_wang",
+   "name": "王嬷嬷",
+   "features": "极瘦小老脸；凹颊尖颏；淡短眉；眼尾下垂；小尖鼻；干瘪唇，老迈慈爱",
+   "prompt": "a very thin small elderly face with deeply hollow cheeks and a tiny pointed chin, short sparse pale brows, drooping watery eyes, a small pointed nose, thin sunken lips with fine vertical wrinkles; fragile old affectionate expression",
+   "seed": 10232042
+  },
+  {
+   "id": "nurse_li",
+   "name": "李嬷嬷",
+   "features": "饱满圆方脸；粗平眉；厚眼皮；宽肉鼻；紧闭厚唇，老练严肃",
+   "prompt": "a stout mature round-square face with a broad chin and heavy lower cheeks, thick low straight eyebrows, narrow eyes under heavy drooping lids, a broad fleshy nose, thick tightly closed lips and pronounced folds beside the mouth; stern experienced nurse",
+   "seed": 10232044
+  },
+  {
+   "id": "shiyin",
+   "name": "甄士隐",
+   "features": "宽额瘦颊；细长眉；深静下垂眼；长而微弯鼻；柔和薄唇，恬淡",
+   "prompt": "a high broad forehead above thin hollow cheeks, long delicate downward-curving brows, deep calm eyes with drooping outer corners, a long slightly curved nose bridge, soft thin lips and a narrow rounded chin; gentle contemplative worn scholarly face; retain beard",
+   "seed": 10232046
+  },
+  {
+   "id": "fengshi",
+   "name": "封氏",
+   "features": "宽颊长鹅蛋脸；低弯眉；细长柔眼；低圆鼻；厚唇，温柔忧愁",
+   "prompt": "a mature long oval face with broad soft cheeks and a rounded jaw, low gently curved brows, narrow tender eyes with slightly swollen tired lower lids, a low round nose, a wide mouth with full soft lips; motherly sadness without girlish coyness",
+   "seed": 10232048
+  },
+  {
+   "id": "yinglian",
+   "name": "甄英莲",
+   "features": "真正三岁幼童脸；极短面中；高额宽眼距；圆眼小鼻；圆下巴；眉心胭脂痣",
+   "prompt": "a THREE-YEAR-OLD toddler face with a large domed forehead, extremely short midface, widely spaced large round eyes, very short faint brows, tiny button nose, chubby baby cheeks and a tiny rosebud mouth, round small chin; one tiny red birthmark centered between the eyebrows; no makeup, no adult facial proportions",
+   "seed": 10232050
+  },
+  {
+   "id": "jiaoxing",
+   "name": "娇杏",
+   "features": "微方杏仁脸；浓柔眉；弯月笑眼；略宽鼻头；丰唇，亲切坦然",
+   "prompt": "a young softly square face with full lower cheeks and a broad short chin, dark softly curved eyebrows, crescent smiling eyes with visible lower lids, a slightly broad rounded nose tip, full natural lips and subtle cheek dimples; unpretentious friendly self-possession",
+   "seed": 10232052
+  },
+  {
+   "id": "fengsu",
+   "name": "封肃",
+   "features": "梯形阔下颌；稀短眉；眼小聚拢；蒜鼻；厚唇，下颏肉厚而世故",
+   "prompt": "a heavy trapezoid elderly face with a lower jaw wider than the forehead, short patchy eyebrows, small close-set suspicious eyes, a large wide garlic-shaped nose, thick protruding lips and fleshy double chin; sly calculating rural patriarch, retain facial hair",
+   "seed": 10232054
+  },
+  {
+   "id": "monk",
+   "name": "癞头和尚",
+   "features": "宽额尖下颏；颧骨突出；一高一低弯眉；细长笑眼；大耳宽鼻；豁达诙谐",
+   "prompt": "a broad forehead tapering to a pointed chin, prominent cheekbones and sunken cheeks, asymmetrically high curved brows, long narrow laughing eyes, a wide short nose, large projecting ears and a broad irreverent grin with laugh folds; eccentric middle-aged monk, not a sweet-faced girl",
+   "seed": 10232056
+  },
+  {
+   "id": "taoist",
+   "name": "跛足道人",
+   "features": "狭长骨相；高额；斜飞长眉；深长眼；鹰钩鼻；薄唇，疏狂",
+   "prompt": "a very long bony face with hollow temples, high forehead, long obliquely raised thin brows, deep-set narrow intense eyes, a prominent hooked aquiline nose, a thin asymmetrically smiling mouth and a sharp angular chin; wild detached eccentricity, retain existing beard",
+   "seed": 10232058
+  },
+  {
+   "id": "kongkong",
+   "name": "空空道人",
+   "features": "方额长脸；平直长眉；宽眼距静眼；方直鼻；薄而平口，沉思",
+   "prompt": "an elongated face with a broad square forehead and narrow squared chin, long level straight brows, widely spaced calm small eyes behind soft heavy lids, a straight broad squared nose bridge, thin horizontal lips; patient reflective analytical expression, retain long beard",
+   "seed": 10232060
+  },
+  {
+   "id": "huoqi",
+   "name": "霍启",
+   "features": "短方脸；粗短低眉；小圆眼；扁鼻；厚唇，笨拙朴实",
+   "prompt": "a short wide square face with a low forehead and broad jaw, thick short low eyebrows, small round close-set eyes, a flattened short nose with wide nostrils, thick broad lips and a blunt chin; ordinary awkward honest male servant, visibly distinct from an elegant scholar",
+   "seed": 10232062
+  },
+  {
+   "id": "oldmonk",
+   "name": "智通寺老僧",
+   "features": "骨瘦凹陷老脸；垂白眉；深陷半闭眼；长弯鼻；瘪嘴，迟钝衰老",
+   "prompt": "an extremely gaunt eighty-year-old face, sharply hollow cheeks, drooping long white eyebrows, deeply recessed half-closed eyes, a long curved drooping nose, a sunken toothless mouth and protruding bony chin; asymmetrical deep wrinkles and frail distracted expression",
+   "seed": 10232064
+  },
+  {
+   "id": "ying_er",
+   "name": "莺儿",
+   "features": "圆润清秀丫鬟脸；双丫髻；弯眉灵眼；小翘鼻；丰唇带俏，伶俐活泼",
+   "prompt": "a young round-cheeked pretty maidservant face with a double topknot, finely arched lively eyebrows, round bright clever eyes, a small slightly upturned nose, full rosy lips with a playful smile; quick lively expression",
+   "seed": 10232066
+  },
+  {
+   "id": "qin_zhong",
+   "name": "秦钟",
+   "features": "清秀俊美少年男相；细长含情眼；窄鼻；薄唇温润；肤色白皙，风流俊俏",
+   "prompt": "a delicate beautiful YOUNG BOY face, fine long tender eyes with gently drooping corners, a slender straight nose, small soft lips, pale clear luminous skin, refined pretty features; a gentle warm expression, a youth not a woman",
+   "seed": 10232068
+  },
+  {
+   "id": "jia_rui",
+   "name": "贾瑞",
+   "features": "瘦长寒酸脸；稀眉；小眼带谄；长鼻；薄唇歪笑，猥琐好色",
+   "prompt": "a thin long shabby adult face, sparse uneven eyebrows, small covetous eyes, a long narrow nose, thin lips with a lopsided leering smile, sallow pinched skin; lascivious calculating expression",
+   "seed": 10232070
+  },
+  {
+   "id": "jin_rong",
+   "name": "金荣",
+   "features": "粗野横肉少年脸；浓横眉；圆瞪眼；扁鼻；厚唇蛮横，泼皮气",
+   "prompt": "a coarse sturdy teenage boy face with thick horizontal eyebrows, round glaring eyes, a flat broad nose, thick lips and a bullying snarl; rough ruffian expression",
+   "seed": 10232072
+  },
+  {
+   "id": "ming_yan",
+   "name": "茗烟",
+   "features": "机灵小厮圆脸；短眉圆眼；小翘鼻；利落嘴，忠勇活泼",
+   "prompt": "a quick-witted young page boy with a round face, short straight eyebrows, round alert eyes, a small upturned nose, a brisk mouth; loyal lively expression",
+   "seed": 10232074
+  },
+  {
+   "id": "li_gui",
+   "name": "李贵",
+   "features": "粗壮朴实成年脸；浓平眉；小眼憨厚；宽鼻；厚唇老实，忠厚本分",
+   "prompt": "a stout plain mature man face, thick level eyebrows, small honest eyes, a broad nose, thick simple lips; steady dependable expression, a nurse-maid's son and page chief",
+   "seed": 10232076
+  },
+  {
+   "id": "you_shi",
+   "name": "尤氏",
+   "features": "宁府当家奶奶的丰满方圆脸；低平弯眉；温厚含笑眼；圆润鼻头；厚薄适中唇，圆融能持事",
+   "prompt": "a mature round-square woman face with full soft cheeks and a rounded jaw, low gently curved eyebrows, warm placid smiling eyes with calm lowered lids, a rounded nose tip, medium full composed lips; gracious capable matronly warmth, no maidenly coyness",
+   "seed": 10232078
+  },
+  {
+   "id": "jia_zhen",
+   "name": "贾珍",
+   "features": "宁府当家的长方阔脸；浓剑眉略散；眼大而浮；直挺鼻；薄唇带纵欲之色，三十余岁纨绔",
+   "prompt": "a broad long rectangular man face, thick loosely arched sword eyebrows somewhat disordered, large floating restless eyes, a high straight nose, thin lips with a self-indulgent slack set; a dissolute thirty-something aristocrat, retain mustache and short beard",
+   "seed": 10232080
+  },
+  {
+   "id": "jin_shi",
+   "name": "金氏（璜大奶奶）",
+   "features": "小户人家媳妇的方圆脸；粗短眉；眼亮而外凸；鼻头略圆；薄唇快语，泼辣能争",
+   "prompt": "a square-round commoner woman face with compact features, short thick eyebrows, prominent bright quick eyes, a slightly bulbous round nose tip, thin fast-talking lips; sharp-tongued aggressive alertness, a petty household wife not a great lady",
+   "seed": 10232082
+  },
+  {
+   "id": "hu_shi",
+   "name": "胡氏（金寡妇）",
+   "features": "寡居贫妇的瘦长脸；淡稀眉；眼尾下垂含愁；长鼻；薄唇紧抿，愁苦隐忍",
+   "prompt": "a thin elongated poor widow face with sunken cheeks, faint sparse brows, downturned worry-worn eyes with tired heavy lower lids, a long narrow nose, thin tightly pressed lips; careworn resigned hardship, middle-aged and plainly dressed",
+   "seed": 10232084
+  },
+  {
+   "id": "zhang_youshi",
+   "name": "张友士",
+   "features": "儒医的清瘦长方脸；疏淡长眉；沉静细长眼；挺直鼻；薄唇，四十余岁学者气",
+   "prompt": "a lean elongated scholar-physician face, sparse long level brows, calm narrow observant eyes, a high straight nose, thin precise lips; a composed scholarly physician in his forties, retain a neat short beard",
+   "seed": 10232086
+  },
+  {
+   "id": "jia_qiang",
+   "name": "贾蔷",
+   "features": "贾府正派玄孙的俊俏少年脸；修长弯眉；灵活俊眼；挺直鼻；薄唇带笑，十六七岁",
+   "prompt": "a handsome slender teenage boy face, long gracefully curved eyebrows, lively intelligent eyes, a straight refined nose, thin smiling lips; a pretty clever sixteen-year-old youth, an aristocratic boy not a woman",
+   "seed": 10232088
+  },
+  {
+   "id": "jia_dairu",
+   "name": "贾代儒",
+   "features": "老塾师的瘦削长脸；垂白长眉；老花细眼；长鼻；瘪薄唇，六十余岁威严而衰",
+   "prompt": "a gaunt elongated elderly man face, drooping long pale eyebrows, small aged narrow eyes behind tired lids, a long narrow nose, thin sunken lips; a stern failing sixty-something private tutor, retain a sparse white beard",
+   "seed": 10232090
+  },
+  {
+   "id": "dai_quan",
+   "name": "戴权",
+   "features": "大明宫掌宫内相的清瘦长脸；稀疏短眉；细长含笑眼；窄直鼻；薄唇机敏，五十余岁老宦",
+   "prompt": "a lean long elderly eunuch minister face, sparse short eyebrows, narrow smiling knowing eyes, a thin straight nose, thin alert lips; a shrewd experienced palace intendant of the Ming Palace, retain a thin mustache",
+   "seed": 10232092
+  },
+  {
+   "id": "bao_zhu",
+   "name": "宝珠",
+   "features": "十四五岁丫鬟的短圆幼脸；双丫髻；弯眉大眼；小鼻；圆嘴，稚拙而孝切",
+   "prompt": "a fourteen-year-old maidservant face, short round child face with a double topknot, softly arched large earnest eyes, a small button nose, a small round mouth; innocent devoted loyalty, a young girl not a woman",
+   "seed": 10232094
+  },
+  {
+   "id": "lai_sheng",
+   "name": "来升",
+   "features": "宁府总管的方正中年脸；粗平眉；细长眼；宽鼻；薄唇拘谨，五十许",
+   "prompt": "a square middle-aged steward face, thick level brows, narrow observant eyes, a broad nose, thin restrained lips; an exact cautious household manager of the Ning household, in his fifties",
+   "seed": 10232096
+  },
+  {
+   "id": "zhao_er",
+   "name": "昭儿",
+   "features": "十六七岁小厮的圆润少年脸；短眉圆眼；小翘鼻；厚唇伶俐，忠厚怕事",
+   "prompt": "a sixteen-year-old page boy face, round and full, short straight brows, round alert eyes, a small upturned nose, full boyish lips; a quick but timid loyal servant",
+   "seed": 10232098
+  },
+  {
+   "id": "shui_rong",
+   "name": "北静王水溶",
+   "features": "年轻亲王的俊美长脸；修长弯眉；明澈长眼；挺直鼻；薄唇含笑，未弱冠",
+   "prompt": "a strikingly handsome young prince face, long graceful curved eyebrows, clear long intelligent eyes, a high straight nose, thin smiling lips; a gentle refined ruler not yet twenty, retain a soft scholarly air",
+   "seed": 10232100
+  },
+  {
+   "id": "jing_xu",
+   "name": "净虚",
+   "features": "老尼的瘦削长脸；深眼窝；稀疏细眉；长鼻；薄唇微敛，老成圆滑",
+   "prompt": "a gaunt elderly nun face with hollow cheeks, deep-set eyes, sparse fine eyebrows, a long narrow nose, thin pursed lips; a shrewd experienced old nun of a temple",
+   "seed": 10232102
+  },
+  {
+   "id": "zhi_neng",
+   "name": "智能儿",
+   "features": "十六七岁小尼的圆润少女脸；细弯眉；含情杏眼；小翘鼻；樱桃小嘴，青春活泼",
+   "prompt": "a sixteen-year-old young nun face, round and full, finely arched brows, almond eyes with an amorous glint, a small upturned nose, cherry lips; a blossoming girl who has just discovered love",
+   "seed": 10232104
+  },
+  {
+   "id": "er_ya_tou",
+   "name": "二丫头",
+   "features": "十七八岁村姑的圆润少女脸；碎刘海；含笑大眼；小圆鼻；厚唇，爽朗健壮",
+   "prompt": "a seventeen-year-old village girl face, round and sun-touched, wispy bangs, large smiling eyes, a small round nose, full lips; a frank sturdy country lass",
+   "seed": 10232106
+  },
+  {
+   "id": "wang_er",
+   "name": "旺儿",
+   "features": "二十余岁小厮的结实圆脸；短浓眉；机灵眼；宽鼻；厚唇麻利，精明强干",
+   "prompt": "a sturdy twenty-something page boy face, round and broad, short thick brows, sharp clever eyes, a wide nose, full lips; a brisk capable servant who gets things done",
+   "seed": 10232108
+  },
+  {
+   "id": "qin_ye",
+   "name": "秦业",
+   "features": "秦钟之父的清癯长脸；花白长眉；深陷老眼；瘦长鼻；薄唇，六十余岁慈而病",
+   "prompt": "a gaunt long elderly man face, greying long eyebrows, deep-set tired old eyes, a thin long nose, thin pale lips; a frail kindly sixty-something father of Qin Zhong, retain a greying beard",
+   "seed": 10232110
+  },
+  {
+   "id": "yuanchun",
+   "name": "贾元春",
+   "features": "贵妃端丽长鹅蛋脸；柳叶凤眉；凤目含威；直鼻；樱唇；丰润华贵，二十岁上下",
+   "prompt": "a dignified oblong oval imperial-concubine face, slender willow-phoenix eyebrows, majestic phoenix eyes with calm authority, a straight noble nose, small cherry lips, a rich graceful twenty-something imperial princess, lavish palace headdress with a gold phoenix hairpin and pearl drops",
+   "seed": 10234000
+  },
+  {
+   "id": "jia_lian",
+   "name": "贾琏",
+   "features": "贵族公子清俊方脸；浓眉；明朗桃花眼；直鼻；薄唇；微带纨绔，二十余岁",
+   "prompt": "a clear handsome square-ish young noble face, bold dark eyebrows, bright peach-blossom eyes, a straight nose, thin lips, a slightly dandified twenty-something aristocrat son, black hair crown",
+   "seed": 10234002
+  },
+  {
+   "id": "jia_huan",
+   "name": "贾环",
+   "features": "少年庶出，尖削小脸；细眉吊梢；三角眼带忌刻；薄鼻薄唇；衣色暗沉，十二三岁",
+   "prompt": "a narrow sharp-jawed boyish face of a jealous young teenage half-brother, thin slanting brows, triangular wary eyes with hidden resentment, thin nose and thin lips, sallow complexion, plainly dressed twelve-year-old boy in dark plain Qing-dynasty clothes, a plain black cap",
+   "seed": 10234010
+  },
+  {
+   "id": "zhao_yiniang",
+   "name": "赵姨娘",
+   "features": "妾室中年，薄长脸；稀眉细眼；颧骨略高；薄唇惯撇；衣色半旧带俗艳，三十余岁",
+   "prompt": "a thin long-faced concubine woman in her thirties, sparse thin eyebrows, narrow sharp eyes, slightly high cheekbones, habitually pursed thin lips, half-old clothes with a garish touch, Qing-dynasty consort of a master, sour envious expression",
+   "seed": 10234020
+  },
+  {
+   "id": "shi_xiangyun",
+   "name": "史湘云",
+   "features": "少女圆润苹果脸；浓眉大眼；鼻直口阔笑意常开；健康红润；英气洒脱着男装也宜，十四五岁",
+   "prompt": "a round apple-cheeked cheerful girl of fourteen, thick lively eyebrows, big sparkling eyes, straight nose and a wide smiling mouth, rosy healthy complexion, spirited boyish charm, Qing-dynasty young lady robes slightly loose, laughing merrily",
+   "seed": 10234030
+  },
+  {
+   "id": "she_yue",
+   "name": "麝月",
+   "features": "少女清秀鹅蛋脸；细长眉；眼尾微垂含蓄；薄唇；神情安静守分，十七八岁",
+   "prompt": "a gentle oval-faced maid of seventeen, fine long eyebrows, softly downturned almond eyes, thin lips, a quiet composed and dutiful expression, neat low hair with a simple knot, plain modest Qing-dynasty maid clothing in soft muted blue",
+   "seed": 10234040
+  },
+  {
+   "id": "zijun",
+   "name": "紫鹃",
+   "features": "少女清秀圆脸；眉弯眼亮；体态轻盈；神气爽利，黛玉房中首席大丫头，十八九岁",
+   "prompt": "a bright-eyed young maid of eighteen, a pretty round face, curved lively eyebrows, quick bright eyes, a light agile bearing, a spirited and efficient manner, the head maid of a young mistress in a Qing-dynasty great household, wearing neat understated blue-green maid clothing with a simple hair knot and a small silver hairpin",
+   "seed": 10234050
+  },
+  {
+   "id": "cui_lv",
+   "name": "翠缕",
+   "features": "少女圆脸；眉粗眼大；口角泼辣；体健爱笑，湘云的丫头，十七八岁",
+   "prompt": "a round-faced maidservant of seventeen with a robust cheerful look, thick eyebrows, big eyes, a sharp talkative mouth, frank and lively, the personal maid of a spirited young lady in a Qing-dynasty noble house, wearing practical bright yellow-brown maid clothing with a doubled-up hair bun",
+   "seed": 10234060
+  },
+  {
+   "id": "si_er",
+   "name": "四儿",
+   "features": "少女鹅蛋脸；眉细目秀；身段纤细；举止乖巧，原名蕙香，十六七岁",
+   "prompt": "a slender oval-faced maid of sixteen with fine eyebrows and pretty eyes, small waist, quick and clever in her movements, a clever obedient young servant girl in a Qing-dynasty household, wearing a fresh pale green maid outfit with a simple embroidered collar and a small floral hair ornament",
+   "seed": 10234070
+  },
+  {
+   "id": "jia_lan",
+   "name": "贾兰",
+   "features": "少年圆脸；眉淡眼明；体态瘦小；举止安静，贾政长子，宝玉的堂侄，十一二岁",
+   "prompt": "a gentle round-faced boy of eleven, soft pale brows, clear bright eyes, a small slender build, a quiet and well-behaved manner, the eldest son of a stern official in a Qing-dynasty great household, wearing a neat plain blue boyish robe with a small jade pendant, hair in a simple childhood topknot",
+   "seed": 10234080
+  }
+ ]
 }

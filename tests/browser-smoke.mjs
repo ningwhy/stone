@@ -1,7 +1,7 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {existsSync,mkdirSync,readFileSync,readdirSync} from 'node:fs';
-import {dismissPickup, dismissLeaf} from './lib/pickup.mjs';
+import {dismissPickup, dismissLeaf, clickSkipIfShown} from './lib/pickup.mjs';
 import { seekSection, openToc } from './lib/toc.mjs';
 import { chapterLeaves } from '../src/leaves.ts';
 const story=[1,2,3,4].flatMap(n=>JSON.parse(readFileSync(`design/chapter0${n}-story.json`,'utf8')));
@@ -33,9 +33,20 @@ const allBooks=Object.keys(bookNames).map(Number).sort((a,b)=>a-b).map(n=>bookNa
 assert.equal(allBooks.length,bookCount,`bookNames must cover every chapter, got ${allBooks.length} of ${bookCount}`);
 // 「查无此人」的那个样本名，必须在**全部**回目的正文里一个字都没出现过。
 // 这个样本随回目推移而失效：妙玉被第十八回推翻、晴雯被第十九回推翻、
-// 麝月被第二十回推翻。每加一回都要重挑一个，并在下面这条静态断言里
-// 立刻发现「样本已经被某一回用掉了」——否则断言会误判成搜索功能坏了。
-const absentSample='紫鹃';
+// 麝月被第二十回推翻、紫鹃被第二十一回推翻（她是黛玉房首席大丫头，
+// 第二十一回晨起进黛玉房伏侍梳洗）、檀云被第二十二回推翻（第二十二回
+// 迎春的丫鬟「坠儿」等人虽未登场，但湘云提到「看人家的鼻子眼睛」，
+// 连带把一干丫鬟名目的行情推到了台面上，檀云这个名字不能再用）。
+// 每加一回都要重挑一个，并在下面这条静态断言里立刻发现「样本已经被
+// 某一回用掉了」——否则断言会误判成搜索功能坏了。
+//
+// ★ 判据要覆盖**所有可搜路径**：正文、标题、地点、在场人物、段 id。
+//   名字出现在地点或人物表里照样能命中（目录搜索是全文匹配），
+//   只查正文是不够的。
+// 现在用「彩云」：全二十二回正文、src/ 与 design/ 里一个字都没出现过，
+// 且不在 cast 表里（搜人名是靠在场人物命中的，样本不在 cast 里才是真的
+// 「查无此人」）。
+const absentSample='彩云';
 {
   const all=readdirSync('design').filter(f=>/^chapter\d+-story\.json$/.test(f))
     .map(f=>readFileSync(`design/${f}`,'utf8')).join('');
@@ -52,7 +63,7 @@ const node=()=>page.locator('.node-label').textContent();
 // the canvas layer, and that re-rasterisation shows GPU rounding noise even when the
 // painted frame is byte-identical, so it would report a false difference.
 const canvasPixels=()=>page.evaluate(()=>{const canvas=document.querySelector('canvas');const data=canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data;let hash=2166136261;for(let i=0;i<data.length;i++){hash^=data[i];hash=Math.imul(hash,16777619);}return hash>>>0;});
-const reading=async()=>{await dismissPickup(page);await page.locator('.loading-screen').waitFor({state:'detached',timeout:20000});for(let i=0;i<4;i++){const skip=page.getByRole('button',{name:'跳过移动',exact:true});if(await skip.isVisible()){await skip.click();await page.waitForTimeout(60);}}await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim());await page.locator('.game-map[data-scene-ready]').waitFor();await dismissLeaf(page,false);};
+const reading=async()=>{await dismissPickup(page);await page.locator('.loading-screen').waitFor({state:'detached',timeout:20000});await clickSkipIfShown(page,4,60);await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim());await page.locator('.game-map[data-scene-ready]').waitFor();await dismissLeaf(page,false);};
 // 封底时顶栏那一格是提示而不是按钮，所以量按钮要能退回到提示行；否则一回读
 // 完，布局检查会因为「找不到继续剧情」而误报成控件跑出屏幕。
 async function fit(){const control=(await page.getByRole('button',{name:'继续剧情',exact:true}).boundingBox())??(await page.locator('.next-button-hint').boundingBox());assert.ok(control);const viewport=page.viewportSize();assert.ok(control.y+control.height<=viewport.height,`controls below screen: ${control.y+control.height}>${viewport.height}`);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
@@ -100,7 +111,7 @@ async function next(skip=true){
   await page.waitForTimeout(120);
   await dismissLeaf(page,false,true);
   await dismissPickup(page,ledgerNodes.has(arrived));
-  const b=page.getByRole('button',{name:'跳过移动',exact:true});if(skip&&await b.isVisible())await b.click();
+  if(skip)await clickSkipIfShown(page,1);
   await reading();
 }
 try{
@@ -196,7 +207,12 @@ try{
  });
  assert.ok(single.every(d=>Math.abs(d)<=2),`the heading must stay at the rail, offsets ${single.join('/')}`);
  // 逐回翻过去：每一回都摊得开，而且段落数与设计表一致。
- const expected=await page.evaluate(async()=>{const m=await import('/design/chapter01-sections.json');return m.default.length;});
+ //
+ // ★ 段落数在 **Node 侧**读设计文件，不在浏览器里 `import('/design/...')`。
+ //   `design/` 是开发目录，**不随 dist 部署**——线上跑这个测试时那次 import
+ //   会直接 404（`Failed to fetch dynamically imported module`），整条冒烟
+ //   在第一步就挂掉。设计数据在测试机上本来就现成，用不着绕浏览器。
+ const expected=JSON.parse(readFileSync('design/chapter01-sections.json','utf8')).length;
  for(const book of allBooks.slice(1)){
   await toc.locator('.toc-book',{hasText:book}).click();
   await page.waitForTimeout(120);
@@ -230,12 +246,14 @@ try{
  await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('林府');
  await page.waitForTimeout(150);
  assert.ok(await toc.locator('.toc-card').count()>0,'a place in the middle of a section must be searchable');
- // 搜一个剧情里根本没有的名字：必须找不到，不能凭空造出段落。
- // 这个名字必须在前二十回里从未出现——「妙玉」被第十八回推翻，
- // 「晴雯」被第十九回推翻（她恰在第十九回登场），「麝月」又被第二十回推翻
- // （她恰在第二十回登场，还守着篦头那一场）。这里改用「紫鹃」：
- // 她是黛玉的丫鬟，要到第二十一回以后才出场，前二十回一个字都没出现。
- await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('紫鹃');
+    // 搜一个剧情里根本没有的名字：必须找不到，不能凭空造出段落。
+    // 这个名字必须在前二十一回里从未出现——「妙玉」被第十八回推翻，
+    // 「晴雯」被第十九回推翻（她恰在第十九回登场），「麝月」又被第二十回推翻
+    // （她恰在第二十回登场，还守着篦头那一场），「紫鹃」再被第二十一回推翻
+    // （她恰在第二十一回登场，替黛玉递香皂）。这里改用「檀云」：
+    // 她是宝玉房里的丫头，尚未登场，前二十一回一个字都没出现，
+    // 也不在 cast 表里——搜人名是靠在场人物命中的，她压根没被画过。
+    await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('檀云');
  await page.waitForTimeout(150);
  assert.equal(await toc.locator('.toc-card').count(),0,'a name absent from the story must find nothing');
  assert.ok(await toc.locator('.toc-empty').count()>0,'an empty result must say so');

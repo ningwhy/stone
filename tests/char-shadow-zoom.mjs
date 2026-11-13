@@ -1,7 +1,7 @@
 // 放大相机到角色脚部，判人物接触阴影在原生分辨率下是否接得上地面、深浅是否自然。
 import { chromium } from 'playwright';
 import { existsSync, mkdirSync } from 'node:fs';
-import { dismissPickup, dismissLeaf } from './lib/pickup.mjs';
+import { dismissPickup, dismissLeaf, clickSkipIfShown} from './lib/pickup.mjs';
 const exe = process.env.CHROME_PATH || (existsSync('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome') ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : undefined);
 const URL = process.env.TEST_URL ?? 'http://127.0.0.1:5173';
 const browser = await chromium.launch({ headless: true, executablePath: exe });
@@ -10,7 +10,7 @@ const page = await ctx.newPage();
 mkdirSync('artifacts/char-art', { recursive: true });
 const settle = async () => {
   await page.locator('.loading-screen').waitFor({ state: 'detached', timeout: 60000 });
-  for (let i = 0; i < 14; i++) { const b = page.getByRole('button', { name: '跳过移动', exact: true }); if (await b.isVisible()) { await b.click(); await page.waitForTimeout(45); } }
+  await clickSkipIfShown(page,14,45);
   await page.waitForFunction(() => !!document.querySelector('.dialogue-text')?.textContent?.trim(), undefined, { timeout: 60000 });
   await page.locator('.game-map[data-scene-ready]').waitFor({ timeout: 60000 });
   await page.waitForTimeout(450);

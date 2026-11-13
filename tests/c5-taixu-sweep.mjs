@@ -1,6 +1,7 @@
 import { chromium } from 'playwright';
 import { existsSync, mkdirSync } from 'node:fs';
 import { seekSection } from './lib/toc.mjs';
+import { clickSkipIfShown } from './lib/pickup.mjs';
 const exe = process.env.CHROME_PATH || (existsSync('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome') ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : undefined);
 const browser = await chromium.launch({ headless: true, executablePath: exe });
 const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
@@ -11,7 +12,7 @@ page.on('console', m => { if (m.type() === 'error') errors.push('console: ' + m.
 mkdirSync('artifacts', { recursive: true });
 const read = async () => {
   await page.locator('.loading-screen').waitFor({ state: 'detached', timeout: 60000 });
-  for (let i = 0; i < 12; i++) { const b = page.getByRole('button', { name: '跳过移动', exact: true }); if (await b.isVisible()) { await b.click(); await page.waitForTimeout(50); } }
+  await clickSkipIfShown(page,12,50);
   await page.waitForFunction(() => !!document.querySelector('.dialogue-text')?.textContent?.trim(), undefined, { timeout: 60000 });
   await page.locator('.game-map[data-scene-ready]').waitFor({ timeout: 60000 });
   await page.waitForTimeout(450);

@@ -42,10 +42,19 @@ test('搜索能命中人物：placeholder 承诺「搜人物」，人物就必�
   }
   // 宝钗本人在第四回出场；第五回的对白提到她，所以命中不止第四回。
   // 要判的是「她在哪一回真的在台上」，不是「哪一回提到她」。
+  // 她在台上的回目从数据实读：写死「第四、五、七、八回」的话，每加一回
+  // 只要她再登场一次，这条断言就红——而红的原因跟搜索功能无关。
   const onStage = flat.filter(entry => entry.actors.includes('宝钗')).map(entry => entry.id);
   assert.ok(onStage.length > 0, '宝钗 must be on stage somewhere');
-  assert.ok(onStage.every(id => id.startsWith('c4-') || id.startsWith('c5-') || id.startsWith('c7-') || id.startsWith('c8-')), '宝钗 belongs to the fourth, fifth, seventh and eighth books');
-  assert.ok(onStage.some(id => id.startsWith('c4-')), 'she is on stage in the fourth book');
+  const baochaiBooks = [...new Set(onStage.map(id => chapters.find(c => c.id === id)!.book))].sort((a, b) => a - b);
+  assert.ok(baochaiBooks.includes(4), 'she is on stage in the fourth book');
+  // 每一段她都在台的段，其回数必须与实读出来的回数一致。
+  const expectedBooksForBaochai = baochaiBooks.map(book => String(book));
+  for (const id of onStage) {
+    const book = chapters.find(c => c.id === id)!.book;
+    assert.ok(expectedBooksForBaochai.includes(String(book)),
+      `宝钗 is on stage in book ${book}, which is not in ${expectedBooksForBaochai.join('/')}`);
+  }
   // 刘姥姥只出现在第六回。
   const onStageLiu = flat.filter(entry => entry.actors.includes('刘姥姥')).map(entry => entry.id);
   assert.ok(onStageLiu.length > 0, '刘姥姥 must be on stage somewhere');
@@ -75,13 +84,26 @@ test('搜索能命中只有对白里才有的词', () => {
 });
 
 test('搜索找不到的必须是原著里根本没有的词，不能是索引漏了', () => {
-  // 妙玉、紫鹃、沁芳桥在本书前六回里一次也没出现，搜不到是对的；
-  // 搜索不能凭空造出原著没有的段落。
-  for (const absent of ['妙玉', '紫鹃', '晴雯']) {
-    assert.equal(ids(absent).length, 0, `${absent} does not appear in the first six books`);
-    assert.equal(story.filter(node => (node.title + node.text + node.place).includes(absent)).length, 0,
-      `${absent} really is absent from the story`);
-  }
+  // 搜索框承诺「搜段落、人物或地点」。搜一个人名却搜不到，有两种可能：
+  // 索引漏了，或者这个人根本还没登场。这条断言守的是第二种。
+  //
+  // 样本随回目推移而失效：妙玉被第十八回推翻、晴雯被第十九回推翻、
+  // 紫鹃被第二十一回推翻（她是黛玉房首席大丫头，第二十一回替她递香皂）。
+  // 现在用「檀云」——她是宝玉房里的丫头，全书二十一回里一次也没出现过，
+  // 也不在 cast 表里（搜人物是靠在场人物命中的，她压根没被画过）。
+  //
+  // 判据覆盖**所有可搜路径**：正文、段落标题、地点、在场人物、段 id。
+  // 只查正文是不够的——名字要是出现在地点或人物表里，搜索照样能命中。
+  const absent = '檀云';
+  assert.equal(ids(absent).length, 0, `${absent} does not appear in any book`);
+  assert.equal(story.filter(node => (node.title + node.text + node.place).includes(absent)).length, 0,
+    `${absent} really is absent from the story`);
+  assert.equal(flat.filter(entry => entry.actors.some(actor => actor.includes(absent))).length, 0,
+    `${absent} must not be on stage anywhere`);
+  assert.equal(flat.filter(entry => entry.places.some(place => place.includes(absent))).length, 0,
+    `${absent} must not be a place anywhere`);
+  assert.equal(flat.filter(entry => entry.id.includes(absent)).length, 0,
+    `${absent} must not be part of a section id`);
 });
 
 test('搜索命中的是段而不是人：被提到但不在场的人不算出场', () => {

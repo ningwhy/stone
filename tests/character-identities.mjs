@@ -2,7 +2,7 @@ import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import { seekSection } from './lib/toc.mjs';
-import { dismissLeaf } from './lib/pickup.mjs';
+import { dismissLeaf, clickSkipIfShown} from './lib/pickup.mjs';
 // 图鉴列出的是 cast 里除 sedan 外的每个人（App.tsx 遍历 Object.keys(cast)）。
 // 人数从 manifest 的 -portrait 资源实读，写死 38 的话每加一批角色就要改一次断言，
 // 改漏了会把「新人物没进图鉴」掩盖过去——这正是之前 38 与实际 68 脱节的原因。
@@ -13,7 +13,7 @@ const castCount=Object.keys(manifestAssets).filter(k=>k.endsWith('-portrait')).l
 const portraitWithFaceBox=Object.entries(manifestAssets).filter(([k,v])=>k.endsWith('-portrait')&&v.identity?.faceBox).length;
 const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
 const page=await browser.newPage({viewport:{width:1440,height:900},reducedMotion:'reduce'}),errors=[];page.on('pageerror',e=>errors.push(e.message));
-const reading=async()=>{for(let i=0;i<5;i++){const b=page.getByRole('button',{name:'跳过移动',exact:true});if(await b.isVisible()){await b.click();await page.waitForTimeout(60);}}await page.locator('.dialogue-text').waitFor();await page.locator('.game-map[data-scene-ready]').waitFor();};
+const reading=async()=>{await clickSkipIfShown(page,5,60);await page.locator('.dialogue-text').waitFor();await page.locator('.game-map[data-scene-ready]').waitFor();};
 try{
  await page.goto(process.env.TEST_URL??'http://127.0.0.1:4173');await reading();
  // 开书第一格压着封面，会挡住「设置」按钮——先收掉再点。

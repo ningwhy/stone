@@ -59,8 +59,11 @@ def fetch_raw(n: int) -> str:
 def to_plain(raw: str) -> str:
     """wikitext -> 纯文本正文。"""
     text = raw
-    # 章节标题行：保留纯文字，去掉 center/bold 标记
-    text = re.sub(r"\{\{center\|'''(.*?)'''\}\}", r'\1', text)
+    # 章节标题行：保留纯文字，去掉 center/bold 标记。
+    # 回目行与正文首句之间可能没有空行（第 20 回就没有）——单换行会被
+    # 下面的并段逻辑折进同一段，回目于是粘在正文上。替换成「回目 + 空行」，
+    # 让回目永远自成一段。
+    text = re.sub(r"\{\{center\|'''(.*?)'''\}\}", r'\1\n\n', text, flags=re.S)
     text = re.sub(r'\{\{样式:[^}]*\}\}', '', text)
     text = re.sub(r'\{\{清朝作品\}\}', '', text)
     # 回目录导航

@@ -79,7 +79,7 @@ export function ChapterCover({ book, onOpen }: { book: number; onOpen: () => voi
  *
  *  The sheet can also be put away — a reader who wants to look back at the
  *  last lines of the chapter they just finished needs a way back to them. */
-export function ChapterBackCover({ book, nextBook, onOpen }: { book: number; nextBook: number | null; onOpen: () => void }) {
+export function ChapterBackCover({ book, nextBook, onOpen, onFold }: { book: number; nextBook: number | null; onOpen: () => void; onFold: () => void }) {
   const nextTitle = nextBook != null ? chapterTitle(nextBook) : null;
   return <section className="leaf-sheet leaf-back" role="dialog" aria-modal="true" aria-label={`${bookNames[book]} 封底`}>
     <div className="leaf-inner">
@@ -97,7 +97,9 @@ export function ChapterBackCover({ book, nextBook, onOpen }: { book: number; nex
             <button className="leaf-open next-button" onClick={onOpen}>开启下一回 <span aria-hidden="true">→</span></button>
           </div>
         : <p className="leaf-next-title leaf-final">全书至此，砖石犹温。</p>}
-      <button className="leaf-fold" onClick={()=>window.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape'}))}>收起封底，回看本回</button>
+      {/* 收起封底走的是自己的回调，不再派发 Escape：Escape 有两个处理器
+          （封底折叠与全局翻页），派发事件会让两边都听见。 */}
+      <button className="leaf-fold" onClick={onFold}>收起封底，回看本回</button>
     </div>
   </section>;
 }

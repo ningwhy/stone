@@ -1,0 +1,878 @@
+[
+  {
+    "chapter": "c17-garden",
+    "scene": "dinner",
+    "place": "大观园 · 园门",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "话说秦钟既死，宝玉痛哭不已",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-001",
+    "speaker": "narrator",
+    "text": "且说大观园工程告竣，贾珍引着贾政入园查看。但见崇阁巍峨，层楼高起，园中佳木茏葱，奇花闪灼，一带清流，从花木深处泻于石隙之下，端的气象万千。",
+    "title": "大观园工程告竣",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "jia_zhen",
+        "at": "grandmother_place"
+      },
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "wang_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-garden",
+    "scene": "dinner",
+    "place": "大观园 · 园门",
+    "focus": "feng_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "贾珍先去园中知会众人",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-002",
+    "speaker": "narrator",
+    "text": "贾政看了，摇头道：「这般奢华过甚，将来如何收拾。」贾珍陪笑回说，都是按贵妃省亲的款式办下的，不敢俭省。",
+    "title": "贾政叹奢华",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "jia_zhen",
+        "at": "feng_place"
+      },
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "wang_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-garden",
+    "scene": "dinner",
+    "place": "大观园 · 园门",
+    "focus": "grandmother_greet",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "可巧近日宝玉因思念秦钟",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-003",
+    "speaker": "zheng",
+    "text": "宝玉今日本该在此，怎么不见？快把他唤来，园中诸景须得这孽障随行，也好考他一考。",
+    "title": "命唤宝玉",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "grandmother_greet"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-garden",
+    "scene": "dinner",
+    "place": "大观园 · 园门",
+    "focus": "grandmother_greet",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "贾政近因闻得塾掌称赞宝玉专能对对联",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-004",
+    "speaker": "narrator",
+    "text": "不多时宝玉来了，锦衣绣袂，神采飘逸。贾政道：「你且随我入园，各处匾额对联，须你题了才好。」宝玉连声答应，垂手随在身后。",
+    "title": "宝玉随行入园",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "baoyu_greet"
+      },
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "grandmother_greet"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-garden",
+    "scene": "dinner",
+    "place": "大观园 · 游廊",
+    "focus": "tea_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "贾政听了，沉思一回",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-005",
+    "speaker": "messenger",
+    "text": "众清客相公围随在后，一叠声奉承：「世兄才情，我们万不及一。这园子若得世兄题咏，方不负这般景致。」",
+    "title": "清客奉承",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "tea_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-garden",
+    "scene": "dinner",
+    "place": "大观园 · 游廊",
+    "focus": "daiyu_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "贾政刚至园门前",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-006",
+    "speaker": "narrator",
+    "text": "说笑间，一行人步入正园。迎面一带翠嶂挡在前面，白石崚嶒，或如鬼怪，或如猛兽，纵横拱立。贾政便教宝玉，此处置何题方好。",
+    "title": "翠嶂当前",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "wang_place"
+      },
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "daiyu_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-tour",
+    "scene": "dinner",
+    "place": "大观园 · 有凤来仪",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "说著，进入石洞来",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-010",
+    "speaker": "narrator",
+    "text": "行不多远，渐向北边，平坦宽豁，两边飞楼插空，雕甍绣槛。此处佳木茏葱，清流激湍，几竿修竹，掩映其间。",
+    "title": "有凤来仪",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "grandmother_place"
+      },
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "baoyu_greet"
+      },
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "tea_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-tour",
+    "scene": "dinner",
+    "place": "大观园 · 有凤来仪",
+    "focus": "feng_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "贾政与诸人上了亭子",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-011",
+    "speaker": "messenger",
+    "text": "一清客便道：「此处莫若题『淇水遗风』。」又一客道：「『睢园雅迹』也好。」贾政摇头，问宝玉之意。",
+    "title": "清客拟题",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "feng_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-tour",
+    "scene": "dinner",
+    "place": "大观园 · 有凤来仪",
+    "focus": "grandmother_greet",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "有一客道：“是极，是极。竟是‘泻玉’二字妙。”",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-012",
+    "speaker": "baoyu",
+    "text": "宝玉道：「这处是贵妃省亲别墅，须要颂圣才是。莫若『有凤来仪』四字。」贾政冷笑：「畜生，倒会取巧。」心中却已暗许。",
+    "title": "宝玉题额",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "grandmother_greet"
+      },
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "wang_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-tour",
+    "scene": "dinner",
+    "place": "大观园 · 稻香村",
+    "focus": "liwan_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "说著，进入石洞来",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-013",
+    "speaker": "narrator",
+    "text": "又转过山坡，忽闻水声潺湲，泻出石洞；一带黄泥矮墙，里面数楹茅屋，桑榆槿柘，篱外稻田数亩，正是稻香村。",
+    "title": "稻香村",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "liwan_place"
+      },
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "baoyu_greet"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-tour",
+    "scene": "dinner",
+    "place": "大观园 · 稻香村",
+    "focus": "tea_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "有一客道：“是极，是极。竟是‘泻玉’二字妙。”",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-014",
+    "speaker": "messenger",
+    "text": "清客们道：「『杏花村』好。」又有人引旧诗：「柴门临水稻花香。」贾政命宝玉再拟。",
+    "title": "拟题杏花村",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "tea_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-tour",
+    "scene": "dinner",
+    "place": "大观园 · 稻香村",
+    "focus": "daiyu_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "有一客道：“是极，是极。竟是‘泻玉’二字妙。”",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-015",
+    "speaker": "baoyu",
+    "text": "宝玉道：「旧诗『红杏梢头挂酒旗』，此处并无酒旗，不如『稻香村』三字，反觉天然。」贾政点头称是，面上却仍不肯露喜色。",
+    "title": "宝玉议天然",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "daiyu_place"
+      },
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "wang_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-inscribe",
+    "scene": "dinner",
+    "place": "大观园 · 题额",
+    "focus": "feng_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "贾政笑道：“不可谬奖",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-020",
+    "speaker": "zheng",
+    "text": "贾政道：「既都拟了，便把这几处匾额对联，都依你题的写出来，明日好挂。」宝玉便研墨抻纸，一一书就。",
+    "title": "命宝玉书匾",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "feng_place"
+      },
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "baoyu_greet"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-inscribe",
+    "scene": "dinner",
+    "place": "大观园 · 题额",
+    "focus": "grandmother_greet",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "众人听了，都赞道",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-021",
+    "speaker": "messenger",
+    "text": "清客们看了，齐声赞道：「『有凤来仪』四字，正暗合贵妃娘娘之兆，此等才情，我等望尘莫及。」",
+    "title": "清客称颂",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "tea_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-inscribe",
+    "scene": "dinner",
+    "place": "大观园 · 题额",
+    "focus": "grandmother_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "贾政听了，便回头命宝玉拟来",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-022",
+    "speaker": "narrator",
+    "text": "贾政听到「有凤来仪」，猛然想起长女元春如今贵为贤德妃，心中一酸，却又不好形于色，只默默点头。",
+    "title": "贾政念元春",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "grandmother_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-inscribe",
+    "scene": "dinner",
+    "place": "大观园 · 题额",
+    "focus": "daiyu_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "贾政道：“匾上二字容易。再作一副七言对联来。”",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-023",
+    "speaker": "zheng",
+    "text": "贾政转过念头，倒生了几分慈意，道：「你再撰一副对联来，我瞧瞧。」宝玉不慌不忙，念道——",
+    "title": "命题一联",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "wang_place"
+      },
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "daiyu_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-inscribe",
+    "scene": "dinner",
+    "place": "大观园 · 题额",
+    "focus": "grandmother_greet",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "宝玉听说，立于亭上，四顾一望",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-024",
+    "speaker": "baoyu",
+    "text": "「宝鼎茶闲烟尚绿，幽窗棋罢指犹凉。」贾政听了，心中大悦，却只冷笑一声道：「到底还是词句清雅。」",
+    "title": "宝玉吟联",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "grandmother_greet"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-inscribe",
+    "scene": "dinner",
+    "place": "大观园 · 题额",
+    "focus": "tea_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "贾政听了，点头微笑",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-025",
+    "speaker": "messenger",
+    "text": "清客们又凑趣道：「这一联，只怕元、白二公也要退避三舍了。」贾政便引着众人，笑吟吟的出园去了。",
+    "title": "压倒元白",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "tea_place"
+      },
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "wang_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-edict",
+    "scene": "dinner",
+    "place": "大观园 · 正殿",
+    "focus": "tea_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "说著，大家出来。行不多远，则见崇阁巍峨",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-030",
+    "speaker": "narrator",
+    "text": "说著大家出来，行不多远，便见崇阁巍峨，层楼高起，面面琳宫合抱，迢迢复道萦纡，青松拂檐，玉栏绕砌，金辉兽面，彩焕螭头。贾政道：「这是正殿了，只是太富丽了些。」",
+    "title": "正殿崇阁",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "tea_place"
+      },
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "baoyu_greet"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-edict",
+    "scene": "dinner",
+    "place": "大观园 · 正殿",
+    "focus": "wang_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "这是正殿了，只是太富丽了些",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-031",
+    "speaker": "zheng",
+    "text": "贾政道：「这是正殿了，只是太富丽了些。」众人都道：「要如此方是。虽然贵妃崇节尚俭，天性恶繁悦朴，然今日之尊，礼仪如此，不为过也。」",
+    "title": "太富丽了些",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "wang_place"
+      },
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "feng_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-edict",
+    "scene": "dinner",
+    "place": "大观园 · 牌坊",
+    "focus": "feng_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "一面说，一面走，只见正面现出一座玉石牌坊来",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-032",
+    "speaker": "narrator",
+    "text": "一面说，一面走，只见正面现出一座玉石牌坊来，上面龙蟠螭护，玲珑凿就。贾政道：「此处书以何文？」众人道：「必是『蓬莱仙境』方妙。」贾政摇头不语。",
+    "title": "玉石牌坊",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "feng_place"
+      },
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "tea_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-edict",
+    "scene": "dinner",
+    "place": "大观园 · 牌坊",
+    "focus": "baoyu_greet",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "宝玉见了这个所在，心中忽有所动",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-033",
+    "speaker": "baoyu",
+    "text": "宝玉见了这个所在，心中忽有所动，寻思起来，倒象那里曾见过的一般，却一时想不起那年月日的事了。贾政又命他作题，宝玉只顾细思前景，全无心于此了。",
+    "title": "若有所悟",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "baoyu_greet"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-edict",
+    "scene": "dinner",
+    "place": "大观园 · 牌坊",
+    "focus": "tea_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "众人不知其意，只当他受了这半日的折磨",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-034",
+    "speaker": "messenger",
+    "text": "众人不知其意，只当他受了这半日的折磨，精神耗散，才尽词穷了，再要考难逼迫，著了急，或生出事来，倒不便。遂忙都劝贾政：「罢，罢，明日再题罢了。」",
+    "title": "清客劝罢",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "tea_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-edict",
+    "scene": "dinner",
+    "place": "大观园 · 牌坊",
+    "focus": "wang_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "限你一日，明日若再不能，我定不饶",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-035",
+    "speaker": "zheng",
+    "text": "贾政心中也怕贾母不放心，遂冷笑道：「你这畜生，也竟有不能之时了。也罢，限你一日，明日若再不能，我定不饶。这是要紧一处，更要好生作来！」",
+    "title": "限题一日",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "wang_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-jubilant",
+    "scene": "dinner",
+    "place": "大观园 · 沁芳闸",
+    "focus": "baoyu_greet",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "说著，引客行来，至一大桥前",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-040",
+    "speaker": "narrator",
+    "text": "说著引客行来，至一大桥前，见水如晶帘一般奔入。原来这桥便是通外河之闸，引泉而入者。贾政因问：「此闸何名？」",
+    "title": "至一大桥前",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "tea_place"
+      },
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "baoyu_greet"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-jubilant",
+    "scene": "dinner",
+    "place": "大观园 · 沁芳闸",
+    "focus": "baoyu_greet",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "此乃沁芳泉之正源，就名‘沁芳闸’",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-041",
+    "speaker": "baoyu",
+    "text": "宝玉道：「此乃沁芳泉之正源，就名『沁芳闸』。」贾政道：「胡说，偏不用『沁芳』二字。」",
+    "title": "沁芳闸",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "baoyu_greet"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-jubilant",
+    "scene": "dinner",
+    "place": "大观园 · 归途",
+    "focus": "wang_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "或清堂茅舍，或堆石为垣，或编花为牖",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-042",
+    "speaker": "narrator",
+    "text": "于是一路行来，或清堂茅舍，或堆石为垣，或编花为牖，或山下得幽尼佛寺，或林中藏女道丹房，或长廊曲洞，或方厦圆亭，贾政皆不及进去。",
+    "title": "园中诸景",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "wang_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-jubilant",
+    "scene": "dinner",
+    "place": "大观园 · 归途",
+    "focus": "feng_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "一入门，两边都是游廊相接",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-043",
+    "speaker": "narrator",
+    "text": "说着一径引人绕著碧桃花，穿过一层竹篱花障编就的月洞门，俄见粉墙环护，绿柳周垂。贾政与众人进去，一入门，两边都是游廊相接。院中点衬几块山石，一边种著数本芭蕉，那一边乃是一棵西府海棠，其势若伞，丝垂翠缕，葩吐丹砂。",
+    "title": "蕉棠映粉墙",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "messenger",
+        "at": "feng_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-jubilant",
+    "scene": "dinner",
+    "place": "大观园 · 归途",
+    "focus": "baoyu_greet",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "若只说蕉，则棠无著落，若只说棠，蕉亦无著落",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-044",
+    "speaker": "baoyu",
+    "text": "宝玉道：「此处蕉棠两植，其意暗蓄『红』『绿』二字在内。若只说蕉，则棠无著落，若只说棠，蕉亦无著落。固有蕉无棠不可，有棠无蕉更不可。」贾政道：「依你如何？」宝玉道：「依我，题『红香绿玉』四字，方两全其妙。」贾政摇头道：「不好，不好！」",
+    "title": "蕉棠两植",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "baoyu_greet"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-jubilant",
+    "scene": "dinner",
+    "place": "大观园 · 归途",
+    "focus": "wang_place",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "老爷随我来。从这门出去，便是后院",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-045",
+    "speaker": "narrator",
+    "text": "众人都赞：「好精致想头！难为怎么想来。」原来贾政等走了进来，未进两层，便都迷了旧路，左瞧也有门可通，右瞧又有窗暂隔。贾珍笑道：「老爷随我来。从这门出去，便是后院，从后院出去，倒比先近了。」",
+    "title": "穿堂而出",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "wang_place"
+      },
+      {
+        "type": "hide",
+        "actor": "messenger"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-vision",
+    "scene": "dinner",
+    "place": "大观园 · 归途",
+    "focus": "baoyu_greet",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "那宝玉一心只记挂著里边",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-050",
+    "speaker": "narrator",
+    "text": "大家出来，众人都道：「有趣，有趣，真搜神夺巧之至！」于是大家出来。那宝玉一心只记挂著里边，又不见贾政吩咐，少不得跟到书房。",
+    "title": "宝玉一心只记挂",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "baoyu",
+        "at": "baoyu_greet"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-vision",
+    "scene": "dinner",
+    "place": "大观园 · 书房",
+    "focus": "baoyu_greet",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "贾政忽想起他来，方喝道：「你还不去",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-051",
+    "speaker": "zheng",
+    "text": "贾政忽想起他来，方喝道：「你还不去？难道还逛不足！也不想逛了这半日，老太太必悬挂著。快进去，疼你也白疼了。」",
+    "title": "喝退宝玉",
+    "actions": [
+      {
+        "type": "show",
+        "actor": "zheng",
+        "at": "wang_place"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-vision",
+    "scene": "dinner",
+    "place": "大观园 · 书房",
+    "focus": "baoyu_greet",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "宝玉听说，方退了出来",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-052",
+    "speaker": "narrator",
+    "text": "宝玉听说，方退了出来。少不得跟到书房，随众清客退出园门。",
+    "title": "退了出来",
+    "actions": [
+      {
+        "type": "hide",
+        "actor": "zheng"
+      }
+    ]
+  },
+  {
+    "chapter": "c17-vision",
+    "scene": "dinner",
+    "place": "大观园 · 书房",
+    "focus": "baoyu_greet",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "那宝玉一心只记挂著里边",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-053",
+    "speaker": "narrator",
+    "text": "正是：园中佳景题不尽，万千心事付瑶琴。未知那宝玉明日如何应对这要紧一题，且听下回分解——林黛玉误剪香囊袋，贾元春归省庆元宵。",
+    "title": "且听下回",
+    "actions": []
+  },
+  {
+    "chapter": "c17-vision",
+    "scene": "dinner",
+    "place": "大观园 · 书房",
+    "focus": "baoyu_greet",
+    "source": {
+      "chapter": 17,
+      "paragraphLead": "宝玉听说，方退了出来",
+      "textKind": "adaptation",
+      "layer": "present"
+    },
+    "id": "C17-056",
+    "speaker": "narrator",
+    "text": "下回：林黛玉误剪香囊袋，贾元春归省庆元宵。",
+    "title": "下回目录",
+    "actions": []
+  }
+]

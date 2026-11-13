@@ -1,0 +1,60 @@
+{
+ "zijun-portrait": {
+  "votes": {
+   "left": 0,
+   "right": 3
+  },
+  "details": [
+   "tight:right",
+   "wide:right",
+   "wider:right"
+  ]
+ },
+ "zijun-chibi": {
+  "votes": {
+   "left": 0,
+   "right": 1
+  },
+  "details": [
+   "wider:right(swapped)"
+  ]
+ },
+ "cui_lv-portrait": {
+  "votes": {
+   "left": 0,
+   "right": 3
+  },
+  "details": [
+   "tight:right",
+   "wide:right",
+   "wider:right"
+  ]
+ },
+ "cui_lv-chibi": {
+  "votes": {
+   "left": 0,
+   "right": 0
+  },
+  "details": []
+ },
+ "si_er-portrait": {
+  "votes": {
+   "left": 0,
+   "right": 3
+  },
+  "details": [
+   "tight:right",
+   "wide:right",
+   "wider:right"
+  ]
+ },
+ "si_er-chibi": {
+  "votes": {
+   "left": 0,
+   "right": 1
+  },
+  "details": [
+   "tight:right"
+  ]
+ }
+}

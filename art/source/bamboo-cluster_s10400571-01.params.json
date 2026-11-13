@@ -1,0 +1,25 @@
+{
+  "route": "generate",
+  "name": "bamboo-cluster_s10400571-01",
+  "seed": 10400571,
+  "prompt": "精致国风手绘游戏美术，工笔线描结合温润水彩，细腻纸张纹理，清晰精细的手绘轮廓，低饱和松绿与青灰，安静雅致的清代贵族宅院气质。柔和日光从画面左上方照射。原创设计，画面中不要出现任何文字、字母、数字、水印、签名、标语或标注。\n独立游戏场景道具：一丛修竹，五六竿青竹与疏落竹叶，竹节分明，竹根悬空露白，仅一丛竹，无背景无人物。正交等距俯视，二比一菱形投影，仅一组器物，无地面平台、无地面、无地板、无背景、无人物、无投影、无影棚背景。完整居中，四周留白。纯净均匀纯白色背景，纯白无渐变无米色，可抠图游戏素材，轮廓清晰。",
+  "negative": "text, watermark, signature, blurry, low quality, distorted, extra fingers, deformed hands, ugly",
+  "model": "zimage",
+  "ckpt": "z_image_turbo_bf16.safetensors",
+  "steps": null,
+  "cfg": null,
+  "sampler": null,
+  "scheduler": null,
+  "strength": null,
+  "count": 1,
+  "server": "http://192.168.4.66:8188",
+  "prompt_id": "0a7dfbe8-73af-4885-a09d-3e0eb5e264d0",
+  "generated_at": "2026-11-12 00:16:02",
+  "images": {
+    "refs": null,
+    "base": null,
+    "mask": null,
+    "input": null
+  },
+  "preset": "768x512"
+}

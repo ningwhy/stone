@@ -1,0 +1,44 @@
+[
+  {
+    "id": "c17-garden",
+    "title": "大观园 · 试才题对额",
+    "scene": "dinner",
+    "start": "C17-001",
+    "book": 17
+  },
+  {
+    "id": "c17-tour",
+    "title": "园中胜景 · 清客拟题",
+    "scene": "dinner",
+    "start": "C17-010",
+    "book": 17
+  },
+  {
+    "id": "c17-inscribe",
+    "title": "宝玉书匾 · 压倒元白",
+    "scene": "dinner",
+    "start": "C17-020",
+    "book": 17
+  },
+  {
+    "id": "c17-edict",
+    "title": "正殿牌坊 · 限题一日",
+    "scene": "dinner",
+    "start": "C17-030",
+    "book": 17
+  },
+  {
+    "id": "c17-jubilant",
+    "title": "沁芳闸 · 蕉棠两植",
+    "scene": "dinner",
+    "start": "C17-040",
+    "book": 17
+  },
+  {
+    "id": "c17-vision",
+    "title": "归途 · 且听下回",
+    "scene": "dinner",
+    "start": "C17-050",
+    "book": 17
+  }
+]

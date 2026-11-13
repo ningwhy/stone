@@ -2719,10 +2719,10 @@
     "features": "骨瘦凹陷老脸；垂白眉；深陷半闭眼；长弯鼻；瘪嘴，迟钝衰老",
     "seed": 10232064,
     "faceBox": [
-     214,
-     5,
-     400,
-     205
+     228,
+     3,
+     381,
+     273
     ],
     "revision": "def017f9cb2e",
     "source": "art/identity/oldmonk-portrait/request.json"
@@ -3644,8 +3644,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "938f22b7e868",
-   "identity": {"character": "jinghuan", "faceBox": [96, 45, 150, 141]}
+   "identity": {
+    "character": "jinghuan",
+    "faceBox": [
+     96,
+     45,
+     150,
+     141
+    ]
+   },
+   "hash": "938f22b7e868"
   },
   "jinghuan-chibi": {
    "image": "/assets/rongguo/jinghuan-chibi.png",
@@ -3687,8 +3695,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "92cb95a85b11",
-   "identity": {"character": "qin_ke", "faceBox": [102, 75, 192, 303]}
+   "identity": {
+    "character": "qin_ke",
+    "faceBox": [
+     102,
+     75,
+     192,
+     303
+    ]
+   },
+   "hash": "92cb95a85b11"
   },
   "qin_ke-chibi": {
    "image": "/assets/rongguo/qin_ke-chibi.png",
@@ -3730,8 +3746,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "b708a282a475",
-   "identity": {"character": "liu_lao", "faceBox": [177, 45, 297, 198]}
+   "identity": {
+    "character": "liu_lao",
+    "faceBox": [
+     177,
+     45,
+     297,
+     198
+    ]
+   },
+   "hash": "b708a282a475"
   },
   "liu_lao-chibi": {
    "image": "/assets/rongguo/liu_lao-chibi.png",
@@ -3773,8 +3797,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "d2f74ad257a6",
-   "identity": {"character": "ban_er", "faceBox": [48, 24, 162, 159]}
+   "identity": {
+    "character": "ban_er",
+    "faceBox": [
+     48,
+     24,
+     162,
+     159
+    ]
+   },
+   "hash": "d2f74ad257a6"
   },
   "ban_er-chibi": {
    "image": "/assets/rongguo/ban_er-chibi.png",
@@ -3816,8 +3848,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "9d71bc2d8149",
-   "identity": {"character": "zhou_rui", "faceBox": [90, 39, 183, 177]}
+   "identity": {
+    "character": "zhou_rui",
+    "faceBox": [
+     90,
+     39,
+     183,
+     177
+    ]
+   },
+   "hash": "9d71bc2d8149"
   },
   "zhou_rui-chibi": {
    "image": "/assets/rongguo/zhou_rui-chibi.png",
@@ -3859,8 +3899,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "78a416dbe314",
-   "identity": {"character": "ping_er", "faceBox": [75, 60, 171, 180]}
+   "identity": {
+    "character": "ping_er",
+    "faceBox": [
+     75,
+     60,
+     171,
+     180
+    ]
+   },
+   "hash": "78a416dbe314"
   },
   "ping_er-chibi": {
    "image": "/assets/rongguo/ping_er-chibi.png",
@@ -3902,8 +3950,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "0238ad24a5b7",
-   "identity": {"character": "jia_rong", "faceBox": [54, 39, 114, 126]}
+   "identity": {
+    "character": "jia_rong",
+    "faceBox": [
+     54,
+     39,
+     114,
+     126
+    ]
+   },
+   "hash": "0238ad24a5b7"
   },
   "jia_rong-chibi": {
    "image": "/assets/rongguo/jia_rong-chibi.png",
@@ -5062,24 +5118,24 @@
   },
   "bamboo-cluster": {
    "image": "/assets/rongguo/bamboo-cluster.png",
-   "width": 612,
-   "height": 338,
+   "width": 366,
+   "height": 438,
    "anchor": [
-    306,
-    339.003
+    182.5,
+    438
    ],
-   "source": "art/source/bamboo-cluster_s10400055-01.png",
-   "matte": "art/matted/bamboo-cluster_s10400055-sam.png",
+   "source": "art/source/bamboo-cluster_s10400571-01.png",
+   "matte": "art/matted/bamboo-cluster_s10400571-white.png",
    "crop": [
-    78,
-    118,
-    689,
-    455
+    167,
+    33,
+    533,
+    471
    ],
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "09e07c8dc6a1"
+   "hash": "ed3b63b192c6"
   },
   "canal-quay": {
    "image": "/assets/rongguo/canal-quay.png",
@@ -5142,8 +5198,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "ddf111425b97",
-   "identity": {"character": "ying_er", "faceBox": [55, 20, 180, 185]}
+   "identity": {
+    "character": "ying_er",
+    "faceBox": [
+     55,
+     20,
+     180,
+     185
+    ]
+   },
+   "hash": "ddf111425b97"
   },
   "ying_er-chibi": {
    "image": "/assets/rongguo/ying_er-chibi.png",
@@ -5188,8 +5252,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "e99afe11e5e6",
-   "identity": {"character": "qin_zhong", "faceBox": [108, 54, 210, 186]}
+   "identity": {
+    "character": "qin_zhong",
+    "faceBox": [
+     108,
+     54,
+     210,
+     186
+    ]
+   },
+   "hash": "e99afe11e5e6"
   },
   "qin_zhong-chibi": {
    "image": "/assets/rongguo/qin_zhong-chibi.png",
@@ -5234,8 +5306,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "6e60cec3e3ee",
-   "identity": {"character": "jia_rui", "faceBox": [90, 0, 174, 147]}
+   "identity": {
+    "character": "jia_rui",
+    "faceBox": [
+     90,
+     0,
+     174,
+     147
+    ]
+   },
+   "hash": "6e60cec3e3ee"
   },
   "jia_rui-chibi": {
    "image": "/assets/rongguo/jia_rui-chibi.png",
@@ -5280,8 +5360,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "2976b94d9fda",
-   "identity": {"character": "jin_rong", "faceBox": [81, 42, 216, 213]}
+   "identity": {
+    "character": "jin_rong",
+    "faceBox": [
+     81,
+     42,
+     216,
+     213
+    ]
+   },
+   "hash": "2976b94d9fda"
   },
   "jin_rong-chibi": {
    "image": "/assets/rongguo/jin_rong-chibi.png",
@@ -5326,8 +5414,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "f3459908b43d",
-   "identity": {"character": "ming_yan", "faceBox": [81, 51, 201, 201]}
+   "identity": {
+    "character": "ming_yan",
+    "faceBox": [
+     81,
+     51,
+     201,
+     201
+    ]
+   },
+   "hash": "f3459908b43d"
   },
   "ming_yan-chibi": {
    "image": "/assets/rongguo/ming_yan-chibi.png",
@@ -5372,8 +5468,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "a0c6950a5919",
-   "identity": {"character": "li_gui", "faceBox": [123, 12, 219, 153]}
+   "identity": {
+    "character": "li_gui",
+    "faceBox": [
+     123,
+     12,
+     219,
+     153
+    ]
+   },
+   "hash": "a0c6950a5919"
   },
   "li_gui-chibi": {
    "image": "/assets/rongguo/li_gui-chibi.png",
@@ -5418,8 +5522,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "2413a565e8ba",
-   "identity": {"character": "you_shi", "faceBox": [72, 39, 132, 126]}
+   "identity": {
+    "character": "you_shi",
+    "faceBox": [
+     72,
+     39,
+     132,
+     126
+    ]
+   },
+   "hash": "2413a565e8ba"
   },
   "you_shi-chibi": {
    "image": "/assets/rongguo/you_shi-chibi.png",
@@ -5464,8 +5576,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "24ffc19508e5",
-   "identity": {"character": "jia_zhen", "faceBox": [87, 39, 147, 126]}
+   "identity": {
+    "character": "jia_zhen",
+    "faceBox": [
+     87,
+     39,
+     147,
+     126
+    ]
+   },
+   "hash": "24ffc19508e5"
   },
   "jia_zhen-chibi": {
    "image": "/assets/rongguo/jia_zhen-chibi.png",
@@ -5510,8 +5630,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "fc6fd7d86bcb",
-   "identity": {"character": "jin_shi", "faceBox": [96, 66, 192, 189]}
+   "identity": {
+    "character": "jin_shi",
+    "faceBox": [
+     96,
+     66,
+     192,
+     189
+    ]
+   },
+   "hash": "fc6fd7d86bcb"
   },
   "jin_shi-chibi": {
    "image": "/assets/rongguo/jin_shi-chibi.png",
@@ -5556,8 +5684,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "944196613cda",
-   "identity": {"character": "hu_shi", "faceBox": [81, 36, 186, 180]}
+   "identity": {
+    "character": "hu_shi",
+    "faceBox": [
+     81,
+     36,
+     186,
+     180
+    ]
+   },
+   "hash": "944196613cda"
   },
   "hu_shi-chibi": {
    "image": "/assets/rongguo/hu_shi-chibi.png",
@@ -5602,8 +5738,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "0777da5c3635",
-   "identity": {"character": "zhang_youshi", "faceBox": [87, 42, 156, 147]}
+   "identity": {
+    "character": "zhang_youshi",
+    "faceBox": [
+     87,
+     42,
+     156,
+     147
+    ]
+   },
+   "hash": "0777da5c3635"
   },
   "zhang_youshi-chibi": {
    "image": "/assets/rongguo/zhang_youshi-chibi.png",
@@ -5648,8 +5792,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "21378da85412",
-   "identity": {"character": "jia_qiang", "faceBox": [84, 54, 162, 156]}
+   "identity": {
+    "character": "jia_qiang",
+    "faceBox": [
+     84,
+     54,
+     162,
+     156
+    ]
+   },
+   "hash": "21378da85412"
   },
   "jia_qiang-chibi": {
    "image": "/assets/rongguo/jia_qiang-chibi.png",
@@ -5694,8 +5846,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "4fef546338a1",
-   "identity": {"character": "jia_dairu", "faceBox": [93, 42, 168, 153]}
+   "identity": {
+    "character": "jia_dairu",
+    "faceBox": [
+     93,
+     42,
+     168,
+     153
+    ]
+   },
+   "hash": "4fef546338a1"
   },
   "jia_dairu-chibi": {
    "image": "/assets/rongguo/jia_dairu-chibi.png",
@@ -5761,8 +5921,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "7532d70bebc0",
-   "identity": {"character": "dai_quan", "faceBox": [81, 0, 147, 114]}
+   "identity": {
+    "character": "dai_quan",
+    "faceBox": [
+     81,
+     0,
+     147,
+     114
+    ]
+   },
+   "hash": "7532d70bebc0"
   },
   "dai_quan-chibi": {
    "image": "/assets/rongguo/dai_quan-chibi.png",
@@ -5807,8 +5975,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "1a1d0cd4939e",
-   "identity": {"character": "bao_zhu", "faceBox": [75, 42, 177, 192]}
+   "identity": {
+    "character": "bao_zhu",
+    "faceBox": [
+     75,
+     42,
+     177,
+     192
+    ]
+   },
+   "hash": "1a1d0cd4939e"
   },
   "bao_zhu-chibi": {
    "image": "/assets/rongguo/bao_zhu-chibi.png",
@@ -5853,8 +6029,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "f05b142c57e2",
-   "identity": {"character": "lai_sheng", "faceBox": [96, 54, 189, 180]}
+   "identity": {
+    "character": "lai_sheng",
+    "faceBox": [
+     96,
+     54,
+     189,
+     180
+    ]
+   },
+   "hash": "f05b142c57e2"
   },
   "lai_sheng-chibi": {
    "image": "/assets/rongguo/lai_sheng-chibi.png",
@@ -5899,8 +6083,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "9363800721e4",
-   "identity": {"character": "zhao_er", "faceBox": [81, 0, 189, 171]}
+   "identity": {
+    "character": "zhao_er",
+    "faceBox": [
+     81,
+     0,
+     189,
+     171
+    ]
+   },
+   "hash": "9363800721e4"
   },
   "zhao_er-chibi": {
    "image": "/assets/rongguo/zhao_er-chibi.png",
@@ -5945,8 +6137,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "08bc60cabc7f",
-   "identity": {"character": "shui_rong", "faceBox": [123, 81, 207, 189]}
+   "identity": {
+    "character": "shui_rong",
+    "faceBox": [
+     123,
+     81,
+     207,
+     189
+    ]
+   },
+   "hash": "08bc60cabc7f"
   },
   "shui_rong-chibi": {
    "image": "/assets/rongguo/shui_rong-chibi.png",
@@ -5991,8 +6191,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "4da20bfd06bc",
-   "identity": {"character": "jing_xu", "faceBox": [111, 12, 225, 243]}
+   "identity": {
+    "character": "jing_xu",
+    "faceBox": [
+     111,
+     12,
+     225,
+     243
+    ]
+   },
+   "hash": "4da20bfd06bc"
   },
   "jing_xu-chibi": {
    "image": "/assets/rongguo/jing_xu-chibi.png",
@@ -6037,8 +6245,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "307a18b22dfd",
-   "identity": {"character": "zhi_neng", "faceBox": [81, 0, 219, 219]}
+   "identity": {
+    "character": "zhi_neng",
+    "faceBox": [
+     81,
+     0,
+     219,
+     219
+    ]
+   },
+   "hash": "307a18b22dfd"
   },
   "zhi_neng-chibi": {
    "image": "/assets/rongguo/zhi_neng-chibi.png",
@@ -6083,8 +6299,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "e7071c4dcf53",
-   "identity": {"character": "er_ya_tou", "faceBox": [87, 54, 201, 183]}
+   "identity": {
+    "character": "er_ya_tou",
+    "faceBox": [
+     87,
+     54,
+     201,
+     183
+    ]
+   },
+   "hash": "e7071c4dcf53"
   },
   "er_ya_tou-chibi": {
    "image": "/assets/rongguo/er_ya_tou-chibi.png",
@@ -6129,8 +6353,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "94f76731de01",
-   "identity": {"character": "wang_er", "faceBox": [105, 12, 213, 171]}
+   "identity": {
+    "character": "wang_er",
+    "faceBox": [
+     105,
+     12,
+     213,
+     171
+    ]
+   },
+   "hash": "94f76731de01"
   },
   "wang_er-chibi": {
    "image": "/assets/rongguo/wang_er-chibi.png",
@@ -6175,8 +6407,16 @@
    "shear": 0,
    "mirror": false,
    "bodyCompress": null,
-   "hash": "ddd90c4843f6",
-   "identity": {"character": "qin_ye", "faceBox": [117, 21, 216, 195]}
+   "identity": {
+    "character": "qin_ye",
+    "faceBox": [
+     117,
+     21,
+     216,
+     195
+    ]
+   },
+   "hash": "ddd90c4843f6"
   },
   "qin_ye-chibi": {
    "image": "/assets/rongguo/qin_ye-chibi.png",
@@ -6201,6 +6441,676 @@
     "factor": 0.64
    },
    "hash": "be34e41aa274"
+  },
+  "yuanchun-portrait": {
+   "image": "/assets/rongguo/yuanchun-portrait.png",
+   "width": 287,
+   "height": 600,
+   "anchor": [
+    423,
+    1023
+   ],
+   "source": "art/source/yuanchun-portrait_s10234000-01.png",
+   "matte": "art/matted/yuanchun-portrait_s10234000-sam.png",
+   "crop": [
+    0,
+    0,
+    287,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "yuanchun",
+    "features": "贵妃端丽长鹅蛋脸；柳叶凤眉；凤目含威；直鼻；樱唇；丰润华贵，二十岁上下",
+    "seed": 10234000,
+    "faceBox": [
+     90,
+     84,
+     186,
+     210
+    ]
+   },
+   "hash": "b1d46a1e0aae"
+  },
+  "yuanchun-chibi": {
+   "image": "/assets/rongguo/yuanchun-chibi.png",
+   "width": 46,
+   "height": 116,
+   "anchor": [
+    393,
+    963
+   ],
+   "source": "art/source/yuanchun-chibi_s10234001-01.png",
+   "matte": "art/matted/yuanchun-chibi_s10234001-sam.png",
+   "crop": [
+    0,
+    0,
+    46,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 404,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "yuanchun",
+    "features": "贵妃端丽长鹅蛋脸；柳叶凤眉；凤目含威；直鼻；樱唇；丰润华贵，二十岁上下",
+    "seed": 10234001,
+    "faceBox": [
+     15,
+     17,
+     34,
+     36
+    ]
+   },
+   "hash": "80bdcc3de864"
+  },
+  "jia_lian-portrait": {
+   "image": "/assets/rongguo/jia_lian-portrait.png",
+   "width": 180,
+   "height": 600,
+   "anchor": [
+    436,
+    984
+   ],
+   "source": "art/source/jia_lian-portrait_s10234002-01.png",
+   "matte": "art/matted/jia_lian-portrait_s10234002-sam.png",
+   "crop": [
+    0,
+    0,
+    180,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "jia_lian",
+    "features": "贵族公子清俊方脸；浓眉；明朗桃花眼；直鼻；薄唇；微带纨绔，二十余岁",
+    "seed": 10234002,
+    "faceBox": [
+     48,
+     45,
+     108,
+     123
+    ]
+   },
+   "hash": "b2e22eec100a"
+  },
+  "jia_lian-chibi": {
+   "image": "/assets/rongguo/jia_lian-chibi.png",
+   "width": 48,
+   "height": 116,
+   "anchor": [
+    354,
+    970
+   ],
+   "source": "art/source/jia_lian-chibi_s10234003-01.png",
+   "matte": "art/matted/jia_lian-chibi_s10234003-sam.png",
+   "crop": [
+    0,
+    0,
+    48,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 407,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "jia_lian",
+    "features": "贵族公子清俊方脸；浓眉；明朗桃花眼；直鼻；薄唇；微带纨绔，二十余岁",
+    "seed": 10234003,
+    "faceBox": [
+     18,
+     16,
+     37,
+     37
+    ]
+   },
+   "hash": "c3817f3c73f7"
+  },
+  "jia_huan-portrait": {
+   "image": "/assets/rongguo/jia_huan-portrait.png",
+   "width": 169,
+   "height": 600,
+   "anchor": [
+    449,
+    1112
+   ],
+   "source": "art/source/jia_huan-portrait_s10234010-01.png",
+   "matte": "art/matted/jia_huan-portrait_s10234010-sam.png",
+   "crop": [
+    0,
+    0,
+    169,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "jia_huan",
+    "features": "少年庶出，尖削小脸；细眉吊梢；三角眼带忌刻；薄鼻薄唇；衣色暗沉，十二三岁",
+    "seed": 10234010,
+    "faceBox": [
+     39,
+     30,
+     105,
+     102
+    ]
+   },
+   "hash": "5221b39379cf"
+  },
+  "jia_huan-chibi": {
+   "image": "/assets/rongguo/jia_huan-chibi.png",
+   "width": 66,
+   "height": 116,
+   "anchor": [
+    443,
+    947
+   ],
+   "source": "art/source/jia_huan-chibi_s10234011-01.png",
+   "matte": "art/matted/jia_huan-chibi_s10234011-sam.png",
+   "crop": [
+    0,
+    0,
+    66,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 398,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "jia_huan",
+    "features": "少年庶出，尖削小脸；细眉吊梢；三角眼带忌刻；薄鼻薄唇；衣色暗沉，十二三岁",
+    "seed": 10234011,
+    "faceBox": [
+     8,
+     29,
+     65,
+     60
+    ]
+   },
+   "hash": "bdc76e3eb405"
+  },
+  "zhao_yiniang-portrait": {
+   "image": "/assets/rongguo/zhao_yiniang-portrait.png",
+   "width": 191,
+   "height": 600,
+   "anchor": [
+    344,
+    1125
+   ],
+   "source": "art/source/zhao_yiniang-portrait_s10234020-01.png",
+   "matte": "art/matted/zhao_yiniang-portrait_s10234020-sam.png",
+   "crop": [
+    0,
+    0,
+    191,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "zhao_yiniang",
+    "features": "妾室中年，薄长脸；稀眉细眼；颧骨略高；薄唇惯撇；衣色半旧带俗艳，三十余岁",
+    "seed": 10234020,
+    "faceBox": [
+     69,
+     27,
+     120,
+     102
+    ]
+   },
+   "hash": "ba0524bba394"
+  },
+  "zhao_yiniang-chibi": {
+   "image": "/assets/rongguo/zhao_yiniang-chibi.png",
+   "width": 68,
+   "height": 116,
+   "anchor": [
+    416,
+    936
+   ],
+   "source": "art/source/zhao_yiniang-chibi_s10234021-01.png",
+   "matte": "art/matted/zhao_yiniang-chibi_s10234021-sam.png",
+   "crop": [
+    0,
+    0,
+    68,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 393,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "zhao_yiniang",
+    "features": "妾室中年，薄长脸；稀眉细眼；颧骨略高；薄唇惯撇；衣色半旧带俗艳，三十余岁",
+    "seed": 10234021,
+    "faceBox": [
+     12,
+     27,
+     56,
+     60
+    ]
+   },
+   "hash": "8808d3299ea6"
+  },
+  "shi_xiangyun-portrait": {
+   "image": "/assets/rongguo/shi_xiangyun-portrait.png",
+   "width": 188,
+   "height": 600,
+   "anchor": [
+    401,
+    1121
+   ],
+   "source": "art/source/shi_xiangyun-portrait_s10234030-01.png",
+   "matte": "art/matted/shi_xiangyun-portrait_s10234030-sam.png",
+   "crop": [
+    0,
+    0,
+    188,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "shi_xiangyun",
+    "features": "少女圆润苹果脸；浓眉大眼；鼻直口阔笑意常开；健康红润；英气洒脱着男装也宜，十四五岁",
+    "seed": 10234030,
+    "faceBox": [
+     54,
+     30,
+     117,
+     129
+    ]
+   },
+   "hash": "146ac634ac75"
+  },
+  "shi_xiangyun-chibi": {
+   "image": "/assets/rongguo/shi_xiangyun-chibi.png",
+   "width": 76,
+   "height": 116,
+   "anchor": [
+    474,
+    960
+   ],
+   "source": "art/source/shi_xiangyun-chibi_s10234031-01.png",
+   "matte": "art/matted/shi_xiangyun-chibi_s10234031-sam.png",
+   "crop": [
+    0,
+    0,
+    76,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 403,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "shi_xiangyun",
+    "features": "少女圆润苹果脸；浓眉大眼；鼻直口阔笑意常开；健康红润；英气洒脱着男装也宜，十四五岁",
+    "seed": 10234031,
+    "faceBox": [
+     17,
+     26,
+     72,
+     60
+    ]
+   },
+   "hash": "8a8d4b66f7ba"
+  },
+  "she_yue-portrait": {
+   "image": "/assets/rongguo/she_yue-portrait.png",
+   "width": 147,
+   "height": 600,
+   "anchor": [
+    359,
+    1115
+   ],
+   "source": "art/source/she_yue-portrait_s10234040-01.png",
+   "matte": "art/matted/she_yue-portrait_s10234040-sam.png",
+   "crop": [
+    0,
+    0,
+    147,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "she_yue",
+    "features": "少女清秀鹅蛋脸；细长眉；眼尾微垂含蓄；薄唇；神情安静守分，十七八岁",
+    "seed": 10234040,
+    "faceBox": [
+     36,
+     24,
+     96,
+     93
+    ]
+   },
+   "hash": "87c9f99ae96c"
+  },
+  "she_yue-chibi": {
+   "image": "/assets/rongguo/she_yue-chibi.png",
+   "width": 58,
+   "height": 116,
+   "anchor": [
+    394,
+    951
+   ],
+   "source": "art/source/she_yue-chibi_s10234041-01.png",
+   "matte": "art/matted/she_yue-chibi_s10234041-sam.png",
+   "crop": [
+    0,
+    0,
+    58,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 399,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "she_yue",
+    "features": "少女清秀鹅蛋脸；细长眉；眼尾微垂含蓄；薄唇；神情安静守分，十七八岁",
+    "seed": 10234041,
+    "faceBox": [
+     5,
+     24,
+     54,
+     60
+    ]
+   },
+   "hash": "e57bf96a9d76"
+  },
+  "zijun-portrait": {
+   "image": "/assets/rongguo/zijun-portrait.png",
+   "width": 157,
+   "height": 600,
+   "anchor": [
+    369,
+    1121
+   ],
+   "source": "art/source/zijun-portrait_s10234050-01.png",
+   "matte": "art/matted/zijun-portrait_s10234050-sam.png",
+   "crop": [
+    0,
+    0,
+    157,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "zijun",
+    "features": "少女清秀圆脸；眉弯眼亮；体态轻盈；神气爽利，黛玉房中首席大丫头，十八九岁",
+    "seed": 10234050,
+    "faceBox": [
+     42,
+     36,
+     105,
+     108
+    ]
+   },
+   "hash": "a2e6e679e096"
+  },
+  "zijun-chibi": {
+   "image": "/assets/rongguo/zijun-chibi.png",
+   "width": 64,
+   "height": 116,
+   "anchor": [
+    351,
+    938
+   ],
+   "source": "art/source/zijun-chibi_s10234051-01.png",
+   "matte": "art/matted/zijun-chibi_s10234051-sam.png",
+   "crop": [
+    0,
+    0,
+    64,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 394,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "zijun",
+    "features": "少女清秀圆脸；眉弯眼亮；体态轻盈；神气爽利，黛玉房中首席大丫头，十八九岁",
+    "seed": 10234051,
+    "faceBox": [
+     14,
+     29,
+     63,
+     60
+    ]
+   },
+   "hash": "943e56ff05c1"
+  },
+  "cui_lv-portrait": {
+   "image": "/assets/rongguo/cui_lv-portrait.png",
+   "width": 196,
+   "height": 600,
+   "anchor": [
+    427,
+    1119
+   ],
+   "source": "art/source/cui_lv-portrait_s10234060-01.png",
+   "matte": "art/matted/cui_lv-portrait_s10234060-sam.png",
+   "crop": [
+    0,
+    0,
+    196,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "cui_lv",
+    "features": "少女圆脸；眉粗眼大；口角泼辣；体健爱笑，湘云的丫头，十七八岁",
+    "seed": 10234060,
+    "faceBox": [
+     55,
+     23,
+     115,
+     108
+    ]
+   },
+   "hash": "97858f09ccf1"
+  },
+  "cui_lv-chibi": {
+   "image": "/assets/rongguo/cui_lv-chibi.png",
+   "width": 69,
+   "height": 116,
+   "anchor": [
+    358,
+    953
+   ],
+   "source": "art/source/cui_lv-chibi_s10234061-01.png",
+   "matte": "art/matted/cui_lv-chibi_s10234061-sam.png",
+   "crop": [
+    0,
+    0,
+    69,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 400,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "cui_lv",
+    "features": "少女圆脸；眉粗眼大；口角泼辣；体健爱笑，湘云的丫头，十七八岁",
+    "seed": 10234061,
+    "faceBox": [
+     5,
+     29,
+     58,
+     60
+    ]
+   },
+   "hash": "6239446707ee"
+  },
+  "si_er-portrait": {
+   "image": "/assets/rongguo/si_er-portrait.png",
+   "width": 164,
+   "height": 600,
+   "anchor": [
+    361,
+    1114
+   ],
+   "source": "art/source/si_er-portrait_s10234070-01.png",
+   "matte": "art/matted/si_er-portrait_s10234070-sam.png",
+   "crop": [
+    0,
+    0,
+    164,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "si_er",
+    "features": "少女鹅蛋脸；眉细目秀；身段纤细；举止乖巧，原名蕙香，十六七岁",
+    "seed": 10234070,
+    "faceBox": [
+     48,
+     33,
+     102,
+     111
+    ]
+   },
+   "hash": "62613786246e"
+  },
+  "si_er-chibi": {
+   "image": "/assets/rongguo/si_er-chibi.png",
+   "width": 54,
+   "height": 116,
+   "anchor": [
+    347,
+    990
+   ],
+   "source": "art/source/si_er-chibi_s10234071-01.png",
+   "matte": "art/matted/si_er-chibi_s10234071-sam.png",
+   "crop": [
+    0,
+    0,
+    54,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 416,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "si_er",
+    "features": "少女鹅蛋脸；眉细目秀；身段纤细；举止乖巧，原名蕙香，十六七岁",
+    "seed": 10234071,
+    "faceBox": [
+     4,
+     24,
+     51,
+     59
+    ]
+   },
+   "hash": "6aacd8852802"
+  },
+  "jia_lan-portrait": {
+   "image": "/assets/rongguo/jia_lan-portrait.png",
+   "width": 385,
+   "height": 600,
+   "anchor": [
+    227,
+    1130
+   ],
+   "source": "art/source/jia_lan-portrait_s10234080-01.png",
+   "matte": "art/matted/jia_lan-portrait_s10234080-sam.png",
+   "crop": [
+    0,
+    0,
+    385,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "jia_lan",
+    "features": "少年圆脸；眉淡眼明；体态瘦小；举止安静，贾政长子，宝玉的堂侄，十一二岁",
+    "seed": 10234080,
+    "faceBox": [
+     152,
+     45,
+     250,
+     158
+    ]
+   },
+   "hash": "6c79325b9387"
+  },
+  "jia_lan-chibi": {
+   "image": "/assets/rongguo/jia_lan-chibi.png",
+   "width": 103,
+   "height": 116,
+   "anchor": [
+    652,
+    988
+   ],
+   "source": "art/source/jia_lan-chibi_s10234081-01.png",
+   "matte": "art/matted/jia_lan-chibi_s10234081-sam.png",
+   "crop": [
+    0,
+    0,
+    103,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 415,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "jia_lan",
+    "features": "少年圆脸；眉淡眼明；体态瘦小；举止安静，贾政长子，宝玉的堂侄，十一二岁",
+    "seed": 10234081,
+    "faceBox": [
+     24,
+     16,
+     83,
+     60
+    ]
+   },
+   "hash": "28fb49ed3048"
   },
   "baoyu-portrait-angry": {
    "image": "/assets/rongguo/baoyu-portrait-angry.png",
@@ -6602,7 +7512,7 @@
     608
    ],
    "mourning": true,
-   "hash": "1699111d9be3"
+   "hash": "7506fc52f196"
   },
   "feng-portrait-mourning": {
    "image": "/assets/rongguo/feng-portrait-mourning.png",
@@ -6620,7 +7530,7 @@
     608
    ],
    "mourning": true,
-   "hash": "716d066dfb98"
+   "hash": "bb04489c635b"
   },
   "grandmother-portrait-mourning": {
    "image": "/assets/rongguo/grandmother-portrait-mourning.png",
@@ -6638,7 +7548,7 @@
     608
    ],
    "mourning": true,
-   "hash": "e18ab8dd7859"
+   "hash": "8e9e5e6b4bd9"
   },
   "shui_rong-portrait-mourning": {
    "image": "/assets/rongguo/shui_rong-portrait-mourning.png",
@@ -6656,7 +7566,7 @@
     1024
    ],
    "mourning": true,
-   "hash": "c6ac50d142ae"
+   "hash": "0cba873eecfa"
   }
  }
 }

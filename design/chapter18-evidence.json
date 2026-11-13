@@ -1,0 +1,2032 @@
+{
+ "schemaVersion": 1,
+ "template": false,
+ "chapter": 18,
+ "source": {
+  "edition": "维基文库《紅樓夢》第 018 回（繁体原文页）",
+  "url": "https://zh.wikisource.org/w/index.php?title=紅樓夢/第018回&action=raw",
+  "retrievedAt": "2026-11-10",
+  "localText": "docs/chapter18-source.txt",
+  "processing": "MediaWiki API action=query&prop=revisions&rvprop=content 取回 wikitext；去除模板与文末导航行；由 OpenCC t2s 转简体，按维基段落拆行；正文未作增删。"
+ },
+ "paragraphCount": 59,
+ "nodeCount": 135,
+ "sectionCount": 16,
+ "mapCount": 7,
+ "evidence": [
+  {
+   "id": "C18-E001",
+   "classification": "explicit",
+   "paragraphLead": "话说宝玉来至院外",
+   "excerpt": "话说宝玉来至院外，就有跟贾政的几个小厮上来拦腰抱住，都说：「今儿亏我们，老爷才喜欢，老太太打发人出来问了几遍，都亏我们回说喜欢，不然，若老太太叫你进去，就不得展才了。人人都说，你才那些诗比世人的都强。今儿得了这样的彩头。该赏我们了。」",
+   "claim": "小厮拦腰抱住宝玉",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-001"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E002",
+   "classification": "explicit",
+   "paragraphLead": "宝玉笑道",
+   "excerpt": "宝玉笑道：「每人一吊钱。」众人道：「谁没见那一吊钱！把这荷包赏了罢。」",
+   "claim": "一吊钱打发",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C18-002"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E003",
+   "classification": "explicit",
+   "paragraphLead": "说著，一个上来解荷包",
+   "excerpt": "说著，一个上来解荷包，那一个就解扇囊，不容分说，将宝玉所佩之物尽行解去。又道：「好生送上去罢。」一个抱了起来，几个围绕，送至贾母二门前。",
+   "claim": "解去荷包扇囊",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-003"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E004",
+   "classification": "explicit",
+   "paragraphLead": "那时贾母已命人看了几次",
+   "excerpt": "那时贾母已命人看了几次。众奶娘丫鬟跟上来，见过贾母，知不曾难为著他，心中自是欢喜。",
+   "claim": "知不曾难为着他",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-004"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E005",
+   "classification": "explicit",
+   "paragraphLead": "少时袭人倒了茶来",
+   "excerpt": "少时袭人倒了茶来，见身边佩物一件无存，因笑道：「带的东西又是那起没脸的东西们解了去了。」",
+   "claim": "带的东西又是那起没脸的东西们解了去了",
+   "narrativeLayer": "present",
+   "speaker": "xiren",
+   "appliesTo": [
+    "C18-005"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E006",
+   "classification": "explicit",
+   "paragraphLead": "林黛玉听说，走来瞧瞧",
+   "excerpt": "林黛玉听说，走来瞧瞧，果然一件无存，因向宝玉道：「我给的那个荷包也给他们了？你明儿再想我的东西，可不能够了！」",
+   "claim": "果然一件无存",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-006"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E007",
+   "classification": "explicit",
+   "paragraphLead": "说毕，赌气回房",
+   "excerpt": "说毕，赌气回房，将前日宝玉所烦他作的那个香袋儿——才做了一半——赌气拿过来就铰。",
+   "claim": "我给的那个荷包也给他们了",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C18-007"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E008",
+   "classification": "explicit",
+   "paragraphLead": "宝玉见他生气，便知不妥",
+   "excerpt": "宝玉见他生气，便知不妥，忙赶过来，早剪破了。宝玉已见过这香囊，虽尚未完，却十分精巧，费了许多工夫。今见无故剪了，却也可气。",
+   "claim": "早已剪破",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-008"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E009",
+   "classification": "explicit",
+   "paragraphLead": "因忙把衣领解了",
+   "excerpt": "因忙把衣领解了，从里面红袄襟上将黛玉所给的那荷包解了下来，递与黛玉瞧道：「你瞧瞧，这是什么！我那一回把你的东西给人了？」",
+   "claim": "你瞧瞧，这是什么",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C18-009"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E010",
+   "classification": "explicit",
+   "paragraphLead": "林黛玉见他如此珍重",
+   "excerpt": "林黛玉见他如此珍重，带在里面，可知是怕人拿去之意，因此又自悔莽撞，未见皂白，就剪了香袋。因此又愧又气，低头一言不发。",
+   "claim": "又自悔莽撞",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-010"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E011",
+   "classification": "explicit",
+   "paragraphLead": "宝玉道：“你也不用剪",
+   "excerpt": "宝玉道：「你也不用剪，我知道你是懒待给我东西。我连这荷包奉还，何如？」说著，掷向他怀中便走。",
+   "claim": "我连这荷包奉还，何如",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C18-011"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E012",
+   "classification": "explicit",
+   "paragraphLead": "黛玉见如此，越发气起来",
+   "excerpt": "黛玉见如此，越发气起来，声咽气堵，又汪汪的滚下泪来，拿起荷包来又剪。",
+   "claim": "拿起荷包来又剪",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-012"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E013",
+   "classification": "explicit",
+   "paragraphLead": "宝玉见他如此，忙回身抢住",
+   "excerpt": "宝玉见他如此，忙回身抢住，笑道：「好妹妹，饶了他罢！」",
+   "claim": "好妹妹，饶了他罢",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C18-013"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E014",
+   "classification": "explicit",
+   "paragraphLead": "黛玉将剪子一摔",
+   "excerpt": "黛玉将剪子一摔，拭泪说道：「你不用同我好一阵歹一阵的，要恼，就撂开手。这当了什么。」说著，赌气上床，面向里倒下拭泪。",
+   "claim": "要恼，就撂开手",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C18-014"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E015",
+   "classification": "explicit",
+   "paragraphLead": "禁不住宝玉上来",
+   "excerpt": "禁不住宝玉上来「妹妹」长「妹妹」短赔不是。",
+   "claim": "妹妹长妹妹短赔不是",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-015"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E016",
+   "classification": "explicit",
+   "paragraphLead": "前面贾母一片声找宝玉",
+   "excerpt": "前面贾母一片声找宝玉。众奶娘丫鬟们忙回说：「在林姑娘房里呢。」",
+   "claim": "贾母一片声找宝玉",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-016"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E017",
+   "classification": "explicit",
+   "paragraphLead": "贾母听说道",
+   "excerpt": "贾母听说道：「好，好，好！让他姊妹们一处顽顽罢。才他老子拘了他这半天，让他开心一会子罢。只别叫他们拌嘴，不许扭了他。」众人答应著。",
+   "claim": "让他姊妹们一处顽顽",
+   "narrativeLayer": "present",
+   "speaker": "grandmother",
+   "appliesTo": [
+    "C18-017"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E018",
+   "classification": "explicit",
+   "paragraphLead": "黛玉被宝玉缠不过",
+   "excerpt": "黛玉被宝玉缠不过，只得起来道：「你的意思不叫我安生，我就离了你。」说著往外就走。",
+   "claim": "我就离了你",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C18-018"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E019",
+   "classification": "explicit",
+   "paragraphLead": "宝玉笑道：“你到那里，我跟到那里",
+   "excerpt": "宝玉笑道：「你到那里，我跟到那里。」一面仍拿起荷包来带上，黛玉伸手抢道：「你说不要了，这会子又带上，我也替你怪臊的！」说著，「嗤」的一声又笑了。",
+   "claim": "你到那里我跟到那里",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C18-019"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E020",
+   "classification": "explicit",
+   "paragraphLead": "宝玉道：“好妹妹，明儿另替我作个香袋儿罢",
+   "excerpt": "宝玉道：「好妹妹，明儿另替我作个香袋儿罢。」黛玉道：「那也只瞧我高兴罢了。」",
+   "claim": "那也只瞧我高兴",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C18-020"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E021",
+   "classification": "explicit",
+   "paragraphLead": "一面说，一面二人出房",
+   "excerpt": "一面说，一面二人出房，到王夫人上房中去了，可巧宝钗亦在那里。",
+   "claim": "二人出房，到王夫人上房中去",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-021"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E022",
+   "classification": "explicit",
+   "paragraphLead": "此时王夫人那边热闹非常",
+   "excerpt": "此时王夫人那边热闹非常。原来贾蔷已从姑苏采买了十二个女孩子——并聘了教习——以及行头等事来了。",
+   "claim": "贾蔷已从姑苏采买了十二个女孩子",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-022"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E023",
+   "classification": "explicit",
+   "paragraphLead": "那时薛姨妈另迁于东北上",
+   "excerpt": "那时薛姨妈另迁于东北上一所幽静房舍居住，将梨香院早已腾挪出来，另行修理了，就令教习在此教演女戏。",
+   "claim": "将梨香院早已腾挪出来",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-023"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E024",
+   "classification": "explicit",
+   "paragraphLead": "又另派家中旧有曾演学过歌唱的女人们",
+   "excerpt": "又另派家中旧有曾演学过歌唱的女人们——如今皆已皤然老妪了，著他们带领管理。就令贾蔷总理其日用出入银钱等事，以及诸凡大小所需之物料账目。",
+   "claim": "贾蔷总理物料账目",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-024"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E025",
+   "classification": "explicit",
+   "paragraphLead": "又有林之孝家的来回",
+   "excerpt": "又有林之孝家的来回：「采访聘买得十个小尼姑，小道姑都有了，连新作的二十分道袍也有了。外有一个带发修行的，本是苏州人氏，祖上也是读书仕宦之家。因生了这位姑娘自小多病，买了许多替身儿皆不中用，到底这位姑娘亲自入了空门，方才好了，所以带发修行，今…",
+   "claim": "采访聘买得十个小尼姑，小道姑都有了",
+   "narrativeLayer": "present",
+   "speaker": "messenger",
+   "appliesTo": [
+    "C18-025"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E026",
+   "classification": "explicit",
+   "paragraphLead": "王夫人不等回完",
+   "excerpt": "王夫人不等回完，便说：「既这样，我们何不接了他来。」",
+   "claim": "既这样，我们何不接了他来",
+   "narrativeLayer": "present",
+   "speaker": "wang",
+   "appliesTo": [
+    "C18-026"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E027",
+   "classification": "explicit",
+   "paragraphLead": "林之孝家的回道",
+   "excerpt": "林之孝家的回道：「请他，他说『侯门公府，必以贵势压人，我再不去的。』」王夫人笑道：「他既是官宦小姐，自然骄傲些，就下个帖子请他何妨。」",
+   "claim": "侯门公府，必以贵势压人",
+   "narrativeLayer": "present",
+   "speaker": "messenger",
+   "appliesTo": [
+    "C18-027"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E028",
+   "classification": "explicit",
+   "paragraphLead": "林之孝家的答应了出去",
+   "excerpt": "林之孝家的答应了出去，命书启相公写请帖去请妙玉。次日遣人备车轿去接等后话，暂且搁过，此时不能表白。",
+   "claim": "命书启相公写请帖去请妙玉",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-028"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E029",
+   "classification": "explicit",
+   "paragraphLead": "当下又有人回，工程上等著糊东西的纱绫",
+   "excerpt": "当下又有人回，工程上等著糊东西的纱绫，请凤姐去开楼拣纱绫，又有人来回，请凤姐开库，收金银器皿。连王夫人并上房丫鬟等众，皆一时不得闲的。",
+   "claim": "请凤姐去开楼拣纱绫",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-029"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E030",
+   "classification": "explicit",
+   "paragraphLead": "宝钗便说",
+   "excerpt": "宝钗便说：「咱们别在这里碍手碍脚，找探丫头去。」说著，同宝玉黛玉往迎春等房中来闲顽，无话。",
+   "claim": "咱们别在这里碍手碍脚",
+   "narrativeLayer": "present",
+   "speaker": "baochai",
+   "appliesTo": [
+    "C18-030"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E031",
+   "classification": "explicit",
+   "paragraphLead": "王夫人等日日忙乱，直到十月将尽",
+   "excerpt": "王夫人等日日忙乱，直到十月将尽，幸皆全备：各处监管都交清账目，各处古董文玩，皆已陈设齐备，采办鸟雀的，自仙鹤，孔雀以及鹿，兔，鸡，鹅等类，悉已买全，交于园中各处像景饲养；贾蔷那边也演出二十出杂戏来，小尼姑，道姑也都学会了念几卷经咒。",
+   "claim": "各处古董文玩，皆已陈设齐备",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-031"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E032",
+   "classification": "explicit",
+   "paragraphLead": "贾政方略心意宽畅",
+   "excerpt": "贾政方略心意宽畅，又请贾母等进园，色色斟酌，点缀妥当，再无一些遗漏不当之处了。",
+   "claim": "色色斟酌，点缀妥当",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-032"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E033",
+   "classification": "explicit",
+   "paragraphLead": "于是贾政方择日题本",
+   "excerpt": "于是贾政方择日题本。本上之日，奉朱批准奏：次年正月十五上元之日，恩准贾妃省亲。",
+   "claim": "奉朱批准奏：恩准贾妃省亲",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-033"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E034",
+   "classification": "explicit",
+   "paragraphLead": "贾府领了此恩旨",
+   "excerpt": "贾府领了此恩旨，益发昼夜不闲，年也不曾好生过的。",
+   "claim": "昼夜不闲",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-034"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E035",
+   "classification": "explicit",
+   "paragraphLead": "展眼元宵在迩，自正月初八日",
+   "excerpt": "展眼元宵在迩，自正月初八日，就有太监出来先看方向：何处更衣，何处燕坐，何处受礼，何处开宴，何处退息。",
+   "claim": "太监出来先看方向",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-035"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E036",
+   "classification": "explicit",
+   "paragraphLead": "又有巡察地方总理关防太监等",
+   "excerpt": "又有巡察地方总理关防太监等，带了许多小太监出来，各处关防，挡围幙，指示贾宅人员何处退，何处跪，何处进膳，何处启事，种种仪注不一。",
+   "claim": "各处关防，挡围幙",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-036"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E037",
+   "classification": "explicit",
+   "paragraphLead": "外面又有工部官员",
+   "excerpt": "外面又有工部官员并五城兵备道打扫街道，撵逐闲人。",
+   "claim": "打扫街道，撵逐闲人",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-037"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E038",
+   "classification": "explicit",
+   "paragraphLead": "贾赦等督率匠人扎花灯烟火之类",
+   "excerpt": "贾赦等督率匠人扎花灯烟火之类，至十四日，俱已停妥。这一夜，上下通不曾睡。",
+   "claim": "这一夜，上下通不曾睡",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-038"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E039",
+   "classification": "explicit",
+   "paragraphLead": "至十五日五鼓，自贾母等有爵者",
+   "excerpt": "至十五日五鼓，自贾母等有爵者，皆按品服大妆。园内各处，帐舞蟠龙，帘飞彩凤，金银焕彩，珠宝争辉，鼎焚百合之香，瓶插长春之蕊，静悄无人咳嗽。",
+   "claim": "皆按品服大妆",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-039"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E040",
+   "classification": "explicit",
+   "paragraphLead": "贾赦等在西街门外",
+   "excerpt": "贾赦等在西街门外，贾母等在荣府大门外。街头巷口，俱系围幕挡严。正等的不耐烦，忽一太监坐大马而来，贾母忙接入，问其消息。",
+   "claim": "正等的不耐烦",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-040"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E041",
+   "classification": "explicit",
+   "paragraphLead": "太监道：“早多著呢",
+   "excerpt": "太监道：「早多著呢！未初刻用过晚膳，未正二刻还到宝灵宫拜佛，酉初刻进大明宫领宴看灯方请旨，只怕戌初才起身呢。」",
+   "claim": "只怕戌初才起身呢",
+   "narrativeLayer": "present",
+   "speaker": "messenger",
+   "appliesTo": [
+    "C18-041"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E042",
+   "classification": "explicit",
+   "paragraphLead": "凤姐听了道",
+   "excerpt": "凤姐听了道：「既这么著，老太太，太太且请回房，等是时候再来也不迟。」",
+   "claim": "等是时候再来也不迟",
+   "narrativeLayer": "present",
+   "speaker": "feng",
+   "appliesTo": [
+    "C18-042"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E043",
+   "classification": "explicit",
+   "paragraphLead": "于是贾母等暂且自便",
+   "excerpt": "于是贾母等暂且自便，园中悉赖凤姐照理。又命执事人带领太监们去吃酒饭。",
+   "claim": "园中悉赖凤姐照理",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-043"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E044",
+   "classification": "explicit",
+   "paragraphLead": "一时传人一担一担的挑进蜡烛来",
+   "excerpt": "一时传人一担一担的挑进蜡烛来，各处点灯。方点完时，忽听外边马跑之声。",
+   "claim": "各处点灯",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-044"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E045",
+   "classification": "explicit",
+   "paragraphLead": "一时，有十来个太监都喘吁吁跑来拍手儿",
+   "excerpt": "一时，有十来个太监都喘吁吁跑来拍手儿。这些太监会意，都知道是「来了，来了」，各按方向站住。",
+   "claim": "都知道是“来了，来了”",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-045"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E046",
+   "classification": "explicit",
+   "paragraphLead": "贾赦领合族子侄在西街门外",
+   "excerpt": "贾赦领合族子侄在西街门外，贾母领合族女眷在大门外迎接。半日静悄悄的。",
+   "claim": "合族子侄跪迎",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-046"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E047",
+   "classification": "explicit",
+   "paragraphLead": "忽见一对红衣太监骑马缓缓的走来",
+   "excerpt": "忽见一对红衣太监骑马缓缓的走来，至西街门下了马，将马赶出围幕之外，便垂手面西站住。半日又是一对，亦是如此。少时便来了十来对，方闻得隐隐细乐之声。",
+   "claim": "一对红衣太监骑马缓缓的走来",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-047"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E048",
+   "classification": "explicit",
+   "paragraphLead": "一对对龙旌凤翣",
+   "excerpt": "一对对龙旌凤翣，雉羽夔头，又有销金提炉焚著御香，然后一把曲柄七凤黄金伞过来，便是冠袍带履。又有值事太监捧著香珠，绣帕，漱盂，拂尘等类。一队队过完，后面方是八个太监抬著一顶金顶金黄绣凤版舆，缓缓行来。",
+   "claim": "龙旌凤翣，黄金伞",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-048"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E049",
+   "classification": "explicit",
+   "paragraphLead": "贾母等连忙路旁跪下",
+   "excerpt": "贾母等连忙路旁跪下。早飞跑过几个太监来，扶起贾母，邢夫人，王夫人来。那版舆抬进大门，入仪门往东去，到一所院落门前，有执拂太监跪请下舆更衣。",
+   "claim": "贾母等路旁跪下",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-049"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E050",
+   "classification": "explicit",
+   "paragraphLead": "于是抬舆入门",
+   "excerpt": "于是抬舆入门，太监等散去，只有昭容，彩嫔等引领元春下舆。只见院内各色花灯烂灼，皆系纱绫扎成，精致非常。上面有一匾灯，写著「体仁沐德」四字。",
+   "claim": "抬舆入门",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-050"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E051",
+   "classification": "explicit",
+   "paragraphLead": "元春入室",
+   "excerpt": "元春入室，更衣毕复出，上舆进园。",
+   "claim": "体仁沐德",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-051"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E052",
+   "classification": "explicit",
+   "paragraphLead": "只见园中香烟缭绕",
+   "excerpt": "只见园中香烟缭绕，花彩缤纷，处处灯光相映，时时细乐声喧，说不尽这太平气象，富贵风流。——",
+   "claim": "太平气象，富贵风流",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-052"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E053",
+   "classification": "explicit",
+   "paragraphLead": "此时自己回想当初在大荒山中",
+   "excerpt": "此时自己回想当初在大荒山中，青埂峰下，那等凄凉寂寞，若不亏癞憎，跛道二人携来到此，又安能得见这般世面。本欲作一篇《灯月赋》，《省亲颂》，以志今日之事，但又恐入了别书的俗套。按此时之景，即作一赋一赞，也不能形容得尽其妙，即不作赋赞，其豪华富丽…",
+   "claim": "回想当初在大荒山中",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-053"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E054",
+   "classification": "explicit",
+   "paragraphLead": "且说贾妃在轿内看此园内外如此豪华",
+   "excerpt": "且说贾妃在轿内看此园内外如此豪华，因默默叹息奢华过费。",
+   "claim": "默默叹息奢华过费",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-054"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E055",
+   "classification": "explicit",
+   "paragraphLead": "忽又见执拂太监跪请登舟",
+   "excerpt": "忽又见执拂太监跪请登舟，贾妃乃下舆。",
+   "claim": "跪请登舟",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-055"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E056",
+   "classification": "explicit",
+   "paragraphLead": "只见清流一带",
+   "excerpt": "只见清流一带，势如游龙，两边石栏上，皆系水晶玻璃各色风灯，点的如银花雪浪，上面柳杏诸树虽无花叶，然皆用通草绸绫纸绢依势作成，粘于枝上的，每一株悬灯数盏，更兼池中荷荇凫鹭之属，亦皆系螺蚌羽毛之类作就的。",
+   "claim": "清流一带，势如游龙",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-056"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E057",
+   "classification": "explicit",
+   "paragraphLead": "诸灯上下争辉",
+   "excerpt": "诸灯上下争辉，真系玻璃世界，珠宝乾坤。",
+   "claim": "玻璃世界，珠宝乾坤",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-057"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E058",
+   "classification": "explicit",
+   "paragraphLead": "船上亦系各种精致盆景诸灯",
+   "excerpt": "船上亦系各种精致盆景诸灯，珠帘绣幙，桂楫兰桡，自不必说。已而入一石港，港上一面匾灯，明现著「蓼汀花溆」四字。",
+   "claim": "蓼汀花溆",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-058"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E059",
+   "classification": "explicit",
+   "paragraphLead": "按此四字并",
+   "excerpt": "按此四字并「有凤来仪」等处，皆系上回贾政偶然一试宝玉之课艺才情耳，何今日认真用此匾联？况贾政世代诗书，来往诸客屏侍座陪者，悉皆才技之流，岂无一名手题撰，竟用小儿一戏之辞苟且搪塞？真似暴发新荣之家，滥使银钱，一味抹油涂朱，毕则大书「前门绿柳垂…",
+   "claim": "皆系上回贾政偶然一试",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-059"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E060",
+   "classification": "explicit",
+   "paragraphLead": "当日这贾妃未入宫时",
+   "excerpt": "当日这贾妃未入宫时，自幼亦系贾母教养。后来添了宝玉，贾妃乃长姊，宝玉为弱弟，贾妃之心上念母年将迈，始得此弟，是以怜爱宝玉，与诸弟待之不同。且同随祖母，刻未暂离。那宝玉未入学堂之先，三四岁时，已得贾妃手引口传，教授了几本书，数千字在腹内了。其…",
+   "claim": "自幼亦系贾母教养",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-060"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E061",
+   "classification": "explicit",
+   "paragraphLead": "前日贾政闻塾师背后赞宝玉偏才尽有",
+   "excerpt": "前日贾政闻塾师背后赞宝玉偏才尽有，贾政未信，适巧遇园已落成，令其题撰，聊一试其情思之清浊。其所拟之匾联虽非妙句，在幼童为之，亦或可取。即另使名公大笔为之，固不费难，",
+   "claim": "聊一试其情思之清浊",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-061"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E062",
+   "classification": "explicit",
+   "paragraphLead": "更使贾妃见之，知系其爱弟所为",
+   "excerpt": "更使贾妃见之，知系其爱弟所为，亦或不负其素日切望之意。因有这段原委，故此竟用了宝玉所题之联额。那日虽未曾题完，后来亦曾补拟。",
+   "claim": "故此竟用了宝玉所题之联额",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-062"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E063",
+   "classification": "explicit",
+   "paragraphLead": "闲文少述，且说贾妃看了四字",
+   "excerpt": "闲文少述，且说贾妃看了四字，笑道：「『花溆』二字便妥，何必，『蓼汀』？」",
+   "claim": "“花溆”二字便妥",
+   "narrativeLayer": "present",
+   "speaker": "yuanchun",
+   "appliesTo": [
+    "C18-063"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E064",
+   "classification": "explicit",
+   "paragraphLead": "侍座太监听了",
+   "excerpt": "侍座太监听了，忙下小舟登岸，飞传与贾政。贾政听了，即忙移换。",
+   "claim": "贾政听了，即忙移换",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-064"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E065",
+   "classification": "explicit",
+   "paragraphLead": "一时，舟临内岸",
+   "excerpt": "一时，舟临内岸，复弃舟上舆，便见琳宫绰约，桂殿巍峨。石牌坊上明显「天仙宝境」四字，贾妃忙命换「省亲别墅」四字。于是进入行宫。",
+   "claim": "天仙宝境改省亲别墅",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-065"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E066",
+   "classification": "explicit",
+   "paragraphLead": "但见庭燎烧空",
+   "excerpt": "但见庭燎烧空，香屑布地，火树琪花，金窗玉槛。说不尽帘卷虾须，毯舖鱼獭，鼎飘麝脑之香，屏列雉尾之扇。真是：",
+   "claim": "庭燎烧空，香屑布地",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-066"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E067",
+   "classification": "explicit",
+   "paragraphLead": "金门玉户神仙府",
+   "excerpt": "金门玉户神仙府，桂殿兰宫妃子家。",
+   "claim": "金门玉户神仙府",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-067"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E068",
+   "classification": "explicit",
+   "paragraphLead": "贾妃乃问：“此殿何无匾额",
+   "excerpt": "贾妃乃问：「此殿何无匾额？」随侍太监跪启曰：「此系正殿，外臣未敢擅拟。」贾妃点头不语。",
+   "claim": "此殿何无匾额",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-068"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E069",
+   "classification": "explicit",
+   "paragraphLead": "礼仪太监跪请升座受礼",
+   "excerpt": "礼仪太监跪请升座受礼，两陛乐起。礼仪太监二人引贾赦，贾政等于月台下排班，殿上昭容传谕曰：「免。」太监引贾赦等退出。",
+   "claim": "殿上昭容传谕曰“免”",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-069"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E070",
+   "classification": "explicit",
+   "paragraphLead": "又有太监引荣国太君",
+   "excerpt": "又有太监引荣国太君及女眷等自东阶升月台上排班，昭容再谕曰：「免。」于是引退。",
+   "claim": "自东阶升月台上排班",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-070"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E071",
+   "classification": "explicit",
+   "paragraphLead": "茶已三献，贾妃降座，乐止",
+   "excerpt": "茶已三献，贾妃降座，乐止。退入侧殿更衣，方备省亲车驾出园。",
+   "claim": "退入侧殿更衣",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-071"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E072",
+   "classification": "explicit",
+   "paragraphLead": "至贾母正室，欲行家礼",
+   "excerpt": "至贾母正室，欲行家礼，贾母等俱跪止不迭。贾妃满眼垂泪，方彼此上前厮见，一手搀贾母，一手搀王夫人，三个人满心里皆有许多话，只是俱说不出，只管呜咽对泣。",
+   "claim": "一手搀贾母，一手搀王夫人",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-072"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E073",
+   "classification": "explicit",
+   "paragraphLead": "邢夫人，李纨，王熙凤",
+   "excerpt": "邢夫人，李纨，王熙凤，迎，探，惜三姊妹等，俱在旁围绕，垂泪无言。半日，贾妃方忍悲强笑，安慰贾母，王夫人道：「当日既送我到那不得见人的去处，好容易今日回家娘儿们一会，不说说笑笑，反倒哭起来。一会子我去了，又不知多早晚才来！」说到这句，不禁又哽…",
+   "claim": "俱在旁围绕，垂泪无言",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-073"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E074",
+   "classification": "explicit",
+   "paragraphLead": "邢夫人等忙上来解劝",
+   "excerpt": "邢夫人等忙上来解劝。贾母等让贾妃归座，又逐次一一见过，又不免哭泣一番。",
+   "claim": "半日，贾妃方忍悲强笑",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-074"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E075",
+   "classification": "explicit",
+   "paragraphLead": "然后东西两府掌家执事人丁",
+   "excerpt": "然后东西两府掌家执事人丁在厅外行礼，及两府掌家执事媳妇领丫鬟等行礼毕。",
+   "claim": "执事人丁在厅外行礼",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-075"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E076",
+   "classification": "explicit",
+   "paragraphLead": "贾妃因问",
+   "excerpt": "贾妃因问：「薛姨妈，宝钗，黛玉因何不见？」王夫人启曰：「外眷无职，未敢擅入。」",
+   "claim": "薛姨妈，宝钗，黛玉因何不见",
+   "narrativeLayer": "present",
+   "speaker": "yuanchun",
+   "appliesTo": [
+    "C18-076"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E077",
+   "classification": "explicit",
+   "paragraphLead": "贾妃听了，忙命快请",
+   "excerpt": "贾妃听了，忙命快请。一时，薛姨妈等进来，欲行国礼，亦命免过，上前各叙阔别寒温。",
+   "claim": "忙命快请",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-077"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E078",
+   "classification": "explicit",
+   "paragraphLead": "又有贾妃原带进宫去的丫鬟抱琴等",
+   "excerpt": "又有贾妃原带进宫去的丫鬟抱琴等上来叩见，贾母等连忙扶起，命人别室款待。",
+   "claim": "抱琴等上来叩见",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-078"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E079",
+   "classification": "explicit",
+   "paragraphLead": "执事太监及彩嫔",
+   "excerpt": "执事太监及彩嫔，昭容各侍从人等，宁国府及贾赦那宅两处自有人款待，只留三四个小太监答应。母女姊妹深叙些离别情景，及家务私情。",
+   "claim": "母女姊妹深叙离别情景",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-079"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E080",
+   "classification": "explicit",
+   "paragraphLead": "又有贾政至帘外问安",
+   "excerpt": "又有贾政至帘外问安，贾妃垂帘行参等事。",
+   "claim": "贾政至帘外问安",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-080"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E081",
+   "classification": "explicit",
+   "paragraphLead": "又隔帘含泪谓其父曰",
+   "excerpt": "又隔帘含泪谓其父曰：「田舍之家，虽齑盐布帛，终能聚天伦之乐，今虽富贵已极，骨肉各方，然终无意趣！」",
+   "claim": "今虽富贵已极，骨肉各方",
+   "narrativeLayer": "present",
+   "speaker": "yuanchun",
+   "appliesTo": [
+    "C18-081"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E082",
+   "classification": "explicit",
+   "paragraphLead": "贾政亦含泪启道",
+   "excerpt": "贾政亦含泪启道：「臣，草莽寒门，鸠群鸦属之中，岂意得征凤鸾之瑞。今贵人上锡天恩，下昭祖德，此皆山川日月之精奇，祖宗之远德钟于一人，幸及政夫妇。且今上启天地生物之大德，垂古今未有之旷恩，虽肝脑涂地，臣子岂能得报于万一！惟朝乾夕惕，忠于厥职外，…",
+   "claim": "臣，草莽寒门",
+   "narrativeLayer": "present",
+   "speaker": "zheng",
+   "appliesTo": [
+    "C18-082"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E083",
+   "classification": "explicit",
+   "paragraphLead": "贾妃亦嘱",
+   "excerpt": "贾妃亦嘱」只以国事为重，暇时保养，切勿记念」等语。",
+   "claim": "只以国事为重",
+   "narrativeLayer": "present",
+   "speaker": "yuanchun",
+   "appliesTo": [
+    "C18-083"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E084",
+   "classification": "explicit",
+   "paragraphLead": "贾政又启：“园中所有亭台轩馆",
+   "excerpt": "贾政又启：「园中所有亭台轩馆，皆系宝玉所题，如果有一二稍可寓目者，请别赐名为幸。」元妃听了宝玉能题，便含笑说：「果进益了。」贾政退出。",
+   "claim": "果进益了",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-084"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E085",
+   "classification": "explicit",
+   "paragraphLead": "贾妃见宝，林二人亦发",
+   "excerpt": "贾妃见宝，林二人亦发比别姊妹不同，真是姣花软玉一般。",
+   "claim": "真是姣花软玉一般",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-085"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E086",
+   "classification": "explicit",
+   "paragraphLead": "因问：“宝玉为何不进见",
+   "excerpt": "因问：「宝玉为何不进见？」贾母乃启：「无谕，外男不敢擅入。」元妃命快引进来。小太监出去引宝玉进来，先行国礼毕，元妃命他进前，携手拦于怀内，又抚其头颈笑道：「比先竟长了好些……」一语未终，泪如雨下。",
+   "claim": "比先竟长了好些",
+   "narrativeLayer": "present",
+   "speaker": "yuanchun",
+   "appliesTo": [
+    "C18-086"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E087",
+   "classification": "explicit",
+   "paragraphLead": "尤氏，凤姐等上来启道",
+   "excerpt": "尤氏，凤姐等上来启道：「筵宴齐备，请贵妃游幸。」元妃等起身，命宝玉导引，遂同诸人步至园门前，早见灯光火树之中，诸般罗列非常。",
+   "claim": "筵宴齐备，请贵妃游幸",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-087"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E088",
+   "classification": "explicit",
+   "paragraphLead": "进园来先从",
+   "excerpt": "进园来先从「有凤来仪」，「红香绿玉」，「杏帘在望」，「蘅芷清芬」等处，登楼步阁，涉水缘山，百般眺览徘徊。一处处铺陈不一，一桩桩点缀新奇。",
+   "claim": "登楼步阁，涉水缘山",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-088"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E089",
+   "classification": "explicit",
+   "paragraphLead": "贾妃极加奖赞",
+   "excerpt": "贾妃极加奖赞，又劝：「以后不可太奢，此皆过分之极。」",
+   "claim": "以后不可太奢",
+   "narrativeLayer": "present",
+   "speaker": "yuanchun",
+   "appliesTo": [
+    "C18-089"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E090",
+   "classification": "explicit",
+   "paragraphLead": "已而至正殿，谕免礼归座",
+   "excerpt": "已而至正殿，谕免礼归座，大开筵宴。贾母等在下相陪，尤氏，李纨，凤姐等亲捧羹把盏。",
+   "claim": "大开筵宴",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-090"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E091",
+   "classification": "explicit",
+   "paragraphLead": "元妃乃命传笔砚伺候",
+   "excerpt": "元妃乃命传笔砚伺候，亲搦湘管，择其几处最喜者赐名。按其书云：",
+   "claim": "亲搦湘管，择其几处最喜者赐名",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-091"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E092",
+   "classification": "explicit",
+   "paragraphLead": "“顾恩思义”匾额",
+   "excerpt": "「顾恩思义」匾额\n天地启宏慈，赤子苍头同感戴，古今垂旷典，九州万国被恩荣。",
+   "claim": "顾恩思义",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-092"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E093",
+   "classification": "explicit",
+   "paragraphLead": "“大观园”园之名",
+   "excerpt": "「大观园」园之名，「有凤来仪」赐名曰「潇湘馆」，「红香绿玉」改作「怡红快绿」，即名曰「怡红院」，「蘅芷清芬」赐名曰「蘅芜苑」，「杏帘在望」赐名曰「浣葛山庄」，正楼曰「大观楼」。东面飞楼曰「缀锦阁」，西面斜楼曰「含芳阁」、更有「蓼风轩」，「藕…",
+   "claim": "大观园之名",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-093"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E094",
+   "classification": "explicit",
+   "paragraphLead": "衔山抱水建来精",
+   "excerpt": "衔山抱水建来精，多少工夫筑始成。天上人间诸景备，芳园应锡大观名。",
+   "claim": "衔山抱水建来精",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-094"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E095",
+   "classification": "explicit",
+   "paragraphLead": "写毕，向诸姊妹笑道",
+   "excerpt": "写毕，向诸姊妹笑道：「我素乏捷才，且不长于吟咏，妹辈素所深知。今夜聊以塞责，不负斯景而已。异日少暇，必补撰《大观园记》并《省亲颂》等文，以记今日之事。妹辈亦各题一匾一诗，随才之长短，亦暂吟成，不可因我微才所缚。且喜宝玉竟知题咏，",
+   "claim": "今夜聊以塞责",
+   "narrativeLayer": "present",
+   "speaker": "yuanchun",
+   "appliesTo": [
+    "C18-095"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E096",
+   "classification": "explicit",
+   "paragraphLead": "此中‘潇湘馆’，‘蘅芜苑’二处，我所极爱",
+   "excerpt": "此中『潇湘馆』，『蘅芜苑』二处，我所极爱，次之『怡红院』，『浣葛山庄』，此四大处，必得别有章句题咏方妙。前所题之联虽佳，如今再各赋五言律一首，使我当面试过，方不负我自幼教授之苦心。」宝玉只得答应了，下来自去构思。",
+   "claim": "我所极爱的是潇湘馆与蘅芜苑",
+   "narrativeLayer": "present",
+   "speaker": "yuanchun",
+   "appliesTo": [
+    "C18-096"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E097",
+   "classification": "explicit",
+   "paragraphLead": "迎，探，惜三人之中",
+   "excerpt": "迎，探，惜三人之中，要算探春又出于姊妹之上，然自忖亦难与薛林争衡，只得勉强随众塞责而已。李纨也勉强凑成一律。贾妃先挨次看姊妹们的，写道是：",
+   "claim": "要算探春又出于姊妹之上",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-097"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E098",
+   "classification": "explicit",
+   "paragraphLead": "“旷性怡情”匾额",
+   "excerpt": "「旷性怡情」匾额\n迎春\n园成景备特精奇，奉命羞题额旷怡。谁信世间有此境，游来宁不畅神思？",
+   "claim": "旷性怡情",
+   "narrativeLayer": "present",
+   "speaker": "yingchun",
+   "appliesTo": [
+    "C18-098"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E099",
+   "classification": "explicit",
+   "paragraphLead": "“万象争辉”匾额",
+   "excerpt": "「万象争辉」匾额\n探春\n名园筑出势巍巍，奉命何惭学浅微。精妙一时言不出，果然万物生光辉。",
+   "claim": "万象争辉",
+   "narrativeLayer": "present",
+   "speaker": "tanchun",
+   "appliesTo": [
+    "C18-099"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E100",
+   "classification": "explicit",
+   "paragraphLead": "“文章造化”匾额",
+   "excerpt": "「文章造化」匾额\n惜春\n山水横拖千里外，楼台高起五云中。园修日月光辉里，景夺文章造化功。",
+   "claim": "文章造化",
+   "narrativeLayer": "present",
+   "speaker": "xichun",
+   "appliesTo": [
+    "C18-100"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E101",
+   "classification": "explicit",
+   "paragraphLead": "“文采风流”匾额",
+   "excerpt": "「文采风流」匾额\n李纨\n秀水明山抱复回，风流文采胜蓬莱。绿裁歌扇迷芳草，红衬湘裙舞落梅。珠玉自应传盛世，神仙何幸下瑶台。名园一自邀游赏，未许凡人到此来。",
+   "claim": "文采风流",
+   "narrativeLayer": "present",
+   "speaker": "liwan",
+   "appliesTo": [
+    "C18-101"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E102",
+   "classification": "explicit",
+   "paragraphLead": "“凝晖钟瑞”匾额",
+   "excerpt": "「凝晖钟瑞」匾额\n薛宝钗\n芳园筑向帝城西，华日祥云笼罩奇。高柳喜迁莺出谷，修篁时待凤来仪。文风已著宸游夕，孝化应隆归省时。睿藻仙才盈彩笔，自惭何敢再为辞。",
+   "claim": "凝晖钟瑞",
+   "narrativeLayer": "present",
+   "speaker": "baochai",
+   "appliesTo": [
+    "C18-102"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E103",
+   "classification": "explicit",
+   "paragraphLead": "“世外仙源”匾额",
+   "excerpt": "「世外仙源」匾额\n林黛玉\n名园筑何处，仙境别红尘。借得山川秀，添来景物新。香融金谷酒，花媚玉堂人。何幸邀恩宠，宫车过往频。",
+   "claim": "世外仙源",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C18-103"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E104",
+   "classification": "explicit",
+   "paragraphLead": "贾妃看毕，称赏一番",
+   "excerpt": "贾妃看毕，称赏一番，又笑道：「终是薛林二妹之作与众不同，非愚姊妹可同列者。」",
+   "claim": "终是薛林二妹之作与众不同",
+   "narrativeLayer": "present",
+   "speaker": "yuanchun",
+   "appliesTo": [
+    "C18-104"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E105",
+   "classification": "explicit",
+   "paragraphLead": "原来林黛玉安心今夜大展奇才",
+   "excerpt": "原来林黛玉安心今夜大展奇才，将众人压倒，不想贾妃只命一匾一咏，倒不好违谕多作，只胡乱作一首五言律应景罢了。",
+   "claim": "只胡乱作一首五言律应景罢了",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-105"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E106",
+   "classification": "explicit",
+   "paragraphLead": "彼时宝玉尚未作完",
+   "excerpt": "彼时宝玉尚未作完，只刚作了「潇湘馆」与「蘅芜苑」二首，正作「怡红院」一首，起草内有「绿玉春犹卷」一句。",
+   "claim": "起草内有“绿玉春犹卷”一句",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-106"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E107",
+   "classification": "explicit",
+   "paragraphLead": "宝钗转眼瞥见",
+   "excerpt": "宝钗转眼瞥见，便趁众人不理论，急忙回身悄推他道：「他因不喜『红香绿玉』四字，改了『怡红快绿』，你这会子偏用『绿玉』二字，岂不是有意和他争驰了？况且蕉叶之说也颇多，再想一个字改了罢。」",
+   "claim": "岂不是有意和他争驰了",
+   "narrativeLayer": "present",
+   "speaker": "baochai",
+   "appliesTo": [
+    "C18-107"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E108",
+   "classification": "explicit",
+   "paragraphLead": "宝玉见宝钗如此说",
+   "excerpt": "宝玉见宝钗如此说，便拭汗道：「我这会子总想不起什么典故出处来。」",
+   "claim": "总想不起什么典故出处来",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C18-108"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E109",
+   "classification": "explicit",
+   "paragraphLead": "宝钗笑道：“你只把‘绿玉’的‘玉’字改作‘蜡’字就是了",
+   "excerpt": "宝钗笑道：「你只把『绿玉』的『玉』字改作『蜡』字就是了。」宝玉道：「『绿蜡』可有出处？」宝钗见问，悄悄的咂嘴点头笑道：「亏你今夜不过如此，将来金殿对策，你大约连『赵钱孙李』都忘了呢！唐钱珝咏芭蕉诗头一句：『冷烛无烟绿蜡干』，你都忘了不成？」",
+   "claim": "改作“蜡”字就是了",
+   "narrativeLayer": "present",
+   "speaker": "baochai",
+   "appliesTo": [
+    "C18-109"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E110",
+   "classification": "explicit",
+   "paragraphLead": "宝钗见问，悄悄的咂嘴点头笑道",
+   "excerpt": "宝钗见问，悄悄的咂嘴点头笑道：「亏你今夜不过如此，将来金殿对策，你大约连『赵钱孙李』都忘了呢！唐钱珝咏芭蕉诗头一句：『冷烛无烟绿蜡干』，你都忘了不成？」",
+   "claim": "冷烛无烟绿蜡干",
+   "narrativeLayer": "present",
+   "speaker": "baochai",
+   "appliesTo": [
+    "C18-110"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E111",
+   "classification": "explicit",
+   "paragraphLead": "宝玉听了，不觉洞开心臆",
+   "excerpt": "宝玉听了，不觉洞开心臆，笑道：「该死，该死！现成眼前之物偏倒想不起来了，真可谓『一字师』了。从此后我只叫你师父，再不叫姐姐了。」",
+   "claim": "真可谓“一字师”了",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C18-111"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E112",
+   "classification": "explicit",
+   "paragraphLead": "宝钗亦悄悄的笑道",
+   "excerpt": "宝钗亦悄悄的笑道：「还不快作上去，只管姐姐妹妹的。谁是你姐姐？那上头穿黄袍的才是你姐姐，你又认我这姐姐来了。」一面说笑，因说笑又怕他耽延工夫，遂抽身走开了。宝玉只得续成，共有了三首。",
+   "claim": "那上头穿黄袍的才是你姐姐",
+   "narrativeLayer": "present",
+   "speaker": "baochai",
+   "appliesTo": [
+    "C18-112"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E113",
+   "classification": "explicit",
+   "paragraphLead": "此时林黛玉未得展其抱负",
+   "excerpt": "此时林黛玉未得展其抱负，自是不快。因见宝玉独作四律，大费神思，何不代他作两首，也省他些精神不到之处。",
+   "claim": "何不代他作两首",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-113"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E114",
+   "classification": "explicit",
+   "paragraphLead": "想著，便也走至宝玉案旁",
+   "excerpt": "想著，便也走至宝玉案旁，悄问：「可都有了？」宝玉道：「才有了三首，只少『杏帘在望』一首了。」黛玉道：「既如此，你只抄录前三首罢。赶你写完那三首，我也替你作出这首了。」",
+   "claim": "我也替你作出这首了",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C18-114"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E115",
+   "classification": "explicit",
+   "paragraphLead": "说毕，低头一想",
+   "excerpt": "说毕，低头一想，早已吟成一律，便写在纸条上，搓成个团子，掷在他跟前。宝玉打开一看，只觉此首比自己所作的三首高过十倍，真是喜出望外，遂忙恭楷呈上。贾妃看道：",
+   "claim": "比自己所作的三首高过十倍",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-115"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E116",
+   "classification": "explicit",
+   "paragraphLead": "有凤来仪",
+   "excerpt": "有凤来仪\n臣宝玉谨题\n秀玉初成实，堪宜待凤凰。竿竿青欲滴，个个绿生凉。迸砌妨阶水，穿帘碍鼎香。莫摇清碎影，好梦昼初长。",
+   "claim": "有凤来仪",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C18-116"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E117",
+   "classification": "explicit",
+   "paragraphLead": "蘅芷清芬",
+   "excerpt": "蘅芷清芬\n蘅芜满净苑，萝薜助芬芳。软衬三春草，柔拖一缕香。轻烟迷曲径，冷翠滴回廊。谁谓池塘曲，谢家幽梦长。",
+   "claim": "蘅芷清芬",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C18-117"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E118",
+   "classification": "explicit",
+   "paragraphLead": "怡红快绿",
+   "excerpt": "怡红快绿\n深庭长日静，两两出婵娟。绿蜡春犹卷，红妆夜未眠。凭栏垂绛袖，倚石护青烟。对立东风里，主人应解怜。",
+   "claim": "怡红快绿",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C18-118"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E119",
+   "classification": "explicit",
+   "paragraphLead": "杏帘在望",
+   "excerpt": "杏帘在望\n杏帘招客饮，在望有山庄。菱荇鹅儿水，桑榆燕子梁。一畦春韭绿，十里稻花香。盛世无饥馁，何须耕织忙。",
+   "claim": "杏帘在望",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C18-119"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E120",
+   "classification": "explicit",
+   "paragraphLead": "那时贾蔷带领十二个女戏",
+   "excerpt": "那时贾蔷带领十二个女戏，在楼下正等的不耐烦，只见一太监飞来说：「作完了诗，快拿戏目来！」",
+   "claim": "快拿戏目来",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-120"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E121",
+   "classification": "explicit",
+   "paragraphLead": "贾蔷急将锦册呈上",
+   "excerpt": "贾蔷急将锦册呈上，并十二个花名单子。少时，太监出来，只点了四出戏：第一出，《豪宴》，第二出，《乞巧》，第三出，《仙缘》，第四出，《离魂》。",
+   "claim": "只点了四出戏",
+   "narrativeLayer": "present",
+   "speaker": "messenger",
+   "appliesTo": [
+    "C18-121"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E122",
+   "classification": "explicit",
+   "paragraphLead": "贾蔷忙张罗扮演起来",
+   "excerpt": "贾蔷忙张罗扮演起来。一个个歌欺裂石之音，舞有天魔之态。虽是妆演的形容，却作尽悲欢情状。",
+   "claim": "作尽悲欢情状",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-122"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E123",
+   "classification": "explicit",
+   "paragraphLead": "刚演完了",
+   "excerpt": "刚演完了，一太监执一金盘糕点之属进来，问：「谁是龄官？」贾蔷便知是赐龄官之物，喜的忙接了，命龄官叩头。",
+   "claim": "谁是龄官",
+   "narrativeLayer": "present",
+   "speaker": "messenger",
+   "appliesTo": [
+    "C18-123"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E124",
+   "classification": "explicit",
+   "paragraphLead": "太监又道：“贵妃有谕",
+   "excerpt": "太监又道：「贵妃有谕，说『龄官极好，再作两出戏，不拘那两出就是了』。」贾蔷忙答应了，因命龄官作《游园》《惊梦》二出。",
+   "claim": "龄官极好，再作两出戏",
+   "narrativeLayer": "present",
+   "speaker": "messenger",
+   "appliesTo": [
+    "C18-124"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E125",
+   "classification": "explicit",
+   "paragraphLead": "龄官自为此二出原非本角之戏",
+   "excerpt": "龄官自为此二出原非本角之戏，执意不作，定要作《相约》《相骂》二出。贾蔷扭他不过，只得依他作了。",
+   "claim": "定要作《相约》《相骂》二出",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-125"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E126",
+   "classification": "explicit",
+   "paragraphLead": "贾妃甚喜",
+   "excerpt": "贾妃甚喜，命「不可难为了这女孩子，好生教习」，额外赏了两匹宫缎，两个荷包并金银锞子，食物之类。",
+   "claim": "不可难为了这女孩子",
+   "narrativeLayer": "present",
+   "speaker": "yuanchun",
+   "appliesTo": [
+    "C18-126"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E127",
+   "classification": "explicit",
+   "paragraphLead": "然后撤筵",
+   "excerpt": "然后撤筵，将未到之处复又游顽。忽见山环佛寺，忙另盥手进去焚香拜佛，又题一匾云：「苦海慈航」。又额外加恩与一般幽尼女道。",
+   "claim": "苦海慈航",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-127"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E128",
+   "classification": "explicit",
+   "paragraphLead": "少时，太监跪启：“赐物俱齐，请验等例",
+   "excerpt": "少时，太监跪启：「赐物俱齐，请验等例。」乃呈上略节。贾妃从头看了，俱甚妥协，即命照此遵行。太监听了，下来一一发放。",
+   "claim": "赐物俱齐，请验等例",
+   "narrativeLayer": "present",
+   "speaker": "messenger",
+   "appliesTo": [
+    "C18-128"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E129",
+   "classification": "explicit",
+   "paragraphLead": "原来贾母的是",
+   "excerpt": "原来贾母的是金、玉如意各一柄，沉香拐拄一根，伽楠念珠一串，「富贵长春」宫缎四匹，「福寿绵长」宫绸四匹，紫金「笔锭如意」锞十锭，「吉庆有鱼」银锞十锭。",
+   "claim": "金、玉如意各一柄",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-129"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E130",
+   "classification": "explicit",
+   "paragraphLead": "邢夫人、王夫人二分",
+   "excerpt": "邢夫人、王夫人二分，只减了如意，拐，珠四样。贾敬、贾赦、贾政等，每分御制新书二部，宝墨二匣，金、银爵各二只，表礼按前。宝钗，黛玉诸姊妹等，每人新书一部，宝砚一方，新样格式金银锞二对。宝玉亦同此。贾兰则是金银项圈二个，金银锞二对。尤氏、李纨、…",
+   "claim": "宝钗，黛玉诸姊妹等",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-130"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E131",
+   "classification": "explicit",
+   "paragraphLead": "外表礼二十四端",
+   "excerpt": "外表礼二十四端，清钱一百串，是赐与贾母，王夫人及诸姊妹房中奶娘众丫鬟的。贾珍、贾琏、贾环、贾蓉等，皆是表礼一分，金锞一双。其余彩缎百端，金银千两，御酒华筵，是赐东西两府凡园中管理工程、陈设、答应及司戏、掌灯诸人的。外有清钱五百串，是赐厨役、…",
+   "claim": "是赐东西两府凡园中管理工程的人",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-131"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E132",
+   "classification": "explicit",
+   "paragraphLead": "众人谢恩已毕，执事太监启道",
+   "excerpt": "众人谢恩已毕，执事太监启道：「时已丑正三刻，请驾回銮。」",
+   "claim": "时已丑正三刻，请驾回銮",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-132"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E133",
+   "classification": "explicit",
+   "paragraphLead": "贾妃听了",
+   "excerpt": "贾妃听了，不由的满眼又滚下泪来。却又勉强堆笑，拉住贾母，王夫人的手，紧紧的不忍释放，再四叮咛：「不须挂念，好生自养。如今天恩浩荡，一月许进内省视一次，见面是尽有的，何必伤惨。倘明岁天恩仍许归省，万不可如此奢华靡费了！」",
+   "claim": "好生自养",
+   "narrativeLayer": "present",
+   "speaker": "yuanchun",
+   "appliesTo": [
+    "C18-133"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E134",
+   "classification": "explicit",
+   "paragraphLead": "贾母等已哭的哽噎难言了",
+   "excerpt": "贾母等已哭的哽噎难言了。贾妃虽不忍别，怎奈皇家规范，违错不得，只得忍心上舆去了。",
+   "claim": "忍心上舆去了",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-134"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-E135",
+   "classification": "explicit",
+   "paragraphLead": "这里诸人好容易",
+   "excerpt": "这里诸人好容易将贾母，王夫人安慰解劝，方才扶出园门进上房去了。要知端的，且看下回。",
+   "claim": "且看下回",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-135"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C18-D001",
+   "classification": "design",
+   "paragraphLead": "且说贾妃在轿内看此园内外如此豪华",
+   "excerpt": null,
+   "claim": "大观园登舟一段复用 `canal`（运河）舞台",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-054",
+    "C18-055",
+    "C18-056",
+    "C18-057",
+    "C18-058",
+    "C18-059",
+    "C18-060",
+    "C18-061",
+    "C18-062"
+   ],
+   "designDecision": "复用已有运河图表现舟行；`canal` 的三组码头与苇岸用来分置下舆、临岸与传话的位置。大观园专属地图尚不存在，此处为就近取用，不改写原文的「登舟」二字。",
+   "uncertainty": "原文只写「忽又见执拂太监跪请登舟」「清流一带，势如游龙」，没有写园中水道的样子。"
+  },
+  {
+   "id": "C18-D002",
+   "classification": "design",
+   "paragraphLead": "尤氏，凤姐等上来启道",
+   "excerpt": null,
+   "claim": "赐名题诗一段复用 `dinner`（贾母院）舞台",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-087",
+    "C18-088",
+    "C18-089",
+    "C18-090",
+    "C18-091",
+    "C18-092",
+    "C18-093",
+    "C18-094",
+    "C18-095",
+    "C18-096",
+    "C18-097",
+    "C18-098",
+    "C18-099",
+    "C18-100",
+    "C18-101",
+    "C18-102",
+    "C18-103",
+    "C18-104",
+    "C18-105"
+   ],
+   "designDecision": "大观园专图尚未建成，`dinner` 是第 17 回试才题对额已验证过的舞台，本回沿用同一处，避免同一场景在相邻两回之间跳变。",
+   "uncertainty": "原文写元妃在园中赐名命题，园内各景并未逐一落到某处屋宇。"
+  },
+  {
+   "id": "C18-D003",
+   "classification": "design",
+   "paragraphLead": "那时贾蔷带领十二个女戏",
+   "excerpt": null,
+   "claim": "点戏与焚香两处并入 `c11_tianxiang`（天香楼）舞台",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-120",
+    "C18-121",
+    "C18-122",
+    "C18-123",
+    "C18-124",
+    "C18-125",
+    "C18-126",
+    "C18-127"
+   ],
+   "designDecision": "铁槛寺、水月庵都是第 15 回为停灵与尼庵所建，若挪来当大观园里的佛寺，图鉴上会出现「铁槛寺」的字样，与本回的大观园相混。故并入戏台一段，以叙述交代其另有一处佛寺，不另开场景。",
+   "uncertainty": "原文先写女戏在楼下点戏四出，撤筵后又写「忽见山环佛寺」焚香拜佛。"
+  },
+  {
+   "id": "C18-D004",
+   "classification": "design",
+   "paragraphLead": "此时王夫人那边热闹非常",
+   "excerpt": null,
+   "claim": "林之孝家的与龄官均以 `messenger`（来人）代指",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-022",
+    "C18-023",
+    "C18-024",
+    "C18-025",
+    "C18-026",
+    "C18-027",
+    "C18-028"
+   ],
+   "designDecision": "本回不新增角色立绘，来人一栏沿用 `messenger` 代指所有传话、传旨、跑腿之人；龄官因「执意不作」而见性情，见于节点正文，未单独立绘。",
+   "uncertainty": "原文写林之孝家的回话、龄官拒演《游园》《惊梦》，二人都有名字与性情。"
+  },
+  {
+   "id": "C18-D005",
+   "classification": "design",
+   "paragraphLead": "茶已三献，贾妃降座，乐止",
+   "excerpt": null,
+   "claim": "抱琴、执事太监、随行宫人皆以 `messenger` 代指",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C18-071",
+    "C18-072",
+    "C18-073",
+    "C18-074",
+    "C18-075",
+    "C18-076",
+    "C18-077",
+    "C18-078",
+    "C18-079",
+    "C18-080",
+    "C18-081",
+    "C18-082",
+    "C18-083",
+    "C18-084",
+    "C18-085",
+    "C18-086"
+   ],
+   "designDecision": "这些人只在传话与受赐名录中出现，未与主角对谈，故不入 cast，一律以 `messenger` 代指；受赐名录里出现的名字保留在正文中。",
+   "uncertainty": "原文写抱琴等叩见、执事太监与彩嫔昭容侍从人等，另有贾珍、贾琏、贾环、贾蓉等受赐。"
+  }
+ ]
+}

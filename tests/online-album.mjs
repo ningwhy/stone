@@ -65,6 +65,10 @@ try{
     },c.id);
     await page.reload();
     await page.locator('.loading-screen').waitFor({state:'detached',timeout:30000});
+    // ★ 每次 reload 后都要再收一次封面：开书即封面，那页纸是模态的，
+    //   会把「设置」按钮挡在底下（`intercepts pointer events`）。
+    //   循环外只收过第一次，循环里漏收 → 第二轮就点不动设置。
+    await dismissLeaf(page,false,true);
     await page.getByRole('button',{name:'设置',exact:true}).click();
     await page.getByRole('button',{name:'册页',exact:true}).click();
     await page.getByRole('tab',{name:/见闻/}).click();
