@@ -1,0 +1,5958 @@
+[
+ {
+  "chapter": "c23-ledong",
+  "scene": "dinner",
+  "place": "大观园 · 正殿",
+  "focus": "tanchun_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "话说贾元春自那日幸大观园回宫去后，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-001",
+  "speaker": "narrator",
+  "text": "话说贾元春自那日幸大观园回宫去后，便命将那日所有的题咏，命探春依次抄录妥协，自己编次，叙其优劣，又命在大观园勒石，为千古风流雅事。",
+  "title": "元春命将那日所有的题咏，命探春抄录妥协",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "tanchun",
+    "at": "tanchun_place"
+   }
+  ]
+ },
+ {
+  "chapter": "c23-ledong",
+  "scene": "dinner",
+  "place": "大观园 · 正殿",
+  "focus": "tanchun_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "自己编次，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-002",
+  "speaker": "narrator",
+  "text": "自己编次，叙其优劣，又命在大观园勒石，为千古风流雅事。",
+  "title": "自己编次，叙其优劣，又命在大观园勒石",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "tanchun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-ledong",
+  "scene": "dinner",
+  "place": "大观园 · 正殿",
+  "focus": "tanchun_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "贾政命人各处选拔精工名匠，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-003",
+  "speaker": "narrator",
+  "text": "贾政命人各处选拔精工名匠，在大观园磨石镌字，贾珍率领蓉，萍等监工。",
+  "title": "贾政命人选拔精工名匠，在大观园磨石镌字",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "tanchun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-ledong",
+  "scene": "dinner",
+  "place": "大观园 · 正殿",
+  "focus": "tanchun_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "贾珍率领蓉，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-004",
+  "speaker": "narrator",
+  "text": "贾珍率领蓉，萍等监工。",
+  "title": "贾珍率领蓉，萍等监工",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "tanchun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-ledong",
+  "scene": "dinner",
+  "place": "大观园 · 正殿",
+  "focus": "tanchun_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "因贾蔷又管理著文官等十二个女戏并行头等事，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-005",
+  "speaker": "narrator",
+  "text": "因贾蔷又管理著文官等十二个女戏并行头等事，不大得便，因此贾珍又将贾菖，贾菱唤来监工。",
+  "title": "因贾蔷管理著文官等十二个女戏，不大得便",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "tanchun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-ledong",
+  "scene": "dinner",
+  "place": "大观园 · 正殿",
+  "focus": "tanchun_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "因此贾珍又将贾菖，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-006",
+  "speaker": "narrator",
+  "text": "因此贾珍又将贾菖，贾菱唤来监工。",
+  "title": "贾珍又将贾菖，贾菱唤来监工",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "tanchun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-ledong",
+  "scene": "dinner",
+  "place": "大观园 · 正殿",
+  "focus": "tanchun_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "一日，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-007",
+  "speaker": "narrator",
+  "text": "一日，汤蜡钉朱，动起手来。",
+  "title": "一日，汤蜡钉朱，动起手来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "tanchun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-ledong",
+  "scene": "dinner",
+  "place": "大观园 · 正殿",
+  "focus": "tanchun_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "这也不在话下。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-008",
+  "speaker": "narrator",
+  "text": "这也不在话下。",
+  "title": "这也不在话下",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "tanchun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-tiejian",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "且说那个玉皇庙并达摩庵两处，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-009",
+  "speaker": "narrator",
+  "text": "且说那个玉皇庙并达摩庵两处，一班的十二个小沙弥并十二个小道士，如今挪出大观园来，贾政正想发到各庙去分住。",
+  "title": "玉皇庙并达摩庵两处，一班小沙弥并小道士，如今挪出大观园来",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "yard"
+   },
+   {
+    "type": "show",
+    "actor": "jia_lian",
+    "at": "table_place"
+   }
+  ]
+ },
+ {
+  "chapter": "c23-tiejian",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "贾政正想发到各庙去分住。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-010",
+  "speaker": "narrator",
+  "text": "贾政正想发到各庙去分住。",
+  "title": "贾政正想发到各庙去分住",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-tiejian",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "不想后街上住的贾芹之母周氏，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-011",
+  "speaker": "narrator",
+  "text": "不想后街上住的贾芹之母周氏，正盘算著也要到贾政这边谋一个大小事务与儿子管管，也好弄些银钱使用，可巧听见这件事出来，便坐轿子来求凤姐。",
+  "title": "不想后街上住的贾芹之母周氏，正盘算著要谋一个事务",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-tiejian",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "可巧听见这件事出来，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-012",
+  "speaker": "narrator",
+  "text": "可巧听见这件事出来，便坐轿子来求凤姐。",
+  "title": "可巧听见这件事出来，便坐轿子来求凤姐",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-tiejian",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "凤姐因见他素日不大拿班作势的，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-013",
+  "speaker": "narrator",
+  "text": "凤姐因见他素日不大拿班作势的，便依允了，想了几句话便回王夫人说：「这些小和尚道士万不可打发到别处去，一时娘娘出来就要承应。",
+  "title": "凤姐因见他素日不大拿班作势的，便依允了",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-tiejian",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“这些小和尚道士万不可打发到别处去，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-014",
+  "speaker": "feng",
+  "text": "「这些小和尚道士万不可打发到别处去，一时娘娘出来就要承应。",
+  "title": "这些小和尚道士万不可打发到别处去，一时娘娘出来就要承应",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-tiejian",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "倘或散了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-015",
+  "speaker": "feng",
+  "text": "倘或散了，若再用时，可是又费事。",
+  "title": "倘或散了，若再用时，可是又费事",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-tiejian",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "依我的主意，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-016",
+  "speaker": "feng",
+  "text": "依我的主意，不如将他们竟送到咱们家庙里铁槛寺去，月间不过派一个人拿几两银子去买柴米就完了。",
+  "title": "依我的主意，不如将他们竟送到咱们家庙里铁槛寺去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-tiejian",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "月间不过派一个人拿几两银子去买柴米就完了。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-017",
+  "speaker": "feng",
+  "text": "月间不过派一个人拿几两银子去买柴米就完了。",
+  "title": "月间不过派一个人拿几两银子去买柴米就完了",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-tiejian",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "说声用，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-018",
+  "speaker": "feng",
+  "text": "说声用，走去叫来，一点儿不费事呢。」",
+  "title": "说声用，走去叫来，一点儿不费事呢",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-tiejian",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "王夫人听了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-019",
+  "speaker": "narrator",
+  "text": "王夫人听了，便商之于贾政。",
+  "title": "王夫人听了，便商之于贾政",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-tiejian",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“倒是提醒了我，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-020",
+  "speaker": "zheng",
+  "text": "「倒是提醒了我，就是这样。」",
+  "title": "倒是提醒了我，就是这样",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-tiejian",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "即时唤贾琏来。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-021",
+  "speaker": "narrator",
+  "text": "即时唤贾琏来。",
+  "title": "即时唤贾琏来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "当下贾琏正同凤姐吃饭，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-022",
+  "speaker": "narrator",
+  "text": "当下贾琏正同凤姐吃饭，一闻呼唤，不知何事，放下饭便走。",
+  "title": "当下贾琏正同凤姐吃饭，一闻呼唤，放下饭便走",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_lian",
+    "via": [
+     "table_place",
+     "room"
+    ]
+   },
+   {
+    "type": "show",
+    "actor": "jia_lian",
+    "at": "room"
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“你且站住，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-023",
+  "speaker": "feng",
+  "text": "「你且站住，听我说话。",
+  "title": "你且站住，听我说话",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "若是别的事我不管，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-024",
+  "speaker": "feng",
+  "text": "若是别的事我不管，若是为小和尚们的事，好歹依我这么著。」",
+  "title": "若是别的事我不管，若是为小和尚们的事，好歹依我这么著",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "如此这般教了一套话。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-025",
+  "speaker": "narrator",
+  "text": "如此这般教了一套话。",
+  "title": "如此这般教了一套话",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“我不知道，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-026",
+  "speaker": "jia_lian",
+  "text": "「我不知道，你有本事你说去。」",
+  "title": "我不知道，你有本事你说去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "腮上似笑不笑的瞅著贾琏道：",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-027",
+  "speaker": "narrator",
+  "text": "腮上似笑不笑的瞅著贾琏道：「你当真的，是玩话？」",
+  "title": "凤姐把头一梗，把筷子一放，腮上似笑不笑的瞅著贾琏",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "anger",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“西廊下五嫂子的儿子芸儿来求了我两三遭，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-028",
+  "speaker": "jia_lian",
+  "text": "「西廊下五嫂子的儿子芸儿来求了我两三遭，要个事情管管。",
+  "title": "西廊下五嫂子的儿子芸儿来求了我两三遭，要个事情管管",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "我依了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-029",
+  "speaker": "jia_lian",
+  "text": "我依了，叫他等著。",
+  "title": "我依了，叫他等著",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "好容易出来这件事，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-030",
+  "speaker": "jia_lian",
+  "text": "好容易出来这件事，你又夺了去。」",
+  "title": "好容易出来这件事，你又夺了去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "园子东北角子上，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-031",
+  "speaker": "feng",
+  "text": "园子东北角子上，娘娘说了，还叫多多的种松柏树，楼底下还叫种些花草。",
+  "title": "园子东北角子上，娘娘说了，还叫多多的种松柏树",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "等这件事出来，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-032",
+  "speaker": "feng",
+  "text": "等这件事出来，我管保叫芸儿管这件工程。」",
+  "title": "等这件事出来，我管保叫芸儿管这件工程",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“果这样也罢了。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-033",
+  "speaker": "jia_lian",
+  "text": "「果这样也罢了。",
+  "title": "果这样也罢了",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "只是昨儿晚上，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-034",
+  "speaker": "jia_lian",
+  "text": "只是昨儿晚上，我不过是要改个样儿，你就扭手扭脚的。」",
+  "title": "只是昨儿晚上，我不过是要改个样儿，你就扭手扭脚的",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "凤姐儿听了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-035",
+  "speaker": "narrator",
+  "text": "凤姐儿听了，嗤的一声笑了，向贾琏啐了一口，低下头便吃饭。",
+  "title": "凤姐嗤的一声笑了，向贾琏啐了一口，低下头便吃饭",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "贾琏已经笑著去了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-036",
+  "speaker": "narrator",
+  "text": "贾琏已经笑著去了，到了前面见了贾政，果然是小和尚一事。",
+  "title": "贾琏已经笑著去了，到了前面见了贾政，果然是小和尚一事",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_lian",
+    "via": [
+     "room",
+     "yard"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“如今看来，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-037",
+  "speaker": "jia_lian",
+  "text": "「如今看来，芹儿倒大大的出息了，这件事竟交予他去管办。",
+  "title": "如今看来，芹儿倒大大的出息了，这件事竟交予他去管办",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "横竖照在里头的规例，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-038",
+  "speaker": "jia_lian",
+  "text": "横竖照在里头的规例，每月叫芹儿支领就是了。」",
+  "title": "横竖照在里头的规例，每月叫芹儿支领就是了",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "贾政原不大理论这些事，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-039",
+  "speaker": "narrator",
+  "text": "贾政原不大理论这些事，听贾琏如此说，便如此依了。",
+  "title": "贾政原不大理论这些事，听贾琏如此说，便如此依了",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "贾琏回到房中告诉凤姐儿，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-040",
+  "speaker": "narrator",
+  "text": "贾琏回到房中告诉凤姐儿，凤姐即命人去告诉了周氏。",
+  "title": "贾琏回到房中告诉凤姐儿，凤姐即命人去告诉了周氏",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_lian",
+    "via": [
+     "yard",
+     "room"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "凤姐又作情央贾琏先支三个月的，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-041",
+  "speaker": "narrator",
+  "text": "凤姐又作情央贾琏先支三个月的，叫他写了领字，贾琏批票画了押，登时发了对牌出去。",
+  "title": "凤姐又作情央贾琏先支三个月的，叫他写了领字",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "贾琏批票画了押，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-042",
+  "speaker": "narrator",
+  "text": "贾琏批票画了押，登时发了对牌出去。",
+  "title": "贾琏批票画了押，登时发了对牌出去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "room",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "银库上按数发出三个月的供给来，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-043",
+  "speaker": "narrator",
+  "text": "银库上按数发出三个月的供给来，白花花二三百两。",
+  "title": "银库上按数发出三个月的供给来，白花花二三百两",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 正房",
+  "focus": "yard",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "贾芹随手拈一块，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-044",
+  "speaker": "narrator",
+  "text": "贾芹随手拈一块，撂予掌平的人，叫他们吃茶罢。",
+  "title": "贾芹随手拈一块，撂予掌平的人，叫他们吃茶罢",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_qin",
+    "at": "yard"
+   },
+   {
+    "type": "effect",
+    "actor": "jia_qin",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "于是命小厮拿回家，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-045",
+  "speaker": "narrator",
+  "text": "于是命小厮拿回家，与母亲商议。",
+  "title": "于是命小厮拿回家，与母亲商议",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_qin",
+    "via": [
+     "yard",
+     "gate"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_qin",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "又雇了几辆车，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-046",
+  "speaker": "narrator",
+  "text": "又雇了几辆车，至荣国府角门，唤出二十四个人来，坐上车，一径往城外铁槛寺去了。",
+  "title": "雇了大叫驴，又雇了几辆车，至荣国府角门，唤出二十四个人来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_qin",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaqin",
+  "scene": "jialian_home",
+  "place": "贾琏院 · 院中",
+  "focus": "gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "一径往城外铁槛寺去了。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-047",
+  "speaker": "narrator",
+  "text": "一径往城外铁槛寺去了。",
+  "title": "一径往城外铁槛寺去了",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_qin",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-yuci",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "如今且说贾元春，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-048",
+  "speaker": "narrator",
+  "text": "如今且说贾元春，因在宫中自编大观园题咏之后，忽想起那大观园中景致，自己幸过之后，贾政必定敬谨封锁，不敢使人进去骚扰，岂不寥落。",
+  "title": "贾元春因在宫中自编大观园题咏之后，忽想起那大观园中景致",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "feng"
+   },
+   {
+    "type": "hide",
+    "actor": "jia_lian"
+   },
+   {
+    "type": "hide",
+    "actor": "jia_qin"
+   },
+   {
+    "type": "show",
+    "actor": "grandmother",
+    "at": "grandmother_place"
+   }
+  ]
+ },
+ {
+  "chapter": "c23-yuci",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "况家中现有几个能诗会赋的姊妹，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-049",
+  "speaker": "narrator",
+  "text": "况家中现有几个能诗会赋的姊妹，何不命他们进去居住，也不使佳人落魄，花柳无颜。",
+  "title": "况家中现有几个能诗会赋的姊妹，何不命他们进去居住",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-yuci",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "若不命他进去，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-050",
+  "speaker": "narrator",
+  "text": "若不命他进去，只怕他冷清了，一时不大畅快，未免贾母王夫人愁虑，须得也命他进园居住方妙。",
+  "title": "若不命他进去，只怕他冷清了，一时不大畅快",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-yuci",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "遂命太监夏守忠到荣国府来下一道谕，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-051",
+  "speaker": "narrator",
+  "text": "遂命太监夏守忠到荣国府来下一道谕，命宝钗等只管在园中居住，不可禁约封锢，命宝玉仍随进去读书。",
+  "title": "遂命太监夏守忠到荣国府来下一道谕",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-yuci",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "命宝钗等只管在园中居住，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-052",
+  "speaker": "narrator",
+  "text": "命宝钗等只管在园中居住，不可禁约封锢，命宝玉仍随进去读书。",
+  "title": "命宝钗等只管在园中居住，不可禁约封锢，命宝玉仍随进去读书",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-yuci",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "back_door",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "王夫人接了这谕，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-053",
+  "speaker": "narrator",
+  "text": "王夫人接了这谕，待夏守忠去后，便来回明贾母，遣人进去各处收拾打扫，安设帘幔床帐。",
+  "title": "贾政，王夫人接了这谕，便来回明贾母",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zheng",
+    "at": "back_door"
+   },
+   {
+    "type": "show",
+    "actor": "wang",
+    "at": "wang_place"
+   }
+  ]
+ },
+ {
+  "chapter": "c23-yuci",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "back_door",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "遣人进去各处收拾打扫，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-054",
+  "speaker": "narrator",
+  "text": "遣人进去各处收拾打扫，安设帘幔床帐。",
+  "title": "遣人进去各处收拾打扫，安设帘幔床帐",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-yuci",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "baoyu_greet",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "别人听了还自犹可，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-055",
+  "speaker": "narrator",
+  "text": "别人听了还自犹可，惟宝玉听了这谕，喜的无可不可。",
+  "title": "别人听了还自犹可，惟宝玉听了这谕，喜的无可不可",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "baoyu_greet"
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jingong",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "正和贾母盘算，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-056",
+  "speaker": "narrator",
+  "text": "正和贾母盘算，要这个，弄那个，忽见丫鬟来说：「老爷叫宝玉。」",
+  "title": "正和贾母盘算，要这个，弄那个，忽见丫鬟来说：老爷叫宝玉",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "grandmother_place"
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jingong",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "宝玉听了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-057",
+  "speaker": "narrator",
+  "text": "宝玉听了，好似打了个焦雷，登时扫去兴头，脸上转了颜色，便拉著贾母扭的好似扭股儿糖，杀死不敢去。",
+  "title": "宝玉听了，好似打了个焦雷，登时扫去兴头，脸上转了颜色",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "anger",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jingong",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "便拉著贾母扭的好似扭股儿糖，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-058",
+  "speaker": "narrator",
+  "text": "便拉著贾母扭的好似扭股儿糖，杀死不敢去。",
+  "title": "便拉著贾母扭的好似扭股儿糖，杀死不敢去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "anger",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jingong",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“好宝贝，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-059",
+  "speaker": "grandmother",
+  "text": "「好宝贝，你只管去，有我呢，他不敢委屈了你。",
+  "title": "好宝贝，你只管去，有我呢，他不敢委屈了你",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jingong",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "况且你又作了那篇好文章。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-060",
+  "speaker": "grandmother",
+  "text": "况且你又作了那篇好文章。",
+  "title": "况且你又作了那篇好文章",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jingong",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "他吩咐你几句，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-061",
+  "speaker": "grandmother",
+  "text": "他吩咐你几句，不过不教你在里头淘气。",
+  "title": "他吩咐你几句，不过不教你在里头淘气",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jingong",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "他说什么，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-062",
+  "speaker": "grandmother",
+  "text": "他说什么，你只好生答应著就是了。」",
+  "title": "他说什么，你只好生答应著就是了",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jingong",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "一面安慰，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-063",
+  "speaker": "narrator",
+  "text": "一面安慰，一面唤了两个老嬷嬷来，吩咐「好生带了宝玉去，别叫他老子唬著他。」",
+  "title": "一面安慰，一面唤了两个老嬷嬷来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jingong",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "吩咐“好生带了宝玉去，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-064",
+  "speaker": "narrator",
+  "text": "吩咐「好生带了宝玉去，别叫他老子唬著他。」",
+  "title": "吩咐好生带了宝玉去，别叫他老子唬著他",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jingong",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "grandmother_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "老嬷嬷答应了。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-065",
+  "speaker": "narrator",
+  "text": "老嬷嬷答应了。",
+  "title": "老嬷嬷答应了",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jingong",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "tea_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "宝玉只得前去，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-066",
+  "speaker": "narrator",
+  "text": "宝玉只得前去，一步挪不了三寸，蹭到这边来。",
+  "title": "宝玉一步挪不了三寸，蹭到这边来",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "baoyu_greet",
+     "tea_place"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 外廊",
+  "focus": "east_corridor",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "可巧贾政在王夫人房中商议事情，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-067",
+  "speaker": "narrator",
+  "text": "可巧贾政在王夫人房中商议事情，金钏儿，彩云，彩霞，绣鸾，绣凤等众丫鬟都在廊檐底下站著呢，一见宝玉来，都抿著嘴笑。",
+  "title": "可巧贾政在王夫人房中商议事情",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "grandmother"
+   },
+   {
+    "type": "hide",
+    "actor": "zheng"
+   },
+   {
+    "type": "hide",
+    "actor": "wang"
+   },
+   {
+    "type": "hide",
+    "actor": "baoyu"
+   },
+   {
+    "type": "show",
+    "actor": "jinyuan",
+    "at": "east_corridor"
+   },
+   {
+    "type": "show",
+    "actor": "caiyun",
+    "at": "east_corridor"
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 外廊",
+  "focus": "east_corridor",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "金钏儿，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-068",
+  "speaker": "narrator",
+  "text": "金钏儿，彩云，彩霞，绣鸾，绣凤等众丫鬟都在廊檐底下站著呢，一见宝玉来，都抿著嘴笑。",
+  "title": "金钏儿，彩云，彩霞，绣鸾，绣凤等众丫鬟都在廊檐底下站著呢",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jinyuan",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 外廊",
+  "focus": "east_corridor",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "一见宝玉来，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-069",
+  "speaker": "narrator",
+  "text": "一见宝玉来，都抿著嘴笑。",
+  "title": "一见宝玉来，都抿著嘴笑",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "caiyun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 外廊",
+  "focus": "south_passage",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“我这嘴上是才擦的香浸胭脂，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-070",
+  "speaker": "jinyuan",
+  "text": "「我这嘴上是才擦的香浸胭脂，你这会子可吃不吃了？」",
+  "title": "我这嘴上是才擦的香浸胭脂，你这会子可吃不吃了？",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "south_passage"
+   },
+   {
+    "type": "effect",
+    "actor": "jinyuan",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 外廊",
+  "focus": "south_passage",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“人家正心里不自在，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-071",
+  "speaker": "caiyun",
+  "text": "「人家正心里不自在，你还奚落他。",
+  "title": "人家正心里不自在，你还奚落他",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "caiyun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 外廊",
+  "focus": "south_passage",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "趁这会子喜欢，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-072",
+  "speaker": "caiyun",
+  "text": "趁这会子喜欢，快进去罢。",
+  "title": "趁这会子喜欢，快进去罢",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "caiyun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 门内",
+  "focus": "hall_entry",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“宝玉只得挨进门去。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-073",
+  "speaker": "narrator",
+  "text": "「宝玉只得挨进门去。",
+  "title": "宝玉只得挨进门去",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "south_passage",
+     "hall_entry"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "wang_host",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "原来贾政和王夫人都在里间呢。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-074",
+  "speaker": "narrator",
+  "text": "原来贾政和王夫人都在里间呢。",
+  "title": "原来贾政和王夫人都在里间呢",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zheng",
+    "at": "wang_host"
+   },
+   {
+    "type": "show",
+    "actor": "wang",
+    "at": "tea_seat"
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "guest_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "赵姨娘打起帘子，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-075",
+  "speaker": "narrator",
+  "text": "赵姨娘打起帘子，宝玉躬身进去。",
+  "title": "赵姨娘打起帘子，宝玉躬身进去",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhao_yiniang",
+    "at": "guest_seat"
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "只见贾政和王夫人对面坐在炕上说话，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-076",
+  "speaker": "narrator",
+  "text": "只见贾政和王夫人对面坐在炕上说话，地下一溜椅子，迎春，探春，惜春，贾环四个人都坐在那里。",
+  "title": "贾政和王夫人对面坐在炕上说话，地下一溜椅子",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "yingchun",
+    "at": "kang_edge"
+   },
+   {
+    "type": "show",
+    "actor": "tanchun",
+    "at": "guest_seat"
+   },
+   {
+    "type": "show",
+    "actor": "xichun",
+    "at": "tea_seat"
+   },
+   {
+    "type": "show",
+    "actor": "jia_huan",
+    "at": "li_room"
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "迎春，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-077",
+  "speaker": "narrator",
+  "text": "迎春，探春，惜春，贾环四个人都坐在那里。",
+  "title": "迎春，探春，惜春，贾环四个人都坐在那里",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "tanchun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "一见他进来，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-078",
+  "speaker": "narrator",
+  "text": "一见他进来，惟有探春和惜春，贾环站了起来。",
+  "title": "一见他进来，惟有探春和惜春，贾环站了起来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "tanchun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "贾政一举目，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-079",
+  "speaker": "narrator",
+  "text": "贾政一举目，见宝玉站在跟前，神彩飘逸，秀色夺人，看看贾环，人物委琐，举止荒疏，忽又想起贾珠来，再看看王夫人只有这一个亲生的儿子，素爱如珍，自己的胡须将已苍白：因这几件上，把素日嫌恶处分宝玉之心不觉减了八九。",
+  "title": "贾政一举目，见宝玉站在跟前，神彩飘逸，秀色夺人",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "看看贾环，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-080",
+  "speaker": "narrator",
+  "text": "看看贾环，人物委琐，举止荒疏，忽又想起贾珠来，再看看王夫人只有这一个亲生的儿子，素爱如珍，自己的胡须将已苍白：因这几件上，把素日嫌恶处分宝玉之心不觉减了八九。",
+  "title": "看看贾环，人物委琐，举止荒疏，忽又想起贾珠来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "再看看王夫人只有这一个亲生的儿子，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-081",
+  "speaker": "narrator",
+  "text": "再看看王夫人只有这一个亲生的儿子，素爱如珍，自己的胡须将已苍白：因这几件上，把素日嫌恶处分宝玉之心不觉减了八九。",
+  "title": "再看看王夫人只有这一个亲生的儿子，素爱如珍",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "把素日嫌恶处分宝玉之心不觉减了八九。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-082",
+  "speaker": "narrator",
+  "text": "把素日嫌恶处分宝玉之心不觉减了八九。",
+  "title": "把素日嫌恶处分宝玉之心不觉减了八九",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“娘娘吩咐说，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-083",
+  "speaker": "zheng",
+  "text": "「娘娘吩咐说，你日日外头嬉游，渐次疏懒，如今叫禁管，同你姊妹在园里读书写字。",
+  "title": "娘娘吩咐说，你日日外头嬉游，渐次疏懒，如今叫禁管",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "同你姊妹在园里读书写字。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-084",
+  "speaker": "zheng",
+  "text": "同你姊妹在园里读书写字。",
+  "title": "同你姊妹在园里读书写字",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "你可好生用心习学，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-085",
+  "speaker": "zheng",
+  "text": "你可好生用心习学，再如不守分安常，你可仔细！」",
+  "title": "你可好生用心习学，再如不守分安常，你可仔细！",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "宝玉连连的答应了几个”是”。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-086",
+  "speaker": "narrator",
+  "text": "宝玉连连的答应了几个」是」。",
+  "title": "宝玉连连的答应了几个是",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "王夫人便拉他在身旁坐下。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-087",
+  "speaker": "narrator",
+  "text": "王夫人便拉他在身旁坐下。他姊弟三人依旧坐下。",
+  "title": "王夫人便拉他在身旁坐下，他姊弟三人依旧坐下",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "wang",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“前儿的丸药都吃完了？”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-088",
+  "speaker": "wang",
+  "text": "「前儿的丸药都吃完了？」",
+  "title": "前儿的丸药都吃完了？",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "wang",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“还有一丸。”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-089",
+  "speaker": "baoyu",
+  "text": "「还有一丸。」",
+  "title": "还有一丸",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“明儿再取十丸来，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-090",
+  "speaker": "wang",
+  "text": "「明儿再取十丸来，天天临睡的时候，叫袭人伏侍你吃了再睡。」",
+  "title": "明儿再取十丸来，天天临睡的时候，叫袭人伏侍你吃了再睡",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "wang",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“只从太太吩咐了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-091",
+  "speaker": "baoyu",
+  "text": "「只从太太吩咐了，袭人天天晚上想著，打发我吃。」",
+  "title": "只从太太吩咐了，袭人天天晚上想著，打发我吃",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“袭人是何人？”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-092",
+  "speaker": "zheng",
+  "text": "「袭人是何人？」",
+  "title": "袭人是何人？",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“是个丫头。”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-093",
+  "speaker": "wang",
+  "text": "「是个丫头。」",
+  "title": "是个丫头",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "wang",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“丫头不管叫个什么罢了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-094",
+  "speaker": "zheng",
+  "text": "「丫头不管叫个什么罢了，是谁这样刁钻，起这样的名字？」",
+  "title": "丫头不管叫个什么罢了，是谁这样刁钻，起这样的名字？",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“是老太太起的。”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-095",
+  "speaker": "wang",
+  "text": "「是老太太起的。」",
+  "title": "是老太太起的",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "wang",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“老太太如何知道这话，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-096",
+  "speaker": "zheng",
+  "text": "「老太太如何知道这话，一定是宝玉。」",
+  "title": "老太太如何知道这话，一定是宝玉",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“因素日读诗，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-097",
+  "speaker": "baoyu",
+  "text": "「因素日读诗，曾记古人有一句诗云：『花气袭人知昼暖』。",
+  "title": "因素日读诗，曾记古人有一句诗云：花气袭人知昼暖",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "因这个丫头姓花，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-098",
+  "speaker": "narrator",
+  "text": "因这个丫头姓花，便随口起了这个名字。」",
+  "title": "因这个丫头姓花，便随口起了这个名字",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“宝玉，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-099",
+  "speaker": "wang",
+  "text": "「宝玉，你回去改了罢。老爷也不用为这小事动气。」",
+  "title": "宝玉，你回去改了罢。老爷也不用为这小事动气",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "wang",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“究竟也无碍，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-100",
+  "speaker": "zheng",
+  "text": "「究竟也无碍，又何用改。",
+  "title": "究竟也无碍，又何用改",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "只是可见宝玉不务正，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-101",
+  "speaker": "zheng",
+  "text": "只是可见宝玉不务正，专在这些浓词艳赋上作工夫。」",
+  "title": "只是可见宝玉不务正，专在这些浓词艳赋上作工夫",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“作业的畜生，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-102",
+  "speaker": "zheng",
+  "text": "「作业的畜生，还不出去！」",
+  "title": "作业的畜生，还不出去！",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zheng",
+    "kind": "anger",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 里间",
+  "focus": "kang_edge",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“去罢，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-103",
+  "speaker": "wang",
+  "text": "「去罢，只怕老太太等你吃饭呢。」",
+  "title": "去罢，只怕老太太等你吃饭呢",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "wang",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 门内",
+  "focus": "south_passage",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "向金钏儿笑著伸伸舌头，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-104",
+  "speaker": "narrator",
+  "text": "向金钏儿笑著伸伸舌头，带著两个嬷嬷一溜烟去了。",
+  "title": "宝玉慢慢的退出去，向金钏儿笑著伸伸舌头",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "hall_entry",
+     "south_passage"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 门内",
+  "focus": "east_corridor",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "刚至穿堂门前，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-105",
+  "speaker": "narrator",
+  "text": "刚至穿堂门前，只见袭人倚门立在那里，一见宝玉平安回来，堆下笑来问道：「叫你作什么？」",
+  "title": "刚至穿堂门前，只见袭人倚门立在那里",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xiren",
+    "at": "east_corridor"
+   },
+   {
+    "type": "effect",
+    "actor": "xiren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 门内",
+  "focus": "east_corridor",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“叫你作什么？”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-106",
+  "speaker": "xiren",
+  "text": "「叫你作什么？」",
+  "title": "叫你作什么？",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiren",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 门内",
+  "focus": "east_corridor",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“没有什么，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-107",
+  "speaker": "baoyu",
+  "text": "「没有什么，不过怕我进园去淘气，吩咐吩咐。」",
+  "title": "没有什么，不过怕我进园去淘气，吩咐吩咐",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-jiaozheng",
+  "scene": "wang",
+  "place": "王夫人院 · 门内",
+  "focus": "east_corridor",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "一面说，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-108",
+  "speaker": "narrator",
+  "text": "一面说，一面回至贾母跟前，回明原委。",
+  "title": "一面说，一面回至贾母跟前，回明原委",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-fenju",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "只见林黛玉正在那里，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-109",
+  "speaker": "narrator",
+  "text": "只见林黛玉正在那里，宝玉便问他：「你住那一处好？」",
+  "title": "只见林黛玉正在那里，宝玉便问他：你住那一处好？",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "zheng"
+   },
+   {
+    "type": "hide",
+    "actor": "wang"
+   },
+   {
+    "type": "hide",
+    "actor": "yingchun"
+   },
+   {
+    "type": "hide",
+    "actor": "tanchun"
+   },
+   {
+    "type": "hide",
+    "actor": "xichun"
+   },
+   {
+    "type": "hide",
+    "actor": "jia_huan"
+   },
+   {
+    "type": "hide",
+    "actor": "zhao_yiniang"
+   },
+   {
+    "type": "hide",
+    "actor": "jinyuan"
+   },
+   {
+    "type": "hide",
+    "actor": "caiyun"
+   },
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "daiyu_place"
+   },
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "baoyu_greet"
+   }
+  ]
+ },
+ {
+  "chapter": "c23-fenju",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“我心里想著潇湘馆好，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-110",
+  "speaker": "daiyu",
+  "text": "「我心里想著潇湘馆好，爱那几竿竹子隐著一道曲栏，比别处更觉幽静。」",
+  "title": "我心里想著潇湘馆好，爱那几竿竹子隐著一道曲栏",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-fenju",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "比别处更觉幽静。”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-111",
+  "speaker": "daiyu",
+  "text": "比别处更觉幽静。」",
+  "title": "比别处更觉幽静",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-fenju",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“正和我的主意一样，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-112",
+  "speaker": "baoyu",
+  "text": "「正和我的主意一样，我也要叫你住这里呢。",
+  "title": "正和我的主意一样，我也要叫你住这里呢",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-fenju",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "我就住怡红院，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-113",
+  "speaker": "baoyu",
+  "text": "我就住怡红院，咱们两个又近，又都清幽。」",
+  "title": "我就住怡红院，咱们两个又近，又都清幽",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-fenju",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "两人正计较，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-114",
+  "speaker": "narrator",
+  "text": "两人正计较，就有贾政遣人来回贾母说：「二月二十二日子好，哥儿姐儿们好搬进去的。",
+  "title": "两人正计较，就有贾政遣人来回贾母说",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-fenju",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“二月二十二日子好，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-115",
+  "speaker": "narrator",
+  "text": "「二月二十二日子好，哥儿姐儿们好搬进去的。",
+  "title": "二月二十二日子好，哥儿姐儿们好搬进去的",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-fenju",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "这几日内遣人进去分派收拾。”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-116",
+  "speaker": "narrator",
+  "text": "这几日内遣人进去分派收拾。」",
+  "title": "这几日内遣人进去分派收拾",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-fenju",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "薛宝钗住了蘅芜苑，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-117",
+  "speaker": "narrator",
+  "text": "薛宝钗住了蘅芜苑，林黛玉住了潇湘馆，贾迎春住了缀锦楼，探春住了秋爽斋，惜春住了蓼风轩，李氏住了稻香村，宝玉住了怡红院。",
+  "title": "薛宝钗住了蘅芜苑，林黛玉住了潇湘馆，贾迎春住了缀锦楼",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-fenju",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "探春住了秋爽斋，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-118",
+  "speaker": "narrator",
+  "text": "探春住了秋爽斋，惜春住了蓼风轩，李氏住了稻香村，宝玉住了怡红院。",
+  "title": "探春住了秋爽斋，惜春住了蓼风轩，李氏住了稻香村，宝玉住了怡红院",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-fenju",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "每一处添两个老嬷嬷，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-119",
+  "speaker": "narrator",
+  "text": "每一处添两个老嬷嬷，四个丫头，除各人奶娘亲随丫鬟不算外，另有专管收拾打扫的。",
+  "title": "每一处添两个老嬷嬷，四个丫头，另有专管收拾打扫的",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-fenju",
+  "scene": "dinner",
+  "place": "贾母院 · 正房",
+  "focus": "daiyu_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "至二十二日，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-120",
+  "speaker": "narrator",
+  "text": "至二十二日，一齐进去，登时园内花招绣带，柳拂香风，不似前番那等寂寞了。",
+  "title": "至二十二日，一齐进去，登时园内花招绣带，柳拂香风",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "grandmother",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 里间",
+  "focus": "baoyu_kang",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "且说宝玉自进花园以来，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-121",
+  "speaker": "narrator",
+  "text": "且说宝玉自进花园以来，心满意足，再无别项可生贪求之心。",
+  "title": "且说宝玉自进花园以来，心满意足，再无别项可生贪求之心",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "baoyu_kang"
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 里间",
+  "focus": "baoyu_kang",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "每日只和姊妹丫头们一处，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-122",
+  "speaker": "narrator",
+  "text": "每日只和姊妹丫头们一处，或读书，或写字，或弹琴下棋，作画吟诗，以至描鸾刺凤，斗草簪花，低吟悄唱，拆字猜枚，无所不至，倒也十分快乐。",
+  "title": "每日只和姊妹丫头们一处，或读书，或写字，或弹琴下棋",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 里间",
+  "focus": "baoyu_kang",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "作画吟诗，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-123",
+  "speaker": "narrator",
+  "text": "作画吟诗，以至描鸾刺凤，斗草簪花，低吟悄唱，拆字猜枚，无所不至，倒也十分快乐。",
+  "title": "作画吟诗，以至描鸾刺凤，斗草簪花，无所不至，倒也十分快乐",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "他曾有几首即事诗，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-124",
+  "speaker": "narrator",
+  "text": "他曾有几首即事诗，虽不算好，却倒是真情真景，略记几首云：",
+  "title": "他曾有几首即事诗，虽不算好，却倒是真情真景",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "baoyu_kang",
+     "desk_place"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "春夜即事",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-125",
+  "speaker": "narrator",
+  "text": "春夜即事",
+  "title": "春夜即事",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "霞绡云幄任舖陈，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-126",
+  "speaker": "narrator",
+  "text": "霞绡云幄任舖陈，隔巷蟆更听未真。",
+  "title": "霞绡云幄任舖陈，隔巷蟆更听未真",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "枕上轻寒窗外雨，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-127",
+  "speaker": "narrator",
+  "text": "枕上轻寒窗外雨，眼前春色梦中人。",
+  "title": "枕上轻寒窗外雨，眼前春色梦中人",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "盈盈烛泪因谁泣，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-128",
+  "speaker": "narrator",
+  "text": "盈盈烛泪因谁泣，点点花愁为我嗔。",
+  "title": "盈盈烛泪因谁泣，点点花愁为我嗔",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "自是小鬟娇懒惯，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-129",
+  "speaker": "narrator",
+  "text": "自是小鬟娇懒惯，拥衾不耐笑言频。",
+  "title": "自是小鬟娇懒惯，拥衾不耐笑言频",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "夏夜即事",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-130",
+  "speaker": "narrator",
+  "text": "夏夜即事",
+  "title": "夏夜即事",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "倦绣佳人幽梦长，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-131",
+  "speaker": "narrator",
+  "text": "倦绣佳人幽梦长，金笼鹦鹉唤茶汤。",
+  "title": "倦绣佳人幽梦长，金笼鹦鹉唤茶汤",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "窗明麝月开宫镜，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-132",
+  "speaker": "narrator",
+  "text": "窗明麝月开宫镜，室霭檀云品御香。",
+  "title": "窗明麝月开宫镜，室霭檀云品御香",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "琥珀杯倾荷露滑，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-133",
+  "speaker": "narrator",
+  "text": "琥珀杯倾荷露滑，玻璃槛纳柳风凉。",
+  "title": "琥珀杯倾荷露滑，玻璃槛纳柳风凉",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "水亭处处齐纨动，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-134",
+  "speaker": "narrator",
+  "text": "水亭处处齐纨动，帘卷朱楼罢晚妆。",
+  "title": "水亭处处齐纨动，帘卷朱楼罢晚妆",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "秋夜即事",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-135",
+  "speaker": "narrator",
+  "text": "秋夜即事",
+  "title": "秋夜即事",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "绛芸轩里绝喧哗，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-136",
+  "speaker": "narrator",
+  "text": "绛芸轩里绝喧哗，桂魄流光浸茜纱。",
+  "title": "绛芸轩里绝喧哗，桂魄流光浸茜纱",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "苔锁石纹容睡鹤，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-137",
+  "speaker": "narrator",
+  "text": "苔锁石纹容睡鹤，井飘桐露湿栖鸦。",
+  "title": "苔锁石纹容睡鹤，井飘桐露湿栖鸦",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "抱衾婢至舒金凤，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-138",
+  "speaker": "narrator",
+  "text": "抱衾婢至舒金凤，倚槛人归落翠花。",
+  "title": "抱衾婢至舒金凤，倚槛人归落翠花",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "静夜不眠因酒渴，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-139",
+  "speaker": "narrator",
+  "text": "静夜不眠因酒渴，沉烟重拨索烹茶。",
+  "title": "静夜不眠因酒渴，沉烟重拨索烹茶",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "冬夜即事",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-140",
+  "speaker": "narrator",
+  "text": "冬夜即事",
+  "title": "冬夜即事",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "梅魂竹梦已三更，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-141",
+  "speaker": "narrator",
+  "text": "梅魂竹梦已三更，锦罽鹔衾睡未成。",
+  "title": "梅魂竹梦已三更，锦罽鹔衾睡未成",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "松影一庭惟见鹤，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-142",
+  "speaker": "narrator",
+  "text": "松影一庭惟见鹤，梨花满地不闻莺。",
+  "title": "松影一庭惟见鹤，梨花满地不闻莺",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "女儿翠袖诗怀冷，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-143",
+  "speaker": "narrator",
+  "text": "女儿翠袖诗怀冷，公子金貂酒力轻。",
+  "title": "女儿翠袖诗怀冷，公子金貂酒力轻",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "却喜侍儿知试茗，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-144",
+  "speaker": "narrator",
+  "text": "却喜侍儿知试茗，扫将新雪及时烹。",
+  "title": "却喜侍儿知试茗，扫将新雪及时烹",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "当时有一等势利人，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-145",
+  "speaker": "narrator",
+  "text": "当时有一等势利人，见是荣国府十二三岁的公子作的，抄录出来各处称颂，再有一等轻浮子弟，爱上那风骚妖艳之句，也写在扇头壁上，不时吟哦赏赞。",
+  "title": "当时有一等势利人，见是荣国府十二三岁的公子作的，抄录出来各处称颂",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "因此竟有人来寻诗觅字，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-146",
+  "speaker": "narrator",
+  "text": "因此竟有人来寻诗觅字，倩画求题的。",
+  "title": "因此竟有人来寻诗觅字，倩画求题的",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 书案前",
+  "focus": "desk_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "宝玉亦发得了意，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-147",
+  "speaker": "narrator",
+  "text": "宝玉亦发得了意，镇日家作这些外务。",
+  "title": "宝玉亦发得了意，镇日家作这些外务",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "谁想静中生烦恼，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-148",
+  "speaker": "narrator",
+  "text": "谁想静中生烦恼，忽一日不自在起来，这也不好，那也不好，出来进去只是闷闷的。",
+  "title": "谁想静中生烦恼，忽一日不自在起来，这也不好，那也不好",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "desk_place",
+     "baoyu_outer"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "园中那些人多半是女孩儿，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-149",
+  "speaker": "narrator",
+  "text": "园中那些人多半是女孩儿，正在混沌世界，天真烂漫之时，坐卧不避，嘻笑无心，那里知宝玉此时的心事。",
+  "title": "园中那些人多半是女孩儿，坐卧不避，嘻笑无心",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-sishi",
+  "scene": "yihong",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "那宝玉心内不自在，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-150",
+  "speaker": "narrator",
+  "text": "那宝玉心内不自在，便懒在园内，只在外头鬼混，却又痴痴的。",
+  "title": "那宝玉心内不自在，便懒在园内，只在外头鬼混，却又痴痴的",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mingsmoke",
+  "scene": "yihong",
+  "place": "怡红院 · 外间",
+  "focus": "mirror_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "茗烟见他这样，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-151",
+  "speaker": "narrator",
+  "text": "茗烟见他这样，因想与他开心，左思右想，皆是宝玉顽烦了的，不能开心，惟有这件，宝玉不曾看见过。",
+  "title": "茗烟见他这样，因想与他开心，左思右想，皆是宝玉顽烦了的",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ming_yan",
+    "at": "mirror_place"
+   },
+   {
+    "type": "effect",
+    "actor": "ming_yan",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mingsmoke",
+  "scene": "yihong",
+  "place": "怡红院 · 外间",
+  "focus": "mirror_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "惟有这件，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-152",
+  "speaker": "narrator",
+  "text": "惟有这件，宝玉不曾看见过。",
+  "title": "惟有这件，宝玉不曾看见过",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ming_yan",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mingsmoke",
+  "scene": "yihong",
+  "place": "怡红院 · 外间",
+  "focus": "mirror_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "便走去到书坊内，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-153",
+  "speaker": "narrator",
+  "text": "便走去到书坊内，把那古今小说并那飞燕，合德，武则天，杨贵妃的外传与那传奇角本买了许多来，引宝玉看。",
+  "title": "便走去到书坊内，把那古今小说并那飞燕，合德，武则天，杨贵妃的外传买了许多来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ming_yan",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mingsmoke",
+  "scene": "yihong",
+  "place": "怡红院 · 外间",
+  "focus": "mirror_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "引宝玉看。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-154",
+  "speaker": "narrator",
+  "text": "引宝玉看。宝玉何曾见过这些书，一看见了便如得了珍宝。",
+  "title": "引宝玉看。宝玉何曾见过这些书，一看见了便如得了珍宝",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mingsmoke",
+  "scene": "yihong",
+  "place": "怡红院 · 外间",
+  "focus": "mirror_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "茗烟又嘱咐他不可拿进园去，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-155",
+  "speaker": "narrator",
+  "text": "茗烟又嘱咐他不可拿进园去，「若叫人知道了，我就吃不了兜著走呢。」",
+  "title": "茗烟又嘱咐他不可拿进园去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ming_yan",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mingsmoke",
+  "scene": "yihong",
+  "place": "怡红院 · 外间",
+  "focus": "mirror_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“若叫人知道了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-156",
+  "speaker": "narrator",
+  "text": "「若叫人知道了，我就吃不了兜著走呢。」",
+  "title": "若叫人知道了，我就吃不了兜著走呢",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ming_yan",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mingsmoke",
+  "scene": "yihong",
+  "place": "怡红院 · 里间",
+  "focus": "book_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "宝玉那里舍的不拿进园去，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-157",
+  "speaker": "narrator",
+  "text": "宝玉那里舍的不拿进园去，踟蹰再三，单把那文理细密的拣了几套进去，放在床顶上，无人时自己密看。",
+  "title": "宝玉那里舍的不拿进园去，踟蹰再三，单把那文理细密的拣了几套进去",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "baoyu_outer",
+     "book_place"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mingsmoke",
+  "scene": "yihong",
+  "place": "怡红院 · 里间",
+  "focus": "book_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "放在床顶上，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-158",
+  "speaker": "narrator",
+  "text": "放在床顶上，无人时自己密看。",
+  "title": "放在床顶上，无人时自己密看",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mingsmoke",
+  "scene": "yihong",
+  "place": "怡红院 · 里间",
+  "focus": "book_place",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "那粗俗过露的，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-159",
+  "speaker": "narrator",
+  "text": "那粗俗过露的，都藏在外面书房里。",
+  "title": "那粗俗过露的，都藏在外面书房里",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "那一日正当三月中浣，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-160",
+  "speaker": "narrator",
+  "text": "那一日正当三月中浣，早饭后，宝玉携了一套《会真记》，走到沁芳闸桥边桃花底下一块石上坐著，展开《会真记》，从头细玩。",
+  "title": "那一日正当三月中浣，早饭后，宝玉携了一套《会真记》",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "ming_yan"
+   },
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "stone_seat"
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "走到沁芳闸桥边桃花底下一块石上坐著，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-161",
+  "speaker": "narrator",
+  "text": "走到沁芳闸桥边桃花底下一块石上坐著，展开《会真记》，从头细玩。",
+  "title": "走到沁芳闸桥边桃花底下一块石上坐著，展开《会真记》，从头细玩",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "正看到“落红成阵”，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-162",
+  "speaker": "narrator",
+  "text": "正看到「落红成阵」，只见一阵风过，把树头上桃花吹下一大半来，落的满身满书满地皆是。",
+  "title": "正看到落红成阵，只见一阵风过，把树头上桃花吹下一大半来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "落的满身满书满地皆是。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-163",
+  "speaker": "narrator",
+  "text": "落的满身满书满地皆是。",
+  "title": "落的满身满书满地皆是",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "宝玉要抖将下来，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-164",
+  "speaker": "narrator",
+  "text": "宝玉要抖将下来，恐怕脚步践踏了，只得兜了那花瓣，来至池边，抖在池内。",
+  "title": "宝玉要抖将下来，恐怕脚步践踏了，只得兜了那花瓣",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 池边",
+  "focus": "bank_west",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "来至池边，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-165",
+  "speaker": "narrator",
+  "text": "来至池边，抖在池内。",
+  "title": "来至池边，抖在池内",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "stone_seat",
+     "bank_west"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 池边",
+  "focus": "bank_west",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "那花瓣浮在水面，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-166",
+  "speaker": "narrator",
+  "text": "那花瓣浮在水面，飘飘荡荡，竟流出沁芳闸去了。",
+  "title": "那花瓣浮在水面，飘飘荡荡，竟流出沁芳闸去了",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "回来只见地下还有许多，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-167",
+  "speaker": "narrator",
+  "text": "回来只见地下还有许多，宝玉正踟蹰间，只听背后有人说道：「你在这里作什么？」",
+  "title": "回来只见地下还有许多，宝玉正踟蹰间",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "bank_west",
+     "stone_seat"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "只听背后有人说道：",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-168",
+  "speaker": "narrator",
+  "text": "只听背后有人说道：「你在这里作什么？」",
+  "title": "只听背后有人说道：你在这里作什么？",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "peach_grove",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "宝玉一回头，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-169",
+  "speaker": "narrator",
+  "text": "宝玉一回头，却是林黛玉来了，肩上担著花锄，锄上挂著花囊，手内拿著花帚。",
+  "title": "宝玉一回头，却是林黛玉来了",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "peach_grove"
+   },
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "peach_grove",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "肩上担著花锄，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-170",
+  "speaker": "narrator",
+  "text": "肩上担著花锄，锄上挂著花囊，手内拿著花帚。",
+  "title": "肩上担著花锄，锄上挂著花囊，手内拿著花帚",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "peach_grove",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“好，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-171",
+  "speaker": "baoyu",
+  "text": "「好，好，来把这个花扫起来，撂在那水里。",
+  "title": "好，好，来把这个花扫起来，撂在那水里",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "peach_grove",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "我才撂了好些在那里呢。”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-172",
+  "speaker": "baoyu",
+  "text": "我才撂了好些在那里呢。」",
+  "title": "我才撂了好些在那里呢",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "peach_grove",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“撂在水里不好。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-173",
+  "speaker": "daiyu",
+  "text": "「撂在水里不好。",
+  "title": "撂在水里不好",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "peach_grove",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "你看这里的水干净，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-174",
+  "speaker": "daiyu",
+  "text": "你看这里的水干净，只一流出去，有人家的地方脏的臭的混倒，仍旧把花遭塌了。",
+  "title": "你看这里的水干净，只一流出去，有人家的地方脏的臭的混倒",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "peach_grove",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "仍旧把花遭塌了。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-175",
+  "speaker": "daiyu",
+  "text": "仍旧把花遭塌了。",
+  "title": "仍旧把花遭塌了",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "peach_grove",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "那畸角上我有一个花冢，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-176",
+  "speaker": "daiyu",
+  "text": "那畸角上我有一个花冢，如今把他扫了，装在这绢袋里，拿土埋上，日久不过随土化了，岂不干净。」",
+  "title": "那畸角上我有一个花冢，如今把他扫了，装在这绢袋里，拿土埋上",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-taohua",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "peach_grove",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "日久不过随土化了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-177",
+  "speaker": "daiyu",
+  "text": "日久不过随土化了，岂不干净。」",
+  "title": "日久不过随土化了，岂不干净",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-huizhen",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“待我放下书，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-178",
+  "speaker": "baoyu",
+  "text": "「待我放下书，帮你来收拾。」",
+  "title": "待我放下书，帮你来收拾",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "stone_seat"
+   },
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "tomb"
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-huizhen",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“什么书？”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-179",
+  "speaker": "daiyu",
+  "text": "「什么书？」",
+  "title": "什么书？",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-huizhen",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "宝玉见问，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-180",
+  "speaker": "narrator",
+  "text": "宝玉见问，慌的藏之不迭，便说道：「不过是《中庸》《大学》。」",
+  "title": "宝玉见问，慌的藏之不迭",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-huizhen",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“不过是《中庸》《大学》。”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-181",
+  "speaker": "baoyu",
+  "text": "「不过是《中庸》《大学》。」",
+  "title": "不过是《中庸》《大学》",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-huizhen",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“你又在我跟前弄鬼。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-182",
+  "speaker": "daiyu",
+  "text": "「你又在我跟前弄鬼。",
+  "title": "你又在我跟前弄鬼",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-huizhen",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "趁早儿给我瞧，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-183",
+  "speaker": "daiyu",
+  "text": "趁早儿给我瞧，好多著呢。」",
+  "title": "趁早儿给我瞧，好多著呢",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-huizhen",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“好妹妹，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-184",
+  "speaker": "baoyu",
+  "text": "「好妹妹，若论你，我是不怕的。",
+  "title": "好妹妹，若论你，我是不怕的",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-huizhen",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "你看了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-185",
+  "speaker": "baoyu",
+  "text": "你看了，好歹别告诉别人去。",
+  "title": "你看了，好歹别告诉别人去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-huizhen",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "真真这是好书！",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-186",
+  "speaker": "baoyu",
+  "text": "真真这是好书！",
+  "title": "真真这是好书！",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-huizhen",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "你要看了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-187",
+  "speaker": "baoyu",
+  "text": "你要看了，连饭也不想吃呢。」",
+  "title": "你要看了，连饭也不想吃呢",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-huizhen",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "一面说，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-188",
+  "speaker": "narrator",
+  "text": "一面说，一面递了过去。",
+  "title": "一面说，一面递了过去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-huizhen",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "林黛玉把花具且都放下，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-189",
+  "speaker": "narrator",
+  "text": "林黛玉把花具且都放下，接书来瞧，从头看去，越看越爱看，不到一顿饭工夫，将十六出俱已看完，自觉词藻警人，余香满口。",
+  "title": "林黛玉把花具且都放下，接书来瞧，从头看去，越看越爱看",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-huizhen",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "将十六出俱已看完，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-190",
+  "speaker": "narrator",
+  "text": "将十六出俱已看完，自觉词藻警人，余香满口。虽看完了书，却只管出神，心内还默默记诵。",
+  "title": "不到一顿饭工夫，将十六出俱已看完，自觉词藻警人，余香满口",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-huizhen",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "虽看完了书，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-191",
+  "speaker": "narrator",
+  "text": "虽看完了书，却只管出神，心内还默默记诵。",
+  "title": "虽看完了书，却只管出神，心内还默默记诵",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“妹妹，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-192",
+  "speaker": "baoyu",
+  "text": "「妹妹，你说好不好？」",
+  "title": "妹妹，你说好不好？",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "stone_seat"
+   },
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "tomb"
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“果然有趣。”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-193",
+  "speaker": "daiyu",
+  "text": "「果然有趣。」",
+  "title": "果然有趣",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“我就是个‘多愁多病身’，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-194",
+  "speaker": "baoyu",
+  "text": "「我就是个『多愁多病身』，你就是那『倾国倾城貌』。」",
+  "title": "我就是个多愁多病身，你就是那倾国倾城貌",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "林黛玉听了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-195",
+  "speaker": "narrator",
+  "text": "林黛玉听了，不觉带腮连耳通红，登时直竖起两道似蹙非蹙的眉，瞪了两只似睁非睁的眼，微腮带怒，薄面含嗔，指宝玉道：「你这该死的胡说！",
+  "title": "林黛玉听了，不觉带腮连耳通红",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "anger",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "登时直竖起两道似蹙非蹙的眉，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-196",
+  "speaker": "narrator",
+  "text": "登时直竖起两道似蹙非蹙的眉，瞪了两只似睁非睁的眼，微腮带怒，薄面含嗔，指宝玉道：「你这该死的胡说！",
+  "title": "登时直竖起两道似蹙非蹙的眉，瞪了两只似睁非睁的眼",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "anger",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "薄面含嗔，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-197",
+  "speaker": "narrator",
+  "text": "薄面含嗔，指宝玉道：「你这该死的胡说！",
+  "title": "微腮带怒，薄面含嗔，指宝玉道",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "anger",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“你这该死的胡说！",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-198",
+  "speaker": "daiyu",
+  "text": "「你这该死的胡说！好好的把这淫词艳曲弄了来，还学了这些混话来欺负我。",
+  "title": "你这该死的胡说！好好的把这淫词艳曲弄了来，还学了这些混话来欺负我",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "我告诉舅舅舅母去。”",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-199",
+  "speaker": "daiyu",
+  "text": "我告诉舅舅舅母去。」",
+  "title": "我告诉舅舅舅母去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "说到“欺负”两个字上，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-200",
+  "speaker": "narrator",
+  "text": "说到「欺负」两个字上，早又把眼睛圈儿红了，转身就走。",
+  "title": "说到欺负两个字上，早又把眼睛圈儿红了，转身就走",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "anger",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“好妹妹，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-201",
+  "speaker": "baoyu",
+  "text": "「好妹妹，千万饶我这一遭，原是我说错了。",
+  "title": "好妹妹，千万饶我这一遭，原是我说错了",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "若有心欺负你，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-202",
+  "speaker": "baoyu",
+  "text": "若有心欺负你，明儿我掉在池子里，教个癞头鼋吞了去，变个大忘八，等你明儿做了『一品夫人』病老归西的时候，我往你坟上替你驮一辈子的碑去。」",
+  "title": "若有心欺负我，明儿我掉在池子里，教个癞头鼋吞了去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "等你明儿做了‘一品夫人’病老归西的时候，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-203",
+  "speaker": "baoyu",
+  "text": "等你明儿做了『一品夫人』病老归西的时候，我往你坟上替你驮一辈子的碑去。」",
+  "title": "等你明儿做了一品夫人病老归西的时候，我往你坟上替你驮一辈子的碑去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "说的林黛玉嗤的一声笑了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-204",
+  "speaker": "narrator",
+  "text": "说的林黛玉嗤的一声笑了，揉著眼睛，一面笑道：「一般也唬的这个调儿，还只管胡说。",
+  "title": "说的林黛玉嗤的一声笑了，揉著眼睛",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“一般也唬的这个调儿，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-205",
+  "speaker": "daiyu",
+  "text": "「一般也唬的这个调儿，还只管胡说。",
+  "title": "一般也唬的这个调儿，还只管胡说",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "‘呸，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-206",
+  "speaker": "daiyu",
+  "text": "『呸，原来是苗而不秀，是个银样镴枪头。』",
+  "title": "呸，原来是苗而不秀，是个银样镴枪头",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“你这个呢？",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-207",
+  "speaker": "baoyu",
+  "text": "「你这个呢？我也告诉去。」",
+  "title": "你这个呢？我也告诉去",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“你说你会过目成诵，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-208",
+  "speaker": "daiyu",
+  "text": "「你说你会过目成诵，难道我就不能一目十行么？」",
+  "title": "你说你会过目成诵，难道我就不能一目十行么？",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 桃花坡",
+  "focus": "stone_seat",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "宝玉一面收书，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-209",
+  "speaker": "narrator",
+  "text": "宝玉一面收书，一面笑道：「正经快把花埋了罢，别提那个了。」",
+  "title": "宝玉一面收书，一面笑道：正经快把花埋了罢",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 花冢",
+  "focus": "corner",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "二人便收拾落花，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-210",
+  "speaker": "narrator",
+  "text": "二人便收拾落花，正才掩埋妥协，只见袭人走来，说道：「那里没找到，摸在这里来。",
+  "title": "二人便收拾落花，正才掩埋妥协，只见袭人走来",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "daiyu",
+    "via": [
+     "peach_grove",
+     "tomb"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "stone_seat",
+     "tomb"
+    ]
+   },
+   {
+    "type": "show",
+    "actor": "xiren",
+    "at": "corner"
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 花冢",
+  "focus": "corner",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“那里没找到，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-211",
+  "speaker": "xiren",
+  "text": "「那里没找到，摸在这里来。",
+  "title": "那里没找到，摸在这里来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 花冢",
+  "focus": "corner",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "那边大老爷身上不好，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-212",
+  "speaker": "xiren",
+  "text": "那边大老爷身上不好，姑娘们都过去请安，老太太叫打发你去呢。",
+  "title": "那边大老爷身上不好，姑娘们都过去请安",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 花冢",
+  "focus": "corner",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "老太太叫打发你去呢。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-213",
+  "speaker": "xiren",
+  "text": "老太太叫打发你去呢。快回去换衣裳去罢。」",
+  "title": "老太太叫打发你去呢。快回去换衣裳去罢",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-madou",
+  "scene": "qinfang",
+  "place": "沁芳闸 · 花冢",
+  "focus": "corner",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "宝玉听了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-214",
+  "speaker": "narrator",
+  "text": "宝玉听了，忙拿了书，别了黛玉，同袭人回房换衣不提。",
+  "title": "宝玉听了，忙拿了书，别了黛玉，同袭人回房换衣不提",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "baoyu"
+   },
+   {
+    "type": "hide",
+    "actor": "daiyu"
+   },
+   {
+    "type": "hide",
+    "actor": "xiren"
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "这里林黛玉见宝玉去了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-215",
+  "speaker": "narrator",
+  "text": "这里林黛玉见宝玉去了，又听见众姊妹也不在房，自己闷闷的。",
+  "title": "林黛玉见宝玉去了，又听见众姊妹也不在房，自己闷闷的",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "lane_gate"
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "正欲回房，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-216",
+  "speaker": "narrator",
+  "text": "正欲回房，刚走到梨香院墙角上，只听墙内笛韵悠扬，歌声婉转。",
+  "title": "正欲回房，刚走到梨香院墙角上，只听墙内笛韵悠扬，歌声婉转",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "林黛玉便知是那十二个女孩子演习戏文呢。",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-217",
+  "speaker": "narrator",
+  "text": "林黛玉便知是那十二个女孩子演习戏文呢。",
+  "title": "林黛玉便知是那十二个女孩子演习戏文呢",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "只是林黛玉素习不大喜看戏文，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-218",
+  "speaker": "narrator",
+  "text": "只是林黛玉素习不大喜看戏文，便不留心，只管往前走。",
+  "title": "只是林黛玉素习不大喜看戏文，便不留心，只管往前走",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "偶然两句吹到耳内，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-219",
+  "speaker": "narrator",
+  "text": "偶然两句吹到耳内，明明白白，一字不落，唱道是：「原来姹紫嫣红开遍，似这般都付与断井颓垣。」",
+  "title": "偶然两句吹到耳内，明明白白，一字不落，唱道是",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“原来姹紫嫣红开遍，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-220",
+  "speaker": "narrator",
+  "text": "「原来姹紫嫣红开遍，似这般都付与断井颓垣。」",
+  "title": "原来姹紫嫣红开遍，似这般都付与断井颓垣",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "林黛玉听了，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-221",
+  "speaker": "narrator",
+  "text": "林黛玉听了，倒也十分感慨缠绵，便止住步侧耳细听，又听唱道是：「良辰美景奈何天，赏心乐事谁家院。」",
+  "title": "林黛玉听了，倒也十分感慨缠绵，便止住步侧耳细听",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "“良辰美景奈何天，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-222",
+  "speaker": "narrator",
+  "text": "「良辰美景奈何天，赏心乐事谁家院。」听了这两句，不觉点头自叹，心下自思道：「原来戏上也有好文章。",
+  "title": "又听唱道是：良辰美景奈何天，赏心乐事谁家院",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "听了这两句，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-223",
+  "speaker": "narrator",
+  "text": "听了这两句，不觉点头自叹，心下自思道：「原来戏上也有好文章。",
+  "title": "听了这两句，不觉点头自叹",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "心下自思道：",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-224",
+  "speaker": "narrator",
+  "text": "心下自思道：「原来戏上也有好文章。",
+  "title": "心下自思道：原来戏上也有好文章",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "可惜世人只知看戏，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-225",
+  "speaker": "narrator",
+  "text": "可惜世人只知看戏，未必能领略这其中的趣味。」",
+  "title": "可惜世人只知看戏，未必能领略这其中的趣味",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "想毕，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-226",
+  "speaker": "narrator",
+  "text": "想毕，又后悔不该胡想，耽误了听曲子。",
+  "title": "想毕，又后悔不该胡想，耽误了听曲子",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "只听唱道：",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-227",
+  "speaker": "narrator",
+  "text": "只听唱道：「则为你如花美眷，似水流年……」林黛玉听了这两句，不觉心动神摇。",
+  "title": "又侧耳时，只听唱道：则为你如花美眷，似水流年",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "似水流年……”林黛玉听了这两句，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-228",
+  "speaker": "narrator",
+  "text": "似水流年……」林黛玉听了这两句，不觉心动神摇。",
+  "title": "林黛玉听了这两句，不觉心动神摇",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "anger",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙外",
+  "focus": "lane_gate",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "又听道：",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-229",
+  "speaker": "narrator",
+  "text": "又听道：「你在幽闺自怜」等句，亦发如醉如痴，站立不住，便一蹲身坐在一块山子石上，细嚼「如花美眷，似水流年」八个字的滋味。",
+  "title": "又听道：你在幽闺自怜等句，亦发如醉如痴，站立不住",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "anger",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-mudanting",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙角",
+  "focus": "court_center",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "便一蹲身坐在一块山子石上，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-230",
+  "speaker": "narrator",
+  "text": "便一蹲身坐在一块山子石上，细嚼「如花美眷，似水流年」八个字的滋味。",
+  "title": "便一蹲身坐在一块山子石上，细嚼如花美眷，似水流年八个字的滋味",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "daiyu",
+    "via": [
+     "lane_gate",
+     "court_center"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-luoye",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙角",
+  "focus": "court_center",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "忽又想起前日见古人诗中有“水流花谢两无情”之句，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-231",
+  "speaker": "narrator",
+  "text": "忽又想起前日见古人诗中有「水流花谢两无情」之句，再又有词中有「流水落花春去也，天上人间」之句，又兼方才所见《西厢记》中「花落水流红，闲愁万种」之句，都一时想起来，凑聚在一处。",
+  "title": "忽又想起前日见古人诗中有水流花谢两无情之句",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "court_center"
+   },
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-luoye",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙角",
+  "focus": "court_center",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "再又有词中有“流水落花春去也，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-232",
+  "speaker": "narrator",
+  "text": "再又有词中有「流水落花春去也，天上人间」之句，又兼方才所见《西厢记》中「花落水流红，闲愁万种」之句，都一时想起来，凑聚在一处。",
+  "title": "再又有词中有流水落花春去也，天上人间之句",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-luoye",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙角",
+  "focus": "court_center",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "又兼方才所见《西厢记》中“花落水流红，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-233",
+  "speaker": "narrator",
+  "text": "又兼方才所见《西厢记》中「花落水流红，闲愁万种」之句，都一时想起来，凑聚在一处。",
+  "title": "又兼方才所见《西厢记》中花落水流红，闲愁万种之句，都一时想起来",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-luoye",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙角",
+  "focus": "court_center",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "仔细忖度，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-234",
+  "speaker": "narrator",
+  "text": "仔细忖度，不觉心痛神痴，眼中落泪。",
+  "title": "仔细忖度，不觉心痛神痴，眼中落泪",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "idle",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-luoye",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙角",
+  "focus": "court_center",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "正没个开交，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-235",
+  "speaker": "narrator",
+  "text": "正没个开交，忽觉背上击了一下，及回头看时，原来是……且听下回分解。",
+  "title": "正没个开交，忽觉背上击了一下，及回头看时，原来是",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "idle",
+    "duration": 1.4
+   }
+  ]
+ },
+ {
+  "chapter": "c23-luoye",
+  "scene": "c4_lixiang",
+  "place": "梨香院 · 墙角",
+  "focus": "court_center",
+  "source": {
+   "chapter": 23,
+   "paragraphLead": "妆晨绣夜心无矣，",
+   "textKind": "adaptation",
+   "layer": "present"
+  },
+  "id": "C23-236",
+  "speaker": "narrator",
+  "text": "妆晨绣夜心无矣，对月临风恨有之。",
+  "title": "妆晨绣夜心无矣，对月临风恨有之",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "idle",
+    "duration": 1.4
+   }
+  ]
+ }
+]

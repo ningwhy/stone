@@ -466,6 +466,27 @@
    "features": "少年圆脸；眉淡眼明；体态瘦小；举止安静，贾政长子，宝玉的堂侄，十一二岁",
    "prompt": "a gentle round-faced boy of eleven, soft pale brows, clear bright eyes, a small slender build, a quiet and well-behaved manner, the eldest son of a stern official in a Qing-dynasty great household, wearing a neat plain blue boyish robe with a small jade pendant, hair in a simple childhood topknot",
    "seed": 10234080
+  },
+  {
+   "id": "jinyuan",
+   "name": "金钏儿",
+   "features": "少妇圆脸；眉弯目秀；唇点胭脂；体态丰腴，手臂圆润，贾母身边的丫鬟，王夫人房中第一等，十七八岁",
+   "prompt": "a plump round-faced maidservant of seventeen, curved brows, pretty almond eyes, lips touched with rouge, a full rounded figure with soft arms, the senior maid of a high-ranking wife in a Qing-dynasty noble household, wearing a bright coral-red two-piece maid outfit with a gold-embroidered collar and a small gold hairpin, notably neat and well-dressed among the servants",
+   "seed": 10234090
+  },
+  {
+   "id": "caiyun",
+   "name": "彩云",
+   "features": "少女鹅蛋脸；眉细眼明；鼻小唇薄；身段轻软，神态厚道，王夫人房中丫鬟，十五六岁",
+   "prompt": "a gentle oval-faced maid of fifteen, fine brows, clear bright eyes, a small nose and thin lips, a light soft build, a warm and decent-hearted manner, a maid of the senior wife in a Qing-dynasty great household, wearing a soft pale-blue and cream maid outfit with a simple embroidered collar and a small white flower hair ornament, quietly attentive",
+   "seed": 10234100
+  },
+  {
+   "id": "jia_qin",
+   "name": "贾芹",
+   "features": "青年圆脸；眉浓眼小；面带油光；体态虚胖，举止浮滑，贾政的远房侄儿，管着两处庙宇的年轻事务，十八九岁",
+   "prompt": "a soft-faced young man of eighteen, thick brows, small eyes, a slightly plump and pampered build, an oily self-satisfied manner, a distant nephew of an official in a Qing-dynasty great household who administers two temple estates, wearing a well-made but slightly gaudy dark-green scholar robe with a jade belt, his hair in a neat topknot under a small black cap, hands folded before him",
+   "seed": 10234110
   }
  ]
 }

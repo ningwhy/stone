@@ -2062,5 +2062,53 @@
     "faintAlphaRatio": 0.03353,
     "width": 103,
     "height": 116
+  },
+  {
+    "asset": "jinyuan-portrait",
+    "visiblePixels": 94381,
+    "solidAlpha250Ratio": 0.98641,
+    "faintAlphaRatio": 0.00604,
+    "width": 214,
+    "height": 600
+  },
+  {
+    "asset": "jinyuan-chibi",
+    "visiblePixels": 6370,
+    "solidAlpha250Ratio": 0.9471,
+    "faintAlphaRatio": 0.02308,
+    "width": 75,
+    "height": 116
+  },
+  {
+    "asset": "caiyun-portrait",
+    "visiblePixels": 72827,
+    "solidAlpha250Ratio": 0.98263,
+    "faintAlphaRatio": 0.00735,
+    "width": 166,
+    "height": 600
+  },
+  {
+    "asset": "caiyun-chibi",
+    "visiblePixels": 5112,
+    "solidAlpha250Ratio": 0.93349,
+    "faintAlphaRatio": 0.02954,
+    "width": 64,
+    "height": 116
+  },
+  {
+    "asset": "jia_qin-portrait",
+    "visiblePixels": 81034,
+    "solidAlpha250Ratio": 0.98398,
+    "faintAlphaRatio": 0.00671,
+    "width": 192,
+    "height": 600
+  },
+  {
+    "asset": "jia_qin-chibi",
+    "visiblePixels": 4940,
+    "solidAlpha250Ratio": 0.94271,
+    "faintAlphaRatio": 0.02206,
+    "width": 60,
+    "height": 116
   }
 ]

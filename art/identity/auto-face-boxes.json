@@ -934,5 +934,41 @@
     16,
     83,
     60
+  ],
+  "jinyuan-portrait": [
+    78,
+    22,
+    128,
+    72
+  ],
+  "jinyuan-chibi": [
+    13,
+    27,
+    62,
+    62
+  ],
+  "caiyun-portrait": [
+    46,
+    38,
+    88,
+    82
+  ],
+  "caiyun-chibi": [
+    9,
+    30,
+    59,
+    64
+  ],
+  "jia_qin-portrait": [
+    63,
+    42,
+    107,
+    82
+  ],
+  "jia_qin-chibi": [
+    7,
+    30,
+    57,
+    64
   ]
 }

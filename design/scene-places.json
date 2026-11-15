@@ -76,6 +76,7 @@
     "c14_funeral": {"level": "ningguo", "region": "capital", "col": 12, "row": 16, "name": "会芳园 · 灵前"},
     "c14_office": {"level": "ningguo", "region": "capital", "col": 28, "row": 24, "name": "宁国府 · 理事堂"},
 
-    "yihong": {"level": "daguanyuan", "region": "capital", "col": 20, "row": 20, "name": "大观园 · 怡红院", "note": "第二十一回新建，宝玉住处"}
+    "yihong": {"level": "daguanyuan", "region": "capital", "col": 20, "row": 20, "name": "大观园 · 怡红院", "note": "第二十一回新建，宝玉住处"},
+    "qinfang": {"level": "daguanyuan", "region": "capital", "col": 14, "row": 26, "name": "大观园 · 沁芳闸桃花下", "note": "第二十三回新建，桃花底下共读《会真记》"}
   }
 }

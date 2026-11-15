@@ -2066,5 +2066,61 @@
    "tight:right (sign flipped: the crop mirrored the head)"
   ],
   "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "caiyun-portrait",
+  "kind": "portrait",
+  "facing": "right",
+  "votes": 3,
+  "voteDetail": [
+   "whole:right",
+   "tight:right",
+   "wide:right"
+  ],
+  "noseOffset": 0.2216,
+  "mouthOffset": 0.2823,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "jia_qin-portrait",
+  "kind": "portrait",
+  "facing": "right",
+  "votes": 3,
+  "voteDetail": [
+   "whole:right",
+   "tight:right",
+   "wide:right"
+  ],
+  "noseOffset": 0.1341,
+  "mouthOffset": 0.1923,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "jinyuan-chibi",
+  "kind": "chibi",
+  "facing": "right",
+  "votes": 1,
+  "voteDetail": [
+   "wider:right",
+   "low:misidentified",
+   "lower:misidentified"
+  ],
+  "noseOffset": 0.1658,
+  "mouthOffset": 0.0739,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "jinyuan-portrait",
+  "kind": "portrait",
+  "facing": "left",
+  "votes": 3,
+  "voteDetail": [
+   "whole:left",
+   "tight:left",
+   "wide:left"
+  ],
+  "noseOffset": -0.0244,
+  "mouthOffset": -0.1924,
+  "method": "vision-landmark-geometry"
  }
 ]

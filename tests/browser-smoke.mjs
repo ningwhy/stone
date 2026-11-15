@@ -34,19 +34,20 @@ assert.equal(allBooks.length,bookCount,`bookNames must cover every chapter, got 
 // 「查无此人」的那个样本名，必须在**全部**回目的正文里一个字都没出现过。
 // 这个样本随回目推移而失效：妙玉被第十八回推翻、晴雯被第十九回推翻、
 // 麝月被第二十回推翻、紫鹃被第二十一回推翻（她是黛玉房首席大丫头，
-// 第二十一回晨起进黛玉房伏侍梳洗）、檀云被第二十二回推翻（第二十二回
-// 迎春的丫鬟「坠儿」等人虽未登场，但湘云提到「看人家的鼻子眼睛」，
-// 连带把一干丫鬟名目的行情推到了台面上，檀云这个名字不能再用）。
+// 第二十一回晨起进黛玉房伏侍梳洗）、彩云被第二十三回推翻（彩云是王夫人
+// 房里的丫鬟，第二十三回在廊下推开金钏儿、劝宝玉进去，正式登场）、
+// 檀云被第二十三回推翻（底本原句「室霭檀云品御香」里的「檀云」是檀香
+// 熏的云气，搜索照样命中了她）。
 // 每加一回都要重挑一个，并在下面这条静态断言里立刻发现「样本已经被
 // 某一回用掉了」——否则断言会误判成搜索功能坏了。
 //
 // ★ 判据要覆盖**所有可搜路径**：正文、标题、地点、在场人物、段 id。
 //   名字出现在地点或人物表里照样能命中（目录搜索是全文匹配），
 //   只查正文是不够的。
-// 现在用「彩云」：全二十二回正文、src/ 与 design/ 里一个字都没出现过，
+// 现在用「坠儿」：全二十三回正文、src/ 与 design/ 里一个字都没出现过，
 // 且不在 cast 表里（搜人名是靠在场人物命中的，样本不在 cast 里才是真的
 // 「查无此人」）。
-const absentSample='彩云';
+const absentSample='坠儿';
 {
   const all=readdirSync('design').filter(f=>/^chapter\d+-story\.json$/.test(f))
     .map(f=>readFileSync(`design/${f}`,'utf8')).join('');
@@ -247,13 +248,15 @@ try{
  await page.waitForTimeout(150);
  assert.ok(await toc.locator('.toc-card').count()>0,'a place in the middle of a section must be searchable');
     // 搜一个剧情里根本没有的名字：必须找不到，不能凭空造出段落。
-    // 这个名字必须在前二十一回里从未出现——「妙玉」被第十八回推翻，
+    // 这个名字必须在前二十三回里从未出现——「妙玉」被第十八回推翻，
     // 「晴雯」被第十九回推翻（她恰在第十九回登场），「麝月」又被第二十回推翻
     // （她恰在第二十回登场，还守着篦头那一场），「紫鹃」再被第二十一回推翻
-    // （她恰在第二十一回登场，替黛玉递香皂）。这里改用「檀云」：
-    // 她是宝玉房里的丫头，尚未登场，前二十一回一个字都没出现，
+    // （她恰在第二十一回登场，替黛玉递香皂），「檀云」最后被第二十三回推翻
+    // （底本原句「室霭檀云品御香」里的「檀云」是檀香熏的云气，搜索照样
+    // 命中了她）。这里改用「侍书」：
+    // 她是黛玉房里的丫鬟，原著确有此人，尚未登场，前二十三回一个字都没出现，
     // 也不在 cast 表里——搜人名是靠在场人物命中的，她压根没被画过。
-    await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('檀云');
+    await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('侍书');
  await page.waitForTimeout(150);
  assert.equal(await toc.locator('.toc-card').count(),0,'a name absent from the story must find nothing');
  assert.ok(await toc.locator('.toc-empty').count()>0,'an empty result must say so');

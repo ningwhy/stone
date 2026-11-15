@@ -25,7 +25,68 @@ FACE_BOXES = json.loads((ROOT / 'art/identity/auto-face-boxes.json').read_text()
 # Characters drawn by scripts/gen_new_characters.py / gen_ch20_characters.py,
 # outside the calibration pipeline that owns the manifest.
 NEW_CHARACTERS = ['yuanchun', 'jia_lian', 'jia_huan', 'zhao_yiniang', 'shi_xiangyun', 'she_yue',
-                  'zijun', 'cui_lv', 'si_er', 'jia_lan']
+                  'zijun', 'cui_lv', 'si_er', 'jia_lan',
+                  'jinyuan', 'caiyun', 'jia_qin']
+
+
+def final_anchor(key: str, entry: dict, cal: dict):
+    """The feet anchor expressed in the **final PNG's** pixel coordinates.
+
+    `art/calibration.json` stores the anchor where it was measured — on the
+    raw matte, before the crop and the scale. The bitmap the browser loads is
+    the cropped-and-scaled one, so the raw value lands outside the picture:
+    `jia_lan-portrait` carried an anchor of (227, 1130) on a 385x600 bitmap,
+    which is 530 pixels below the feet.
+
+    The transform is the one `scripts/map_facebox_to_final.py` replays:
+
+      1. `bodyCompress` squeezes everything below `split` by `factor`, so the
+         anchor moves up with it,
+      2. the picture is cropped to its opaque bounding box, which shifts the
+         anchor up and left,
+      3. the result is scaled to the calibrated height.
+
+    Steps 1-3 are affine, so the anchor can be carried through exactly.
+    """
+    from PIL import Image
+
+    matte_path = ROOT / entry['matte']
+    im = Image.open(matte_path).convert('RGBA')
+
+    import numpy as np
+
+    ax, ay = cal['anchor']
+    if cal.get('bodyCompress'):
+        split = cal['bodyCompress']['split']
+        factor = cal['bodyCompress']['factor']
+        lower = im.crop((0, split, im.width, im.height)).resize(
+            (im.width, round((im.height - split) * factor)), Image.Resampling.LANCZOS)
+        joined = Image.new('RGBA', (im.width, split + lower.height))
+        joined.paste(im.crop((0, 0, im.width, split)), (0, 0))
+        joined.paste(lower, (0, split))
+        im = joined
+        if ay > split:
+            ay = split + (ay - split) * factor
+
+    # The crop starts at the first *solid* pixel: `build_art_assets.py` binarises
+    # the alpha at 110 and crops to that box, then scales the crop to the
+    # calibrated height. Measuring the whole canvas instead puts the anchor
+    # 400px out on a 214px bitmap. The box is measured **after** the compression,
+    # because the compression moves the lower body up and changes the extent.
+    alpha = np.asarray(im.getchannel('A'))
+    solid = np.where(alpha >= 110, 255, 0).astype('uint8')
+    rows = np.where(solid.max(axis=1) > 0)[0]
+    cols = np.where(solid.max(axis=0) > 0)[0]
+    if len(rows) == 0 or len(cols) == 0:
+        raise ValueError(f'{key}: blank matte')
+    bbox = (int(cols.min()), int(rows.min()), int(cols.max()) + 1, int(rows.max()) + 1)
+    cropped_w = bbox[2] - bbox[0]
+    cropped_h = bbox[3] - bbox[1]
+    factor = cal['width'] / cropped_w if 'width' in cal else cal['height'] / cropped_h
+    size = (round(cropped_w * factor), round(cropped_h * factor))
+    sx = size[0] / cropped_w
+    sy = size[1] / cropped_h
+    return (ax - bbox[0]) * sx, (ay - bbox[1]) * sy
 
 
 def entry_for(character: str, kind: str) -> dict:
@@ -57,7 +118,7 @@ def entry_for(character: str, kind: str) -> dict:
         'image': f'/assets/rongguo/{key}.png',
         'width': im.width,
         'height': im.height,
-        'anchor': [round(cal['anchor'][0], 3), round(cal['anchor'][1], 3)],
+        'anchor': [0, 0],
         'source': source,
         'matte': f'art/matted/{key}_s{seed}-sam.png',
         'crop': [0, 0, im.width, im.height],
@@ -66,6 +127,8 @@ def entry_for(character: str, kind: str) -> dict:
         'bodyCompress': cal.get('bodyCompress'),
         'identity': identity,
     }
+    ax, ay = final_anchor(key, entry, cal)
+    entry['anchor'] = [round(ax, 3), round(ay, 3)]
     return entry
 
 

@@ -3987,6 +3987,72 @@
     "split": 415,
     "factor": 0.64
    }
+  },
+  {
+   "id": "jinyuan-portrait",
+   "seed": 10234090,
+   "height": 600,
+   "anchor": [
+    413,
+    1119
+   ]
+  },
+  {
+   "id": "jinyuan-chibi",
+   "seed": 10234091,
+   "height": 116,
+   "anchor": [
+    387,
+    939
+   ],
+   "bodyCompress": {
+    "split": 394,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "caiyun-portrait",
+   "seed": 10234100,
+   "height": 600,
+   "anchor": [
+    375,
+    1117
+   ]
+  },
+  {
+   "id": "caiyun-chibi",
+   "seed": 10234101,
+   "height": 116,
+   "anchor": [
+    418,
+    925
+   ],
+   "bodyCompress": {
+    "split": 388,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "jia_qin-portrait",
+   "seed": 10234110,
+   "height": 600,
+   "anchor": [
+    409,
+    1124
+   ]
+  },
+  {
+   "id": "jia_qin-chibi",
+   "seed": 10234111,
+   "height": 116,
+   "anchor": [
+    331,
+    958
+   ],
+   "bodyCompress": {
+    "split": 402,
+    "factor": 0.64
+   }
   }
  ],
  "placements": [

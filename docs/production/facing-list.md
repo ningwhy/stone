@@ -5,9 +5,9 @@
 
 ## 总览
 
-- 位图总数 **179**（立绘 79、Q版 79、表情变体 21）
-- 朝左 **27**，朝右 **152**
-- 依据：实测 **121**、目视裁决 **50**
+- 位图总数 **185**（立绘 82、Q版 82、表情变体 21）
+- 朝左 **28**，朝右 **157**
+- 依据：实测 **124**、目视裁决 **53**
 
 「朝左 / 朝右」指的是**原图**里脸偏向画面的哪一侧——不是角色在剧情里该朝哪边。
 运行时用它决定该用原图还是左右镜像：要求显示的一侧与原图不符时才镜像。
@@ -20,6 +20,8 @@
 | `ban_er-portrait` | ban_er | 立绘 | **朝右** | 实测·3票 |
 | `bao_zhu-chibi` | bao_zhu | Q版 | **朝右** | 目视 |
 | `bao_zhu-portrait` | bao_zhu | 立绘 | **朝右** | 实测·3票 |
+| `caiyun-chibi` | caiyun | Q版 | **朝右** | 目视 |
+| `caiyun-portrait` | caiyun | 立绘 | **朝右** | 实测·3票 |
 | `cui_lv-chibi` | cui_lv | Q版 | **朝右** | 目视 |
 | `cui_lv-portrait` | cui_lv | 立绘 | **朝右** | 实测·3票 |
 | `dai_quan-chibi` | dai_quan | Q版 | **朝右** | 实测·3票 |
@@ -38,6 +40,8 @@
 | `jia_lian-portrait` | jia_lian | 立绘 | **朝左** | 实测·1票 |
 | `jia_qiang-chibi` | jia_qiang | Q版 | **朝左** | default-unmeasured |
 | `jia_qiang-portrait` | jia_qiang | 立绘 | **朝右** | 实测·3票 |
+| `jia_qin-chibi` | jia_qin | Q版 | **朝右** | 目视 |
+| `jia_qin-portrait` | jia_qin | 立绘 | **朝右** | 实测·3票 |
 | `jia_rong-chibi` | jia_rong | Q版 | **朝左** | 目视 |
 | `jia_rong-portrait` | jia_rong | 立绘 | **朝右** | 实测·3票 |
 | `jia_rui-chibi` | jia_rui | Q版 | **朝右** | 实测·1票 |
@@ -52,6 +56,8 @@
 | `jing_xu-portrait` | jing_xu | 立绘 | **朝左** | 目视 |
 | `jinghuan-chibi` | jinghuan | Q版 | **朝右** | 目视 |
 | `jinghuan-portrait` | jinghuan | 立绘 | **朝右** | 实测·3票 |
+| `jinyuan-chibi` | jinyuan | Q版 | **朝右** | 目视 |
+| `jinyuan-portrait` | jinyuan | 立绘 | **朝左** | 实测·3票 |
 | `lai_sheng-chibi` | lai_sheng | Q版 | **朝右** | 目视 |
 | `lai_sheng-portrait` | lai_sheng | 立绘 | **朝左** | 目视 |
 | `li_gui-chibi` | li_gui | Q版 | **朝左** | default-unmeasured |
@@ -209,6 +215,7 @@
 | `jin_rong-chibi` | jin_rong | Q版 | default-unmeasured |
 | `jin_rong-portrait` | jin_rong | 立绘 | default-unmeasured |
 | `jing_xu-portrait` | jing_xu | 立绘 | 目视 |
+| `jinyuan-portrait` | jinyuan | 立绘 | 实测·3票 |
 | `lai_sheng-portrait` | lai_sheng | 立绘 | 目视 |
 | `li_gui-chibi` | li_gui | Q版 | default-unmeasured |
 | `li_gui-portrait` | li_gui | 立绘 | default-unmeasured |

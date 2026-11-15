@@ -1305,6 +1305,54 @@
     }
    },
    "chibi": "right"
+  },
+  "jinyuan": {
+   "portrait": "left",
+   "evidence": {
+    "portrait": {
+     "noseOffset": -0.0244,
+     "mouthOffset": -0.1924,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face in any crop, at any scale, even on the 768x1024 matte; painted head read by eye against a right-facing and a left-facing chibi as references, the nose and mouth sit on the eye midpoint and lean slightly right, so the head turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "caiyun": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.2216,
+     "mouthOffset": 0.2823,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face in any crop, at any scale, even on the 768x1024 matte; painted head read by eye against a right-facing and a left-facing chibi as references, the nose and mouth sit on the eye midpoint and lean slightly right, so the head turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "jia_qin": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.1341,
+     "mouthOffset": 0.1923,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face in any crop, at any scale, even on the 768x1024 matte; painted head read by eye against a right-facing and a left-facing chibi as references, the nose and mouth sit on the eye midpoint and lean slightly right, so the head turns right"
+    }
+   },
+   "chibi": "right"
   }
  },
  "variants": {

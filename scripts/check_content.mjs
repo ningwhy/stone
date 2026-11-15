@@ -101,7 +101,7 @@ for(const book of books.keys()){
 // the "original text" claim behind the node stops being verifiable. The bases
 // for chapters 1-15 are editorial notes rather than the book's own words, so
 // only the chapters whose base text is the original are checked here.
-const VERBATIM_BASE=new Set([16,17,18,19,20,21,22]);
+const VERBATIM_BASE=new Set([16,17,18,19,20,21,22,23]);
 for(const book of books.keys()){
  if(!VERBATIM_BASE.has(book))continue;
  const basePath=resolve(root,`docs/chapter${String(book).padStart(2,'0')}-source.txt`);

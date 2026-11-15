@@ -17,6 +17,19 @@ REVIEWED={
  # （框 [0,99,183,312] 横跨半个身子）。真实脸块由上部 30% 区域内的肤色
  # 连通块给出 [55,23,115,108]，已目视核对。
  'cui_lv-portrait':[55,23,115,108],
+ # 第二十三回三个新角色：金钏儿、彩云、贾芹。
+ # 自动检测在两个 Q 版上完全失败（caiyun-chibi / jia_qin-chibi 报「no face
+ # candidate found」——脸太小，肤色连通块达不到阈值）；jinyuan-chibi 虽检测出
+ # 框，但下沿落到 70（已经压进衣领），与既有 Q 版「下沿在 59~60 即下巴线」
+ # 的规范不符。三个 Q 版由肤色分带量化 + 目视重标：上沿在发际线略下、
+ # 下沿在下巴线、左右含双耳。三张立绘的自动框经目视核对无误，登记在此
+ # 是为了让重跑不把它们打回自动值。
+ 'jinyuan-portrait':[78,22,128,72],
+ 'jinyuan-chibi':[13,27,62,62],
+ 'caiyun-portrait':[46,38,88,82],
+ 'caiyun-chibi':[9,30,59,64],
+ 'jia_qin-portrait':[63,42,107,82],
+ 'jia_qin-chibi':[7,30,57,64],
 }
 boxes={};out=Image.new('RGB',(1440,((len(keys)+7)//8)*200),'#e6dfce');d=ImageDraw.Draw(out)
 for i,key in enumerate(keys):

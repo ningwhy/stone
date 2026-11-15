@@ -227,6 +227,31 @@ REVIEWED = {
                                     'that fit failed the region-name check, and both '
                                     'the nose and the mouth then sit left of the eye '
                                     'midpoint, so the head turns right'),
+    # 第二十三回的三名新角色。检测器在这三张 Q 版上彻底失效：Vision 的人脸
+    # 检测器在 64x116 的成品、1400/2200px 的放大、以及 768x1024 的原始 matte
+    # 上都读不出人脸（连人脸轮廓路径也返回 NOFACE）——Q 版的大头身画风不在
+    # 它的拟合范围里。改用目视裁决，判读标准先在双向标尺上标定：
+    #   cui_lv-chibi（朝右）  鼻尖与嘴落在红线的右侧，
+    #   jia_rong-chibi（朝左）鼻尖与嘴落在红线的左侧。
+    # 三个新角色的鼻嘴都基本落在眼中点上，只有极轻微的右偏，与 cui_lv
+    # 同型，故一并记为朝右。整身姿态也一致：朝左的两个标尺是明显的侧身
+    # 站姿，而这三个新角色都是正面站姿，与 cui_lv、jia_lan 相同。
+    'jinyuan-chibi': ('right', 'detector reads no face in any crop, at any scale, '
+                              'even on the 768x1024 matte; painted head read by eye '
+                              'against a right-facing and a left-facing chibi as '
+                              'references, the nose and mouth sit on the eye '
+                              'midpoint and lean slightly right, so the head turns '
+                              'right'),
+    'caiyun-chibi': ('right', 'detector reads no face in any crop, at any scale, '
+                             'even on the 768x1024 matte; painted head read by eye '
+                             'against a right-facing and a left-facing chibi as '
+                             'references, the nose and mouth sit on the eye midpoint '
+                             'and lean slightly right, so the head turns right'),
+    'jia_qin-chibi': ('right', 'detector reads no face in any crop, at any scale, '
+                              'even on the 768x1024 matte; painted head read by eye '
+                              'against a right-facing and a left-facing chibi as '
+                              'references, the nose and mouth sit on the eye midpoint '
+                              'and lean slightly right, so the head turns right'),
 }
 
 # Vehicles are cast members but not a single face: the sedan is carried by four

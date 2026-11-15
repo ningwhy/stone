@@ -6447,8 +6447,8 @@
    "width": 287,
    "height": 600,
    "anchor": [
-    423,
-    1023
+    144.476,
+    599.349
    ],
    "source": "art/source/yuanchun-portrait_s10234000-01.png",
    "matte": "art/matted/yuanchun-portrait_s10234000-sam.png",
@@ -6479,8 +6479,8 @@
    "width": 46,
    "height": 116,
    "anchor": [
-    393,
-    963
+    24.583,
+    115.769
    ],
    "source": "art/source/yuanchun-chibi_s10234001-01.png",
    "matte": "art/matted/yuanchun-chibi_s10234001-sam.png",
@@ -6514,8 +6514,8 @@
    "width": 180,
    "height": 600,
    "anchor": [
-    436,
-    984
+    115.862,
+    599.312
    ],
    "source": "art/source/jia_lian-portrait_s10234002-01.png",
    "matte": "art/matted/jia_lian-portrait_s10234002-sam.png",
@@ -6546,8 +6546,8 @@
    "width": 48,
    "height": 116,
    "anchor": [
-    354,
-    970
+    20.015,
+    115.874
    ],
    "source": "art/source/jia_lian-chibi_s10234003-01.png",
    "matte": "art/matted/jia_lian-chibi_s10234003-sam.png",
@@ -6581,8 +6581,8 @@
    "width": 169,
    "height": 600,
    "anchor": [
-    449,
-    1112
+    120.228,
+    599.432
    ],
    "source": "art/source/jia_huan-portrait_s10234010-01.png",
    "matte": "art/matted/jia_huan-portrait_s10234010-sam.png",
@@ -6613,8 +6613,8 @@
    "width": 66,
    "height": 116,
    "anchor": [
-    443,
-    947
+    47.448,
+    115.894
    ],
    "source": "art/source/jia_huan-chibi_s10234011-01.png",
    "matte": "art/matted/jia_huan-chibi_s10234011-sam.png",
@@ -6648,8 +6648,8 @@
    "width": 191,
    "height": 600,
    "anchor": [
-    344,
-    1125
+    83.425,
+    599.452
    ],
    "source": "art/source/zhao_yiniang-portrait_s10234020-01.png",
    "matte": "art/matted/zhao_yiniang-portrait_s10234020-sam.png",
@@ -6680,8 +6680,8 @@
    "width": 68,
    "height": 116,
    "anchor": [
-    416,
-    936
+    40.683,
+    115.914
    ],
    "source": "art/source/zhao_yiniang-chibi_s10234021-01.png",
    "matte": "art/matted/zhao_yiniang-chibi_s10234021-sam.png",
@@ -6715,8 +6715,8 @@
    "width": 188,
    "height": 600,
    "anchor": [
-    401,
-    1121
+    93.447,
+    599.448
    ],
    "source": "art/source/shi_xiangyun-portrait_s10234030-01.png",
    "matte": "art/matted/shi_xiangyun-portrait_s10234030-sam.png",
@@ -6747,8 +6747,8 @@
    "width": 76,
    "height": 116,
    "anchor": [
-    474,
-    960
+    55.011,
+    115.912
    ],
    "source": "art/source/shi_xiangyun-chibi_s10234031-01.png",
    "matte": "art/matted/shi_xiangyun-chibi_s10234031-sam.png",
@@ -6782,8 +6782,8 @@
    "width": 147,
    "height": 600,
    "anchor": [
-    359,
-    1115
+    57.104,
+    599.436
    ],
    "source": "art/source/she_yue-portrait_s10234040-01.png",
    "matte": "art/matted/she_yue-portrait_s10234040-sam.png",
@@ -6814,8 +6814,8 @@
    "width": 58,
    "height": 116,
    "anchor": [
-    394,
-    951
+    31.667,
+    115.879
    ],
    "source": "art/source/she_yue-chibi_s10234041-01.png",
    "matte": "art/matted/she_yue-chibi_s10234041-sam.png",
@@ -6849,8 +6849,8 @@
    "width": 157,
    "height": 600,
    "anchor": [
-    369,
-    1121
+    61.025,
+    599.446
    ],
    "source": "art/source/zijun-portrait_s10234050-01.png",
    "matte": "art/matted/zijun-portrait_s10234050-sam.png",
@@ -6881,8 +6881,8 @@
    "width": 64,
    "height": 116,
    "anchor": [
-    351,
-    938
+    26.182,
+    115.855
    ],
    "source": "art/source/zijun-chibi_s10234051-01.png",
    "matte": "art/matted/zijun-chibi_s10234051-sam.png",
@@ -6916,8 +6916,8 @@
    "width": 196,
    "height": 600,
    "anchor": [
-    427,
-    1119
+    116.932,
+    599.443
    ],
    "source": "art/source/cui_lv-portrait_s10234060-01.png",
    "matte": "art/matted/cui_lv-portrait_s10234060-sam.png",
@@ -6948,8 +6948,8 @@
    "width": 69,
    "height": 116,
    "anchor": [
-    358,
-    953
+    30.144,
+    115.987
    ],
    "source": "art/source/cui_lv-chibi_s10234061-01.png",
    "matte": "art/matted/cui_lv-chibi_s10234061-sam.png",
@@ -6983,8 +6983,8 @@
    "width": 164,
    "height": 600,
    "anchor": [
-    361,
-    1114
+    68.936,
+    599.443
    ],
    "source": "art/source/si_er-portrait_s10234070-01.png",
    "matte": "art/matted/si_er-portrait_s10234070-sam.png",
@@ -7015,8 +7015,8 @@
    "width": 54,
    "height": 116,
    "anchor": [
-    347,
-    990
+    22.263,
+    115.899
    ],
    "source": "art/source/si_er-chibi_s10234071-01.png",
    "matte": "art/matted/si_er-chibi_s10234071-sam.png",
@@ -7050,8 +7050,8 @@
    "width": 385,
    "height": 600,
    "anchor": [
-    227,
-    1130
+    120.379,
+    599.469
    ],
    "source": "art/source/jia_lan-portrait_s10234080-01.png",
    "matte": "art/matted/jia_lan-portrait_s10234080-sam.png",
@@ -7082,8 +7082,8 @@
    "width": 103,
    "height": 116,
    "anchor": [
-    652,
-    988
+    95.448,
+    116.705
    ],
    "source": "art/source/jia_lan-chibi_s10234081-01.png",
    "matte": "art/matted/jia_lan-chibi_s10234081-sam.png",
@@ -7111,6 +7111,207 @@
     ]
    },
    "hash": "28fb49ed3048"
+  },
+  "jinyuan-portrait": {
+   "image": "/assets/rongguo/jinyuan-portrait.png",
+   "width": 214,
+   "height": 600,
+   "anchor": [
+    117.245,
+    599.43
+   ],
+   "source": "art/source/jinyuan-portrait_s10234090-01.png",
+   "matte": "art/matted/jinyuan-portrait_s10234090-sam.png",
+   "crop": [
+    0,
+    0,
+    214,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "jinyuan",
+    "features": "少妇圆脸；眉弯目秀；唇点胭脂；体态丰腴，手臂圆润，贾母身边的丫鬟，王夫人房中第一等，十七八岁",
+    "seed": 10234090,
+    "faceBox": [
+     78,
+     22,
+     128,
+     72
+    ]
+   },
+   "hash": "1c6d3e3ecf16"
+  },
+  "jinyuan-chibi": {
+   "image": "/assets/rongguo/jinyuan-chibi.png",
+   "width": 75,
+   "height": 116,
+   "anchor": [
+    38.085,
+    115.798
+   ],
+   "source": "art/source/jinyuan-chibi_s10234091-01.png",
+   "matte": "art/matted/jinyuan-chibi_s10234091-sam.png",
+   "crop": [
+    0,
+    0,
+    75,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 394,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "jinyuan",
+    "features": "少妇圆脸；眉弯目秀；唇点胭脂；体态丰腴，手臂圆润，贾母身边的丫鬟，王夫人房中第一等，十七八岁",
+    "seed": 10234091,
+    "faceBox": [
+     13,
+     27,
+     62,
+     62
+    ]
+   },
+   "hash": "7e52d18fd9c7"
+  },
+  "caiyun-portrait": {
+   "image": "/assets/rongguo/caiyun-portrait.png",
+   "width": 166,
+   "height": 600,
+   "anchor": [
+    70.983,
+    599.441
+   ],
+   "source": "art/source/caiyun-portrait_s10234100-01.png",
+   "matte": "art/matted/caiyun-portrait_s10234100-sam.png",
+   "crop": [
+    0,
+    0,
+    166,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "caiyun",
+    "features": "少女鹅蛋脸；眉细眼明；鼻小唇薄；身段轻软，神态厚道，王夫人房中丫鬟，十五六岁",
+    "seed": 10234100,
+    "faceBox": [
+     46,
+     38,
+     88,
+     82
+    ]
+   },
+   "hash": "98604b326a42"
+  },
+  "caiyun-chibi": {
+   "image": "/assets/rongguo/caiyun-chibi.png",
+   "width": 64,
+   "height": 116,
+   "anchor": [
+    36.519,
+    115.941
+   ],
+   "source": "art/source/caiyun-chibi_s10234101-01.png",
+   "matte": "art/matted/caiyun-chibi_s10234101-sam.png",
+   "crop": [
+    0,
+    0,
+    64,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 388,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "caiyun",
+    "features": "少女鹅蛋脸；眉细眼明；鼻小唇薄；身段轻软，神态厚道，王夫人房中丫鬟，十五六岁",
+    "seed": 10234101,
+    "faceBox": [
+     9,
+     30,
+     59,
+     64
+    ]
+   },
+   "hash": "b93859896dbd"
+  },
+  "jia_qin-portrait": {
+   "image": "/assets/rongguo/jia_qin-portrait.png",
+   "width": 192,
+   "height": 600,
+   "anchor": [
+    113.88,
+    599.451
+   ],
+   "source": "art/source/jia_qin-portrait_s10234110-01.png",
+   "matte": "art/matted/jia_qin-portrait_s10234110-sam.png",
+   "crop": [
+    0,
+    0,
+    192,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "jia_qin",
+    "features": "青年圆脸；眉浓眼小；面带油光；体态虚胖，举止浮滑，贾政的远房侄儿，管着两处庙宇的年轻事务，十八九岁",
+    "seed": 10234110,
+    "faceBox": [
+     63,
+     42,
+     107,
+     82
+    ]
+   },
+   "hash": "4314a7dc712a"
+  },
+  "jia_qin-chibi": {
+   "image": "/assets/rongguo/jia_qin-chibi.png",
+   "width": 60,
+   "height": 116,
+   "anchor": [
+    22.712,
+    115.973
+   ],
+   "source": "art/source/jia_qin-chibi_s10234111-01.png",
+   "matte": "art/matted/jia_qin-chibi_s10234111-sam.png",
+   "crop": [
+    0,
+    0,
+    60,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 402,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "jia_qin",
+    "features": "青年圆脸；眉浓眼小；面带油光；体态虚胖，举止浮滑，贾政的远房侄儿，管着两处庙宇的年轻事务，十八九岁",
+    "seed": 10234111,
+    "faceBox": [
+     7,
+     30,
+     57,
+     64
+    ]
+   },
+   "hash": "2d500b76e7da"
   },
   "baoyu-portrait-angry": {
    "image": "/assets/rongguo/baoyu-portrait-angry.png",
