@@ -71,7 +71,7 @@
 | 字段 | 说明 |
 | --- | --- |
 | `title` | 卡名：人名或品名 |
-| `subtitle` | 人物：全名 + 关系；物品：类别 + 笔数 |
+| `subtitle` | **只补卡名没说的那部分**：人物——账上写简称才补全名，再加关系（账上已写全名就只留关系）；物品——流转链的首尾（「甄士隐 → 贾雨村」），不重复徽章上的类别 |
 | `badge` | 徽章文字：人 / 银两 / 衣物 / 物件 / 人情 |
 | `category` | 账上类别（决定卡面配色，`.cat-person` 等） |
 | `art` | `portrait` / `goods` / `seal` —— 大图的来路 |
@@ -93,8 +93,11 @@
 只读到第一回时，卡片不该写「出场于 第一回、第二回、第三回、第四回」：
 那三回读者还没读到，写出来就是剧透。`unlockedBooks()` 负责这件事。
 
-这条纪律在 `src/cardPreview.ts` 的 `toFlow()` 里落地，并由
-`tests/card-preview.test.ts` 的「未入账的账不泄露」一节钉住。
+**物品卡的副题也一样**：它说流转链的首尾（「甄士隐 → 贾雨村」），
+一笔都还没入账时只写「尚未入账」——说得出从谁到谁同样是剧透。
+
+这条纪律在 `src/cardPreview.ts` 的 `toFlow()` 与 `itemSubtitle()` 里落地，并由
+`tests/card-preview.test.ts` 的「未入账的账不泄露」「没读到的回不当剧透」两节钉住。
 
 > 实现记录：最初 `toFlow()` 只对 `source` 与 `circumstance` 做了遮蔽，
 > 单元测试当场抓出 `what`/`from`/`to` 仍在泄露——这是写测试的收益，不是形式。
@@ -180,11 +183,99 @@ onClick={()=>{setLedgerPerson(p.name);setPreviewCard(personCard(p,ledgerUnlocked
 > 「点贾雨村 → `.ledger-summary` 出现贾雨村」的断言——它仍然通过，因为
 > 右侧的流转链照旧换成了贾雨村那一栏，只是多弹了一张卡。
 
+### 一个坑：图片「加载成功」不等于「画出来了」
+
+上线后的第一张线上截图里，**卡面是一片空白渐变**——没有脸。
+而所有自动断言都绿了：`naturalWidth: 317`，图片明明加载成功。
+
+原因在 CSS 层叠：
+
+```css
+/* 册页卡片（既有）的通用规则：卡面里的文字要浮在图上面 */
+.card-face>*:not(.card-thumb):not(.card-blank){position:relative;z-index:2}
+```
+
+这条规则的特异性是 **(0,3,0)**——两个 `:not()` 各计一个类，再加 `.card-face`。
+我写的 `.preview-face .card-face-portrait` 只有 **(0,2,0)**，**输了**，
+于是 `position: absolute` 被覆盖成 `relative`：
+
+- `relative` + `inset:0` 不会撑开盒子 → holder 变成 `height: 0`；
+- 图片跟着塌成 `0×0`；
+- 但 `<img>` 的 `naturalWidth` 仍然是 317 —— **图片确实加载了，只是没有尺寸可画**。
+
+修法：把选择器写成同等特异性、靠后出现即可取胜：
+
+```css
+.card-face.preview-face>.card-face-portrait{position:absolute;inset:0;…}
+```
+
+> 通用规则没有改——它是册页卡片的既有行为，只是不该误伤新加的图容器。
+> 同样的坑也踩在 `.preview-badge` / `.preview-title` / `.card-face-seal` 上，
+> 一并改成了 `.card-face.preview-face>…`。
+
+**教训**：`naturalWidth > 0` 只证明图片下载到了，不证明它画在了该在的地方。
+验收要**量盒子**（`getBoundingClientRect()`），并且**看图**。
+现在 `tests/card-preview.mjs` 里已经有两条这样的断言：
+
+- 图片必须有实际可见尺寸，且**从卡面顶部开始**（头要露出来）；
+- 花押必须**铺满**卡面（`sealW > faceW*0.9`）。
+
+### 同一个通用规则的第二个坑：`z-index` 也要压
+
+修好 `position` 之后，图是画出来了——**可卡名还是看不清**。
+
+原因还是上面那条通用规则。它除了 `position:relative`，还给了 `z-index:2`：
+
+```css
+.card-face>*:not(.card-thumb):not(.card-blank){position:relative;z-index:2}
+```
+
+于是**立绘容器被抬到 `z-index:2`**，而卡面底部的托底渐变
+`.preview-face::after` 只有 `z-index:1` → **渐变被立绘盖住了**。
+
+后果：图正常显示，但卡名与副题**没有深色托底**，直接压在浅色衣服上。
+实测卡面最下缘亮度 **150**（理论应降到 30 上下），花押卡更糟——
+浅色花押配浅色卡名，等于白字写在白纸上。
+
+修法是**三处都要压 `z-index`**（不只是 `position`）：
+
+```css
+.card-face.preview-face>.card-face-portrait{…;z-index:0}   /* 立绘近景 */
+.card-face.preview-face>.card-face-seal{…;z-index:0}       /* 花押 */
+.card-face.preview-face>.card-face-img{…;z-index:0}        /* 器物图 */
+```
+
+> ★ 通用规则同时动了 `position` **和** `z-index`，只解一个不够。
+> 下次再往 `.card-face` 里加东西，记得两个都要压。
+
+### ★ 有些毛病只有像素能看见：读截图
+
+上面两个坑，**DOM 全都看不出来**：
+
+- 图片在 DOM 里、`naturalWidth` 是 317、`getBoundingClientRect()` 也非零；
+- 渐变在 DOM 里、`::after` 确实存在、也确实 `position:absolute`。
+
+但读者看到的是「一张空卡」和「看不清的字」。
+**只有把像素读出来才知道**。
+
+所以 `tests/lib/png.mjs`（自写的最小 PNG 解码器，项目没有 pngjs/sharp）
+用来读 Playwright 截出来的图，`tests/card-preview.mjs` 里有一条
+`checkNameLegible()` 对**三种卡**（人物 / 物品 / 花押）各查一遍：
+
+| 判据 | 含义 | 实测（修好后） |
+|---|---|---|
+| 卡面最下缘最大亮度 `< 110` | 深色托底真的盖在图上 | 29 / 30 / 29 |
+| 卡名行亮笔画占比 `> 2%` | 那行真的有奶油色的字 | 13.7% / 6.0% / 25.8% |
+| 卡名行峰值 − 均值 `> 50` | 笔画压在比它暗的托底上 | 均值 67 / 59 / 94，峰值 248 |
+
+> 判据用「笔画占比 + 峰均差」而不是「行均值」：均值会被画面本身带偏——
+> 深色袍子把均值拉低，浅色袍子把均值拉高，两种人都不该被判成「看不清」。
+
 ## 六、门禁与验收
 
 ```bash
 npx tsc --noEmit                              # 类型
-npm test -- tests/card-preview.test.ts         # 数据层 11 项
+npm test -- tests/card-preview.test.ts         # 数据层 13 项
 node tests/card-preview.mjs                    # 浏览器定向验收
 npm run test:online:card-preview               # 线上复验（部署后）
 ```
@@ -198,32 +289,46 @@ npm run test:online:card-preview               # 线上复验（部署后）
 5. 被转手的人（英莲）挂自己的立绘；
 6. 没画出像的人落花押；
 7. **落花押的名单是固定的**（归一后仍无像的恰好那十二个；`北静郡王`/`甄家娘子` 必须有像）；
-8. **未入账不泄露**（原文、情形、品名、双方全部为空）；
-9. 入账后原文与情形才露出来；
-10. 流转一行说得清；
-11. 一笔账能找回它两头的卡片。
+8. **副题只补卡名没说的**（不重复卡名；账上写简称才补全名）；
+9. **未入账不泄露**（原文、情形、品名、双方全部为空）；
+10. **没读到的回不当剧透**（出场回目只算已入账的）；
+11. 入账后原文与情形才露出来；
+12. 流转一行说得清；
+13. 一笔账能找回它两头的卡片。
 
 `tests/card-preview.mjs`（浏览器）钉住：
 
 1. 点人物 → 卡片弹出；
 2. 卡片有大图、卡名、流转时间线、原文引文、情形说明；
 3. 大图**真的加载出像素**（不是只挂在 DOM 里）；
-4. 未入账的账只留「？」；
-5. 关掉卡片后**仍在背包**（册页还在、列表还在）；
-6. 点物品同样弹出（英莲三笔同链都列出）；
-7. 无像的人落花押，**不出现坏图**；
-8. 全程零 JS 错误。
+4. **大图真的有可见尺寸，且从卡面顶部开始**（抓「加载成功但画面空白」）；
+5. **卡名在卡面上真的看得清**（读像素：托底盖住图、笔画压在暗底上）——人物 / 物品 / 花押三种卡各查一遍；
+6. 未入账的账只留「？」；
+7. 关掉卡片后**仍在背包**（册页还在、列表还在）；
+8. 点物品同样弹出（英莲三笔同链都列出）；
+9. 无像的人落花押，**不出现坏图**，且花押**铺满卡面**；
+10. 再点同一人收起卡片、账簿回到 54 笔总账；
+11. 全程零 JS 错误。
+
+> 第 5 条的判据来自实测：**回退修复后立刻报**
+> `the dark bed under the card name must cover the picture, but the bottom row is still bright (176)`。
 
 `tests/online-card-preview.mjs`（线上）钉住：
 
 1. 点人物 → 卡片在账簿之上弹出；
 2. 卡名对得上、卡面有图、有流转、有引文、有回目印；
 3. 大图**从源站真的取回像素**；
-4. 关掉卡片后账簿仍是 54 笔；
-5. 全程零 JS 错误。
+4. **卡片报的回数 == 已入账的回数**（不剧透没读到的回）；
+5. **卡名在卡面上真的看得清**（读线上截图的像素）；
+6. 关掉卡片 → 账簿仍在；再点同一人 → 回到 54 笔总账；
+7. 全程零 JS 错误。
+
+> 第 5 条实测：`{"bottomMax":29,"nameMean":59,"namePeak":248,"inkRatio":0.107}`。
+> 线上才是读者真正看到的地方，所以这条判据在线上也要跑一遍。
 
 ## 七、相关文档
 
 - `docs/production/ledger.md` —— 账簿本身（字段、四方向、金额纪律、解锁规则）
 - `docs/production/collection.md` —— 册页卡片体系（卡牌视觉语言的来源）
+- `docs/production/ui-diagnosis.md` —— UI 改造的诊断纪律（量盒子，别看图猜）
 - `docs/production/agent-notes.md` —— 生产笔记

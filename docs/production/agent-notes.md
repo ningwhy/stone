@@ -292,6 +292,81 @@ if(await skip.isVisible())await skip.click();
 - **图鉴是长列表 + `loading="lazy"`**：不滚到视口 `naturalWidth` 是 0 → 验证脚本要 `scrollIntoView` 再等 `img.complete`。
 - **线上脚本用一次性 profile**：持久化 profile 里存着读过的档，开书会落在回中间 → `rmSync` + `launchPersistentContext`。
 
+### ★ 加载成功 ≠ 画出来了（卡片页上线后返工一次）
+
+卡片页第一版上线，线上截图里**卡面一片空白渐变，没有脸**，
+而所有自动断言都绿了——`naturalWidth: 317`，图片明明加载成功。
+
+根因在 CSS 层叠：
+
+```css
+/* 册页卡片的通用规则：卡面里的文字要浮在图上面 */
+.card-face>*:not(.card-thumb):not(.card-blank){position:relative;z-index:2}
+```
+
+这条的特异性是 **(0,3,0)**（两个 `:not()` 各计一个类，再加 `.card-face`），
+而 `.preview-face .card-face-portrait` 只有 **(0,2,0)** → **输了** →
+`position:absolute` 被覆盖成 `relative` → `relative` + `inset:0` 撑不开盒子 →
+holder `height:0` → 图片 `0×0`。
+**但 `<img>` 的 `naturalWidth` 仍是 317 —— 图片下载到了，只是没有尺寸可画。**
+
+修法：写成**同等特异性、靠后出现**即可取胜，不动通用规则（它是册页卡片的既有行为）：
+
+```css
+.card-face.preview-face>.card-face-portrait{position:absolute;inset:0;…}
+```
+
+`.preview-badge` / `.preview-title` / `.card-face-seal` 同样被那条通用规则误伤，一并改。
+
+> **判据**：`naturalWidth>0` 只证明下载到了。验收要**量盒子**
+> （`getBoundingClientRect()`）**并且看图**。
+> 现在的断言：图片要有可见尺寸且**从卡面顶部开始**；花押要**铺满**卡面。
+
+### ★ 同一个通用规则压了 `position` **和** `z-index`——只解一个不够（返工第二次）
+
+上面那条通用规则 `.card-face>*:not(...){position:relative;z-index:2}`
+**两个属性都压**。上一轮只解了 `position`（图画出来了），却漏了 `z-index`：
+
+- 立绘容器被抬到 `z-index:2`，而卡面底部的托底渐变 `.preview-face::after` 只有 `z-index:1`
+  → **渐变被立绘盖住**；
+- 后果：图正常显示，但**卡名与副题没有深色托底**，直接压在浅色衣服上
+  （实测卡面最下缘亮度 **150**，理论应降到 30；花押卡是浅底浅字，等于白字写白纸）。
+
+→ **三处都要压 `z-index:0`**：`.card-face-portrait` / `.card-face-seal` / `.card-face-img`。
+（器物图是直接挂在卡面上的 `<img>`，也会被那条通用规则命中。）
+
+### ★ 有些毛病只有像素能看见——读截图，别只读 DOM
+
+上面两个坑 **DOM 全都看不出来**：图片在 DOM 里、`naturalWidth` 非零、
+`getBoundingClientRect()` 非零；渐变也在 DOM 里、`::after` 确实存在。
+但读者看到的是「空卡」和「看不清的字」。
+
+→ 项目没有 pngjs/sharp，**自写了一个最小 PNG 解码器 `tests/lib/png.mjs`**
+（8bit RGB/RGBA、非隔行、5 种 filter）。
+→ `tests/card-preview.mjs` 的 `checkNameLegible()` 对**人物 / 物品 / 花押三种卡**各查一遍：
+
+| 判据 | 实测（修好后） |
+|---|---|
+| 卡面最下缘最大亮度 `< 110`（托底真的盖在图上） | 29 / 30 / 29 |
+| 卡名行亮笔画占比 `> 2%`（那行真有奶油色的字） | 13.7% / 6.0% / 25.8% |
+| 卡名行峰值 − 均值 `> 50`（笔画压在更暗的托底上） | 均值 67 / 59 / 94，峰值 248 |
+
+> ★ 判据**不能用行均值**定胜负：均值被画面本身带偏——深色袍子拉低、浅色袍子拉高，
+> 两种人都不该被判成「看不清」。要问的是「笔画占比」和「峰均差」。
+> ★ 新断言**必须反向验证过**：回退修复 → 立刻报
+> `the bottom row is still bright (176)`；恢复 → 绿。
+
+### ★ 长测试跑着跑着别改 `src/`（我犯过）
+
+smoke 走到一半我改了 `src/cardPreview.ts` → vite 整页重载 → 页面恢复到存档、
+推进节奏被打乱 → 节点序列错位，`U001 !== U002` 挂掉。
+**不是产品缺陷**。改源码前先把长测试停掉。
+
+### ★ 渐变与 border 不重叠
+`.preview-face::after` 的渐变铺到 padding-box 底，**不覆盖 border** →
+分类色用 `border-bottom` 时，最下缘会露出一条亮线（实测末行亮度 30 → 149 硬跳）。
+→ 分类色改用 `box-shadow: inset 0 -2px 0 <色>`（inset 在 border-box 内），改后 30 → 26 平滑。
+
 ---
 
 ## 七、部署
@@ -322,5 +397,6 @@ if(await skip.isVisible())await skip.click();
   - 21=139 节点/12 段/3 新角色/新建 2 图（`yihong`、`jialian_home`）
   - 20=39 节点/7 段/4 新角色；19=78 节点/8 段/新建 `xiren_home`；18=135 节点/16 段；17=35 节点；16=28 节点/零新图
 - 全局规模：1924 节点 / 198 段 / 46 图 / 81 人 / 284 资产 / 1007 证据。
+- **背包卡片页已上线**（23 回之后，2026-11-16）：`src/cardPreview.ts`（数据层）+ `src/CardPreview.tsx`（UI）+ `src/styles.css`。账簿里点人/物 → 弹卡牌式大图预览。文档 `docs/production/card-preview.md`；测试 `tests/card-preview.test.ts`（13 项）/`.mjs`（浏览器）/`.mjs`（线上 `npm run test:online:card-preview`）。
 - **仍缺的两张大地图**：大观园全景、省亲正殿。
 - 制作记录在 `docs/chapterNN-production.md`，底本在 `docs/chapterNN-source.txt`。

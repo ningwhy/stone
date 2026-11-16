@@ -12,6 +12,7 @@ import assert from 'node:assert/strict';
 import {mkdirSync,readFileSync} from 'node:fs';
 import {dismissPickup,dismissLeaf} from './lib/pickup.mjs';
 import {seekSection} from './lib/toc.mjs';
+import {decodePng,luminance,rowMaxLuminance} from './lib/png.mjs';
 
 const ledger=JSON.parse(readFileSync('design/ledger.json','utf8'));
 const ledgerTotal=ledger.entries.length;
@@ -29,6 +30,53 @@ const reading=async()=>{
   await page.waitForFunction(()=>!!document.querySelector('.dialogue-text')?.textContent?.trim(),undefined,{timeout:60000});
   await page.locator('.game-map[data-scene-ready]').waitFor({timeout:120000});
 };
+
+/** Is the name on the card actually legible?
+ *
+ *  The card face is a pale portrait (or a pale seal) with a dark gradient laid
+ *  over its lower part so the cream name and subtitle can be read on top of
+ *  it. That gradient is a ::after overlay — and the general rule
+ *  `.card-face>*:not(...){position:relative;z-index:2}` also matches the
+ *  picture holder, lifting it *above* the overlay (z-index:1). The picture
+ *  then draws fine and the gradient hides *behind* it: the name sits on a
+ *  pale robe with nothing to carry it. The DOM cannot see this — the image is
+ *  present, loaded, and perfectly visible — only the pixels can.
+ *
+ *  So take the screenshot and read it: the bottom of the face must be dark
+ *  (the bed is doing its job), and the name row must carry bright cream
+ *  strokes that stand clear of the bed they sit on.
+ */
+async function checkNameLegible(page,what){
+  const faceBox=await page.locator('.preview-face').boundingBox();
+  const titleBox=await page.locator('.preview-title strong').boundingBox();
+  const png=decodePng(await page.screenshot({clip:faceBox}));
+  const bottomRow=png.height-2;          // just above the classification line
+  const bright=rowMaxLuminance(png,bottomRow,0,Math.floor(png.width*0.6));
+  const nameRow=Math.round(titleBox.y+titleBox.height/2-faceBox.y);
+  const scan=Math.floor(png.width*0.45);
+  let sum=0,ink=0,n=0;
+  for(let x=0;x<scan;x++){
+    const l=luminance(png,x,nameRow);
+    sum+=l;n++;
+    if(l>170)ink++;              // a cream stroke
+  }
+  const mean=sum/n;
+  const peak=rowMaxLuminance(png,nameRow,0,scan);
+  const inkRatio=ink/n;
+  console.log(`${what}:`,JSON.stringify({bottomMax:Math.round(bright),nameRow,
+    nameMean:Math.round(mean),namePeak:Math.round(peak),inkRatio:+inkRatio.toFixed(3)}));
+  assert.ok(bright<110,
+    `the dark bed under the card name must cover the picture, but the bottom row is still bright (${Math.round(bright)})`);
+  // The name is cream lettering on a dark bed. Two things have to hold: the
+  // row must carry bright strokes (there really is lettering in it), and the
+  // strokes must sit on something darker (the bed is doing its job). The row
+  // average on its own cannot decide this — a figure in a pale robe drags it
+  // up, a figure in a dark robe drags it down.
+  assert.ok(inkRatio>0.02,
+    `the card name must show cream lettering, but only ${(inkRatio*100).toFixed(1)}% of its row is bright`);
+  assert.ok(peak-mean>50,
+    `the card name must stand out from its bed, peak ${Math.round(peak)} vs mean ${Math.round(mean)}`);
+}
 
 try{
   await page.goto('http://localhost:5173/',{waitUntil:'commit',timeout:120000});
@@ -83,6 +131,37 @@ try{
   const loaded=await page.evaluate(()=>{const i=document.querySelector('.preview-face .card-face-img');return i?{w:i.naturalWidth,h:i.naturalHeight}:null;});
   assert.ok(loaded&&loaded.w>0&&loaded.h>0,`the card picture must load, got ${JSON.stringify(loaded)}`);
 
+  // Loading is not the same as being visible. A card face can show an empty
+  // gradient while the image is perfectly "loaded": the picture ends up with
+  // a zero-sized box because some other rule won the cascade. So measure the
+  // box on the screen and check that the picture actually lands inside the
+  // face — that is what a reader would see.
+  const shown=await page.evaluate(()=>{
+    const face=document.querySelector('.preview-face');
+    const img=document.querySelector('.preview-face .card-face-img');
+    if(!face||!img)return null;
+    const f=face.getBoundingClientRect(),i=img.getBoundingClientRect();
+    const overlap=Math.max(0,Math.min(f.right,i.right)-Math.max(f.left,i.left))
+      *Math.max(0,Math.min(f.bottom,i.bottom)-Math.max(f.top,i.top));
+    return {faceW:Math.round(f.width),faceH:Math.round(f.height),
+      imgW:Math.round(i.width),imgH:Math.round(i.height),
+      overlapRatio:overlap/(i.width*i.height),
+      imgTop:Math.round(i.top),faceTop:Math.round(f.top)};
+  });
+  console.log('card picture on screen:',JSON.stringify(shown));
+  assert.ok(shown&&shown.imgW>40&&shown.imgH>40,
+    `the card picture must have a visible size, got ${JSON.stringify(shown)}`);
+  // A standing figure is deliberately cropped by the card face (overflow is
+  // hidden), so the picture may spill below the face — what matters is that a
+  // real part of it is drawn on the face, and that it starts at the top of it
+  // (the head is what the reader recognises).
+  assert.ok(shown.overlapRatio>0.2,
+    `the card picture must be drawn on the card face, only ${(shown.overlapRatio*100).toFixed(0)}% overlaps it`);
+  assert.ok(shown.imgTop<=shown.faceTop+shown.faceH*0.3,
+    `the card picture must start at the top of the card face, got ${JSON.stringify(shown)}`);
+  // And the name on the person card must be legible on top of the picture.
+  await checkNameLegible(page,'the person card');
+
   // (3) a locked transfer shows only a "？" — no quote, no circumstance.
   const locked=await page.evaluate(()=>{
     const rows=[...document.querySelectorAll('.preview-flow.locked')];
@@ -106,6 +185,9 @@ try{
   const itemFace=await page.evaluate(()=>{const i=document.querySelector('.preview-face .card-face-img');return i?i.getAttribute('src'):null;});
   assert.ok(itemFace&&/yinglian-portrait/.test(itemFace),`a transferred person must show their own portrait, got ${itemFace}`);
   await page.screenshot({path:'artifacts/card-preview-item.png'});
+
+  // The dark bed under the name must really sit ON TOP of the picture.
+  await checkNameLegible(page,'the item card');
   await page.getByRole('button',{name:'关闭卡片'}).click();
   await card.waitFor({state:'hidden',timeout:8000});
 
@@ -115,6 +197,22 @@ try{
   await card.waitFor({state:'visible',timeout:10000});
   assert.equal(await page.locator('.card-face-seal').count(),1,'an unpainted person must fall back to the seal');
   assert.equal(await page.locator('.preview-face .card-face-img').count(),0,'an unpainted person must not show a broken picture');
+  // The seal must actually cover the card face, not sit as a stamp in a corner.
+  const seal=await page.evaluate(()=>{
+    const face=document.querySelector('.preview-face');
+    const s=document.querySelector('.card-face-seal');
+    if(!face||!s)return null;
+    const f=face.getBoundingClientRect(),r=s.getBoundingClientRect();
+    return {faceW:Math.round(f.width),faceH:Math.round(f.height),
+      sealW:Math.round(r.width),sealH:Math.round(r.height)};
+  });
+  console.log('card seal on screen:',JSON.stringify(seal));
+  assert.ok(seal&&seal.sealW>seal.faceW*0.9&&seal.sealH>seal.faceH*0.9,
+    `the seal must cover the card face, got ${JSON.stringify(seal)}`);
+  // The seal card has no picture to carry the dark bed for it, so the name
+  // ends up on the pale seal itself — the same contrast question, asked of
+  // the fallback face. (Before the fix it read as white text on white paper.)
+  await checkNameLegible(page,'the seal card');
   await page.screenshot({path:'artifacts/card-preview-seal.png'});
   await page.getByRole('button',{name:'关闭卡片'}).click();
   await card.waitFor({state:'hidden',timeout:8000});

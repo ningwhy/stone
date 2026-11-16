@@ -542,34 +542,59 @@ dialog.preview-dialog::backdrop{background:rgba(28,24,16,.62);backdrop-filter:bl
    「预览」比「缩略」大一圈，人脸才认得出来。 */
 .preview-face{position:relative;height:340px;border-radius:0;border:0;background:linear-gradient(160deg,#f7f5e8,#e9e5d1);
   flex:0 0 auto;overflow:hidden;display:block;box-shadow:none}
-.preview-face::after{content:"";position:absolute;inset:auto 0 0 0;height:58%;pointer-events:none;z-index:1;
-  background:linear-gradient(to top,rgba(22,26,20,.88) 0%,rgba(22,26,20,.74) 36%,rgba(22,26,20,.38) 74%,rgba(22,26,20,.06) 100%)}
-/* 分类色：银两金、衣物绯、物件赭、人朱、人情青——与账簿里那一方花押同一套色。 */
-.preview-face.cat-money{border-bottom:2px solid #b8933c}
-.preview-face.cat-clothing{border-bottom:2px solid #a85a52}
-.preview-face.cat-item{border-bottom:2px solid #8a7a50}
-.preview-face.cat-person{border-bottom:2px solid #a3402f}
-.preview-face.cat-favor{border-bottom:2px solid #4f7a5e}
+.preview-face::after{content:"";position:absolute;inset:auto 0 0 0;height:66%;pointer-events:none;z-index:1;
+  background:linear-gradient(to top,rgba(20,24,19,.94) 0%,rgba(20,24,19,.88) 22%,rgba(20,24,19,.70) 48%,rgba(20,24,19,.34) 76%,rgba(20,24,19,.04) 100%)}
+/* 分类色：银两金、衣物绯、物件赭、人朱、人情青——与账簿里那一方花押同一套色。
+   ★ 用 inset 阴影而不是 border-bottom：border 不在渐变的覆盖范围内，
+   会在卡面最下缘露出一条亮线（实测末行亮度 30 → 149 的硬跳）。 */
+.preview-face.cat-money{box-shadow:inset 0 -2px 0 #b8933c}
+.preview-face.cat-clothing{box-shadow:inset 0 -2px 0 #a85a52}
+.preview-face.cat-item{box-shadow:inset 0 -2px 0 #8a7a50}
+.preview-face.cat-person{box-shadow:inset 0 -2px 0 #a3402f}
+.preview-face.cat-favor{box-shadow:inset 0 -2px 0 #4f7a5e}
 .preview-face .card-thumb{position:absolute;inset:0}
-/* 器物图铺满；人物近景另算（见下）。 */
-.preview-face .card-face-img{display:block;width:100%;height:100%;object-fit:cover}
-/* 立绘近景：按 faceBox 裁出的头肩，比整幅立绘更认得出人。 */
-.card-face-portrait{position:absolute;inset:0;overflow:hidden;background:linear-gradient(160deg,#f4f0e2,#e6e2d1)}
-.card-face-portrait .card-face-img{position:absolute;object-fit:contain;object-position:center top}
-/* 账上只有名字、没画出像的：落一方朱印式花押，和账簿里的暗记同一路数。 */
-.card-face-seal{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+/* 器物图铺满；人物近景另算（见下）。
+   ★ 直接挂在卡面上的器物图也要压 z-index：通用规则给 `.card-face>*`
+   上了 z-index:2，会盖住托底渐变（`.preview-face::after` 是 z-index:1）。 */
+.card-face.preview-face>.card-face-img{position:absolute;inset:0;z-index:0;
+  display:block;width:100%;height:100%;object-fit:cover}
+/* 立绘近景：按 faceBox 裁出的头肩，比整幅立绘更认得出人。
+   ★ 选择器必须写成 `.card-face.preview-face>.card-face-portrait`：
+   通用规则 `.card-face>*:not(.card-thumb):not(.card-blank){position:relative;z-index:2}`
+   的特异性是 (0,3,0)（两个 :not 各计一个类），高于 `.preview-face .card-face-portrait`
+   的 (0,2,0) → 覆盖掉 absolute，于是 holder 塌成 height:0，
+   图片跟着变成 0×0，卡面只剩一片空白渐变（图片照样"加载成功"，测不出来）。
+   写成同样特异性的 `.card-face.preview-face>…` 再靠后出现即可取胜。
+   ★ z-index 也要压：那条通用规则还给了 z-index:2，会把立绘抬到
+   `.preview-face::after` 的托底渐变（z-index:1）之上——图是画出来了，
+   可渐变被盖住，底部的卡名与副题没有深色托底，浅色衣服上几乎看不清
+   （实测卡面最下缘亮度 150，理论应降到 30 上下）。这里显式压回 z-index:0。 */
+.card-face.preview-face>.card-face-portrait{position:absolute;inset:0;overflow:hidden;z-index:0;
+  background:linear-gradient(160deg,#f4f0e2,#e6e2d1)}
+.card-face.preview-face>.card-face-portrait .card-face-img{position:absolute;object-fit:contain;object-position:center top}
+/* 账上只有名字、没画出像的：落一方朱印式花押，和账簿里的暗记同一路数。
+   同样要压过上面那条 position:relative；z-index 也要压——否则花押会盖住
+   托底渐变，浅色花押配浅色卡名，等于白字写在白纸上（实测花押卡底
+   亮度 176，卡名完全读不出来）。 */
+.card-face.preview-face>.card-face-seal{position:absolute;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;
   background:radial-gradient(ellipse at 50% 38%,#f0e8d2,#e0d8bd 70%,#d5ccae)}
-.card-face-seal .mono{font-family:"Songti SC",serif;font-size:112px;line-height:1;color:#b9a883;opacity:.5}
-/* 类别徽章压在卡面上缘，像卡牌右上角的属性牌。 */
-.preview-badge{position:absolute;top:11px;left:11px;z-index:3;font-size:10px;letter-spacing:3px;
+.card-face.preview-face>.card-face-seal .mono{font-family:"Songti SC",serif;font-size:112px;line-height:1;color:#b9a883;opacity:.5}
+/* 类别徽章压在卡面上缘，像卡牌右上角的属性牌。
+   同样写成 `.card-face.preview-face>…` 压过通用规则的 position:relative。 */
+.card-face.preview-face>.preview-badge{position:absolute;top:11px;left:11px;z-index:3;font-size:10px;letter-spacing:3px;
   padding:4px 11px;border-radius:3px;color:#fdf6e3;background:rgba(22,26,20,.55);border:1px solid rgba(253,246,227,.3);
   backdrop-filter:blur(2px)}
-/* 卡名压在下缘。 */
-.preview-title{position:absolute;inset:auto 0 0 0;z-index:2;padding:0 16px 15px;
+/* 卡名压在下缘。同样要压过 position:relative，否则 inset:auto 0 0 0 会让它错位。
+   文字底下再压一层柔和的暗晕：卡面底色可能是浅色的衣服，
+   只靠渐变托底时副题几乎看不见（实测副题落在渐变最浅的 6% 处）。 */
+.card-face.preview-face>.preview-title{position:absolute;inset:auto 0 0 0;z-index:2;padding:0 16px 15px;
   display:flex;flex-direction:column;gap:3px;pointer-events:none}
+.card-face.preview-face>.preview-title::before{content:"";position:absolute;inset:-6px -16px -15px -16px;z-index:-1;
+  background:radial-gradient(120% 100% at 20% 100%,rgba(16,19,15,.55),rgba(16,19,15,0) 72%)}
 .preview-title strong{font-family:"Songti SC",serif;font-weight:500;font-size:23px;letter-spacing:4px;color:#fdf8ea;
-  text-shadow:0 1px 5px rgba(0,0,0,.6);line-height:1.25}
-.preview-title small{font-size:11.5px;letter-spacing:.6px;color:#e6e2ce;text-shadow:0 1px 4px rgba(0,0,0,.55)}
+  text-shadow:0 1px 4px rgba(0,0,0,.85),0 0 12px rgba(0,0,0,.6);line-height:1.25}
+.preview-title small{font-size:11.5px;letter-spacing:.6px;color:#e9e5d4;
+  text-shadow:0 1px 3px rgba(0,0,0,.9),0 0 8px rgba(0,0,0,.7)}
 
 .preview-body{padding:13px 16px 16px;overflow-y:auto;min-height:0}
 .preview-ledger{margin:0 0 10px;font-size:11.5px;color:#6b6450;letter-spacing:.4px}

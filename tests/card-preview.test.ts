@@ -100,6 +100,19 @@ test('落花押的名单是固定的：归一之后仍然没有像的，就这�
   }
 });
 
+test('副题只补卡名没说的，不重复卡名', () => {
+  // 账上写「贾雨村」，cast 的全名也是「贾雨村」→ 副题不必再写一遍。
+  const yuncun=cards.people.find(c=>c.title==='贾雨村')!;
+  assert.ok(!yuncun.subtitle.includes('贾雨村'),`the subtitle must not repeat the name, got ${yuncun.subtitle}`);
+  assert.match(yuncun.subtitle,/塾师|塾/,`the subtitle must still say who he is, got ${yuncun.subtitle}`);
+  // 账上写简称「宝玉」，图上是「贾宝玉」→ 副题补上全名才有意义。
+  const baoyu=cards.people.find(c=>c.title==='宝玉');
+  if(baoyu)assert.match(baoyu.subtitle,/贾宝玉/,`a short name earns the full name in the subtitle, got ${baoyu.subtitle}`);
+  // 物品的副题说流转链的首尾，不重复徽章上的类别。
+  const silver=cards.items.find(c=>c.title.includes('白银'));
+  if(silver)assert.doesNotMatch(silver.subtitle,/银两/,`the badge already says the category, got ${silver.subtitle}`);
+});
+
 test('未入账的账不泄露：只留一个「？」', () => {
   const locked=ledgerCards(new Set());
   for(const card of [...locked.people,...locked.items]){

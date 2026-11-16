@@ -163,6 +163,20 @@ function toFlow(entry: LedgerEntry, unlocked: Set<string>): CardFlow {
   };
 }
 
+/** 一个人的副题：只补卡名没说的那部分。
+ *
+ *  账上写「宝玉」，图上是「贾宝玉」——副题补上全名与关系；
+ *  账上已经写「贾雨村」，再补一遍「贾雨村」就是重复，读着别扭。
+ *  副题存在的意义是补信息，不是重复卡名。 */
+function personSubtitle(name: string, actor?: ActorId): string {
+  if (!actor) return '账上有名，书中未曾登场';
+  const entry = cast[actor];
+  const parts: string[] = [];
+  if (entry.fullName && entry.fullName !== name) parts.push(entry.fullName);
+  if (entry.relation) parts.push(entry.relation);
+  return parts.length ? parts.join(' · ') : '账上有名，书中未曾登场';
+}
+
 /** 一个人的卡片：从账上这个人的全部往来里整理出来。 */
 export function personCard(person: PersonLedger, unlocked: Set<string>): CardPreview {
   const art = personArt(person.name);
@@ -172,9 +186,7 @@ export function personCard(person: PersonLedger, unlocked: Set<string>): CardPre
   const actor = art.actor;
   return {
     title: person.name,
-    subtitle: actor
-      ? `${cast[actor].fullName} · ${cast[actor].relation}`
-      : '账上有名，书中未曾登场',
+    subtitle: personSubtitle(person.name, actor),
     badge: '人',
     category: 'person',
     art: art.kind,
@@ -197,14 +209,31 @@ function unlockedBooks(flows: CardFlow[]): number[] {
   return [...new Set(flows.filter(f => f.unlocked).map(f => f.book))].sort((a, b) => a - b);
 }
 
+/** 物品的副题：这东西在谁手里转过。
+ *
+ *  不重复卡名与徽章（类别已经写在徽章上了），只说流转链的首尾：
+ *  「甄士隐 → 贾雨村」。未入账的那一笔不露名字——账还没上册，
+ *  说得出从谁到谁就是剧透。 */
+function itemSubtitle(trace: ItemTrace, flows: CardFlow[]): string {
+  const got = flows.filter(f => f.unlocked);
+  if (got.length === 0) return '尚未入账';
+  const first = got[0].from;
+  const last = got[got.length - 1].to;
+  if (!first || !last) return categoryNames[trace.category];
+  return first === last ? `一直在 ${first} 手里` : `${first} → ${last}`;
+}
+
 /** 一件东西的卡片：从它的流转链里整理出来。 */
 export function itemCard(trace: ItemTrace, unlocked: Set<string>): CardPreview {
   const art = itemArt(trace, unlocked);
-  const flows = trace.entries.map(e => toFlow(e, unlocked));
+  // 按剧情先后排，别依赖账簿里的隐含顺序——副题要说「从谁到谁」，
+  // 首尾排错了就说反了。
+  const ordered = [...trace.entries].sort((a, b) => a.book - b.book || a.node.localeCompare(b.node));
+  const flows = ordered.map(e => toFlow(e, unlocked));
   const got = flows.filter(f => f.unlocked).length;
   return {
     title: trace.label,
-    subtitle: `${categoryNames[trace.category]} · 共 ${trace.entries.length} 笔`,
+    subtitle: itemSubtitle(trace, flows),
     badge: categoryNames[trace.category],
     category: trace.category,
     art: art.kind,

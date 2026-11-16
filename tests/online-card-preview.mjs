@@ -13,6 +13,7 @@ import {mkdirSync,readFileSync} from 'node:fs';
 import {dismissPickup,dismissLeaf} from './lib/pickup.mjs';
 import {seekSection} from './lib/toc.mjs';
 import {onlineUrl, onlineTag, onlineArgs, ignoreTlsErrors, onlineProfile} from './lib/online.mjs';
+import {decodePng,luminance,rowMaxLuminance} from './lib/png.mjs';
 
 const profile=onlineProfile('card-preview');
 const context=await chromium.launchPersistentContext(profile,{
@@ -125,6 +126,32 @@ try{
 
   await page.locator('dialog.preview-dialog .preview-face').screenshot({path:`artifacts/card-preview-online-face-${tag}.png`});
   await page.locator('dialog.preview-dialog').screenshot({path:`artifacts/card-preview-online-${tag}.png`});
+
+  // The name must be legible ON the card face, and only the pixels can say.
+  // A missing dark bed leaves cream lettering on a pale robe: the DOM looks
+  // perfect (the image is there, the gradient exists), the reader sees
+  // nothing. So read the picture that was just taken.
+  const faceBox=await page.locator('dialog.preview-dialog .preview-face').boundingBox();
+  const titleBox=await page.locator('dialog.preview-dialog .preview-title strong').boundingBox();
+  const png=decodePng(await page.screenshot({clip:faceBox}));
+  const scan=Math.floor(png.width*0.45);
+  const nameRow=Math.round(titleBox.y+titleBox.height/2-faceBox.y);
+  let sum=0,ink=0;
+  for(let x=0;x<scan;x++){
+    const l=luminance(png,x,nameRow);
+    sum+=l;
+    if(l>170)ink++;
+  }
+  const mean=sum/scan,peak=rowMaxLuminance(png,nameRow,0,scan),inkRatio=ink/scan;
+  const bottomMax=rowMaxLuminance(png,png.height-2,0,Math.floor(png.width*0.6));
+  console.log(`${tag} card name pixels:`,JSON.stringify({bottomMax:Math.round(bottomMax),
+    nameMean:Math.round(mean),namePeak:Math.round(peak),inkRatio:+inkRatio.toFixed(3)}));
+  assert.ok(bottomMax<110,
+    `the dark bed under the card name must cover the picture, but the bottom row is still bright (${Math.round(bottomMax)})`);
+  assert.ok(inkRatio>0.02,
+    `the card name must show cream lettering, but only ${(inkRatio*100).toFixed(1)}% of its row is bright`);
+  assert.ok(peak-mean>50,
+    `the card name must stand out from its bed, peak ${Math.round(peak)} vs mean ${Math.round(mean)}`);
 
   // (4) closing the card leaves the reader back in the backpack. The card sits
   // on top of the ledger rather than replacing it, so the column behind it
