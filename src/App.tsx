@@ -23,6 +23,9 @@ import { cards, cardsByBook, loadStored, saveStored, sceneIndex, bondCards, toke
 import type { CardDef } from './collection.ts';
 import { ledgerEntries, loadStoredLedger, saveStoredLedger, unlockedLedger, ledgerActors, ledgerFor, ledgerItemTraces, ledgerPortrait, ledgerEntryArt, modeNames, categoryNames } from './ledger.ts';
 import type { LedgerEntry } from './ledger.ts';
+import { personCard, itemCard } from './cardPreview.ts';
+import type { CardPreview as CardPreviewData } from './cardPreview.ts';
+import { CardPreview } from './CardPreview.tsx';
 import { artImage } from './art.ts';
 import { cnNumber } from './cnNumber.ts';
 
@@ -221,6 +224,9 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   const personBook=useMemo(()=>ledgerPerson?ledgerFor(ledgerPerson):null,[ledgerPerson]);
   const itemBook=useMemo(()=>ledgerItem?ledgerItems.find(t=>t.key===ledgerItem)??null:null,[ledgerItem,ledgerItems]);
   useEffect(()=>{saveStoredLedger(ledgerUnlocked);},[ledgerUnlocked.size]);
+  // 背包里的卡片页：在账簿上点一个人或一样东西，摊开一张卡来看。
+  // 卡片叠在册页之上，关掉就回到背包列表——不是另开一页，是把账簿摊开一张。
+  const [previewCard,setPreviewCard]=useState<CardPreviewData|null>(null);
   // 获得弹窗：读到有「交到手上」的节点时，像游戏捡道具一样展示货品并请读者收下。
   // 只认存档里还没见过的账；确认后写入存档，重读、跳回、刷新都不会再弹。
   const [pickup,setPickup]=useState<LedgerEntry[]|null>(null);
@@ -624,6 +630,7 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
       engine.advance();
     }}/>}
     {notice&&<div className="toast" role="status">{notice}</div>}
+    {previewCard&&<CardPreview card={previewCard} onClose={()=>setPreviewCard(null)}/>}
     {pickup&&<div className="pickup-overlay" role="dialog" aria-modal="true" aria-label="获得物品">
       <section className="pickup-card">
         <header className="pickup-header"><span className="pickup-title">获得</span><small>{bookNames[pickup[0].book]??`第${pickup[0].book}回`} · {pickup.length} 件</small></header>
@@ -691,7 +698,15 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
               const n=p.got.length+p.given.length;
               const portrait=ledgerPortrait(p.name);
               const nameClass=p.name.length>3?'long-name':'';
-              return <button key={p.name} role="option" aria-selected={ledgerPerson===p.name} className={`cat-person ${ledgerPerson===p.name?'active':''}`} onClick={()=>setLedgerPerson(ledgerPerson===p.name?null:p.name)}>
+              // 点一个人：摊开他的卡片（像卡牌那样先看画再看账）。
+              // 同时把右侧的流转链换过来——卡片关掉后，这一栏还在原处。
+              // 再点一次同一个人：收起这一栏，回到「全部流转」的总账。
+              // （少了这个来回切换，读者就再也回不去总账那一眼了。）
+              return <button key={p.name} role="option" aria-selected={ledgerPerson===p.name} className={`cat-person ${ledgerPerson===p.name?'active':''}`}
+                onClick={()=>{
+                  if(ledgerPerson===p.name){setLedgerPerson(null);setPreviewCard(null);return;}
+                  setLedgerPerson(p.name);setPreviewCard(personCard(p,ledgerUnlocked));
+                }}>
                 {/* 立绘是竖版的（宽高比 0.34～0.83），方形框里若用 cover 会把脸裁掉，
                     所以按 contain 缩放并贴着框顶，好让头完整露出来。 */}
                 {portrait?<CardArt src={artImage(portrait)} alt={`${p.name}的立绘`} size="ledger" fit="contain"/>:<span className="ledger-thumb-empty" aria-hidden="true"><span className="mono">{p.name[0]}</span></span>}
@@ -723,7 +738,13 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
               const art=hit?ledgerEntryArt(hit):undefined;
               const src=hit?(hit.art??artImage(art!)):undefined;
               const nameClass=t.label.length>6?'long-name':'';
-              return <button key={t.key} role="option" aria-selected={ledgerItem===t.key} className={`cat-${t.category} ${ledgerItem===t.key?'active':''}`} onClick={()=>setLedgerItem(ledgerItem===t.key?null:t.key)}>
+              // 点一样东西：摊开它的卡片，看它从哪里来、经过谁的手、落在谁那里。
+              // 再点一次同一样东西：收起这一栏，回到按物视角的列表。
+              return <button key={t.key} role="option" aria-selected={ledgerItem===t.key} className={`cat-${t.category} ${ledgerItem===t.key?'active':''}`}
+                onClick={()=>{
+                  if(ledgerItem===t.key){setLedgerItem(null);setPreviewCard(null);return;}
+                  setLedgerItem(t.key);setPreviewCard(itemCard(t,ledgerUnlocked));
+                }}>
                 {src?<CardArt src={src} alt={`${t.label}的货品图`} size="ledger" fit={hit?.category==='person'?'contain':'cover'}/>:<span className="ledger-thumb-empty" aria-hidden="true"><span className="mono">{t.label[0]}</span></span>}
                 <strong className={nameClass}>{t.label}</strong>
                 <small>{categoryNames[t.category]} · {got}/{t.entries.length} 笔</small>

@@ -110,7 +110,9 @@ export function ledgerItemTraces(): ItemTrace[] {
 
 /** 账上人物的手绘立绘：账簿里的人也要有脸。
  *  键是 art 资产名（`<actor>-portrait`）；只有画过立绘的人才有，
- *  甄家娘子、拐子、冯渊、冯家、王子腾等未出场者留空。 */
+ *  拐子、冯渊、冯家、王子腾等未出场者留空。
+ *  ★ 这张表是账簿自己的兜底；卡片预览（`src/cardPreview.ts`）先走 cast
+ *  精确匹配，这里只是第二路。表里的人如今大半也都在 cast 里。 */
 const LEDGER_PORTRAITS: Record<string, string> = {
   '贾雨村': 'yucun-portrait', '甄士隐': 'shiyin-portrait', '封肃': 'fengsu-portrait',
   '林如海': 'ruhai-portrait', '贾政': 'zheng-portrait', '黛玉': 'daiyu-portrait',

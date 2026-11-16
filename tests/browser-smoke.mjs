@@ -1,7 +1,7 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {existsSync,mkdirSync,readFileSync,readdirSync} from 'node:fs';
-import {dismissPickup, dismissLeaf, clickSkipIfShown} from './lib/pickup.mjs';
+import {dismissPickup, dismissLeaf, clickSkipIfShown, dismissCardPreview} from './lib/pickup.mjs';
 import { seekSection, openToc } from './lib/toc.mjs';
 import { chapterLeaves } from '../src/leaves.ts';
 const story=[1,2,3,4].flatMap(n=>JSON.parse(readFileSync(`design/chapter0${n}-story.json`,'utf8')));
@@ -423,6 +423,12 @@ assert.equal(Number((await page.getByRole('tab',{name:/账簿/}).textContent()).
  assert.ok(await page.locator('.ledger-people button').count()>=8,'the ledger must name everyone with a balance');
  await page.locator('.ledger-people button').filter({hasText:'贾雨村'}).click();
  assert.match(await page.locator('.ledger-summary').textContent(),/贾雨村/);
+ // 背包里点了人就摊开一张卡（像卡牌那样先看画再看账）。卡是模态的，
+ // 册页上的点击在它开着的时候都落不到地上——所以下面每一步之前都要收掉它。
+ assert.ok(await page.locator('dialog.preview-dialog').isVisible(),'clicking a person must open the card');
+ assert.equal((await page.locator('.preview-title strong').textContent()).trim(),'贾雨村');
+ await dismissCardPreview(page);
+ assert.ok(!(await page.locator('dialog.preview-dialog').isVisible().catch(()=>false)),'the card must close');
  // 账簿也要有贴图：账上的人和物都得有脸，不能只是一行行字。
  // 人物按钮里画过立绘的人要挂上立绘，画框尺寸统一。
  const ledgerThumbs=await page.locator('.ledger-people .card-thumb').evaluateAll(els=>[...new Set(els.map(e=>Math.round(e.getBoundingClientRect().height)))]);
@@ -455,6 +461,10 @@ assert.equal(Number((await page.getByRole('tab',{name:/账簿/}).textContent()).
  await page.locator('.ledger-people button').filter({hasText:'英莲'}).click();
  assert.match(await page.locator('.ledger-book h3').textContent(),/英莲的流转链/);
  assert.equal(await page.locator('.ledger-book .ledger-row').count(),3,'the chain lists every transfer of one item');
+ // 一样东西也一样摊开一张卡：英莲被转手三次，卡上就是她的立绘。
+ assert.ok(await page.locator('dialog.preview-dialog').isVisible(),'clicking an item must open the card');
+ assert.equal(await page.locator('.preview-flow').count(),3,'the item card must list all three transfers');
+ await dismissCardPreview(page);
  await page.getByRole('tab',{name:'地图'}).click();assert.equal(await page.locator('.atlas-body article').count(),mapCount);
  await page.keyboard.press('Escape');
 

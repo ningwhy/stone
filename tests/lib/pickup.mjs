@@ -104,6 +104,25 @@ export async function clickForwardIfShown(page) {
   return true;
 }
 
+/** 背包里的卡片页是**原生 dialog**（top layer），模态：它在的时候，册页上的
+ *  一切点击都落不到地上。所以凡是点了账簿里的人或物的测试，都要先把卡片收掉。
+ *
+ *  它叠在册页之上：关掉卡片，册页还在原处——卡片不是替掉背包，是摊开一张。
+ */
+export async function dismissCardPreview(page) {
+  const dialog = page.locator('dialog.preview-dialog');
+  if (await dialog.count() === 0) return false;
+  if (await dialog.isVisible().catch(() => false)) {
+    const close = page.getByRole('button', { name: '关闭卡片' });
+    if (await close.count() && await close.isVisible().catch(() => false)) {
+      await close.click();
+      await dialog.waitFor({ state: 'hidden', timeout: 5000 }).catch(() => {});
+      return true;
+    }
+  }
+  return false;
+}
+
 /** The cover and the back cover of a chapter are modal sheets too.
  *
  *  They lie over the stage and swallow every click, so a test that walks the

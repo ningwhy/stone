@@ -519,3 +519,81 @@ dialog.is-toc{width:min(980px,calc(100% - 30px));height:min(760px,88vh);max-heig
 @media(max-width:1050px){.locator-head{max-width:calc(100% - 300px);gap:6px 9px;padding:7px 10px}.locator-kicker{font-size:11px;letter-spacing:1px}.locator-place-name{font-size:17px}.locator-place-meta{display:none}.locator-svg{inset:88px 0 18px;height:calc(100% - 106px)}}
 @media(max-width:700px){.scene-locator{inset:0 0 262px}.locator-head{left:10px;right:10px;top:60px;transform:none;width:auto;max-width:none;gap:4px 8px;padding:6px 9px}.locator-kicker{font-size:10px;letter-spacing:0;padding:3px 6px}.locator-crumbs{font-size:9px}.locator-place-name{font-size:14px;letter-spacing:1px}.locator-skip{font-size:10px;padding:4px 7px}.locator-svg{inset:120px 0 18px;height:calc(100% - 138px)}}
 @media(prefers-reduced-motion:reduce){.scene-locator{animation:none}}
+
+/* ---- 背包卡片页：像卡牌那样，先看画，再看名，最后才看账 ----
+   这层是独立的原生 dialog（top layer），盖在册页之上：
+   放在册页 dialog 内的定位层会被册页的 overflow 与层叠上下文吃掉。 */
+dialog.preview-dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:auto;height:auto;overflow:visible}
+dialog.preview-dialog::backdrop{background:rgba(28,24,16,.62);backdrop-filter:blur(3px);animation:preview-fade .24s ease-out}
+@keyframes preview-fade{from{opacity:0}to{opacity:1}}
+.preview-inner{width:min(520px,calc(100vw - 24px));max-height:min(88vh,900px);display:flex;flex-direction:column;
+  overflow:hidden;border-radius:14px;border:1px solid #b9ae8b;
+  background:linear-gradient(170deg,#f8f3e2,#efe7cf);box-shadow:0 22px 64px rgba(18,13,4,.42);
+  animation:preview-rise .3s cubic-bezier(.2,.8,.3,1)}
+@keyframes preview-rise{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){dialog.preview-dialog::backdrop{animation:none}.preview-inner{animation:none}}
+
+.preview-header{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:11px 14px 9px;border-bottom:1px solid #d3c9a8;flex-shrink:0}
+.preview-kicker{font-size:11px;letter-spacing:3px;color:#8a8266}
+
+/* ---- 卡面：大图铺满整张卡，徽章与卡名压在下缘 ----
+   沿用册页卡片的墨色渐变（.card-face::after），但卡面更高——卡牌游戏的
+   「预览」比「缩略」大一圈，人脸才认得出来。 */
+.preview-face{position:relative;height:340px;border-radius:0;border:0;background:linear-gradient(160deg,#f7f5e8,#e9e5d1);
+  flex:0 0 auto;overflow:hidden;display:block;box-shadow:none}
+.preview-face::after{content:"";position:absolute;inset:auto 0 0 0;height:58%;pointer-events:none;z-index:1;
+  background:linear-gradient(to top,rgba(22,26,20,.88) 0%,rgba(22,26,20,.74) 36%,rgba(22,26,20,.38) 74%,rgba(22,26,20,.06) 100%)}
+/* 分类色：银两金、衣物绯、物件赭、人朱、人情青——与账簿里那一方花押同一套色。 */
+.preview-face.cat-money{border-bottom:2px solid #b8933c}
+.preview-face.cat-clothing{border-bottom:2px solid #a85a52}
+.preview-face.cat-item{border-bottom:2px solid #8a7a50}
+.preview-face.cat-person{border-bottom:2px solid #a3402f}
+.preview-face.cat-favor{border-bottom:2px solid #4f7a5e}
+.preview-face .card-thumb{position:absolute;inset:0}
+/* 器物图铺满；人物近景另算（见下）。 */
+.preview-face .card-face-img{display:block;width:100%;height:100%;object-fit:cover}
+/* 立绘近景：按 faceBox 裁出的头肩，比整幅立绘更认得出人。 */
+.card-face-portrait{position:absolute;inset:0;overflow:hidden;background:linear-gradient(160deg,#f4f0e2,#e6e2d1)}
+.card-face-portrait .card-face-img{position:absolute;object-fit:contain;object-position:center top}
+/* 账上只有名字、没画出像的：落一方朱印式花押，和账簿里的暗记同一路数。 */
+.card-face-seal{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(ellipse at 50% 38%,#f0e8d2,#e0d8bd 70%,#d5ccae)}
+.card-face-seal .mono{font-family:"Songti SC",serif;font-size:112px;line-height:1;color:#b9a883;opacity:.5}
+/* 类别徽章压在卡面上缘，像卡牌右上角的属性牌。 */
+.preview-badge{position:absolute;top:11px;left:11px;z-index:3;font-size:10px;letter-spacing:3px;
+  padding:4px 11px;border-radius:3px;color:#fdf6e3;background:rgba(22,26,20,.55);border:1px solid rgba(253,246,227,.3);
+  backdrop-filter:blur(2px)}
+/* 卡名压在下缘。 */
+.preview-title{position:absolute;inset:auto 0 0 0;z-index:2;padding:0 16px 15px;
+  display:flex;flex-direction:column;gap:3px;pointer-events:none}
+.preview-title strong{font-family:"Songti SC",serif;font-weight:500;font-size:23px;letter-spacing:4px;color:#fdf8ea;
+  text-shadow:0 1px 5px rgba(0,0,0,.6);line-height:1.25}
+.preview-title small{font-size:11.5px;letter-spacing:.6px;color:#e6e2ce;text-shadow:0 1px 4px rgba(0,0,0,.55)}
+
+.preview-body{padding:13px 16px 16px;overflow-y:auto;min-height:0}
+.preview-ledger{margin:0 0 10px;font-size:11.5px;color:#6b6450;letter-spacing:.4px}
+.preview-books{color:#8a8266}
+.preview-flows .card-book-title{margin-bottom:9px}
+.preview-flow{display:flex;gap:9px;align-items:flex-start;border:1px solid #cdc6a8;border-radius:8px;
+  background:linear-gradient(165deg,#faf5e4,#f1ead2);padding:9px 11px;margin-bottom:7px}
+.preview-flow.locked{background:#e9e4d2;border-style:dashed}
+.preview-flow.locked .preview-flow-main strong{color:#a8a189;letter-spacing:3px}
+.preview-flow.locked .preview-flow-main small{color:#b3ac93}
+.preview-flow-main{flex:1;min-width:0}
+.preview-flow-main strong{display:block;font-size:12.5px;color:#3b3524;letter-spacing:.4px;line-height:1.45}
+.preview-flow-main small{display:block;font-size:10.5px;color:#7d6f4d;margin-top:3px;line-height:1.5}
+.preview-flow-circ{margin:5px 0 0;font-size:11px;line-height:1.75;color:#7a7360}
+/* 原文引文：压在卡的下方，缩进并加一道竖线，像随手抄下的一句。 */
+.preview-flow-source{margin:7px 0 0;padding:2px 0 2px 10px;border-left:2px solid #c3b48f;
+  font-family:"Songti SC",SimSun,serif;font-size:11.5px;line-height:1.85;color:#6f6a56;letter-spacing:.3px}
+.preview-flow .card-seal{position:static;flex:0 0 auto;align-self:flex-start;margin-top:2px;background:#6b6a4e}
+
+@media(max-width:700px){
+  .preview-inner{width:calc(100vw - 16px);max-height:92vh;border-radius:12px}
+  .preview-face{height:272px}
+  .preview-title{padding:0 13px 12px}
+  .preview-title strong{font-size:20px;letter-spacing:2.5px}
+  .preview-body{padding:11px 12px 14px}
+  .preview-flow-source{font-size:11px}
+}
