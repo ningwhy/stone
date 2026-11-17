@@ -39,6 +39,42 @@
   `reducedMotion` 下步长 0.12、终点停 900ms，组件内部直接渲染静态终点。
   封面/封底期间与 `state.paused` 期间冻结，免得读者还没翻页图就自己淡出。
 
+### ★ 转场必须等「这个场景」的图画完才播
+
+这是 2026-11-17 修掉的真实缺陷。用户反馈：「现在大地图还没加载出来的时候，
+就开始播放动画了。然后直接进入场景图。到时大地图都看不到。」
+
+根因是**转场与场景加载并行**。转场一出现就把小场景图 `.local-map` 设成
+`opacity:0` 藏起来，而 Phaser 那张场景图还在加载——底下要么是空的，要么还是上一张图。
+读者从头到尾没看清一张大地图，转场一结束场景图直接顶上来。
+
+改成**串行**：场景图画完 → 才放转场 → 转场结束后露出已经画好的场景图。
+
+放行判据必须是 **scene-id 粒度**，不能是布尔：
+
+```tsx
+const [readyScene,setReadyScene]=useState('');   // 「哪个」场景画完了
+// onScene 里：setReadyScene(scene.mapData.id)     ← MapScene 没有 id 属性，用 mapData.id
+const stageReady = readyScene === state.sceneId;  // 唯一的放行判据
+```
+
+换场景时 `state.sceneId` **先变**、Phaser 图**后画完**，中间那段图要么是旧的、要么是空的。
+只看布尔 `sceneReady` 会踩两个坑：
+
+1. 转场在旧图还亮着时就放出去（旧图还没换）；
+2. 旧图刚卸、新图未画时就放出去（底下是空白）。
+
+实测过第 2 种：回退成布尔判据后，转场在 t=152ms 挂载，而那一刻舞台的
+`data-scene-ready` 还是「无」——底下是空白，9ms 后转场被收掉又重放。
+
+三条配套纪律：
+
+- **转场挂起，不取消**：换场景时先把新的 `Locator` 放进 `pendingLocator`，等
+  `leaf===null && stageReady` 才放。旧转场（讲的是上一个场景的方位）要立刻收掉，
+  **但绝不能动 `pendingLocator`**——一起清掉就等于「等图就绪再放」永远等不到东西放。
+- **`data-scene-ready` 存的是 scene id**，不是布尔。`host.current.dataset.sceneReady=sceneId`。
+- **不吞指针、不改引擎**：转场只是换一层画面。
+
 ## 两拍
 
 `progress 0 → .44` 天下舆图：光点从上一处所在区域飞到新区域，面包屑只亮第一级。
@@ -51,6 +87,31 @@
   可钻，硬切到一张没有地名的空点阵图反而更空（实测过）。改为**留在天下图上推镜**：
   `translate(T - z·P) scale(z)` 把目标区域 P 映射向画面中心 T，`z` 从 1 放大到 1.2；
   同时补到位光环与地名浮签，面包屑追加区域名，第二拍仍有「逐级点亮」的进展。
+
+### ★ 两拍不交叠
+
+交叠（两层各半透明地叠在一起）看着像两张地图压在一起——地名互相干扰。实测那一帧里
+「天下舆图」的大区域名（大荒山·青埂峰、姑苏·阊门…）和府内点阵的小地名（荣府后门、
+贾母院…）糊成一片，读者既看不清天下、也看不清府内，等于两拍都没交代到。
+
+现在中间留一段「什么都没有」的空档：**第一拍完全淡出 → 空档 → 第二拍完全淡入**。
+
+```tsx
+const outTo = SWITCH - BLEND;   // 第一拍淡出到 0 的位置
+const inFrom = SWITCH + BLEND;  // 第二拍从 0 开始淡入的位置
+const realmOpacity  = drill ? 1 - smooth((p - outTo) / BLEND) : 1;
+const detailOpacity = drill ? smooth((p - inFrom) / BLEND) : 0;
+```
+
+配套：**第二拍要自己的进度 `detailRun`**，从**淡入开始**算起，不是从 `SWITCH` 算起。
+
+```tsx
+const detailRun = drill ? clamp01((p - inFrom) / (1 - inFrom)) : second;
+```
+
+否则空档期光点已经在飞、而整层还没显示——读者看到的是「光点自己冒出来」。
+`detailToken`（光点位置）、`detailRun > .72`（到位高亮）、`litCount`（面包屑点亮）
+三处都要改用 `detailRun`，否则画面内容与进度条会脱节。
 
 点阵图必须带地名。一层里十几个点全标会糊成一团，所以 `detailLabels` 用
 **目标优先 + 贪心避让**：取地名末段作短名（≤9 字）→ 目标排第一 → 按距目标由近及远
@@ -78,7 +139,7 @@
 ```sh
 npm run test:locator          # 静态数据 + 触发 + 两拍 + 跳过/设置 + 逐帧动画
 npm run check:content         # scene-places 门禁
-npm test                     # 78 项单测
+npm test                      # 97 项单测
 npm run test:browser          # 354 节点全量冒烟
 npm run build
 ```
@@ -88,6 +149,29 @@ data-drill / data-progress / data-zoom` 读状态；两个 `<g>` 分别带
 `data-layer=realm|detail`。普通动效下用 `requestAnimationFrame` 采集整段动画的帧，
 断言天下层场景 `detailOpacity` 全程为 0、`realmOpacity` 全程为 1、推镜缩放单调不减。
 `reducedMotion:'reduce'` 下断言静态终点，避免时间竞态。
+
+### ★ 两条新不变量（2026-11-17 加）
+
+**不变量 8：两拍不交叠。** 逐帧量两层 opacity，断言**没有任何一帧**两层同时可见
+（>0.05），并且必须存在一段「两层都空」的空档。
+
+**不变量 7：转场等自己的场景图画完才播。** ★ **必须用 MutationObserver 量转场元素
+「挂载的那一刻」，不能用定时采样。** 定时采样（哪怕 30ms 一帧）会漏掉几毫秒的窗口：
+旧图刚卸、新图未画时，布尔 `sceneReady` 短暂为 false，而那恰恰是转场错误抢跑的那一瞬
+（实测只有 9ms）。MutationObserver 挂在 `document.body` 的 `childList/subtree` 上，
+在转场元素被插入 DOM 的同一帧读舞台的 `data-scene-ready`，断言它等于转场目标场景。
+
+```js
+const loc = n.matches?.('[data-testid=scene-locator]') ? n : n.querySelector?.('[data-testid=scene-locator]');
+// 此刻读 .game-map 的 data-scene-ready，必须 === loc.dataset.scene
+```
+
+**新断言必须反向验证**：回退修复 → 立刻红；恢复 → 绿。已实测：
+
+| 回退什么 | 断言结果 |
+| --- | --- |
+| 两拍恢复交叠（`SWITCH-BLEND` / `BLEND*2`） | 交叠 12 帧 → 红 |
+| `stageReady` 改回布尔 `sceneReady` | 挂载时舞台无 ready → 红 |
 
 线上复验：`TEST_URL=https://stone-direct.yan.pub npm run test:locator`。
 

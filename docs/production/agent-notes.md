@@ -361,6 +361,73 @@ holder `height:0` → 图片 `0×0`。
 
 > ★ 判据**不能用整行均值**定胜负：均值被画面本身带偏——深色袍子拉低、浅色袍子拉高，
 > 两种人都不该被判成「看不清」。要问的是「笔画占比」和「纸面亮度」。
+
+### ★ 转场必须等「这个场景」的图画完才播——而且判据得是 scene-id 粒度
+
+用户反馈：「**现在大地图还没加载出来的时候，就开始播放动画了。然后直接进入场景图。
+到时大地图都看不到。**」
+
+根因是**转场与场景加载并行**：转场一出现就把小场景图 `.local-map` 设 `opacity:0`
+藏起来，而 Phaser 那张图还在加载 → 底下要么空白要么还是上一张。读者从头到尾
+没看清一张大地图，转场一结束场景图直接顶上来。
+
+改成串行：场景图画完 → 才放转场 → 转场结束后露出已经画好的场景图。
+
+**放行判据必须是 scene-id 粒度，不能是布尔。**
+
+```tsx
+const [readyScene,setReadyScene]=useState('');   // 「哪个」场景画完了
+// onScene 里 setReadyScene(scene.mapData.id)   ← MapScene 没有 id 属性
+const stageReady = readyScene === state.sceneId;  // 唯一的放行判据
+```
+
+换场景时 `state.sceneId` **先变**、Phaser 图**后画完**。只看布尔 `sceneReady`：
+① 转场在旧图还亮着时就放出去；② 旧图刚卸、新图未画时就放出去（底下空白）。
+实测第 ② 种：转场在 t=152ms 挂载，舞台 `data-scene-ready` 还是「无」，9ms 后被收掉重放。
+
+> ★ **绝不要在收旧转场时把 `pendingLocator` 一起清掉**——新场景的那份已经挂在那儿了，
+> 一起清掉就等于「等图就绪再放」永远等不到东西放（表现为转场只播 274ms 就没了）。
+
+### ★ 两拍不能交叠——交叉淡化等于两张地图压在一起
+
+原来的两拍是**交叉淡化**：天下层与府内层各半透明地叠着。实测那一帧里
+「天下舆图」的大区域名（大荒山·青埂峰、姑苏·阊门…）和府内点阵的小地名
+（荣府后门、贾母院…）糊成一片——读者既看不清天下、也看不清府内，两拍都没交代到。
+
+→ 中间留一段「什么都没有」的空档：**第一拍完全淡出 → 空档 → 第二拍完全淡入**。
+
+```tsx
+const outTo = SWITCH - BLEND;   const inFrom = SWITCH + BLEND;
+const realmOpacity  = drill ? 1 - smooth((p - outTo) / BLEND) : 1;
+const detailOpacity = drill ? smooth((p - inFrom) / BLEND) : 0;
+```
+
+配套：**第二拍要自己的进度 `detailRun`**（从淡入算起，不是从 `SWITCH` 算起）。
+`detailToken`（光点）、`detailRun > .72`（到位高亮）、`litCount`（面包屑点亮）三处都要改用它。
+
+### ★ 断言几毫秒的窗口，定时采样抓不住——用 MutationObserver
+
+上面两个坑都只存在于**几毫秒**内：布尔判据下转场抢跑的那一瞬只有 **9ms**。
+`setInterval(30ms)` 的定时采样**会漏掉它**（实测照样全绿）→ 断言必须换手段：
+
+```js
+const mo = new MutationObserver(muts => {
+  for (const n of muts[0].addedNodes) {
+    const loc = n.matches?.('[data-testid=scene-locator]') ? n : n.querySelector?.('[data-testid=scene-locator]');
+    if (!loc) continue;
+    // 此刻读 .game-map 的 data-scene-ready，必须 === loc.dataset.scene
+  }
+});
+mo.observe(document.body, { childList: true, subtree: true });
+```
+
+挂在 `document.body` 的 `childList/subtree` 上，在转场元素**被插入 DOM 的同一帧**
+读舞台状态，精度到毫秒。
+
+> ★ 通用教训：**「定时采样全绿」不等于「没这个 bug」**。断言的采样频率必须**细于**
+> 缺陷的时间窗；否则要换更精确的观测手段（MutationObserver / rAF 逐帧）。
+> 本轮两条新断言都做了反向验证：回退两拍交叠 → 12 帧交叠报红；
+> 回退布尔判据 → 挂载时舞台无 ready 报红。
 > ★ 新断言**必须反向验证过**：回退修复 → 立刻报；恢复 → 绿。
 
 ### ★ `dialog` 的 `margin:auto` 只在尺寸固定时才算居中（卡片页返工第三轮）

@@ -328,6 +328,11 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   },[leaf]);
   const [loadProgress,setLoadProgress]=useState(0),[loaded,setLoaded]=useState(false),[overlay,setOverlay]=useState(true);
   const [sceneProgress,setSceneProgress]=useState(0),[sceneReady,setSceneReady]=useState(false),[sceneSlow,setSceneSlow]=useState(false);
+  // ★ 「当前场景的图已经画完」——不是布尔值，而是**哪个**场景画完了。
+  // 换场景时 sceneReady 会短暂掉回 false，但真正要判的是「新场景的图画完了没有」。
+  // 只看布尔值会踩两个坑：转场在旧图还亮着时就放出去（旧图还没换），
+  // 或者旧图刚卸、新图未画时就放出去（底下是空白）。
+  const [readyScene,setReadyScene]=useState('');
   const [snapshot,setSnapshot]=useState('');
   const [audioPrefs,setAudioPrefs]=useState(()=>audio.getPrefs());
   const readyRef=useRef(false);
@@ -399,7 +404,17 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   // 「scene 变了 / chapter 变了」，不是 index 差多少。
   // 哨兵初值：开卷第一帧没有「从上一处变过来」，但那正是一次回目开篇，
   // 也该交代方位。否则第一回的读者永远看不到第一次定位。
+  //
+  // ★ 必须等场景图画完再放转场（sceneReady）。原因：转场一开始就把小场景图
+  // 藏掉（opacity:0），而 Phaser 那张图还在加载——两者同时进行，读者看到的
+  // 是「一张还没画完的小场景图」被盖住，舆图自己又跟底图交叠成一团，
+  // 结果从头到尾没看清一张大地图，转场一结束场景图直接顶上来。
+  // 现在改成串行：场景图画完 → 才放转场 → 转场结束后露出已经画好的场景图。
   const locatorPrev=useRef({scene:'',chapter:0,enabled:false});
+  // ★ 唯一的放行判据：**当前场景的图已经画完**（readyScene === state.sceneId）。
+  // 换场景时 state.sceneId 先变、图后画完，中间那一段图要么是旧的、要么是空的——
+  // 那时候放转场，读者看到的正是「地图还没出来动画就开始了」。
+  const stageReady=readyScene===state.sceneId;
   useEffect(()=>{
     const prev=locatorPrev.current;
     locatorPrev.current={scene:state.sceneId,chapter:step.source.chapter,enabled:locatorEnabled};
@@ -417,14 +432,16 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
       bookName:bookNames[chapters.find(c=>c.id===step.chapter)?.book??step.source.chapter]??`第${step.source.chapter}回`,
       reason:chapterStart?'chapter':'scene',progress:0,
     };
-    // 回目开篇时封面正盖在舞台上，定位动画会被压在暗色毛玻璃下白播一次。
-    // 先挂起，等读者收起封面再放（见下面盯 leaf 的 effect）。
-    if(leafRef.current)pendingLocator.current=next;
-    else setLocator(next);
-  },[state.sceneId,step.source.chapter,locatorEnabled]);
+    // 挂起，等封面收起、且**这个场景的图**画完再放（见下面那个 effect）。
+    pendingLocator.current=next;
+    if(leafRef.current===null&&stageReady)setLocator(next);
+  },[state.sceneId,step.source.chapter,locatorEnabled,stageReady]);
   useEffect(()=>{
-    if(leaf===null&&pendingLocator.current){setLocator(pendingLocator.current);pendingLocator.current=null;}
-  },[leaf]);
+    if(leaf===null&&stageReady&&pendingLocator.current){setLocator(pendingLocator.current);pendingLocator.current=null;}
+  },[leaf,stageReady]);
+  // 场景换了、图还没画完时，正在播的转场要立刻收掉：它讲的是**上一个**场景的
+  // 方位，留着会和新场景对不上。★ 不要动 pendingLocator——新场景的那份还挂着。
+  useEffect(()=>{if(!stageReady)setLocator(null);},[stageReady]);
   // 计时推进。封面/封底期间冻结，免得读者还没翻页图就自己淡出了。
   // progress 到 1 后再停一拍，让终点高亮与地名能被看清。
   useEffect(()=>{
@@ -440,10 +457,10 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
     pendingLocator.current=null;setLocator(null);
   },[locatorEnabled]);
   const travelRef=useRef(false);travelRef.current=!!travel;
-  const onScene=useCallback((scene:MapScene|null)=>{sceneRef.current=scene;if(scene){scene.presentationPaused=travelRef.current;scene.input.enabled=!document.querySelector('dialog[open]');setLoaded(true);readyRef.current=true;setSceneReady(true);
+  const onScene=useCallback((scene:MapScene|null)=>{sceneRef.current=scene;if(scene){scene.presentationPaused=travelRef.current;scene.input.enabled=!document.querySelector('dialog[open]');setLoaded(true);readyRef.current=true;setSceneReady(true);setReadyScene(scene.mapData.id);
     // QA hook: the browser smoke tests read the live stage through this handle.
     (window as unknown as {__mapScene?:MapScene}).__mapScene=scene;
-  }else{readyRef.current=false;delete (window as unknown as {__mapScene?:MapScene}).__mapScene;}},[]);
+  }else{readyRef.current=false;setReadyScene('');delete (window as unknown as {__mapScene?:MapScene}).__mapScene;}},[]);
   useEffect(()=>{if(sceneRef.current)sceneRef.current.presentationPaused=!!travel;},[travel,state.sceneId]);
   const onActor=useCallback((id:ActorId)=>setModal(id),[]);
   // The first-paint stage and the per-scene card share one loader signal.

@@ -94,13 +94,19 @@ export function SceneLocator({ locator, reducedMotion, onSkip }: Props) {
   const p = reducedMotion ? 1 : clamp01(progress);
   const first = clamp01(p / SWITCH);
   const second = clamp01((p - SWITCH) / (1 - SWITCH));
-  const blend = smooth((p - (SWITCH - BLEND)) / (BLEND * 2));
   // 场景本身在「天下」层（姑苏、扬州、太虚、京郊…共 20 个）时没有更深的
   // 一级可钻，切到一张没标签的空点阵图反而更空。这类场景两拍都留在天下图，
   // 第二拍改成「镜头推近到目标区域」；只有府内层才做真正的下钻。
   const drill = level !== 'realm';
-  const realmOpacity = drill ? 1 - blend : 1;
-  const detailOpacity = drill ? blend : 0;
+  // ★ 两拍**不交叠**：第一拍先完全淡出，第二拍再完全淡入。
+  // 交叠（两层各半透明地叠在一起）看着像两张地图压在一起——地名互相干扰，
+  // 实测那一帧里「天下舆图」的大区域名和府内点阵的小地名糊成一片，
+  // 读者既看不清天下、也看不清府内，等于两拍都没交代到。
+  // 现在中间留一段「什么都没有」的空档：第一拍消失 → 空档 → 第二拍出现。
+  const outTo = SWITCH - BLEND;           // 第一拍淡出到 0 的位置
+  const inFrom = SWITCH + BLEND;         // 第二拍从 0 开始淡入的位置
+  const realmOpacity = drill ? 1 - smooth((p - outTo) / BLEND) : 1;
+  const detailOpacity = drill ? smooth((p - inFrom) / BLEND) : 0;
   const approach = drill ? 0 : ease(second);
   const zoom = 1 + approach * 0.2;
   const cx = W / 2, cy = Y0 + H / 2;
@@ -124,7 +130,10 @@ export function SceneLocator({ locator, reducedMotion, onSkip }: Props) {
   const entry = useMemo(() => ({ x: target.x - 150, y: target.y + 72 }), [target]);
 
   const realmToken = bezier(fromRegion, toRegion, ease(first), 58);
-  const detailToken = bezier(entry, target, ease(second), 42);
+  // 第二拍自己的进度：从**淡入开始**算起，不是从 SWITCH 算起。
+  // 否则空档期光点已经在飞、而整层还没显示——读者看到的是「光点自己冒出来」。
+  const detailRun = drill ? clamp01((p - inFrom) / (1 - inFrom)) : second;
+  const detailToken = bezier(entry, target, ease(detailRun), 42);
   const dots = useMemo(() => levelDots(level), [level]);
   const regionDotsList = useMemo(() => regionDots(), []);
   // 下钻后的点阵必须带地名，否则读者看到的是一片没名字的点，等于没交代方位。
@@ -152,7 +161,8 @@ export function SceneLocator({ locator, reducedMotion, onSkip }: Props) {
   }, [dots, scene, target]);
 
   // 面包屑逐级点亮：第一拍只亮第一级，第二拍按进度把后面的点亮。
-  const litCount = p < SWITCH ? 1 : 1 + Math.floor(second * (crumbs.length - 1) + 0.001) + (second > 0.02 ? 1 : 0);
+  // 第二拍用 detailRun（从淡入算起），与画面上的内容同步推进。
+  const litCount = p < SWITCH ? 1 : 1 + Math.floor(detailRun * (crumbs.length - 1) + 0.001) + (detailRun > 0.02 ? 1 : 0);
 
   return <div className="scene-locator" role="status" aria-live="polite"
     aria-label={`方位：${crumbs.join(' › ')} · ${place?.name ?? scene}`} data-testid="scene-locator"
@@ -225,8 +235,8 @@ export function SceneLocator({ locator, reducedMotion, onSkip }: Props) {
         {/* 目标点从下钻一开始就有一圈定位环，读者不必等光点飞到才知道看哪儿。 */}
         <circle cx={target.x} cy={target.y} r="27" fill="none" stroke="#a9702b" strokeWidth="2" strokeDasharray="5 4" opacity=".65" />
         {/* 目标点到位后的高亮：脉冲圈 + 光晕 */}
-        {second > .72 && <g>
-          <circle cx={target.x} cy={target.y} r={20 + 12 * (1 - second)} fill="none" stroke="#b8792f" strokeWidth="2" opacity={.7 * (1 - second) / .28} />
+        {detailRun > .72 && <g>
+          <circle cx={target.x} cy={target.y} r={20 + 12 * (1 - detailRun)} fill="none" stroke="#b8792f" strokeWidth="2" opacity={.7 * (1 - detailRun) / .28} />
           <circle cx={target.x} cy={target.y} r="13" fill="url(#locator-glow)" />
         </g>}
       </g>

@@ -1,12 +1,16 @@
 /** 大地图定位转场的定向验收（换场景 + 每回开篇）。
  *
- *  守住六件事：
+ *  守住八件事：
  *  1. 剧情用到的每一个 scene 都有方位；天下层 / 府内层的面包屑结构正确；
  *  2. 回目开篇：封面盖着时不白播，收起封面才出现，且 reason=chapter；
  *  3. 两种第二拍：府内层下钻到点阵图，天下层留在舆图上推镜（不切空白图）；
  *  4. 可跳过（按钮 / 自动收起）、设置可关、重开时当场补一次；
  *  5. 不吞指针、不改引擎状态：顶栏按钮仍可点，.game-map 仍算可见；
- *  6. 普通动效下 progress 真的从 0 走到 1，天下层的 detail 层全程不出现。
+ *  6. 普通动效下 progress 真的从 0 走到 1，天下层的 detail 层全程不出现；
+ *  7. ★ 转场必须等**这个场景**的图画完才播：转场每一帧，舞台上的
+ *    data-scene-ready 都得等于转场目标场景（旧图还亮着、或底下空白都不行）；
+ *  8. ★ 两拍**不交叠**：天下层与府内层不能同时半透明——那等于两张地图
+ *    压在一起，地名互相干扰，读者两头都看不清。
  *
  *  与 check_content.mjs 的分工：那道门禁保证「不漏配场景」，这里保证
  *  「配了之后画得对」。两道都要过才能构建上线。
@@ -239,7 +243,87 @@ try {
   assert.deepEqual(animated.errors, [], JSON.stringify(animated.errors));
   console.log(`animation: ${frames.length} frames, ${frames[0].p.toFixed(2)} → ${Math.max(...frames.map(f => f.p)).toFixed(2)}, zoom ${frames[0].zoom} → ${Math.max(...frames.map(f => f.zoom)).toFixed(3)}`);
 
-  console.log('Passed: scene locator — 45 scenes mapped, chapter + scene triggers, realm push-in vs estate drill-down, skip/auto-dismiss/settings, no swallowed clicks, animated frames verified.');
+  // ---- ★ 不变量 8：两拍不交叠 ----
+  // 天下层与府内层同时半透明 = 两张地图压在一起，地名互相干扰，
+  // 读者既看不清天下、也看不清府内，等于两拍都没交代到。
+  // 换成府内层场景再逐帧量一遍：两层可见区间不得有交叠。
+  await p2.evaluate(() => window.scrollTo(0, 0));
+  await seekSection(p2, 'reunion');
+  await dismissLeaf(p2, false, true);
+  await dismissPickup(p2);
+  const drillFrames = await p2.evaluate(async () => {
+    const out = [];
+    const end = performance.now() + 3200;
+    while (performance.now() < end) {
+      const e = document.querySelector('[data-testid=scene-locator]');
+      if (e && e.dataset.scene === 'entry') {
+        const realm = e.querySelector('g[data-layer=realm]');
+        const detail = e.querySelector('g[data-layer=detail]');
+        out.push({
+          p: Number(e.dataset.progress),
+          realm: Number(realm?.getAttribute('opacity')),
+          detail: Number(detail?.getAttribute('opacity')),
+        });
+      }
+      await new Promise(r => requestAnimationFrame(r));
+    }
+    return out;
+  });
+  assert.ok(drillFrames.length > 12, `expected a real drill-down animation, got ${drillFrames.length} frames`);
+  const overlapped = drillFrames.filter(f => f.realm > 0.05 && f.detail > 0.05);
+  assert.equal(overlapped.length, 0,
+    `the two beats must not cross-fade on top of each other, but ${overlapped.length} frames had both layers visible`);
+  assert.ok(drillFrames.some(f => f.realm > 0.9), 'beat one must show the realm map');
+  assert.ok(drillFrames.some(f => f.detail > 0.9), 'beat two must show the estate dot field');
+  assert.ok(drillFrames.some(f => f.realm <= 0.05 && f.detail <= 0.05),
+    'there must be a clean gap between the two beats');
+  console.log(`non-overlap: ${drillFrames.length} frames, realm-only ${drillFrames.filter(f => f.realm > .05 && f.detail <= .05).length}, detail-only ${drillFrames.filter(f => f.detail > .05 && f.realm <= .05).length}, gap ${drillFrames.filter(f => f.realm <= .05 && f.detail <= .05).length}, overlap ${overlapped.length}`);
+
+  // ---- ★ 不变量 7：转场必须等这个场景的图画完 ----
+  // 用户反馈：「现在大地图还没加载出来的时候，就开始播放动画了。然后直接进入
+  // 场景图。到时大地图都看不到。」——转场一开始就把小场景图藏掉，
+  // 底下若还没画完，读者从头到尾没看清一张大地图。
+  //
+  // ★ 这里必须用 MutationObserver 量「转场元素**挂载的那一刻**」，不能用定时采样。
+  // 定时采样（哪怕 30ms 一帧）会漏掉一个几毫秒的窗口：旧图刚卸、新图未画时，
+  // 布尔判据 sceneReady 会短暂为 false，而那恰恰是转场错误地抢跑的那一瞬。
+  // 实测回退布尔判据后，转场在 t=152ms 挂载，而舞台此时 data-scene-ready
+  // 还是「无」——底下是空白。9ms 后转场被收掉又重放。
+  await p2.waitForTimeout(1500);
+  await p2.evaluate(() => {
+    window.__mounts = [];
+    const mo = new MutationObserver(muts => {
+      for (const m of muts) {
+        for (const n of m.addedNodes) {
+          if (n.nodeType !== 1) continue;
+          const loc = n.matches?.('[data-testid=scene-locator]')
+            ? n : n.querySelector?.('[data-testid=scene-locator]');
+          if (!loc) continue;
+          const map = document.querySelector('.game-map');
+          window.__mounts.push({
+            scene: loc.dataset.scene,
+            ready: map?.getAttribute('data-scene-ready') ?? null,
+            hasAttr: map?.hasAttribute('data-scene-ready') ? 1 : 0,
+          });
+        }
+      }
+    });
+    mo.observe(document.body, { childList: true, subtree: true });
+    window.__stopMounts = () => mo.disconnect();
+  });
+  await seekSection(p2, 'dinner');
+  await dismissLeaf(p2, false, true);
+  await dismissPickup(p2);
+  await p2.waitForTimeout(4500);
+  const mounts = await p2.evaluate(() => { window.__stopMounts(); return window.__mounts; });
+  const dinnerMounts = mounts.filter(m => m.scene === 'dinner');
+  assert.ok(dinnerMounts.length >= 1, `expected the transition to mount, got ${JSON.stringify(mounts)}`);
+  const staleMounts = dinnerMounts.filter(m => m.hasAttr !== 1 || m.ready !== m.scene);
+  assert.equal(staleMounts.length, 0,
+    `the transition must mount only after its own scene's map is ready, but ${staleMounts.length} mount(s) showed another scene (or none): ${JSON.stringify(staleMounts)}`);
+  console.log(`timing: the transition mounted ${dinnerMounts.length} time(s), always with its own scene ready`);
+
+  console.log('Passed: scene locator — 45 scenes mapped, chapter + scene triggers, realm push-in vs estate drill-down, skip/auto-dismiss/settings, no swallowed clicks, animated frames verified, beats never overlap, transition waits for its own map.');
 } catch (e) {
   console.error('scene-locator failed:', e.message);
   throw e;
