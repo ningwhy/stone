@@ -13,7 +13,7 @@ import {mkdirSync,readFileSync} from 'node:fs';
 import {dismissPickup,dismissLeaf} from './lib/pickup.mjs';
 import {seekSection} from './lib/toc.mjs';
 import {onlineUrl, onlineTag, onlineArgs, ignoreTlsErrors, onlineProfile} from './lib/online.mjs';
-import {decodePng,luminance,rowMaxLuminance} from './lib/png.mjs';
+import {decodePng,luminance} from './lib/png.mjs';
 
 const profile=onlineProfile('card-preview');
 const context=await chromium.launchPersistentContext(profile,{
@@ -66,7 +66,7 @@ try{
   await page.locator('.ledger-people button').filter({hasText:'贾雨村'}).first().click();
   const dialog=page.locator('dialog.preview-dialog');
   await dialog.waitFor({state:'visible',timeout:15000});
-  const title=await page.locator('.preview-title strong').first().textContent();
+  const title=await page.locator('.preview-card-foot strong').first().textContent();
   assert.equal(title.trim(),'贾雨村','the card must be the person that was clicked');
   console.log(`${tag} card title:`,title.trim());
 
@@ -75,9 +75,11 @@ try{
     const dlg=document.querySelector('dialog.preview-dialog');
     if(!dlg)return null;
     const img=dlg.querySelector('.preview-face img');
+    const box=e=>{if(!e)return null;const r=e.getBoundingClientRect();
+      return {w:Math.round(r.width),h:Math.round(r.height),x:Math.round(r.x),y:Math.round(r.y)};};
     return {
       hasFace:!!dlg.querySelector('.preview-face'),
-      badge:dlg.querySelector('.preview-badge')?.textContent?.trim(),
+      kind:dlg.querySelector('.preview-kind')?.textContent?.trim(),
       kicker:dlg.querySelector('.preview-kicker')?.textContent?.trim(),
       flows:dlg.querySelectorAll('.preview-flow').length,
       quoted:dlg.querySelectorAll('.preview-flow-source').length,
@@ -86,6 +88,11 @@ try{
       imgSrc:img?.getAttribute('src')??null,
       imgW:img?.naturalWidth??0,
       imgH:img?.naturalHeight??0,
+      imgFit:img?getComputedStyle(img).objectFit:null,
+      dialog:box(dlg),
+      card:box(dlg.querySelector('.preview-card')),
+      art:box(dlg.querySelector('.preview-card-art')),
+      viewport:{w:innerWidth,h:innerHeight},
     };
   });
   console.log(`${tag} card face:`,JSON.stringify(face));
@@ -124,34 +131,44 @@ try{
   assert.ok(pic,'the card must show a picture');
   assert.ok(pic.w>0&&pic.h>0,'the card picture must have real pixels');
 
-  await page.locator('dialog.preview-dialog .preview-face').screenshot({path:`artifacts/card-preview-online-face-${tag}.png`});
+  await page.locator('dialog.preview-dialog .preview-card').screenshot({path:`artifacts/card-preview-online-face-${tag}.png`});
   await page.locator('dialog.preview-dialog').screenshot({path:`artifacts/card-preview-online-${tag}.png`});
 
-  // The name must be legible ON the card face, and only the pixels can say.
-  // A missing dark bed leaves cream lettering on a pale robe: the DOM looks
-  // perfect (the image is there, the gradient exists), the reader sees
-  // nothing. So read the picture that was just taken.
-  const faceBox=await page.locator('dialog.preview-dialog .preview-face').boundingBox();
-  const titleBox=await page.locator('dialog.preview-dialog .preview-title strong').boundingBox();
-  const png=decodePng(await page.screenshot({clip:faceBox}));
-  const scan=Math.floor(png.width*0.45);
-  const nameRow=Math.round(titleBox.y+titleBox.height/2-faceBox.y);
-  let sum=0,ink=0;
-  for(let x=0;x<scan;x++){
-    const l=luminance(png,x,nameRow);
-    sum+=l;
-    if(l>170)ink++;
-  }
-  const mean=sum/scan,peak=rowMaxLuminance(png,nameRow,0,scan),inkRatio=ink/scan;
-  const bottomMax=rowMaxLuminance(png,png.height-2,0,Math.floor(png.width*0.6));
-  console.log(`${tag} card name pixels:`,JSON.stringify({bottomMax:Math.round(bottomMax),
-    nameMean:Math.round(mean),namePeak:Math.round(peak),inkRatio:+inkRatio.toFixed(3)}));
-  assert.ok(bottomMax<110,
-    `the dark bed under the card name must cover the picture, but the bottom row is still bright (${Math.round(bottomMax)})`);
-  assert.ok(inkRatio>0.02,
-    `the card name must show cream lettering, but only ${(inkRatio*100).toFixed(1)}% of its row is bright`);
-  assert.ok(peak-mean>50,
-    `the card name must stand out from its bed, peak ${Math.round(peak)} vs mean ${Math.round(mean)}`);
+  // The card must be a card on the live site too: centred, portrait, whole
+  // picture. A `dialog` with `width:auto` spans the viewport and sits in the
+  // top-left corner — its centre would still be the middle of the screen, so
+  // the size has to be checked as well.
+  const cx=face.dialog.x+face.dialog.w/2, cy=face.dialog.y+face.dialog.h/2;
+  const offX=Math.abs(cx-face.viewport.w/2), offY=Math.abs(cy-face.viewport.h/2);
+  console.log(`${tag} card box:`,JSON.stringify({dialog:face.dialog,card:face.card,art:face.art,
+    offX:Math.round(offX),offY:Math.round(offY),fit:face.imgFit}));
+  assert.ok(face.dialog.w<=face.viewport.w*0.92,
+    `the card must be a card-sized box, but it spans ${face.dialog.w}px of ${face.viewport.w}`);
+  assert.ok(offX<12,`the card must be centred horizontally, it is ${Math.round(offX)}px off`);
+  assert.ok(offY<12,`the card must be centred vertically, it is ${Math.round(offY)}px off`);
+  assert.ok(face.card.h>face.card.w,`the card must be taller than wide, got ${face.card.w}x${face.card.h}`);
+  assert.ok(face.art.h>face.art.w,`the picture frame must be taller than wide, got ${face.art.w}x${face.art.h}`);
+  assert.equal(face.imgFit,'contain',`the picture must fit whole in the frame, got object-fit:${face.imgFit}`);
+
+  // The name sits on the card paper below the frame: dark ink on pale paper.
+  // Only the pixels can say for sure.
+  const nameBox=await page.locator('dialog.preview-dialog .preview-card-foot strong').boundingBox();
+  const paperBox=await page.locator('dialog.preview-dialog .preview-card-foot').boundingBox();
+  const png=decodePng(await page.screenshot({clip:paperBox}));
+  const nameRow=Math.round(nameBox.y+nameBox.height/2-paperBox.y);
+  const lum=[];
+  for(let x=0;x<png.width;x++)lum.push(luminance(png,x,nameRow));
+  const dark=lum.map((l,x)=>l<140?x:-1).filter(x=>x>=0);
+  assert.ok(dark.length>0,'the card name must show dark ink, but the row has none');
+  const from=dark[0],to=dark[dark.length-1]+1;
+  let sum=0;
+  for(let x=from;x<to;x++)sum+=lum[x];
+  const mean=sum/(to-from),inkRatio=dark.length/(to-from);
+  console.log(`${tag} card name pixels:`,JSON.stringify({paperMean:Math.round(mean),inkRatio:+inkRatio.toFixed(3)}));
+  assert.ok(inkRatio>0.15,
+    `the card name must show dark ink, but only ${(inkRatio*100).toFixed(1)}% of its lettering is dark`);
+  assert.ok(mean>150,
+    `the card name must sit on pale paper, but the paper averages ${Math.round(mean)}`);
 
   // (4) closing the card leaves the reader back in the backpack. The card sits
   // on top of the ledger rather than replacing it, so the column behind it

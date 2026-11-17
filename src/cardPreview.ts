@@ -14,7 +14,7 @@ import { artAssets } from './art.ts';
 
 /** 卡面上那张大图的来路。 */
 export type CardArtKind =
-  /** 人物卡：用 manifest 的 faceBox 裁出的头部近景（沿用图鉴的 Portrait closeup）。 */
+  /** 人物卡：整幅立绘（不裁切），由卡面的竖版画框配 `object-fit:contain` 收下。 */
   | 'portrait'
   /** 器物卡：方形货品图。 */
   | 'goods'

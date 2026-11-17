@@ -520,84 +520,134 @@ dialog.is-toc{width:min(980px,calc(100% - 30px));height:min(760px,88vh);max-heig
 @media(max-width:700px){.scene-locator{inset:0 0 262px}.locator-head{left:10px;right:10px;top:60px;transform:none;width:auto;max-width:none;gap:4px 8px;padding:6px 9px}.locator-kicker{font-size:10px;letter-spacing:0;padding:3px 6px}.locator-crumbs{font-size:9px}.locator-place-name{font-size:14px;letter-spacing:1px}.locator-skip{font-size:10px;padding:4px 7px}.locator-svg{inset:120px 0 18px;height:calc(100% - 138px)}}
 @media(prefers-reduced-motion:reduce){.scene-locator{animation:none}}
 
-/* ---- 背包卡片页：像卡牌那样，先看画，再看名，最后才看账 ----
+/* ---- 背包卡片页：一张竖版卡牌摆在桌面上 ----
    这层是独立的原生 dialog（top layer），盖在册页之上：
-   放在册页 dialog 内的定位层会被册页的 overflow 与层叠上下文吃掉。 */
-dialog.preview-dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:auto;height:auto;overflow:visible}
+   放在册页 dialog 内的定位层会被册页的 overflow 与层叠上下文吃掉。
+
+   ★ 居中：`dialog` 的 UA 默认是 `left:0;right:0` 的绝对定位盒，
+   配 `width:auto` 会被撑成全宽，内容就贴到左边去了。
+   ★ 而 `margin:auto` 只在**尺寸固定**时才生效——`width:auto` 时 auto 会
+   退化成 0（实测 computed margin 变成 0px，盒子仍是全屏）。
+   所以这里给死宽度（`fit-content` 让高度跟着内容走），`inset:0` + `margin:auto`
+   才能真正水平垂直居中。 */
+dialog.preview-dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;
+  width:min(820px,calc(100vw - 24px));height:fit-content;max-height:92vh;overflow:visible;inset:0;margin:auto}
 dialog.preview-dialog::backdrop{background:rgba(28,24,16,.62);backdrop-filter:blur(3px);animation:preview-fade .24s ease-out}
 @keyframes preview-fade{from{opacity:0}to{opacity:1}}
-.preview-inner{width:min(520px,calc(100vw - 24px));max-height:min(88vh,900px);display:flex;flex-direction:column;
-  overflow:hidden;border-radius:14px;border:1px solid #b9ae8b;
-  background:linear-gradient(170deg,#f8f3e2,#efe7cf);box-shadow:0 22px 64px rgba(18,13,4,.42);
+/* 桌面：左边摆卡，右边放账。两栏一起居中。
+   宽度由外层 dialog 定死（居中要靠它），这里撑满即可。
+   右边不撑满——账本那一栏按内容收窄，卡牌才是主角。
+   ★ align-items:center：两栏各自按内容高，不必齐底——卡牌高、账本矮，
+   强行等高只会在账本下方留一块空白。 */
+.preview-inner{position:relative;display:flex;gap:18px;align-items:center;justify-content:center;
+  width:100%;max-height:min(90vh,920px);--card-w:300px;
   animation:preview-rise .3s cubic-bezier(.2,.8,.3,1)}
 @keyframes preview-rise{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){dialog.preview-dialog::backdrop{animation:none}.preview-inner{animation:none}}
+/* 关闭按钮浮在桌面右上角，不占卡牌与账本的位置。 */
+.preview-close{position:absolute;top:-14px;right:-14px;z-index:9;box-shadow:0 3px 10px rgba(18,13,4,.28)}
 
+/* 卡牌：竖版，像真卡牌那样上窄下宽的比例（这里约 2:3）。
+   双层边——外圈是卡纸的边，内圈是画框的线，中间那一圈就是卡牌的厚度。
+   ★ 卡宽用变量：账本面板的高度上限要跟卡齐平（两栏齐底），
+   宽度一变高度就跟着变，所以高度上限也得跟着算，不能写死。 */
+.preview-stage{flex:0 0 auto;display:flex;align-items:center;justify-content:center;padding:14px 0}
+.preview-card{position:relative;width:var(--card-w);display:flex;flex-direction:column;
+  border-radius:16px;padding:9px;
+  background:linear-gradient(168deg,#fdfaf0,#efe7d2 62%,#e6dcc4);
+  border:1px solid #b3a887;
+  box-shadow:0 26px 54px rgba(18,13,4,.42),0 3px 8px rgba(18,13,4,.28),
+    inset 0 1px 0 rgba(255,255,255,.7),inset 0 0 0 1px rgba(255,255,255,.35);
+  isolation:isolate}
+/* 卡牌顶部那条属性栏：类别在左，入账笔数在右。 */
+.preview-card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:2px 4px 8px;flex-shrink:0}
+.preview-kind{font-family:"Songti SC",serif;font-size:12px;letter-spacing:4px;color:#6d6448}
+.preview-cost{font-size:10.5px;letter-spacing:.6px;color:#8b8163;
+  border:1px solid #c3b795;border-radius:99px;padding:2px 8px;background:rgba(255,255,255,.5)}
+/* 画框：内嵌在卡纸里，四边留出一圈卡纸的边。
+   高度由宽度按 5:7 推出（竖版卡牌的比例），不写死。 */
+.preview-card-art{position:relative;border-radius:10px;overflow:hidden;width:100%;aspect-ratio:5/7;
+  background:linear-gradient(160deg,#f4f0e2,#e6e2d1);
+  box-shadow:inset 0 0 0 1px rgba(120,108,74,.34),0 2px 7px rgba(18,13,4,.2)}
+/* 卡名与副题在画框之下的一段卡纸上——不在画上，字才始终清楚。 */
+.preview-card-foot{padding:11px 6px 5px;text-align:center;flex-shrink:0}
+.preview-card-foot strong{display:block;font-family:"Songti SC",serif;font-weight:500;
+  font-size:21px;letter-spacing:3px;color:#3d3524;line-height:1.3}
+.preview-card-foot small{display:block;margin-top:4px;font-size:11.5px;letter-spacing:.8px;color:#7d7355;line-height:1.5}
+/* 分类色：银两金、衣物绯、物件赭、人朱、人情青——与账簿里那一方花押同一套色。
+   ★ 用 inset 阴影而不是 border：border 不在渐变的覆盖范围内，
+   会在卡面最下缘露出一条亮线（实测末行亮度 30 → 149 的硬跳）。 */
+.preview-card.cat-money{box-shadow:0 26px 54px rgba(18,13,4,.42),0 3px 8px rgba(18,13,4,.28),
+  inset 0 1px 0 rgba(255,255,255,.7),inset 0 0 0 1px rgba(255,255,255,.35),inset 0 -3px 0 #b8933c}
+.preview-card.cat-clothing{box-shadow:0 26px 54px rgba(18,13,4,.42),0 3px 8px rgba(18,13,4,.28),
+  inset 0 1px 0 rgba(255,255,255,.7),inset 0 0 0 1px rgba(255,255,255,.35),inset 0 -3px 0 #a85a52}
+.preview-card.cat-item{box-shadow:0 26px 54px rgba(18,13,4,.42),0 3px 8px rgba(18,13,4,.28),
+  inset 0 1px 0 rgba(255,255,255,.7),inset 0 0 0 1px rgba(255,255,255,.35),inset 0 -3px 0 #8a7a50}
+.preview-card.cat-person{box-shadow:0 26px 54px rgba(18,13,4,.42),0 3px 8px rgba(18,13,4,.28),
+  inset 0 1px 0 rgba(255,255,255,.7),inset 0 0 0 1px rgba(255,255,255,.35),inset 0 -3px 0 #a3402f}
+.preview-card.cat-favor{box-shadow:0 26px 54px rgba(18,13,4,.42),0 3px 8px rgba(18,13,4,.28),
+  inset 0 1px 0 rgba(255,255,255,.7),inset 0 0 0 1px rgba(255,255,255,.35),inset 0 -3px 0 #4f7a5e}
+
+/* 账本面板：卡牌右边那一栏。按内容收窄，不占满整行。
+   高度上限跟卡牌齐平：卡高 = 画框高(卡宽-18)×7/5 + 顶栏 + 底栏 + 内边距。
+   账本长了就自己滚（.preview-body 是滚动区）。 */
+.preview-panel{flex:0 1 460px;min-width:0;display:flex;flex-direction:column;
+  max-height:calc((var(--card-w,300px) - 18px) * 1.4 + 100px);
+  overflow:hidden;border-radius:14px;border:1px solid #b9ae8b;
+  background:linear-gradient(170deg,#f8f3e2,#efe7cf);
+  box-shadow:0 22px 64px rgba(18,13,4,.34)}
 .preview-header{display:flex;align-items:center;justify-content:space-between;gap:12px;
   padding:11px 14px 9px;border-bottom:1px solid #d3c9a8;flex-shrink:0}
 .preview-kicker{font-size:11px;letter-spacing:3px;color:#8a8266}
 
-/* ---- 卡面：大图铺满整张卡，徽章与卡名压在下缘 ----
-   沿用册页卡片的墨色渐变（.card-face::after），但卡面更高——卡牌游戏的
-   「预览」比「缩略」大一圈，人脸才认得出来。 */
-.preview-face{position:relative;height:340px;border-radius:0;border:0;background:linear-gradient(160deg,#f7f5e8,#e9e5d1);
+/* ---- 卡面：竖版画框 ----
+   沿用册页卡片的墨色渐变（.card-face::after）。竖版之后画的比例对了，
+   窄长的立绘（多数 600 高）能整幅放进去，从头顶到脚底都在。 */
+.preview-face{position:relative;height:100%;width:100%;border-radius:10px;border:0;
+  background:linear-gradient(160deg,#f7f5e8,#e9e5d1);
   flex:0 0 auto;overflow:hidden;display:block;box-shadow:none}
-.preview-face::after{content:"";position:absolute;inset:auto 0 0 0;height:66%;pointer-events:none;z-index:1;
-  background:linear-gradient(to top,rgba(20,24,19,.94) 0%,rgba(20,24,19,.88) 22%,rgba(20,24,19,.70) 48%,rgba(20,24,19,.34) 76%,rgba(20,24,19,.04) 100%)}
-/* 分类色：银两金、衣物绯、物件赭、人朱、人情青——与账簿里那一方花押同一套色。
-   ★ 用 inset 阴影而不是 border-bottom：border 不在渐变的覆盖范围内，
-   会在卡面最下缘露出一条亮线（实测末行亮度 30 → 149 的硬跳）。 */
-.preview-face.cat-money{box-shadow:inset 0 -2px 0 #b8933c}
-.preview-face.cat-clothing{box-shadow:inset 0 -2px 0 #a85a52}
-.preview-face.cat-item{box-shadow:inset 0 -2px 0 #8a7a50}
-.preview-face.cat-person{box-shadow:inset 0 -2px 0 #a3402f}
-.preview-face.cat-favor{box-shadow:inset 0 -2px 0 #4f7a5e}
+/* 画的下缘压一层墨：让人物像是站在暗处，脚下有了地。
+   ★ 卡名与副题现在在画框之外的卡纸上，这一层不再承担「垫字」的职责，
+   所以只留很薄的一层落地影——压太重会把脚底压脏。 */
+.preview-face::after{content:"";position:absolute;inset:auto 0 0 0;height:22%;pointer-events:none;z-index:1;
+  background:linear-gradient(to top,rgba(20,24,19,.34) 0%,rgba(20,24,19,.16) 46%,rgba(20,24,19,.04) 78%,rgba(20,24,19,0) 100%)}
+/* 器物图铺满；人物像另算（见下）。 */
 .preview-face .card-thumb{position:absolute;inset:0}
-/* 器物图铺满；人物近景另算（见下）。
-   ★ 直接挂在卡面上的器物图也要压 z-index：通用规则给 `.card-face>*`
-   上了 z-index:2，会盖住托底渐变（`.preview-face::after` 是 z-index:1）。 */
+/* 器物图铺满整张画框。 */
 .card-face.preview-face>.card-face-img{position:absolute;inset:0;z-index:0;
   display:block;width:100%;height:100%;object-fit:cover}
-/* 立绘近景：按 faceBox 裁出的头肩，比整幅立绘更认得出人。
+/* 立绘：整幅全身像，不裁切。
    ★ 选择器必须写成 `.card-face.preview-face>.card-face-portrait`：
    通用规则 `.card-face>*:not(.card-thumb):not(.card-blank){position:relative;z-index:2}`
    的特异性是 (0,3,0)（两个 :not 各计一个类），高于 `.preview-face .card-face-portrait`
    的 (0,2,0) → 覆盖掉 absolute，于是 holder 塌成 height:0，
-   图片跟着变成 0×0，卡面只剩一片空白渐变（图片照样"加载成功"，测不出来）。
+   图片跟着变成 0×0，画框里只剩一片空白渐变（图片照样"加载成功"，测不出来）。
    写成同样特异性的 `.card-face.preview-face>…` 再靠后出现即可取胜。
    ★ z-index 也要压：那条通用规则还给了 z-index:2，会把立绘抬到
-   `.preview-face::after` 的托底渐变（z-index:1）之上——图是画出来了，
-   可渐变被盖住，底部的卡名与副题没有深色托底，浅色衣服上几乎看不清
-   （实测卡面最下缘亮度 150，理论应降到 30 上下）。这里显式压回 z-index:0。 */
+   `.preview-face::after` 的墨色渐变（z-index:1）之上。
+   ★ contain 而不是 cover：cover 会把窄长的立绘裁掉上下两端，
+   人就只剩中间一截——竖版画框配窄长立绘，要整幅放进去。 */
 .card-face.preview-face>.card-face-portrait{position:absolute;inset:0;overflow:hidden;z-index:0;
-  background:linear-gradient(160deg,#f4f0e2,#e6e2d1)}
-.card-face.preview-face>.card-face-portrait .card-face-img{position:absolute;object-fit:contain;object-position:center top}
+  background:radial-gradient(ellipse at 50% 30%,#f6f2e6,#e6e2d1 72%,#dcd6c2)}
+.card-face.preview-face>.card-face-portrait .card-face-img{position:absolute;inset:0;
+  width:100%;height:100%;object-fit:contain;object-position:center bottom;
+  padding:2% 2% 0;box-sizing:border-box}
 /* 账上只有名字、没画出像的：落一方朱印式花押，和账簿里的暗记同一路数。
    同样要压过上面那条 position:relative；z-index 也要压——否则花押会盖住
-   托底渐变，浅色花押配浅色卡名，等于白字写在白纸上（实测花押卡底
-   亮度 176，卡名完全读不出来）。 */
+   托底渐变。 */
 .card-face.preview-face>.card-face-seal{position:absolute;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;
   background:radial-gradient(ellipse at 50% 38%,#f0e8d2,#e0d8bd 70%,#d5ccae)}
 .card-face.preview-face>.card-face-seal .mono{font-family:"Songti SC",serif;font-size:112px;line-height:1;color:#b9a883;opacity:.5}
-/* 类别徽章压在卡面上缘，像卡牌右上角的属性牌。
-   同样写成 `.card-face.preview-face>…` 压过通用规则的 position:relative。 */
-.card-face.preview-face>.preview-badge{position:absolute;top:11px;left:11px;z-index:3;font-size:10px;letter-spacing:3px;
-  padding:4px 11px;border-radius:3px;color:#fdf6e3;background:rgba(22,26,20,.55);border:1px solid rgba(253,246,227,.3);
-  backdrop-filter:blur(2px)}
-/* 卡名压在下缘。同样要压过 position:relative，否则 inset:auto 0 0 0 会让它错位。
-   文字底下再压一层柔和的暗晕：卡面底色可能是浅色的衣服，
-   只靠渐变托底时副题几乎看不见（实测副题落在渐变最浅的 6% 处）。 */
-.card-face.preview-face>.preview-title{position:absolute;inset:auto 0 0 0;z-index:2;padding:0 16px 15px;
-  display:flex;flex-direction:column;gap:3px;pointer-events:none}
-.card-face.preview-face>.preview-title::before{content:"";position:absolute;inset:-6px -16px -15px -16px;z-index:-1;
-  background:radial-gradient(120% 100% at 20% 100%,rgba(16,19,15,.55),rgba(16,19,15,0) 72%)}
-.preview-title strong{font-family:"Songti SC",serif;font-weight:500;font-size:23px;letter-spacing:4px;color:#fdf8ea;
-  text-shadow:0 1px 4px rgba(0,0,0,.85),0 0 12px rgba(0,0,0,.6);line-height:1.25}
-.preview-title small{font-size:11.5px;letter-spacing:.6px;color:#e9e5d4;
-  text-shadow:0 1px 3px rgba(0,0,0,.9),0 0 8px rgba(0,0,0,.7)}
 
-.preview-body{padding:13px 16px 16px;overflow-y:auto;min-height:0}
-.preview-ledger{margin:0 0 10px;font-size:11.5px;color:#6b6450;letter-spacing:.4px}
+.preview-body{padding:13px 16px 16px;overflow-y:auto;min-height:0;flex:1}
+/* 这一张卡的本事：几笔入账、涉哪几回。做成一条属性带，
+   和卡牌顶部那个「1/3」呼应——同一件事在两处各说一半。 */
+.preview-ledger{margin:0 0 12px;font-size:11.5px;color:#6b6450;letter-spacing:.4px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:6px;
+  padding:7px 10px;border-radius:8px;background:rgba(255,255,255,.5);
+  border:1px solid #ddd4b6}
+.preview-ledger b{font-weight:500;color:#4a4130;font-size:12px}
 .preview-books{color:#8a8266}
 .preview-flows .card-book-title{margin-bottom:9px}
 .preview-flow{display:flex;gap:9px;align-items:flex-start;border:1px solid #cdc6a8;border-radius:8px;
@@ -615,10 +665,17 @@ dialog.preview-dialog::backdrop{background:rgba(28,24,16,.62);backdrop-filter:bl
 .preview-flow .card-seal{position:static;flex:0 0 auto;align-self:flex-start;margin-top:2px;background:#6b6a4e}
 
 @media(max-width:700px){
-  .preview-inner{width:calc(100vw - 16px);max-height:92vh;border-radius:12px}
-  .preview-face{height:272px}
-  .preview-title{padding:0 13px 12px}
-  .preview-title strong{font-size:20px;letter-spacing:2.5px}
+  /* 窄屏：卡牌与账本上下排，卡牌仍在上面，账本可滚。 */
+  dialog.preview-dialog{width:calc(100vw - 16px)}
+  .preview-inner{max-height:92vh;flex-direction:column;gap:12px;--card-w:min(280px,74vw)}
+  .preview-stage{padding:8px 0 0}
+  .preview-panel{max-height:none;flex:1 1 auto}
   .preview-body{padding:11px 12px 14px}
   .preview-flow-source{font-size:11px}
+  .preview-close{top:-10px;right:-10px}
+}
+/* 中等宽度：卡片略窄，给账本留地方。 */
+@media(max-width:900px){
+  dialog.preview-dialog{width:min(760px,calc(100vw - 20px))}
+  .preview-inner{gap:14px;--card-w:260px}
 }

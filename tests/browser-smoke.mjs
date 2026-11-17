@@ -426,7 +426,34 @@ assert.equal(Number((await page.getByRole('tab',{name:/账簿/}).textContent()).
  // 背包里点了人就摊开一张卡（像卡牌那样先看画再看账）。卡是模态的，
  // 册页上的点击在它开着的时候都落不到地上——所以下面每一步之前都要收掉它。
  assert.ok(await page.locator('dialog.preview-dialog').isVisible(),'clicking a person must open the card');
- assert.equal((await page.locator('.preview-title strong').textContent()).trim(),'贾雨村');
+ assert.equal((await page.locator('.preview-card-foot strong').textContent()).trim(),'贾雨村');
+ // 卡片得真的像一张卡：竖版、居中、图整幅放得下。
+ // ★ 居中只断言「中心离视口中心多远」抓不住不居中的 bug——撑满全屏的盒子
+ // 中心恰好也在视口中心，所以必须连盒子尺寸一起查。
+ const cardBox=await page.evaluate(()=>{
+   const dlg=document.querySelector('dialog.preview-dialog');
+   const card=document.querySelector('.preview-card');
+   const art=document.querySelector('.preview-card-art');
+   const img=document.querySelector('.preview-face .card-face-img');
+   if(!dlg||!card||!art)return null;
+   const d=dlg.getBoundingClientRect(),c=card.getBoundingClientRect(),a=art.getBoundingClientRect();
+   return {dlg:{x:Math.round(d.x),y:Math.round(d.y),w:Math.round(d.width),h:Math.round(d.height)},
+     card:{w:Math.round(c.width),h:Math.round(c.height)},
+     art:{w:Math.round(a.width),h:Math.round(a.height)},
+     fit:img?getComputedStyle(img).objectFit:null,
+     viewport:{w:innerWidth,h:innerHeight}};
+ });
+ assert.ok(cardBox,`the card must be laid out, got ${JSON.stringify(cardBox)}`);
+ console.log('card box:',JSON.stringify(cardBox));
+ assert.ok(cardBox.dlg.w<=cardBox.viewport.w*0.92,
+   `the card must be a card-sized box, but it spans ${cardBox.dlg.w}px of ${cardBox.viewport.w}`);
+ assert.ok(cardBox.dlg.h<=cardBox.viewport.h*0.94,
+   `the card must be a card-sized box, but it spans ${cardBox.dlg.h}px of ${cardBox.viewport.h}`);
+ assert.ok(Math.abs(cardBox.dlg.x+cardBox.dlg.w/2-cardBox.viewport.w/2)<12,'the card must be centred horizontally');
+ assert.ok(Math.abs(cardBox.dlg.y+cardBox.dlg.h/2-cardBox.viewport.h/2)<12,'the card must be centred vertically');
+ assert.ok(cardBox.card.h>cardBox.card.w,`the card must be taller than wide, got ${cardBox.card.w}x${cardBox.card.h}`);
+ assert.ok(cardBox.art.h>cardBox.art.w,`the picture frame must be taller than wide, got ${cardBox.art.w}x${cardBox.art.h}`);
+ if(cardBox.fit)assert.equal(cardBox.fit,'contain',`the picture must fit whole in the frame, got object-fit:${cardBox.fit}`);
  await dismissCardPreview(page);
  assert.ok(!(await page.locator('dialog.preview-dialog').isVisible().catch(()=>false)),'the card must close');
  // 账簿也要有贴图：账上的人和物都得有脸，不能只是一行行字。
