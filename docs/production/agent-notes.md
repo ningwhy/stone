@@ -537,5 +537,5 @@ smoke 走到一半我改了 `src/cardPreview.ts` → vite 整页重载 → 页�
   - 20=39 节点/7 段/4 新角色；19=78 节点/8 段/新建 `xiren_home`；18=135 节点/16 段；17=35 节点；16=28 节点/零新图
 - 全局规模：1924 节点 / 198 段 / 46 图 / 81 人 / 284 资产 / 1007 证据。
 - **背包卡片页已上线**（23 回之后，2026-11-16）：`src/cardPreview.ts`（数据层）+ `src/CardPreview.tsx`（UI）+ `src/styles.css`。账簿里点人/物 → 弹卡牌式大图预览。文档 `docs/production/card-preview.md`；测试 `tests/card-preview.test.ts`（13 项）/`.mjs`（浏览器）/`.mjs`（线上 `npm run test:online:card-preview`）。
-- **仍缺的两张大地图**：大观园全景、省亲正殿。
+- **两张曾缺的大地图已补**（2026-11-18，详见 `docs/production/missing-maps.md`）：大观园全景 `daguanyuan`（第 17 回，35 节点）+ 省亲正殿 `shengqin`（第 18 回 C18-063~070），生成器 `scripts/build_daguanyuan_maps.py`。只改 `scene` 字段、锚点名沿用，零重映射风险。
 - 制作记录在 `docs/chapterNN-production.md`，底本在 `docs/chapterNN-source.txt`。

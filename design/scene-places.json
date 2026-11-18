@@ -77,6 +77,8 @@
     "c14_office": {"level": "ningguo", "region": "capital", "col": 28, "row": 24, "name": "宁国府 · 理事堂"},
 
     "yihong": {"level": "daguanyuan", "region": "capital", "col": 20, "row": 20, "name": "大观园 · 怡红院", "note": "第二十一回新建，宝玉住处"},
-    "qinfang": {"level": "daguanyuan", "region": "capital", "col": 14, "row": 26, "name": "大观园 · 沁芳闸桃花下", "note": "第二十三回新建，桃花底下共读《会真记》"}
+    "qinfang": {"level": "daguanyuan", "region": "capital", "col": 14, "row": 26, "name": "大观园 · 沁芳闸桃花下", "note": "第二十三回新建，桃花底下共读《会真记》"},
+    "daguanyuan": {"level": "daguanyuan", "region": "capital", "col": 18, "row": 22, "name": "大观园 · 全景", "note": "第十七回游园题匾；原书未给精确方位，翠嶂/沁芳亭/诸院为叙事排布"},
+    "shengqin": {"level": "daguanyuan", "region": "capital", "col": 22, "row": 18, "name": "省亲别墅 · 正殿", "note": "第十八回元妃换匾受礼的行宫正殿；正殿不题匾是原文情节"}
   }
 }

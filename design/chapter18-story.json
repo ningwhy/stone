@@ -1557,7 +1557,7 @@
  },
  {
   "chapter": "c18-palace",
-  "scene": "central",
+  "scene": "shengqin",
   "place": "省亲别墅 · 行宫外",
   "focus": "ceremonial_gate",
   "source": {
@@ -1586,7 +1586,7 @@
  },
  {
   "chapter": "c18-palace",
-  "scene": "central",
+  "scene": "shengqin",
   "place": "省亲别墅 · 岸边",
   "focus": "rongxi_steps",
   "source": {
@@ -1609,7 +1609,7 @@
  },
  {
   "chapter": "c18-palace",
-  "scene": "central",
+  "scene": "shengqin",
   "place": "省亲别墅 · 牌坊",
   "focus": "ceremonial_gate",
   "source": {
@@ -1638,7 +1638,7 @@
  },
  {
   "chapter": "c18-palace",
-  "scene": "central",
+  "scene": "shengqin",
   "place": "省亲别墅 · 行宫",
   "focus": "ceremonial_gate",
   "source": {
@@ -1662,7 +1662,7 @@
  },
  {
   "chapter": "c18-palace",
-  "scene": "central",
+  "scene": "shengqin",
   "place": "省亲别墅 · 正殿",
   "focus": "rongxi_center",
   "source": {
@@ -1685,7 +1685,7 @@
  },
  {
   "chapter": "c18-palace",
-  "scene": "central",
+  "scene": "shengqin",
   "place": "省亲别墅 · 正殿",
   "focus": "rongxi_door",
   "source": {
@@ -1708,7 +1708,7 @@
  },
  {
   "chapter": "c18-palace",
-  "scene": "central",
+  "scene": "shengqin",
   "place": "省亲别墅 · 月台下",
   "focus": "rongxi_steps",
   "source": {
@@ -1731,7 +1731,7 @@
  },
  {
   "chapter": "c18-palace",
-  "scene": "central",
+  "scene": "shengqin",
   "place": "省亲别墅 · 东阶",
   "focus": "east_door",
   "source": {

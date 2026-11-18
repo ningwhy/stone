@@ -83,7 +83,10 @@ try{
     scenes.add(scene);
   }
   console.log(`${tag} chapter-18 stages walked:`,[...scenes].sort().join(' / '));
-  assert.equal(scenes.size,7,'all seven reused stages must be reachable online');
+  // ★ 从 sections 实读，不写死「七张」——省亲受礼改用专图 shengqin 后就是八张，
+  //   写死的计数会让线上验收红在一个与被测回目无关的数字上。
+  const expectedStages=new Set(sections.map(s=>s.scene));
+  assert.deepEqual([...scenes].sort(),[...expectedStages].sort(),'every declared stage must be reachable online');
 
   // ---- 三、封底与「下一回有没有上线」相称 ----
   const lastNode=story[story.length-1].id, beforeLast=story[story.length-2].id;

@@ -101,8 +101,11 @@ try{
     seenScenes.add(scene);
     await page.screenshot({path:`artifacts/c18-${section.id}.png`,fullPage:true});
   }
-  // 七张复用地图全都被用上了；哪一张没被走到，说明某段的场景声明写错了。
-  assert.deepEqual([...seenScenes].sort(),['c11_tianxiang','canal','capital','central','dinner','entry','wang'].sort(),'all seven reused stages must be staged');
+  // 设计里声明的舞台全都走到了；哪一张没被走到，说明某段的场景声明写错了。
+  // ★ 从 sections 实读，不写死清单——写死的话每次改场景（如省亲受礼从
+  //   central 换成专图 shengqin）都会把这条断言弄红，而红的原因与被测回目无关。
+  const declaredScenes=[...new Set(sections.map(s=>s.scene))].sort();
+  assert.deepEqual([...seenScenes].sort(),declaredScenes,'every declared stage must be staged');
 
   // ---- 二、段内连贯：每段往后走若干句，节点不乱跳、场景不乱切 ----
   for(const section of sections){
@@ -120,8 +123,10 @@ try{
     }
     assert.ok(walked>0,`${section.id} must let the reader walk forward`);
     // 段内换场景是允许的（第十六段就跨了两张图），但不能跳到这一回没用过的场景。
+    // 同样从本回 story 实读全部场景，避免写死清单随场景调整而失真。
     const after=await currentScene();
-    assert.ok(['entry','dinner','wang','central','capital','canal','c11_tianxiang'].includes(after),`${section.id} walked into an unexpected stage ${after}`);
+    const chapterScenes=new Set(story.map(n=>n.scene));
+    assert.ok(chapterScenes.has(after),`${section.id} walked into an unexpected stage ${after}`);
     assert.ok(scene!==undefined);
   }
 
@@ -193,7 +198,7 @@ try{
   assert.equal(mismatched,0,`${mismatched} nodes carry text that is not in the source`);
 
   assert.equal(errors.length,0,JSON.stringify(errors));
-  console.log(`Passed: chapter 18 — ${sections.length} sections walked, ${story.length} nodes, ${seenScenes.size} reused stages, TOC search, cast album renders, final back cover ends the book, all node text verbatim from the source.`);
+  console.log(`Passed: chapter 18 — ${sections.length} sections walked, ${story.length} nodes, ${seenScenes.size} stages (${declaredScenes.join('/')}), TOC search, cast album renders, final back cover ends the book, all node text verbatim from the source.`);
 }catch(e){
   console.error('Browser errors:',errors);
   console.error((await page.locator('body').innerText()).slice(0,3500));
