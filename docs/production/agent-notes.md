@@ -530,12 +530,17 @@ smoke 走到一半我改了 `src/cardPreview.ts` → vite 整页重载 → 页�
 ## 八、进度
 
 - **大地图定位转场（全局能力，21 回上线后追加）**：`design/scene-places.json`(45 scene) + `src/scenePlaces.ts` + `src/SceneLocator.tsx` + `App.tsx` 触发链/跳过/设置 + `src/styles.css`；`npm run test:locator` 定向验收；文档 `docs/production/scene-locator.md`。触发＝换场景 + 每回开篇，两拍＝天下图光点飞行 → 府内下钻 / 天下层推镜，可跳过 + 设置可关 + reducedMotion 退化。
-- **第 1-23 回全部完成并上线**（23 回于 2026-11-16 部署 `stone-direct.yan.pub`，线上定向回归/定位转场/图鉴标题全通过）。
+- **第 1-24 回全部完成并上线**（24 回于 2026-11-18 部署 `stone-direct.yan.pub`，线上定向回归/定位转场/图鉴标题全通过；提交 `7dc5d39`）。
+  - 24=369 节点/16 段/377 证据/8 新角色（贾芸、小红、倪二、卜世仁、香菱、秋纹、碧痕、鸳鸯）/新建 4 图（`spice_shop`、`ni_er_lane`、`qiranzhai`、`jia_yun_home`）
   - 23=236 节点/14 段/249 证据/3 新角色（金钏儿、彩云、贾芹）/新建 1 图（`qinfang` 沁芳闸桃花图）
   - 22=218 节点/8 段/1 新角色（贾兰）/零新图
   - 21=139 节点/12 段/3 新角色/新建 2 图（`yihong`、`jialian_home`）
   - 20=39 节点/7 段/4 新角色；19=78 节点/8 段/新建 `xiren_home`；18=135 节点/16 段；17=35 节点；16=28 节点/零新图
-- 全局规模：1924 节点 / 198 段 / 46 图 / 81 人 / 284 资产 / 1007 证据。
+- 全局规模：2293 节点 / 214 段 / 52 图 / 89 人 / 300 资产 / 1384 证据。
 - **背包卡片页已上线**（23 回之后，2026-11-16）：`src/cardPreview.ts`（数据层）+ `src/CardPreview.tsx`（UI）+ `src/styles.css`。账簿里点人/物 → 弹卡牌式大图预览。文档 `docs/production/card-preview.md`；测试 `tests/card-preview.test.ts`（13 项）/`.mjs`（浏览器）/`.mjs`（线上 `npm run test:online:card-preview`）。
 - **两张曾缺的大地图已补**（2026-11-18，详见 `docs/production/missing-maps.md`）：大观园全景 `daguanyuan`（第 17 回，35 节点）+ 省亲正殿 `shengqin`（第 18 回 C18-063~070），生成器 `scripts/build_daguanyuan_maps.py`。只改 `scene` 字段、锚点名沿用，零重映射风险。
+- **第 24 回的两条新纪律（详见 `docs/chapter24-production.md`）**：
+  - ★ **生成器的 `last_focus` 必须按「场景」记，不能按「段 id」记**——一个场景可横跨多段（`yihong` 占四段），按段 id 记会让段首既无 `show` 也无 `move` 的节点 focus 断链成空（26 个节点集体 `unknown focus`）。第 23 回一个场景只跨一段，所以这个隐患第一次没暴露。**再加一条自校「focus 不得为空」**。
+  - ★ **生成器里凡是 `show` 的 actor 必须在 cast 里**——「不入 cast」的角色（如贾芸之母）只能用叙述与场景美术交代，不能 `show`。
+- **「区间自愈」生成器（第 24 回新增）**：`scripts/build_chapter24.py` 只声明起点、终点自动推导（`prev.s_to = next.s_from`），起点用「标题回锚底本」（最长公共前缀打分，因为标题常在句子中间被截断）+ 引号边界（不越过引语开头）。手写索引必然漂移——第 24 回初版照抄第 23 回手写索引，立刻暴露 9 处区间重叠、4 处跳段、15 处标题对不上。
 - 制作记录在 `docs/chapterNN-production.md`，底本在 `docs/chapterNN-source.txt`。

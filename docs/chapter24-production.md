@@ -147,11 +147,65 @@
 - [x] 图鉴 QA：`tests/character-identities.mjs` → `Passed: 89 versioned portraits, 全部 89 张带 faceBox 并已裁成脸部特写（无缺元数据全身像）；manifest 共 164 个 identity 块`
 - [x] 人物美术 QA：`tests/character-art-qa.mjs` → 图鉴 89 张像素去重无重复 / 体型档位 0.72 / 脚底偏差 0px / 层级遮挡成立
 - [x] 注册 8 个新角色到 `src/story.ts` 的 `cast`
-- [ ] `src/story.ts`：import script24/sections24 → 拼 `story` → 拼 `chapters` → `bookNames` 加 `"24":"第24回"`
-- [ ] `design/chapter-titles.json` 加回目联
-- [ ] `scripts/check_content.mjs` 的 `VERBATIM_BASE` 加 24
-- [ ] `design/scene-places.json` 补 4 个新 scene 的方位
-- [ ] `tests/browser-smoke.mjs` 的「查无此人」样本重选（当前样本：侍书）
-- [ ] 写 `tests/chapter24.mjs` 与 `tests/online-chapter24.mjs`
-- [ ] `npm run check:content` → `check:anchors` → `tsc` → `npm test` → `test:locator` → `build` → 图鉴 → 定向测试 → browser-smoke
-- [ ] 部署到 `stone-direct.yan.pub` 并线上复验
+- [x] `src/story.ts`：import script24/sections24 → 拼 `story` → 拼 `chapters` → `bookNames` 加 `"24":"第24回"`
+- [x] `design/chapter-titles.json` 加回目联
+- [x] `scripts/check_content.mjs` 的 `VERBATIM_BASE` 加 24
+- [x] `design/scene-places.json` 补 4 个新 scene 的方位
+      —— `spice_shop`(capital 7,21) / `ni_er_lane`(capital 10,24) / `jia_yun_home`(capital 13,25) /
+      `qiranzhai`(rongguo 9,12)；坐标已逐点验证不与同层既有点位的**标签框**重叠
+      （转场下钻后同层十几个地名会同时画出来，坐标近了会糊成一团）
+- [x] `tests/browser-smoke.mjs` 的「查无此人」样本**无需重选**
+      —— 「侍书」在第 24 回的全部可搜路径（正文/标题/地点/在场人物/段 id）里仍是 0 命中，
+      也不在 cast 里。顺带把静态断言升级成**复刻运行时索引**（src/toc.ts 的 searchText 六项），
+      上一版只扫 chapter*-story.json，「在地点名里出现」这类情况根本查不出来
+- [x] 写 `tests/chapter24.mjs` 与 `tests/online-chapter24.mjs`
+- [x] `npm run check:content` → `check:anchors` → `tsc` → `npm test` → `test:locator` → `build` → 图鉴 → 定向测试 → browser-smoke
+      —— check:content `Content passed: 2293 nodes, 214 sections, 52 maps, 89 humans, 300 assets`
+      —— check:anchors `391 route anchors, 37 decorative anchors`
+      —— map:framing `0 framing problem(s)`
+      —— npm test `97 pass / 0 fail`
+      —— test:locator `places: 52 scenes, 5 levels, 10 regions` + `non-overlap: … overlap 0`
+      —— character-identities / character-art-qa 全绿
+      —— chapter24 `Passed: chapter 24 — 16 sections walked, 369 nodes, 10 stages, TOC search, back cover correct, all node text verbatim.`
+      —— browser-smoke `Passed: all 354 nodes, 52 maps, …`
+- [x] 部署到 `stone-direct.yan.pub` 并线上复验
+      —— 服务器回环 `curl -sk -H 'Host: stone-direct.yan.pub' https://127.0.0.1/` → 200；直连 200
+      —— online-chapter24 `Passed (direct): chapter 24 is live — 16 sections, 10 stages (incl. 4 new maps),
+         TOC lists 第二十四回, back cover ends the book, 89 portraits render (incl. 8 new).`；0 失败请求
+      —— verify-album-title `面板标题: 前二十四回 · 人物图鉴`（回目数自动派生）
+      —— online-chapter23 回归：第 23 回封底自动变成「开启下一回 → 第二十四回 醉金刚轻财尚义侠 痴女儿遗帕惹相思」
+      —— 提交 `7dc5d39`，已推送 `origin/main`
+
+---
+
+## 接入时修掉的两个真缺陷
+
+这两个都不是「接一下就行」能绕过去的，是接入时**门禁逼出来的**真问题：
+
+### 一、生成器的 `last_focus` 按段 id 记 → 26 个节点 focus 断链成空
+
+**现象**：`check_content` 报 `ERROR C24-334…C24-359: unknown focus `（空字符串）。
+
+**根因**：`assign_scenes()` 的 `last_focus` 以**段 id** 为键，但一个场景可以横跨好几段 ——
+`yihong` 占了 `c24-yuanyang` / `c24-yihong` / `c24-doucha` / `c24-yipa` 四段。
+`c24-yipa` 的段首节点（C24-334）既没有 `show` 也没有 `move`，
+按段 id 找「上一次落点」就找不到了 → focus 断链成空串。
+
+**为什么以前没炸**：第 23 回一个场景只跨一段，按段 id 记和按场景记等价。
+第 24 回第一次让同一场景跨四段，这个隐患才暴露。
+
+**修法**：改成**按场景**记（`last_focus[step['scene']]`），跨段续用同一场景时镜头不丢；
+同时给 `c24-yipa` 段首补上 `show`（秋纹、碧痕正是在这里登场）；
+并在生成器自校里加一条「focus 不得为空」——
+**不然要等上线后读者点到那一步才发现**。
+
+### 二、C24-174 的 `show jia_yun_mother` 引用了不在 cast 里的角色
+
+**现象**：`ERROR C24-174: unknown actor jia_yun_mother`。
+
+**根因**：生成器里给「贾芸之母」写了个 `show`，但按设计推定 **D7** 她**不上台、不入 cast**
+（底本只写「见他母亲自在炕上拈线」，她没有台词）。
+
+**修法**：去掉那个 `show`，镜头落在里屋 `room`；母亲的存在由正文和图上那张炕交代。
+**教训**：生成器里凡是 `show` 的 actor，都必须在 cast 里；「不入 cast」的角色只能用叙述与场景美术交代。
+
