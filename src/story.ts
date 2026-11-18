@@ -46,6 +46,8 @@ import script22 from '../design/chapter22-story.json' with { type:'json' };
 import sections22 from '../design/chapter22-sections.json' with { type:'json' };
 import script23 from '../design/chapter23-story.json' with { type:'json' };
 import sections23 from '../design/chapter23-sections.json' with { type:'json' };
+import script24 from '../design/chapter24-story.json' with { type:'json' };
+import sections24 from '../design/chapter24-sections.json' with { type:'json' };
 export const cast = {
   oldmonk:{"name": "智通寺老僧", "fullName": "智通寺老僧", "color": 8885375, "css": "#87947f", "relation": "寺中煮粥人", "description": "龙钟衰老，回答雨村时答非所问；与癞头和尚分列。"},
   huoqi:{"name": "霍启", "fullName": "霍启", "color": 8885375, "css": "#87947f", "relation": "甄家家人", "description": "带英莲看灯，暂离后失去孩子，惧罪逃走。"},
@@ -129,6 +131,14 @@ export const cast = {
   jinyuan:{name:'金钏儿',fullName:'金钏儿',color:0xc9705e,css:'#c9705e',relation:'王夫人房中丫鬟 · 贾母房里当差',description:'王夫人房中的大丫鬟，出身在贾母身边当差。丰腴妩媚，说话带笑；第二十三回在王夫人房外廊下拉住宝玉，低声拿胭脂打趣他。'},
   caiyun:{name:'彩云',fullName:'彩云',color:0x8fa9c0,css:'#8fa9c0',relation:'王夫人房中丫鬟',description:'王夫人房中的丫鬟，为人厚道本分。第二十三回在廊下推开奚落宝玉的金钏儿，劝他趁贾政高兴赶紧进去。'},
   jia_qin:{name:'贾芹',fullName:'贾芹',color:0x9aa06e,css:'#9aa06e',relation:'贾政远房侄儿 · 总理两处庙产',description:'贾政的远房侄儿，因母亲周氏求凤姐谋差，得以管领玉皇庙与达摩庵两处庙宇的供给，月支二三百两银子。第二十三回带着家眷往城外铁槛寺去了。'},
+  jia_yun:{name:'贾芸',fullName:'贾芸',color:0x7d94ab,css:'#7d94ab',relation:'荣国府后廊上五嫂子之子',description:'荣国府后廊上住着的五嫂子之子，生得斯文清秀、极伶俐乖觉，年十八岁。第二十四回求贾琏谋差未得，转向母舅卜世仁赊香不成，反得醉金刚倪二仗义借银。'},
+  xiaohong:{name:'小红',fullName:'小红',color:0xc0856e,css:'#c0856e',relation:'怡红院小丫头 · 本姓林名红玉',description:'本姓林、小名红玉，因「玉」字犯了黛玉宝玉，改为小红。荣国府世代旧仆之女，年方十六，被分在怡红院。第二十四回因手帕子不见了去后头找，撞见宝玉在屋里。'},
+  ni_er:{name:'倪二',fullName:'醉金刚倪二',color:0x8a6f52,css:'#8a6f52',relation:'街坊泼皮 · 放重利债',description:'紧邻贾家的泼皮，专放重利债，在赌博场吃闲钱，专管打降吃酒，人称「醉金刚」。素日虽是无赖，却因人而使颇有义侠之名，第二十四回慷慨借银与贾芸。'},
+  bu_shi_ren:{name:'卜世仁',fullName:'卜世仁',color:0x7a7266,css:'#7a7266',relation:'贾芸的母舅 · 开香料铺',description:'贾芸的母舅，现开香料铺，惯会推脱。第二十四回不肯给外甥赊冰片麝香，还推说「这会子还装胖呢」，被贾芸心里记下。'},
+  xiangling:{name:'香菱',fullName:'香菱',color:0xc9a8b0,css:'#c9a8b0',relation:'薛宝钗的丫头 · 甄英莲',description:'甄英莲，眉眼像黛玉。第二十四回自背后击掌吓了黛玉一跳，说来寻姑娘，又与黛玉同坐潇湘馆说些刺绣下棋的话。'},
+  qiuwen:{name:'秋纹',fullName:'秋纹',color:0xd08a5c,css:'#d08a5c',relation:'怡红院丫鬟',description:'怡红院里的丫鬟，眉粗眼大体态结实，爱使性子。第二十四回与碧痕提水回来，听见老嬷嬷说来监工的是「后廊上的芸哥儿」，还当是别的匠人。'},
+  bihen:{name:'碧痕',fullName:'碧痕',color:0x87b0a4,css:'#87b0a4',relation:'怡红院丫鬟',description:'怡红院里的丫鬟，长脸细眉、鼻头微翘、身段纤细。第二十四回与秋纹提水回来，说要向众人传话，往后凡要茶要水送东送西的事都单叫袭人去。'},
+  yuan_yang:{name:'鸳鸯',fullName:'鸳鸯',color:0xc4574f,css:'#c4574f',relation:'贾母房中首席大丫头',description:'贾母房里的首席大丫头，容貌标致、进退得体。第二十四回歪在床上看袭人的针线，被宝玉缠着要胭脂吃，只唤袭人出来瞧瞧。'},
 };
 export type ActorId=keyof typeof cast;
 export type FacingSide='left'|'right';
@@ -188,12 +198,12 @@ export type Move={type:'move';actor:ActorId;via:string[]};
 export type Action=Move|{type:'parallel';moves:Move[]}|{type:'show';actor:ActorId;at:string}|{type:'hide';actor:ActorId}|{type:'roof';visible:boolean}|{type:'effect';actor:ActorId;kind:'jade'|'greet'|'rest'|'idle'|'anger';duration:number};
 export type StoryStep={id:string;chapter:string;scene:string;title:string;place:string;focus:string;speaker:ActorId|'narrator';text:string;mood?:string;offscreen?:boolean;actions:Action[];source:{chapter:number;paragraphLead:string;textKind:string;layer?:string}};
 export const chapter3Story=script as StoryStep[];
-export const story=[...script1,...script2,...script,...script4,...script5,...script6,...script7,...script8,...script9,...script10,...script11,...script12,...script13,...script14,...script15,...script16,...script17,...script18,...script19,...script20,...script21,...script22,...script23] as StoryStep[];
+export const story=[...script1,...script2,...script,...script4,...script5,...script6,...script7,...script8,...script9,...script10,...script11,...script12,...script13,...script14,...script15,...script16,...script17,...script18,...script19,...script20,...script21,...script22,...script23,...script24] as StoryStep[];
 /** Index of the last chapter-three node inside `story`; saves taken before chapter four
  * end here, and a saved ending at or before it must reopen as an ordinary reading state. */
 export const LAST_LEGACY_INDEX=([...script1,...script2,...script] as StoryStep[]).length-1;
-export const chapters=[...sections1,...sections2,...sections.map(s=>({...s,book:3})),...sections4,...sections5.map(s=>({...s,book:5})),...sections6.map(s=>({...s,book:6})),...sections7.map(s=>({...s,book:7})),...sections8.map(s=>({...s,book:8})),...sections9.map(s=>({...s,book:9})),...sections10.map(s=>({...s,book:10})),...sections11.map(s=>({...s,book:11})),...sections12.map(s=>({...s,book:12})),...sections13.map(s=>({...s,book:13})),...sections14.map(s=>({...s,book:14})),...sections15.map(s=>({...s,book:15})),...sections16.map(s=>({...s,book:16})),...sections17.map(s=>({...s,book:17})),...sections18.map(s=>({...s,book:18})),...sections19.map(s=>({...s,book:19})),...sections20.map(s=>({...s,book:20})),...sections21.map(s=>({...s,book:21})),...sections22.map(s=>({...s,book:22})),...sections23.map(s=>({...s,book:23}))];
-export const bookNames:Record<number,string>={1:"第一回",2:"第二回",3:"第三回",4:"第四回",5:"第五回",6:"第六回",7:"第七回",8:"第八回",9:"第九回",10:"第十回",11:"第十一回",12:"第十二回",13:"第十三回",14:"第十四回",15:"第十五回",16:"第十六回",17:"第十七回",18:"第十八回",19:"第十九回",20:"第二十回",21:"第二十一回",22:"第二十二回",23:"第二十三回"};
+export const chapters=[...sections1,...sections2,...sections.map(s=>({...s,book:3})),...sections4,...sections5.map(s=>({...s,book:5})),...sections6.map(s=>({...s,book:6})),...sections7.map(s=>({...s,book:7})),...sections8.map(s=>({...s,book:8})),...sections9.map(s=>({...s,book:9})),...sections10.map(s=>({...s,book:10})),...sections11.map(s=>({...s,book:11})),...sections12.map(s=>({...s,book:12})),...sections13.map(s=>({...s,book:13})),...sections14.map(s=>({...s,book:14})),...sections15.map(s=>({...s,book:15})),...sections16.map(s=>({...s,book:16})),...sections17.map(s=>({...s,book:17})),...sections18.map(s=>({...s,book:18})),...sections19.map(s=>({...s,book:19})),...sections20.map(s=>({...s,book:20})),...sections21.map(s=>({...s,book:21})),...sections22.map(s=>({...s,book:22})),...sections23.map(s=>({...s,book:23})),...sections24.map(s=>({...s,book:24}))];
+export const bookNames:Record<number,string>={1:"第一回",2:"第二回",3:"第三回",4:"第四回",5:"第五回",6:"第六回",7:"第七回",8:"第八回",9:"第九回",10:"第十回",11:"第十一回",12:"第十二回",13:"第十三回",14:"第十四回",15:"第十五回",16:"第十六回",17:"第十七回",18:"第十八回",19:"第十九回",20:"第二十回",21:"第二十一回",22:"第二十二回",23:"第二十三回",24:"第二十四回"};
 
 /** Consecutive move actions for different actors describe one shared walk; play them together
  * so a two-person errand no longer costs twice the stage time. Same-actor neighbours stay

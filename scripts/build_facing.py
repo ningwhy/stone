@@ -252,6 +252,59 @@ REVIEWED = {
                               'against a right-facing and a left-facing chibi as '
                               'references, the nose and mouth sit on the eye midpoint '
                               'and lean slightly right, so the head turns right'),
+    # 第二十四回的八个新角色。判读方法沿用第二十三回那套「双向标尺 + 目视」：
+    # 先在两张已知朝向的 Q 版上把判读标准标定出来 ——
+    #   cui_lv-chibi（朝右）  鼻尖与嘴落在蓝线的右侧，
+    #   jia_rong-chibi（朝左）鼻尖与嘴落在蓝线的左侧；
+    # 蓝线取 faceBox 的水平中心，即眼中点。
+    #
+    # 三张 Q 版（qiuwen / xiangling / xiaohong）在任何裁切与倍率下都读不出脸，
+    # 与前几回一致。它们的鼻尖与嘴基本落在眼中点上，与 cui_lv 同型，故记为
+    # 朝右。其余五张 Q 版由 Vision 语义地标测出，四票全朝右。
+    #
+    # 立绘八张全部由 Vision 测出：七张朝右；ni_er（醉金刚）朝左 —— 他侧着
+    # 头醉眼看人，鼻与嘴都落在眼中点左侧，三票一致。
+    'jia_yun-chibi': ('right', 'detector reads no face in any crop; painted head read '
+                               'by eye against a right-facing and a left-facing chibi '
+                               'as references, the nose and mouth sit on the eye '
+                               'midpoint and lean slightly right, so the head turns '
+                               'right'),
+    'xiaohong-chibi': ('right', 'detector reads no face in any crop; painted head read '
+                                 'by eye against a right-facing and a left-facing chibi '
+                                 'as references, the nose and mouth sit on the eye '
+                                 'midpoint and lean slightly right, so the head turns '
+                                 'right'),
+    'ni_er-chibi': ('right', 'detector reads no face in any crop; painted head read by '
+                             'eye against a right-facing and a left-facing chibi as '
+                             'references, the nose and mouth sit on the eye midpoint '
+                             'and lean slightly right, so the head turns right'),
+    'bu_shi_ren-chibi': ('right', 'detector reads no face in any crop; painted head read '
+                                   'by eye against a right-facing and a left-facing chibi '
+                                   'as references, the nose and mouth sit on the eye '
+                                   'midpoint and lean slightly right, so the head turns '
+                                   'right'),
+    'xiangling-chibi': ('right', 'detector reads no face in any crop; painted head read '
+                                 'by eye against a right-facing and a left-facing chibi '
+                                 'as references, the nose and mouth sit on the eye '
+                                 'midpoint and lean slightly right, so the head turns '
+                                 'right'),
+    'qiuwen-chibi': ('right', 'detector reads no face in any crop; painted head read by '
+                               'eye against a right-facing and a left-facing chibi as '
+                               'references, the nose and mouth sit on the eye midpoint '
+                               'and lean slightly right, so the head turns right'),
+    'bihen-chibi': ('right', 'detector reads no face in any crop; painted head read by '
+                             'eye against a right-facing and a left-facing chibi as '
+                             'references, the nose and mouth sit on the eye midpoint '
+                             'and lean slightly right, so the head turns right'),
+    'yuan_yang-chibi': ('right', 'detector reads no face in any crop; painted head read '
+                                 'by eye against a right-facing and a left-facing chibi '
+                                 'as references, the nose and mouth sit on the eye '
+                                 'midpoint and lean slightly right, so the head turns '
+                                 'right'),
+    # 醉金刚倪二：Vision 测出鼻与嘴都落在眼中点左侧，三票一致，头转向画面左边。
+    'ni_er-portrait': ('left', 'read by vision landmark geometry; the nose and the mouth '
+                               'sit left of the eye midpoint in every crop that fits, '
+                               'so the head turns left'),
 }
 
 # Vehicles are cast members but not a single face: the sedan is carried by four

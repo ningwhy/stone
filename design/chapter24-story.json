@@ -1,0 +1,9156 @@
+[
+ {
+  "id": "C24-001",
+  "chapter": "c24-xiangling",
+  "scene": "qinfang",
+  "title": "黛玉正自情思萦逗，缠绵固结之时",
+  "place": "大观园 · 沁芳闸",
+  "focus": "bank_west",
+  "speaker": "narrator",
+  "text": "话说林黛玉正自情思萦逗，缠绵固结之时，忽有人从背后击了一掌，说道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "bank_west"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "话说林黛玉正自情思萦逗，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-002",
+  "chapter": "c24-xiangling",
+  "scene": "qinfang",
+  "title": "忽有人从背后击了一掌",
+  "place": "大观园 · 沁芳闸",
+  "focus": "bank_west",
+  "speaker": "narrator",
+  "text": "忽有人从背后击了一掌，说道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xiangling",
+    "at": "bank_west"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "忽有人从背后击了一掌，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-003",
+  "chapter": "c24-xiangling",
+  "scene": "qinfang",
+  "title": "你作什么一个人在这里？",
+  "place": "大观园 · 沁芳闸",
+  "focus": "bank_west",
+  "speaker": "xiangling",
+  "text": "「你作什么一个人在这里？」林黛玉倒唬了一跳，回头看时，不是别人，却是香菱。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiangling",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你作什么一个人在这里？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-004",
+  "chapter": "c24-xiangling",
+  "scene": "qinfang",
+  "title": "回头看时，不是别人，却是香菱",
+  "place": "大观园 · 沁芳闸",
+  "focus": "bank_west",
+  "speaker": "narrator",
+  "text": "回头看时，不是别人，却是香菱。林黛玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "回头看时，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-005",
+  "chapter": "c24-xiangling",
+  "scene": "qinfang",
+  "title": "你这个傻丫头，唬我这么一跳好的",
+  "place": "大观园 · 沁芳闸",
+  "focus": "bank_west",
+  "speaker": "daiyu",
+  "text": "「你这个傻丫头，唬我这么一跳好的。你这会子打那里来？」香菱嘻嘻的笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你这个傻丫头，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-006",
+  "chapter": "c24-xiangling",
+  "scene": "qinfang",
+  "title": "我来寻我们的姑娘的，找他总找不著",
+  "place": "大观园 · 沁芳闸",
+  "focus": "bank_west",
+  "speaker": "xiangling",
+  "text": "「我来寻我们的姑娘的，找他总找不著。你们紫鹃也找你呢，说琏二奶奶送了什么茶叶来给你的。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiangling",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“我来寻我们的姑娘的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-007",
+  "chapter": "c24-xiangling",
+  "scene": "qinfang",
+  "title": "你们紫鹃也找你呢，说琏二奶奶送了什么茶叶来给你的",
+  "place": "大观园 · 沁芳闸",
+  "focus": "bank_west",
+  "speaker": "xiangling",
+  "text": "你们紫鹃也找你呢，说琏二奶奶送了什么茶叶来给你的。走罢，回家去坐著。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiangling",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "你们紫鹃也找你呢，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-008",
+  "chapter": "c24-xiangling",
+  "scene": "qinfang",
+  "title": "走罢，回家去坐著",
+  "place": "大观园 · 沁芳闸",
+  "focus": "bank_west",
+  "speaker": "xiangling",
+  "text": "走罢，回家去坐著。」一面说著，一面拉著黛玉的手回潇湘馆来了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiangling",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "走罢，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-009",
+  "chapter": "c24-xiangling",
+  "scene": "qinfang",
+  "title": "一面拉著黛玉的手回潇湘馆来了，果然凤姐儿送了两小瓶新茶",
+  "place": "大观园 · 沁芳闸",
+  "focus": "bank_west",
+  "speaker": "narrator",
+  "text": "一面拉著黛玉的手回潇湘馆来了。果然凤姐儿送了两小瓶上用新茶来。林黛玉和香菱坐了。况他们有甚正事谈讲，不过说些这一个绣的好，那一个刺的精，又下一回棋，看两句书，香菱便走了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "一面拉著黛玉的手回潇湘馆来了。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-010",
+  "chapter": "c24-xiangling",
+  "scene": "qinfang",
+  "title": "不过说些这一个绣的好，那一个刺的精，又下一回棋，看两句书",
+  "place": "大观园 · 沁芳闸",
+  "focus": "bank_west",
+  "speaker": "narrator",
+  "text": "不过说些这一个绣的好，那一个刺的精，又下一回棋，看两句书，香菱便走了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiangling",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "不过说些这一个绣的好，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-011",
+  "chapter": "c24-xiangling",
+  "scene": "qinfang",
+  "title": "香菱便走了",
+  "place": "大观园 · 沁芳闸",
+  "focus": "bank_west",
+  "speaker": "narrator",
+  "text": "香菱便走了。不在话下。",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "xiangling"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "香菱便走了。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-012",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "宝玉因被袭人找回房去，果见鸳鸯歪在床上看袭人的针线",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "如今且说宝玉因被袭人找回房去，果见鸳鸯歪在床上看袭人的针线呢，见宝玉来了，便说道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "baoyu_outer"
+   },
+   {
+    "type": "show",
+    "actor": "xiren",
+    "at": "desk_place"
+   },
+   {
+    "type": "show",
+    "actor": "yuan_yang",
+    "at": "xiren_kang"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "如今且说宝玉因被袭人找回房去，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-013",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "你往那里去了？老太太等著你呢",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "yuan_yang",
+  "text": "「你往那里去了？老太太等著你呢，叫你过那边请大老爷的安去。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "yuan_yang",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你往那里去了？",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-014",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "叫你过那边请大老爷的安去，还不快换了衣服走呢",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "yuan_yang",
+  "text": "叫你过那边请大老爷的安去。还不快换了衣服走呢。」袭人便进房去取衣服。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "yuan_yang",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "叫你过那边请大老爷的安去。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-015",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "袭人便进房去取衣服，宝玉坐在床沿上褪鞋等靴子",
+  "place": "怡红院 · 外间",
+  "focus": "inner_room",
+  "speaker": "narrator",
+  "text": "袭人便进房去取衣服。宝玉坐在床沿上，褪了鞋等靴子穿的工夫，回头见鸳鸯穿著水红绫子袄儿，青缎子背心，束著白绉绸汗巾儿，脸向那边低著头看针线，脖子上戴著花领子。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "xiren",
+    "via": [
+     "desk_place",
+     "inner_room"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "袭人便进房去取衣服。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-016",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "回头见鸳鸯穿著水红绫子袄儿，青缎子背心，束著白绉绸汗巾儿",
+  "place": "怡红院 · 外间",
+  "focus": "inner_room",
+  "speaker": "narrator",
+  "text": "回头见鸳鸯穿著水红绫子袄儿，青缎子背心，束著白绉绸汗巾儿，脸向那边低著头看针线，脖子上戴著花领子。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "yuan_yang",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "回头见鸳鸯穿著水红绫子袄儿，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-017",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "脸向那边低著头看针线，脖子上戴著花领子",
+  "place": "怡红院 · 外间",
+  "focus": "inner_room",
+  "speaker": "narrator",
+  "text": "脸向那边低著头看针线，脖子上戴著花领子。宝玉便把脸凑在他脖项上，闻那香油气，不住用手摩挲，其白腻不在袭人之下，便猴上身去涎皮笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "yuan_yang",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "脸向那边低著头看针线，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-018",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "宝玉便把脸凑在他脖项上，闻那香油气",
+  "place": "怡红院 · 外间",
+  "focus": "xiren_kang",
+  "speaker": "narrator",
+  "text": "宝玉便把脸凑在他脖项上，闻那香油气，不住用手摩挲，其白腻不在袭人之下，便猴上身去涎皮笑道：",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "baoyu_outer",
+     "xiren_kang"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "宝玉便把脸凑在他脖项上，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-019",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "不住用手摩挲，其白腻不在袭人之下",
+  "place": "怡红院 · 外间",
+  "focus": "xiren_kang",
+  "speaker": "narrator",
+  "text": "不住用手摩挲，其白腻不在袭人之下，便猴上身去涎皮笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "不住用手摩挲，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-020",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "好姐姐，把你嘴上的胭脂赏我吃了罢",
+  "place": "怡红院 · 外间",
+  "focus": "xiren_kang",
+  "speaker": "baoyu",
+  "text": "「好姐姐，把你嘴上的胭脂赏我吃了罢。」一面说著，一面扭股糖似的粘在身上。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“好姐姐，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-021",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "一面扭股糖似的粘在身上",
+  "place": "怡红院 · 外间",
+  "focus": "xiren_kang",
+  "speaker": "narrator",
+  "text": "一面扭股糖似的粘在身上。鸳鸯便叫道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "一面扭股糖似的粘在身上。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-022",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "袭人，你出来瞧瞧",
+  "place": "怡红院 · 外间",
+  "focus": "xiren_kang",
+  "speaker": "yuan_yang",
+  "text": "「袭人，你出来瞧瞧。你跟他一辈子，也不劝劝，还是这么著。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "yuan_yang",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“袭人，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-023",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "你跟他一辈子，也不劝劝，还是这么著",
+  "place": "怡红院 · 外间",
+  "focus": "xiren_kang",
+  "speaker": "yuan_yang",
+  "text": "你跟他一辈子，也不劝劝，还是这么著。」袭人抱了衣服出来，向宝玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "yuan_yang",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "你跟他一辈子，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-024",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "左劝也不改，右劝也不改，你到底是怎么样？",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "xiren",
+  "text": "「左劝也不改，右劝也不改，你到底是怎么样？你再这么著，这个地方可就难住了。」",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "xiren",
+    "via": [
+     "inner_room",
+     "desk_place"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "xiren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“左劝也不改，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-025",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "你再这么著，这个地方可就难住了",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "xiren",
+  "text": "你再这么著，这个地方可就难住了。」一边说，一边催他穿了衣服，同鸳鸯往前面来见贾母。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiren",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "你再这么著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-026",
+  "chapter": "c24-yuanyang",
+  "scene": "yihong",
+  "title": "一边催他穿了衣服，同鸳鸯往前面来见贾母",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "narrator",
+  "text": "一边催他穿了衣服，同鸳鸯往前面来见贾母。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "一边催他穿了衣服，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-027",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "见过贾母，出至外面，人马俱已齐备，刚欲上马",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "rong_gate",
+  "speaker": "narrator",
+  "text": "见过贾母，出至外面，人马俱已齐备。刚欲上马，只见贾琏请安回来了，正下马，二人对面，彼此问了两句话。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "rong_gate"
+   },
+   {
+    "type": "show",
+    "actor": "jia_lian",
+    "at": "street_west"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "见过贾母，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-028",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "只见贾琏请安回来了，正下马，二人对面彼此问了两句话",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "rong_gate",
+  "speaker": "narrator",
+  "text": "只见贾琏请安回来了，正下马，二人对面，彼此问了两句话。只见旁边转出一个人来，」请宝叔安」。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只见贾琏请安回来了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-029",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "只见旁边转出一个人来，请宝叔安",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "narrator",
+  "text": "只见旁边转出一个人来，」请宝叔安」。宝玉看时，只见这人容长脸，长挑身材，年纪只好十八九岁，生得著实斯文清秀，倒也十分面善，只是想不起是那一房的，叫什么名字。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "west_corner"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只见旁边转出一个人来，”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-030",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "宝玉看时，这人容长脸，长挑身材，年纪只好十八九岁",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "narrator",
+  "text": "宝玉看时，只见这人容长脸，长挑身材，年纪只好十八九岁，生得著实斯文清秀，倒也十分面善，只是想不起是那一房的，叫什么名字。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "宝玉看时，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-031",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "生得著实斯文清秀，倒也十分面善，只是想不起是那一房的",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "narrator",
+  "text": "生得著实斯文清秀，倒也十分面善，只是想不起是那一房的，叫什么名字。贾琏笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "生得著实斯文清秀，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-032",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "你怎么发呆，连他也不认得？他是后廊上住的五嫂子的儿子芸儿",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "jia_lian",
+  "text": "「你怎么发呆，连他也不认得？他是后廊上住的五嫂子的儿子芸儿。」宝玉笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你怎么发呆，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-033",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "是了，是了，我怎么就忘了",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "baoyu",
+  "text": "「是了，是了，我怎么就忘了。」因问他母亲好，这会子什么勾当。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“是了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-034",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "因问他母亲好，这会子什么勾当",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "narrator",
+  "text": "因问他母亲好，这会子什么勾当。贾芸指贾琏道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "因问他母亲好，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-035",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "找二叔说句话",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "jia_yun",
+  "text": "「找二叔说句话。」宝玉笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“找二叔说句话。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-036",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "你倒比先越发出挑了，倒象我的儿子",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "baoyu",
+  "text": "「你倒比先越发出挑了，倒象我的儿子。」贾琏笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你倒比先越发出挑了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-037",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "好不害臊！人家比你大四五岁呢，就替你作儿子了？",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "jia_lian",
+  "text": "「好不害臊！人家比你大四五岁呢，就替你作儿子了？」宝玉笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“好不害臊！",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-038",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "你今年十几岁了？",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "baoyu",
+  "text": "「你今年十几岁了？」贾芸道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你今年十几岁了？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-039",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "十八岁",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "jia_yun",
+  "text": "贾芸道：「十八岁。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-040",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "原来这贾芸最伶俐乖觉，便笑道",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "narrator",
+  "text": "原来这贾芸最伶俐乖觉，听宝玉这样说，便笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "原来这贾芸最伶俐乖觉，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-041",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "俗语说的，摇车里的爷爷，拄拐的孙孙",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "jia_yun",
+  "text": "「俗语说的，`摇车里的爷爷，拄拐的孙孙'。虽然岁数大，山高高不过太阳。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“俗语说的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-042",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "虽然岁数大，山高高不过太阳",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "jia_yun",
+  "text": "虽然岁数大，山高高不过太阳。只从我父亲没了，这几年也无人照管教导。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "虽然岁数大，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-043",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "只从我父亲没了，这几年也无人照管教导",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "jia_yun",
+  "text": "只从我父亲没了，这几年也无人照管教导。如若宝叔不嫌侄儿蠢笨，认作儿子，就是我的造化了。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只从我父亲没了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-044",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "如若宝叔不嫌侄儿蠢笨，认作儿子，就是我的造化了",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "jia_yun",
+  "text": "如若宝叔不嫌侄儿蠢笨，认作儿子，就是我的造化了。」贾琏笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "如若宝叔不嫌侄儿蠢笨，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-045",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "你听见了？认儿子不是好开交的呢",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "jia_lian",
+  "text": "「你听见了？认儿子不是好开交的呢。」说著就进去了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你听见了？",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-046",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "说著就进去了",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "narrator",
+  "text": "说著就进去了。宝玉笑道：",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "jia_lian"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "说著就进去了。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-047",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "明儿你闲了，只管来找我，别和他们鬼鬼祟祟的",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "baoyu",
+  "text": "「明儿你闲了，只管来找我，别和他们鬼鬼祟祟的。这会子我不得闲儿。明儿你到书房里来，和你说天话儿，我带你园里顽耍去。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“明儿你闲了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-048",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "明儿你到书房里来，和你说天话儿，我带你园里顽耍去",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "baoyu",
+  "text": "明儿你到书房里来，和你说天话儿，我带你园里顽耍去。」说著扳鞍上马，众小厮围随往贾赦这边来。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "明儿你到书房里来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-049",
+  "chapter": "c24-huijian",
+  "scene": "capital",
+  "title": "说著扳鞍上马，众小厮围随往贾赦这边来",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "west_corner",
+  "speaker": "narrator",
+  "text": "说著扳鞍上马，众小厮围随往贾赦这边来。",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "baoyu"
+   },
+   {
+    "type": "hide",
+    "actor": "jia_yun"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "说著扳鞍上马，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-050",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "见了贾赦，不过是偶感些风寒，先述了贾母问的话，然后自己请了安",
+  "place": "贾赦院 · 上房",
+  "focus": "xing_room",
+  "speaker": "narrator",
+  "text": "见了贾赦，不过是偶感些风寒，先述了贾母问的话，然后自己请了安。贾赦先站起来回了贾母话，次后便唤人来：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "xing_room"
+   },
+   {
+    "type": "show",
+    "actor": "xing",
+    "at": "xing_host"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "见了贾赦，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-051",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "贾赦先站起来回了贾母话，次后便唤人来",
+  "place": "贾赦院 · 上房",
+  "focus": "xing_room",
+  "speaker": "narrator",
+  "text": "贾赦先站起来回了贾母话，次后便唤人来：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xing",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾赦先站起来回了贾母话，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-052",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "带哥儿进去太太屋里坐著",
+  "place": "贾赦院 · 上房",
+  "focus": "xing_room",
+  "speaker": "xing",
+  "text": "「带哥儿进去太太屋里坐著。」宝玉退出，来至后面，进入上房。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xing",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“带哥儿进去太太屋里坐著。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-053",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "宝玉退出，来至后面，进入上房",
+  "place": "贾赦院 · 上房",
+  "focus": "xing_room",
+  "speaker": "narrator",
+  "text": "宝玉退出，来至后面，进入上房。邢夫人见了他来，先倒站了起来，请过贾母安，宝玉方请安。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "宝玉退出，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-054",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "邢夫人见了他来，先倒站了起来，请过贾母安，宝玉方请安",
+  "place": "贾赦院 · 上房",
+  "focus": "xing_room",
+  "speaker": "narrator",
+  "text": "邢夫人见了他来，先倒站了起来，请过贾母安，宝玉方请安。邢夫人拉他上炕坐了，方问别人好，又命人倒茶来。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xing",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "邢夫人见了他来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-055",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "邢夫人拉他上炕坐了，方问别人好，又命人倒茶来",
+  "place": "贾赦院 · 上房",
+  "focus": "xing_room",
+  "speaker": "narrator",
+  "text": "邢夫人拉他上炕坐了，方问别人好，又命人倒茶来。一钟茶未吃完，只见那贾琮来问宝玉好。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xing",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "邢夫人拉他上炕坐了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-056",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "一钟茶未吃完，只见那贾琮来问宝玉好",
+  "place": "贾赦院 · 上房",
+  "focus": "xing_room",
+  "speaker": "narrator",
+  "text": "一钟茶未吃完，只见那贾琮来问宝玉好。邢夫人道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "一钟茶未吃完，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-057",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "那里找活猴儿去！你那奶妈子死绝了",
+  "place": "贾赦院 · 上房",
+  "focus": "xing_room",
+  "speaker": "xing",
+  "text": "「那里找活猴儿去！你那奶妈子死绝了，也不收拾收拾你，弄的黑眉乌嘴的，那里象大家子念书的孩子！」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xing",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“那里找活猴儿去！",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-058",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "也不收拾收拾你，弄的黑眉乌嘴的，那里象大家子念书的孩子！",
+  "place": "贾赦院 · 上房",
+  "focus": "xing_room",
+  "speaker": "xing",
+  "text": "也不收拾收拾你，弄的黑眉乌嘴的，那里象大家子念书的孩子！」正说著，只见贾环，贾兰小叔侄两个也来了，请过安，邢夫人便叫他两个椅子上坐了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xing",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "也不收拾收拾你，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-059",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "只见贾环，贾兰小叔侄两个也来了，请过安",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "narrator",
+  "text": "只见贾环，贾兰小叔侄两个也来了，请过安，邢夫人便叫他两个椅子上坐了。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_huan",
+    "at": "daiyu_guest"
+   },
+   {
+    "type": "show",
+    "actor": "jia_lan",
+    "at": "messenger"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只见贾环，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-060",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "邢夫人便叫他两个椅子上坐了",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "narrator",
+  "text": "邢夫人便叫他两个椅子上坐了。贾环见宝玉同邢夫人坐在一个坐褥上，邢夫人又百般摩挲抚弄他，早已心中不自在了，坐不多时，便和贾兰使眼色儿要走。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xing",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "邢夫人便叫他两个椅子上坐了。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-061",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "贾环见宝玉同邢夫人坐在一个坐褥上，早已心中不自在了",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "narrator",
+  "text": "贾环见宝玉同邢夫人坐在一个坐褥上，邢夫人又百般摩挲抚弄他，早已心中不自在了，坐不多时，便和贾兰使眼色儿要走。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_huan",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾环见宝玉同邢夫人坐在一个坐褥上，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-062",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "坐不多时，便和贾兰使眼色儿要走",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "narrator",
+  "text": "坐不多时，便和贾兰使眼色儿要走。贾兰只得依他，一同起身告辞。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_huan",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "坐不多时，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-063",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "贾兰只得依他，一同起身告辞",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "narrator",
+  "text": "贾兰只得依他，一同起身告辞。宝玉见他们要走，自己也就起身，要一同回去。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_lan",
+    "via": [
+     "messenger",
+     "daiyu_guest"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "jia_huan",
+    "via": [
+     "daiyu_guest",
+     "return_gate"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾兰只得依他，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-064",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "宝玉见他们要走，自己也就起身，要一同回去",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "narrator",
+  "text": "宝玉见他们要走，自己也就起身，要一同回去。邢夫人笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "宝玉见他们要走，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-065",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "你且坐著，我还和你说话呢",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "xing",
+  "text": "「你且坐著，我还和你说话呢。」宝玉只得坐了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xing",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你且坐著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-066",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "宝玉只得坐了",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "narrator",
+  "text": "宝玉只得坐了。邢夫人向他两个道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "宝玉只得坐了。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-067",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "你们回去，各人替我问你们各人母亲好",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "xing",
+  "text": "「你们回去，各人替我问你们各人母亲好。你们姑娘，姐姐，妹妹都在这里呢，闹的我头晕，今儿不留你们吃饭了。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xing",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你们回去，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-068",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "你们姑娘，姐姐，妹妹都在这里呢，闹的我头晕，今儿不留你们吃饭了",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "xing",
+  "text": "你们姑娘，姐姐，妹妹都在这里呢，闹的我头晕，今儿不留你们吃饭了。」贾环等答应著，便出来回家去了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xing",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "你们姑娘，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-069",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "贾环等答应著，便出来回家去了",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "narrator",
+  "text": "贾环等答应著，便出来回家去了。",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "jia_huan"
+   },
+   {
+    "type": "hide",
+    "actor": "jia_lan"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾环等答应著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-070",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "可是姐姐们都过来了，怎么不见？",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "baoyu",
+  "text": "「可是姐姐们都过来了，怎么不见？」邢夫人道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“可是姐姐们都过来了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-071",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "他们坐了一会子，都往后头不知那屋里去了",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "xing",
+  "text": "「他们坐了一会子，都往后头不知那屋里去了。」宝玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xing",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“他们坐了一会子，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-072",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "大娘方才说有话说，不知是什么话？",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "baoyu",
+  "text": "「大娘方才说有话说，不知是什么话？」邢夫人笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“大娘方才说有话说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-073",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "那里有什么话，不过是叫你等著，同你姊妹们吃了饭去",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "xing",
+  "text": "「那里有什么话，不过是叫你等著，同你姊妹们吃了饭去。还有一个好玩的东西给你带回去玩。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xing",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“那里有什么话，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-074",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "还有一个好玩的东西给你带回去玩",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "xing",
+  "text": "还有一个好玩的东西给你带回去玩。」娘儿两个说话，不觉早又晚饭时节。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xing",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "还有一个好玩的东西给你带回去玩。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-075",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "娘儿两个说话，不觉早又晚饭时节",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "narrator",
+  "text": "娘儿两个说话，不觉早又晚饭时节。调开桌椅，罗列杯盘，母女姊妹们吃毕了饭。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xing",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "娘儿两个说话，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-076",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "母女姊妹们吃毕了饭，宝玉去辞贾赦，同姊妹们一同回家",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "narrator",
+  "text": "母女姊妹们吃毕了饭。宝玉去辞贾赦，同姊妹们一同回家，见过贾母，王夫人等，各自回房安息。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "母女姊妹们吃毕了饭。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-077",
+  "chapter": "c24-jiashe",
+  "scene": "east",
+  "title": "见过贾母，王夫人等，各自回房安息",
+  "place": "贾赦院 · 上房",
+  "focus": "daiyu_guest",
+  "speaker": "narrator",
+  "text": "见过贾母，王夫人等，各自回房安息。不在话下。且说贾芸进去见了贾琏，因打听可有什么事情。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "见过贾母，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-078",
+  "chapter": "c24-jialian",
+  "scene": "jialian_home",
+  "title": "且说贾芸进去见了贾琏，因打听可有什么事情",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "且说贾芸进去见了贾琏，因打听可有什么事情。贾琏告诉他：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "yard"
+   },
+   {
+    "type": "show",
+    "actor": "jia_lian",
+    "at": "table_place"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "且说贾芸进去见了贾琏，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-079",
+  "chapter": "c24-jialian",
+  "scene": "jialian_home",
+  "title": "前儿倒有一件事情出来，偏生你婶子再三求了我，给了贾芹了",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "speaker": "jia_lian",
+  "text": "「前儿倒有一件事情出来，偏生你婶子再三求了我，给了贾芹了。他许了我，说明儿园里还有几处要栽花木的地方，等这个工程出来，一定给你就是了。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“前儿倒有一件事情出来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-080",
+  "chapter": "c24-jialian",
+  "scene": "jialian_home",
+  "title": "他许了我，说明儿园里还有几处要栽花木的地方，等这个工程出来，一定给你就是了",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "speaker": "jia_lian",
+  "text": "他许了我，说明儿园里还有几处要栽花木的地方，等这个工程出来，一定给你就是了。」贾芸听了，半晌说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "他许了我，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-081",
+  "chapter": "c24-jialian",
+  "scene": "jialian_home",
+  "title": "贾芸听了，半晌说道",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "贾芸听了，半晌说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸听了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-082",
+  "chapter": "c24-jialian",
+  "scene": "jialian_home",
+  "title": "既是这样，我就等著罢",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "speaker": "jia_yun",
+  "text": "「既是这样，我就等著罢。叔叔也不必先在婶子跟前提我今儿来打听的话，到跟前再说也不迟。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“既是这样，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-083",
+  "chapter": "c24-jialian",
+  "scene": "jialian_home",
+  "title": "叔叔也不必先在婶子跟前提我今儿来打听的话，到跟前再说也不迟",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "speaker": "jia_yun",
+  "text": "叔叔也不必先在婶子跟前提我今儿来打听的话，到跟前再说也不迟。」贾琏道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "叔叔也不必先在婶子跟前提我今儿来打听的话，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-084",
+  "chapter": "c24-jialian",
+  "scene": "jialian_home",
+  "title": "提他作什么，我那里有这些工夫说闲话儿呢",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "speaker": "jia_lian",
+  "text": "「提他作什么，我那里有这些工夫说闲话儿呢。明儿一个五更，还要到兴邑去走一趟，须得当日赶回来才好。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“提他作什么，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-085",
+  "chapter": "c24-jialian",
+  "scene": "jialian_home",
+  "title": "明儿一个五更，还要到兴邑去走一趟，须得当日赶回来才好",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "speaker": "jia_lian",
+  "text": "明儿一个五更，还要到兴邑去走一趟，须得当日赶回来才好。你先去等著，后日起更以后你来讨信儿，来早了我不得闲。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "明儿一个五更，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-086",
+  "chapter": "c24-jialian",
+  "scene": "jialian_home",
+  "title": "你先去等著，后日起更以后你来讨信儿，来早了我不得闲",
+  "place": "贾琏院 · 院中",
+  "focus": "yard",
+  "speaker": "jia_lian",
+  "text": "你先去等著，后日起更以后你来讨信儿，来早了我不得闲。」说著便回后面换衣服去了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lian",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "你先去等著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-087",
+  "chapter": "c24-jialian",
+  "scene": "jialian_home",
+  "title": "说著便回后面换衣服去了",
+  "place": "贾琏院 · 院中",
+  "focus": "room",
+  "speaker": "narrator",
+  "text": "说著便回后面换衣服去了。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_lian",
+    "via": [
+     "table_place",
+     "room"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "说著便回后面换衣服去了。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-088",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "贾芸出了荣国府回家，一路思量，想出一个主意来",
+  "place": "香料铺 · 街面",
+  "focus": "street",
+  "speaker": "narrator",
+  "text": "贾芸出了荣国府回家，一路思量，想出一个主意来，便一径往他母舅卜世仁家来。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "street"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸出了荣国府回家，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-089",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "便一径往他母舅卜世仁家来，原来卜世仁现开香料舖",
+  "place": "香料铺 · 街面",
+  "focus": "shop_door",
+  "speaker": "narrator",
+  "text": "便一径往他母舅卜世仁家来。原来卜世仁现开香料舖，方才从舖子里来，忽见贾芸进来，彼此见过了，因问他这早晚什么事跑了来。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "street",
+     "shop_door"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "便一径往他母舅卜世仁家来。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-090",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "忽见贾芸进来，彼此见过了，因问他这早晚什么事跑了来",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "narrator",
+  "text": "忽见贾芸进来，彼此见过了，因问他这早晚什么事跑了来。贾芸道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "bu_shi_ren",
+    "at": "counter"
+   },
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "shop_door",
+     "counter"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "忽见贾芸进来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-091",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "有件事求舅舅帮衬帮衬",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "jia_yun",
+  "text": "「有件事求舅舅帮衬帮衬。我有一件事，用些冰片麝香使用，好歹舅舅每样赊四两给我，八月里按数送了银子来。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“有件事求舅舅帮衬帮衬。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-092",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "我有一件事，用些冰片麝香使用，好歹舅舅每样赊四两给我",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "jia_yun",
+  "text": "我有一件事，用些冰片麝香使用，好歹舅舅每样赊四两给我，八月里按数送了银子来。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "我有一件事，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-093",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "八月里按数送了银子来",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "jia_yun",
+  "text": "八月里按数送了银子来。」卜世仁冷笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "八月里按数送了银子来。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-094",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "再休提赊欠一事",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "bu_shi_ren",
+  "text": "「再休提赊欠一事。前儿也是我们舖子里一个伙计，替他的亲戚赊了几两银子的货，至今总未还上。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“再休提赊欠一事。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-095",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "前儿也是我们舖子里一个伙计，替他的亲戚赊了几两银子的货，至今总未还上",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "bu_shi_ren",
+  "text": "前儿也是我们舖子里一个伙计，替他的亲戚赊了几两银子的货，至今总未还上。因此我们大家赔上，立了合同，再不许替亲友赊欠。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "前儿也是我们舖子里一个伙计，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-096",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "因此我们大家赔上，立了合同，再不许替亲友赊欠",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "bu_shi_ren",
+  "text": "因此我们大家赔上，立了合同，再不许替亲友赊欠。谁要赊欠，就要罚他二十两银子的东道。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "因此我们大家赔上，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-097",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "谁要赊欠，就要罚他二十两银子的东道",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "bu_shi_ren",
+  "text": "谁要赊欠，就要罚他二十两银子的东道。况且如今这个货也短，你就拿现银子到我们这不三不四的舖子里来买，也还没有这些，只好倒扁儿去。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "谁要赊欠，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-098",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "况且如今这个货也短，你就拿现银子到我们这不三不四的舖子里来买，也还没有这些，只好倒扁儿去",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "bu_shi_ren",
+  "text": "况且如今这个货也短，你就拿现银子到我们这不三不四的舖子里来买，也还没有这些，只好倒扁儿去。这是一。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "况且如今这个货也短，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-099",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "这是一。二则你那里有正经事，不过赊了去又是胡闹",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "narrator",
+  "text": "这是一。二则你那里有正经事，不过赊了去又是胡闹。你只说舅舅见你一遭儿就派你一遭儿不是。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "这是一。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-100",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "你只说舅舅见你一遭儿就派你一遭儿不是",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "bu_shi_ren",
+  "text": "你只说舅舅见你一遭儿就派你一遭儿不是。你小人儿家很不知好歹，也到底立个主见，赚几个钱，弄得穿是穿吃是吃的，我看著也喜欢。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "你只说舅舅见你一遭儿就派你一遭儿不是。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-101",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "你小人儿家很不知好歹，也到底立个主见，赚几个钱，弄得穿是穿吃是吃的，我看著也喜欢",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "bu_shi_ren",
+  "text": "你小人儿家很不知好歹，也到底立个主见，赚几个钱，弄得穿是穿吃是吃的，我看著也喜欢。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "你小人儿家很不知好歹，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-102",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "舅舅说的倒干净",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "jia_yun",
+  "text": "「舅舅说的倒干净。我父亲没的时候，我年纪又小，不知事。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“舅舅说的倒干净。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-103",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "我父亲没的时候，我年纪又小，不知事",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "jia_yun",
+  "text": "我父亲没的时候，我年纪又小，不知事。后来听见我母亲说，都还亏舅舅们在我们家出主意，料理的丧事。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "我父亲没的时候，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-104",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "后来听见我母亲说，都还亏舅舅们在我们家出主意，料理的丧事",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "jia_yun",
+  "text": "后来听见我母亲说，都还亏舅舅们在我们家出主意，料理的丧事。难道舅舅就不知道的，还是有一亩地两间房子，如今在我手里花了不成？",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "后来听见我母亲说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-105",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "难道舅舅就不知道的，还是有一亩地两间房子，如今在我手里花了不成？",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "jia_yun",
+  "text": "难道舅舅就不知道的，还是有一亩地两间房子，如今在我手里花了不成？巧媳妇做不出没米的粥来，叫我怎么样呢？",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "难道舅舅就不知道的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-106",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "巧媳妇做不出没米的粥来，叫我怎么样呢？",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "jia_yun",
+  "text": "巧媳妇做不出没米的粥来，叫我怎么样呢？还亏是我呢，要是别个，死皮赖脸三日两头儿来缠著舅舅，要三升米二升豆子的，舅舅也就没有法呢。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "巧媳妇做不出没米的粥来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-107",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "还亏是我呢，要是别个，死皮赖脸三日两头儿来缠著舅舅，要三升米二升豆子的，舅舅也就没有法呢",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "jia_yun",
+  "text": "还亏是我呢，要是别个，死皮赖脸三日两头儿来缠著舅舅，要三升米二升豆子的，舅舅也就没有法呢。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "还亏是我呢，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-108",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "卜世仁道",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "narrator",
+  "text": "卜世仁道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "卜世仁道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-109",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "我的儿，舅舅要有，还不是该的",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "bu_shi_ren",
+  "text": "「我的儿，舅舅要有，还不是该的。我天天和你舅母说，只愁你没算计儿。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“我的儿，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-110",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "我天天和你舅母说，只愁你没算计儿",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "bu_shi_ren",
+  "text": "我天天和你舅母说，只愁你没算计儿。你但凡立的起来，到你大房里，就是他们爷儿们见不著，便下个气，和他们的管家或者管事的人们嬉和嬉和，也弄个事儿管管。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "我天天和你舅母说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-111",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "你但凡立的起来，到你大房里，就是他们爷儿们见不著，便下个气",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "bu_shi_ren",
+  "text": "你但凡立的起来，到你大房里，就是他们爷儿们见不著，便下个气，和他们的管家或者管事的人们嬉和嬉和，也弄个事儿管管。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "你但凡立的起来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-112",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "和他们的管家或者管事的人们嬉和嬉和，也弄个事儿管管",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "bu_shi_ren",
+  "text": "和他们的管家或者管事的人们嬉和嬉和，也弄个事儿管管。前日我出城去，撞见了你们三房里的老四，骑著大叫驴，带著五辆车，有四五十和尚道士，往家庙去了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "和他们的管家或者管事的人们嬉和嬉和，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-113",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "前日我出城去，撞见了你们三房里的老四，骑著大叫驴，带著五辆车，有四五十和尚道士，往家庙去了",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "bu_shi_ren",
+  "text": "前日我出城去，撞见了你们三房里的老四，骑著大叫驴，带著五辆车，有四五十和尚道士，往家庙去了。他那不亏能干，这事就到他了！」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "前日我出城去，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-114",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "他那不亏能干，这事就到他了！",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "bu_shi_ren",
+  "text": "他那不亏能干，这事就到他了！」贾芸听他韶刀的不堪，便起身告辞。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "他那不亏能干，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-115",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "贾芸听他韶刀的不堪，便起身告辞",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "narrator",
+  "text": "贾芸听他韶刀的不堪，便起身告辞。卜世仁道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸听他韶刀的不堪，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-116",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "怎么急的这样，吃了饭再去罢",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "bu_shi_ren",
+  "text": "「怎么急的这样，吃了饭再去罢。」一句未完，只见他娘子说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“怎么急的这样，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-117",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "只见他娘子说道",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "narrator",
+  "text": "只见他娘子说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只见他娘子说道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-118",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "你又糊涂了。说著没有米，这里买了半斤面来下给你吃，这会子还装胖呢",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "narrator",
+  "text": "「你又糊涂了。说著没有米，这里买了半斤面来下给你吃，这会子还装胖呢。留下外甥挨饿不成？」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你又糊涂了。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-119",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "留下外甥挨饿不成？",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "narrator",
+  "text": "留下外甥挨饿不成？」卜世仁说：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "留下外甥挨饿不成？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-120",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "卜世仁说：再买半斤来添上就是了",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "narrator",
+  "text": "卜世仁说：「再买半斤来添上就是了。」他娘子便叫女孩儿：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "卜世仁说：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-121",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "他娘子便叫女孩儿：银姐，往对门王奶奶家去问",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "narrator",
+  "text": "他娘子便叫女孩儿：「银姐，往对门王奶奶家去问，有钱借二三十个，明儿就送过来。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "他娘子便叫女孩儿：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-122",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "有钱借二三十个，明儿就送过来",
+  "place": "香料铺 · 柜台",
+  "focus": "counter",
+  "speaker": "narrator",
+  "text": "有钱借二三十个，明儿就送过来。」夫妻两个说话，那贾芸早说了几个「不用费事」，去的无影无踪了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bu_shi_ren",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "有钱借二三十个，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-123",
+  "chapter": "c24-bu",
+  "scene": "spice_shop",
+  "title": "夫妻两个说话，那贾芸早说了几个不用费事，去的无影无踪了",
+  "place": "香料铺 · 柜台",
+  "focus": "street",
+  "speaker": "narrator",
+  "text": "夫妻两个说话，那贾芸早说了几个「不用费事」，去的无影无踪了。不言卜家夫妇，且说贾芸赌气离了母舅家门，一径回归旧路，心下正自烦恼，一边想，一边低头只管走，不想一头就碰在一个醉汉身上，把贾芸唬了一跳。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "counter",
+     "shop_door",
+     "street"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "夫妻两个说话，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-124",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "贾芸赌气离了母舅家门，一径回归旧路",
+  "place": "三街六巷 · 街口",
+  "focus": "lane",
+  "speaker": "narrator",
+  "text": "不言卜家夫妇，且说贾芸赌气离了母舅家门，一径回归旧路，心下正自烦恼，一边想，一边低头只管走，不想一头就碰在一个醉汉身上，把贾芸唬了一跳。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "lane"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "不言卜家夫妇，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-125",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "心下正自烦恼，一边想，一边低头只管走",
+  "place": "三街六巷 · 街口",
+  "focus": "street_center",
+  "speaker": "narrator",
+  "text": "心下正自烦恼，一边想，一边低头只管走，不想一头就碰在一个醉汉身上，把贾芸唬了一跳。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "lane",
+     "street_center"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "心下正自烦恼，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-126",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "不想一头就碰在一个醉汉身上，把贾芸唬了一跳",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "narrator",
+  "text": "不想一头就碰在一个醉汉身上，把贾芸唬了一跳。听那醉汉骂道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ni_er",
+    "at": "drunk"
+   },
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "street_center",
+     "bully"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "不想一头就碰在一个醉汉身上，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-127",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "臊你娘的！瞎了眼睛，碰起我来了",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "「臊你娘的！瞎了眼睛，碰起我来了。」贾芸忙要躲身，早被那醉汉一把抓住，对面一看，不是别人，却是紧邻倪二。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“臊你娘的！",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-128",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "贾芸忙要躲身，早被那醉汉一把抓住",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "narrator",
+  "text": "贾芸忙要躲身，早被那醉汉一把抓住，对面一看，不是别人，却是紧邻倪二。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸忙要躲身，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-129",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "对面一看，不是别人，却是紧邻倪二",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "narrator",
+  "text": "对面一看，不是别人，却是紧邻倪二。原来这倪二是个泼皮，专放重利债，在赌博场吃闲钱，专管打降吃酒。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "对面一看，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-130",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "原来这倪二是个泼皮，专放重利债，在赌博场吃闲钱，专管打降吃酒",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "narrator",
+  "text": "原来这倪二是个泼皮，专放重利债，在赌博场吃闲钱，专管打降吃酒。如今正从欠钱人家索了利钱，吃醉回来，不想被贾芸碰了一头，正没好气，抡拳就要打。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "原来这倪二是个泼皮，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-131",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "如今正从欠钱人家索了利钱，吃醉回来，不想被贾芸碰了一头",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "narrator",
+  "text": "如今正从欠钱人家索了利钱，吃醉回来，不想被贾芸碰了一头，正没好气，抡拳就要打。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "如今正从欠钱人家索了利钱，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-132",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "正没好气，抡拳就要打",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "narrator",
+  "text": "正没好气，抡拳就要打。只听那人叫道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "正没好气，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-133",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "只听那人叫道：老二住手！是我冲撞了你",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "narrator",
+  "text": "只听那人叫道：「老二住手！是我冲撞了你。」倪二听见是熟人的语音，将醉眼睁开看时，见是贾芸，忙把手松了，趔趄著笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只听那人叫道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-134",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "倪二听见是熟人的语音，将醉眼睁开看时，见是贾芸，忙把手松了",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "narrator",
+  "text": "倪二听见是熟人的语音，将醉眼睁开看时，见是贾芸，忙把手松了，趔趄著笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "倪二听见是熟人的语音，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-135",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "原来是贾二爷，我该死，我该死",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "「原来是贾二爷，我该死，我该死。这会子往那里去？」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“原来是贾二爷，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-136",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "这会子往那里去？",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "这会子往那里去？」贾芸道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "这会子往那里去？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-137",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "告诉不得你，平白的又讨了个没趣儿",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "jia_yun",
+  "text": "「告诉不得你，平白的又讨了个没趣儿。」倪二道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“告诉不得你，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-138",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "不妨不妨，有什么不平的事，告诉我，替你出气",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "「不妨不妨，有什么不平的事，告诉我，替你出气。这三街六巷，凭他是谁，有人得罪了我醉金刚倪二的街坊，管叫他人离家散！」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“不妨不妨，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-139",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "这三街六巷，凭他是谁，有人得罪了我醉金刚倪二的街坊，管叫他人离家散！",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "这三街六巷，凭他是谁，有人得罪了我醉金刚倪二的街坊，管叫他人离家散！」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "这三街六巷，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-140",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "老二，你且别气，听我告诉你这原故",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "jia_yun",
+  "text": "「老二，你且别气，听我告诉你这原故。」说著，便把卜世仁一段事告诉了倪二。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“老二，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-141",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "说著，便把卜世仁一段事告诉了倪二",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "narrator",
+  "text": "说著，便把卜世仁一段事告诉了倪二。倪二听了大怒，",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "说著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-142",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "要不是令舅，我便骂不出好话来，真真气死我倪二",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "「要不是令舅，我便骂不出好话来，真真气死我倪二。也罢，你也不用愁烦，我这里现有几两银子，你若用什么，只管拿去买办。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“要不是令舅，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-143",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "也罢，你也不用愁烦，我这里现有几两银子，你若用什么，只管拿去买办",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "也罢，你也不用愁烦，我这里现有几两银子，你若用什么，只管拿去买办。但只一件，你我作了这些年的街坊，我在外头有名放帐，你却从没有和我张过口。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "也罢，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-144",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "但只一件，你我作了这些年的街坊，我在外头有名放帐，你却从没有和我张过口",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "但只一件，你我作了这些年的街坊，我在外头有名放帐，你却从没有和我张过口。也不知你厌恶我是个泼皮，怕低了你的身分，也不知是你怕我难缠，利钱重？",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "但只一件，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-145",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "也不知你厌恶我是个泼皮，怕低了你的身分，也不知是你怕我难缠，利钱重？",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "也不知你厌恶我是个泼皮，怕低了你的身分，也不知是你怕我难缠，利钱重？若说怕利钱重，这银子我是不要利钱的，也不用写文约，若说怕低了你的身分，我就不敢借给你了，各自走开。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "也不知你厌恶我是个泼皮，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-146",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "若说怕利钱重，这银子我是不要利钱的，也不用写文约",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "若说怕利钱重，这银子我是不要利钱的，也不用写文约，若说怕低了你的身分，我就不敢借给你了，各自走开。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "若说怕利钱重，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-147",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "若说怕低了你的身分，我就不敢借给你了，各自走开",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "若说怕低了你的身分，我就不敢借给你了，各自走开。」一面说，一面果然从搭包里掏出一卷银子来。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "若说怕低了你的身分，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-148",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "一面说，一面果然从搭包里掏出一卷银子来",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "narrator",
+  "text": "一面说，一面果然从搭包里掏出一卷银子来。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "一面说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-149",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "贾芸心下自思：素日倪二虽然是泼皮无赖，却因人而使，颇颇的有义侠之名",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "narrator",
+  "text": "贾芸心下自思：「素日倪二虽然是泼皮无赖，却因人而使，颇颇的有义侠之名。若今日不领他这情，怕他臊了，倒恐生事。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸心下自思：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-150",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "若今日不领他这情，怕他臊了，倒恐生事",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "jia_yun",
+  "text": "若今日不领他这情，怕他臊了，倒恐生事。不如借了他的，改日加倍还他也倒罢了。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "若今日不领他这情，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-151",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "不如借了他的，改日加倍还他也倒罢了",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "jia_yun",
+  "text": "不如借了他的，改日加倍还他也倒罢了。」想毕笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "不如借了他的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-152",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "老二，你果然是个好汉，我何曾不想著你，和你张口",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "jia_yun",
+  "text": "「老二，你果然是个好汉，我何曾不想著你，和你张口。但只是我见你所相与交结的，都是些有胆量的有作为的人，似我们这等无能无力的你倒不理。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“老二，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-153",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "但只是我见你所相与交结的，都是些有胆量的有作为的人，似我们这等无能无力的你倒不理",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "jia_yun",
+  "text": "但只是我见你所相与交结的，都是些有胆量的有作为的人，似我们这等无能无力的你倒不理。我若和你张口，你岂肯借给我。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "但只是我见你所相与交结的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-154",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "我若和你张口，你岂肯借给我。今日既蒙高情，我怎敢不领",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "jia_yun",
+  "text": "我若和你张口，你岂肯借给我。今日既蒙高情，我怎敢不领，回家按例写了文约过来便是了。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "我若和你张口，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-155",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "回家按例写了文约过来便是了",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "jia_yun",
+  "text": "回家按例写了文约过来便是了。」倪二大笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "回家按例写了文约过来便是了。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-156",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "好会说话的人。我却听不上这话",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "「好会说话的人。我却听不上这话。既说`相与交结'四个字，如何放帐给他，使他的利钱！",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“好会说话的人。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-157",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "既说相与交结四个字，如何放帐给他，使他的利钱！",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "既说`相与交结'四个字，如何放帐给他，使他的利钱！既把银子借与他，图他的利钱，便不是相与交结了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "既说`相与交结'四个字，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-158",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "既把银子借与他，图他的利钱，便不是相与交结了",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "既把银子借与他，图他的利钱，便不是相与交结了。闲话也不必讲。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "既把银子借与他，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-159",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "闲话也不必讲。既肯青目，这是十五两三钱有零的银子，便拿去治买东西",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "闲话也不必讲。既肯青目，这是十五两三钱有零的银子，便拿去治买东西。你要写什么文契，趁早把银子还我，让我放给那些有指望的人使去。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "闲话也不必讲。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-160",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "你要写什么文契，趁早把银子还我，让我放给那些有指望的人使去",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "你要写什么文契，趁早把银子还我，让我放给那些有指望的人使去。」贾芸听了，一面接了银子，一面笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "你要写什么文契，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-161",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "贾芸听了，一面接了银子，一面笑道",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "narrator",
+  "text": "贾芸听了，一面接了银子，一面笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸听了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-162",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "我便不写罢了，有何著急的",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "jia_yun",
+  "text": "「我便不写罢了，有何著急的。」倪二笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“我便不写罢了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-163",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "这不是话。天气黑了，也不让茶让酒",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "「这不是话。天气黑了，也不让茶让酒，我还到那边有点事情去，你竟请回去。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“这不是话。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-164",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "我还到那边有点事情去，你竟请回去",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "我还到那边有点事情去，你竟请回去。我还求你带个信儿与舍下，叫他们早些关门睡罢，我不回家去了，倘或有要紧事儿，叫我们女儿明儿一早到马贩子王短腿家来找我。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "我还到那边有点事情去，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-165",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "我还求你带个信儿与舍下，叫他们早些关门睡罢，我不回家去了",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "我还求你带个信儿与舍下，叫他们早些关门睡罢，我不回家去了，倘或有要紧事儿，叫我们女儿明儿一早到马贩子王短腿家来找我。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "我还求你带个信儿与舍下，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-166",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "倘或有要紧事儿，叫我们女儿明儿一早到马贩子王短腿家来找我",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "ni_er",
+  "text": "倘或有要紧事儿，叫我们女儿明儿一早到马贩子王短腿家来找我。」一面说，一面趔趄著脚儿去了，不在话下。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "倘或有要紧事儿，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-167",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "一面说，一面趔趄著脚儿去了，不在话下",
+  "place": "三街六巷 · 街心",
+  "focus": "drunk",
+  "speaker": "narrator",
+  "text": "一面说，一面趔趄著脚儿去了，不在话下。",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "ni_er"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "一面说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-168",
+  "chapter": "c24-nier",
+  "scene": "ni_er_lane",
+  "title": "贾芸偶然碰了这件事，心中也十分罕希，想那倪二倒果然有些意思",
+  "place": "三街六巷 · 街心",
+  "focus": "street_center",
+  "speaker": "narrator",
+  "text": "且说贾芸偶然碰了这件事，心中也十分罕希，想那倪二倒果然有些意思，只是还怕他一时醉中慷慨，到明日加倍的要起来，便怎处，心内犹豫不决。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "street_center"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "且说贾芸偶然碰了这件事，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-169",
+  "chapter": "c24-jiayin",
+  "scene": "jia_yun_home",
+  "title": "只是还怕他一时醉中慷慨，到明日加倍的要起来，便怎处",
+  "place": "贾芸家 · 街口",
+  "focus": "street",
+  "speaker": "narrator",
+  "text": "只是还怕他一时醉中慷慨，到明日加倍的要起来，便怎处，心内犹豫不决。忽又想道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "street"
+   },
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只是还怕他一时醉中慷慨，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-170",
+  "chapter": "c24-jiayin",
+  "scene": "jia_yun_home",
+  "title": "忽又想道：不妨，等那件事成了，也可加倍还他",
+  "place": "贾芸家 · 街口",
+  "focus": "street",
+  "speaker": "narrator",
+  "text": "忽又想道：「不妨，等那件事成了，也可加倍还他。」想毕，一直走到个钱舖里，将那银子称一称，十五两三钱四分二厘。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "忽又想道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-171",
+  "chapter": "c24-jiayin",
+  "scene": "jia_yun_home",
+  "title": "想毕，一直走到个钱舖里，将那银子称一称，十五两三钱四分二厘",
+  "place": "贾芸家 · 街口",
+  "focus": "street",
+  "speaker": "narrator",
+  "text": "想毕，一直走到个钱舖里，将那银子称一称，十五两三钱四分二厘。贾芸见倪二不撒谎，心下越发欢喜，收了银子，来至家门，先到隔壁将倪二的信捎了与他娘子知道，方回家来。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "想毕，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-172",
+  "chapter": "c24-jiayin",
+  "scene": "jia_yun_home",
+  "title": "贾芸见倪二不撒谎，心下越发欢喜，收了银子，来至家门",
+  "place": "贾芸家 · 街口",
+  "focus": "home_door",
+  "speaker": "narrator",
+  "text": "贾芸见倪二不撒谎，心下越发欢喜，收了银子，来至家门，先到隔壁将倪二的信捎了与他娘子知道，方回家来。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "street",
+     "home_door"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸见倪二不撒谎，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-173",
+  "chapter": "c24-jiayin",
+  "scene": "jia_yun_home",
+  "title": "先到隔壁将倪二的信捎了与他娘子知道，方回家来",
+  "place": "贾芸家 · 隔壁倪家门口",
+  "focus": "neighbor_door",
+  "speaker": "narrator",
+  "text": "先到隔壁将倪二的信捎了与他娘子知道，方回家来。见他母亲自在炕上拈线，见他进来，便问那去了一日。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "home_door",
+     "neighbor_door"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "先到隔壁将倪二的信捎了与他娘子知道，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-174",
+  "chapter": "c24-jiayin",
+  "scene": "jia_yun_home",
+  "title": "见他母亲自在炕上拈线，见他进来，便问那去了一日",
+  "place": "贾芸家 · 里屋",
+  "focus": "room",
+  "speaker": "narrator",
+  "text": "见他母亲自在炕上拈线，见他进来，便问那去了一日。贾芸恐他母亲生气，便不说起卜世仁的事来，只说在西府里等琏二叔的，问他母亲吃了饭不曾。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "neighbor_door",
+     "home_door",
+     "room"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "见他母亲自在炕上拈线，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-175",
+  "chapter": "c24-jiayin",
+  "scene": "jia_yun_home",
+  "title": "贾芸恐他母亲生气，便不说起卜世仁的事来，只说在西府里等琏二叔的",
+  "place": "贾芸家 · 里屋",
+  "focus": "room",
+  "speaker": "narrator",
+  "text": "贾芸恐他母亲生气，便不说起卜世仁的事来，只说在西府里等琏二叔的，问他母亲吃了饭不曾。他母亲已吃过了，说留的饭在那里。小丫头子拿过来与他吃。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸恐他母亲生气，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-176",
+  "chapter": "c24-jiayin",
+  "scene": "jia_yun_home",
+  "title": "那天已是掌灯时候，贾芸吃了饭收拾歇息，一宿无话",
+  "place": "贾芸家 · 里屋",
+  "focus": "room",
+  "speaker": "narrator",
+  "text": "那天已是掌灯时候，贾芸吃了饭收拾歇息，一宿无话。次日一早起来，洗了脸，便出南门，大香舖里买了冰麝，便往荣国府来。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那天已是掌灯时候，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-177",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "次日一早起来，洗了脸，便出南门，大香舖里买了冰麝，便往荣国府来",
+  "place": "凤姐院外 · 后门",
+  "focus": "back_gate",
+  "speaker": "narrator",
+  "text": "次日一早起来，洗了脸，便出南门，大香舖里买了冰麝，便往荣国府来。打听贾琏出了门，贾芸便往后面来。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "back_gate"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "次日一早起来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-178",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "打听贾琏出了门，贾芸便往后面来",
+  "place": "凤姐院外 · 巷道",
+  "focus": "back_gate",
+  "speaker": "narrator",
+  "text": "打听贾琏出了门，贾芸便往后面来。到贾琏院门前，只见几个小厮拿著大高笤帚在那里扫院子呢。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "打听贾琏出了门，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-179",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "到贾琏院门前，只见几个小厮拿著大高笤帚在那里扫院子呢",
+  "place": "凤姐院外 · 巷道",
+  "focus": "back_gate",
+  "speaker": "narrator",
+  "text": "到贾琏院门前，只见几个小厮拿著大高笤帚在那里扫院子呢。忽见周瑞家的从门里出来叫小厮们：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "到贾琏院门前，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-180",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "忽见周瑞家的从门里出来叫小厮们：先别扫，奶奶出来了",
+  "place": "凤姐院外 · 院门",
+  "focus": "zhou_court",
+  "speaker": "narrator",
+  "text": "忽见周瑞家的从门里出来叫小厮们：「先别扫，奶奶出来了。」贾芸忙上前笑问：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhou_rui",
+    "at": "zhou_court"
+   },
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "back_gate",
+     "market"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "忽见周瑞家的从门里出来叫小厮们：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-181",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "二婶婶那去？",
+  "place": "凤姐院外 · 院门",
+  "focus": "zhou_court",
+  "speaker": "jia_yun",
+  "text": "贾芸忙上前笑问：「二婶婶那去？」周瑞家的道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸忙上前笑问：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-182",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "老太太叫，想必是裁什么尺头",
+  "place": "凤姐院外 · 院门",
+  "focus": "zhou_court",
+  "speaker": "zhou_rui",
+  "text": "「老太太叫，想必是裁什么尺头。」正说著，只见一群人簇著凤姐出来了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zhou_rui",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“老太太叫，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-183",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "正说著，只见一群人簇著凤姐出来了",
+  "place": "凤姐院外 · 院门",
+  "focus": "platform",
+  "speaker": "narrator",
+  "text": "正说著，只见一群人簇著凤姐出来了。贾芸深知凤姐是喜奉承尚排场的，忙把手逼著，恭恭敬敬抢上来请安。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "platform"
+   },
+   {
+    "type": "move",
+    "actor": "feng",
+    "via": [
+     "hall",
+     "platform"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "正说著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-184",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "贾芸深知凤姐是喜奉承尚排场的，忙把手逼著，恭恭敬敬抢上来请安",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "narrator",
+  "text": "贾芸深知凤姐是喜奉承尚排场的，忙把手逼著，恭恭敬敬抢上来请安。凤姐连正眼也不看，仍往前走著，只问他母亲好，",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "market",
+     "daoting"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸深知凤姐是喜奉承尚排场的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-185",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "凤姐连正眼也不看，仍往前走著，只问他母亲好",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "narrator",
+  "text": "凤姐连正眼也不看，仍往前走著，只问他母亲好，",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "凤姐连正眼也不看，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-186",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "怎么不来我们这里逛逛？",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "feng",
+  "text": "「怎么不来我们这里逛逛？」贾芸道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“怎么不来我们这里逛逛？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-187",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "只是身上不大好，倒时常记挂著婶子，要来瞧瞧，又不能来",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "「只是身上不大好，倒时常记挂著婶子，要来瞧瞧，又不能来。」凤姐笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“只是身上不大好，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-188",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "可是会撒谎，不是我提起他来，你就不说他想我了",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "feng",
+  "text": "「可是会撒谎，不是我提起他来，你就不说他想我了。」贾芸笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“可是会撒谎，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-189",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "侄儿不怕雷打了，就敢在长辈前撒谎",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "「侄儿不怕雷打了，就敢在长辈前撒谎。昨儿晚上还提起婶子来，说婶子身子生的单弱，事情又多，亏婶子好大精神，竟料理的周周全全，要是差一点儿的，早累的不知怎么样呢。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“侄儿不怕雷打了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-190",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "昨儿晚上还提起婶子来，说婶子身子生的单弱，事情又多",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "昨儿晚上还提起婶子来，说婶子身子生的单弱，事情又多，亏婶子好大精神，竟料理的周周全全，要是差一点儿的，早累的不知怎么样呢。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "昨儿晚上还提起婶子来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-191",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "亏婶子好大精神，竟料理的周周全全",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "亏婶子好大精神，竟料理的周周全全，要是差一点儿的，早累的不知怎么样呢。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "亏婶子好大精神，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-192",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "要是差一点儿的，早累的不知怎么样呢",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "要是差一点儿的，早累的不知怎么样呢。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "要是差一点儿的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-193",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "凤姐听了满脸是笑，不由的便止了步，问道",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "narrator",
+  "text": "凤姐听了满脸是笑，不由的便止了步，问道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "凤姐听了满脸是笑，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-194",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "怎么好好的你娘儿们在背地里嚼起我来？",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "feng",
+  "text": "「怎么好好的你娘儿们在背地里嚼起我来？」贾芸道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“怎么好好的你娘儿们在背地里嚼起我来？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-195",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "有个原故，只因我有个朋友，家里有几个钱，现开香舖",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "「有个原故，只因我有个朋友，家里有几个钱，现开香舖。只因他身上捐著个通判，前儿选了云南不知那一处，连家眷一齐去，把这香舖也不在这里开了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“有个原故，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-196",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "只因他身上捐著个通判，前儿选了云南不知那一处，连家眷一齐去",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "只因他身上捐著个通判，前儿选了云南不知那一处，连家眷一齐去，把这香舖也不在这里开了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只因他身上捐著个通判，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-197",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "把这香舖也不在这里开了，便把帐物攒了一攒",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "把这香舖也不在这里开了。便把帐物攒了一攒，该给人的给人，该贱发的贱发了，象这细贵的货，都分著送与亲朋。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "把这香舖也不在这里开了。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-198",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "该给人的给人，该贱发的贱发了，象这细贵的货，都分著送与亲朋",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "该给人的给人，该贱发的贱发了，象这细贵的货，都分著送与亲朋。他就一共送了我些冰片，麝香。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "该给人的给人，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-199",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "他就一共送了我些冰片，麝香",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "他就一共送了我些冰片，麝香。我就和我母亲商量，若要转买，不但卖不出原价来，而且谁家拿这些银子买这个作什么，便是很有钱的大家子，也不过使个几分几钱就挺折腰了，若说送人，也没个人配使这些，倒叫他一文不值半文转卖了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "他就一共送了我些冰片，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-200",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "我就和我母亲商量，若要转买，不但卖不出原价来",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "我就和我母亲商量，若要转买，不但卖不出原价来，而且谁家拿这些银子买这个作什么，便是很有钱的大家子，也不过使个几分几钱就挺折腰了，若说送人，也没个人配使这些，倒叫他一文不值半文转卖了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "我就和我母亲商量，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-201",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "而且谁家拿这些银子买这个作什么，便是很有钱的大家子，也不过使个几分几钱就挺折腰了",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "而且谁家拿这些银子买这个作什么，便是很有钱的大家子，也不过使个几分几钱就挺折腰了，若说送人，也没个人配使这些，倒叫他一文不值半文转卖了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "而且谁家拿这些银子买这个作什么，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-202",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "若说送人，也没人配使这些，倒叫他一文不值半文转卖了",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "若说送人，也没个人配使这些，倒叫他一文不值半文转卖了。因此我就想起婶子来。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "若说送人，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-203",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "因此我就想起婶子来",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "因此我就想起婶子来。往年间我还见婶子大包的银子买这些东西呢，别说今年贵妃宫中，就是这个端阳节下，不用说这些香料自然是比往常加上十倍去的。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "因此我就想起婶子来。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-204",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "别说明年贵妃宫中，就是这个端阳节下，不用说这些香料自然是比往常加上十倍去的",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "往年间我还见婶子大包的银子买这些东西呢，别说今年贵妃宫中，就是这个端阳节下，不用说这些香料自然是比往常加上十倍去的。因此想来想去，只孝顺婶子一个人才合式，方不算遭塌这东西。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "往年间我还见婶子大包的银子买这些东西呢，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-205",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "因此想来想去，只孝顺婶子一个人才合式，方不算遭塌这东西",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "因此想来想去，只孝顺婶子一个人才合式，方不算遭塌这东西。」一边说，一边将一个锦匣举起来。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "因此想来想去，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-206",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "一边说，一边将一个锦匣举起来",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "narrator",
+  "text": "一边说，一边将一个锦匣举起来。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "一边说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-207",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "凤姐正是要办端阳的节礼，采买香料药饵的时节",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "narrator",
+  "text": "凤姐正是要办端阳的节礼，采买香料药饵的时节，忽见贾芸如此一来，听这一篇话，心下又是得意又是欢喜，便命丰儿：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "凤姐正是要办端阳的节礼，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-208",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "忽见贾芸如此一来，听这一篇话，心下又是得意又是欢喜",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "narrator",
+  "text": "忽见贾芸如此一来，听这一篇话，心下又是得意又是欢喜，便命丰儿：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "忽见贾芸如此一来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-209",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "接过芸哥儿的来，送了家去，交给平儿",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "feng",
+  "text": "「接过芸哥儿的来，送了家去，交给平儿。」因又说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“接过芸哥儿的来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-210",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "看著你这样知好歹，怪道你叔叔常提你，说你说话儿也明白，心里有见识",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "feng",
+  "text": "「看著你这样知好歹，怪道你叔叔常提你，说你说话儿也明白，心里有见识。」贾芸听这话入了港，便打进一步来，故意问道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“看著你这样知好歹，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-211",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "贾芸听这话入了港，便打进一步来，故意问道",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "narrator",
+  "text": "贾芸听这话入了港，便打进一步来，故意问道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸听这话入了港，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-212",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "原来叔叔也曾提我的？",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "jia_yun",
+  "text": "「原来叔叔也曾提我的？」凤姐见问，才要告诉他与他管事情的那话，便忙又止住，心下想道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“原来叔叔也曾提我的？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-213",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "凤姐见问，才要告诉他与他管事情的那话，便忙又止住",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "narrator",
+  "text": "凤姐见问，才要告诉他与他管事情的那话，便忙又止住，心下想道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "凤姐见问，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-214",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "心下想道：我如今要告诉他那话，倒叫他看著我见不得东西似的",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "narrator",
+  "text": "心下想道：「我如今要告诉他那话，倒叫他看著我见不得东西似的，为得了这点子香，就混许他管事了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "心下想道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-215",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "为得了这点子香，就混许他管事了，今儿先别提起这事",
+  "place": "凤姐院外 · 院门",
+  "focus": "daoting",
+  "speaker": "narrator",
+  "text": "为得了这点子香，就混许他管事了。今儿先别提起这事。」想毕，便把派他监种花木工程的事都隐瞒的一字不提，随口说了两句淡话，便往贾母那里去了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "为得了这点子香，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-216",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "便把派他监种花木工程的事都隐瞒的一字不提，随口说了两句淡话，便往贾母那里去了",
+  "place": "凤姐院外 · 院门",
+  "focus": "hall",
+  "speaker": "narrator",
+  "text": "便把派他监种花木工程的事都隐瞒的一字不提，随口说了两句淡话，便往贾母那里去了。贾芸也不好提的，只得回来。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "feng",
+    "via": [
+     "platform",
+     "hall"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "便把派他监种花木工程的事都隐瞒的一字不提，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-217",
+  "chapter": "c24-huojing",
+  "scene": "c6_wangchui",
+  "title": "贾芸也不好提的，只得回来",
+  "place": "凤姐院外 · 院门",
+  "focus": "hall",
+  "speaker": "narrator",
+  "text": "贾芸也不好提的，只得回来。因昨日见了宝玉，叫他到外书房等著，贾芸吃了饭便又进来，到贾母那边仪门外绮霰斋书房里来。",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "feng"
+   },
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸也不好提的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-218",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "因昨日见了宝玉，叫他到外书房等著",
+  "place": "绮霰斋 · 院中",
+  "focus": "gate",
+  "speaker": "narrator",
+  "text": "因昨日见了宝玉，叫他到外书房等著，贾芸吃了饭便又进来，到贾母那边仪门外绮霰斋书房里来。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "gate"
+   },
+   {
+    "type": "show",
+    "actor": "ming_yan",
+    "at": "chess"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "因昨日见了宝玉，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-219",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "到贾母那边仪门外绮霰斋书房里来",
+  "place": "绮霰斋 · 院中",
+  "focus": "gate",
+  "speaker": "narrator",
+  "text": "到贾母那边仪门外绮霰斋书房里来。只见焙茗，锄药两个小厮下象棋，为夺「车」正拌嘴，还有引泉、扫花、挑云、伴鹤四五个，又在房檐上掏小雀儿玩。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ming_yan",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "到贾母那边仪门外绮霰斋书房里来。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-220",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "只见焙茗，锄药两个小厮下象棋，为夺车正拌嘴",
+  "place": "绮霰斋 · 院中",
+  "focus": "gate",
+  "speaker": "narrator",
+  "text": "只见焙茗，锄药两个小厮下象棋，为夺「车」正拌嘴，还有引泉、扫花、挑云、伴鹤四五个，又在房檐上掏小雀儿玩。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只见焙茗，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-221",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "还有引泉、扫花、挑云、伴鹤四五个，又在房檐上掏小雀儿玩",
+  "place": "绮霰斋 · 院中",
+  "focus": "gate",
+  "speaker": "narrator",
+  "text": "还有引泉、扫花、挑云、伴鹤四五个，又在房檐上掏小雀儿玩。贾芸进入院内，把脚一跺，说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "还有引泉、",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-222",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "猴头们淘气，我来了",
+  "place": "绮霰斋 · 院中",
+  "focus": "gate",
+  "speaker": "jia_yun",
+  "text": "「猴头们淘气，我来了。」众小厮看见贾芸进来，都才散了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“猴头们淘气，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-223",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "众小厮看见贾芸进来，都才散了",
+  "place": "绮霰斋 · 院中",
+  "focus": "gate",
+  "speaker": "narrator",
+  "text": "众小厮看见贾芸进来，都才散了。贾芸进入房内，便坐在椅子上问：",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "ming_yan"
+   },
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "众小厮看见贾芸进来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-224",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "贾芸进入房内，便坐在椅子上问",
+  "place": "绮霰斋 · 书房",
+  "focus": "study",
+  "speaker": "narrator",
+  "text": "贾芸进入房内，便坐在椅子上问：",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "yard",
+     "door",
+     "study"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸进入房内，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-225",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "宝二爷没下来？",
+  "place": "绮霰斋 · 书房",
+  "focus": "study",
+  "speaker": "jia_yun",
+  "text": "「宝二爷没下来？」焙茗道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“宝二爷没下来？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-226",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "今儿总没下来。二爷说什么，我替你哨探哨探去",
+  "place": "绮霰斋 · 书房",
+  "focus": "study",
+  "speaker": "ming_yan",
+  "text": "「今儿总没下来。二爷说什么，我替你哨探哨探去。」说著，便出去了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ming_yan",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“今儿总没下来。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-227",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "说著，便出去了",
+  "place": "绮霰斋 · 书房",
+  "focus": "study",
+  "speaker": "narrator",
+  "text": "说著，便出去了。",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "ming_yan"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "说著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-228",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "这里贾芸便看字画古玩，有一顿饭工夫还不见来",
+  "place": "绮霰斋 · 书房",
+  "focus": "study",
+  "speaker": "narrator",
+  "text": "这里贾芸便看字画古玩，有一顿饭工夫还不见来，再看看别的小厮，都顽去了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "这里贾芸便看字画古玩，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-229",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "再看看别的小厮，都顽去了。正是烦闷",
+  "place": "绮霰斋 · 书房",
+  "focus": "study",
+  "speaker": "narrator",
+  "text": "再看看别的小厮，都顽去了。正是烦闷，只听门前娇声嫩语的叫了一声」哥哥」。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "再看看别的小厮，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-230",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "只听门前娇声嫩语的叫了一声哥哥",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "narrator",
+  "text": "只听门前娇声嫩语的叫了一声」哥哥」。贾芸往外瞧时，看是一个十六七岁的丫头，生的倒也细巧干净。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xiaohong",
+    "at": "door"
+   },
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只听门前娇声嫩语的叫了一声”哥哥”。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-231",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "贾芸往外瞧时，看是一个十六七岁的丫头，生的倒也细巧干净",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "narrator",
+  "text": "贾芸往外瞧时，看是一个十六七岁的丫头，生的倒也细巧干净。那丫头见了贾芸，便抽身躲了过去。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸往外瞧时，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-232",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "那丫头见了贾芸，便抽身躲了过去",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "narrator",
+  "text": "那丫头见了贾芸，便抽身躲了过去。恰值焙茗走来，见那丫头在门前，便说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那丫头见了贾芸，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-233",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "恰值焙茗走来，见那丫头在门前，便说道",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "恰值焙茗走来，见那丫头在门前，便说道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ming_yan",
+    "at": "yard"
+   },
+   {
+    "type": "effect",
+    "actor": "ming_yan",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "恰值焙茗走来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-234",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "好，好，正抓不著个信儿",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "yard",
+  "speaker": "ming_yan",
+  "text": "「好，好，正抓不著个信儿。」贾芸见了焙茗，也就赶了出来，问怎么样。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ming_yan",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“好，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-235",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "贾芸见了焙茗，也就赶了出来，问怎么样",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "narrator",
+  "text": "贾芸见了焙茗，也就赶了出来，问怎么样。焙茗道：",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "study",
+     "door"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸见了焙茗，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-236",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "等了这一日，也没个人儿过来。这就是宝二爷房里的",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "ming_yan",
+  "text": "「等了这一日，也没个人儿过来。这就是宝二爷房里的。好姑娘，你进去带个信儿，就说廊上的二爷来了。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ming_yan",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“等了这一日，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-237",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "好姑娘，你进去带个信儿，就说廊上的二爷来了",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "ming_yan",
+  "text": "好姑娘，你进去带个信儿，就说廊上的二爷来了。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ming_yan",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "好姑娘，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-238",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "那丫头听说，方知是本家的爷们，便不似先前那等回避",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "narrator",
+  "text": "那丫头听说，方知是本家的爷们，便不似先前那等回避，下死眼把贾芸钉了两眼。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那丫头听说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-239",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "下死眼把贾芸钉了两眼",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "narrator",
+  "text": "下死眼把贾芸钉了两眼。听那贾芸说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "下死眼把贾芸钉了两眼。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-240",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "什么是廊上廊下的，你只说是芸儿就是了",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "jia_yun",
+  "text": "「什么是廊上廊下的，你只说是芸儿就是了。」半晌，那丫头冷笑了一笑：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“什么是廊上廊下的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-241",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "半晌，那丫头冷笑了一笑",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "narrator",
+  "text": "半晌，那丫头冷笑了一笑：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "半晌，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-242",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "依我说，二爷竟请回家去，有什么话明儿再来",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "xiaohong",
+  "text": "「依我说，二爷竟请回家去，有什么话明儿再来。今儿晚上得空儿我回了他。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“依我说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-243",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "今儿晚上得空儿我回了他",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "xiaohong",
+  "text": "今儿晚上得空儿我回了他。」焙茗道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "今儿晚上得空儿我回了他。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-244",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "这是怎么说？",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "ming_yan",
+  "text": "焙茗道：「这是怎么说？」那丫头道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ming_yan",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "焙茗道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-245",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "他今儿也没睡中觉，自然吃的晚饭早。晚上他又不下来",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "xiaohong",
+  "text": "「他今儿也没睡中觉，自然吃的晚饭早。晚上他又不下来。难道只是耍的二爷在这里等著挨饿不成！",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“他今儿也没睡中觉，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-246",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "难道只是耍的二爷在这里等著挨饿不成！不如家去，明儿来是正经",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "xiaohong",
+  "text": "难道只是耍的二爷在这里等著挨饿不成！不如家去，明儿来是正经。便是回来有人带信，那都是不中用的。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "难道只是耍的二爷在这里等著挨饿不成！",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-247",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "便是回来有人带信，那都是不中用的。他不过口里应著，他倒给带呢！",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "xiaohong",
+  "text": "便是回来有人带信，那都是不中用的。他不过口里应著，他倒给带呢！」贾芸听这丫头说话简便俏丽，待要问他的名字，因是宝玉房里的，又不便问，只得说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "便是回来有人带信，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-248",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "贾芸听这丫头说话简便俏丽，待要问他的名字，因是宝玉房里的，又不便问",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "narrator",
+  "text": "贾芸听这丫头说话简便俏丽，待要问他的名字，因是宝玉房里的，又不便问，只得说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸听这丫头说话简便俏丽，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-249",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "这话倒是，我明儿再来",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "jia_yun",
+  "text": "「这话倒是，我明儿再来。」说著便往外走。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“这话倒是，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-250",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "说著便往外走",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "narrator",
+  "text": "说著便往外走。焙茗道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "说著便往外走。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-251",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "我倒茶去，二爷吃了茶再去",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "ming_yan",
+  "text": "「我倒茶去，二爷吃了茶再去。」贾芸一面走，一面回头说：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ming_yan",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“我倒茶去，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-252",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "不吃茶，我还有事呢",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "jia_yun",
+  "text": "「不吃茶，我还有事呢。」口里说话，眼睛瞧那丫头还站在那里呢。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“不吃茶，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-253",
+  "chapter": "c24-qiranzhai",
+  "scene": "qiranzhai",
+  "title": "口里说话，眼睛瞧那丫头还站在那里呢",
+  "place": "绮霰斋 · 书房门前",
+  "focus": "door",
+  "speaker": "narrator",
+  "text": "口里说话，眼睛瞧那丫头还站在那里呢。",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "xiaohong"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "口里说话，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-254",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "那贾芸一径回家",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "outside",
+  "speaker": "narrator",
+  "text": "那贾芸一径回家。至次日来至大门前，可巧遇见凤姐往那边去请安，才上了车，见贾芸来，便命人唤住，隔窗子笑道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "outside"
+   },
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "rong_gate"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那贾芸一径回家。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-255",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "至次日来至大门前，可巧遇见凤姐往那边去请安，才上了车",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "outside",
+  "speaker": "narrator",
+  "text": "至次日来至大门前，可巧遇见凤姐往那边去请安，才上了车，见贾芸来，便命人唤住，隔窗子笑道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng",
+    "at": "outside"
+   },
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "至次日来至大门前，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-256",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "见贾芸来，便命人唤住，隔窗子笑道",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "narrator",
+  "text": "见贾芸来，便命人唤住，隔窗子笑道：",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "outside",
+     "street_west"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "见贾芸来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-257",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "芸儿，你竟有胆子在我的跟前弄鬼",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "feng",
+  "text": "「芸儿，你竟有胆子在我的跟前弄鬼。怪道你送东西给我，原来你有事求我。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“芸儿，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-258",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "怪道你送东西给我，原来你有事求我",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "feng",
+  "text": "怪道你送东西给我，原来你有事求我。昨儿你叔叔才告诉我说你求他。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "怪道你送东西给我，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-259",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "昨儿你叔叔才告诉我说你求他",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "feng",
+  "text": "昨儿你叔叔才告诉我说你求他。」贾芸笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "昨儿你叔叔才告诉我说你求他。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-260",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "求叔叔这事，婶子休提，我昨儿正后悔呢",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "jia_yun",
+  "text": "「求叔叔这事，婶子休提，我昨儿正后悔呢。早知这样，我竟一起头求婶子，这会子也早完了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“求叔叔这事，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-261",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "早知这样，我竟一起头求婶子，这会子也早完了",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "jia_yun",
+  "text": "早知这样，我竟一起头求婶子，这会子也早完了。谁承望叔叔竟不能的。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "早知这样，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-262",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "谁承望叔叔竟不能的",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "jia_yun",
+  "text": "谁承望叔叔竟不能的。」凤姐笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "谁承望叔叔竟不能的。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-263",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "怪道你那里没成儿，昨儿又来寻我",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "feng",
+  "text": "「怪道你那里没成儿，昨儿又来寻我。」贾芸道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“怪道你那里没成儿，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-264",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "婶子辜负了我的孝心，我并没有这个意思",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "jia_yun",
+  "text": "「婶子辜负了我的孝心，我并没有这个意思。若有这个意思，昨儿还不求婶子。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“婶子辜负了我的孝心，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-265",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "若有这个意思，昨儿还不求婶子",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "jia_yun",
+  "text": "若有这个意思，昨儿还不求婶子。如今婶子既知道了，我倒要把叔叔丢下，少不得求婶子好歹疼我一点儿。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "若有这个意思，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-266",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "如今婶子既知道了，我倒要把叔叔丢下，少不得求婶子好歹疼我一点儿",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "jia_yun",
+  "text": "如今婶子既知道了，我倒要把叔叔丢下，少不得求婶子好歹疼我一点儿。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "如今婶子既知道了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-267",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "凤姐冷笑道",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "narrator",
+  "text": "凤姐冷笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "凤姐冷笑道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-268",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "你们要拣远路儿走，叫我也难说",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "feng",
+  "text": "「你们要拣远路儿走，叫我也难说。早告诉我一声儿，有什么不成的，多大点子事，耽误到这会子。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你们要拣远路儿走，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-269",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "早告诉我一声儿，有什么不成的，多大点子事，耽误到这会子",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "feng",
+  "text": "早告诉我一声儿，有什么不成的，多大点子事，耽误到这会子。那园子里还要种花，我只想不出一个人来，你早来不早完了。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "早告诉我一声儿，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-270",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "那园子里还要种花，我只想不出一个人来，你早来不早完了",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "feng",
+  "text": "那园子里还要种花，我只想不出一个人来，你早来不早完了。」贾芸笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那园子里还要种花，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-271",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "既这样，婶子明儿就派我罢",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "jia_yun",
+  "text": "「既这样，婶子明儿就派我罢。」凤姐半晌道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“既这样，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-272",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "这个我看著不大好。等明年正月里烟火灯烛那个大宗儿下来，再派你罢",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "feng",
+  "text": "「这个我看著不大好。等明年正月里烟火灯烛那个大宗儿下来，再派你罢。」贾芸道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“这个我看著不大好。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-273",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "好婶子，先把这个派了我罢。果然这个办的好，再派我那个",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "jia_yun",
+  "text": "「好婶子，先把这个派了我罢。果然这个办的好，再派我那个。」凤姐笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“好婶子，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-274",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "你倒会拉长线儿",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "feng",
+  "text": "「你倒会拉长线儿。罢了，要不是你叔叔说，我不管你的事。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你倒会拉长线儿。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-275",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "罢了，要不是你叔叔说，我不管你的事",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "feng",
+  "text": "罢了，要不是你叔叔说，我不管你的事。我也不过吃了饭就过来，你到午错的时候来领银子，后儿就进去种树。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "罢了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-276",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "你到午错的时候来领银子，后儿就进去种树",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "feng",
+  "text": "你到午错的时候来领银子，后儿就进去种树。」说毕，令人驾起香车，一径去了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "你到午错的时候来领银子，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-277",
+  "chapter": "c24-paihu",
+  "scene": "capital",
+  "title": "说毕，令人驾起香车，一径去了",
+  "place": "宁荣街 · 荣府门前",
+  "focus": "street_west",
+  "speaker": "narrator",
+  "text": "说毕，令人驾起香车，一径去了。",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "feng"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "说毕，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-278",
+  "chapter": "c24-lingpai",
+  "scene": "qiranzhai",
+  "title": "贾芸喜不自禁，来至绮霰斋打听宝玉",
+  "place": "绮霰斋 · 院中",
+  "focus": "gate",
+  "speaker": "narrator",
+  "text": "贾芸喜不自禁，来至绮霰斋打听宝玉，谁知宝玉一早便往北静王府里去了。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "gate"
+   },
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸喜不自禁，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-279",
+  "chapter": "c24-lingpai",
+  "scene": "qiranzhai",
+  "title": "谁知宝玉一早便往北静王府里去了",
+  "place": "绮霰斋 · 院中",
+  "focus": "gate",
+  "speaker": "narrator",
+  "text": "谁知宝玉一早便往北静王府里去了。贾芸便呆呆的坐到晌午，打听凤姐回来，便写个领票来领对牌。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "谁知宝玉一早便往北静王府里去了。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-280",
+  "chapter": "c24-lingpai",
+  "scene": "qiranzhai",
+  "title": "贾芸便呆呆的坐到晌午，打听凤姐回来",
+  "place": "绮霰斋 · 院中",
+  "focus": "gate",
+  "speaker": "narrator",
+  "text": "贾芸便呆呆的坐到晌午，打听凤姐回来，便写个领票来领对牌。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸便呆呆的坐到晌午，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-281",
+  "chapter": "c24-lingpai",
+  "scene": "qiranzhai",
+  "title": "便写个领票来领对牌",
+  "place": "绮霰斋 · 院中",
+  "focus": "gate",
+  "speaker": "narrator",
+  "text": "便写个领票来领对牌。至院外，命人通报了，彩明走了出来，单要了领票进去，批了银数年月，一并连对牌交与了贾芸。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "便写个领票来领对牌。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-282",
+  "chapter": "c24-lingpai",
+  "scene": "qiranzhai",
+  "title": "至院外，命人通报了，彩明走了出来",
+  "place": "绮霰斋 · 院中",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "至院外，命人通报了，彩明走了出来，单要了领票进去，批了银数年月，一并连对牌交与了贾芸。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "gate",
+     "yard"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "至院外，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-283",
+  "chapter": "c24-lingpai",
+  "scene": "qiranzhai",
+  "title": "单要了领票进去，批了银数年月，一并连对牌交与了贾芸",
+  "place": "绮霰斋 · 院中",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "单要了领票进去，批了银数年月，一并连对牌交与了贾芸。贾芸接了，看那批上银数批了二百两，心中喜不自禁，翻身走到银库上，交与收牌票的，领了银子。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "单要了领票进去，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-284",
+  "chapter": "c24-lingpai",
+  "scene": "qiranzhai",
+  "title": "贾芸接了，看那批上银数批了二百两，心中喜不自禁",
+  "place": "绮霰斋 · 院中",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "贾芸接了，看那批上银数批了二百两，心中喜不自禁，翻身走到银库上，交与收牌票的，领了银子。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸接了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-285",
+  "chapter": "c24-lingpai",
+  "scene": "qiranzhai",
+  "title": "翻身走到银库上，交与收牌票的，领了银子",
+  "place": "绮霰斋 · 院中",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "翻身走到银库上，交与收牌票的，领了银子。回家告诉母亲，自是母子俱各欢喜。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "翻身走到银库上，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-286",
+  "chapter": "c24-lingpai",
+  "scene": "qiranzhai",
+  "title": "回家告诉母亲，自是母子俱各欢喜",
+  "place": "绮霰斋 · 院中",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "回家告诉母亲，自是母子俱各欢喜。次日一个五鼓，贾芸先找了倪二，将前银按数还他。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "回家告诉母亲，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-287",
+  "chapter": "c24-huanshui",
+  "scene": "ni_er_lane",
+  "title": "次日一个五鼓，贾芸先找了倪二，将前银按数还他",
+  "place": "三街六巷 · 街心",
+  "focus": "lane",
+  "speaker": "narrator",
+  "text": "次日一个五鼓，贾芸先找了倪二，将前银按数还他。那倪二见贾芸有了银子，他便按数收回，不在话下。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "lane"
+   },
+   {
+    "type": "show",
+    "actor": "ni_er",
+    "at": "drunk"
+   },
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "lane",
+     "street_center"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "次日一个五鼓，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-288",
+  "chapter": "c24-huanshui",
+  "scene": "ni_er_lane",
+  "title": "那倪二见贾芸有了银子，他便按数收回，不在话下",
+  "place": "三街六巷 · 街心",
+  "focus": "lane",
+  "speaker": "narrator",
+  "text": "那倪二见贾芸有了银子，他便按数收回，不在话下。这里贾芸又拿了五十两，出西门找到花儿匠方椿家里去买树，不在话下。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ni_er",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那倪二见贾芸有了银子，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-289",
+  "chapter": "c24-huanshui",
+  "scene": "ni_er_lane",
+  "title": "这里贾芸又拿了五十两，出西门找到花儿匠方椿家里去买树，不在话下",
+  "place": "三街六巷 · 街心",
+  "focus": "lane",
+  "speaker": "narrator",
+  "text": "这里贾芸又拿了五十两，出西门找到花儿匠方椿家里去买树，不在话下。",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "ni_er"
+   },
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "这里贾芸又拿了五十两，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-290",
+  "chapter": "c24-yihong",
+  "scene": "yihong",
+  "title": "如今且说宝玉，自那日见了贾芸，曾说明日著他进来说话儿",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "如今且说宝玉，自那日见了贾芸，曾说明日著他进来说话儿。如此说了之后，他原是富贵公子的口角，那里还把这个放在心上，因而便忘怀了。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "baoyu_outer"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "如今且说宝玉，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-291",
+  "chapter": "c24-yihong",
+  "scene": "yihong",
+  "title": "如此说了之后，他原是富贵公子的口角，那里还把这个放在心上，因而便忘怀了",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "如此说了之后，他原是富贵公子的口角，那里还把这个放在心上，因而便忘怀了。这日晚上，从北静王府里回来，见过贾母，王夫人等，回至园内，换了衣服，正要洗澡。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "如此说了之后，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-292",
+  "chapter": "c24-yihong",
+  "scene": "yihong",
+  "title": "这日晚上，从北静王府里回来，见过贾母，王夫人等，回至园内，换了衣服，正要洗澡",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "这日晚上，从北静王府里回来，见过贾母，王夫人等，回至园内，换了衣服，正要洗澡。袭人因被薛宝钗烦了去打结子，秋纹、碧痕两个去催水，檀云又因他母亲的生日接了出去，麝月又现在家中养病，虽还有几个作粗活听唤的丫头，估著叫不著他们，都出去寻伙觅伴的玩去了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "这日晚上，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-293",
+  "chapter": "c24-yihong",
+  "scene": "yihong",
+  "title": "袭人因被薛宝钗烦了去打结子",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "袭人因被薛宝钗烦了去打结子，秋纹、碧痕两个去催水，檀云又因他母亲的生日接了出去，麝月又现在家中养病，虽还有几个作粗活听唤的丫头，估著叫不著他们，都出去寻伙觅伴的玩去了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "袭人因被薛宝钗烦了去打结子，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-294",
+  "chapter": "c24-yihong",
+  "scene": "yihong",
+  "title": "秋纹、碧痕两个去催水",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "秋纹、碧痕两个去催水，檀云又因他母亲的生日接了出去，麝月又现在家中养病，虽还有几个作粗活听唤的丫头，估著叫不著他们，都出去寻伙觅伴的玩去了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "秋纹、",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-295",
+  "chapter": "c24-yihong",
+  "scene": "yihong",
+  "title": "檀云又因他母亲的生日接了出去，麝月又现在家中养病",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "檀云又因他母亲的生日接了出去，麝月又现在家中养病，虽还有几个作粗活听唤的丫头，估著叫不著他们，都出去寻伙觅伴的玩去了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "檀云又因他母亲的生日接了出去，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-296",
+  "chapter": "c24-yihong",
+  "scene": "yihong",
+  "title": "虽还有几个作粗活听唤的丫头，估著叫不著他们，都出去寻伙觅伴的玩去了",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "虽还有几个作粗活听唤的丫头，估著叫不著他们，都出去寻伙觅伴的玩去了。不想这一刻的工夫，只剩了宝玉在房内。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "虽还有几个作粗活听唤的丫头，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-297",
+  "chapter": "c24-yihong",
+  "scene": "yihong",
+  "title": "不想这一刻的工夫，只剩了宝玉在房内",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "不想这一刻的工夫，只剩了宝玉在房内。偏生的宝玉要吃茶，一连叫了两三声，方见两三个老嬷嬷走进来。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "不想这一刻的工夫，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-298",
+  "chapter": "c24-yihong",
+  "scene": "yihong",
+  "title": "偏生的宝玉要吃茶，一连叫了两三声，方见两三个老嬷嬷走进来",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "偏生的宝玉要吃茶，一连叫了两三声，方见两三个老嬷嬷走进来。宝玉见了他们，连忙摇手儿说：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "偏生的宝玉要吃茶，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-299",
+  "chapter": "c24-yihong",
+  "scene": "yihong",
+  "title": "宝玉见了他们，连忙摇手儿说",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "宝玉见了他们，连忙摇手儿说：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "宝玉见了他们，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-300",
+  "chapter": "c24-yihong",
+  "scene": "yihong",
+  "title": "罢，罢，不用你们了",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "baoyu",
+  "text": "「罢，罢，不用你们了。」老婆子们只得退出。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“罢，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-301",
+  "chapter": "c24-yihong",
+  "scene": "yihong",
+  "title": "老婆子们只得退出",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "老婆子们只得退出。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "老婆子们只得退出。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-302",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "宝玉见没丫头们，只得自己下来，拿了碗向茶壶去倒茶",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "narrator",
+  "text": "宝玉见没丫头们，只得自己下来，拿了碗向茶壶去倒茶。只听背后说道：",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "baoyu_outer",
+     "desk_place"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "宝玉见没丫头们，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-303",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "只听背后说道：二爷仔细烫了手，让我们来倒",
+  "place": "怡红院 · 外间",
+  "focus": "window_place",
+  "speaker": "narrator",
+  "text": "只听背后说道：「二爷仔细烫了手，让我们来倒。」一面说，一面走上来，早接了碗过去。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xiaohong",
+    "at": "window_place"
+   },
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只听背后说道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-304",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "一面说，一面走上来，早接了碗过去",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "narrator",
+  "text": "一面说，一面走上来，早接了碗过去。宝玉倒唬了一跳，问：",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "xiaohong",
+    "via": [
+     "window_place",
+     "desk_place"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "一面说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-305",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "宝玉倒唬了一跳，问：你在那里的？忽然来了，唬我一跳",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "narrator",
+  "text": "宝玉倒唬了一跳，问：「你在那里的？忽然来了，唬我一跳。」那丫头一面递茶，一面回说：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "宝玉倒唬了一跳，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-306",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "那丫头一面递茶，一面回说",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "narrator",
+  "text": "那丫头一面递茶，一面回说：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那丫头一面递茶，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-307",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "我在后院子里，才从里间的后门进来，难道二爷就没听见脚步响？",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "xiaohong",
+  "text": "「我在后院子里，才从里间的后门进来，难道二爷就没听见脚步响？」宝玉一面吃茶，一面仔细打量那丫头：穿著几件半新不旧的衣裳，倒是一头黑鬒鬒的好头发，挽著个䰖，容长脸面，细巧身材，却十分俏丽干净。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“我在后院子里，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-308",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "宝玉一面吃茶，一面仔细打量那丫头",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "narrator",
+  "text": "宝玉一面吃茶，一面仔细打量那丫头：穿著几件半新不旧的衣裳，倒是一头黑鬒鬒的好头发，挽著个䰖，容长脸面，细巧身材，却十分俏丽干净。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "宝玉一面吃茶，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-309",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "穿著几件半新不旧的衣裳，倒是一头黑鬒鬒的好头发，挽著个髻",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "narrator",
+  "text": "穿著几件半新不旧的衣裳，倒是一头黑鬒鬒的好头发，挽著个䰖，容长脸面，细巧身材，却十分俏丽干净。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "穿著几件半新不旧的衣裳，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-310",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "容长脸面，细巧身材，却十分俏丽干净",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "narrator",
+  "text": "容长脸面，细巧身材，却十分俏丽干净。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "容长脸面，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-311",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "宝玉看了，便笑问道",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "narrator",
+  "text": "宝玉看了，便笑问道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "宝玉看了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-312",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "你也是我这屋里的人么？",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "baoyu",
+  "text": "「你也是我这屋里的人么？」那丫头道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你也是我这屋里的人么？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-313",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "是的",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "xiaohong",
+  "text": "那丫头道：「是的。」宝玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那丫头道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-314",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "既是这屋里的，我怎么不认得？",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "baoyu",
+  "text": "「既是这屋里的，我怎么不认得？」那丫头听说，便冷笑了一声道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“既是这屋里的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-315",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "那丫头听说，便冷笑了一声道",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "narrator",
+  "text": "那丫头听说，便冷笑了一声道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那丫头听说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-316",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "认不得的也多，岂只我一个",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "xiaohong",
+  "text": "「认不得的也多，岂只我一个。从来我又不递茶递水，拿东拿西，眼见的事一点儿不作，那里认得呢。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“认不得的也多，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-317",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "从来我又不递茶递水，拿东拿西，眼见的事一点儿不作，那里认得呢",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "xiaohong",
+  "text": "从来我又不递茶递水，拿东拿西，眼见的事一点儿不作，那里认得呢。」宝玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "从来我又不递茶递水，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-318",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "你为什么不作那眼见的事？",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "baoyu",
+  "text": "「你为什么不作那眼见的事？」那丫头道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你为什么不作那眼见的事？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-319",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "这话我也难说",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "xiaohong",
+  "text": "「这话我也难说。只是有一句话回二爷：昨儿有个什么芸儿来找二爷。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“这话我也难说。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-320",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "只是有一句话回二爷：昨儿有个什么芸儿来找二爷",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "xiaohong",
+  "text": "只是有一句话回二爷：昨儿有个什么芸儿来找二爷。我想二爷不得空儿，便叫焙茗回他，叫他今日早起来，不想二爷又往北府里去了。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只是有一句话回二爷：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-321",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "我想二爷不得空儿，便叫焙茗回他，叫他今日早起来",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "xiaohong",
+  "text": "我想二爷不得空儿，便叫焙茗回他，叫他今日早起来，不想二爷又往北府里去了。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "我想二爷不得空儿，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-322",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "不想二爷又往北府里去了",
+  "place": "怡红院 · 外间",
+  "focus": "desk_place",
+  "speaker": "xiaohong",
+  "text": "不想二爷又往北府里去了。」刚说到这句话，只见秋纹，碧痕嘻嘻哈哈的说笑著进来，两个人共提著一桶水，一手撩著衣裳，趔趔趄趄，泼泼撒撒的。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "不想二爷又往北府里去了。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-323",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "刚说到这句话，只见秋纹，碧痕嘻嘻哈哈的说笑著进来",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "刚说到这句话，只见秋纹，碧痕嘻嘻哈哈的说笑著进来，两个人共提著一桶水，一手撩著衣裳，趔趔趄趄，泼泼撒撒的。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "qiuwen",
+    "at": "curtain"
+   },
+   {
+    "type": "show",
+    "actor": "bihen",
+    "at": "zijun_place"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "刚说到这句话，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-324",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "两个人共提著一桶水，一手撩著衣裳，趔趔趄趄，泼泼撒撒的",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "两个人共提著一桶水，一手撩著衣裳，趔趔趄趄，泼泼撒撒的。那丫头便忙迎去接。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "qiuwen",
+    "via": [
+     "curtain",
+     "baoyu_outer"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "bihen",
+    "via": [
+     "zijun_place",
+     "baoyu_outer"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "两个人共提著一桶水，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-325",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "那丫头便忙迎去接",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "那丫头便忙迎去接。那秋纹，碧痕正对著抱怨，」你湿了我的裙子」，那个又说」你踹了我的鞋」。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "xiaohong",
+    "via": [
+     "desk_place",
+     "baoyu_outer"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那丫头便忙迎去接。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-326",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "那秋纹，碧痕正对著抱怨，你湿了我的裙子，那个又说，你踹了我的鞋",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "那秋纹，碧痕正对著抱怨，」你湿了我的裙子」，那个又说」你踹了我的鞋」。忽见走出一个人来接水，二人看时，不是别人，原来是小红。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那秋纹，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-327",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "忽见走出一个人来接水，二人看时，不是别人，原来是小红",
+  "place": "怡红院 · 外间",
+  "focus": "baoyu_outer",
+  "speaker": "narrator",
+  "text": "忽见走出一个人来接水，二人看时，不是别人，原来是小红。二人便都诧异，将水放下，忙进房来东瞧西望，并没个别人，只有宝玉，便心中大不自在。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "忽见走出一个人来接水，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-328",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "二人便都诧异，将水放下，忙进房来东瞧西望，并没个别人，只有宝玉",
+  "place": "怡红院 · 外间",
+  "focus": "outer_room",
+  "speaker": "narrator",
+  "text": "二人便都诧异，将水放下，忙进房来东瞧西望，并没个别人，只有宝玉，便心中大不自在。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "qiuwen",
+    "via": [
+     "baoyu_outer",
+     "outer_room"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "bihen",
+    "via": [
+     "baoyu_outer",
+     "outer_room"
+    ]
+   },
+   {
+    "type": "hide",
+    "actor": "xiaohong"
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "二人便都诧异，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-329",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "便心中大不自在，只得预备下洗澡之物，待宝玉脱了衣裳",
+  "place": "怡红院 · 外间",
+  "focus": "outer_room",
+  "speaker": "narrator",
+  "text": "便心中大不自在。只得预备下洗澡之物，待宝玉脱了衣裳，二人便带上门出来，走到那边房内便找小红，问他方才在屋里说什么。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "便心中大不自在。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-330",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "二人便带上门出来，走到那边房内便找小红，问他方才在屋里说什么",
+  "place": "怡红院 · 外间",
+  "focus": "outer_room",
+  "speaker": "narrator",
+  "text": "二人便带上门出来，走到那边房内便找小红，问他方才在屋里说什么。小红道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "二人便带上门出来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-331",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "我何曾在屋里的？只因我的手帕子不见了，往后头找手帕子去",
+  "place": "怡红院 · 外间",
+  "focus": "cui_lv_place",
+  "speaker": "xiaohong",
+  "text": "「我何曾在屋里的？只因我的手帕子不见了，往后头找手帕子去。不想二爷要茶吃，叫姐姐们一个没有，是我进去了，才倒了茶，姐姐们便来了。」",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xiaohong",
+    "at": "cui_lv_place"
+   },
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“我何曾在屋里的？",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-332",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "不想二爷要茶吃，叫姐姐们一个没有，是我进去了，才倒了茶",
+  "place": "怡红院 · 外间",
+  "focus": "cui_lv_place",
+  "speaker": "xiaohong",
+  "text": "不想二爷要茶吃，叫姐姐们一个没有，是我进去了，才倒了茶，姐姐们便来了。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "不想二爷要茶吃，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-333",
+  "chapter": "c24-doucha",
+  "scene": "yihong",
+  "title": "姐姐们便来了",
+  "place": "怡红院 · 外间",
+  "focus": "cui_lv_place",
+  "speaker": "xiaohong",
+  "text": "姐姐们便来了。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "姐姐们便来了。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-334",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "秋纹听了，兜脸啐了一口，骂道",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "秋纹听了，兜脸啐了一口，骂道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "qiuwen",
+    "at": "curtain"
+   },
+   {
+    "type": "show",
+    "actor": "bihen",
+    "at": "zijun_place"
+   },
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "秋纹听了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-335",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "没脸的下流东西！正经叫你去催水去，你说有事故，倒叫我们去",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "qiuwen",
+  "text": "「没脸的下流东西！正经叫你去催水去，你说有事故，倒叫我们去，你可等著做这个巧宗儿。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“没脸的下流东西！",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-336",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "你可等著做这个巧宗儿。一里一里的，这不上来了",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "qiuwen",
+  "text": "你可等著做这个巧宗儿。一里一里的，这不上来了。难道我们倒跟不上你了？",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "你可等著做这个巧宗儿。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-337",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "难道我们倒跟不上你了？你也拿镜子照照，配递茶递水不配！",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "qiuwen",
+  "text": "难道我们倒跟不上你了？你也拿镜子照照，配递茶递水不配！」碧痕道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "难道我们倒跟不上你了？",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-338",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "碧痕道",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "碧痕道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "碧痕道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-339",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "明儿我说给他们，凡要茶要水送东送西的事，咱们都别动",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "bihen",
+  "text": "「明儿我说给他们，凡要茶要水送东送西的事，咱们都别动，只叫他去便是了。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bihen",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“明儿我说给他们，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-340",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "只叫他去便是了",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "bihen",
+  "text": "只叫他去便是了。」秋纹道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bihen",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只叫他去便是了。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-341",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "秋纹道",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "「这么说，不如我们散了，单让他在这屋里呢。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“这么说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-342",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "这么说，不如我们散了，单让他在这屋里呢",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "qiuwen",
+  "text": "不如我们散了，单让他在这屋里呢。」二人你一句，我一句，正闹著，只见有个老嬷嬷进来传凤姐的话说：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "不如我们散了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-343",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "二人你一句，我一句，正闹著，只见有个老嬷嬷进来传凤姐的话说",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "二人你一句，我一句，正闹著，只见有个老嬷嬷进来传凤姐的话说：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "bihen",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "二人你一句，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-344",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "明日有人带花儿匠来种树，叫你们严禁些，衣服裙子别混晒混晾的",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "「明日有人带花儿匠来种树，叫你们严禁些，衣服裙子别混晒混晾的。那土山上一溜都拦著帏幙呢，可别混跑。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“明日有人带花儿匠来种树，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-345",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "那土山上一溜都拦著帏幙呢，可别混跑",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "那土山上一溜都拦著帏幙呢，可别混跑。」秋纹便问：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那土山上一溜都拦著帏幙呢，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-346",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "秋纹便问：明儿不知是谁带进匠人来监工？",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "秋纹便问：「明儿不知是谁带进匠人来监工？」那婆子道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "秋纹便问：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-347",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "那婆子道：说什么后廊上的芸哥儿",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "那婆子道：「说什么后廊上的芸哥儿。」秋纹，碧痕听了都不知道，只管混问别的话。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那婆子道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-348",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "秋纹，碧痕听了都不知道，只管混问别的话",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "秋纹，碧痕听了都不知道，只管混问别的话。那小红听见了，心内却明白，就知是昨儿外书房所见那人了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qiuwen",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "秋纹，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-349",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "那小红听见了，心内却明白，就知是昨儿外书房所见那人了",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "那小红听见了，心内却明白，就知是昨儿外书房所见那人了。原来这小红本姓林，小名红玉，只因「玉」字犯了林黛玉、宝玉，便都把这个字隐起来，便都叫他「小红」。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那小红听见了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-350",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "原来这小红本姓林，小名红玉",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "原来这小红本姓林，小名红玉，只因「玉」字犯了林黛玉、宝玉，便都把这个字隐起来，便都叫他「小红」。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "原来这小红本姓林，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-351",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "只因玉字犯了林黛玉、宝玉，便都把这个字隐起来，便都叫他小红",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "只因「玉」字犯了林黛玉、宝玉，便都把这个字隐起来，便都叫他「小红」。原是荣国府中世代的旧仆，他父母现在收管各处房田事务。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只因“玉”字犯了林黛玉、",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-352",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "原是荣国府中世代的旧仆，他父母现在收管各处房田事务",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "原是荣国府中世代的旧仆，他父母现在收管各处房田事务。这红玉年方十六岁，因分人在大观园的时节，把他便分在怡红院中，倒也清幽雅静。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "原是荣国府中世代的旧仆，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-353",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "这红玉年方十六岁，因分人在大观园的时节，把他便分在怡红院中，倒也清幽雅静",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "这红玉年方十六岁，因分人在大观园的时节，把他便分在怡红院中，倒也清幽雅静。不想后来命人进来居住，偏生这一所儿又被宝玉占了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "这红玉年方十六岁，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-354",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "不想后来命人进来居住，偏生这一所儿又被宝玉占了",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "不想后来命人进来居住，偏生这一所儿又被宝玉占了。这红玉虽然是个不谙事的丫头，却因他有三分容貌，心内著实妄想痴心的往上攀高，每每的要在宝玉面前现弄现弄。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "不想后来命人进来居住，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-355",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "这红玉虽然是个不谙事的丫头，却因他有三分容貌，心内著实妄想痴心的往上攀高",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "这红玉虽然是个不谙事的丫头，却因他有三分容貌，心内著实妄想痴心的往上攀高，每每的要在宝玉面前现弄现弄。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "这红玉虽然是个不谙事的丫头，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-356",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "每每的要在宝玉面前现弄现弄",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "每每的要在宝玉面前现弄现弄。只是宝玉身边一干人，都是伶牙利爪的，那里插的下手去。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "每每的要在宝玉面前现弄现弄。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-357",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "只是宝玉身边一干人，都是伶牙利爪的，那里插的下手去",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "只是宝玉身边一干人，都是伶牙利爪的，那里插的下手去。不想今儿才有些消息，又遭秋纹等一场恶意，心内早灰了一半。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "只是宝玉身边一干人，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-358",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "不想今儿才有些消息，又遭秋纹等一场恶意，心内早灰了一半",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "不想今儿才有些消息，又遭秋纹等一场恶意，心内早灰了一半。正闷闷的，忽然听见老嬷嬷说起贾芸来，不觉心中一动，便闷闷的回至房中，睡在床上暗暗盘算，翻来掉去，正没个抓寻。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "不想今儿才有些消息，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-359",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "正闷闷的，忽然听见老嬷嬷说起贾芸来，不觉心中一动",
+  "place": "怡红院 · 外间",
+  "focus": "curtain",
+  "speaker": "narrator",
+  "text": "正闷闷的，忽然听见老嬷嬷说起贾芸来，不觉心中一动，便闷闷的回至房中，睡在床上暗暗盘算，翻来掉去，正没个抓寻。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "正闷闷的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-360",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "便闷闷的回至房中，睡在床上暗暗盘算，翻来掉去，正没个抓寻",
+  "place": "怡红院 · 外间",
+  "focus": "inner_room",
+  "speaker": "narrator",
+  "text": "便闷闷的回至房中，睡在床上暗暗盘算，翻来掉去，正没个抓寻。忽听窗外低低的叫道：",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "xiaohong",
+    "via": [
+     "cui_lv_place",
+     "inner_room"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "便闷闷的回至房中，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-361",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "忽听窗外低低的叫道：红玉，你的手帕子我拾在这里呢",
+  "place": "怡红院 · 窗下",
+  "focus": "window_place",
+  "speaker": "narrator",
+  "text": "忽听窗外低低的叫道：「红玉，你的手帕子我拾在这里呢。」红玉听了忙走出来看，不是别人，正是贾芸。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "window_place"
+   },
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "忽听窗外低低的叫道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-362",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "红玉听了忙走出来看，不是别人，正是贾芸",
+  "place": "怡红院 · 窗下",
+  "focus": "window_place",
+  "speaker": "narrator",
+  "text": "红玉听了忙走出来看，不是别人，正是贾芸。红玉不觉的粉面含羞，问道：",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "xiaohong",
+    "via": [
+     "inner_room",
+     "window_place"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "红玉听了忙走出来看，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-363",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "红玉不觉的粉面含羞，问道",
+  "place": "怡红院 · 窗下",
+  "focus": "window_place",
+  "speaker": "narrator",
+  "text": "红玉不觉的粉面含羞，问道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "红玉不觉的粉面含羞，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-364",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "二爷在那里拾著的？",
+  "place": "怡红院 · 窗下",
+  "focus": "window_place",
+  "speaker": "xiaohong",
+  "text": "「二爷在那里拾著的？」贾芸笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“二爷在那里拾著的？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-365",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "贾芸笑道",
+  "place": "怡红院 · 窗下",
+  "focus": "window_place",
+  "speaker": "narrator",
+  "text": "贾芸笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "贾芸笑道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-366",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "你过来，我告诉你",
+  "place": "怡红院 · 窗下",
+  "focus": "window_place",
+  "speaker": "jia_yun",
+  "text": "「你过来，我告诉你。」一面说，一面就上来拉他。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "“你过来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-367",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "一面说，一面就上来拉他",
+  "place": "怡红院 · 窗下",
+  "focus": "window_place",
+  "speaker": "narrator",
+  "text": "一面说，一面就上来拉他。那红玉急回身一跑，却被门槛绊倒。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "一面说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-368",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "那红玉急回身一跑，却被门槛绊倒",
+  "place": "怡红院 · 窗下",
+  "focus": "window_place",
+  "speaker": "narrator",
+  "text": "那红玉急回身一跑，却被门槛绊倒。要知端的，下回分解。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "那红玉急回身一跑，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C24-369",
+  "chapter": "c24-yipa",
+  "scene": "yihong",
+  "title": "要知端的，下回分解",
+  "place": "怡红院 · 窗下",
+  "focus": "window_place",
+  "speaker": "narrator",
+  "text": "要知端的，下回分解。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 24,
+   "paragraphLead": "要知端的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ }
+]

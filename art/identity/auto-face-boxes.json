@@ -970,5 +970,101 @@
     30,
     57,
     64
+  ],
+  "jia_yun-portrait": [
+    44,
+    34,
+    91,
+    82
+  ],
+  "jia_yun-chibi": [
+    3,
+    19,
+    39,
+    52
+  ],
+  "xiaohong-portrait": [
+    60,
+    37,
+    104,
+    80
+  ],
+  "xiaohong-chibi": [
+    6,
+    27,
+    48,
+    62
+  ],
+  "ni_er-portrait": [
+    84,
+    19,
+    135,
+    66
+  ],
+  "ni_er-chibi": [
+    16,
+    18,
+    62,
+    52
+  ],
+  "bu_shi_ren-portrait": [
+    53,
+    24,
+    108,
+    83
+  ],
+  "bu_shi_ren-chibi": [
+    2,
+    19,
+    46,
+    66
+  ],
+  "xiangling-portrait": [
+    47,
+    38,
+    93,
+    82
+  ],
+  "xiangling-chibi": [
+    10,
+    23,
+    58,
+    58
+  ],
+  "qiuwen-portrait": [
+    86,
+    45,
+    136,
+    92
+  ],
+  "qiuwen-chibi": [
+    8,
+    30,
+    56,
+    63
+  ],
+  "bihen-portrait": [
+    64,
+    34,
+    107,
+    73
+  ],
+  "bihen-chibi": [
+    12,
+    22,
+    56,
+    55
+  ],
+  "yuan_yang-portrait": [
+    51,
+    46,
+    95,
+    89
+  ],
+  "yuan_yang-chibi": [
+    7,
+    25,
+    50,
+    58
   ]
 }

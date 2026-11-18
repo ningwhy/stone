@@ -1353,6 +1353,132 @@
     }
    },
    "chibi": "right"
+  },
+  "jia_yun": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.1217,
+     "mouthOffset": 0.0885,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face in any crop; painted head read by eye against a right-facing and a left-facing chibi as references, the nose and mouth sit on the eye midpoint and lean slightly right, so the head turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "xiaohong": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.4469,
+     "mouthOffset": 0.3068,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face in any crop; painted head read by eye against a right-facing and a left-facing chibi as references, the nose and mouth sit on the eye midpoint and lean slightly right, so the head turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "ni_er": {
+   "portrait": "left",
+   "evidence": {
+    "portrait": {
+     "method": "visual-review",
+     "reason": "read by vision landmark geometry; the nose and the mouth sit left of the eye midpoint in every crop that fits, so the head turns left"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face in any crop; painted head read by eye against a right-facing and a left-facing chibi as references, the nose and mouth sit on the eye midpoint and lean slightly right, so the head turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "bu_shi_ren": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.4384,
+     "mouthOffset": 0.3206,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face in any crop; painted head read by eye against a right-facing and a left-facing chibi as references, the nose and mouth sit on the eye midpoint and lean slightly right, so the head turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "xiangling": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.1882,
+     "mouthOffset": 0.2001,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face in any crop; painted head read by eye against a right-facing and a left-facing chibi as references, the nose and mouth sit on the eye midpoint and lean slightly right, so the head turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "qiuwen": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.3437,
+     "mouthOffset": 0.1654,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face in any crop; painted head read by eye against a right-facing and a left-facing chibi as references, the nose and mouth sit on the eye midpoint and lean slightly right, so the head turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "bihen": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.3494,
+     "mouthOffset": 0.2459,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face in any crop; painted head read by eye against a right-facing and a left-facing chibi as references, the nose and mouth sit on the eye midpoint and lean slightly right, so the head turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "yuan_yang": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.1382,
+     "mouthOffset": 0.1276,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face in any crop; painted head read by eye against a right-facing and a left-facing chibi as references, the nose and mouth sit on the eye midpoint and lean slightly right, so the head turns right"
+    }
+   },
+   "chibi": "right"
   }
  },
  "variants": {

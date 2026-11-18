@@ -120,10 +120,16 @@ def main() -> int:
         wikitext = fetch_raw(n)
         plain = to_plain(wikitext)
         simplified = t2s.convert(plain)
-        # 简体化后再核一次：不该再有残留的维基标记
-        for bad in ('{{', '}}', '[[', ']]', '<poem>', '上一回', '下一回', '回目录'):
+        # 简体化后再核一次：不该再有残留的维基标记。
+        # 「上一回／下一回」只能按**导航模式**判——正文里本来就有
+        # 「又下一回棋」「要知端的，下回分解」这类词，按词判会误杀。
+        for bad in ('{{', '}}', '[[', ']]', '<poem>'):
             if bad in simplified:
                 raise SystemExit(f'第{n}回清理不干净，仍含 {bad!r}')
+        for nav in (r'第\d{3}回\|', r'\[\[\.\./', r'^\s*上一回\s*$', r'^\s*下一回\s*$',
+                    r'^\s*回目录\s*$'):
+            if re.search(nav, simplified, flags=re.M):
+                raise SystemExit(f'第{n}回清理不干净，仍含导航残留 {nav!r}')
         header = (
             f'《红楼梦》第{n:03d}回 · 底本\n'
             f'================================================\n'

@@ -4053,6 +4053,182 @@
     "split": 402,
     "factor": 0.64
    }
+  },
+  {
+   "id": "jia_yun-portrait",
+   "seed": 10234120,
+   "height": 600,
+   "anchor": [
+    460,
+    1108
+   ]
+  },
+  {
+   "id": "jia_yun-chibi",
+   "seed": 10234121,
+   "height": 116,
+   "anchor": [
+    428,
+    944
+   ],
+   "bodyCompress": {
+    "split": 396,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "xiaohong-portrait",
+   "seed": 10234130,
+   "height": 600,
+   "anchor": [
+    361,
+    1113
+   ]
+  },
+  {
+   "id": "xiaohong-chibi",
+   "seed": 10234131,
+   "height": 116,
+   "anchor": [
+    382,
+    952
+   ],
+   "bodyCompress": {
+    "split": 400,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "ni_er-portrait",
+   "seed": 10234140,
+   "height": 600,
+   "anchor": [
+    456,
+    1134
+   ]
+  },
+  {
+   "id": "ni_er-chibi",
+   "seed": 10234141,
+   "height": 116,
+   "anchor": [
+    513,
+    937
+   ],
+   "bodyCompress": {
+    "split": 394,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "bu_shi_ren-portrait",
+   "seed": 10234150,
+   "height": 600,
+   "anchor": [
+    463,
+    1106
+   ]
+  },
+  {
+   "id": "bu_shi_ren-chibi",
+   "seed": 10234151,
+   "height": 116,
+   "anchor": [
+    455,
+    937
+   ],
+   "bodyCompress": {
+    "split": 394,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "xiangling-portrait",
+   "seed": 10234160,
+   "height": 600,
+   "anchor": [
+    356,
+    1111
+   ]
+  },
+  {
+   "id": "xiangling-chibi",
+   "seed": 10234161,
+   "height": 116,
+   "anchor": [
+    397,
+    917
+   ],
+   "bodyCompress": {
+    "split": 385,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "qiuwen-portrait",
+   "seed": 10234170,
+   "height": 600,
+   "anchor": [
+    417,
+    1106
+   ]
+  },
+  {
+   "id": "qiuwen-chibi",
+   "seed": 10234171,
+   "height": 116,
+   "anchor": [
+    321,
+    942
+   ],
+   "bodyCompress": {
+    "split": 396,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "bihen-portrait",
+   "seed": 10234180,
+   "height": 600,
+   "anchor": [
+    282,
+    1117
+   ]
+  },
+  {
+   "id": "bihen-chibi",
+   "seed": 10234181,
+   "height": 116,
+   "anchor": [
+    411,
+    953
+   ],
+   "bodyCompress": {
+    "split": 400,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "yuan_yang-portrait",
+   "seed": 10234190,
+   "height": 600,
+   "anchor": [
+    415,
+    1119
+   ]
+  },
+  {
+   "id": "yuan_yang-chibi",
+   "seed": 10234191,
+   "height": 116,
+   "anchor": [
+    430,
+    955
+   ],
+   "bodyCompress": {
+    "split": 401,
+    "factor": 0.64
+   }
   }
  ],
  "placements": [

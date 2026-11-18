@@ -487,6 +487,62 @@
    "features": "青年圆脸；眉浓眼小；面带油光；体态虚胖，举止浮滑，贾政的远房侄儿，管着两处庙宇的年轻事务，十八九岁",
    "prompt": "a soft-faced young man of eighteen, thick brows, small eyes, a slightly plump and pampered build, an oily self-satisfied manner, a distant nephew of an official in a Qing-dynasty great household who administers two temple estates, wearing a well-made but slightly gaudy dark-green scholar robe with a jade belt, his hair in a neat topknot under a small black cap, hands folded before him",
    "seed": 10234110
+  },
+  {
+   "id": "jia_yun",
+   "name": "贾芸",
+   "features": "青年长脸；眉疏目秀；鼻梁挺直；身量颀长，十八岁，荣国府后廊上住着的五嫂子之子，生得斯文清秀、极伶俐乖觉",
+   "prompt": "a slender clear-faced young man of eighteen, a long narrow face, sparse neat brows, bright intelligent eyes, a straight nose, tall and willowy in build, scholarly and delicate in manner, the clever and alert son of a servant family living in the back corridor of a Qing-dynasty noble household, wearing a neat mid-blue scholar's jacket over a plain grey robe with a simple cloth belt, hair in a plain topknot under a small black cap",
+   "seed": 10234120
+  },
+  {
+   "id": "xiaohong",
+   "name": "小红",
+   "features": "少女瘦长脸；眉细目灵；鼻小唇薄；一头黑鬒鬒的头发挽着髻，十六岁，容长脸面、细巧身材、十分俏丽干净",
+   "prompt": "a slim sixteen-year-old maid with a long narrow face, fine brows, lively clever eyes, a small nose and thin lips, thick glossy black hair twisted into a neat bun, a slender graceful figure, strikingly pretty and neat, an old servant's daughter serving in a grand garden residence of a Qing-dynasty noble household, wearing a few half-new half-old muted rose-and-cream garments with a plain collar",
+   "seed": 10234130
+  },
+  {
+   "id": "ni_er",
+   "name": "倪二",
+   "features": "壮汉方脸；浓眉阔眼；络腮胡；身量粗壮，喝醉了的市井泼皮，放重利债的，街坊人称「醉金刚」",
+   "prompt": "a burly rough-faced man in his thirties with a broad square jaw, heavy bushy brows, wide glaring eyes, a coarse beard and stubble, a thick powerful build, a street tough and usurer of the quarter, drunk and flushed with liquor, wearing a worn dark-brown short jacket open at the chest over a grey shirt, a cloth band tied round his forehead, a bulging leather pouch at his waist",
+   "seed": 10234140
+  },
+  {
+   "id": "bu_shi_ren",
+   "name": "卜世仁",
+   "features": "中年瘦长脸；眉细眼冷；嘴角下撇；颧骨高，精瘦刻薄，开香料铺的，惯会推脱",
+   "prompt": "a thin middle-aged man in his forties with a long gaunt face, thin brows, cold narrow eyes, high cheekbones, a pinched downturned mouth, a spare calculating frame, a mean-spirited shopkeeper who trades in perfumes and spices, wearing a well-kept but plain dark-green long robe and a small black skullcap, one hand held behind his back",
+   "seed": 10234150
+  },
+  {
+   "id": "xiangling",
+   "name": "香菱",
+   "features": "少女圆脸；眉弯目秀；唇点胭脂；体态纤秀，周瑞家的女儿，眉眼像黛玉",
+   "prompt": "a pretty young woman of sixteen with a softly round face, curved delicate brows, clear almond eyes, lips lightly touched with rouge, a slender graceful figure, the daughter of a senior housekeeper in a Qing-dynasty noble household, wearing a pale lilac two-piece maid outfit with a simple embroidered collar and a small white flower hairpin",
+   "seed": 10234160
+  },
+  {
+   "id": "qiuwen",
+   "name": "秋纹",
+   "features": "少女圆脸；眉粗眼大；体态结实；爱使性子，怡红院里的丫鬟",
+   "prompt": "a sturdy young maid of seventeen with a round face, thick bold brows, large round eyes, a robust build, a hectoring and touchy temperament, a senior maid in a rich young master's quarters in a Qing-dynasty noble household, wearing a bright orange-red two-piece maid outfit with a gold-embroidered collar, hair in a high double loop bun with a small gold pin",
+   "seed": 10234170
+  },
+  {
+   "id": "bihen",
+   "name": "碧痕",
+   "features": "少女长脸；眉细眼弯；鼻头微翘；身段纤细，怡红院里的丫鬟",
+   "prompt": "a slim young maid of seventeen with a long face, fine curved brows, upturned eyes, a slightly upturned nose, a slight frame, a quiet and gossiping maid in a rich young master's quarters in a Qing-dynasty noble household, wearing a soft teal-green two-piece maid outfit with a simple embroidered collar, hair in a neat double bun with a small jade-green ribbon",
+   "seed": 10234180
+  },
+  {
+   "id": "yuan_yang",
+   "name": "鸳鸯",
+   "features": "少妇长脸；眉弯目大；肤色白腻；身量修长，贾母房里的首席大丫头",
+   "prompt": "a striking young woman of nineteen with a long oval face, arched brows, large dark eyes, an unusually fair and smooth complexion, a tall elegant figure, the chief maid of the dowager's household in a Qing-dynasty noble household, wearing a water-red damask jacket over a blue satin waistcoat, a white silk sash at the waist and a floral collar round her neck, hair in a smooth high bun with a gold hairpin",
+   "seed": 10234190
   }
  ]
 }

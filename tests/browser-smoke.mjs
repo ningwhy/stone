@@ -44,15 +44,33 @@ assert.equal(allBooks.length,bookCount,`bookNames must cover every chapter, got 
 // ★ 判据要覆盖**所有可搜路径**：正文、标题、地点、在场人物、段 id。
 //   名字出现在地点或人物表里照样能命中（目录搜索是全文匹配），
 //   只查正文是不够的。
-// 现在用「坠儿」：全二十三回正文、src/ 与 design/ 里一个字都没出现过，
-// 且不在 cast 表里（搜人名是靠在场人物命中的，样本不在 cast 里才是真的
-// 「查无此人」）。
-const absentSample='坠儿';
+// 现在用「侍书」：她是黛玉房里的丫鬟，原著确有此人、尚未登场，
+// 二十四回的正文、标题、地点、在场人物、段 id 里一个字都没出现过，
+// 也不在 cast 表里（搜人名是靠在场人物命中的，她压根没被画过）。
+//
+// ★ 断言改为**直接复刻运行时索引**（src/toc.ts 的 searchText：标题 +
+//   地点 + 在场人物 + 正文 + 回次名 + 段 id），不再只扫 story JSON。
+//   上一版只扫 chapter*-story.json，于是「她在地点名里出现」这类情况
+//   根本查不出来——静态断言绿灯、浏览器断言却红，两边对不上。
+//   改成从 src/story.ts 实读 cast 与章节数据，与浏览器看到的是同一份。
+const absentSample='侍书';
 {
-  const all=readdirSync('design').filter(f=>/^chapter\d+-story\.json$/.test(f))
-    .map(f=>readFileSync(`design/${f}`,'utf8')).join('');
+  const {chapters,story,cast:castTable}=await import('../src/story.ts');
+  const all=chapters.map(section=>{
+    const nodes=story.filter(node=>node.chapter===section.id);
+    const places=[];
+    for(const node of nodes)for(const piece of node.place.split(' / ')){const p=piece.trim();if(p&&!places.includes(p))places.push(p);}
+    const actors=[];
+    for(const node of nodes)for(const actor of (node.speaker==='narrator'?[]:[node.speaker])){
+      const name=castTable[actor]?.name??actor;if(!actors.includes(name))actors.push(name);
+    }
+    // searchText 的六项：标题 地点 在场人物 正文 回次名 段 id
+    return [section.title,places.join(' '),actors.join(' '),
+      nodes.map(n=>`${n.title} ${n.text}`).join(' '),section.id].join(' ');
+  }).join('');
   const hits=all.split(absentSample).length-1;
-  assert.equal(hits,0,`the absent-name sample 「${absentSample}」 must not appear in any chapter, found ${hits}`);
+  assert.equal(hits,0,`the absent-name sample 「${absentSample}」 must not appear in any searchable field, found ${hits}`);
+  assert.ok(!(absentSample in castTable),`the absent-name sample 「${absentSample}」 must not be a cast member`);
 }
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||(existsSync(chrome)?chrome:undefined)});
 const context=await browser.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'});
@@ -248,14 +266,15 @@ try{
  await page.waitForTimeout(150);
  assert.ok(await toc.locator('.toc-card').count()>0,'a place in the middle of a section must be searchable');
     // 搜一个剧情里根本没有的名字：必须找不到，不能凭空造出段落。
-    // 这个名字必须在前二十三回里从未出现——「妙玉」被第十八回推翻，
+    // 这个名字必须在前二十四回里从未出现——「妙玉」被第十八回推翻，
     // 「晴雯」被第十九回推翻（她恰在第十九回登场），「麝月」又被第二十回推翻
     // （她恰在第二十回登场，还守着篦头那一场），「紫鹃」再被第二十一回推翻
     // （她恰在第二十一回登场，替黛玉递香皂），「檀云」最后被第二十三回推翻
     // （底本原句「室霭檀云品御香」里的「檀云」是檀香熏的云气，搜索照样
-    // 命中了她）。这里改用「侍书」：
-    // 她是黛玉房里的丫鬟，原著确有此人，尚未登场，前二十三回一个字都没出现，
+    // 命中了她）。这里用「侍书」：
+    // 她是黛玉房里的丫鬟，原著确有此人、尚未登场，前二十四回一个字都没出现，
     // 也不在 cast 表里——搜人名是靠在场人物命中的，她压根没被画过。
+    // 样本的静态校验在上方（那里复刻了运行时索引范围）；这里只验「搜不到」。
     await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('侍书');
  await page.waitForTimeout(150);
  assert.equal(await toc.locator('.toc-card').count(),0,'a name absent from the story must find nothing');

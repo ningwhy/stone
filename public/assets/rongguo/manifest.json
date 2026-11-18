@@ -7313,6 +7313,542 @@
    },
    "hash": "2d500b76e7da"
   },
+  "jia_yun-portrait": {
+   "image": "/assets/rongguo/jia_yun-portrait.png",
+   "width": 169,
+   "height": 600,
+   "anchor": [
+    122.909,
+    599.432
+   ],
+   "source": "art/source/jia_yun-portrait_s10234120-01.png",
+   "matte": "art/matted/jia_yun-portrait_s10234120-sam.png",
+   "crop": [
+    0,
+    0,
+    169,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "jia_yun",
+    "features": "青年长脸；眉疏目秀；鼻梁挺直；身量颀长，十八岁，荣国府后廊上住着的五嫂子之子，生得斯文清秀、极伶俐乖觉",
+    "seed": 10234120,
+    "faceBox": [
+     44,
+     34,
+     91,
+     82
+    ]
+   },
+   "hash": "c2a0e3795f66"
+  },
+  "jia_yun-chibi": {
+   "image": "/assets/rongguo/jia_yun-chibi.png",
+   "width": 41,
+   "height": 116,
+   "anchor": [
+    29.286,
+    115.778
+   ],
+   "source": "art/source/jia_yun-chibi_s10234121-01.png",
+   "matte": "art/matted/jia_yun-chibi_s10234121-sam.png",
+   "crop": [
+    0,
+    0,
+    41,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 396,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "jia_yun",
+    "features": "青年长脸；眉疏目秀；鼻梁挺直；身量颀长，十八岁，荣国府后廊上住着的五嫂子之子，生得斯文清秀、极伶俐乖觉",
+    "seed": 10234121,
+    "faceBox": [
+     3,
+     19,
+     39,
+     52
+    ]
+   },
+   "hash": "30c34413473b"
+  },
+  "xiaohong-portrait": {
+   "image": "/assets/rongguo/xiaohong-portrait.png",
+   "width": 151,
+   "height": 600,
+   "anchor": [
+    64.714,
+    599.445
+   ],
+   "source": "art/source/xiaohong-portrait_s10234130-01.png",
+   "matte": "art/matted/xiaohong-portrait_s10234130-sam.png",
+   "crop": [
+    0,
+    0,
+    151,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "xiaohong",
+    "features": "少女瘦长脸；眉细目灵；鼻小唇薄；一头黑鬒鬒的头发挽着髻，十六岁，容长脸面、细巧身材、十分俏丽干净",
+    "seed": 10234130,
+    "faceBox": [
+     60,
+     37,
+     104,
+     80
+    ]
+   },
+   "hash": "124440c4ba89"
+  },
+  "xiaohong-chibi": {
+   "image": "/assets/rongguo/xiaohong-chibi.png",
+   "width": 54,
+   "height": 116,
+   "anchor": [
+    27.169,
+    115.879
+   ],
+   "source": "art/source/xiaohong-chibi_s10234131-01.png",
+   "matte": "art/matted/xiaohong-chibi_s10234131-sam.png",
+   "crop": [
+    0,
+    0,
+    54,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 400,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "xiaohong",
+    "features": "少女瘦长脸；眉细目灵；鼻小唇薄；一头黑鬒鬒的头发挽着髻，十六岁，容长脸面、细巧身材、十分俏丽干净",
+    "seed": 10234131,
+    "faceBox": [
+     6,
+     27,
+     48,
+     62
+    ]
+   },
+   "hash": "81e78aa00f94"
+  },
+  "ni_er-portrait": {
+   "image": "/assets/rongguo/ni_er-portrait.png",
+   "width": 270,
+   "height": 600,
+   "anchor": [
+    169.699,
+    599.458
+   ],
+   "source": "art/source/ni_er-portrait_s10234140-01.png",
+   "matte": "art/matted/ni_er-portrait_s10234140-sam.png",
+   "crop": [
+    0,
+    0,
+    270,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "ni_er",
+    "features": "壮汉方脸；浓眉阔眼；络腮胡；身量粗壮，喝醉了的市井泼皮，放重利债的，街坊人称「醉金刚」",
+    "seed": 10234140,
+    "faceBox": [
+     84,
+     19,
+     135,
+     66
+    ]
+   },
+   "hash": "ae167f08e0cf"
+  },
+  "ni_er-chibi": {
+   "image": "/assets/rongguo/ni_er-chibi.png",
+   "width": 94,
+   "height": 116,
+   "anchor": [
+    67.192,
+    115.917
+   ],
+   "source": "art/source/ni_er-chibi_s10234141-01.png",
+   "matte": "art/matted/ni_er-chibi_s10234141-sam.png",
+   "crop": [
+    0,
+    0,
+    94,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 394,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "ni_er",
+    "features": "壮汉方脸；浓眉阔眼；络腮胡；身量粗壮，喝醉了的市井泼皮，放重利债的，街坊人称「醉金刚」",
+    "seed": 10234141,
+    "faceBox": [
+     16,
+     18,
+     62,
+     52
+    ]
+   },
+   "hash": "c6a86d16ed50"
+  },
+  "bu_shi_ren-portrait": {
+   "image": "/assets/rongguo/bu_shi_ren-portrait.png",
+   "width": 180,
+   "height": 600,
+   "anchor": [
+    132.152,
+    599.431
+   ],
+   "source": "art/source/bu_shi_ren-portrait_s10234150-01.png",
+   "matte": "art/matted/bu_shi_ren-portrait_s10234150-sam.png",
+   "crop": [
+    0,
+    0,
+    180,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "bu_shi_ren",
+    "features": "中年瘦长脸；眉细眼冷；嘴角下撇；颧骨高，精瘦刻薄，开香料铺的，惯会推脱",
+    "seed": 10234150,
+    "faceBox": [
+     53,
+     24,
+     108,
+     83
+    ]
+   },
+   "hash": "de0f94d00c3f"
+  },
+  "bu_shi_ren-chibi": {
+   "image": "/assets/rongguo/bu_shi_ren-chibi.png",
+   "width": 48,
+   "height": 116,
+   "anchor": [
+    36.131,
+    115.915
+   ],
+   "source": "art/source/bu_shi_ren-chibi_s10234151-01.png",
+   "matte": "art/matted/bu_shi_ren-chibi_s10234151-sam.png",
+   "crop": [
+    0,
+    0,
+    48,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 394,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "bu_shi_ren",
+    "features": "中年瘦长脸；眉细眼冷；嘴角下撇；颧骨高，精瘦刻薄，开香料铺的，惯会推脱",
+    "seed": 10234151,
+    "faceBox": [
+     2,
+     19,
+     46,
+     66
+    ]
+   },
+   "hash": "1fed65d4413e"
+  },
+  "xiangling-portrait": {
+   "image": "/assets/rongguo/xiangling-portrait.png",
+   "width": 166,
+   "height": 600,
+   "anchor": [
+    62.321,
+    599.433
+   ],
+   "source": "art/source/xiangling-portrait_s10234160-01.png",
+   "matte": "art/matted/xiangling-portrait_s10234160-sam.png",
+   "crop": [
+    0,
+    0,
+    166,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "xiangling",
+    "features": "少女圆脸；眉弯目秀；唇点胭脂；体态纤秀，周瑞家的女儿，眉眼像黛玉",
+    "seed": 10234160,
+    "faceBox": [
+     47,
+     38,
+     93,
+     82
+    ]
+   },
+   "hash": "036492408c77"
+  },
+  "xiangling-chibi": {
+   "image": "/assets/rongguo/xiangling-chibi.png",
+   "width": 71,
+   "height": 116,
+   "anchor": [
+    37.19,
+    115.902
+   ],
+   "source": "art/source/xiangling-chibi_s10234161-01.png",
+   "matte": "art/matted/xiangling-chibi_s10234161-sam.png",
+   "crop": [
+    0,
+    0,
+    71,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 385,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "xiangling",
+    "features": "少女圆脸；眉弯目秀；唇点胭脂；体态纤秀，周瑞家的女儿，眉眼像黛玉",
+    "seed": 10234161,
+    "faceBox": [
+     10,
+     23,
+     58,
+     58
+    ]
+   },
+   "hash": "d0ffc6de7063"
+  },
+  "qiuwen-portrait": {
+   "image": "/assets/rongguo/qiuwen-portrait.png",
+   "width": 227,
+   "height": 600,
+   "anchor": [
+    117.161,
+    599.436
+   ],
+   "source": "art/source/qiuwen-portrait_s10234170-01.png",
+   "matte": "art/matted/qiuwen-portrait_s10234170-sam.png",
+   "crop": [
+    0,
+    0,
+    227,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "qiuwen",
+    "features": "少女圆脸；眉粗眼大；体态结实；爱使性子，怡红院里的丫鬟",
+    "seed": 10234170,
+    "faceBox": [
+     86,
+     45,
+     136,
+     92
+    ]
+   },
+   "hash": "4e7cfb8df330"
+  },
+  "qiuwen-chibi": {
+   "image": "/assets/rongguo/qiuwen-chibi.png",
+   "width": 70,
+   "height": 116,
+   "anchor": [
+    25.486,
+    115.902
+   ],
+   "source": "art/source/qiuwen-chibi_s10234171-01.png",
+   "matte": "art/matted/qiuwen-chibi_s10234171-sam.png",
+   "crop": [
+    0,
+    0,
+    70,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 396,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "qiuwen",
+    "features": "少女圆脸；眉粗眼大；体态结实；爱使性子，怡红院里的丫鬟",
+    "seed": 10234171,
+    "faceBox": [
+     8,
+     30,
+     56,
+     63
+    ]
+   },
+   "hash": "922089f3faaf"
+  },
+  "bihen-portrait": {
+   "image": "/assets/rongguo/bihen-portrait.png",
+   "width": 156,
+   "height": 600,
+   "anchor": [
+    37.036,
+    599.438
+   ],
+   "source": "art/source/bihen-portrait_s10234180-01.png",
+   "matte": "art/matted/bihen-portrait_s10234180-sam.png",
+   "crop": [
+    0,
+    0,
+    156,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "bihen",
+    "features": "少女长脸；眉细眼弯；鼻头微翘；身段纤细，怡红院里的丫鬟",
+    "seed": 10234180,
+    "faceBox": [
+     64,
+     34,
+     107,
+     73
+    ]
+   },
+   "hash": "644f4c6dd7e6"
+  },
+  "bihen-chibi": {
+   "image": "/assets/rongguo/bihen-chibi.png",
+   "width": 66,
+   "height": 116,
+   "anchor": [
+    37.543,
+    115.986
+   ],
+   "source": "art/source/bihen-chibi_s10234181-01.png",
+   "matte": "art/matted/bihen-chibi_s10234181-sam.png",
+   "crop": [
+    0,
+    0,
+    66,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 400,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "bihen",
+    "features": "少女长脸；眉细眼弯；鼻头微翘；身段纤细，怡红院里的丫鬟",
+    "seed": 10234181,
+    "faceBox": [
+     12,
+     22,
+     56,
+     55
+    ]
+   },
+   "hash": "0b981ed05311"
+  },
+  "yuan_yang-portrait": {
+   "image": "/assets/rongguo/yuan_yang-portrait.png",
+   "width": 174,
+   "height": 600,
+   "anchor": [
+    96.911,
+    599.451
+   ],
+   "source": "art/source/yuan_yang-portrait_s10234190-01.png",
+   "matte": "art/matted/yuan_yang-portrait_s10234190-sam.png",
+   "crop": [
+    0,
+    0,
+    174,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "yuan_yang",
+    "features": "少妇长脸；眉弯目大；肤色白腻；身量修长，贾母房里的首席大丫头",
+    "seed": 10234190,
+    "faceBox": [
+     51,
+     46,
+     95,
+     89
+    ]
+   },
+   "hash": "7a8b56aa10e6"
+  },
+  "yuan_yang-chibi": {
+   "image": "/assets/rongguo/yuan_yang-chibi.png",
+   "width": 56,
+   "height": 116,
+   "anchor": [
+    35.988,
+    115.766
+   ],
+   "source": "art/source/yuan_yang-chibi_s10234191-01.png",
+   "matte": "art/matted/yuan_yang-chibi_s10234191-sam.png",
+   "crop": [
+    0,
+    0,
+    56,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 401,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "yuan_yang",
+    "features": "少妇长脸；眉弯目大；肤色白腻；身量修长，贾母房里的首席大丫头",
+    "seed": 10234191,
+    "faceBox": [
+     7,
+     25,
+     50,
+     58
+    ]
+   },
+   "hash": "7c712e483812"
+  },
   "baoyu-portrait-angry": {
    "image": "/assets/rongguo/baoyu-portrait-angry.png",
    "width": 346,

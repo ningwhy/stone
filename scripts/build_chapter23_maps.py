@@ -152,7 +152,10 @@ scenes = {
             ('garden-tree', *at(5, 13), .96),
             ('garden-tree', *at(4, 21), .86),
             ('garden-tree', *at(11, 24), .92),
-            ('garden-tree', *at(3, 26), .84),
+            # 这株原在 (3,26)：西岸最西南角，离 peach_grove / stone_seat / bank_west
+            # 都远到取景门禁判「never in frame」——树冠整体在画面之外，读者看不到
+            # 桃林是成片的。挪到 (6,18)，与另外几株一起成荫。
+            ('garden-tree', *at(6, 18), .84),
             ('garden-tree', *at(16, 23), .88),
             ('garden-tree', *at(25, 13), .90),
             ('garden-tree', *at(28, 10), .84),

@@ -1,0 +1,636 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "PlanZones",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 1,
+          "name": "A0 京城 · 贾芸家",
+          "x": 384,
+          "y": 1472,
+          "width": 1536,
+          "height": 512,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 2,
+          "name": "A1 京城 · 贾芸家",
+          "x": 576,
+          "y": 896,
+          "width": 704,
+          "height": 576,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 3,
+          "name": "A2 京城 · 贾芸家",
+          "x": 1408,
+          "y": 896,
+          "width": 512,
+          "height": 576,
+          "rotation": 0,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PlanBlockers",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 3,
+      "name": "Anchors",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 4,
+          "name": "street",
+          "x": 1120.0,
+          "y": 1824.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 5,
+          "name": "home_door",
+          "x": 864.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 6,
+          "name": "room",
+          "x": 800.0,
+          "y": 1248.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 7,
+          "name": "mother",
+          "x": 992.0,
+          "y": 1184.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 8,
+          "name": "jia_yun",
+          "x": 736.0,
+          "y": 1312.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 9,
+          "name": "neighbor_door",
+          "x": 1568.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 10,
+          "name": "neighbor_room",
+          "x": 1696.0,
+          "y": 1248.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Routes",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 11,
+          "name": "动线 in",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "in",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "street,home_door,room",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "动线 talk",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "talk",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "room,mother,jia_yun",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "动线 next",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "next",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "jia_yun,neighbor_door,neighbor_room",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "动线 out",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "out",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "jia_yun,home_door,street",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Art",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 15,
+          "name": "plain-kang",
+          "x": 927.4449999999999,
+          "y": 1119.075,
+          "width": 418.84,
+          "height": 261.96,
+          "rotation": 0,
+          "visible": true,
+          "gid": 182,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "plain-kang",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "tea-table",
+          "x": 736.5562,
+          "y": 1184.5562,
+          "width": 78.0,
+          "height": 69.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 43,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "tea-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "round-stool",
+          "x": 1120.21788,
+          "y": 1312.21788,
+          "width": 36.4,
+          "height": 48.36,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "round-stool",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "official-desk",
+          "x": 1632.31093,
+          "y": 1119.68907,
+          "width": 212.66,
+          "height": 207.7,
+          "rotation": 0,
+          "visible": true,
+          "gid": 176,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "official-desk",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "cabinet",
+          "x": 1760.33152,
+          "y": 1312.33152,
+          "width": 72.80000000000001,
+          "height": 124.32000000000001,
+          "rotation": 0,
+          "visible": true,
+          "gid": 116,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "cabinet",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "lamp-stand",
+          "x": 1248.0,
+          "y": 1184.0,
+          "width": 390.96000000000004,
+          "height": 233.28000000000003,
+          "rotation": 0,
+          "visible": true,
+          "gid": 187,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "lamp-stand",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "garden-tree",
+          "x": 614.4875000000001,
+          "y": 1639.9685,
+          "width": 290.0,
+          "height": 252.0,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "garden-tree",
+          "x": 1830.2279999999998,
+          "y": 1639.64976,
+          "width": 278.4,
+          "height": 241.92,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "name": "garden-rock",
+          "x": 1381.2485800000002,
+          "y": 1831.19406,
+          "width": 129.20000000000002,
+          "height": 142.12,
+          "rotation": 0,
+          "visible": true,
+          "gid": 5,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-rock",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "stone-lion",
+          "x": 672.06264,
+          "y": 1439.93736,
+          "width": 71.03999999999999,
+          "height": 115.19999999999999,
+          "rotation": 0,
+          "visible": true,
+          "gid": 173,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "stone-lion",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ArtFootprints",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 17,
+          "name": "tea-table",
+          "x": 704.0,
+          "y": 1152.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 25,
+          "name": "garden-rock",
+          "x": 1344.0,
+          "y": 1792.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Labels",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "objects": [
+        {
+          "id": 27,
+          "name": "贾芸家",
+          "x": 864.0,
+          "y": 864.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 28,
+          "name": "里屋",
+          "x": 864.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 29,
+          "name": "隔壁倪家",
+          "x": 1632.0,
+          "y": 864.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 30,
+          "name": "街口",
+          "x": 1760.0,
+          "y": 1888.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "rongguo-art.tsj"
+    }
+  ],
+  "nextlayerid": 8,
+  "nextobjectid": 31,
+  "properties": [
+    {
+      "name": "sceneId",
+      "type": "string",
+      "value": "jia_yun_home"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "value": "京城 · 贾芸家"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "value": "street"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "12,23,8,4,path"
+    },
+    {
+      "name": "walls",
+      "type": "string",
+      "value": "9,14,20,14;9,14,9,23;20,14,20,23;22,14,30,14;22,14,22,23;30,14,30,23;9,23,12,23;16,23,20,23;22,23,24,23;28,23,30,23"
+    },
+    {
+      "name": "flowerbeds",
+      "type": "bool",
+      "value": false
+    }
+  ]
+}

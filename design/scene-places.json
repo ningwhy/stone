@@ -79,6 +79,10 @@
     "yihong": {"level": "daguanyuan", "region": "capital", "col": 20, "row": 20, "name": "大观园 · 怡红院", "note": "第二十一回新建，宝玉住处"},
     "qinfang": {"level": "daguanyuan", "region": "capital", "col": 14, "row": 26, "name": "大观园 · 沁芳闸桃花下", "note": "第二十三回新建，桃花底下共读《会真记》"},
     "daguanyuan": {"level": "daguanyuan", "region": "capital", "col": 18, "row": 22, "name": "大观园 · 全景", "note": "第十七回游园题匾；原书未给精确方位，翠嶂/沁芳亭/诸院为叙事排布"},
-    "shengqin": {"level": "daguanyuan", "region": "capital", "col": 22, "row": 18, "name": "省亲别墅 · 正殿", "note": "第十八回元妃换匾受礼的行宫正殿；正殿不题匾是原文情节"}
+    "shengqin": {"level": "daguanyuan", "region": "capital", "col": 22, "row": 18, "name": "省亲别墅 · 正殿", "note": "第十八回元妃换匾受礼的行宫正殿；正殿不题匾是原文情节"},
+    "spice_shop": {"level": "capital", "region": "capital", "col": 7, "row": 21, "name": "京城 · 卜家香料铺", "note": "第二十四回新建；卜世仁现开香料舖，贾芸来求赊冰片麝香"},
+    "ni_er_lane": {"level": "capital", "region": "capital", "col": 10, "row": 24, "name": "京城 · 三街六巷", "note": "第二十四回新建；醉金刚倪二住处的巷口"},
+    "jia_yun_home": {"level": "capital", "region": "capital", "col": 13, "row": 25, "name": "京城 · 贾芸家", "note": "第二十四回新建；与紧邻的倪二家只隔一墙"},
+    "qiranzhai": {"level": "rongguo", "region": "capital", "col": 9, "row": 12, "name": "荣国府 · 绮霰斋外书房", "note": "第二十四回新建；贾母仪门外的小书房"}
   }
 }

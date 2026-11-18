@@ -5,9 +5,9 @@
 
 ## 总览
 
-- 位图总数 **185**（立绘 82、Q版 82、表情变体 21）
-- 朝左 **28**，朝右 **157**
-- 依据：实测 **124**、目视裁决 **53**
+- 位图总数 **201**（立绘 90、Q版 90、表情变体 21）
+- 朝左 **29**，朝右 **172**
+- 依据：实测 **131**、目视裁决 **62**
 
 「朝左 / 朝右」指的是**原图**里脸偏向画面的哪一侧——不是角色在剧情里该朝哪边。
 运行时用它决定该用原图还是左右镜像：要求显示的一侧与原图不符时才镜像。
@@ -20,6 +20,10 @@
 | `ban_er-portrait` | ban_er | 立绘 | **朝右** | 实测·3票 |
 | `bao_zhu-chibi` | bao_zhu | Q版 | **朝右** | 目视 |
 | `bao_zhu-portrait` | bao_zhu | 立绘 | **朝右** | 实测·3票 |
+| `bihen-chibi` | bihen | Q版 | **朝右** | 目视 |
+| `bihen-portrait` | bihen | 立绘 | **朝右** | 实测·3票 |
+| `bu_shi_ren-chibi` | bu_shi_ren | Q版 | **朝右** | 目视 |
+| `bu_shi_ren-portrait` | bu_shi_ren | 立绘 | **朝右** | 实测·3票 |
 | `caiyun-chibi` | caiyun | Q版 | **朝右** | 目视 |
 | `caiyun-portrait` | caiyun | 立绘 | **朝右** | 实测·3票 |
 | `cui_lv-chibi` | cui_lv | Q版 | **朝右** | 目视 |
@@ -46,6 +50,8 @@
 | `jia_rong-portrait` | jia_rong | 立绘 | **朝右** | 实测·3票 |
 | `jia_rui-chibi` | jia_rui | Q版 | **朝右** | 实测·1票 |
 | `jia_rui-portrait` | jia_rui | 立绘 | **朝左** | 实测·3票 |
+| `jia_yun-chibi` | jia_yun | Q版 | **朝右** | 目视 |
+| `jia_yun-portrait` | jia_yun | 立绘 | **朝右** | 实测·3票 |
 | `jia_zhen-chibi` | jia_zhen | Q版 | **朝右** | 实测·2票 |
 | `jia_zhen-portrait` | jia_zhen | 立绘 | **朝右** | 实测·3票 |
 | `jin_rong-chibi` | jin_rong | Q版 | **朝左** | default-unmeasured |
@@ -66,6 +72,8 @@
 | `liu_lao-portrait` | liu_lao | 立绘 | **朝左** | default-unmeasured |
 | `ming_yan-chibi` | ming_yan | Q版 | **朝左** | default-unmeasured |
 | `ming_yan-portrait` | ming_yan | 立绘 | **朝左** | 实测·2票 |
+| `ni_er-chibi` | ni_er | Q版 | **朝右** | 目视 |
+| `ni_er-portrait` | ni_er | 立绘 | **朝左** | 目视 |
 | `ping_er-chibi` | ping_er | Q版 | **朝右** | 目视 |
 | `ping_er-portrait` | ping_er | 立绘 | **朝右** | 实测·3票 |
 | `qin_ke-chibi` | qin_ke | Q版 | **朝右** | 目视 |
@@ -74,6 +82,8 @@
 | `qin_ye-portrait` | qin_ye | 立绘 | **朝右** | 实测·3票 |
 | `qin_zhong-chibi` | qin_zhong | Q版 | **朝右** | 实测·6票 |
 | `qin_zhong-portrait` | qin_zhong | 立绘 | **朝右** | 实测·3票 |
+| `qiuwen-chibi` | qiuwen | Q版 | **朝右** | 目视 |
+| `qiuwen-portrait` | qiuwen | 立绘 | **朝右** | 实测·3票 |
 | `she_yue-chibi` | she_yue | Q版 | **朝右** | 目视 |
 | `she_yue-portrait` | she_yue | 立绘 | **朝右** | 实测·3票 |
 | `shi_xiangyun-chibi` | shi_xiangyun | Q版 | **朝右** | 目视 |
@@ -85,10 +95,16 @@
 | `si_er-portrait` | si_er | 立绘 | **朝右** | 实测·3票 |
 | `wang_er-chibi` | wang_er | Q版 | **朝右** | 实测·4票 |
 | `wang_er-portrait` | wang_er | 立绘 | **朝左** | 目视 |
+| `xiangling-chibi` | xiangling | Q版 | **朝右** | 目视 |
+| `xiangling-portrait` | xiangling | 立绘 | **朝右** | 实测·3票 |
+| `xiaohong-chibi` | xiaohong | Q版 | **朝右** | 目视 |
+| `xiaohong-portrait` | xiaohong | 立绘 | **朝右** | 实测·3票 |
 | `ying_er-chibi` | ying_er | Q版 | **朝右** | 实测·3票 |
 | `ying_er-portrait` | ying_er | 立绘 | **朝右** | 实测·3票 |
 | `you_shi-chibi` | you_shi | Q版 | **朝右** | 实测·1票 |
 | `you_shi-portrait` | you_shi | 立绘 | **朝右** | 目视 |
+| `yuan_yang-chibi` | yuan_yang | Q版 | **朝右** | 目视 |
+| `yuan_yang-portrait` | yuan_yang | 立绘 | **朝右** | 实测·3票 |
 | `yuanchun-chibi` | yuanchun | Q版 | **朝右** | 实测·2票 |
 | `yuanchun-portrait` | yuanchun | 立绘 | **朝右** | 实测·3票 |
 | `zhang_youshi-chibi` | zhang_youshi | Q版 | **朝右** | 实测·2票 |
@@ -222,6 +238,7 @@
 | `liu_lao-portrait` | liu_lao | 立绘 | default-unmeasured |
 | `ming_yan-chibi` | ming_yan | Q版 | default-unmeasured |
 | `ming_yan-portrait` | ming_yan | 立绘 | 实测·2票 |
+| `ni_er-portrait` | ni_er | 立绘 | 目视 |
 | `wang_er-portrait` | wang_er | 立绘 | 目视 |
 | `zhang_youshi-portrait` | zhang_youshi | 立绘 | 实测·3票 |
 | `zhou_rui-chibi` | zhou_rui | Q版 | 目视 |
