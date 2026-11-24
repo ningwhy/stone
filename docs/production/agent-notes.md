@@ -182,6 +182,41 @@ cast 每加一个非 sedan 角色，须同时在 `public/assets/rongguo/manifest
 - **ComfyUI 模型挪目录整条 400**：已加 `_align_model_names()`（按 basename 反查服务器清单）。
 - **竹丛教训**：共用 `bamboo-cluster` 源图本身错（绿色 0.0%），SAM 救不回 → 共用素材必须逐张目视。
 
+### ★ `features` 的最上游是 `art/identity/character-designs.json`（24 回查证）
+
+manifest 的 `identity.features` 不是源头，它由 `scripts/rebuild_new_character_manifest.py` 的
+`features = approved.get('features') or design['features']` 决定——`art/identity/approved.json`
+只有 76 条**旧角色**，第 24 回 8 个新角色**不在**里面，所以它们的 features **直接取自
+`art/identity/character-designs.json`**。该文件每条还有完整的英文 `prompt`（服装/发型/气质），
+是写「角色设计说明」时的权威依据，不能靠 manifest 反推。
+
+**改 `features` 必须同步四处**，漏一处就会出现「设计表已改、运行时仍显示旧文案」：
+① `art/identity/character-designs.json` → ② `public/assets/rongguo/manifest.json` 的
+`<id>-portrait` 与 `<id>-chibi` 两个块 → ③ `src/story.ts` 的 `cast` 描述 → ④
+`scripts/gen_chNN_characters.py` 的头部注释（与设计表同源文案）。
+**改 `features`/`prompt` 不触发重新生图**，seed 与已生成资产不用动。
+
+★ **`rebuild_new_character_manifest.py` 会重排 manifest 缩进**（实测 916 增 / 1378 删），
+只为改 features 时**必须用定点字符串替换**，否则产生上千行无关 diff。
+
+### ★ 角色设计说明的写法（24 回新建 `docs/chapter24-characters.md`）
+
+仓库此前**没有角色设计说明先例**，24 回新建第一份。口径（依 `research.md`「四类记录分别写」）：
+
+- 每节固定八段：身份定位 → 外形锚点 → 色彩标识 → 资产参数 → 朝向裁决 → 本回剧情功能
+  → 与同回角色的对照 → 边界。结构一致才能横向比。
+- **「底本依据」必须逐字给出**，与「外形锚点」（设计原文）分开写；两者不可混。
+- 资产参数表逐项抄 manifest 的**真实值**：尺寸 / anchor / faceBox / seed / bodyCompress / hash。
+- 朝向裁决要写**证据方法**（`vision-landmark-geometry` 还是 `visual-review` + 标尺），
+  不能只写结论。
+- 汇总表 + 「必须一眼分辨的对立」组 + 「不入 cast 的本回人物」表 —— 后者引用制作记录里的
+  设计推定编号（如 24 回的 D4/D7/D8）。
+
+**校验脚本三个坑**：① Markdown 软换行 → 比对前先 `re.sub(r'\s+','')`；
+② 引号归一要同时剥 `“”‘’『』「」` 和**反引号 `` ` `` 与 `'`** —— 第 24 回底本是维基文库
+旧式标记（「相与交结」「不用费事」用反引号），漏了就永远对不上；
+③ 部分引文**跨引号边界**，长句改用「去掉全部标点后的核心文字」比对。
+
 ---
 
 ## 五、facing（sprite 朝向）
@@ -543,4 +578,5 @@ smoke 走到一半我改了 `src/cardPreview.ts` → vite 整页重载 → 页�
   - ★ **生成器的 `last_focus` 必须按「场景」记，不能按「段 id」记**——一个场景可横跨多段（`yihong` 占四段），按段 id 记会让段首既无 `show` 也无 `move` 的节点 focus 断链成空（26 个节点集体 `unknown focus`）。第 23 回一个场景只跨一段，所以这个隐患第一次没暴露。**再加一条自校「focus 不得为空」**。
   - ★ **生成器里凡是 `show` 的 actor 必须在 cast 里**——「不入 cast」的角色（如贾芸之母）只能用叙述与场景美术交代，不能 `show`。
 - **「区间自愈」生成器（第 24 回新增）**：`scripts/build_chapter24.py` 只声明起点、终点自动推导（`prev.s_to = next.s_from`），起点用「标题回锚底本」（最长公共前缀打分，因为标题常在句子中间被截断）+ 引号边界（不越过引语开头）。手写索引必然漂移——第 24 回初版照抄第 23 回手写索引，立刻暴露 9 处区间重叠、4 处跳段、15 处标题对不上。
+- **角色设计说明（2026-11-24 新建第一份）**：`docs/chapter24-characters.md` —— 第 24 回 8 个新角色（贾芸、小红、倪二、卜世仁、香菱、秋纹、碧痕、鸳鸯）各一份。写法口径见上文「四、cast 与美术管线」→ 「角色设计说明的写法」。同时修掉香菱两处考据错误（「周瑞家的女儿」→「甄士隐之女英莲」、「眉眼像黛玉」→「像东府蓉大奶奶秦可卿的品格」，第 7 回原文），并补录 `docs/chapter07-source.txt` 被截断的香菱段。
 - 制作记录在 `docs/chapterNN-production.md`，底本在 `docs/chapterNN-source.txt`。

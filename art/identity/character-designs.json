@@ -519,8 +519,8 @@
   {
    "id": "xiangling",
    "name": "香菱",
-   "features": "少女圆脸；眉弯目秀；唇点胭脂；体态纤秀，周瑞家的女儿，眉眼像黛玉",
-   "prompt": "a pretty young woman of sixteen with a softly round face, curved delicate brows, clear almond eyes, lips lightly touched with rouge, a slender graceful figure, the daughter of a senior housekeeper in a Qing-dynasty noble household, wearing a pale lilac two-piece maid outfit with a simple embroidered collar and a small white flower hairpin",
+   "features": "少女圆脸；眉弯目秀；唇点胭脂；体态纤秀，甄士隐之女英莲，第七回周瑞家的说她像东府蓉大奶奶秦可卿的品格",
+   "prompt": "a pretty young woman of sixteen with a softly round face, curved delicate brows, clear almond eyes, lips lightly touched with rouge, a slender graceful figure, the long-lost daughter of the scholar Zhen Shiyin, sold as a child and renamed Xiangling after entering the Xue household, wearing a pale lilac two-piece maid outfit with a simple embroidered collar and a small white flower hairpin",
    "seed": 10234160
   },
   {

@@ -135,7 +135,7 @@ export const cast = {
   xiaohong:{name:'小红',fullName:'小红',color:0xc0856e,css:'#c0856e',relation:'怡红院小丫头 · 本姓林名红玉',description:'本姓林、小名红玉，因「玉」字犯了黛玉宝玉，改为小红。荣国府世代旧仆之女，年方十六，被分在怡红院。第二十四回因手帕子不见了去后头找，撞见宝玉在屋里。'},
   ni_er:{name:'倪二',fullName:'醉金刚倪二',color:0x8a6f52,css:'#8a6f52',relation:'街坊泼皮 · 放重利债',description:'紧邻贾家的泼皮，专放重利债，在赌博场吃闲钱，专管打降吃酒，人称「醉金刚」。素日虽是无赖，却因人而使颇有义侠之名，第二十四回慷慨借银与贾芸。'},
   bu_shi_ren:{name:'卜世仁',fullName:'卜世仁',color:0x7a7266,css:'#7a7266',relation:'贾芸的母舅 · 开香料铺',description:'贾芸的母舅，现开香料铺，惯会推脱。第二十四回不肯给外甥赊冰片麝香，还推说「这会子还装胖呢」，被贾芸心里记下。'},
-  xiangling:{name:'香菱',fullName:'香菱',color:0xc9a8b0,css:'#c9a8b0',relation:'薛宝钗的丫头 · 甄英莲',description:'甄英莲，眉眼像黛玉。第二十四回自背后击掌吓了黛玉一跳，说来寻姑娘，又与黛玉同坐潇湘馆说些刺绣下棋的话。'},
+  xiangling:{name:'香菱',fullName:'香菱',color:0xc9a8b0,css:'#c9a8b0',relation:'薛宝钗的丫头 · 甄英莲',description:'甄英莲，甄士隐之女，幼年被拐卖与薛家，改名香菱，现为薛宝钗的丫头。第二十四回自背后击掌吓了黛玉一跳，说来寻姑娘，又与黛玉同坐潇湘馆说些刺绣下棋的话。'},
   qiuwen:{name:'秋纹',fullName:'秋纹',color:0xd08a5c,css:'#d08a5c',relation:'怡红院丫鬟',description:'怡红院里的丫鬟，眉粗眼大体态结实，爱使性子。第二十四回与碧痕提水回来，听见老嬷嬷说来监工的是「后廊上的芸哥儿」，还当是别的匠人。'},
   bihen:{name:'碧痕',fullName:'碧痕',color:0x87b0a4,css:'#87b0a4',relation:'怡红院丫鬟',description:'怡红院里的丫鬟，长脸细眉、鼻头微翘、身段纤细。第二十四回与秋纹提水回来，说要向众人传话，往后凡要茶要水送东送西的事都单叫袭人去。'},
   yuan_yang:{name:'鸳鸯',fullName:'鸳鸯',color:0xc4574f,css:'#c4574f',relation:'贾母房中首席大丫头',description:'贾母房里的首席大丫头，容貌标致、进退得体。第二十四回歪在床上看袭人的针线，被宝玉缠着要胭脂吃，只唤袭人出来瞧瞧。'},
