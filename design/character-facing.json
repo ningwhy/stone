@@ -1479,6 +1479,34 @@
     }
    },
    "chibi": "right"
+  },
+  "ma_dao_po": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "method": "visual-review",
+     "reason": "vision landmark geometry; nose offset +0.329 and mouth offset +0.011 from the eye midpoint, both positive, so the head turns right"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face; nose sits just right of the eye midpoint on a 5x grid against right/left reference chibis"
+    }
+   },
+   "chibi": "right"
+  },
+  "cai_xia": {
+   "portrait": "left",
+   "evidence": {
+    "portrait": {
+     "method": "visual-review",
+     "reason": "vision nose/mouth offsets disagree (+0.014/-0.038); read by eye on a 3x grid, the three-quarter face turns towards the left, its right cheek hidden by hair"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face; nose sits left of the eye midpoint on a 5x grid against right/left reference chibis"
+    }
+   },
+   "chibi": "left"
   }
  },
  "variants": {

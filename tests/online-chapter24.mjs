@@ -7,8 +7,8 @@
  *    spice_shop / ni_er_lane / qiranzhai / jia_yun_home —— 其余六张
  *    qinfang / yihong / capital / east / jialian_home / c6_wangchui
  *    都是第 16-23 回建好的）；
- *  - 封底与「下一回有没有上线」相称：第二十四回现在是全书末回，封底应当
- *    显示「全书至此」，且**没有**「开启下一回」按钮；
+ *  - 封底与「下一回有没有上线」相称：第二十五回上线后，第二十四回封底
+ *    应当显示「开启下一回 · 第二十五回」，而不再是「全书至此」；
  *  - 图鉴里这一回新出场八人（贾芸、小红、倪二、卜世仁、香菱、秋纹、
  *    碧痕、鸳鸯）的立绘是否画得出来。
  *
@@ -106,8 +106,8 @@ try{
   const moved=await clickForwardIfShown(page);
   assert.ok(moved,'the reader must be able to walk into the last node');
   // 「终幕」只标在**全书**末节点上（src/App.tsx 的 state.index===story.length-1）。
-  // 第二十四回现在是全书末回，所以标签恰好就是「终幕」。用共享判定读产品
-  // 代码的 story 来分「全书末回」与「某一回的末回」这两种情况。
+  // 第二十五回上线后，第二十四回只是「某一回的末回」，标签是 C24-369。
+  // 用共享判定读产品代码的 story 来分这两种情况。
   const endLabel=isBookFinalNode(lastNode)?'终幕':lastNode;
   await page.waitForFunction(label=>document.querySelector('.node-label')?.textContent===label,endLabel,{timeout:30000});
   const {backText}=await assertBackCover(page,24);
@@ -143,7 +143,7 @@ try{
   console.log(`${tag} non-403 failed requests:`,realFailures.length);
   for(const f of realFailures.slice(0,10))console.log('  ',f);
   assert.deepEqual(errors,[],JSON.stringify(errors));
-  console.log(`Passed (${tag}): chapter 24 is live — ${sections.length} sections, ${scenes.size} stages (incl. 4 new maps), TOC lists 第二十四回, back cover ends the book, ${gallery.length} portraits render (incl. ${NEW_CAST.length} new).`);
+  console.log(`Passed (${tag}): chapter 24 is live — ${sections.length} sections, ${scenes.size} stages (incl. 4 new maps), TOC lists 第二十四回, back cover opens 第二十五回, ${gallery.length} portraits render (incl. ${NEW_CAST.length} new).`);
 }catch(e){
   console.error('Browser errors:',errors);
   console.error((await page.locator('body').innerText()).slice(0,3000));

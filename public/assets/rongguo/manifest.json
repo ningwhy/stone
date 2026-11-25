@@ -7849,6 +7849,140 @@
    },
    "hash": "7c712e483812"
   },
+  "ma_dao_po-portrait": {
+   "image": "/assets/rongguo/ma_dao_po-portrait.png",
+   "width": 181,
+   "height": 600,
+   "anchor": [
+    69.659,
+    599.43
+   ],
+   "source": "art/source/ma_dao_po-portrait_s10235100-01.png",
+   "matte": "art/matted/ma_dao_po-portrait_s10235100-sam.png",
+   "crop": [
+    0,
+    0,
+    181,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "ma_dao_po",
+    "features": "底本无外貌描写，以下为视觉设计推定：老妇；贾宝玉寄名的干娘、常走荣府各院念佛化缘的庙里婆子；面带精明世故，贪财（见银子便伸手掖起）",
+    "seed": 10235100,
+    "faceBox": [
+     82,
+     30,
+     130,
+     80
+    ]
+   },
+   "hash": "6f891531df11"
+  },
+  "ma_dao_po-chibi": {
+   "image": "/assets/rongguo/ma_dao_po-chibi.png",
+   "width": 75,
+   "height": 116,
+   "anchor": [
+    43.167,
+    115.947
+   ],
+   "source": "art/source/ma_dao_po-chibi_s10235101-01.png",
+   "matte": "art/matted/ma_dao_po-chibi_s10235101-sam.png",
+   "crop": [
+    0,
+    0,
+    75,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 407,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "ma_dao_po",
+    "features": "底本无外貌描写，以下为视觉设计推定：老妇；贾宝玉寄名的干娘、常走荣府各院念佛化缘的庙里婆子；面带精明世故，贪财（见银子便伸手掖起）",
+    "seed": 10235101,
+    "faceBox": [
+     8,
+     17,
+     54,
+     51
+    ]
+   },
+   "hash": "46851c016fd1"
+  },
+  "cai_xia-portrait": {
+   "image": "/assets/rongguo/cai_xia-portrait.png",
+   "width": 174,
+   "height": 600,
+   "anchor": [
+    68.804,
+    599.433
+   ],
+   "source": "art/source/cai_xia-portrait_s10235110-01.png",
+   "matte": "art/matted/cai_xia-portrait_s10235110-sam.png",
+   "crop": [
+    0,
+    0,
+    174,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "cai_xia",
+    "features": "底本无外貌描写，以下为视觉设计推定：王夫人房中丫鬟；与贾环相好、心气高，对宝玉淡淡不答理、夺手不肯；有咬嘴唇、戳额头的小动作",
+    "seed": 10235110,
+    "faceBox": [
+     64,
+     28,
+     112,
+     82
+    ]
+   },
+   "hash": "569e96cc60c8"
+  },
+  "cai_xia-chibi": {
+   "image": "/assets/rongguo/cai_xia-chibi.png",
+   "width": 75,
+   "height": 116,
+   "anchor": [
+    37.168,
+    115.76
+   ],
+   "source": "art/source/cai_xia-chibi_s10235111-01.png",
+   "matte": "art/matted/cai_xia-chibi_s10235111-sam.png",
+   "crop": [
+    0,
+    0,
+    75,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 365,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "cai_xia",
+    "features": "底本无外貌描写，以下为视觉设计推定：王夫人房中丫鬟；与贾环相好、心气高，对宝玉淡淡不答理、夺手不肯；有咬嘴唇、戳额头的小动作",
+    "seed": 10235111,
+    "faceBox": [
+     7,
+     27,
+     49,
+     53
+    ]
+   },
+   "hash": "77d5b78fe8b0"
+  },
   "baoyu-portrait-angry": {
    "image": "/assets/rongguo/baoyu-portrait-angry.png",
    "width": 346,

@@ -2238,5 +2238,37 @@
     "faintAlphaRatio": 0.03095,
     "width": 56,
     "height": 116
+  },
+  {
+    "asset": "ma_dao_po-portrait",
+    "visiblePixels": 76354,
+    "solidAlpha250Ratio": 0.98274,
+    "faintAlphaRatio": 0.00735,
+    "width": 181,
+    "height": 600
+  },
+  {
+    "asset": "ma_dao_po-chibi",
+    "visiblePixels": 6073,
+    "solidAlpha250Ratio": 0.94599,
+    "faintAlphaRatio": 0.02388,
+    "width": 75,
+    "height": 116
+  },
+  {
+    "asset": "cai_xia-portrait",
+    "visiblePixels": 69167,
+    "solidAlpha250Ratio": 0.98207,
+    "faintAlphaRatio": 0.00773,
+    "width": 174,
+    "height": 600
+  },
+  {
+    "asset": "cai_xia-chibi",
+    "visiblePixels": 5803,
+    "solidAlpha250Ratio": 0.93417,
+    "faintAlphaRatio": 0.0305,
+    "width": 75,
+    "height": 116
   }
 ]

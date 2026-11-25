@@ -1,0 +1,2080 @@
+{
+ "schemaVersion": 1,
+ "template": false,
+ "chapter": 25,
+ "source": {
+  "edition": "维基文库《紅樓夢》第 025 回（繁体原文页）",
+  "url": "https://zh.wikisource.org/w/index.php?title=紅樓夢/第025回&action=raw",
+  "retrievedAt": "2026-11-25",
+  "localText": "docs/chapter25-source.txt",
+  "processing": "MediaWiki action=raw 取回 wikitext，去模板与导航行，OpenCC 转简体；回目行与正文之间补空行，回目自成一段；正文未作增删。"
+ },
+ "paragraphCount": 27,
+ "nodeCount": 129,
+ "sectionCount": 13,
+ "mapCount": 5,
+ "evidence": [
+  {
+   "id": "C25-E001",
+   "classification": "explicit",
+   "paragraphLead": "话说红玉心神恍惚，",
+   "excerpt": "话说红玉心神恍惚，情思缠绵，忽朦胧睡去，遇见贾芸要拉他，却回身一跑，被门槛绊了一跤，唬醒过来，方知是梦。",
+   "claim": "话说红玉心神恍惚，情思缠绵",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-001"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E002",
+   "classification": "explicit",
+   "paragraphLead": "忽朦胧睡去，",
+   "excerpt": "忽朦胧睡去，遇见贾芸要拉他，却回身一跑，被门槛绊了一跤，唬醒过来，方知是梦。",
+   "claim": "忽朦胧睡去，遇见贾芸要拉他",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-002"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E003",
+   "classification": "explicit",
+   "paragraphLead": "唬醒过来，",
+   "excerpt": "唬醒过来，方知是梦。因此翻来复去，一夜无眠。至次日天明，方才起来，就有几个丫头子来会他去打扫房子地面，提洗脸水。这红玉也不梳洗，向镜中胡乱挽了一挽头发，洗了洗手，腰内束了一条汗巾子，便来打扫房屋。",
+   "claim": "唬醒过来，方知是梦",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-003"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E004",
+   "classification": "explicit",
+   "paragraphLead": "这红玉也不梳洗，",
+   "excerpt": "这红玉也不梳洗，向镜中胡乱挽了一挽头发，洗了洗手，腰内束了一条汗巾子，便来打扫房屋。谁知宝玉昨儿见了红玉，也就留了心。",
+   "claim": "这红玉也不梳洗，向镜中胡乱挽了一挽头发",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-004"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E005",
+   "classification": "explicit",
+   "paragraphLead": "谁知宝玉昨儿见了红玉，",
+   "excerpt": "谁知宝玉昨儿见了红玉，也就留了心。若要直点名唤他来使用，一则怕袭人等寒心，二则又不知红玉是何等行为，若好还罢了，若不好起来，那时倒不好退送的。因此心下闷闷的，早起来也不梳洗，只坐著出神。一时下了窗子，隔著纱屉子，向外看的真切，只见好几个丫头…",
+   "claim": "谁知宝玉昨儿见了红玉，也就留了心",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-005"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E006",
+   "classification": "explicit",
+   "paragraphLead": "一时下了窗子，",
+   "excerpt": "一时下了窗子，隔著纱屉子，向外看的真切，只见好几个丫头在那里扫地，都擦胭抹粉，簪花插柳的，独不见昨儿那一个。宝玉便靸了鞋晃出了房门，只装著看花儿，这里瞧瞧，那里望望，一抬头，只见西南角上游廊底下栏杆上似有一个人倚在那里，却恨面前有一株海棠花…",
+   "claim": "一时下了窗子，隔著纱屉子，向外看的真切",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-006"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E007",
+   "classification": "explicit",
+   "paragraphLead": "宝玉便靸了鞋晃出了房门，",
+   "excerpt": "宝玉便靸了鞋晃出了房门，只装著看花儿，这里瞧瞧，那里望望，一抬头，只见西南角上游廊底下栏杆上似有一个人倚在那里，却恨面前有一株海棠花遮著，看不真切。",
+   "claim": "宝玉便靸了鞋晃出了房门，只装著看花儿",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-007"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E008",
+   "classification": "explicit",
+   "paragraphLead": "一抬头，",
+   "excerpt": "一抬头，只见西南角上游廊底下栏杆上似有一个人倚在那里，却恨面前有一株海棠花遮著，看不真切。只得又转了一步，仔细一看，可不是昨儿那个丫头在那里出神。待要迎上去，又不好去的。正想著，忽见碧痕来催他洗脸，只得进去了。",
+   "claim": "一抬头，只见西南角上游廊底下栏杆上似有一个人倚在那里",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-008"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E009",
+   "classification": "explicit",
+   "paragraphLead": "正想著，",
+   "excerpt": "正想著，忽见碧痕来催他洗脸，只得进去了。不在话下。",
+   "claim": "正想著，忽见碧痕来催他洗脸",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-009"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E010",
+   "classification": "explicit",
+   "paragraphLead": "却说红玉正自出神，",
+   "excerpt": "却说红玉正自出神，忽见袭人招手叫他，只得走上前来。袭人笑道：",
+   "claim": "却说红玉正自出神，忽见袭人招手叫他",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-010"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E011",
+   "classification": "explicit",
+   "paragraphLead": "“我们这里的喷壶还没有收拾了来呢，",
+   "excerpt": "「我们这里的喷壶还没有收拾了来呢，你到林姑娘那里去，把他们的借来使使。」红玉答应了，便走出来往潇湘馆去。",
+   "claim": "我们这里的喷壶还没有收拾了来呢",
+   "narrativeLayer": "present",
+   "speaker": "xiren",
+   "appliesTo": [
+    "C25-011"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E012",
+   "classification": "explicit",
+   "paragraphLead": "红玉答应了，",
+   "excerpt": "红玉答应了，便走出来往潇湘馆去。正走上翠烟桥，抬头一望，只见山坡上高处都是拦著帏幙，方想起今儿有匠役在里头种树。",
+   "claim": "红玉答应了，便走出来往潇湘馆去",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-012"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E013",
+   "classification": "explicit",
+   "paragraphLead": "只见山坡上高处都是拦著帏幙，",
+   "excerpt": "只见山坡上高处都是拦著帏幙，方想起今儿有匠役在里头种树。因转身一望，只见那边远远一簇人在那里掘土，贾芸正坐在那山子石上。",
+   "claim": "只见山坡上高处都是拦著帏幙，方想起今儿有匠役在里头种树",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-013"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E014",
+   "classification": "explicit",
+   "paragraphLead": "只见那边远远一簇人在那里掘土，",
+   "excerpt": "只见那边远远一簇人在那里掘土，贾芸正坐在那山子石上。红玉待要过去，又不敢过去，只得闷闷的向潇湘馆取了喷壶回来，无精打彩自向房内倒著。",
+   "claim": "只见那边远远一簇人在那里掘土，贾芸正坐在那山子石上",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-014"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E015",
+   "classification": "explicit",
+   "paragraphLead": "红玉待要过去，",
+   "excerpt": "红玉待要过去，又不敢过去，只得闷闷的向潇湘馆取了喷壶回来，无精打彩自向房内倒著。众人只说他一时身上不爽快，都不理论。",
+   "claim": "红玉待要过去，又不敢过去",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-015"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E016",
+   "classification": "explicit",
+   "paragraphLead": "展眼过了一日，",
+   "excerpt": "展眼过了一日，原来次日就是王子腾夫人的寿诞，那里原打发人来请贾母王夫人的，王夫人见贾母不自在，也便不去了。倒是薛姨妈同凤姐儿并贾家几个姊妹，宝钗，宝玉一齐都去了，至晚方回。可巧王夫人见贾环下了学，便命他来抄个《金刚咒》唪诵唪诵。",
+   "claim": "展眼过了一日，原来次日就是王子腾夫人的寿诞",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-016"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E017",
+   "classification": "explicit",
+   "paragraphLead": "可巧王夫人见贾环下了学，",
+   "excerpt": "可巧王夫人见贾环下了学，便命他来抄个《金刚咒》唪诵唪诵。那贾环正在王夫人炕上坐著，命人点灯，拿腔作势的抄写。一时又叫彩云倒杯茶来，一时又叫玉钏儿来剪剪蜡花，一时又说金钏儿挡了灯影。",
+   "claim": "可巧王夫人见贾环下了学，便命他来抄个《金刚咒》唪诵唪诵",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-017"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E018",
+   "classification": "explicit",
+   "paragraphLead": "一时又叫彩云倒杯茶来，",
+   "excerpt": "一时又叫彩云倒杯茶来，一时又叫玉钏儿来剪剪蜡花，一时又说金钏儿挡了灯影。众丫鬟们素日厌恶他，都不答理。只有彩霞还和他合的来，倒了一钟茶来递与他。",
+   "claim": "一时又叫彩云倒杯茶来，一时又叫玉钏儿来剪剪蜡花",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-018"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E019",
+   "classification": "explicit",
+   "paragraphLead": "只有彩霞还和他合的来，",
+   "excerpt": "只有彩霞还和他合的来，倒了一钟茶来递与他。因见王夫人和人说话儿，他便悄悄的向贾环说道：",
+   "claim": "只有彩霞还和他合的来，倒了一钟茶来递与他",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-019"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E020",
+   "classification": "explicit",
+   "paragraphLead": "“你安些分罢，",
+   "excerpt": "「你安些分罢，何苦讨这个厌那个厌的。」贾环道：",
+   "claim": "你安些分罢，何苦讨这个厌那个厌的",
+   "narrativeLayer": "present",
+   "speaker": "cai_xia",
+   "appliesTo": [
+    "C25-020"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E021",
+   "classification": "explicit",
+   "paragraphLead": "“我也知道了，",
+   "excerpt": "「我也知道了，你别哄我。如今你和宝玉好，把我不答理，我也看出来了。」彩霞咬著嘴唇，向贾环头上戳了一指头，说道：",
+   "claim": "我也知道了，你别哄我",
+   "narrativeLayer": "present",
+   "speaker": "jia_huan",
+   "appliesTo": [
+    "C25-021"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E022",
+   "classification": "explicit",
+   "paragraphLead": "“没良心的！",
+   "excerpt": "「没良心的！狗咬吕洞宾，不识好人心。」",
+   "claim": "没良心的！狗咬吕洞宾，不识好人心",
+   "narrativeLayer": "present",
+   "speaker": "cai_xia",
+   "appliesTo": [
+    "C25-022"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E023",
+   "classification": "explicit",
+   "paragraphLead": "两人正说著，",
+   "excerpt": "两人正说著，只见凤姐来了，拜见过王夫人。王夫人便一长一短的问他，今儿是那几位堂客，戏文好歹，酒席如何等语。说了不多几句话，宝玉也来了，进门见了王夫人，不过规规矩矩说了几句，便命人除去抹额，脱了袍服，拉了靴子，便一头滚在王夫人怀里。",
+   "claim": "两人正说著，只见凤姐来了，拜见过王夫人",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-023"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E024",
+   "classification": "explicit",
+   "paragraphLead": "说了不多几句话，",
+   "excerpt": "说了不多几句话，宝玉也来了，进门见了王夫人，不过规规矩矩说了几句，便命人除去抹额，脱了袍服，拉了靴子，便一头滚在王夫人怀里。",
+   "claim": "说了不多几句话，宝玉也来了",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-024"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E025",
+   "classification": "explicit",
+   "paragraphLead": "便一头滚在王夫人怀里。",
+   "excerpt": "便一头滚在王夫人怀里。王夫人便用手满身满脸摩挲抚弄他，宝玉也搬著王夫人的脖子说长道短的。王夫人道：",
+   "claim": "便一头滚在王夫人怀里",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-025"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E026",
+   "classification": "explicit",
+   "paragraphLead": "“我的儿，",
+   "excerpt": "「我的儿，你又吃多了酒，脸上滚热。你还只是揉搓，一会闹上酒来。还不在那里静静的倒一会子呢。」说著，便叫人拿个枕头来。宝玉听说便下来，在王夫人身后倒下，又叫彩霞来替他拍著。",
+   "claim": "我的儿，你又吃多了酒，脸上滚热",
+   "narrativeLayer": "present",
+   "speaker": "wang",
+   "appliesTo": [
+    "C25-026"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E027",
+   "classification": "explicit",
+   "paragraphLead": "在王夫人身后倒下，",
+   "excerpt": "在王夫人身后倒下，又叫彩霞来替他拍著。宝玉便和彩霞说笑，只见彩霞淡淡的，不大答理，两眼睛只向贾环处看。宝玉便拉他的手笑道：",
+   "claim": "在王夫人身后倒下，又叫彩霞来替他拍著",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-027"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E028",
+   "classification": "explicit",
+   "paragraphLead": "“好姐姐，",
+   "excerpt": "「好姐姐，你也理我理儿呢。」一面说，一面拉他的手，彩霞夺手不肯，便说：「再闹，我就嚷了。」",
+   "claim": "好姐姐，你也理我理儿呢",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C25-028"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E029",
+   "classification": "explicit",
+   "paragraphLead": "二人正闹著，",
+   "excerpt": "二人正闹著，原来贾环听的见，素日原恨宝玉，如今又见他和彩霞闹，心中越发按不下这口毒气。虽不敢明言，却每每暗中算计，只是不得下手，今见相离甚近，便要用热油烫瞎他的眼睛。",
+   "claim": "二人正闹著，原来贾环听的见",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-029"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E030",
+   "classification": "explicit",
+   "paragraphLead": "便要用热油烫瞎他的眼睛。",
+   "excerpt": "便要用热油烫瞎他的眼睛。因而故意装作失手，把那一盏油汪汪的蜡灯向宝玉脸上只一推。只听宝玉」嗳哟」了一声，满屋里众人都唬了一跳。连忙将地下的戳灯挪过来，又将里外间屋的灯拿了三四盏看时，只见宝玉满脸满头都是油。王夫人又急又气，一面命人来替宝玉擦…",
+   "claim": "便要用热油烫瞎他的眼睛",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-030"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E031",
+   "classification": "explicit",
+   "paragraphLead": "“老三还是这么慌脚鸡似的，",
+   "excerpt": "「老三还是这么慌脚鸡似的，我说你上不得高台盘。赵姨娘时常也该教导教导他。」一句话提醒了王夫人，那王夫人不骂贾环，便叫过赵姨娘来骂道：",
+   "claim": "老三还是这么慌脚鸡似的，我说你上不得高台盘",
+   "narrativeLayer": "present",
+   "speaker": "feng",
+   "appliesTo": [
+    "C25-031"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E032",
+   "classification": "explicit",
+   "paragraphLead": "“养出这样黑心不知道理下流种子来，",
+   "excerpt": "「养出这样黑心不知道理下流种子来，也不管管！几番几次我都不理论，你们得了意了，越发上来了！」",
+   "claim": "养出这样黑心不知道理下流种子来，也不管管",
+   "narrativeLayer": "present",
+   "speaker": "wang",
+   "appliesTo": [
+    "C25-032"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E033",
+   "classification": "explicit",
+   "paragraphLead": "那赵姨娘素日虽然常怀嫉妒之心，",
+   "excerpt": "那赵姨娘素日虽然常怀嫉妒之心，不忿凤姐宝玉两个，也不敢露出来，如今贾环又生了事，受这场恶气，不但吞声承受，而且还要走去替宝玉收拾。只见宝玉左边脸上烫了一溜燎泡出来，幸而眼睛竟没动。王夫人看了，又是心疼，又怕明日贾母问怎么回答，急的又把赵姨娘…",
+   "claim": "那赵姨娘素日虽然常怀嫉妒之心",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-033"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E034",
+   "classification": "explicit",
+   "paragraphLead": "“有些疼，",
+   "excerpt": "「有些疼，还不妨事。明儿老太太问，就说是我自己烫的罢了。」凤姐笑道：",
+   "claim": "有些疼，还不妨事",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C25-034"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E035",
+   "classification": "explicit",
+   "paragraphLead": "“便说是自己烫的，",
+   "excerpt": "「便说是自己烫的，也要骂人为什么不小心看著，叫你烫了！横竖有一场气生的，到明儿凭你怎么说去罢。」王夫人命人好生送了宝玉回房去后，袭人等见了，都慌的了不得。",
+   "claim": "便说是自己烫的，也要骂人为什么不小心看著",
+   "narrativeLayer": "present",
+   "speaker": "feng",
+   "appliesTo": [
+    "C25-035"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E036",
+   "classification": "explicit",
+   "paragraphLead": "王夫人命人好生送了宝玉回房去后，",
+   "excerpt": "王夫人命人好生送了宝玉回房去后，袭人等见了，都慌的了不得。",
+   "claim": "王夫人命人好生送了宝玉回房去后",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-036"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E037",
+   "classification": "explicit",
+   "paragraphLead": "林黛玉见宝玉出了一天门，",
+   "excerpt": "林黛玉见宝玉出了一天门，就觉闷闷的，没个可说话的人。至晚正打发人来问了两三遍回来不曾，这遍方才回来，又偏生烫了。林黛玉便赶著来瞧，只见宝玉正拿镜子照呢，左边脸上满满的敷了一脸的药。",
+   "claim": "林黛玉见宝玉出了一天门，就觉闷闷的",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-037"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E038",
+   "classification": "explicit",
+   "paragraphLead": "只见宝玉正拿镜子照呢，",
+   "excerpt": "只见宝玉正拿镜子照呢，左边脸上满满的敷了一脸的药。林黛玉只当烫的十分利害，忙上来问怎么烫了，要瞧瞧。宝玉见他来了，忙把脸遮著，摇手叫他出去，不肯叫他看。",
+   "claim": "只见宝玉正拿镜子照呢，左边脸上满满的敷了一脸的药",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-038"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E039",
+   "classification": "explicit",
+   "paragraphLead": "宝玉见他来了，",
+   "excerpt": "宝玉见他来了，忙把脸遮著，摇手叫他出去，不肯叫他看。——知道他的癖性喜洁，见不得这些东西。林黛玉自己也知道自己也有这件癖性，知道宝玉的心内怕他嫌脏，因笑道：",
+   "claim": "宝玉见他来了，忙把脸遮著，摇手叫他出去",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-039"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E040",
+   "classification": "explicit",
+   "paragraphLead": "“我瞧瞧烫了那里了，",
+   "excerpt": "「我瞧瞧烫了那里了，有什么遮著藏著的。」一面说一面就凑上来，强搬著脖子瞧了一瞧，问他疼的怎么样。宝玉道：",
+   "claim": "我瞧瞧烫了那里了，有什么遮著藏著的",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C25-040"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E041",
+   "classification": "explicit",
+   "paragraphLead": "“也不很疼，",
+   "excerpt": "「也不很疼，养一两日就好了。」林黛玉坐了一回，闷闷的回房去了。一宿无话。次日，宝玉见了贾母，虽然自己承认是自己烫的，不与别人相干，免不得那贾母又把跟从的人骂一顿。过了一日，就有宝玉寄名的干娘马道婆进荣国府来请安。",
+   "claim": "也不很疼，养一两日就好了",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C25-041"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E042",
+   "classification": "explicit",
+   "paragraphLead": "过了一日，",
+   "excerpt": "过了一日，就有宝玉寄名的干娘马道婆进荣国府来请安。见了宝玉，唬一大跳，问起原由，说是烫的，便点头叹息一回，向宝玉脸上用指头画了一画，口内嘟嘟囔囔的又持诵了一回，说道：",
+   "claim": "过了一日，就有宝玉寄名的干娘马道婆进荣国府来请安",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-042"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E043",
+   "classification": "explicit",
+   "paragraphLead": "见了宝玉，",
+   "excerpt": "见了宝玉，唬一大跳，问起原由，说是烫的，便点头叹息一回，向宝玉脸上用指头画了一画，口内嘟嘟囔囔的又持诵了一回，说道：",
+   "claim": "见了宝玉，唬一大跳，问起原由",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-043"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E044",
+   "classification": "explicit",
+   "paragraphLead": "“管保就好了，",
+   "excerpt": "「管保就好了，这不过是一时飞灾。」又向贾母道：「祖宗老菩萨那里知道，那经典佛法上说的利害，大凡那王公卿相人家的子弟，只一生长下来，暗里便有许多促狭鬼跟著他，得空便拧他一下，或掐他一下，或吃饭时打下他的饭碗来，或走著推他一跤，所以往往的那些大…",
+   "claim": "管保就好了，这不过是一时飞灾",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-044"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E045",
+   "classification": "explicit",
+   "paragraphLead": "“这有什么佛法解释没有呢？”",
+   "excerpt": "「这有什么佛法解释没有呢？」马道婆道：「这个容易，只是替他多作些因果善事也就罢了。再那经上还说，西方有位大光明普照菩萨，专管照耀阴暗邪祟，若有善男子善女子虔心供奉者，可以永佑儿孙康宁安静，再无惊恐邪祟撞客之灾。」",
+   "claim": "这有什么佛法解释没有呢",
+   "narrativeLayer": "present",
+   "speaker": "grandmother",
+   "appliesTo": [
+    "C25-045"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E046",
+   "classification": "explicit",
+   "paragraphLead": "西方有位大光明普照菩萨，",
+   "excerpt": "西方有位大光明普照菩萨，专管照耀阴暗邪祟，若有善男子善女子虔心供奉者，可以永佑儿孙康宁安静，再无惊恐邪祟撞客之灾。」贾母道：「倒不知怎么个供奉这位菩萨？」马道婆道：「也不值些什么，不过除香烛供养之外，一天多添几斤香油，点上个大海灯。",
+   "claim": "西方有位大光明普照菩萨，专管照耀阴暗邪祟",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-046"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E047",
+   "classification": "explicit",
+   "paragraphLead": "不过除香烛供养之外，",
+   "excerpt": "不过除香烛供养之外，一天多添几斤香油，点上个大海灯。这海灯，便是菩萨现身法像，昼夜不敢息的。」贾母道：「一天一夜也得多少油？明白告诉我，我也好作这件功德的。」马道婆听如此说，便笑道：",
+   "claim": "不过除香烛供养之外，一天多添几斤香油，点上个大海灯",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-047"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E048",
+   "classification": "explicit",
+   "paragraphLead": "“这也不拘，",
+   "excerpt": "「这也不拘，随施主菩萨们随心愿舍罢了。象我们庙里，就有好几处的王妃诰命供奉的：南安郡王府里的太妃，他许的多，愿心大，一天是四十八斤油，一斤灯草，那海灯也只比缸略小些，锦田侯的诰命次一等，一天不过二十四斤油，再还有几家也有五斤的，三斤的，一斤…",
+   "claim": "这也不拘，随施主菩萨们随心愿舍罢了",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-048"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E049",
+   "classification": "explicit",
+   "paragraphLead": "“还有一件，",
+   "excerpt": "「还有一件，若是为父母尊亲长上的，多舍些不妨，若是象老祖宗如今为宝玉，若舍多了倒不好，还怕哥儿禁不起，倒折了福。也不当家花花的，要舍，大则七斤，小则五斤，也就是了。」贾母说：",
+   "claim": "还有一件，若是为父母尊亲长上的，多舍些不妨",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-049"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E050",
+   "classification": "explicit",
+   "paragraphLead": "“既是这样说，",
+   "excerpt": "「既是这样说，你便一日五斤合准了，每月打趸来关了去。」马道婆念了一声」阿弥陀佛慈悲大菩萨」。贾母又命人来吩咐：「以后大凡宝玉出门的日子，拿几串钱交给他的小子们带著，遇见僧道穷苦人好舍。」",
+   "claim": "既是这样说，你便一日五斤合准了",
+   "narrativeLayer": "present",
+   "speaker": "grandmother",
+   "appliesTo": [
+    "C25-050"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E051",
+   "classification": "explicit",
+   "paragraphLead": "说毕，",
+   "excerpt": "说毕，那马道婆又坐了一回，便又往各院各房问安，闲逛了一回。一时来至赵姨娘房内，二人见过，赵姨娘命小丫头倒了茶来与他吃。马道婆因见炕上堆著些零碎绸缎湾角，赵姨娘正粘鞋呢。",
+   "claim": "说毕，那马道婆又坐了一回，便又往各院各房问安",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-051"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E052",
+   "classification": "explicit",
+   "paragraphLead": "马道婆因见炕上堆著些零碎绸缎湾角，",
+   "excerpt": "马道婆因见炕上堆著些零碎绸缎湾角，赵姨娘正粘鞋呢。马道婆道：",
+   "claim": "马道婆因见炕上堆著些零碎绸缎湾角，赵姨娘正粘鞋呢",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-052"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E053",
+   "classification": "explicit",
+   "paragraphLead": "“可是我正没了鞋面子了。",
+   "excerpt": "「可是我正没了鞋面子了。赵奶奶你有零碎缎子，不拘什么颜色的，弄一双鞋面给我。」赵姨娘听说，便叹口气说道：",
+   "claim": "可是我正没了鞋面子了",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-053"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E054",
+   "classification": "explicit",
+   "paragraphLead": "“你瞧瞧那里头，",
+   "excerpt": "「你瞧瞧那里头，还有那一块是成样的？成了样的东西，也不能到我手里来！有的没的都在这里，你不嫌，就挑两块子去。」马道婆见说，果真便挑了两块袖将起来。",
+   "claim": "你瞧瞧那里头，还有那一块是成样的",
+   "narrativeLayer": "present",
+   "speaker": "zhao_yiniang",
+   "appliesTo": [
+    "C25-054"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E055",
+   "classification": "explicit",
+   "paragraphLead": "“前日我送了五百钱去，",
+   "excerpt": "「前日我送了五百钱去，在药王跟前上供，你可收了没有？」马道婆道：「早已替你上了供了。」赵姨娘叹口气道：「阿弥陀佛！我手里但凡从容些，也时常的上个供，只是心有余力量不足。」马道婆道：「你只管放心，将来熬的环哥儿大了，得个一官半职，那时你要作多…",
+   "claim": "前日我送了五百钱去，在药王跟前上供",
+   "narrativeLayer": "present",
+   "speaker": "zhao_yiniang",
+   "appliesTo": [
+    "C25-055"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E056",
+   "classification": "explicit",
+   "paragraphLead": "将来熬的环哥儿大了，",
+   "excerpt": "将来熬的环哥儿大了，得个一官半职，那时你要作多大的功德不能？」赵姨娘听说，鼻子里笑了一声，说道：「罢，罢，再别说起。如今就是个样儿，我们娘儿们跟的上这屋里那一个儿！",
+   "claim": "将来熬的环哥儿大了，得个一官半职",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-056"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E057",
+   "classification": "explicit",
+   "paragraphLead": "如今就是个样儿，",
+   "excerpt": "如今就是个样儿，我们娘儿们跟的上这屋里那一个儿！也不是有了宝玉，竟是得了活龙。他还是小孩子家，长的得人意儿，大人偏疼他些也还罢了，我只不伏这个主儿。」一面说，一面伸出两个指头儿来。马道婆会意，便问道：",
+   "claim": "如今就是个样儿，我们娘儿们跟的上这屋里那一个儿",
+   "narrativeLayer": "present",
+   "speaker": "zhao_yiniang",
+   "appliesTo": [
+    "C25-057"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E058",
+   "classification": "explicit",
+   "paragraphLead": "“可是琏二奶奶？”",
+   "excerpt": "「可是琏二奶奶？」赵姨娘唬的忙摇手儿，走到门前，掀帘子向外看看无人，方进来向马道婆悄悄说道：",
+   "claim": "可是琏二奶奶",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-058"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E059",
+   "classification": "explicit",
+   "paragraphLead": "“了不得，",
+   "excerpt": "「了不得，了不得！提起这个主儿，这一分家私要不都叫他搬送到娘家去，我也不是个人。」",
+   "claim": "了不得，了不得！提起这个主儿",
+   "narrativeLayer": "present",
+   "speaker": "zhao_yiniang",
+   "appliesTo": [
+    "C25-059"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E060",
+   "classification": "explicit",
+   "paragraphLead": "“我还用你说，",
+   "excerpt": "「我还用你说，难道都看不出来。也亏你们心里也不理论，只凭他去。倒也妙。」赵姨娘道：「我的娘，不凭他去，难道谁还敢把他怎么样呢？」马道婆听说，鼻子里一笑，半晌说道：",
+   "claim": "我还用你说，难道都看不出来",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-060"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E061",
+   "classification": "explicit",
+   "paragraphLead": "“不是我说句造孽的话，",
+   "excerpt": "「不是我说句造孽的话，你们没有本事！——也难怪别人。明不敢怎样，暗里也就算计了，还等到这如今！」赵姨娘闻听这话里有道理，心内暗暗的欢喜，便说道：",
+   "claim": "不是我说句造孽的话，你们没有本事",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-061"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E062",
+   "classification": "explicit",
+   "paragraphLead": "“怎么暗里算计？",
+   "excerpt": "「怎么暗里算计？我倒有这个意思，只是没这样的能干人。你若教给我这法子，我大大的谢你。」马道婆听说这话打拢了一处，便又故意说道：",
+   "claim": "怎么暗里算计？我倒有这个意思",
+   "narrativeLayer": "present",
+   "speaker": "zhao_yiniang",
+   "appliesTo": [
+    "C25-062"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E063",
+   "classification": "explicit",
+   "paragraphLead": "“阿弥陀佛！",
+   "excerpt": "「阿弥陀佛！你快休问我，我那里知道这些事。罪过，罪过。」赵姨娘道：「你又来了。你是最肯济困扶危的人，难道就眼睁睁的看人家来摆布死了我们娘儿两个不成？难道还怕我不谢你？」马道婆听说如此，便笑道：「若说我不忍叫你娘儿们受人委曲还犹可，若说谢我的…",
+   "claim": "阿弥陀佛！你快休问我，我那里知道这些事",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-063"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E064",
+   "classification": "explicit",
+   "paragraphLead": "靠你有些什么东西能打动我？”",
+   "excerpt": "靠你有些什么东西能打动我？」赵姨娘听这话口气松动了，便说道：「你这么个明白人，怎么糊涂起来了。你若果然法子灵验，把他两个绝了，明日这家私不怕不是我环儿的。",
+   "claim": "靠你有些什么东西能打动我",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-064"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E065",
+   "classification": "explicit",
+   "paragraphLead": "把他两个绝了，",
+   "excerpt": "把他两个绝了，明日这家私不怕不是我环儿的。那时你要什么不得？」马道婆听了，低了头，半晌说道：",
+   "claim": "把他两个绝了，明日这家私不怕不是我环儿的",
+   "narrativeLayer": "present",
+   "speaker": "zhao_yiniang",
+   "appliesTo": [
+    "C25-065"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E066",
+   "classification": "explicit",
+   "paragraphLead": "“那时候事情妥了，",
+   "excerpt": "「那时候事情妥了，又无凭据，你还理我呢！」赵姨娘道：「这又何难。如今我虽手里没什么，也零碎攒了几两梯己，还有几件衣服簪子，你先拿些去。",
+   "claim": "那时候事情妥了，又无凭据，你还理我呢",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-066"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E067",
+   "classification": "explicit",
+   "paragraphLead": "也零碎攒了几两梯己，",
+   "excerpt": "也零碎攒了几两梯己，还有几件衣服簪子，你先拿些去。下剩的，我写个欠银子文契给你，你要什么保人也有，那时我照数给你。」马道婆道：「果然这样？」赵姨娘道：「这如何还撒得谎。」说著便叫过一个心腹婆子来，耳根底下嘁嘁喳喳说了几句话。那婆子出去了，一…",
+   "claim": "也零碎攒了几两梯己，还有几件衣服簪子",
+   "narrativeLayer": "present",
+   "speaker": "zhao_yiniang",
+   "appliesTo": [
+    "C25-067"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E068",
+   "classification": "explicit",
+   "paragraphLead": "果然写了个五百两欠契来。",
+   "excerpt": "果然写了个五百两欠契来。赵姨娘便印了个手模，走到橱柜里将梯己拿了出来，与马道婆看看，道：「这个你先拿了去做香烛供奉使费，可好不好？」马道婆看看白花花的一堆银子，又有欠契，并不顾青红皂白，满口里应著，伸手先去抓了银子掖起来，然后收了欠契。",
+   "claim": "果然写了个五百两欠契来，赵姨娘便印了个手模",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-068"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E069",
+   "classification": "explicit",
+   "paragraphLead": "伸手先去抓了银子掖起来，",
+   "excerpt": "伸手先去抓了银子掖起来，然后收了欠契。又向裤腰里掏了半晌，掏出十个纸铰的青面白发的鬼来，并两个纸人，递与赵姨娘，又悄悄的教他道：",
+   "claim": "伸手先去抓了银子掖起来，然后收了欠契",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-069"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E070",
+   "classification": "explicit",
+   "paragraphLead": "“把他两个的年庚八字写在这两个纸人身上，",
+   "excerpt": "「把他两个的年庚八字写在这两个纸人身上，一并五个鬼都掖在他们各人的床上就完了。我只在家里作法，自有效验。千万小心，不要害怕！」正才说著，只见王夫人的丫鬟进来找道：",
+   "claim": "把他两个的年庚八字写在这两个纸人身上",
+   "narrativeLayer": "present",
+   "speaker": "ma_dao_po",
+   "appliesTo": [
+    "C25-070"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E071",
+   "classification": "explicit",
+   "paragraphLead": "正才说著，",
+   "excerpt": "正才说著，只见王夫人的丫鬟进来找道：「奶奶可在这里，太太等你呢。」二人方散了，不在话下。",
+   "claim": "正才说著，只见王夫人的丫鬟进来找道",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-071"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E072",
+   "classification": "explicit",
+   "paragraphLead": "却说林黛玉因见宝玉近日烫了脸，",
+   "excerpt": "却说林黛玉因见宝玉近日烫了脸，总不出门，倒时常在一处说说话儿。这日饭后看了两篇书，自觉无趣，便同紫鹃雪雁做了一回针线，更觉烦闷。便倚著房门出了一回神，信步出来，看阶下新迸出的稚笋，不觉出了院门。一望园中，四顾无人，惟见花光柳影，鸟语溪声。林…",
+   "claim": "却说林黛玉因见宝玉近日烫了脸，总不出门",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-072"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E073",
+   "classification": "explicit",
+   "paragraphLead": "林黛玉信步便往怡红院中来，",
+   "excerpt": "林黛玉信步便往怡红院中来，只见几个丫头舀水，都在回廊上围著看画眉洗澡呢。听见房内有笑声，林黛玉便入房中看时，原来是李宫裁，凤姐，宝钗都在这里呢，一见他进来都笑道：",
+   "claim": "林黛玉信步便往怡红院中来",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-073"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E074",
+   "classification": "explicit",
+   "paragraphLead": "原来是李宫裁，",
+   "excerpt": "原来是李宫裁，凤姐，宝钗都在这里呢，一见他进来都笑道：「这不又来了一个。」林黛玉笑道：",
+   "claim": "原来是李宫裁，凤姐，宝钗都在这里呢",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-074"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E075",
+   "classification": "explicit",
+   "paragraphLead": "“今儿齐全，",
+   "excerpt": "「今儿齐全，谁下帖子请来的？」凤姐道：",
+   "claim": "今儿齐全，谁下帖子请来的",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C25-075"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E076",
+   "classification": "explicit",
+   "paragraphLead": "“前儿我打发了丫头送了两瓶茶叶去，",
+   "excerpt": "「前儿我打发了丫头送了两瓶茶叶去，你往那去了？」林黛玉笑道：「哦，可是倒忘了，多谢多谢。」凤姐儿又道：「你尝了可还好不好？」没有说完，宝玉便说道：",
+   "claim": "前儿我打发了丫头送了两瓶茶叶去，你往那去了",
+   "narrativeLayer": "present",
+   "speaker": "feng",
+   "appliesTo": [
+    "C25-076"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E077",
+   "classification": "explicit",
+   "paragraphLead": "“论理可倒罢了，",
+   "excerpt": "「论理可倒罢了，只是我说不大甚好，也不知别人尝著怎么样。」宝钗道：",
+   "claim": "论理可倒罢了，只是我说不大甚好",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C25-077"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E078",
+   "classification": "explicit",
+   "paragraphLead": "“味倒轻，",
+   "excerpt": "「味倒轻，只是颜色不大好些。」凤姐道：「那是暹罗进贡来的。我尝著也没什么趣儿，还不如我每日吃的呢。」林黛玉道：",
+   "claim": "味倒轻，只是颜色不大好些",
+   "narrativeLayer": "present",
+   "speaker": "baochai",
+   "appliesTo": [
+    "C25-078"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E079",
+   "classification": "explicit",
+   "paragraphLead": "“我吃著好，",
+   "excerpt": "「我吃著好，不知你们的脾胃是怎样？」宝玉道：「你果然爱吃，把我这个也拿了去吃罢。」凤姐笑道：",
+   "claim": "我吃著好，不知你们的脾胃是怎样",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C25-079"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E080",
+   "classification": "explicit",
+   "paragraphLead": "“你要爱吃，",
+   "excerpt": "「你要爱吃，我那里还有呢。」林黛玉道：「果真的，我就打发丫头取去了。」凤姐道：「不用取去，我打发人送来就是了。我明儿还有一件事求你，一同打发人送来。」",
+   "claim": "你要爱吃，我那里还有呢",
+   "narrativeLayer": "present",
+   "speaker": "feng",
+   "appliesTo": [
+    "C25-080"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E081",
+   "classification": "explicit",
+   "paragraphLead": "你既吃了我们家的茶，",
+   "excerpt": "你既吃了我们家的茶，怎么还不给我们家作媳妇？」众人听了一齐都笑起来。林黛玉红了脸，一声儿不言语，便回过头去了。李宫裁笑向宝钗道：",
+   "claim": "你既吃了我们家的茶，怎么还不给我们家作媳妇",
+   "narrativeLayer": "present",
+   "speaker": "feng",
+   "appliesTo": [
+    "C25-081"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E082",
+   "classification": "explicit",
+   "paragraphLead": "“真真我们二婶子的诙谐是好的。”",
+   "excerpt": "「真真我们二婶子的诙谐是好的。」林黛玉道：「什么诙谐，不过是贫嘴贱舌讨人厌恶罢了。」说著便啐了一口。凤姐笑道：",
+   "claim": "真真我们二婶子的诙谐是好的",
+   "narrativeLayer": "present",
+   "speaker": "liwan",
+   "appliesTo": [
+    "C25-082"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E083",
+   "classification": "explicit",
+   "paragraphLead": "“你别作梦！",
+   "excerpt": "「你别作梦！你给我们家作了媳妇，少什么？」指宝玉道：「你瞧瞧，人物儿，门第配不上，根基配不上，家私配不上？那一点还玷辱了谁呢？」",
+   "claim": "你别作梦！你给我们家作了媳妇，少什么",
+   "narrativeLayer": "present",
+   "speaker": "feng",
+   "appliesTo": [
+    "C25-083"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E084",
+   "classification": "explicit",
+   "paragraphLead": "“颦儿急了，",
+   "excerpt": "「颦儿急了，还不回来坐著。走了倒没意思。」说著便站起来拉住。刚至房门前，只见赵姨娘和周姨娘两个人进来瞧宝玉。",
+   "claim": "颦儿急了，还不回来坐著",
+   "narrativeLayer": "present",
+   "speaker": "baochai",
+   "appliesTo": [
+    "C25-084"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E085",
+   "classification": "explicit",
+   "paragraphLead": "刚至房门前，",
+   "excerpt": "刚至房门前，只见赵姨娘和周姨娘两个人进来瞧宝玉。李宫裁，宝钗宝玉等都让他两个坐。独凤姐只和林黛玉说笑，正眼也不看他们。宝钗方欲说话时，只见王夫人房内的丫头来说：「舅太太来了，请奶奶姑娘们出去呢。」李宫裁听了，连忙叫著凤姐等走了。赵，周两个忙…",
+   "claim": "刚至房门前，只见赵姨娘和周姨娘两个人进来瞧宝玉",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-085"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E086",
+   "classification": "explicit",
+   "paragraphLead": "“我也不能出去，",
+   "excerpt": "「我也不能出去，你们好歹别叫舅母进来。」又道：",
+   "claim": "我也不能出去，你们好歹别叫舅母进来",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C25-086"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E087",
+   "classification": "explicit",
+   "paragraphLead": "“林妹妹，",
+   "excerpt": "「林妹妹，你先略站一站，我说一句话。」凤姐听了，回头向林黛玉笑道：「有人叫你说话呢。」说著便把林黛玉往里一推，和李纨一同去了。",
+   "claim": "林妹妹，你先略站一站，我说一句话",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C25-087"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E088",
+   "classification": "explicit",
+   "paragraphLead": "这里宝玉拉著林黛玉的袖子，",
+   "excerpt": "这里宝玉拉著林黛玉的袖子，只是嘻嘻的笑，心里有话，只是口里说不出来。此时林黛玉只是禁不住把脸红涨了，挣著要走。宝玉忽然」嗳哟」了一声，说：「好头疼！」林黛玉道：",
+   "claim": "这里宝玉拉著林黛玉的袖子，只是嘻嘻的笑",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-088"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E089",
+   "classification": "explicit",
+   "paragraphLead": "林黛玉道：",
+   "excerpt": "林黛玉道：「该，阿弥陀佛！」只见宝玉大叫一声：",
+   "claim": "好头疼",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C25-089"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E090",
+   "classification": "explicit",
+   "paragraphLead": "“我要死！”",
+   "excerpt": "「我要死！」将身一纵，离地跳有三四尺高，口内乱嚷乱叫，说起胡话来了。",
+   "claim": "我要死",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C25-090"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E091",
+   "classification": "explicit",
+   "paragraphLead": "将身一纵，",
+   "excerpt": "将身一纵，离地跳有三四尺高，口内乱嚷乱叫，说起胡话来了。林黛玉并丫头们都唬慌了，忙去报知王夫人，贾母等。此时王子腾的夫人也在这里，都一齐来时，宝玉益发拿刀弄杖，寻死觅活的，闹得天翻地覆。贾母，王夫人见了，唬的抖衣而颤，且「儿」一声「肉」一声…",
+   "claim": "将身一纵，离地跳有三四尺高，口内乱嚷乱叫",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-091"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E092",
+   "classification": "explicit",
+   "paragraphLead": "贾母，",
+   "excerpt": "贾母，王夫人见了，唬的抖衣而颤，且「儿」一声「肉」一声放声恸哭。于是惊动诸人，连贾赦，邢夫人，贾珍，贾政，贾琏，贾蓉，贾芸，贾萍，薛姨妈，薛蟠并周瑞家的一干家中上上下下里里外外众媳妇丫头等，都来园内看视。登时园内乱麻一般。正没个主见，只见凤…",
+   "claim": "贾母，王夫人见了，唬的抖衣而颤",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-092"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E093",
+   "classification": "explicit",
+   "paragraphLead": "只见凤姐手持一把明晃晃钢刀砍进园来，",
+   "excerpt": "只见凤姐手持一把明晃晃钢刀砍进园来，见鸡杀鸡，见狗杀狗，见人就要杀人。众人越发慌了。周瑞媳妇忙带著几个有力量的胆壮的婆娘上去抱住，夺下刀来，抬回房去。",
+   "claim": "只见凤姐手持一把明晃晃钢刀砍进园来",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-093"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E094",
+   "classification": "explicit",
+   "paragraphLead": "周瑞媳妇忙带著几个有力量的胆壮的婆娘上去抱住，",
+   "excerpt": "周瑞媳妇忙带著几个有力量的胆壮的婆娘上去抱住，夺下刀来，抬回房去。平儿，丰儿等哭的泪天泪地。贾政等心中也有些烦难，顾了这里，丢不下那里。",
+   "claim": "周瑞媳妇忙带著几个有力量的胆壮的婆娘上去抱住，夺下刀来",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-094"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E095",
+   "classification": "explicit",
+   "paragraphLead": "独有薛蟠更比诸人忙到十分去：",
+   "excerpt": "独有薛蟠更比诸人忙到十分去：又恐薛姨妈被人挤倒，又恐薛宝钗被人瞧见，又恐香菱被人臊皮，——知道贾珍等是在女人身上做功夫的，因此忙的不堪。忽一眼瞥见了林黛玉风流婉转，已酥倒在那里。",
+   "claim": "独有薛蟠更比诸人忙到十分去",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-095"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E096",
+   "classification": "explicit",
+   "paragraphLead": "当下众人七言八语，",
+   "excerpt": "当下众人七言八语，有的说请端公送祟的，有的说请巫婆跳神的，有的又荐玉皇阁的张真人，种种喧腾不一。也曾百般医治祈祷，问卜求神，总无效验。堪堪日落。王子腾夫人告辞去后，次日王子腾也来瞧问。接著小史侯家，邢夫人弟兄辈并各亲戚眷属都来瞧看，也有送符…",
+   "claim": "当下众人七言八语，有的说请端公送祟的",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-096"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E097",
+   "classification": "explicit",
+   "paragraphLead": "他叔嫂二人愈发糊涂，",
+   "excerpt": "他叔嫂二人愈发糊涂，不省人事，睡在床上，浑身火炭一般，口内无般不说。到夜晚间，那些婆娘媳妇丫头们都不敢上前。因此把他二人都抬到王夫人的上房内，夜间派了贾芸带著小厮们挨次轮班看守。",
+   "claim": "他叔嫂二人愈发糊涂，不省人事",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-097"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E098",
+   "classification": "explicit",
+   "paragraphLead": "因此把他二人都抬到王夫人的上房内，",
+   "excerpt": "因此把他二人都抬到王夫人的上房内，夜间派了贾芸带著小厮们挨次轮班看守。贾母，王夫人，邢夫人薛姨妈等寸地不离，只围著干哭。",
+   "claim": "因此把他二人都抬到王夫人的上房内",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-098"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E099",
+   "classification": "explicit",
+   "paragraphLead": "“儿女之数，",
+   "excerpt": "「儿女之数，皆由天命，非人力可强者。他二人之病出于不意，百般医治不效，想天意该如此，也只好由他们去罢。」贾赦也不理此话，仍是百般忙乱，那里见些效验。看看三日光阴，那凤姐和宝玉躺在床上，亦发连气都将没了。",
+   "claim": "儿女之数，皆由天命，非人力可强者",
+   "narrativeLayer": "present",
+   "speaker": "zheng",
+   "appliesTo": [
+    "C25-099"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E100",
+   "classification": "explicit",
+   "paragraphLead": "看看三日光阴，",
+   "excerpt": "看看三日光阴，那凤姐和宝玉躺在床上，亦发连气都将没了。合家人口无不惊慌，都说没了指望，忙著将他二人的后世的衣履都治备下了。贾母，王夫人，贾琏，平儿，袭人这几个人更比诸人哭的忘餐废寝，觅死寻活。赵姨娘，贾环等自是称愿。到了第四日早晨，贾母等正…",
+   "claim": "看看三日光阴，那凤姐和宝玉躺在床上，亦发连气都将没了",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-100"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E101",
+   "classification": "explicit",
+   "paragraphLead": "“从今以后，",
+   "excerpt": "「从今以后，我可不在你家了！快收拾了，打发我走罢。」贾母听了这话，如同摘心去肝一般。赵姨娘在旁劝道：",
+   "claim": "从今以后，我可不在你家了",
+   "narrativeLayer": "present",
+   "speaker": "baoyu",
+   "appliesTo": [
+    "C25-101"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E102",
+   "classification": "explicit",
+   "paragraphLead": "“老太太也不必过于悲痛。",
+   "excerpt": "「老太太也不必过于悲痛。哥儿已是不中用了，不如把哥儿的衣服穿好，让他早些回去，也免些苦，只管舍不得他，这口气不断，他在那世里也受罪不安生。」这些话没说完，被贾母照脸啐了一口唾沫，骂道：",
+   "claim": "老太太也不必过于悲痛",
+   "narrativeLayer": "present",
+   "speaker": "zhao_yiniang",
+   "appliesTo": [
+    "C25-102"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E103",
+   "classification": "explicit",
+   "paragraphLead": "“烂了舌头的混帐老婆，",
+   "excerpt": "「烂了舌头的混帐老婆，谁叫你来多嘴多舌的！你怎么知道他在那世里受罪不安生？怎么见得不中用了？你愿他死了，有什么好处？你别做梦！他死了，我只和你们要命。素日都不是你们调唆著逼他写字念书，把胆子唬破了，见了他老子不象个避猫鼠儿？都不是你们这起淫…",
+   "claim": "烂了舌头的混帐老婆，谁叫你来多嘴多舌的",
+   "narrativeLayer": "present",
+   "speaker": "grandmother",
+   "appliesTo": [
+    "C25-103"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E104",
+   "classification": "explicit",
+   "paragraphLead": "“两口棺椁都做齐了，",
+   "excerpt": "「两口棺椁都做齐了，请老爷出去看。」贾母听了，如火上浇油一般，便骂：「是谁做了棺椁？」一叠声只叫把做棺材的拉来打死。正闹的天翻地覆，没个开交，只闻得隐隐的木鱼声响，念了一句：",
+   "claim": "两口棺椁都做齐了，请老爷出去看",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-104"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E105",
+   "classification": "explicit",
+   "paragraphLead": "只闻得隐隐的木鱼声响，",
+   "excerpt": "只闻得隐隐的木鱼声响，念了一句：「南无解冤孽菩萨。有那人口不利，家宅颠倾，或逢凶险，或中邪祟者，我们善能医治。」贾母，王夫人听见这些话，那里还耐得住，便命人去快请进来。",
+   "claim": "只闻得隐隐的木鱼声响，念了一句",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-105"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E106",
+   "classification": "explicit",
+   "paragraphLead": "贾母，",
+   "excerpt": "贾母，王夫人听见这些话，那里还耐得住，便命人去快请进来。贾政虽不自在，奈贾母之言如何违拗，想如此深宅，何得听的这样真切，心中亦希罕，命人请了进来。众人举目看时，原来是一个癞头和尚与一个跛足道人。见那和尚是怎的模样：",
+   "claim": "贾母，王夫人听见这些话，那里还耐得住，便命人去快请进来",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-106"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E107",
+   "classification": "explicit",
+   "paragraphLead": "鼻如悬胆两眉长，",
+   "excerpt": "鼻如悬胆两眉长，目似明星蓄宝光，破衲芒鞋无住迹，腌臜更有满头疮。",
+   "claim": "鼻如悬胆两眉长，目似明星蓄宝光",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-107"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E108",
+   "classification": "explicit",
+   "paragraphLead": "那道人又是怎生模样：",
+   "excerpt": "那道人又是怎生模样：",
+   "claim": "那道人又是怎生模样",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-108"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E109",
+   "classification": "explicit",
+   "paragraphLead": "一足高来一足低，",
+   "excerpt": "一足高来一足低，浑身带水又拖泥。相逢若问家何处，却在蓬莱弱水西。",
+   "claim": "一足高来一足低，浑身带水又拖泥",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-109"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E110",
+   "classification": "explicit",
+   "paragraphLead": "“你道友二人在那庙里焚修。”",
+   "excerpt": "「你道友二人在那庙里焚修。」那僧笑道：",
+   "claim": "你道友二人在那庙里焚修",
+   "narrativeLayer": "present",
+   "speaker": "zheng",
+   "appliesTo": [
+    "C25-110"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E111",
+   "classification": "explicit",
+   "paragraphLead": "“长官不须多话。",
+   "excerpt": "「长官不须多话。因闻得府上人口不利，故特来医治。」贾政道：",
+   "claim": "长官不须多话",
+   "narrativeLayer": "present",
+   "speaker": "monk",
+   "appliesTo": [
+    "C25-111"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E112",
+   "classification": "explicit",
+   "paragraphLead": "“倒有两个人中邪，",
+   "excerpt": "「倒有两个人中邪，不知你们有何符水？」那道人笑道：",
+   "claim": "倒有两个人中邪，不知你们有何符水",
+   "narrativeLayer": "present",
+   "speaker": "zheng",
+   "appliesTo": [
+    "C25-112"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E113",
+   "classification": "explicit",
+   "paragraphLead": "“你家现有希世奇珍，",
+   "excerpt": "「你家现有希世奇珍，如何还问我们有符水？」贾政听这话有意思，心中便动了，因说道：",
+   "claim": "你家现有希世奇珍，如何还问我们有符水",
+   "narrativeLayer": "present",
+   "speaker": "taoist",
+   "appliesTo": [
+    "C25-113"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E114",
+   "classification": "explicit",
+   "paragraphLead": "“小儿落草时虽带了一块宝玉下来，",
+   "excerpt": "「小儿落草时虽带了一块宝玉下来，上面说能除邪祟，谁知竟不灵验。」那僧道：",
+   "claim": "小儿落草时虽带了一块宝玉下来，上面说能除邪祟",
+   "narrativeLayer": "present",
+   "speaker": "zheng",
+   "appliesTo": [
+    "C25-114"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E115",
+   "classification": "explicit",
+   "paragraphLead": "“长官你那里知道那物的妙用。",
+   "excerpt": "「长官你那里知道那物的妙用。只因他如今被声色货利所迷，故不灵验了。你今且取他出来，待我们持颂持颂，只怕就好了。」",
+   "claim": "长官你那里知道那物的妙用",
+   "narrativeLayer": "present",
+   "speaker": "monk",
+   "appliesTo": [
+    "C25-115"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E116",
+   "classification": "explicit",
+   "paragraphLead": "便向宝玉项上取下那玉来递与他二人。",
+   "excerpt": "便向宝玉项上取下那玉来递与他二人。那和尚接了过来，擎在掌上，长叹一声道：青埂峰一别，展眼已过十三载矣！",
+   "claim": "便向宝玉项上取下那玉来递与他二人",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-116"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E117",
+   "classification": "explicit",
+   "paragraphLead": "青埂峰一别，",
+   "excerpt": "青埂峰一别，展眼已过十三载矣！人世光阴，如此迅速，尘缘满日，若似弹指！可羡你当时的那段好处：",
+   "claim": "青埂峰一别，展眼已过十三载矣",
+   "narrativeLayer": "present",
+   "speaker": "monk",
+   "appliesTo": [
+    "C25-117"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E118",
+   "classification": "explicit",
+   "paragraphLead": "天不拘兮地不羁，",
+   "excerpt": "天不拘兮地不羁，心头无喜亦无悲，却因锻炼通灵后，便向人间觅是非。",
+   "claim": "天不拘兮地不羁，心头无喜亦无悲",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-118"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E119",
+   "classification": "explicit",
+   "paragraphLead": "可叹你今日这番经历：",
+   "excerpt": "可叹你今日这番经历：",
+   "claim": "可叹你今日这番经历",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-119"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E120",
+   "classification": "explicit",
+   "paragraphLead": "粉渍脂痕污宝光，",
+   "excerpt": "粉渍脂痕污宝光，绮栊昼夜困鸳鸯。沉酣一梦终须醒，冤孽偿清好散场！",
+   "claim": "粉渍脂痕污宝光，绮栊昼夜困鸳鸯",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-120"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E121",
+   "classification": "explicit",
+   "paragraphLead": "“此物已灵，",
+   "excerpt": "「此物已灵，不可亵渎，悬于卧室上槛，将他二人安在一室之内，除亲身妻母外，不可使阴人冲犯。三十三日之后，包管身安病退，复旧如初。」说著回头便走了。",
+   "claim": "此物已灵，不可亵渎，悬于卧室上槛",
+   "narrativeLayer": "present",
+   "speaker": "monk",
+   "appliesTo": [
+    "C25-121"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E122",
+   "classification": "explicit",
+   "paragraphLead": "说著回头便走了。",
+   "excerpt": "说著回头便走了。贾政赶著还说话，让二人坐了吃茶，要送谢礼，他二人早已出去了。贾母等还只管著人去赶，那里有个踪影。少不得依言将他二人就安放在王夫人卧室之内，将玉悬在门上。",
+   "claim": "说著回头便走了",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-122"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E123",
+   "classification": "explicit",
+   "paragraphLead": "少不得依言将他二人就安放在王夫人卧室之内，",
+   "excerpt": "少不得依言将他二人就安放在王夫人卧室之内，将玉悬在门上。王夫人亲身守著，不许别个人进来。至晚间他二人竟渐渐醒来，说腹中饥饿。",
+   "claim": "少不得依言将他二人就安放在王夫人卧室之内，将玉悬在门上",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-123"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E124",
+   "classification": "explicit",
+   "paragraphLead": "至晚间他二人竟渐渐醒来，",
+   "excerpt": "至晚间他二人竟渐渐醒来，说腹中饥饿。贾母，王夫人如得了珍宝一般，旋熬了米汤与他二人吃了，精神渐长，邪祟稍退，一家子才把心放下来。李宫裁并贾府三艳，薛宝钗，林黛玉，平儿，袭人等在外间听信息。",
+   "claim": "至晚间他二人竟渐渐醒来，说腹中饥饿",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-124"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E125",
+   "classification": "explicit",
+   "paragraphLead": "李宫裁并贾府三艳，",
+   "excerpt": "李宫裁并贾府三艳，薛宝钗，林黛玉，平儿，袭人等在外间听信息。闻得吃了米汤，省了人事，别人未开口，林黛玉先就念了一声「阿弥陀佛」。薛宝钗便回头看了他半日，嗤的一声笑。众人都不会意，贾惜春道：",
+   "claim": "李宫裁并贾府三艳，薛宝钗，林黛玉，平儿，袭人等在外间听信息",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-125"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E126",
+   "classification": "explicit",
+   "paragraphLead": "“宝姐姐，",
+   "excerpt": "「宝姐姐，好好的笑什么？」宝钗笑道：",
+   "claim": "宝姐姐，好好的笑什么",
+   "narrativeLayer": "present",
+   "speaker": "xichun",
+   "appliesTo": [
+    "C25-126"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E127",
+   "classification": "explicit",
+   "paragraphLead": "“我笑如来佛比人还忙：",
+   "excerpt": "「我笑如来佛比人还忙：又要讲经说法，又要普渡众生，这如今宝玉，凤姐姐病了，又烧香还愿，赐福消灾，今才好些，又管林姑娘的姻缘了。你说忙的可笑不可笑。」林黛玉不觉的红了脸，啐了一口道：",
+   "claim": "我笑如来佛比人还忙",
+   "narrativeLayer": "present",
+   "speaker": "baochai",
+   "appliesTo": [
+    "C25-127"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E128",
+   "classification": "explicit",
+   "paragraphLead": "“你们这起人不是好人，",
+   "excerpt": "「你们这起人不是好人，不知怎么死！再不跟著好人学，只跟著凤姐贫嘴烂舌的学。」一面说，一面摔帘子出去了。",
+   "claim": "你们这起人不是好人，不知怎么死",
+   "narrativeLayer": "present",
+   "speaker": "daiyu",
+   "appliesTo": [
+    "C25-128"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-E129",
+   "classification": "explicit",
+   "paragraphLead": "一面说，",
+   "excerpt": "一面说，一面摔帘子出去了。不知端详，且听下回分解。",
+   "claim": "一面说，一面摔帘子出去了",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-129"
+   ],
+   "designDecision": null,
+   "uncertainty": null
+  },
+  {
+   "id": "C25-D1",
+   "classification": "design",
+   "paragraphLead": "话说红玉心神恍惚，",
+   "excerpt": null,
+   "claim": "红玉梦与宝玉寻红玉，复用 `yihong`（怡红院）",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-001",
+    "C25-002",
+    "C25-003",
+    "C25-004",
+    "C25-005",
+    "C25-006",
+    "C25-007",
+    "C25-008",
+    "C25-009"
+   ],
+   "designDecision": "用 `yihong` 的 `outer_room`/`window_place`/`yard` 锚点。",
+   "uncertainty": "底本第 25 回开篇宝玉「晃出了房门……只见西南角上游廊底下栏杆上」，仍在怡红院；红玉「走来打扫房屋」也是怡红院的差事。"
+  },
+  {
+   "id": "C25-D2",
+   "classification": "design",
+   "paragraphLead": "却说红玉正自出神，",
+   "excerpt": null,
+   "claim": "红玉借喷壶见贾芸种树，复用 `qinfang`（沁芳闸）",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-010",
+    "C25-011",
+    "C25-012",
+    "C25-013",
+    "C25-014",
+    "C25-015"
+   ],
+   "designDecision": "用 `bridge_head`/`bridge_mid`/`stone_seat` 锚点；潇湘馆本项目无专图，不新开。",
+   "uncertainty": "底本「正走上翠烟桥……只见山坡上高处都是拦著帏幙……贾芸正坐在那山子石上」——桥、山坡、山子石与 `qinfang` 的桥/桃林/石景吻合。"
+  },
+  {
+   "id": "C25-D3",
+   "classification": "design",
+   "paragraphLead": "展眼过了一日，",
+   "excerpt": null,
+   "claim": "贾环抄咒、烫宝玉一场放 `wang`（王夫人上房）",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-016",
+    "C25-017",
+    "C25-018",
+    "C25-019",
+    "C25-020",
+    "C25-021",
+    "C25-022"
+   ],
+   "designDecision": "用 `wang` 的 `kang_edge`/`wang_host`/`guest_seat`/`hall_entry`。",
+   "uncertainty": "底本明写「贾环正在王夫人炕上坐著」「王夫人便用手满身满脸摩挲抚弄他」。"
+  },
+  {
+   "id": "C25-D4",
+   "classification": "design",
+   "paragraphLead": "过了一日，",
+   "excerpt": null,
+   "claim": "马道婆劝贾母供海灯一场放 `entry`（贾母院）",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-042",
+    "C25-043",
+    "C25-044",
+    "C25-045",
+    "C25-046",
+    "C25-047",
+    "C25-048",
+    "C25-049",
+    "C25-050"
+   ],
+   "designDecision": "用 `passage_entry`/`grandmother_seat`/`grandmother_greet`，place 写「荣国府 · 贾母院」。",
+   "uncertainty": "底本「又向贾母道……贾母听了，点头思忖」，是马道婆对贾母说话，在贾母处。"
+  },
+  {
+   "id": "C25-D5",
+   "classification": "design",
+   "paragraphLead": "说毕，",
+   "excerpt": null,
+   "claim": "马道婆与赵姨娘密谋魇魔法，新建 `zhao_room`（赵姨娘房）",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-051",
+    "C25-052",
+    "C25-053",
+    "C25-054",
+    "C25-055",
+    "C25-056",
+    "C25-057",
+    "C25-058",
+    "C25-059",
+    "C25-060",
+    "C25-061",
+    "C25-062",
+    "C25-063",
+    "C25-064",
+    "C25-065",
+    "C25-066",
+    "C25-067",
+    "C25-068",
+    "C25-069",
+    "C25-070",
+    "C25-071"
+   ],
+   "designDecision": "新建室内图 `zhao_room`，6 锚点（door/table/kang/zhao_seat/madao_seat/cabinet）。",
+   "uncertainty": "底本「来至赵姨娘房内……炕上堆著些零碎绸缎湾角，赵姨娘正粘鞋」，又「走到橱柜里将梯己拿了出来」，是赵姨娘自己的房，与被魇的人养病的王夫人上房不能混。"
+  },
+  {
+   "id": "C25-D6",
+   "classification": "design",
+   "paragraphLead": "当下众人七言八语，",
+   "excerpt": null,
+   "claim": "宝玉凤姐疯魔、抬到王夫人上房、僧道解厄，均在 `wang`",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-096",
+    "C25-097",
+    "C25-098",
+    "C25-099",
+    "C25-100",
+    "C25-101",
+    "C25-102",
+    "C25-103",
+    "C25-104",
+    "C25-105",
+    "C25-106"
+   ],
+   "designDecision": "用 `wang` 的 `kang_edge`/`guest_seat`/`hall_entry`，不新开卧室图。",
+   "uncertainty": "底本「把他二人都抬到王夫人的上房内」「将他二人就安放在王夫人卧室之内，将玉悬在门上」。"
+  },
+  {
+   "id": "C25-D7",
+   "classification": "design",
+   "paragraphLead": "展眼过了一日，",
+   "excerpt": null,
+   "claim": "玉钏儿、金钏儿、周姨娘、丰儿、贾萍不入 cast",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-016",
+    "C25-017",
+    "C25-018",
+    "C25-019",
+    "C25-020",
+    "C25-021",
+    "C25-022"
+   ],
+   "designDecision": "只在正文里保留，不 show、不注册新 cast。",
+   "uncertainty": "均只在叙述里被点名，无独立台词（金钏儿虽已登记，本回也无台词）；按第 24 回「提及不登场」先例处理。"
+  },
+  {
+   "id": "C25-D8",
+   "classification": "design",
+   "paragraphLead": "鼻如悬胆两眉长，",
+   "excerpt": null,
+   "claim": "癞头和尚与跛足道人复用第 1 回 `monk`/`taoist`，不新建",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-107",
+    "C25-108",
+    "C25-109",
+    "C25-110",
+    "C25-111",
+    "C25-112",
+    "C25-113",
+    "C25-114",
+    "C25-115",
+    "C25-116",
+    "C25-117",
+    "C25-118",
+    "C25-119",
+    "C25-120"
+   ],
+   "designDecision": "直接用 `monk`/`taoist` id，台词「长官不须多话」等照录。",
+   "uncertainty": "两者第 1 回已是「一僧一道」并登记 cast；本回「通灵遇双真」正是同一 pair。"
+  },
+  {
+   "id": "C25-D9",
+   "classification": "design",
+   "paragraphLead": "鼻如悬胆两眉长，",
+   "excerpt": null,
+   "claim": "四首赞诗作为旁白念出的 `verbatim` 韵文节点",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-107",
+    "C25-108",
+    "C25-109",
+    "C25-110",
+    "C25-111",
+    "C25-112",
+    "C25-113",
+    "C25-114",
+    "C25-115",
+    "C25-116",
+    "C25-117",
+    "C25-118",
+    "C25-119",
+    "C25-120"
+   ],
+   "designDecision": "speaker 用 narrator，`textKind: verbatim`，不改字。",
+   "uncertainty": "底本段 18/20/23/25 是形容僧道与咏玉的诗，无说话人。"
+  },
+  {
+   "id": "C25-D10",
+   "classification": "design",
+   "paragraphLead": "展眼过了一日，",
+   "excerpt": null,
+   "claim": "马道婆、彩霞的外形是视觉设计推定，不是原文明示",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-016",
+    "C25-017",
+    "C25-018",
+    "C25-019",
+    "C25-020",
+    "C25-021",
+    "C25-022"
+   ],
+   "designDecision": "features/prompt 全部标「底本无外貌描写，以下为视觉设计推定」；不把设计细节冒充原文记载。",
+   "uncertainty": "底本对这两人**没有一句外貌描写**：马道婆只写「宝玉寄名的干娘」与台词，彩霞只写行为（咬唇、戳额、淡淡不答理、夺手）。"
+  },
+  {
+   "id": "C25-D11",
+   "classification": "design",
+   "paragraphLead": "这里宝玉拉著林黛玉的袖子，",
+   "excerpt": null,
+   "claim": "薛蟠「酥倒」、众人荐张真人等保持叙述，不新增角色",
+   "narrativeLayer": "present",
+   "speaker": null,
+   "appliesTo": [
+    "C25-088",
+    "C25-089",
+    "C25-090",
+    "C25-091",
+    "C25-092",
+    "C25-093",
+    "C25-094",
+    "C25-095"
+   ],
+   "designDecision": "薛蟠已在 cast（`xuepan`），用叙述带过；张真人等不登场。",
+   "uncertainty": "底本段 15「忽一眼瞥见了林黛玉风流婉转，已酥倒在那里」是叙述；段 16 端公/巫婆/张真人只在众人七言八语里被点名。"
+  }
+ ]
+}

@@ -543,6 +543,20 @@
    "features": "少妇长脸；眉弯目大；肤色白腻；身量修长，贾母房里的首席大丫头",
    "prompt": "a striking young woman of nineteen with a long oval face, arched brows, large dark eyes, an unusually fair and smooth complexion, a tall elegant figure, the chief maid of the dowager's household in a Qing-dynasty noble household, wearing a water-red damask jacket over a blue satin waistcoat, a white silk sash at the waist and a floral collar round her neck, hair in a smooth high bun with a gold hairpin",
    "seed": 10234190
+  },
+  {
+   "id": "ma_dao_po",
+   "name": "马道婆",
+   "features": "底本无外貌描写，以下为视觉设计推定：老妇；贾宝玉寄名的干娘、常走荣府各院念佛化缘的庙里婆子；面带精明世故，贪财（见银子便伸手掖起）",
+   "prompt": "a shrewd old woman of about sixty with a narrow face, small shrewd eyes, thin pursed lips and a calculating expression, a fortune-telling nun and temple go-between who calls herself the adopted godmother of a noble family's boy, constantly visiting the mansion to chant sutras and collect incense-oil donations, in a Qing-dynasty Buddhist temple context, wearing a dull grey-brown nun's robe with a dark Buddhist rosary of beads around her neck and a grey cloth headscarf, greedy and ingratiating",
+   "seed": 10235100
+  },
+  {
+   "id": "cai_xia",
+   "name": "彩霞",
+   "features": "底本无外貌描写，以下为视觉设计推定：王夫人房中丫鬟；与贾环相好、心气高，对宝玉淡淡不答理、夺手不肯；有咬嘴唇、戳额头的小动作",
+   "prompt": "a proud young maid of sixteen with an oval face, level brows and steady eyes, a reserved and slightly disdainful expression, a maidservant in the women's quarters of a Qing-dynasty noble household who quietly favours the unfavoured young master and coolly rebuffs the pampered one, wearing a soft muted peach-and-cream two-piece maid outfit with a plain collar, hair in a simple side bun with a small plain pin",
+   "seed": 10235110
   }
  ]
 }

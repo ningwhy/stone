@@ -6,8 +6,8 @@
  *     spice_shop、三街六巷 ni_er_lane、绮霰斋 qiranzhai、贾芸家
  *     jia_yun_home；其余六张 qinfang / yihong / capital / east /
  *     jialian_home / c6_wangchui 都是第 16-23 回已经建好的）；
- *  3. 封底与「下一回有没有上线」相称——第 24 回现在是全书末回，封底显示
- *     「全书至此」；第 25 回上线后自动变成「开启下一回」。用共享断言
+ *  3. 封底与「下一回有没有上线」相称——第 25 回上线后，第 24 回的封底
+ *     自动从「全书至此」变成「开启下一回 · 第二十五回」。用共享断言
  *     （tests/lib/backcover.mjs），它和产品代码看的是同一份数据；
  *  4. 369 个节点的正文逐字出自底本。
  *
@@ -134,8 +134,8 @@ try{
   await page.waitForTimeout(300);
   const arrived=await step(true);
   // 「终幕」只标在**全书**末节点上（src/App.tsx 的 state.index===story.length-1），
-  // 不是标在「某一回的末节点」上。第 24 回现在是全书末回，所以末节点的标签
-  // 是「终幕」而不是 C24-369 —— 那是产品行为，不是缺陷。
+  // 不是标在「某一回的末节点」上。第 25 回上线后，第 24 回末节点的标签是
+  // C24-369 而不是「终幕」—— 那是产品行为，不是缺陷。
   assert.ok(arrived===lastNode||arrived==='终幕',`book 24 must end on ${lastNode}, got ${arrived}`);
   await assertNodeLabel(page,lastNode);
   await assertBackCover(page,24);

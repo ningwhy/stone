@@ -305,6 +305,23 @@ REVIEWED = {
     'ni_er-portrait': ('left', 'read by vision landmark geometry; the nose and the mouth '
                                'sit left of the eye midpoint in every crop that fits, '
                                'so the head turns left'),
+    # 第二十五回两个新角色。
+    # 马道婆立绘：Vision 地标鼻偏移 +0.329（眼中点为原点，正值=画面右）、嘴偏移 +0.011，
+    # 两个特征同号，头转向画面右。Q 版 Vision 直接 NOFACE，改用目视 + 双向标尺：
+    # 双眼中点约 x=27.5、鼻尖约 x=30，偏右，判 right。
+    'ma_dao_po-portrait': ('right', 'vision landmark geometry; nose offset +0.329 and mouth '
+                                    'offset +0.011 from the eye midpoint, both positive, so '
+                                    'the head turns right'),
+    'ma_dao_po-chibi': ('right', 'detector reads no face; nose sits just right of the eye '
+                                 'midpoint on a 5x grid against right/left reference chibis'),
+    # 彩霞立绘：Vision 鼻 +0.014 / 嘴 -0.038 符号相反，不能裁决，改目视：
+    # 3/4 侧脸右颊被发遮住，鼻梁朝画面左，判 left。Q 版同样 NOFACE，
+    # 双眼中点约 x=26.5、鼻尖约 x=20，偏左，判 left。
+    'cai_xia-portrait': ('left', 'vision nose/mouth offsets disagree (+0.014/-0.038); '
+                                  'read by eye on a 3x grid, the three-quarter face turns '
+                                  'towards the left, its right cheek hidden by hair'),
+    'cai_xia-chibi': ('left', 'detector reads no face; nose sits left of the eye midpoint '
+                              'on a 5x grid against right/left reference chibis'),
 }
 
 # Vehicles are cast members but not a single face: the sedan is carried by four

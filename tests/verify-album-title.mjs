@@ -50,14 +50,15 @@ try{
   console.log('面板标题:',title);
 
   const names=await page.locator('.cast-gallery article strong').allTextContents();
-  // 末回的新角色必须在册。第 23 回新登场三人：金钏儿、彩云、贾芹。
-  const NEW_OF_LAST_BOOK=['金钏儿','彩云','贾芹'];
+  // 末回的新角色必须在册。第 25 回新登场两人：马道婆、彩霞。
+  // 这里跟着末回走：第 26 回上线后，把这两人换成那一回的新角色即可。
+  const NEW_OF_LAST_BOOK=['马道婆','彩霞'];
   for(const name of NEW_OF_LAST_BOOK){
     assert.ok(names.includes(name),`${name} must be in the album, got ${names.length} names`);
   }
   console.log('图鉴人数:',names.length,`（含${NEW_OF_LAST_BOOK.join('、')}）`);
 
-  // 金钏儿的两张图都要真的画出来。
+  // 末回新角色的立绘要真的画出来。
   // 图鉴是长列表，图片带 loading="lazy"：不滚到视口里它压根不会加载，
   // naturalWidth 自然是 0——那是懒加载，不是图没画出来。
   const sample=NEW_OF_LAST_BOOK[0];

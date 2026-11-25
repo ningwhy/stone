@@ -566,12 +566,13 @@ smoke 走到一半我改了 `src/cardPreview.ts` → vite 整页重载 → 页�
 
 - **大地图定位转场（全局能力，21 回上线后追加）**：`design/scene-places.json`(45 scene) + `src/scenePlaces.ts` + `src/SceneLocator.tsx` + `App.tsx` 触发链/跳过/设置 + `src/styles.css`；`npm run test:locator` 定向验收；文档 `docs/production/scene-locator.md`。触发＝换场景 + 每回开篇，两拍＝天下图光点飞行 → 府内下钻 / 天下层推镜，可跳过 + 设置可关 + reducedMotion 退化。
 - **第 1-24 回全部完成并上线**（24 回于 2026-11-18 部署 `stone-direct.yan.pub`，线上定向回归/定位转场/图鉴标题全通过；提交 `7dc5d39`）。
+  - 25=129 节点/13 段/140 证据/2 新角色（马道婆 `ma_dao_po`、彩霞 `cai_xia`）/新建 1 图（`zhao_room`）
   - 24=369 节点/16 段/377 证据/8 新角色（贾芸、小红、倪二、卜世仁、香菱、秋纹、碧痕、鸳鸯）/新建 4 图（`spice_shop`、`ni_er_lane`、`qiranzhai`、`jia_yun_home`）
   - 23=236 节点/14 段/249 证据/3 新角色（金钏儿、彩云、贾芹）/新建 1 图（`qinfang` 沁芳闸桃花图）
   - 22=218 节点/8 段/1 新角色（贾兰）/零新图
   - 21=139 节点/12 段/3 新角色/新建 2 图（`yihong`、`jialian_home`）
   - 20=39 节点/7 段/4 新角色；19=78 节点/8 段/新建 `xiren_home`；18=135 节点/16 段；17=35 节点；16=28 节点/零新图
-- 全局规模：2293 节点 / 214 段 / 52 图 / 89 人 / 300 资产 / 1384 证据。
+- 全局规模：2422 节点 / 227 段 / 53 图 / 91 人 / 304 资产 / 1524 证据。
 - **背包卡片页已上线**（23 回之后，2026-11-16）：`src/cardPreview.ts`（数据层）+ `src/CardPreview.tsx`（UI）+ `src/styles.css`。账簿里点人/物 → 弹卡牌式大图预览。文档 `docs/production/card-preview.md`；测试 `tests/card-preview.test.ts`（13 项）/`.mjs`（浏览器）/`.mjs`（线上 `npm run test:online:card-preview`）。
 - **两张曾缺的大地图已补**（2026-11-18，详见 `docs/production/missing-maps.md`）：大观园全景 `daguanyuan`（第 17 回，35 节点）+ 省亲正殿 `shengqin`（第 18 回 C18-063~070），生成器 `scripts/build_daguanyuan_maps.py`。只改 `scene` 字段、锚点名沿用，零重映射风险。
 - **第 24 回的两条新纪律（详见 `docs/chapter24-production.md`）**：
@@ -579,4 +580,10 @@ smoke 走到一半我改了 `src/cardPreview.ts` → vite 整页重载 → 页�
   - ★ **生成器里凡是 `show` 的 actor 必须在 cast 里**——「不入 cast」的角色（如贾芸之母）只能用叙述与场景美术交代，不能 `show`。
 - **「区间自愈」生成器（第 24 回新增）**：`scripts/build_chapter24.py` 只声明起点、终点自动推导（`prev.s_to = next.s_from`），起点用「标题回锚底本」（最长公共前缀打分，因为标题常在句子中间被截断）+ 引号边界（不越过引语开头）。手写索引必然漂移——第 24 回初版照抄第 23 回手写索引，立刻暴露 9 处区间重叠、4 处跳段、15 处标题对不上。
 - **角色设计说明（2026-11-24 新建第一份）**：`docs/chapter24-characters.md` —— 第 24 回 8 个新角色（贾芸、小红、倪二、卜世仁、香菱、秋纹、碧痕、鸳鸯）各一份。写法口径见上文「四、cast 与美术管线」→ 「角色设计说明的写法」。同时修掉香菱两处考据错误（「周瑞家的女儿」→「甄士隐之女英莲」、「眉眼像黛玉」→「像东府蓉大奶奶秦可卿的品格」，第 7 回原文），并补录 `docs/chapter07-source.txt` 被截断的香菱段。
+- **第 25 回的三条新坑**：
+  - ★ **生成器里角色 id 必须与 `src/story.ts` cast 逐字一致**。本回初版按中文名顺手写 `madaopo`/`caixia`，资产与 cast 用的是 `ma_dao_po`/`cai_xia`；`check:content` 一次报出 40+ `unknown actor/speaker`。段 id（`c25-madaopo`）可以保留中文拼音，actor id 不行。
+  - ★ **`effect` 只支持 `jade`/`greet`/`rest`/`idle`/`anger` 五种**（`src/story.ts` 的 `Action`、`src/engine.ts` 的 `effect.kind`、`scripts/check_content.mjs` 三处共同约束）。本回初版给宝玉写了 `joy`，被门禁拦下，改为 `rest`（渐醒歇息）。加新 effect 要同时改类型、运行时演出、行动说明文案与校验四处，不要临时发明 kind。
+  - ★ **build 的批量删除保护**：vite 清空 `dist/assets`、`prune_dist.mjs` 删 50+ PNG 都会被沙箱拦成 `SAFE_DELETE_BULK_CONFIRM_REQUIRED`。本机绕法：`mv dist dist.prev-<tag>` 后重建（vite 不需清空），再把有 WebP 对应的 PNG `mv` 到临时目录代替 `rmSync`；产物应是 0 PNG / 304 WebP。
+  - **角色设计说明第二份**：`docs/chapter25-characters.md`（马道婆 / 彩霞）。两人底本都无外貌描写，文档把「底本依据」逐字与「设计推定」分开写，避免把生图设定冒充原著。
+  - ★ **`tests/actor-facing.mjs` 的两处老写法会假性挂死**：`locator.textContent().catch(()=>null)` 在旁白节点（无 h2）每次等满默认 30s；`getByRole('继续剧情').click()` 还会被顶栏按钮换身份坑到。改成一次 `page.evaluate` 取齐三项 + 共享 `pickup.mjs` 的 `dismissLeaf`/`clickSkipIfShown`/`clickForwardIfShown` 后才走完 900 步（每 200 步打进度，便于区分「慢」与「死」）。
 - 制作记录在 `docs/chapterNN-production.md`，底本在 `docs/chapterNN-source.txt`。

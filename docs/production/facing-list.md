@@ -5,9 +5,9 @@
 
 ## 总览
 
-- 位图总数 **201**（立绘 90、Q版 90、表情变体 21）
-- 朝左 **29**，朝右 **172**
-- 依据：实测 **131**、目视裁决 **62**
+- 位图总数 **205**（立绘 92、Q版 92、表情变体 21）
+- 朝左 **31**，朝右 **174**
+- 依据：实测 **131**、目视裁决 **66**
 
 「朝左 / 朝右」指的是**原图**里脸偏向画面的哪一侧——不是角色在剧情里该朝哪边。
 运行时用它决定该用原图还是左右镜像：要求显示的一侧与原图不符时才镜像。
@@ -24,6 +24,8 @@
 | `bihen-portrait` | bihen | 立绘 | **朝右** | 实测·3票 |
 | `bu_shi_ren-chibi` | bu_shi_ren | Q版 | **朝右** | 目视 |
 | `bu_shi_ren-portrait` | bu_shi_ren | 立绘 | **朝右** | 实测·3票 |
+| `cai_xia-chibi` | cai_xia | Q版 | **朝左** | 目视 |
+| `cai_xia-portrait` | cai_xia | 立绘 | **朝左** | 目视 |
 | `caiyun-chibi` | caiyun | Q版 | **朝右** | 目视 |
 | `caiyun-portrait` | caiyun | 立绘 | **朝右** | 实测·3票 |
 | `cui_lv-chibi` | cui_lv | Q版 | **朝右** | 目视 |
@@ -70,6 +72,8 @@
 | `li_gui-portrait` | li_gui | 立绘 | **朝左** | default-unmeasured |
 | `liu_lao-chibi` | liu_lao | Q版 | **朝右** | 目视 |
 | `liu_lao-portrait` | liu_lao | 立绘 | **朝左** | default-unmeasured |
+| `ma_dao_po-chibi` | ma_dao_po | Q版 | **朝右** | 目视 |
+| `ma_dao_po-portrait` | ma_dao_po | 立绘 | **朝右** | 目视 |
 | `ming_yan-chibi` | ming_yan | Q版 | **朝左** | default-unmeasured |
 | `ming_yan-portrait` | ming_yan | 立绘 | **朝左** | 实测·2票 |
 | `ni_er-chibi` | ni_er | Q版 | **朝右** | 目视 |
@@ -222,6 +226,8 @@
 
 | 资产键 | 角色 | 类别 | 判定依据 |
 | --- | --- | --- | --- |
+| `cai_xia-chibi` | cai_xia | Q版 | 目视 |
+| `cai_xia-portrait` | cai_xia | 立绘 | 目视 |
 | `dai_quan-portrait` | dai_quan | 立绘 | 实测·2票 |
 | `jia_dairu-portrait` | jia_dairu | 立绘 | default-unmeasured |
 | `jia_lian-portrait` | jia_lian | 立绘 | 实测·1票 |

@@ -28,7 +28,8 @@ NEW_CHARACTERS = ['yuanchun', 'jia_lian', 'jia_huan', 'zhao_yiniang', 'shi_xiang
                   'zijun', 'cui_lv', 'si_er', 'jia_lan',
                   'jinyuan', 'caiyun', 'jia_qin',
                   'jia_yun', 'xiaohong', 'ni_er', 'bu_shi_ren',
-                  'xiangling', 'qiuwen', 'bihen', 'yuan_yang']
+                  'xiangling', 'qiuwen', 'bihen', 'yuan_yang',
+                  'ma_dao_po', 'cai_xia']
 
 
 def final_anchor(key: str, entry: dict, cal: dict):

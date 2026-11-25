@@ -1,7 +1,7 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdirSync, readFileSync} from 'node:fs';
-import {dismissPickup} from './lib/pickup.mjs';
+import {dismissPickup, dismissLeaf, clickSkipIfShown, clickForwardIfShown} from './lib/pickup.mjs';
 /**
  * Character facing: painted portraits and chibi sprites are not mirrored by a
  * global rule. `design/character-facing.json` records the measured side each
@@ -64,23 +64,26 @@ const portraits=[];
 let variantSamples=0;
 for(let i=0;i<900;i++){
    await dismissPickup(page);
-   const speaker=await page.locator('.dialogue-line h2, .speaker-line h2').first().textContent().catch(()=>null);
-   const node=await page.locator('.node-label').textContent().catch(()=>null);
+   // 一次 evaluate 取齐三样；locator.textContent() 在旁白节点上找不到 h2 时会
+   // 每次等满 30s 再 catch，900 步能拖成半小时，而这三样只用于断言报错信息。
    const row=await page.evaluate(()=>{
      const pick=sel=>{const img=document.querySelector(sel);if(!img)return null;return {src:img.getAttribute('src'),mirrored:getComputedStyle(img).transform.includes('matrix(-1')};};
-     return {speaker:pick('.speaker-portrait img'),listener:pick('.listener-feature img')};
+     return {
+       speaker:pick('.speaker-portrait img'),
+       listener:pick('.listener-feature img'),
+       node:document.querySelector('.node-label')?.textContent??null,
+       speakerName:document.querySelector('.dialogue-line h2, .speaker-line h2')?.textContent??null};
    });
-   portraits.push({node,speaker,...row});
+   if(i%200===0)console.log(`facing sweep ${i}/900`);
+   portraits.push(row);
    if(row.speaker?.src&&/-portrait-(joy|sad|surprise|angry)/.test(row.speaker.src))variantSamples++;
-   // The story is 346 nodes long; the walk has to reach the emotion variants
-   // near the end of the third chapter, so it cannot stop early.
-   const next=page.getByRole('button',{name:'继续剧情',exact:true});
-   if(await next.isVisible().catch(()=>false)){
-     await next.click().catch(()=>{});
-     const skip=page.getByRole('button',{name:'跳过移动',exact:true});
-     if(await skip.isVisible().catch(()=>false))await skip.click().catch(()=>{});
-     await page.waitForTimeout(120);
-   } else await page.waitForTimeout(80);
+   // 用共享的推进助手：顶栏那一个按钮会在「跳过移动」与「继续剧情」之间
+   // 换身份，getByRole().click() 会因为重新解析而点错（详见 pickup.mjs）。
+   // 情绪变体在第三回末之前就能采到，900 步足够；封底/获得弹窗要先收走。
+   await dismissLeaf(page,false,true);
+   await clickSkipIfShown(page);
+   if(await clickForwardIfShown(page))await page.waitForTimeout(120);
+   else await page.waitForTimeout(80);
  }
  const chibi=await page.evaluate(()=>window.__chibi);
  assert.ok(chibi.length>=20,`只采样到 ${chibi.length} 个行走帧，无法覆盖朝向表`);

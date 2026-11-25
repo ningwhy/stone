@@ -68,6 +68,14 @@ REVIEWED={
  # 免得每次重建 manifest 都带着一次无意义的 diff。
  'jia_lan-portrait':[152,45,250,158],
  'jia_lan-chibi':[24,16,83,60],
+ # 第二十五回两个新角色：马道婆、彩霞。底本无外貌描写，均为设计推定形象。
+ # 立绘的肤色连通块自动框把整个上身都算进去（下沿到 312），完全不可用；
+ # 改用 3 倍网格放大目视：上沿在额头/发际线略下、下沿在下巴与衣领之间、
+ # 左右贴脸颊。Q 版按既有惯例上沿发际线下、下沿下巴线。
+ 'ma_dao_po-portrait':[82,30,130,80],
+ 'ma_dao_po-chibi':[8,17,54,51],
+ 'cai_xia-portrait':[64,28,112,82],
+ 'cai_xia-chibi':[7,27,49,53],
 }
 boxes={};out=Image.new('RGB',(1440,((len(keys)+7)//8)*200),'#e6dfce');d=ImageDraw.Draw(out)
 for i,key in enumerate(keys):

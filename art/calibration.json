@@ -4229,6 +4229,50 @@
     "split": 401,
     "factor": 0.64
    }
+  },
+  {
+   "id": "ma_dao_po-portrait",
+   "seed": 10235100,
+   "height": 600,
+   "anchor": [
+    343,
+    1107
+   ]
+  },
+  {
+   "id": "ma_dao_po-chibi",
+   "seed": 10235101,
+   "height": 116,
+   "anchor": [
+    430,
+    969
+   ],
+   "bodyCompress": {
+    "split": 407,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "cai_xia-portrait",
+   "seed": 10235110,
+   "height": 600,
+   "anchor": [
+    369,
+    1114
+   ]
+  },
+  {
+   "id": "cai_xia-chibi",
+   "seed": 10235111,
+   "height": 116,
+   "anchor": [
+    394,
+    868
+   ],
+   "bodyCompress": {
+    "split": 365,
+    "factor": 0.64
+   }
   }
  ],
  "placements": [
