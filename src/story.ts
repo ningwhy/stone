@@ -50,6 +50,16 @@ import script24 from '../design/chapter24-story.json' with { type:'json' };
 import sections24 from '../design/chapter24-sections.json' with { type:'json' };
 import script25 from '../design/chapter25-story.json' with { type:'json' };
 import sections25 from '../design/chapter25-sections.json' with { type:'json' };
+import script26 from '../design/chapter26-story.json' with { type:'json' };
+import sections26 from '../design/chapter26-sections.json' with { type:'json' };
+import script27 from '../design/chapter27-story.json' with { type:'json' };
+import sections27 from '../design/chapter27-sections.json' with { type:'json' };
+import script28 from '../design/chapter28-story.json' with { type:'json' };
+import sections28 from '../design/chapter28-sections.json' with { type:'json' };
+import script29 from '../design/chapter29-story.json' with { type:'json' };
+import sections29 from '../design/chapter29-sections.json' with { type:'json' };
+import script30 from '../design/chapter30-story.json' with { type:'json' };
+import sections30 from '../design/chapter30-sections.json' with { type:'json' };
 export const cast = {
   oldmonk:{"name": "智通寺老僧", "fullName": "智通寺老僧", "color": 8885375, "css": "#87947f", "relation": "寺中煮粥人", "description": "龙钟衰老，回答雨村时答非所问；与癞头和尚分列。"},
   huoqi:{"name": "霍启", "fullName": "霍启", "color": 8885375, "css": "#87947f", "relation": "甄家家人", "description": "带英莲看灯，暂离后失去孩子，惧罪逃走。"},
@@ -143,6 +153,16 @@ export const cast = {
   yuan_yang:{name:'鸳鸯',fullName:'鸳鸯',color:0xc4574f,css:'#c4574f',relation:'贾母房中首席大丫头',description:'贾母房里的首席大丫头，容貌标致、进退得体。第二十四回歪在床上看袭人的针线，被宝玉缠着要胭脂吃，只唤袭人出来瞧瞧。'},
   ma_dao_po:{name:'马道婆',fullName:'马道婆',color:0x8a7f6d,css:'#8a7f6d',relation:'宝玉寄名的干娘 · 庙里婆子',description:'宝玉寄名的干娘，常走荣府各院念佛化缘。第二十五回先劝贾母供大光明普照菩萨点海灯，又到赵姨娘房里定下魇魔法：收五百两欠契，给十个纸鬼两个纸人。底本无外貌描写，形象为设计推定。'},
   cai_xia:{name:'彩霞',fullName:'彩霞',color:0xd0a07a,css:'#d0a07a',relation:'王夫人房中丫鬟 · 与贾环相好',description:'王夫人房里的丫鬟，悄悄劝贾环安分，咬着嘴唇戳他额头说「狗咬吕洞宾，不识好人心」。宝玉拉她的手，她夺手不肯。与已登记的彩云是两人。底本无外貌描写，形象为设计推定。'},
+  jiahui:{name:'佳蕙',fullName:'佳蕙',color:0x9fc3a6,css:'#9fc3a6',relation:'怡红院小丫头',description:'怡红院里年纪最小的丫头之一。第二十六回替宝玉送茶叶给黛玉，得了赏钱便请红玉代收；心直口快，替红玉抱不平。'},
+  zhuer:{name:'坠儿',fullName:'坠儿',color:0xc7b06a,css:'#c7b06a',relation:'怡红院小丫头',description:'怡红院小丫头。第二十六回被李嬷嬷打发引贾芸进院，回头又向红玉讨手帕谢礼；第二十七回在滴翠亭里与红玉私语，被宝钗听见。'},
+  qingwen:{name:'晴雯',fullName:'晴雯',color:0xc46f7e,css:'#c46f7e',relation:'怡红院大丫鬟',description:'怡红院尖刻爽利的大丫鬟，模样标致、心气高傲。第二十六回讥红玉「爬上高枝儿去了」；第二十七回又当面数落她只顾在外头逛。'},
+  qixian:{name:'绮霰',fullName:'绮霰',color:0x9fb8a0,css:'#9fb8a0',relation:'怡红院丫鬟',description:'怡红院丫鬟，又称绮大姐姐。第二十六回打发小丫头来叫红玉描花样；第二十七回在园里帮腔奚落红玉。'},
+  siqi:{name:'司棋',fullName:'司棋',color:0x7f9a8c,css:'#7f9a8c',relation:'迎春房中大丫鬟',description:'迎春房里的丫头，身量高大、性情硬朗，是迎春房里最出挑的大丫鬟。第二十七回红玉向她打听凤姐，她只答「没理论」；第七十一回「穿红裙子梳鬅头高大丰壮身材的，是迎春房里的司棋」。'},
+  feng_ziying:{name:'冯紫英',fullName:'冯紫英',color:0x6f86a8,css:'#6f86a8',relation:'神武将军冯唐之子',description:'宝玉的朋友，武将世家子弟。第二十六回邀宝玉到家宴饮，言谈爽快；第二十八回席上有一串说笑。'},
+  jiang_yuhan:{name:'蒋玉菡',fullName:'蒋玉菡',color:0xc48fa8,css:'#c48fa8',relation:'唱小旦的伶人 · 艺名琪官',description:'唱小旦的名角琪官。第二十八回在冯紫英席上唱曲，解下茜香罗汗巾赠宝玉，与宝玉互诉倾慕。'},
+  yun_er:{name:'云儿',fullName:'云儿',color:0xd08a92,css:'#d08a92',relation:'锦香院陪酒女子',description:'锦香院陪酒的女子，与薛蟠、冯紫英熟稔。第二十八回席间弹琵琶唱曲，言语风泼。'},
+  zhang_daoshi:{name:'张道士',fullName:'张道士',color:0x9aa0a8,css:'#9aa0a8',relation:'清虚观住持 · 宝玉寄名的干爷',description:'清虚观老道，宝玉寄名的干爷，贾母称他「老神仙」。第二十九回打醮时替宝玉提亲，又捧出通灵玉给众道观看。'},
+  lingguan:{name:'龄官',fullName:'龄官',color:0xa99ac4,css:'#a99ac4',relation:'梨香院十二官之一 · 唱小旦',description:'梨香院唱小旦的伶人，眉目含愁、性情清高。第三十回雨后痴立蔷薇架下，用金簪在地上划「蔷」字，与贾蔷的一段情思被宝玉看在眼里。'},
 };
 export type ActorId=keyof typeof cast;
 export type FacingSide='left'|'right';
@@ -202,12 +222,12 @@ export type Move={type:'move';actor:ActorId;via:string[]};
 export type Action=Move|{type:'parallel';moves:Move[]}|{type:'show';actor:ActorId;at:string}|{type:'hide';actor:ActorId}|{type:'roof';visible:boolean}|{type:'effect';actor:ActorId;kind:'jade'|'greet'|'rest'|'idle'|'anger';duration:number};
 export type StoryStep={id:string;chapter:string;scene:string;title:string;place:string;focus:string;speaker:ActorId|'narrator';text:string;mood?:string;offscreen?:boolean;actions:Action[];source:{chapter:number;paragraphLead:string;textKind:string;layer?:string}};
 export const chapter3Story=script as StoryStep[];
-export const story=[...script1,...script2,...script,...script4,...script5,...script6,...script7,...script8,...script9,...script10,...script11,...script12,...script13,...script14,...script15,...script16,...script17,...script18,...script19,...script20,...script21,...script22,...script23,...script24,...script25] as StoryStep[];
+export const story=[...script1,...script2,...script,...script4,...script5,...script6,...script7,...script8,...script9,...script10,...script11,...script12,...script13,...script14,...script15,...script16,...script17,...script18,...script19,...script20,...script21,...script22,...script23,...script24,...script25,...script26,...script27,...script28,...script29,...script30] as StoryStep[];
 /** Index of the last chapter-three node inside `story`; saves taken before chapter four
  * end here, and a saved ending at or before it must reopen as an ordinary reading state. */
 export const LAST_LEGACY_INDEX=([...script1,...script2,...script] as StoryStep[]).length-1;
-export const chapters=[...sections1,...sections2,...sections.map(s=>({...s,book:3})),...sections4,...sections5.map(s=>({...s,book:5})),...sections6.map(s=>({...s,book:6})),...sections7.map(s=>({...s,book:7})),...sections8.map(s=>({...s,book:8})),...sections9.map(s=>({...s,book:9})),...sections10.map(s=>({...s,book:10})),...sections11.map(s=>({...s,book:11})),...sections12.map(s=>({...s,book:12})),...sections13.map(s=>({...s,book:13})),...sections14.map(s=>({...s,book:14})),...sections15.map(s=>({...s,book:15})),...sections16.map(s=>({...s,book:16})),...sections17.map(s=>({...s,book:17})),...sections18.map(s=>({...s,book:18})),...sections19.map(s=>({...s,book:19})),...sections20.map(s=>({...s,book:20})),...sections21.map(s=>({...s,book:21})),...sections22.map(s=>({...s,book:22})),...sections23.map(s=>({...s,book:23})),...sections24.map(s=>({...s,book:24})),...sections25.map(s=>({...s,book:25}))];
-export const bookNames:Record<number,string>={1:"第一回",2:"第二回",3:"第三回",4:"第四回",5:"第五回",6:"第六回",7:"第七回",8:"第八回",9:"第九回",10:"第十回",11:"第十一回",12:"第十二回",13:"第十三回",14:"第十四回",15:"第十五回",16:"第十六回",17:"第十七回",18:"第十八回",19:"第十九回",20:"第二十回",21:"第二十一回",22:"第二十二回",23:"第二十三回",24:"第二十四回",25:"第二十五回"};
+export const chapters=[...sections1,...sections2,...sections.map(s=>({...s,book:3})),...sections4,...sections5.map(s=>({...s,book:5})),...sections6.map(s=>({...s,book:6})),...sections7.map(s=>({...s,book:7})),...sections8.map(s=>({...s,book:8})),...sections9.map(s=>({...s,book:9})),...sections10.map(s=>({...s,book:10})),...sections11.map(s=>({...s,book:11})),...sections12.map(s=>({...s,book:12})),...sections13.map(s=>({...s,book:13})),...sections14.map(s=>({...s,book:14})),...sections15.map(s=>({...s,book:15})),...sections16.map(s=>({...s,book:16})),...sections17.map(s=>({...s,book:17})),...sections18.map(s=>({...s,book:18})),...sections19.map(s=>({...s,book:19})),...sections20.map(s=>({...s,book:20})),...sections21.map(s=>({...s,book:21})),...sections22.map(s=>({...s,book:22})),...sections23.map(s=>({...s,book:23})),...sections24.map(s=>({...s,book:24})),...sections25.map(s=>({...s,book:25})),...sections26.map(s=>({...s,book:26})),...sections27.map(s=>({...s,book:27})),...sections28.map(s=>({...s,book:28})),...sections29.map(s=>({...s,book:29})),...sections30.map(s=>({...s,book:30}))];
+export const bookNames:Record<number,string>={1:"第一回",2:"第二回",3:"第三回",4:"第四回",5:"第五回",6:"第六回",7:"第七回",8:"第八回",9:"第九回",10:"第十回",11:"第十一回",12:"第十二回",13:"第十三回",14:"第十四回",15:"第十五回",16:"第十六回",17:"第十七回",18:"第十八回",19:"第十九回",20:"第二十回",21:"第二十一回",22:"第二十二回",23:"第二十三回",24:"第二十四回",25:"第二十五回",26:"第二十六回",27:"第二十七回",28:"第二十八回",29:"第二十九回",30:"第三十回"};
 
 /** Consecutive move actions for different actors describe one shared walk; play them together
  * so a two-person errand no longer costs twice the stage time. Same-actor neighbours stay

@@ -1,0 +1,3193 @@
+[
+ {
+  "id": "C26-001",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "话说宝玉养过了三十三天之后",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "narrator",
+  "text": "话说宝玉养过了三十三天之后，不但身体强壮，亦且连脸上疮痕平服，仍回大观园内去。这也不在话下。且说近日宝玉病的时节，贾芸带著家下小厮坐更看守，昼夜在这里，那红玉同众丫鬟也在这里守著宝玉，彼此相见多日，都渐渐混熟了。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xiaohong",
+    "at": "outer_room"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "话说宝玉养过了三十三天之后，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-002",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "且说近日宝玉病的时节",
+  "place": "大观园 · 怡红院",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "且说近日宝玉病的时节，贾芸带著家下小厮坐更看守，昼夜在这里，那红玉同众丫鬟也在这里守著宝玉，彼此相见多日，都渐渐混熟了。那红玉见贾芸手里拿的手帕子，倒象是自己从前掉的，待要问他，又不好问的。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "yard"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "且说近日宝玉病的时节，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-003",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "那红玉见贾芸手里拿的手帕子",
+  "place": "大观园 · 怡红院",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "那红玉见贾芸手里拿的手帕子，倒象是自己从前掉的，待要问他，又不好问的。不料那和尚道士来过，用不著一切男人，贾芸仍种树去了。这件事待要放下，心内又放不下，待要问去，又怕人猜疑，正是犹豫不决神魂不定之际，忽听窗外问道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "那红玉见贾芸手里拿的手帕子，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-004",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "忽听窗外问道",
+  "place": "大观园 · 怡红院",
+  "focus": "window_place",
+  "speaker": "narrator",
+  "text": "忽听窗外问道：「姐姐在屋里没有？」红玉闻听，在窗眼内望外一看，原来是本院的个小丫头名叫佳蕙的，因答说：「在家里，你进来罢。」佳蕙听了跑进来，就坐在床上，笑道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jiahui",
+    "at": "window_place"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "忽听窗外问道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-005",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "我好造化",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "jiahui",
+  "text": "「我好造化！才刚在院子里洗东西，宝玉叫往林姑娘那里送茶叶，花大姐姐交给我送去。可巧老太太那里给林姑娘送钱来，正分给他们的丫头们呢。见我去了，林姑娘就抓了两把给我，也不知多少。你替我收著。」便把手帕子打开，把钱倒了出来，红玉替他一五一十的数了收起。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jiahui",
+    "via": [
+     "window_place",
+     "outer_room"
+    ]
+   },
+   {
+    "type": "effect",
+    "actor": "jiahui",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“我好造化！",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-006",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "便把手帕子打开",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "narrator",
+  "text": "便把手帕子打开，把钱倒了出来，红玉替他一五一十的数了收起。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "便把手帕子打开，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-007",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "你这一程子心里到底觉怎么样",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "jiahui",
+  "text": "「你这一程子心里到底觉怎么样？依我说，你竟家去住两日，请一个大夫来瞧瞧，吃两剂药就好了。」红玉道：「那里的话，好好的，家去作什么！」佳蕙道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jiahui",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“你这一程子心里到底觉怎么样？",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-008",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "我想起来了，林姑娘生的弱",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "jiahui",
+  "text": "「我想起来了，林姑娘生的弱，时常他吃药，你就和他要些来吃，也是一样。」红玉道：「胡说！药也是混吃的。」佳蕙道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jiahui",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“我想起来了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-009",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "你这也不是个长法儿",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "jiahui",
+  "text": "「你这也不是个长法儿，又懒吃懒喝的，终久怎么样？」红玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jiahui",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“你这也不是个长法儿，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-010",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "怕什么，还不如早些儿死了倒干净",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "xiaohong",
+  "text": "「怕什么，还不如早些儿死了倒干净！」佳蕙道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“怕什么，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-011",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "好好的，怎么说这些话",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "jiahui",
+  "text": "「好好的，怎么说这些话？」红玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jiahui",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“好好的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-012",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "你那里知道我心里的事",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "xiaohong",
+  "text": "「你那里知道我心里的事！」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“你那里知道我心里的事！”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-013",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "可也怨不得，这个地方难站",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "jiahui",
+  "text": "「可也怨不得，这个地方难站。就象昨儿老太太因宝玉病了这些日子，说跟著伏侍的这些人都辛苦了，如今身上好了，各处还完了愿，叫把跟著的人都按著等儿赏他们。我们算年纪小，上不去，我也不抱怨，象你怎么也不算在里头？我心里就不服。袭人那怕他得十分儿，也不恼他，原该的。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jiahui",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“可也怨不得，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-014",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "袭人那怕他得十分儿",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "jiahui",
+  "text": "袭人那怕他得十分儿，也不恼他，原该的。说良心话，谁还敢比他呢？别说他素日殷勤小心，便是不殷勤小心，也拼不得。可气晴雯，绮霰他们这几个，都算在上等里去，仗著老子娘的脸面，众人倒捧著他去。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jiahui",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "袭人那怕他得十分儿，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-015",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "可气晴雯，绮霰他们这几个",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "jiahui",
+  "text": "可气晴雯，绮霰他们这几个，都算在上等里去，仗著老子娘的脸面，众人倒捧著他去。你说可气不可气？」红玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jiahui",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "可气晴雯，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-016",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "也不犯著气他们",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "xiaohong",
+  "text": "「也不犯著气他们。俗语说的好，『千里搭长棚，没有个不散的筵席』，谁守谁一辈子呢？不过三年五载，各人干各人的去了。那时谁还管谁呢？」这两句话不觉感动了佳蕙的心肠，由不得眼睛红了，又不好意思好端端的哭，只得勉强笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“也不犯著气他们。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-017",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "这两句话不觉感动了佳蕙的心肠",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "narrator",
+  "text": "这两句话不觉感动了佳蕙的心肠，由不得眼睛红了，又不好意思好端端的哭，只得勉强笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jiahui",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "这两句话不觉感动了佳蕙的心肠，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-018",
+  "chapter": "c26-hongyu",
+  "scene": "yihong",
+  "title": "你这话说的却是",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "jiahui",
+  "text": "「你这话说的却是。昨儿宝玉还说，明儿怎么样收拾房子，怎么样做衣裳，倒象有几百年的熬煎。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jiahui",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“你这话说的却是。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-019",
+  "chapter": "c26-yangzi",
+  "scene": "yihong",
+  "title": "红玉听了冷笑了两声",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "narrator",
+  "text": "红玉听了冷笑了两声，方要说话，只见一个未留头的小丫头子走进来，手里拿著些花样子并两张纸，说道：「这是两个样子，叫你描出来呢。」说著向红玉掷下，回身就跑了。红玉向外问道：「倒是谁的？也等不得说完就跑，谁蒸下馒头等著你，怕冷了不成！」那小丫头在窗外只说得一声：「是绮大姐姐的。」抬起脚来咕咚咕咚又跑了。红玉便赌气把那样子掷在一边，向抽屉内找笔，找了半天都是秃了的，因说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "红玉听了冷笑了两声，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-020",
+  "chapter": "c26-yangzi",
+  "scene": "yihong",
+  "title": "红玉便赌气把那样子掷在一边",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "narrator",
+  "text": "红玉便赌气把那样子掷在一边，向抽屉内找笔，找了半天都是秃了的，因说道：「前儿一枝新笔，放在那里了？怎么一时想不起来。」一面说著，一面出神，想了一会方笑道：「是了，前儿晚上莺儿拿了去了。」便向佳惠道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "红玉便赌气把那样子掷在一边，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-021",
+  "chapter": "c26-yangzi",
+  "scene": "yihong",
+  "title": "便向佳惠道",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "narrator",
+  "text": "便向佳惠道：「你替我取了来。」佳惠道：「花大姐姐还等著我替他抬箱子呢，你自己取去罢。」红玉道：「他等著你，你还坐著闲打牙儿？我不叫你取去，他也不等著你了。坏透了的小蹄子！」说著，自己便出房来，出了怡红院，一径往宝钗院内来。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jiahui",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "便向佳惠道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-022",
+  "chapter": "c26-yangzi",
+  "scene": "yihong",
+  "title": "说著，自己便出房来",
+  "place": "大观园 · 怡红院",
+  "focus": "gate",
+  "speaker": "narrator",
+  "text": "说著，自己便出房来，出了怡红院，一径往宝钗院内来。刚至沁芳亭畔，只见宝玉的奶娘李嬷嬷从那边走来。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "xiaohong",
+    "via": [
+     "outer_room",
+     "gate"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "说著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-023",
+  "chapter": "c26-qinfang",
+  "scene": "qinfang",
+  "title": "刚至沁芳亭畔",
+  "place": "大观园 · 沁芳亭",
+  "focus": "bank_west",
+  "speaker": "narrator",
+  "text": "刚至沁芳亭畔，只见宝玉的奶娘李嬷嬷从那边走来。红玉立住笑问道：「李奶奶，你老人家那去了？怎打这里来？」李嬷嬷站住将手一拍道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xiaohong",
+    "at": "bank_west"
+   },
+   {
+    "type": "show",
+    "actor": "nurse_li",
+    "at": "bridge_head"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "刚至沁芳亭畔，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-024",
+  "chapter": "c26-qinfang",
+  "scene": "qinfang",
+  "title": "你说说，好好的又看上了那个种树的",
+  "place": "大观园 · 沁芳亭",
+  "focus": "bank_west",
+  "speaker": "nurse_li",
+  "text": "「你说说，好好的又看上了那个种树的什么云哥儿雨哥儿的，这会子逼著我叫了他来。明儿叫上房里听见，可又是不好。」红玉笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "nurse_li",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“你说说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-025",
+  "chapter": "c26-qinfang",
+  "scene": "qinfang",
+  "title": "你老人家当真的就依了他去叫了",
+  "place": "大观园 · 沁芳亭",
+  "focus": "bank_west",
+  "speaker": "xiaohong",
+  "text": "「你老人家当真的就依了他去叫了？」李嬷嬷道：「可怎么样呢？」红玉笑道：「那一个要是知道好歹，就回不进来才是。」李嬷嬷道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“你老人家当真的就依了他去叫了？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-026",
+  "chapter": "c26-qinfang",
+  "scene": "qinfang",
+  "title": "他又不痴，为什么不进来",
+  "place": "大观园 · 沁芳亭",
+  "focus": "bank_west",
+  "speaker": "nurse_li",
+  "text": "「他又不痴，为什么不进来？」红玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "nurse_li",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“他又不痴，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-027",
+  "chapter": "c26-qinfang",
+  "scene": "qinfang",
+  "title": "既是进来，你老人家该同他一齐来",
+  "place": "大观园 · 沁芳亭",
+  "focus": "bank_west",
+  "speaker": "xiaohong",
+  "text": "「既是进来，你老人家该同他一齐来，回来叫他一个人乱碰，可是不好呢。」李嬷嬷道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“既是进来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-028",
+  "chapter": "c26-qinfang",
+  "scene": "qinfang",
+  "title": "我有那样工夫和他走",
+  "place": "大观园 · 沁芳亭",
+  "focus": "bank_west",
+  "speaker": "nurse_li",
+  "text": "「我有那样工夫和他走？不过告诉了他，回来打发个小丫头子或是老婆子，带进他来就完了。」说著，拄著拐杖一径去了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "nurse_li",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“我有那样工夫和他走？",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-029",
+  "chapter": "c26-qinfang",
+  "scene": "qinfang",
+  "title": "说著，拄著拐杖一径去了",
+  "place": "大观园 · 沁芳亭",
+  "focus": "bank_west",
+  "speaker": "narrator",
+  "text": "说著，拄著拐杖一径去了。红玉听说，便站著出神，且不去取笔。",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "nurse_li"
+   },
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "说著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-030",
+  "chapter": "c26-fengyao",
+  "scene": "qinfang",
+  "title": "一时，只见一个小丫头子跑来",
+  "place": "大观园 · 蜂腰桥",
+  "focus": "bridge_head",
+  "speaker": "narrator",
+  "text": "一时，只见一个小丫头子跑来，见红玉站在那里，便问道：「林姐姐，你在这里作什么呢？」红玉抬头见是小丫头子坠儿。红玉道：「那去？」坠儿道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zhuer",
+    "at": "bridge_head"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "一时，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-031",
+  "chapter": "c26-fengyao",
+  "scene": "qinfang",
+  "title": "叫我带进芸二爷来",
+  "place": "大观园 · 蜂腰桥",
+  "focus": "bridge_head",
+  "speaker": "zhuer",
+  "text": "「叫我带进芸二爷来。」说著一径跑了。这里红玉刚走至蜂腰桥门前，只见那边坠儿引著贾芸来了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zhuer",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“叫我带进芸二爷来。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-032",
+  "chapter": "c26-fengyao",
+  "scene": "qinfang",
+  "title": "这里红玉刚走至蜂腰桥门前",
+  "place": "大观园 · 蜂腰桥",
+  "focus": "bridge_mid",
+  "speaker": "narrator",
+  "text": "这里红玉刚走至蜂腰桥门前，只见那边坠儿引著贾芸来了。那贾芸一面走，一面拿眼把红玉一溜，那红玉只装著和坠儿说话，也把眼去一溜贾芸：四目恰相对时，红玉不觉脸红了，一扭身往蘅芜苑去了。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "bridge_mid"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "这里红玉刚走至蜂腰桥门前，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-033",
+  "chapter": "c26-fengyao",
+  "scene": "qinfang",
+  "title": "四目恰相对时",
+  "place": "大观园 · 蜂腰桥",
+  "focus": "bridge_mid",
+  "speaker": "narrator",
+  "text": "四目恰相对时，红玉不觉脸红了，一扭身往蘅芜苑去了。不在话下。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiaohong",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "四目恰相对时，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-034",
+  "chapter": "c26-yihong",
+  "scene": "yihong",
+  "title": "这里贾芸随著坠儿",
+  "place": "大观园 · 怡红院",
+  "focus": "gate",
+  "speaker": "narrator",
+  "text": "这里贾芸随著坠儿，逶迤来至怡红院中。坠儿先进去回明了，然后方领贾芸进去。贾芸看时，只见院内略略有几点山石，种著芭蕉，那边有两只仙鹤在松树下剔翎。一溜回廊上吊著各色笼子，各色仙禽异鸟。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "gate"
+   },
+   {
+    "type": "show",
+    "actor": "zhuer",
+    "at": "gate"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "这里贾芸随著坠儿，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-035",
+  "chapter": "c26-yihong",
+  "scene": "yihong",
+  "title": "一溜回廊上吊著各色笼子",
+  "place": "大观园 · 怡红院",
+  "focus": "gate",
+  "speaker": "narrator",
+  "text": "一溜回廊上吊著各色笼子，各色仙禽异鸟。上面小小五间抱厦，一色雕镂新鲜花样隔扇，上面悬著一个匾额，四个大字，题道是」怡红快绿」。贾芸想道：「怪道叫『怡红院』，原来匾上是恁样四个字。」正想著，只听里面隔著纱窗子笑说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "一溜回廊上吊著各色笼子，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-036",
+  "chapter": "c26-yihong",
+  "scene": "yihong",
+  "title": "正想著，只听里面隔著纱窗子笑说道",
+  "place": "大观园 · 怡红院",
+  "focus": "inner_room",
+  "speaker": "narrator",
+  "text": "正想著，只听里面隔著纱窗子笑说道：「快进来罢。我怎么就忘了你两三个月！」贾芸听得是宝玉的声音，连忙进入房内。抬头一看，只见金碧辉煌，文章闪灼，却看不见宝玉在那里。一回头，只见左边立著一架大穿衣镜，从镜后转出两个一般大的十五六岁的丫头来说：",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "gate",
+     "outer_room"
+    ]
+   },
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "inner_room"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "正想著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-037",
+  "chapter": "c26-yihong",
+  "scene": "yihong",
+  "title": "一回头，只见左边立著一架大穿衣镜",
+  "place": "大观园 · 怡红院",
+  "focus": "baoyu_kang",
+  "speaker": "narrator",
+  "text": "一回头，只见左边立著一架大穿衣镜，从镜后转出两个一般大的十五六岁的丫头来说：「请二爷里头屋里坐。」贾芸连正眼也不敢看，连忙答应了。又进一道碧纱厨，只见小小一张填漆床上，悬著大红销金撒花帐子。宝玉穿著家常衣服，靸著鞋，倚在床上拿著本书，看见他进来，将书掷下，早堆著笑立起身来。贾芸忙上前请了安。宝玉让坐，便在下面一张椅子上坐了。宝玉笑道：",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "inner_room",
+     "baoyu_kang"
+    ]
+   },
+   {
+    "type": "move",
+    "actor": "jia_yun",
+    "via": [
+     "outer_room",
+     "inner_room"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "一回头，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-038",
+  "chapter": "c26-yihong",
+  "scene": "yihong",
+  "title": "只从那个月见了你",
+  "place": "大观园 · 怡红院",
+  "focus": "baoyu_kang",
+  "speaker": "baoyu",
+  "text": "「只从那个月见了你，我叫你往书房里来，谁知接接连连许多事情，就把你忘了。」贾芸笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“只从那个月见了你，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-039",
+  "chapter": "c26-yihong",
+  "scene": "yihong",
+  "title": "总是我没福",
+  "place": "大观园 · 怡红院",
+  "focus": "baoyu_kang",
+  "speaker": "jia_yun",
+  "text": "贾芸笑道：「总是我没福，偏偏又遇著叔叔身上欠安。叔叔如今可大安了？」宝玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "贾芸笑道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-040",
+  "chapter": "c26-yihong",
+  "scene": "yihong",
+  "title": "大好了。我倒听见说你辛苦了好几天",
+  "place": "大观园 · 怡红院",
+  "focus": "baoyu_kang",
+  "speaker": "baoyu",
+  "text": "「大好了。我倒听见说你辛苦了好几天。」贾芸道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“大好了。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-041",
+  "chapter": "c26-yihong",
+  "scene": "yihong",
+  "title": "辛苦也是该当的",
+  "place": "大观园 · 怡红院",
+  "focus": "baoyu_kang",
+  "speaker": "jia_yun",
+  "text": "「辛苦也是该当的。叔叔大安了，也是我们一家子的造化。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“辛苦也是该当的。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-042",
+  "chapter": "c26-yihong",
+  "scene": "yihong",
+  "title": "说著，只见有个丫鬟端了茶来与他",
+  "place": "大观园 · 怡红院",
+  "focus": "desk_place",
+  "speaker": "narrator",
+  "text": "说著，只见有个丫鬟端了茶来与他。那贾芸口里和宝玉说著话，眼睛却溜瞅那丫鬟：细挑身材，容长脸面，穿著银红袄儿，青缎背心，白绫细折裙。——不是别个，却是袭人。那贾芸自从宝玉病了几天，他在里头混了两日，他却把那有名人口认记了一半。他也知道袭人在宝玉房中比别个不同，今见他端了茶来，宝玉又在旁边坐著，便忙站起来笑道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xiren",
+    "at": "desk_place"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "说著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-043",
+  "chapter": "c26-yihong",
+  "scene": "yihong",
+  "title": "姐姐怎么替我倒起茶来",
+  "place": "大观园 · 怡红院",
+  "focus": "desk_place",
+  "speaker": "jia_yun",
+  "text": "「姐姐怎么替我倒起茶来。我来到叔叔这里，又不是客，让我自己倒罢。」宝玉道：「你只管坐著罢。丫头们跟前也是这样。」贾芸笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“姐姐怎么替我倒起茶来。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-044",
+  "chapter": "c26-yihong",
+  "scene": "yihong",
+  "title": "虽如此说，叔叔房里姐姐们",
+  "place": "大观园 · 怡红院",
+  "focus": "desk_place",
+  "speaker": "jia_yun",
+  "text": "「虽如此说，叔叔房里姐姐们，我怎么敢放肆呢。」一面说，一面坐下吃茶。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“虽如此说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-045",
+  "chapter": "c26-yihong",
+  "scene": "yihong",
+  "title": "那宝玉便和他说些没要紧的散话",
+  "place": "大观园 · 怡红院",
+  "focus": "desk_place",
+  "speaker": "narrator",
+  "text": "那宝玉便和他说些没要紧的散话。又说道谁家的戏子好，谁家的花园好，又告诉他谁家的丫头标致，谁家的酒席丰盛，又是谁家有奇货，又是谁家有异物。那贾芸口里只得顺著他说，说了一会，见宝玉有些懒懒的了，便起身告辞。宝玉也不甚留，只说：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "那宝玉便和他说些没要紧的散话。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-046",
+  "chapter": "c26-yihong",
+  "scene": "yihong",
+  "title": "你明儿闲了，只管来",
+  "place": "大观园 · 怡红院",
+  "focus": "desk_place",
+  "speaker": "baoyu",
+  "text": "「你明儿闲了，只管来。」仍命小丫头子坠儿送他出去。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   },
+   {
+    "type": "hide",
+    "actor": "jia_yun"
+   },
+   {
+    "type": "hide",
+    "actor": "xiren"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“你明儿闲了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-047",
+  "chapter": "c26-shoupa",
+  "scene": "yihong",
+  "title": "出了怡红院，贾芸见四顾无人",
+  "place": "大观园 · 怡红院外",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "出了怡红院，贾芸见四顾无人，便把脚慢慢停著些走，口里一长一短和坠儿说话，先问他「几岁了？名字叫什么？你父母在那一行上？在宝叔房内几年了？一个月多少钱？共总宝叔房内有几个女孩子？」那坠儿见问，便一桩桩的都告诉他了。贾芸又道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_yun",
+    "at": "yard"
+   },
+   {
+    "type": "show",
+    "actor": "zhuer",
+    "at": "yard"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "出了怡红院，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-048",
+  "chapter": "c26-shoupa",
+  "scene": "yihong",
+  "title": "才刚那个与你说话的",
+  "place": "大观园 · 怡红院外",
+  "focus": "yard",
+  "speaker": "jia_yun",
+  "text": "「才刚那个与你说话的，他可是叫小红？」坠儿笑道：「他倒叫小红。你问他作什么？」贾芸道：「方才他问你什么手帕子，我倒拣了一块。」坠儿听了笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“才刚那个与你说话的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-049",
+  "chapter": "c26-shoupa",
+  "scene": "yihong",
+  "title": "他问了我好几遍",
+  "place": "大观园 · 怡红院外",
+  "focus": "yard",
+  "speaker": "zhuer",
+  "text": "「他问了我好几遍，可有看见他的帕子。我有那么大工夫管这些事！今儿他又问我，他说我替他找著了，他还谢我呢。才在蘅芜苑门口说的，二爷也听见了，不是我撒谎。好二爷，你既拣了，给我罢。我看他拿什么谢我。」原来上月贾芸进来种树之时，便拣了一块罗帕，便知是所在园内的人失落的，但不知是那一个人的，故不敢造次。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zhuer",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“他问了我好几遍，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-050",
+  "chapter": "c26-shoupa",
+  "scene": "yihong",
+  "title": "原来上月贾芸进来种树之时",
+  "place": "大观园 · 怡红院外",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "原来上月贾芸进来种树之时，便拣了一块罗帕，便知是所在园内的人失落的，但不知是那一个人的，故不敢造次。今听见红玉问坠儿，便知是红玉的，心内不胜喜幸。又见坠儿追索，心中早得了主意，便向袖内将自己的一块取了出来，向坠儿笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "原来上月贾芸进来种树之时，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-051",
+  "chapter": "c26-shoupa",
+  "scene": "yihong",
+  "title": "我给是给你，你若得了他的谢礼",
+  "place": "大观园 · 怡红院外",
+  "focus": "yard",
+  "speaker": "jia_yun",
+  "text": "「我给是给你，你若得了他的谢礼，不许瞒著我。」坠儿满口里答应了，接了手帕子，送出贾芸，回来找红玉，不在话下。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_yun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“我给是给你，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-052",
+  "chapter": "c26-shoupa",
+  "scene": "yihong",
+  "title": "坠儿满口里答应了",
+  "place": "大观园 · 怡红院外",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "坠儿满口里答应了，接了手帕子，送出贾芸，回来找红玉，不在话下。",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "jia_yun"
+   },
+   {
+    "type": "hide",
+    "actor": "zhuer"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "坠儿满口里答应了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-053",
+  "chapter": "c26-chuguang",
+  "scene": "yihong",
+  "title": "如今且说宝玉打发了贾芸去后",
+  "place": "大观园 · 怡红院",
+  "focus": "baoyu_kang",
+  "speaker": "narrator",
+  "text": "如今且说宝玉打发了贾芸去后，意思懒懒的歪在床上，似有朦胧之态。袭人便走上来，坐在床沿上推他，说道：「怎么又要睡觉？闷的很，你出去逛逛不是？」宝玉见说，便拉他的手笑道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "baoyu_kang"
+   },
+   {
+    "type": "show",
+    "actor": "xiren",
+    "at": "xiren_kang"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "如今且说宝玉打发了贾芸去后，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-054",
+  "chapter": "c26-chuguang",
+  "scene": "yihong",
+  "title": "我要去，只是舍不得你",
+  "place": "大观园 · 怡红院",
+  "focus": "baoyu_kang",
+  "speaker": "baoyu",
+  "text": "「我要去，只是舍不得你。」袭人笑道：「快起来罢！」一面说，一面拉了宝玉起来。宝玉道：「可往那去呢？怪腻腻烦烦的。」袭人道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“我要去，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-055",
+  "chapter": "c26-chuguang",
+  "scene": "yihong",
+  "title": "你出去了就好了",
+  "place": "大观园 · 怡红院",
+  "focus": "baoyu_kang",
+  "speaker": "xiren",
+  "text": "「你出去了就好了。只管这么葳蕤，越发心里烦腻。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiren",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“你出去了就好了。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-056",
+  "chapter": "c26-chuguang",
+  "scene": "yihong",
+  "title": "宝玉无精打采的，只得依他",
+  "place": "大观园 · 怡红院",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "宝玉无精打采的，只得依他。晃出了房门，在回廊上调弄了一回雀儿，出至院外，顺著沁芳溪看了一回金鱼。只见那边山坡上两只小鹿箭也似的跑来，宝玉不解其意。正自纳闷，只见贾兰在后面拿著一张小弓追了下来，一见宝玉在前面，便站住了，笑道：",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "baoyu_kang",
+     "yard"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "宝玉无精打采的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-057",
+  "chapter": "c26-chuguang",
+  "scene": "yihong",
+  "title": "只见贾兰在后面拿著一张小弓追了下来",
+  "place": "大观园 · 怡红院",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "只见贾兰在后面拿著一张小弓追了下来，一见宝玉在前面，便站住了，笑道：「二叔叔在家里呢，我只当出门去了。」宝玉道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "jia_lan",
+    "at": "yard"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "只见贾兰在后面拿著一张小弓追了下来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-058",
+  "chapter": "c26-chuguang",
+  "scene": "yihong",
+  "title": "你又淘气了",
+  "place": "大观园 · 怡红院",
+  "focus": "yard",
+  "speaker": "baoyu",
+  "text": "「你又淘气了。好好的射他作什么？」贾兰笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“你又淘气了。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-059",
+  "chapter": "c26-chuguang",
+  "scene": "yihong",
+  "title": "这会子不念书，闲著作什么",
+  "place": "大观园 · 怡红院",
+  "focus": "yard",
+  "speaker": "jia_lan",
+  "text": "「这会子不念书，闲著作什么？所以演习演习骑射。」宝玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "jia_lan",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“这会子不念书，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-060",
+  "chapter": "c26-chuguang",
+  "scene": "yihong",
+  "title": "把牙栽了，那时才不演呢",
+  "place": "大观园 · 怡红院",
+  "focus": "yard",
+  "speaker": "baoyu",
+  "text": "「把牙栽了，那时才不演呢。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“把牙栽了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-061",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "顺著脚一径来至一个院门前",
+  "place": "大观园 · 潇湘馆",
+  "focus": "gate",
+  "speaker": "narrator",
+  "text": "顺著脚一径来至一个院门前，只见凤尾森森，龙吟细细。举目望门上一看，只见匾上写著「潇湘馆」三字。宝玉信步走入，只见湘帘垂地，悄无人声。走至窗前，觉得一缕幽香从碧纱窗中暗暗透出。宝玉便将脸贴在纱窗上，往里看时，耳内忽听得细细的长叹了一声道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "gate"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "顺著脚一径来至一个院门前，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-062",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "宝玉便将脸贴在纱窗上",
+  "place": "大观园 · 潇湘馆",
+  "focus": "window_out",
+  "speaker": "narrator",
+  "text": "宝玉便将脸贴在纱窗上，往里看时，耳内忽听得细细的长叹了一声道：「『每日家情思睡昏昏。』」宝玉听了，不觉心内痒将起来，再看时，只见黛玉在床上伸懒腰。宝玉在窗外笑道：",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "gate",
+     "window_out"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "宝玉便将脸贴在纱窗上，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-063",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "为甚么每日家情思睡昏昏",
+  "place": "大观园 · 潇湘馆",
+  "focus": "window_out",
+  "speaker": "baoyu",
+  "text": "「为甚么『每日家情思睡昏昏』？」一面说，一面掀帘子进来了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“为甚么‘每日家情思睡昏昏’？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-064",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "林黛玉自觉忘情，不觉红了脸",
+  "place": "大观园 · 潇湘馆",
+  "focus": "bed",
+  "speaker": "narrator",
+  "text": "林黛玉自觉忘情，不觉红了脸，拿袖子遮了脸，翻身向里装睡著了。宝玉才走上来要搬他的身子，只见黛玉的奶娘并两个婆子却跟了进来说：「妹妹睡觉呢，等醒了再请来。」刚说著，黛玉便翻身坐了起来，笑道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "bed"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "林黛玉自觉忘情，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-065",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "谁睡觉呢",
+  "place": "大观园 · 潇湘馆",
+  "focus": "bed",
+  "speaker": "daiyu",
+  "text": "「谁睡觉呢。」那两三个婆子见黛玉起来，便笑道：「我们只当姑娘睡著了。」说著，便叫紫鹃说：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“谁睡觉呢。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-066",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "便叫紫鹃说",
+  "place": "大观园 · 潇湘馆",
+  "focus": "desk_place",
+  "speaker": "narrator",
+  "text": "便叫紫鹃说：「姑娘醒了，进来伺侯。」一面说，一面都去了。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "zijun",
+    "at": "desk_place"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "便叫紫鹃说：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-067",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "人家睡觉，你进来作什么",
+  "place": "大观园 · 潇湘馆",
+  "focus": "desk_place",
+  "speaker": "daiyu",
+  "text": "「人家睡觉，你进来作什么？」宝玉见他星眼微饧，香腮带赤，不觉神魂早荡，一歪身坐在椅子上，笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“人家睡觉，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-068",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "你才说什么",
+  "place": "大观园 · 潇湘馆",
+  "focus": "desk_place",
+  "speaker": "baoyu",
+  "text": "「你才说什么？」黛玉道：「我没说什么。」宝玉笑道：「给你个榧子吃！我都听见了。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“你才说什么？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-069",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "二人正说话，只见紫鹃进来",
+  "place": "大观园 · 潇湘馆",
+  "focus": "desk_place",
+  "speaker": "narrator",
+  "text": "二人正说话，只见紫鹃进来。宝玉笑道：「紫鹃，把你们的好茶倒碗我吃。」紫鹃道：「那里是好的呢？要好的，只是等袭人来。」黛玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zijun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "二人正说话，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-070",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "别理他，你先给我舀水去罢",
+  "place": "大观园 · 潇湘馆",
+  "focus": "desk_place",
+  "speaker": "daiyu",
+  "text": "「别理他，你先给我舀水去罢。」紫鹃笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“别理他，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-071",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "他是客，自然先倒了茶来再舀水去",
+  "place": "大观园 · 潇湘馆",
+  "focus": "desk_place",
+  "speaker": "zijun",
+  "text": "「他是客，自然先倒了茶来再舀水去。」说著倒茶去了。宝玉笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "zijun",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“他是客，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-072",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "好丫头，若共你多情小姐同鸳帐",
+  "place": "大观园 · 潇湘馆",
+  "focus": "desk_place",
+  "speaker": "baoyu",
+  "text": "「好丫头，『若共你多情小姐同鸳帐，怎舍得叠被舖床？』」林黛玉登时撂下脸来，说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“好丫头，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-073",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "二哥哥，你说什么",
+  "place": "大观园 · 潇湘馆",
+  "focus": "desk_place",
+  "speaker": "daiyu",
+  "text": "「二哥哥，你说什么？」宝玉笑道：「我何尝说什么。」黛玉便哭道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“二哥哥，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-074",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "如今新兴的，外头听了村话来",
+  "place": "大观园 · 潇湘馆",
+  "focus": "desk_place",
+  "speaker": "daiyu",
+  "text": "「如今新兴的，外头听了村话来，也说给我听，看了混帐书，也来拿我取笑儿。我成了爷们解闷的。」一面哭著，一面下床来往外就走。宝玉不知要怎样，心下慌了，忙赶上来，」好妹妹，我一时该死，你别告诉去。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“如今新兴的，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-075",
+  "chapter": "c26-xiaoxiang",
+  "scene": "xiaoxiang",
+  "title": "好妹妹，我一时该死",
+  "place": "大观园 · 潇湘馆",
+  "focus": "desk_place",
+  "speaker": "baoyu",
+  "text": "好妹妹，我一时该死，你别告诉去。我再要敢，嘴上就长个疔，烂了舌头。」正说著，只见袭人走来说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "好妹妹，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-076",
+  "chapter": "c26-jiaozheng",
+  "scene": "entry",
+  "title": "正说著，只见袭人走来说道",
+  "place": "荣国府 · 二门",
+  "focus": "hall_door",
+  "speaker": "narrator",
+  "text": "正说著，只见袭人走来说道：「快回去穿衣服，老爷叫你呢。」宝玉听了，不觉打了个雷的一般，也顾不得别的，疾忙回来穿衣服。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "xiren",
+    "at": "hall_door"
+   },
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "hall_door"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "正说著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-077",
+  "chapter": "c26-jiaozheng",
+  "scene": "entry",
+  "title": "宝玉听了，不觉打了个雷的一般",
+  "place": "荣国府 · 二门",
+  "focus": "hall_door",
+  "speaker": "narrator",
+  "text": "宝玉听了，不觉打了个雷的一般，也顾不得别的，疾忙回来穿衣服。出园来，只见焙茗在二门前等著，宝玉便问道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "宝玉听了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-078",
+  "chapter": "c26-jiaozheng",
+  "scene": "entry",
+  "title": "出园来，只见焙茗在二门前等著",
+  "place": "荣国府 · 二门",
+  "focus": "passage_entry",
+  "speaker": "narrator",
+  "text": "出园来，只见焙茗在二门前等著，宝玉便问道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "ming_yan",
+    "at": "passage_entry"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "出园来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-079",
+  "chapter": "c26-jiaozheng",
+  "scene": "entry",
+  "title": "你可知道叫我是为什么",
+  "place": "荣国府 · 二门",
+  "focus": "passage_entry",
+  "speaker": "baoyu",
+  "text": "「你可知道叫我是为什么？」焙茗道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“你可知道叫我是为什么？”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-080",
+  "chapter": "c26-jiaozheng",
+  "scene": "entry",
+  "title": "爷快出来罢",
+  "place": "荣国府 · 二门",
+  "focus": "passage_entry",
+  "speaker": "ming_yan",
+  "text": "「爷快出来罢，横竖是见去的，到那里就知道了。」一面说，一面催著宝玉。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "ming_yan",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“爷快出来罢，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-081",
+  "chapter": "c26-xuepan",
+  "scene": "c4_lixiang",
+  "title": "转过大厅，宝玉心里还自狐疑",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "street_gate",
+  "speaker": "narrator",
+  "text": "转过大厅，宝玉心里还自狐疑，只听墙角边一阵呵呵大笑，回头只见薛蟠拍著手笑了出来，笑道：「要不说姨夫叫你，你那里出来的这么快。」焙茗也笑道：「爷别怪我。」忙跪下了。宝玉怔了半天，方解过来了，是薛蟠哄他出来。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "street_gate"
+   },
+   {
+    "type": "show",
+    "actor": "xuepan",
+    "at": "front_hall"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "转过大厅，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-082",
+  "chapter": "c26-xuepan",
+  "scene": "c4_lixiang",
+  "title": "宝玉怔了半天",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "street_gate",
+  "speaker": "narrator",
+  "text": "宝玉怔了半天，方解过来了，是薛蟠哄他出来。薛蟠连忙打恭作揖陪不是，又求」不要难为了小子，都是我逼他去的。」宝玉也无法了，只好笑问道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "宝玉怔了半天，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-083",
+  "chapter": "c26-xuepan",
+  "scene": "c4_lixiang",
+  "title": "你哄我也罢了",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "street_gate",
+  "speaker": "baoyu",
+  "text": "「你哄我也罢了，怎么说我父亲呢？我告诉姨娘去，评评这个理，可使得么？」薛蟠忙道：「好兄弟，我原为求你快些出来，就忘了忌讳这句话。改日你也哄我，说我的父亲就完了。」宝玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“你哄我也罢了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-084",
+  "chapter": "c26-xuepan",
+  "scene": "c4_lixiang",
+  "title": "嗳，嗳，越发该死了",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "street_gate",
+  "speaker": "baoyu",
+  "text": "「嗳，嗳，越发该死了。」又向焙茗道：「反叛肏的，还跪著作什么！」焙茗连忙叩头起来。薛蟠道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“嗳，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-085",
+  "chapter": "c26-xuepan",
+  "scene": "c4_lixiang",
+  "title": "要不是我也不敢惊动",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "street_gate",
+  "speaker": "xuepan",
+  "text": "「要不是我也不敢惊动，只因明儿五月初三日是我的生日，谁知古董行的程日兴，他不知那里寻了来的这么粗这么长粉脆的鲜藕，这么大的大西瓜，这么长一尾新鲜的鲟鱼，这么大的一个暹罗国进贡的灵柏香熏的暹猪。你说，他这四样礼可难得不难得？那鱼，猪不过贵而难得，这藕和瓜亏他怎么种出来的。我连忙孝敬了母亲，赶著给你们老太太，姨父，姨母送了些去。如今留了些，我要自己吃，恐怕折福，左思右想，除我之外，惟有你还配吃，所以特请你来。可巧唱曲儿的小么儿又才来了，我同你乐一天何如？」一面说，一面来至他书房里。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xuepan",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“要不是我也不敢惊动，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-086",
+  "chapter": "c26-xuepan",
+  "scene": "c4_lixiang",
+  "title": "一面说，一面来至他书房里",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "narrator",
+  "text": "一面说，一面来至他书房里。只见詹光，程日兴，胡斯来，单聘仁等并唱曲儿的都在这里，见他进来，请安的，问好的，都彼此见过了。吃了茶，薛蟠即命人摆酒来。说犹未了，众小厮七手八脚摆了半天，方才停当归坐。宝玉果见瓜藕新异，因笑道：",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "baoyu",
+    "via": [
+     "street_gate",
+     "front_hall"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "一面说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-087",
+  "chapter": "c26-xuepan",
+  "scene": "c4_lixiang",
+  "title": "我的寿礼还未送来",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "baoyu",
+  "text": "「我的寿礼还未送来，倒先扰了。」薛蟠道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“我的寿礼还未送来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-088",
+  "chapter": "c26-xuepan",
+  "scene": "c4_lixiang",
+  "title": "可是呢，明儿你送我什么",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "xuepan",
+  "text": "「可是呢，明儿你送我什么？」宝玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xuepan",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“可是呢，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-089",
+  "chapter": "c26-xuepan",
+  "scene": "c4_lixiang",
+  "title": "我可有什么可送的",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "baoyu",
+  "text": "「我可有什么可送的？若论银钱吃的穿的东西，究竟还不是我的，惟有我写一张字，画一张画，才算是我的。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“我可有什么可送的？",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-090",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "你提画儿，我才想起来",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "xuepan",
+  "text": "「你提画儿，我才想起来。昨儿我看人家一张春宫，画的著实好。上面还有许多的字，也没细看，只看落的款，是『庚黄』画的。真真的好的了不得！」宝玉听说，心下猜疑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xuepan",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“你提画儿，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-091",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "古今字画也都见过些",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "baoyu",
+  "text": "「古今字画也都见过些，那里有个『庚黄』？」想了半天，不觉笑将起来，命人取过笔来，在手心里写了两个字，又问薛蟠道：「你看真了是『庚黄』？」薛蟠道：「怎么看不真！」宝玉将手一撒，与他看道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“古今字画也都见过些，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-092",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "别是这两字罢",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "baoyu",
+  "text": "「别是这两字罢？其实与『庚黄』相去不远。」众人都看时，原来是「唐寅」两个字，都笑道：「想必是这两字，大爷一时眼花了也未可知」。薛蟠只觉没意思，笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“别是这两字罢？",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-093",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "谁知他糖银果银的",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "xuepan",
+  "text": "「谁知他『糖银』『果银』的。」正说著，小厮来回「冯大爷来了」。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xuepan",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“谁知他‘糖银’‘果银’的。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-094",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "正说著，小厮来回冯大爷来了",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "street_gate",
+  "speaker": "narrator",
+  "text": "正说著，小厮来回「冯大爷来了」。宝玉便知是神武将军冯唐之子冯紫英来了。薛蟠等一齐都叫「快请」。说犹未了，只见冯紫英一路说笑，已进来了。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "feng_ziying",
+    "at": "street_gate"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "正说著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-095",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "只见冯紫英一路说笑，已进来了",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "narrator",
+  "text": "只见冯紫英一路说笑，已进来了。众人忙起席让坐。冯紫英笑道：",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "feng_ziying",
+    "via": [
+     "street_gate",
+     "front_hall"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "只见冯紫英一路说笑，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-096",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "好呀！也不出门了",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "feng_ziying",
+  "text": "「好呀！也不出门了，在家里高乐罢。」宝玉薛蟠都笑道：「一向少会，老世伯身上康健？」紫英答道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng_ziying",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“好呀！",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-097",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "家父倒也托庇康健",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "feng_ziying",
+  "text": "「家父倒也托庇康健。近来家母偶著了些风寒，不好了两天。」薛蟠见他面上有些青伤，便笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng_ziying",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“家父倒也托庇康健。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-098",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "这脸上又和谁挥拳的",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "xuepan",
+  "text": "「这脸上又和谁挥拳的？挂了幌子了。」冯紫英笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xuepan",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“这脸上又和谁挥拳的？",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-099",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "从那一遭把仇都尉的儿子打伤了",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "feng_ziying",
+  "text": "「从那一遭把仇都尉的儿子打伤了，我就记了再不怄气，如何又挥拳？这个脸上，是前日打围，在铁网山教兔鹘捎一翅膀。」宝玉道：「几时的话？」紫英道：「三月二十八日去的，前儿也就回来了。」宝玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng_ziying",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“从那一遭把仇都尉的儿子打伤了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-100",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "怪道前儿初三四儿",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "baoyu",
+  "text": "「怪道前儿初三四儿，我在沈世兄家赴席不见你呢。我要问，不知怎么就忘了。单你去了，还是老世伯也去了？」紫英道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“怪道前儿初三四儿，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-101",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "可不是家父去",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "feng_ziying",
+  "text": "「可不是家父去，我没法儿，去罢了。难道我闲疯了，咱们几个人吃酒听唱的不乐，寻那个苦恼去？这一次，大不幸之中又大幸。」",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng_ziying",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“可不是家父去，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-102",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "薛蟠众人见他吃完了茶",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "narrator",
+  "text": "薛蟠众人见他吃完了茶，都说道：「且入席，有话慢慢的说。」冯紫英听说，便立起身来说道：论理，我该陪饮几杯才是，只是今儿有一件大大要紧的事，回去还要见家父面回，实不敢领。薛蟠宝玉众人那里肯依，死拉著不放。冯紫英笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xuepan",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "薛蟠众人见他吃完了茶，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-103",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "这又奇了",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "feng_ziying",
+  "text": "「这又奇了。你我这些年，那回儿有这个道理的？果然不能遵命。若必定叫我领，拿大杯来，我领两杯就是了。」众人听说，只得罢了，薛蟠执壶，宝玉把盏，斟了两大海。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng_ziying",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“这又奇了。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-104",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "众人听说，只得罢了",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "narrator",
+  "text": "众人听说，只得罢了，薛蟠执壶，宝玉把盏，斟了两大海。那冯紫英站著，一气而尽。宝玉道：「你到底把这个『不幸之幸』说完了再走。」冯紫英笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xuepan",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "众人听说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-105",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "今儿说的也不尽兴",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "feng_ziying",
+  "text": "「今儿说的也不尽兴。我为这个，还要特治一东，请你们去细谈一谈，二则还有所恳之处。」说著执手就走。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "feng_ziying",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“今儿说的也不尽兴。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-106",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "说著执手就走",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "narrator",
+  "text": "说著执手就走。薛蟠道：",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "feng_ziying"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "说著执手就走。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-107",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "越发说的人热剌剌的丢不下",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "xuepan",
+  "text": "「越发说的人热剌剌的丢不下。多早晚才请我们，告诉了。也免的人犹疑。」冯紫英道：「多则十日，少则八天。」一面说，一面出门上马去了。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xuepan",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“越发说的人热剌剌的丢不下。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-108",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "一面说，一面出门上马去了",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "narrator",
+  "text": "一面说，一面出门上马去了。众人回来，依席又饮了一回方散。",
+  "actions": [
+   {
+    "type": "hide",
+    "actor": "feng_ziying"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "一面说，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-109",
+  "chapter": "c26-fengziying",
+  "scene": "c4_lixiang",
+  "title": "众人回来，依席又饮了一回方散",
+  "place": "薛蟠书房 · 梨香院",
+  "focus": "front_hall",
+  "speaker": "narrator",
+  "text": "众人回来，依席又饮了一回方散。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xuepan",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "众人回来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-110",
+  "chapter": "c26-baochai",
+  "scene": "yihong",
+  "title": "宝玉回至园中",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "narrator",
+  "text": "宝玉回至园中，袭人正记挂著他去见贾政，不知是祸是福，只见宝玉醉醺醺的回来，问其原故，宝玉一一向他说了。袭人道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baoyu",
+    "at": "outer_room"
+   },
+   {
+    "type": "show",
+    "actor": "xiren",
+    "at": "desk_place"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "宝玉回至园中，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-111",
+  "chapter": "c26-baochai",
+  "scene": "yihong",
+  "title": "人家牵肠挂肚的等著",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "xiren",
+  "text": "「人家牵肠挂肚的等著，你且高乐去，也到底打发人来给个信儿。」宝玉道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "xiren",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“人家牵肠挂肚的等著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-112",
+  "chapter": "c26-baochai",
+  "scene": "yihong",
+  "title": "我何尝不要送信儿",
+  "place": "大观园 · 怡红院",
+  "focus": "outer_room",
+  "speaker": "baoyu",
+  "text": "「我何尝不要送信儿，只因冯世兄来了，就混忘了。」正说，只见宝钗走进来笑道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baoyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“我何尝不要送信儿，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-113",
+  "chapter": "c26-baochai",
+  "scene": "yihong",
+  "title": "偏了我们新鲜东西了",
+  "place": "大观园 · 怡红院",
+  "focus": "baochai_place",
+  "speaker": "baochai",
+  "text": "「偏了我们新鲜东西了。」宝玉笑道：「姐姐家的东西，自然先偏了我们了。」宝钗摇头笑道：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "baochai",
+    "at": "baochai_place"
+   },
+   {
+    "type": "effect",
+    "actor": "baochai",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“偏了我们新鲜东西了。”",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-114",
+  "chapter": "c26-baochai",
+  "scene": "yihong",
+  "title": "昨儿哥哥倒特特的请我吃",
+  "place": "大观园 · 怡红院",
+  "focus": "baochai_place",
+  "speaker": "baochai",
+  "text": "「昨儿哥哥倒特特的请我吃，我不吃，叫他留著请人送人罢。我知道我的命小福薄，不配吃那个。」说著，丫鬟倒了茶来，吃茶说闲话儿，不在话下。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "baochai",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“昨儿哥哥倒特特的请我吃，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-115",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "却说那林黛玉听见贾政叫了宝玉去了",
+  "place": "大观园 · 怡红院门外",
+  "focus": "gate",
+  "speaker": "narrator",
+  "text": "却说那林黛玉听见贾政叫了宝玉去了，一日不回来，心中也替他忧虑。至晚饭后，闻听宝玉来了，心里要找他问问是怎么样了。一步步行来，见宝钗进宝玉的院内去了，自己也便随后走了来。刚到了沁芳桥，只见各色水禽都在池中浴水，也认不出名色来，但见一个个文彩炫耀，好看异常，因而站住看了一会。",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "daiyu",
+    "at": "gate"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "却说那林黛玉听见贾政叫了宝玉去了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-116",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "刚到了沁芳桥",
+  "place": "大观园 · 怡红院门外",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "刚到了沁芳桥，只见各色水禽都在池中浴水，也认不出名色来，但见一个个文彩炫耀，好看异常，因而站住看了一会。再往怡红院来，只见院门关著，黛玉便以手扣门。",
+  "actions": [
+   {
+    "type": "move",
+    "actor": "daiyu",
+    "via": [
+     "gate",
+     "yard"
+    ]
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "刚到了沁芳桥，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-117",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "再往怡红院来，只见院门关著",
+  "place": "大观园 · 怡红院门外",
+  "focus": "yard",
+  "speaker": "narrator",
+  "text": "再往怡红院来，只见院门关著，黛玉便以手扣门。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "再往怡红院来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-118",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "谁知晴雯和碧痕正拌了嘴",
+  "place": "大观园 · 怡红院门外",
+  "focus": "gate_step",
+  "speaker": "narrator",
+  "text": "谁知晴雯和碧痕正拌了嘴，没好气，忽见宝钗来了，那晴雯正把气移在宝钗身上，正在院内抱怨说：",
+  "actions": [
+   {
+    "type": "show",
+    "actor": "qingwen",
+    "at": "gate_step"
+   },
+   {
+    "type": "show",
+    "actor": "bihen",
+    "at": "yard"
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "谁知晴雯和碧痕正拌了嘴，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-119",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "有事没事跑了来坐著",
+  "place": "大观园 · 怡红院门外",
+  "focus": "gate_step",
+  "speaker": "qingwen",
+  "text": "「有事没事跑了来坐著，叫我们三更半夜的不得睡觉！」忽听又有人叫门，晴雯越发动了气，也并不问是谁，便说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qingwen",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“有事没事跑了来坐著，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-120",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "都睡下了，明儿再来罢",
+  "place": "大观园 · 怡红院门外",
+  "focus": "gate_step",
+  "speaker": "qingwen",
+  "text": "「都睡下了，明儿再来罢！」林黛玉素知丫头们的情性，他们彼此顽耍惯了，恐怕院内的丫头没听真是他的声音，只当是别的丫头们来了，所以不开门，因而又高声说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qingwen",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“都睡下了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-121",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "是我，还不开么",
+  "place": "大观园 · 怡红院门外",
+  "focus": "gate_step",
+  "speaker": "daiyu",
+  "text": "「是我，还不开么？」晴雯偏生还没听出来，便使性子说道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "greet",
+    "duration": 1.2
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“是我，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-122",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "凭你是谁，二爷吩咐的",
+  "place": "大观园 · 怡红院门外",
+  "focus": "gate_step",
+  "speaker": "qingwen",
+  "text": "「凭你是谁，二爷吩咐的，一概不许放人进来呢！」林黛玉听了，不觉气怔在门外，待要高声问他，逗起气来，自己又回思一番：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "qingwen",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“凭你是谁，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-123",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "林黛玉听了，不觉气怔在门外",
+  "place": "大观园 · 怡红院门外",
+  "focus": "gate_step",
+  "speaker": "narrator",
+  "text": "林黛玉听了，不觉气怔在门外，待要高声问他，逗起气来，自己又回思一番：「虽说是舅母家如同自己家一样，到底是客边。如今父母双亡，无依无靠，现在他家依栖。如今认真淘气，也觉没趣。」一面想，一面又滚下泪珠来。正是回去不是，站著不是。正没主意，只听里面一阵笑语之声，细听一听，竟是宝玉『宝钗二人。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "林黛玉听了，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-124",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "正没主意，只听里面一阵笑语之声",
+  "place": "大观园 · 怡红院门外",
+  "focus": "gate_step",
+  "speaker": "narrator",
+  "text": "正没主意，只听里面一阵笑语之声，细听一听，竟是宝玉『宝钗二人。林黛玉心中益发动了气，左思右想，忽然想起了早起的事来：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "正没主意，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-125",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "必竟是宝玉恼我要告他的原故",
+  "place": "大观园 · 怡红院门外",
+  "focus": "gate_step",
+  "speaker": "daiyu",
+  "text": "「必竟是宝玉恼我要告他的原故。但只我何尝告你了，你也打听打听，就恼我到这步田地。你今儿不叫我进来，难道明儿就不见面了！」越想越伤感起来，也不顾苍苔露冷，花径风寒，独立墙角边花阴之下，悲悲戚戚呜咽起来。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "“必竟是宝玉恼我要告他的原故。",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-126",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "越想越伤感起来",
+  "place": "大观园 · 怡红院门外",
+  "focus": "gate_step",
+  "speaker": "narrator",
+  "text": "越想越伤感起来，也不顾苍苔露冷，花径风寒，独立墙角边花阴之下，悲悲戚戚呜咽起来。原来这林黛玉秉绝代姿容，具希世俊美，不期这一哭，那附近柳枝花朵上的宿鸟栖鸦一闻此声，俱忒楞楞飞起远避，不忍再听。真是：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "anger",
+    "duration": 1.6
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "越想越伤感起来，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-127",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "花魂默默无情绪",
+  "place": "大观园 · 怡红院门外",
+  "focus": "gate_step",
+  "speaker": "narrator",
+  "text": "花魂默默无情绪，鸟梦痴痴何处惊。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "花魂默默无情绪，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-128",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "因有一首诗道",
+  "place": "大观园 · 怡红院门外",
+  "focus": "gate_step",
+  "speaker": "narrator",
+  "text": "因有一首诗道：",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "因有一首诗道：",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-129",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "颦儿才貌世应希",
+  "place": "大观园 · 怡红院门外",
+  "focus": "gate_step",
+  "speaker": "narrator",
+  "text": "颦儿才貌世应希，独抱幽芳出绣闺， 呜咽一声犹未了，落花满地鸟惊飞。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "颦儿才貌世应希，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ },
+ {
+  "id": "C26-130",
+  "chapter": "c26-bumen",
+  "scene": "yihong",
+  "title": "那林黛玉正自啼哭",
+  "place": "大观园 · 怡红院门外",
+  "focus": "gate_step",
+  "speaker": "narrator",
+  "text": "那林黛玉正自啼哭，忽听「吱喽」一声，院门开处，不知是那一个出来。要知端的，且听下回分解。",
+  "actions": [
+   {
+    "type": "effect",
+    "actor": "daiyu",
+    "kind": "rest",
+    "duration": 1.4
+   }
+  ],
+  "source": {
+   "chapter": 26,
+   "paragraphLead": "那林黛玉正自啼哭，",
+   "textKind": "verbatim",
+   "layer": "present"
+  }
+ }
+]

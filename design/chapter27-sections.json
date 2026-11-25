@@ -1,0 +1,100 @@
+[
+ {
+  "id": "c27-daiyu",
+  "title": "潇湘馆 · 黛玉悲泣卸妆",
+  "scene": "daguanyuan",
+  "start": "C27-001",
+  "book": 27
+ },
+ {
+  "id": "c27-mangzhong",
+  "title": "大观园 · 芒种饯花神",
+  "scene": "daguanyuan",
+  "start": "C27-005",
+  "book": 27
+ },
+ {
+  "id": "c27-baochai",
+  "title": "大观园 · 宝钗往潇湘馆",
+  "scene": "daguanyuan",
+  "start": "C27-012",
+  "book": 27
+ },
+ {
+  "id": "c27-pudie",
+  "title": "沁芳亭 · 宝钗扑蝶到滴翠亭",
+  "scene": "qinfang",
+  "start": "C27-019",
+  "book": 27
+ },
+ {
+  "id": "c27-touting",
+  "title": "滴翠亭 · 亭外偷听手帕子",
+  "scene": "qinfang",
+  "start": "C27-025",
+  "book": 27
+ },
+ {
+  "id": "c27-jintao",
+  "title": "滴翠亭 · 金蝉脱壳",
+  "scene": "qinfang",
+  "start": "C27-034",
+  "book": 27
+ },
+ {
+  "id": "c27-hongyu",
+  "title": "滴翠亭 · 红玉坠儿后怕",
+  "scene": "qinfang",
+  "start": "C27-044",
+  "book": 27
+ },
+ {
+  "id": "c27-fengjiao",
+  "title": "沁芳亭 · 凤姐山坡使唤",
+  "scene": "qinfang",
+  "start": "C27-049",
+  "book": 27
+ },
+ {
+  "id": "c27-wen",
+  "title": "大观园 · 红玉问路遇晴雯",
+  "scene": "daguanyuan",
+  "start": "C27-056",
+  "book": 27
+ },
+ {
+  "id": "c27-lishi",
+  "title": "稻香村 · 回话李纨凤姐",
+  "scene": "daguanyuan",
+  "start": "C27-069",
+  "book": 27
+ },
+ {
+  "id": "c27-daiyu2",
+  "title": "潇湘馆 · 黛玉梳洗见宝玉",
+  "scene": "daguanyuan",
+  "start": "C27-088",
+  "book": 27
+ },
+ {
+  "id": "c27-tanchun",
+  "title": "大观园 · 石榴树下探春说鞋",
+  "scene": "daguanyuan",
+  "start": "C27-094",
+  "book": 27
+ },
+ {
+  "id": "c27-huazhong",
+  "title": "花冢 · 宝玉收落花",
+  "scene": "qinfang",
+  "start": "C27-108",
+  "book": 27
+ },
+ {
+  "id": "c27-zanghua",
+  "title": "花冢 · 黛玉泣残红与葬花吟",
+  "scene": "qinfang",
+  "start": "C27-116",
+  "book": 27
+ }
+]

@@ -4,7 +4,7 @@
   "name": "荣国府手绘素材",
   "tilewidth": 1100,
   "tileheight": 1024,
-  "tilecount": 304,
+  "tilecount": 324,
   "columns": 0,
   "objectalignment": "bottom",
   "tiles": [
@@ -3702,6 +3702,266 @@
     },
     {
       "id": 284,
+      "image": "../public/assets/rongguo/jiahui-portrait.png",
+      "imagewidth": 168,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "jiahui-portrait"
+        }
+      ]
+    },
+    {
+      "id": 285,
+      "image": "../public/assets/rongguo/jiahui-chibi.png",
+      "imagewidth": 73,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "jiahui-chibi"
+        }
+      ]
+    },
+    {
+      "id": 286,
+      "image": "../public/assets/rongguo/zhuer-portrait.png",
+      "imagewidth": 189,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "zhuer-portrait"
+        }
+      ]
+    },
+    {
+      "id": 287,
+      "image": "../public/assets/rongguo/zhuer-chibi.png",
+      "imagewidth": 80,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "zhuer-chibi"
+        }
+      ]
+    },
+    {
+      "id": 288,
+      "image": "../public/assets/rongguo/qingwen-portrait.png",
+      "imagewidth": 166,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "qingwen-portrait"
+        }
+      ]
+    },
+    {
+      "id": 289,
+      "image": "../public/assets/rongguo/qingwen-chibi.png",
+      "imagewidth": 49,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "qingwen-chibi"
+        }
+      ]
+    },
+    {
+      "id": 290,
+      "image": "../public/assets/rongguo/qixian-portrait.png",
+      "imagewidth": 168,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "qixian-portrait"
+        }
+      ]
+    },
+    {
+      "id": 291,
+      "image": "../public/assets/rongguo/qixian-chibi.png",
+      "imagewidth": 58,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "qixian-chibi"
+        }
+      ]
+    },
+    {
+      "id": 292,
+      "image": "../public/assets/rongguo/siqi-portrait.png",
+      "imagewidth": 185,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "siqi-portrait"
+        }
+      ]
+    },
+    {
+      "id": 293,
+      "image": "../public/assets/rongguo/siqi-chibi.png",
+      "imagewidth": 60,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "siqi-chibi"
+        }
+      ]
+    },
+    {
+      "id": 294,
+      "image": "../public/assets/rongguo/feng_ziying-portrait.png",
+      "imagewidth": 180,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "feng_ziying-portrait"
+        }
+      ]
+    },
+    {
+      "id": 295,
+      "image": "../public/assets/rongguo/feng_ziying-chibi.png",
+      "imagewidth": 54,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "feng_ziying-chibi"
+        }
+      ]
+    },
+    {
+      "id": 296,
+      "image": "../public/assets/rongguo/jiang_yuhan-portrait.png",
+      "imagewidth": 293,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "jiang_yuhan-portrait"
+        }
+      ]
+    },
+    {
+      "id": 297,
+      "image": "../public/assets/rongguo/jiang_yuhan-chibi.png",
+      "imagewidth": 61,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "jiang_yuhan-chibi"
+        }
+      ]
+    },
+    {
+      "id": 298,
+      "image": "../public/assets/rongguo/yun_er-portrait.png",
+      "imagewidth": 214,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "yun_er-portrait"
+        }
+      ]
+    },
+    {
+      "id": 299,
+      "image": "../public/assets/rongguo/yun_er-chibi.png",
+      "imagewidth": 72,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "yun_er-chibi"
+        }
+      ]
+    },
+    {
+      "id": 300,
+      "image": "../public/assets/rongguo/zhang_daoshi-portrait.png",
+      "imagewidth": 213,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "zhang_daoshi-portrait"
+        }
+      ]
+    },
+    {
+      "id": 301,
+      "image": "../public/assets/rongguo/zhang_daoshi-chibi.png",
+      "imagewidth": 65,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "zhang_daoshi-chibi"
+        }
+      ]
+    },
+    {
+      "id": 302,
+      "image": "../public/assets/rongguo/lingguan-portrait.png",
+      "imagewidth": 172,
+      "imageheight": 600,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "lingguan-portrait"
+        }
+      ]
+    },
+    {
+      "id": 303,
+      "image": "../public/assets/rongguo/lingguan-chibi.png",
+      "imagewidth": 59,
+      "imageheight": 116,
+      "properties": [
+        {
+          "name": "asset",
+          "type": "string",
+          "value": "lingguan-chibi"
+        }
+      ]
+    },
+    {
+      "id": 304,
       "image": "../public/assets/rongguo/baoyu-portrait-angry.png",
       "imagewidth": 346,
       "imageheight": 600,
@@ -3714,7 +3974,7 @@
       ]
     },
     {
-      "id": 285,
+      "id": 305,
       "image": "../public/assets/rongguo/baoyu-portrait-joy.png",
       "imagewidth": 346,
       "imageheight": 600,
@@ -3727,7 +3987,7 @@
       ]
     },
     {
-      "id": 286,
+      "id": 306,
       "image": "../public/assets/rongguo/baoyu-portrait-sad.png",
       "imagewidth": 346,
       "imageheight": 600,
@@ -3740,7 +4000,7 @@
       ]
     },
     {
-      "id": 287,
+      "id": 307,
       "image": "../public/assets/rongguo/baoyu-portrait-surprise.png",
       "imagewidth": 346,
       "imageheight": 600,
@@ -3753,7 +4013,7 @@
       ]
     },
     {
-      "id": 288,
+      "id": 308,
       "image": "../public/assets/rongguo/daiyu-portrait-angry.png",
       "imagewidth": 311,
       "imageheight": 720,
@@ -3766,7 +4026,7 @@
       ]
     },
     {
-      "id": 289,
+      "id": 309,
       "image": "../public/assets/rongguo/daiyu-portrait-joy.png",
       "imagewidth": 311,
       "imageheight": 720,
@@ -3779,7 +4039,7 @@
       ]
     },
     {
-      "id": 290,
+      "id": 310,
       "image": "../public/assets/rongguo/daiyu-portrait-sad.png",
       "imagewidth": 311,
       "imageheight": 720,
@@ -3792,7 +4052,7 @@
       ]
     },
     {
-      "id": 291,
+      "id": 311,
       "image": "../public/assets/rongguo/daiyu-portrait-surprise.png",
       "imagewidth": 311,
       "imageheight": 720,
@@ -3805,7 +4065,7 @@
       ]
     },
     {
-      "id": 292,
+      "id": 312,
       "image": "../public/assets/rongguo/feng-portrait-angry.png",
       "imagewidth": 190,
       "imageheight": 600,
@@ -3818,7 +4078,7 @@
       ]
     },
     {
-      "id": 293,
+      "id": 313,
       "image": "../public/assets/rongguo/feng-portrait-joy.png",
       "imagewidth": 190,
       "imageheight": 600,
@@ -3831,7 +4091,7 @@
       ]
     },
     {
-      "id": 294,
+      "id": 314,
       "image": "../public/assets/rongguo/feng-portrait-sad.png",
       "imagewidth": 190,
       "imageheight": 600,
@@ -3844,7 +4104,7 @@
       ]
     },
     {
-      "id": 295,
+      "id": 315,
       "image": "../public/assets/rongguo/feng-portrait-surprise.png",
       "imagewidth": 190,
       "imageheight": 600,
@@ -3857,7 +4117,7 @@
       ]
     },
     {
-      "id": 296,
+      "id": 316,
       "image": "../public/assets/rongguo/grandmother-portrait-angry.png",
       "imagewidth": 296,
       "imageheight": 600,
@@ -3870,7 +4130,7 @@
       ]
     },
     {
-      "id": 297,
+      "id": 317,
       "image": "../public/assets/rongguo/grandmother-portrait-joy.png",
       "imagewidth": 296,
       "imageheight": 600,
@@ -3883,7 +4143,7 @@
       ]
     },
     {
-      "id": 298,
+      "id": 318,
       "image": "../public/assets/rongguo/grandmother-portrait-sad.png",
       "imagewidth": 296,
       "imageheight": 600,
@@ -3896,7 +4156,7 @@
       ]
     },
     {
-      "id": 299,
+      "id": 319,
       "image": "../public/assets/rongguo/grandmother-portrait-surprise.png",
       "imagewidth": 296,
       "imageheight": 600,
@@ -3909,7 +4169,7 @@
       ]
     },
     {
-      "id": 300,
+      "id": 320,
       "image": "../public/assets/rongguo/baoyu-portrait-mourning.png",
       "imagewidth": 352,
       "imageheight": 608,
@@ -3922,7 +4182,7 @@
       ]
     },
     {
-      "id": 301,
+      "id": 321,
       "image": "../public/assets/rongguo/feng-portrait-mourning.png",
       "imagewidth": 192,
       "imageheight": 608,
@@ -3935,7 +4195,7 @@
       ]
     },
     {
-      "id": 302,
+      "id": 322,
       "image": "../public/assets/rongguo/grandmother-portrait-mourning.png",
       "imagewidth": 288,
       "imageheight": 608,
@@ -3948,7 +4208,7 @@
       ]
     },
     {
-      "id": 303,
+      "id": 323,
       "image": "../public/assets/rongguo/shui_rong-portrait-mourning.png",
       "imagewidth": 768,
       "imageheight": 1024,

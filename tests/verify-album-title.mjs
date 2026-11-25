@@ -50,9 +50,9 @@ try{
   console.log('面板标题:',title);
 
   const names=await page.locator('.cast-gallery article strong').allTextContents();
-  // 末回的新角色必须在册。第 25 回新登场两人：马道婆、彩霞。
-  // 这里跟着末回走：第 26 回上线后，把这两人换成那一回的新角色即可。
-  const NEW_OF_LAST_BOOK=['马道婆','彩霞'];
+  // 末回的新角色必须在册。第 30 回新登场：龄官。
+  // 这里跟着末回走：再加回时把这里换成那一回的新角色。
+  const NEW_OF_LAST_BOOK=['龄官'];
   for(const name of NEW_OF_LAST_BOOK){
     assert.ok(names.includes(name),`${name} must be in the album, got ${names.length} names`);
   }

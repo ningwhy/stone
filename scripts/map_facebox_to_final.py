@@ -77,6 +77,20 @@ def final_geometry(manifest, calibration, key):
     bbox = im.getbbox()
     if bbox is None:
         raise ValueError(f'{key}: blank matte')
+    # `im.getbbox()` returns the box of every non-zero *channel*, so a matte
+    # that still carries its white background reports the whole canvas and
+    # the crop offset comes out as zero. `build_art_assets.py` crops to the
+    # box of the pixels that are actually opaque (alpha >= 110), and that is
+    # the box the final bitmap is cut from, so the same test has to be used
+    # here or the mapped box lands outside the picture.
+    alpha = np.asarray(im.getchannel('A'))
+    solid = np.where(alpha >= 110, 255, 0).astype('uint8')
+    solid_rows = np.where(solid.max(axis=1) > 0)[0]
+    solid_cols = np.where(solid.max(axis=0) > 0)[0]
+    if len(solid_rows) == 0 or len(solid_cols) == 0:
+        raise ValueError(f'{key}: blank matte')
+    bbox = (int(solid_cols.min()), int(solid_rows.min()),
+            int(solid_cols.max()) + 1, int(solid_rows.max()) + 1)
 
     factor = item['width'] / im.width if 'width' in item else item['height'] / im.height
     size = (round(im.width * factor), round(im.height * factor))

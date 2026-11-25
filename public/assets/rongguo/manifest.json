@@ -6453,10 +6453,10 @@
    "source": "art/source/yuanchun-portrait_s10234000-01.png",
    "matte": "art/matted/yuanchun-portrait_s10234000-sam.png",
    "crop": [
-    0,
-    0,
-    287,
-    600
+    201,
+    102,
+    642,
+    1024
    ],
    "shear": 0,
    "mirror": false,
@@ -6480,15 +6480,15 @@
    "height": 116,
    "anchor": [
     24.583,
-    115.769
+    115.399
    ],
    "source": "art/source/yuanchun-chibi_s10234001-01.png",
    "matte": "art/matted/yuanchun-chibi_s10234001-sam.png",
    "crop": [
-    0,
-    0,
-    46,
-    116
+    261,
+    140,
+    508,
+    765
    ],
    "shear": 0,
    "mirror": false,
@@ -6520,10 +6520,10 @@
    "source": "art/source/jia_lian-portrait_s10234002-01.png",
    "matte": "art/matted/jia_lian-portrait_s10234002-sam.png",
    "crop": [
-    0,
-    0,
-    180,
-    600
+    268,
+    113,
+    529,
+    985
    ],
    "shear": 0,
    "mirror": false,
@@ -6546,16 +6546,16 @@
    "width": 48,
    "height": 116,
    "anchor": [
-    20.015,
-    115.874
+    19.938,
+    115.323
    ],
    "source": "art/source/jia_lian-chibi_s10234003-01.png",
    "matte": "art/matted/jia_lian-chibi_s10234003-sam.png",
    "crop": [
-    0,
-    0,
-    48,
-    116
+    246,
+    140,
+    506,
+    771
    ],
    "shear": 0,
    "mirror": false,
@@ -6587,10 +6587,10 @@
    "source": "art/source/jia_huan-portrait_s10234010-01.png",
    "matte": "art/matted/jia_huan-portrait_s10234010-sam.png",
    "crop": [
-    0,
-    0,
-    169,
-    600
+    237,
+    56,
+    535,
+    1113
    ],
    "shear": 0,
    "mirror": false,
@@ -6614,15 +6614,15 @@
    "height": 116,
    "anchor": [
     47.448,
-    115.894
+    115.401
    ],
    "source": "art/source/jia_huan-chibi_s10234011-01.png",
    "matte": "art/matted/jia_huan-chibi_s10234011-sam.png",
    "crop": [
-    0,
-    0,
-    66,
-    116
+    154,
+    48,
+    556,
+    753
    ],
    "shear": 0,
    "mirror": false,
@@ -6654,10 +6654,10 @@
    "source": "art/source/zhao_yiniang-portrait_s10234020-01.png",
    "matte": "art/matted/zhao_yiniang-portrait_s10234020-sam.png",
    "crop": [
-    0,
-    0,
-    191,
-    600
+    192,
+    31,
+    540,
+    1126
    ],
    "shear": 0,
    "mirror": false,
@@ -6680,16 +6680,16 @@
    "width": 68,
    "height": 116,
    "anchor": [
-    40.683,
-    115.914
+    40.094,
+    115.382
    ],
    "source": "art/source/zhao_yiniang-chibi_s10234021-01.png",
    "matte": "art/matted/zhao_yiniang-chibi_s10234021-sam.png",
    "crop": [
-    0,
-    0,
-    68,
-    116
+    189,
+    91,
+    574,
+    744
    ],
    "shear": 0,
    "mirror": false,
@@ -6721,10 +6721,10 @@
    "source": "art/source/shi_xiangyun-portrait_s10234030-01.png",
    "matte": "art/matted/shi_xiangyun-portrait_s10234030-sam.png",
    "crop": [
-    0,
-    0,
-    188,
-    600
+    232,
+    35,
+    572,
+    1122
    ],
    "shear": 0,
    "mirror": false,
@@ -6748,15 +6748,15 @@
    "height": 116,
    "anchor": [
     55.011,
-    115.912
+    115.573
    ],
    "source": "art/source/shi_xiangyun-chibi_s10234031-01.png",
    "matte": "art/matted/shi_xiangyun-chibi_s10234031-sam.png",
    "crop": [
-    0,
-    0,
-    76,
-    116
+    149,
+    78,
+    598,
+    762
    ],
    "shear": 0,
    "mirror": false,
@@ -6788,10 +6788,10 @@
    "source": "art/source/she_yue-portrait_s10234040-01.png",
    "matte": "art/matted/she_yue-portrait_s10234040-sam.png",
    "crop": [
-    0,
-    0,
-    147,
-    600
+    258,
+    52,
+    518,
+    1116
    ],
    "shear": 0,
    "mirror": false,
@@ -6815,15 +6815,15 @@
    "height": 116,
    "anchor": [
     31.667,
-    115.879
+    115.545
    ],
    "source": "art/source/she_yue-chibi_s10234041-01.png",
    "matte": "art/matted/she_yue-chibi_s10234041-sam.png",
    "crop": [
-    0,
-    0,
-    58,
-    116
+    204,
+    61,
+    552,
+    755
    ],
    "shear": 0,
    "mirror": false,
@@ -6855,10 +6855,10 @@
    "source": "art/source/zijun-portrait_s10234050-01.png",
    "matte": "art/matted/zijun-portrait_s10234050-sam.png",
    "crop": [
-    0,
-    0,
-    157,
-    600
+    259,
+    39,
+    542,
+    1122
    ],
    "shear": 0,
    "mirror": false,
@@ -6882,15 +6882,15 @@
    "height": 116,
    "anchor": [
     26.182,
-    115.855
+    115.513
    ],
    "source": "art/source/zijun-chibi_s10234051-01.png",
    "matte": "art/matted/zijun-chibi_s10234051-sam.png",
    "crop": [
-    0,
-    0,
-    64,
-    116
+    198,
+    69,
+    572,
+    745
    ],
    "shear": 0,
    "mirror": false,
@@ -6922,10 +6922,10 @@
    "source": "art/source/cui_lv-portrait_s10234060-01.png",
    "matte": "art/matted/cui_lv-portrait_s10234060-sam.png",
    "crop": [
-    0,
-    0,
-    196,
-    600
+    217,
+    42,
+    569,
+    1120
    ],
    "shear": 0,
    "mirror": false,
@@ -6948,16 +6948,16 @@
    "width": 69,
    "height": 116,
    "anchor": [
-    30.144,
-    115.987
+    29.713,
+    115.488
    ],
    "source": "art/source/cui_lv-chibi_s10234061-01.png",
    "matte": "art/matted/cui_lv-chibi_s10234061-sam.png",
    "crop": [
-    0,
-    0,
-    69,
-    116
+    178,
+    59,
+    596,
+    757
    ],
    "shear": 0,
    "mirror": false,
@@ -6989,10 +6989,10 @@
    "source": "art/source/si_er-portrait_s10234070-01.png",
    "matte": "art/matted/si_er-portrait_s10234070-sam.png",
    "crop": [
-    0,
-    0,
-    164,
-    600
+    237,
+    38,
+    532,
+    1115
    ],
    "shear": 0,
    "mirror": false,
@@ -7016,15 +7016,15 @@
    "height": 116,
    "anchor": [
     22.263,
-    115.899
+    115.584
    ],
    "source": "art/source/si_er-chibi_s10234071-01.png",
    "matte": "art/matted/si_er-chibi_s10234071-sam.png",
    "crop": [
-    0,
-    0,
-    54,
-    116
+    206,
+    50,
+    548,
+    786
    ],
    "shear": 0,
    "mirror": false,
@@ -7058,8 +7058,8 @@
    "crop": [
     0,
     0,
-    385,
-    600
+    726,
+    1131
    ],
    "shear": 0,
    "mirror": false,
@@ -7082,16 +7082,16 @@
    "width": 103,
    "height": 116,
    "anchor": [
-    95.448,
-    116.705
+    96.35,
+    115.958
    ],
    "source": "art/source/jia_lan-chibi_s10234081-01.png",
    "matte": "art/matted/jia_lan-chibi_s10234081-sam.png",
    "crop": [
     0,
     0,
-    103,
-    116
+    697,
+    782
    ],
    "shear": 0,
    "mirror": false,
@@ -7123,10 +7123,10 @@
    "source": "art/source/jinyuan-portrait_s10234090-01.png",
    "matte": "art/matted/jinyuan-portrait_s10234090-sam.png",
    "crop": [
-    0,
-    0,
-    214,
-    600
+    207,
+    68,
+    583,
+    1120
    ],
    "shear": 0,
    "mirror": false,
@@ -7149,16 +7149,16 @@
    "width": 75,
    "height": 116,
    "anchor": [
-    38.085,
-    115.798
+    37.584,
+    115.463
    ],
    "source": "art/source/jinyuan-chibi_s10234091-01.png",
    "matte": "art/matted/jinyuan-chibi_s10234091-sam.png",
    "crop": [
-    0,
-    0,
-    75,
-    116
+    162,
+    55,
+    611,
+    746
    ],
    "shear": 0,
    "mirror": false,
@@ -7190,10 +7190,10 @@
    "source": "art/source/caiyun-portrait_s10234100-01.png",
    "matte": "art/matted/caiyun-portrait_s10234100-sam.png",
    "crop": [
-    0,
-    0,
-    166,
-    600
+    248,
+    44,
+    545,
+    1118
    ],
    "shear": 0,
    "mirror": false,
@@ -7217,15 +7217,15 @@
    "height": 116,
    "anchor": [
     36.519,
-    115.941
+    115.391
    ],
    "source": "art/source/caiyun-chibi_s10234101-01.png",
    "matte": "art/matted/caiyun-chibi_s10234101-sam.png",
    "crop": [
-    0,
-    0,
-    64,
-    116
+    220,
+    103,
+    567,
+    735
    ],
    "shear": 0,
    "mirror": false,
@@ -7257,10 +7257,10 @@
    "source": "art/source/jia_qin-portrait_s10234110-01.png",
    "matte": "art/matted/jia_qin-portrait_s10234110-sam.png",
    "crop": [
-    0,
-    0,
-    192,
-    600
+    202,
+    32,
+    551,
+    1125
    ],
    "shear": 0,
    "mirror": false,
@@ -7284,15 +7284,15 @@
    "height": 116,
    "anchor": [
     22.712,
-    115.973
+    115.469
    ],
    "source": "art/source/jia_qin-chibi_s10234111-01.png",
    "matte": "art/matted/jia_qin-chibi_s10234111-sam.png",
    "crop": [
-    0,
-    0,
-    60,
-    116
+    197,
+    71,
+    551,
+    761
    ],
    "shear": 0,
    "mirror": false,
@@ -7324,10 +7324,10 @@
    "source": "art/source/jia_yun-portrait_s10234120-01.png",
    "matte": "art/matted/jia_yun-portrait_s10234120-sam.png",
    "crop": [
-    0,
-    0,
-    169,
-    600
+    244,
+    53,
+    541,
+    1109
    ],
    "shear": 0,
    "mirror": false,
@@ -7351,15 +7351,15 @@
    "height": 116,
    "anchor": [
     29.286,
-    115.778
+    115.433
    ],
    "source": "art/source/jia_yun-chibi_s10234121-01.png",
    "matte": "art/matted/jia_yun-chibi_s10234121-sam.png",
    "crop": [
-    0,
-    0,
-    41,
-    116
+    258,
+    79,
+    496,
+    750
    ],
    "shear": 0,
    "mirror": false,
@@ -7391,10 +7391,10 @@
    "source": "art/source/xiaohong-portrait_s10234130-01.png",
    "matte": "art/matted/xiaohong-portrait_s10234130-sam.png",
    "crop": [
-    0,
-    0,
-    151,
-    600
+    244,
+    32,
+    517,
+    1114
    ],
    "shear": 0,
    "mirror": false,
@@ -7418,15 +7418,15 @@
    "height": 116,
    "anchor": [
     27.169,
-    115.879
+    115.543
    ],
    "source": "art/source/xiaohong-chibi_s10234131-01.png",
    "matte": "art/matted/xiaohong-chibi_s10234131-sam.png",
    "crop": [
-    0,
-    0,
-    54,
-    116
+    221,
+    65,
+    541,
+    756
    ],
    "shear": 0,
    "mirror": false,
@@ -7458,10 +7458,10 @@
    "source": "art/source/ni_er-portrait_s10234140-01.png",
    "matte": "art/matted/ni_er-portrait_s10234140-sam.png",
    "crop": [
-    0,
-    0,
-    270,
-    600
+    143,
+    29,
+    641,
+    1135
    ],
    "shear": 0,
    "mirror": false,
@@ -7485,15 +7485,15 @@
    "height": 116,
    "anchor": [
     67.192,
-    115.917
+    115.402
    ],
    "source": "art/source/ni_er-chibi_s10234141-01.png",
    "matte": "art/matted/ni_er-chibi_s10234141-sam.png",
    "crop": [
-    0,
-    0,
-    94,
-    116
+    122,
+    70,
+    669,
+    745
    ],
    "shear": 0,
    "mirror": false,
@@ -7525,10 +7525,10 @@
    "source": "art/source/bu_shi_ren-portrait_s10234150-01.png",
    "matte": "art/matted/bu_shi_ren-portrait_s10234150-sam.png",
    "crop": [
-    0,
-    0,
-    180,
-    600
+    231,
+    52,
+    547,
+    1107
    ],
    "shear": 0,
    "mirror": false,
@@ -7552,15 +7552,15 @@
    "height": 116,
    "anchor": [
     36.131,
-    115.915
+    115.389
    ],
    "source": "art/source/bu_shi_ren-chibi_s10234151-01.png",
    "matte": "art/matted/bu_shi_ren-chibi_s10234151-sam.png",
    "crop": [
-    0,
-    0,
-    48,
-    116
+    248,
+    84,
+    523,
+    745
    ],
    "shear": 0,
    "mirror": false,
@@ -7592,10 +7592,10 @@
    "source": "art/source/xiangling-portrait_s10234160-01.png",
    "matte": "art/matted/xiangling-portrait_s10234160-sam.png",
    "crop": [
-    0,
-    0,
-    166,
-    600
+    246,
+    53,
+    539,
+    1112
    ],
    "shear": 0,
    "mirror": false,
@@ -7619,15 +7619,15 @@
    "height": 116,
    "anchor": [
     37.19,
-    115.902
+    115.339
    ],
    "source": "art/source/xiangling-chibi_s10234161-01.png",
    "matte": "art/matted/xiangling-chibi_s10234161-sam.png",
    "crop": [
-    0,
-    0,
-    71,
-    116
+    199,
+    111,
+    577,
+    729
    ],
    "shear": 0,
    "mirror": false,
@@ -7659,10 +7659,10 @@
    "source": "art/source/qiuwen-portrait_s10234170-01.png",
    "matte": "art/matted/qiuwen-portrait_s10234170-sam.png",
    "crop": [
-    0,
-    0,
-    227,
-    600
+    209,
+    43,
+    612,
+    1107
    ],
    "shear": 0,
    "mirror": false,
@@ -7686,15 +7686,15 @@
    "height": 116,
    "anchor": [
     25.486,
-    115.902
+    115.378
    ],
    "source": "art/source/qiuwen-chibi_s10234171-01.png",
    "matte": "art/matted/qiuwen-chibi_s10234171-sam.png",
    "crop": [
-    0,
-    0,
-    70,
-    116
+    175,
+    85,
+    576,
+    749
    ],
    "shear": 0,
    "mirror": false,
@@ -7726,10 +7726,10 @@
    "source": "art/source/bihen-portrait_s10234180-01.png",
    "matte": "art/matted/bihen-portrait_s10234180-sam.png",
    "crop": [
-    0,
-    0,
-    156,
-    600
+    216,
+    50,
+    494,
+    1118
    ],
    "shear": 0,
    "mirror": false,
@@ -7753,15 +7753,15 @@
    "height": 116,
    "anchor": [
     37.543,
-    115.986
+    115.473
    ],
    "source": "art/source/bihen-chibi_s10234181-01.png",
    "matte": "art/matted/bihen-chibi_s10234181-sam.png",
    "crop": [
-    0,
-    0,
-    66,
-    116
+    192,
+    79,
+    577,
+    757
    ],
    "shear": 0,
    "mirror": false,
@@ -7793,10 +7793,10 @@
    "source": "art/source/yuan_yang-portrait_s10234190-01.png",
    "matte": "art/matted/yuan_yang-portrait_s10234190-sam.png",
    "crop": [
-    0,
-    0,
-    174,
-    600
+    239,
+    28,
+    555,
+    1120
    ],
    "shear": 0,
    "mirror": false,
@@ -7820,15 +7820,15 @@
    "height": 116,
    "anchor": [
     35.988,
-    115.766
+    115.443
    ],
    "source": "art/source/yuan_yang-chibi_s10234191-01.png",
    "matte": "art/matted/yuan_yang-chibi_s10234191-sam.png",
    "crop": [
-    0,
-    0,
-    56,
-    116
+    207,
+    42,
+    554,
+    759
    ],
    "shear": 0,
    "mirror": false,
@@ -7860,10 +7860,10 @@
    "source": "art/source/ma_dao_po-portrait_s10235100-01.png",
    "matte": "art/matted/ma_dao_po-portrait_s10235100-sam.png",
    "crop": [
-    0,
-    0,
-    181,
-    600
+    221,
+    56,
+    538,
+    1108
    ],
    "shear": 0,
    "mirror": false,
@@ -7887,15 +7887,15 @@
    "height": 116,
    "anchor": [
     43.167,
-    115.947
+    115.448
    ],
    "source": "art/source/ma_dao_po-chibi_s10235101-01.png",
    "matte": "art/matted/ma_dao_po-chibi_s10235101-sam.png",
    "crop": [
-    0,
-    0,
-    75,
-    116
+    171,
+    72,
+    621,
+    770
    ],
    "shear": 0,
    "mirror": false,
@@ -7927,10 +7927,10 @@
    "source": "art/source/cai_xia-portrait_s10235110-01.png",
    "matte": "art/matted/cai_xia-portrait_s10235110-sam.png",
    "crop": [
-    0,
-    0,
-    174,
-    600
+    248,
+    57,
+    554,
+    1115
    ],
    "shear": 0,
    "mirror": false,
@@ -7954,15 +7954,15 @@
    "height": 116,
    "anchor": [
     37.168,
-    115.76
+    115.319
    ],
    "source": "art/source/cai_xia-chibi_s10235111-01.png",
    "matte": "art/matted/cai_xia-chibi_s10235111-sam.png",
    "crop": [
-    0,
-    0,
-    75,
-    116
+    226,
+    165,
+    565,
+    690
    ],
    "shear": 0,
    "mirror": false,
@@ -7982,6 +7982,656 @@
     ]
    },
    "hash": "77d5b78fe8b0"
+  },
+  "jiahui-portrait": {
+   "image": "/assets/rongguo/jiahui-portrait.png",
+   "width": 168,
+   "height": 600,
+   "anchor": [
+    80.91,
+    599.439
+   ],
+   "source": "art/source/jiahui-portrait_s10236100-01.png",
+   "matte": "art/matted/jiahui-portrait_s10236100-sam.png",
+   "crop": [
+    239,
+    52,
+    538,
+    1122
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "jiahui",
+    "features": "怡红院小丫头；年纪小，替宝玉送茶叶给黛玉，得了钱便请红玉代收；心直口快，替红玉抱不平，听了「千里搭长棚」的话眼圈发红",
+    "seed": 10236100,
+    "faceBox": [42,
+     37,
+     93,
+     83
+    ]
+   },
+   "hash": "194e574a92ec"
+  },
+  "jiahui-chibi": {
+   "image": "/assets/rongguo/jiahui-chibi.png",
+   "width": 73,
+   "height": 116,
+   "anchor": [
+    38.473,
+    115.346
+   ],
+   "source": "art/source/jiahui-chibi_s10236101-01.png",
+   "matte": "art/matted/jiahui-chibi_s10236101-sam.png",
+   "crop": [
+    212,
+    147,
+    582,
+    736
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 389,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "jiahui",
+    "features": "怡红院小丫头；年纪小，替宝玉送茶叶给黛玉，得了钱便请红玉代收；心直口快，替红玉抱不平，听了「千里搭长棚」的话眼圈发红",
+    "seed": 10236101,
+    "faceBox": [14,
+     24,
+     53,
+     53
+    ]
+   },
+   "hash": "109249d4dd83"
+  },
+  "zhuer-portrait": {
+   "image": "/assets/rongguo/zhuer-portrait.png",
+   "width": 189,
+   "height": 600,
+   "anchor": [
+    105.955,
+    599.426
+   ],
+   "source": "art/source/zhuer-portrait_s10236110-01.png",
+   "matte": "art/matted/zhuer-portrait_s10236110-sam.png",
+   "crop": [
+    217,
+    79,
+    547,
+    1125
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "zhuer",
+    "features": "怡红院小丫头；被李嬷嬷打发引贾芸进院，回头又向红玉索取手帕谢礼；年纪小、贪嘴好利",
+    "seed": 10236110,
+    "faceBox": [58,
+     53,
+     109,
+     100
+    ]
+   },
+   "hash": "e1cdbb411f86"
+  },
+  "zhuer-chibi": {
+   "image": "/assets/rongguo/zhuer-chibi.png",
+   "width": 80,
+   "height": 116,
+   "anchor": [
+    42.966,
+    115.485
+   ],
+   "source": "art/source/zhuer-chibi_s10236111-01.png",
+   "matte": "art/matted/zhuer-chibi_s10236111-sam.png",
+   "crop": [
+    190,
+    115,
+    635,
+    764
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 404,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "zhuer",
+    "features": "怡红院小丫头；被李嬷嬷打发引贾芸进院，回头又向红玉索取手帕谢礼；年纪小、贪嘴好利",
+    "seed": 10236111,
+    "faceBox": [10,
+     23,
+     51,
+     58
+    ]
+   },
+   "hash": "9c100f5e4a3a"
+  },
+  "qingwen-portrait": {
+   "image": "/assets/rongguo/qingwen-portrait.png",
+   "width": 166,
+   "height": 600,
+   "anchor": [
+    96.881,
+    599.433
+   ],
+   "source": "art/source/qingwen-portrait_s10236120-01.png",
+   "matte": "art/matted/qingwen-portrait_s10236120-sam.png",
+   "crop": [
+    240,
+    52,
+    533,
+    1111
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "qingwen",
+    "features": "怡红院大丫鬟；生得模样标致、言谈爽利，性子骄傲尖刻；小红越房使唤时当面讥讽「爬上高枝儿去了」",
+    "seed": 10236120,
+    "faceBox": [38,
+     57,
+     89,
+     93
+    ]
+   },
+   "hash": "6341b3061298"
+  },
+  "qingwen-chibi": {
+   "image": "/assets/rongguo/qingwen-chibi.png",
+   "width": 49,
+   "height": 116,
+   "anchor": [
+    31.677,
+    115.424
+   ],
+   "source": "art/source/qingwen-chibi_s10236121-01.png",
+   "matte": "art/matted/qingwen-chibi_s10236121-sam.png",
+   "crop": [
+    239,
+    55,
+    536,
+    764
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 404,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "qingwen",
+    "features": "怡红院大丫鬟；生得模样标致、言谈爽利，性子骄傲尖刻；小红越房使唤时当面讥讽「爬上高枝儿去了」",
+    "seed": 10236121,
+    "faceBox": [4,
+     29,
+     41,
+     58
+    ]
+   },
+   "hash": "e8782ec95c1c"
+  },
+  "qixian-portrait": {
+   "image": "/assets/rongguo/qixian-portrait.png",
+   "width": 168,
+   "height": 600,
+   "anchor": [
+    71.12,
+    599.439
+   ],
+   "source": "art/source/qixian-portrait_s10236130-01.png",
+   "matte": "art/matted/qixian-portrait_s10236130-sam.png",
+   "crop": [
+    242,
+    52,
+    542,
+    1122
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "qixian",
+    "features": "怡红院丫鬟，又称绮大姐姐；命小红描花样，说话带讥诮",
+    "seed": 10236130,
+    "faceBox": [48,
+     39,
+     99,
+     76
+    ]
+   },
+   "hash": "c5419181046a"
+  },
+  "qixian-chibi": {
+   "image": "/assets/rongguo/qixian-chibi.png",
+   "width": 58,
+   "height": 116,
+   "anchor": [
+    28.638,
+    115.47
+   ],
+   "source": "art/source/qixian-chibi_s10236131-01.png",
+   "matte": "art/matted/qixian-chibi_s10236131-sam.png",
+   "crop": [
+    238,
+    110,
+    558,
+    749
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 396,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "qixian",
+    "features": "怡红院丫鬟，又称绮大姐姐；命小红描花样，说话带讥诮",
+    "seed": 10236131,
+    "faceBox": [7,
+     24,
+     41,
+     53
+    ]
+   },
+   "hash": "edb11e3ec707"
+  },
+  "siqi-portrait": {
+   "image": "/assets/rongguo/siqi-portrait.png",
+   "width": 185,
+   "height": 600,
+   "anchor": [
+    103.096,
+    599.428
+   ],
+   "source": "art/source/siqi-portrait_s10237140-01.png",
+   "matte": "art/matted/siqi-portrait_s10237140-sam.png",
+   "crop": [
+    0,
+    0,
+    185,
+    600
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "siqi",
+    "features": "迎春房中的大丫鬟；身量高大、性情硬朗，回红玉「没理论」。「身量高大」据第七十一回「穿红裙子梳鬅头高大丰壮身材的，是迎春房里的司棋」；红裙、鬅头亦据此。性别：女（底本称「这麼大丫頭」「這麼大丫頭了」，与鸳鸯、迎春同为女子）",
+    "seed": 10237140,
+    "faceBox": [43,
+     42,
+     80,
+     84
+    ]
+   },
+   "hash": "7014b79e2a7b"
+  },
+  "siqi-chibi": {
+   "image": "/assets/rongguo/siqi-chibi.png",
+   "width": 60,
+   "height": 116,
+   "anchor": [
+    24.217,
+    115.913
+   ],
+   "source": "art/source/siqi-chibi_s10237141-01.png",
+   "matte": "art/matted/siqi-chibi_s10237141-sam.png",
+   "crop": [
+    0,
+    0,
+    60,
+    116
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 394,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "siqi",
+    "features": "迎春房中的大丫鬟；身量高大、性情硬朗，回红玉「没理论」。「身量高大」据第七十一回「穿红裙子梳鬅头高大丰壮身材的，是迎春房里的司棋」；红裙、鬅头亦据此。性别：女（底本称「这麼大丫頭」「這麼大丫頭了」，与鸳鸯、迎春同为女子）",
+    "seed": 10237141,
+    "faceBox": [18,
+     43,
+     48,
+     66
+    ]
+   },
+   "hash": "afebd68d2b66"
+  },
+  "feng_ziying-portrait": {
+   "image": "/assets/rongguo/feng_ziying-portrait.png",
+   "width": 180,
+   "height": 600,
+   "anchor": [
+    118.723,
+    599.454
+   ],
+   "source": "art/source/feng_ziying-portrait_s10237100-01.png",
+   "matte": "art/matted/feng_ziying-portrait_s10237100-sam.png",
+   "crop": [
+    239,
+    35,
+    568,
+    1133
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "feng_ziying",
+    "features": "神武将军冯唐之子；宝玉的朋友，邀宝玉到家宴饮，言谈爽快带武人气质",
+    "seed": 10237100,
+    "faceBox": [50,
+     41,
+     101,
+     83
+    ]
+   },
+   "hash": "71e85c871459"
+  },
+  "feng_ziying-chibi": {
+   "image": "/assets/rongguo/feng_ziying-chibi.png",
+   "width": 54,
+   "height": 116,
+   "anchor": [
+    36.111,
+    115.462
+   ],
+   "source": "art/source/feng_ziying-chibi_s10237101-01.png",
+   "matte": "art/matted/feng_ziying-chibi_s10237101-sam.png",
+   "crop": [
+    216,
+    67,
+    539,
+    766
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 405,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "feng_ziying",
+    "features": "神武将军冯唐之子；宝玉的朋友，邀宝玉到家宴饮，言谈爽快带武人气质",
+    "seed": 10237101,
+    "faceBox": [8,
+     35,
+     45,
+     62
+    ]
+   },
+   "hash": "b55fc91168b5"
+  },
+  "jiang_yuhan-portrait": {
+   "image": "/assets/rongguo/jiang_yuhan-portrait.png",
+   "width": 293,
+   "height": 600,
+   "anchor": [
+    173.465,
+    599.444
+   ],
+   "source": "art/source/jiang_yuhan-portrait_s10237110-01.png",
+   "matte": "art/matted/jiang_yuhan-portrait_s10237110-sam.png",
+   "crop": [
+    101,
+    40,
+    628,
+    1120
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "jiang_yuhan",
+    "features": "唱小旦的伶人，艺名琪官；容貌俊美，性情温软，席间唱曲，解下茜香罗汗巾赠宝玉",
+    "seed": 10237110,
+    "faceBox": [118,
+     37,
+     156,
+     69
+    ]
+   },
+   "hash": "e496221d5ea2"
+  },
+  "jiang_yuhan-chibi": {
+   "image": "/assets/rongguo/jiang_yuhan-chibi.png",
+   "width": 61,
+   "height": 116,
+   "anchor": [
+    39.783,
+    115.421
+   ],
+   "source": "art/source/jiang_yuhan-chibi_s10237111-01.png",
+   "matte": "art/matted/jiang_yuhan-chibi_s10237111-sam.png",
+   "crop": [
+    204,
+    94,
+    549,
+    751
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 397,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "jiang_yuhan",
+    "features": "唱小旦的伶人，艺名琪官；容貌俊美，性情温软，席间唱曲，解下茜香罗汗巾赠宝玉",
+    "seed": 10237111,
+    "faceBox": [8,
+     31,
+     43,
+     57
+    ]
+   },
+   "hash": "d1287120ca19"
+  },
+  "yun_er-portrait": {
+   "image": "/assets/rongguo/yun_er-portrait.png",
+   "width": 214,
+   "height": 600,
+   "anchor": [
+    99.377,
+    599.437
+   ],
+   "source": "art/source/yun_er-portrait_s10237120-01.png",
+   "matte": "art/matted/yun_er-portrait_s10237120-sam.png",
+   "crop": [
+    188,
+    52,
+    567,
+    1117
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "yun_er",
+    "features": "锦香院陪酒的妓女；席间弹琵琶唱曲，言语风泼，与薛蟠冯紫英熟稔",
+    "seed": 10237120,
+    "faceBox": [95,
+     35,
+     151,
+     79
+    ]
+   },
+   "hash": "dd89a5ed9f73"
+  },
+  "yun_er-chibi": {
+   "image": "/assets/rongguo/yun_er-chibi.png",
+   "width": 72,
+   "height": 116,
+   "anchor": [
+    40.399,
+    115.456
+   ],
+   "source": "art/source/yun_er-chibi_s10237121-01.png",
+   "matte": "art/matted/yun_er-chibi_s10237121-sam.png",
+   "crop": [
+    196,
+    90,
+    597,
+    738
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 390,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "yun_er",
+    "features": "锦香院陪酒的妓女；席间弹琵琶唱曲，言语风泼，与薛蟠冯紫英熟稔",
+    "seed": 10237121,
+    "faceBox": [12,
+     29,
+     49,
+     63
+    ]
+   },
+   "hash": "3c559fdb3644"
+  },
+  "zhang_daoshi-portrait": {
+   "image": "/assets/rongguo/zhang_daoshi-portrait.png",
+   "width": 213,
+   "height": 600,
+   "anchor": [
+    120.342,
+    599.436
+   ],
+   "source": "art/source/zhang_daoshi-portrait_s10239100-01.png",
+   "matte": "art/matted/zhang_daoshi-portrait_s10239100-sam.png",
+   "crop": [
+    212,
+    63,
+    589,
+    1126
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "zhang_daoshi",
+    "features": "清虚观住持，宝玉寄名的干爷；须发皆白，言辞谨慎恭敬，贾母称他「老神仙」",
+    "seed": 10239100,
+    "faceBox": [55,
+     57,
+     111,
+     100
+    ]
+   },
+   "hash": "4cf8add8fb05"
+  },
+  "zhang_daoshi-chibi": {
+   "image": "/assets/rongguo/zhang_daoshi-chibi.png",
+   "width": 65,
+   "height": 116,
+   "anchor": [
+    45.728,
+    115.444
+   ],
+   "source": "art/source/zhang_daoshi-chibi_s10239101-01.png",
+   "matte": "art/matted/zhang_daoshi-chibi_s10239101-sam.png",
+   "crop": [
+    208,
+    69,
+    579,
+    728
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 385,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "zhang_daoshi",
+    "features": "清虚观住持，宝玉寄名的干爷；须发皆白，言辞谨慎恭敬，贾母称他「老神仙」",
+    "seed": 10239101,
+    "faceBox": [13,
+     27,
+     49,
+     52
+    ]
+   },
+   "hash": "f86bc64a437c"
+  },
+  "lingguan-portrait": {
+   "image": "/assets/rongguo/lingguan-portrait.png",
+   "width": 172,
+   "height": 600,
+   "anchor": [
+    57.879,
+    599.455
+   ],
+   "source": "art/source/lingguan-portrait_s10230100-01.png",
+   "matte": "art/matted/lingguan-portrait_s10230100-sam.png",
+   "crop": [
+    249,
+    32,
+    564,
+    1132
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": null,
+   "identity": {
+    "character": "lingguan",
+    "features": "梨香院十二官之一，唱小旦；眉蹙目愁，气质清高孤傲；在蔷薇架下用金簪划「蔷」字，与贾蔷相恋",
+    "seed": 10230100,
+    "faceBox": [38,
+     57,
+     89,
+     96
+    ]
+   },
+   "hash": "a1b00c0f6e02"
+  },
+  "lingguan-chibi": {
+   "image": "/assets/rongguo/lingguan-chibi.png",
+   "width": 59,
+   "height": 116,
+   "anchor": [
+    33.948,
+    115.501
+   ],
+   "source": "art/source/lingguan-chibi_s10230101-01.png",
+   "matte": "art/matted/lingguan-chibi_s10230101-sam.png",
+   "crop": [
+    225,
+    100,
+    550,
+    741
+   ],
+   "shear": 0,
+   "mirror": false,
+   "bodyCompress": {
+    "split": 392,
+    "factor": 0.64
+   },
+   "identity": {
+    "character": "lingguan",
+    "features": "梨香院十二官之一，唱小旦；眉蹙目愁，气质清高孤傲；在蔷薇架下用金簪划「蔷」字，与贾蔷相恋",
+    "seed": 10230101,
+    "faceBox": [8,
+     41,
+     46,
+     67
+    ]
+   },
+   "hash": "7f679c1ea5c0"
   },
   "baoyu-portrait-angry": {
    "image": "/assets/rongguo/baoyu-portrait-angry.png",

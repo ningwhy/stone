@@ -1,0 +1,86 @@
+[
+ {
+  "id": "c28-zanghua",
+  "title": "沁芳闸 · 黛玉葬花宝玉恸倒",
+  "scene": "qinfang",
+  "start": "C28-001",
+  "book": 28
+ },
+ {
+  "id": "c28-supu",
+  "title": "大观园 · 山坡诉肺腑",
+  "scene": "qinfang",
+  "start": "C28-006",
+  "book": 28
+ },
+ {
+  "id": "c28-wenyao",
+  "title": "王夫人上房 · 问药与配方",
+  "scene": "wang",
+  "start": "C28-017",
+  "book": 28
+ },
+ {
+  "id": "c28-fengyuan",
+  "title": "凤姐院 · 礼单与红玉",
+  "scene": "c6_wangchui",
+  "start": "C28-041",
+  "book": 28
+ },
+ {
+  "id": "c28-caijian",
+  "title": "贾母院 · 黛玉裁剪",
+  "scene": "entry",
+  "start": "C28-046",
+  "book": 28
+ },
+ {
+  "id": "c28-chumen",
+  "title": "荣府 · 焙茗取衣裳",
+  "scene": "entry",
+  "start": "C28-057",
+  "book": 28
+ },
+ {
+  "id": "c28-fuyan",
+  "title": "冯紫英家 · 赴宴",
+  "scene": "fengziying_home",
+  "start": "C28-060",
+  "book": 28
+ },
+ {
+  "id": "c28-xingling",
+  "title": "冯紫英家 · 宝玉发令",
+  "scene": "fengziying_home",
+  "start": "C28-065",
+  "book": 28
+ },
+ {
+  "id": "c28-zhongling",
+  "title": "冯紫英家 · 众人行令",
+  "scene": "fengziying_home",
+  "start": "C28-075",
+  "book": 28
+ },
+ {
+  "id": "c28-qixiang",
+  "title": "冯紫英家 · 情赠茜香罗",
+  "scene": "fengziying_home",
+  "start": "C28-099",
+  "book": 28
+ },
+ {
+  "id": "c28-hanjin",
+  "title": "怡红院 · 汗巾与节礼",
+  "scene": "yihong",
+  "start": "C28-105",
+  "book": 28
+ },
+ {
+  "id": "c28-daiyan",
+  "title": "贾母院 · 金玉与红麝串",
+  "scene": "entry",
+  "start": "C28-116",
+  "book": 28
+ }
+]

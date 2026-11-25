@@ -44,16 +44,16 @@ assert.equal(allBooks.length,bookCount,`bookNames must cover every chapter, got 
 // ★ 判据要覆盖**所有可搜路径**：正文、标题、地点、在场人物、段 id。
 //   名字出现在地点或人物表里照样能命中（目录搜索是全文匹配），
 //   只查正文是不够的。
-// 现在用「侍书」：她是黛玉房里的丫鬟，原著确有此人、尚未登场，
-// 二十四回的正文、标题、地点、在场人物、段 id 里一个字都没出现过，
-// 也不在 cast 表里（搜人名是靠在场人物命中的，她压根没被画过）。
+// 侍书被第二十九回推翻——清虚观一行里「探春的丫头侍书，翠墨」写进了正文，
+// 目录搜索照样命中。改用「春燕」：原著确有此人（后来的怡红院丫鬟），
+// 但第 1–30 回的正文、标题、地点、在场人物、段 id 与 cast 表全无此人。
 //
 // ★ 断言改为**直接复刻运行时索引**（src/toc.ts 的 searchText：标题 +
 //   地点 + 在场人物 + 正文 + 回次名 + 段 id），不再只扫 story JSON。
 //   上一版只扫 chapter*-story.json，于是「她在地点名里出现」这类情况
 //   根本查不出来——静态断言绿灯、浏览器断言却红，两边对不上。
 //   改成从 src/story.ts 实读 cast 与章节数据，与浏览器看到的是同一份。
-const absentSample='侍书';
+const absentSample='春燕';
 {
   const {chapters,story,cast:castTable}=await import('../src/story.ts');
   const all=chapters.map(section=>{
@@ -271,11 +271,10 @@ try{
     // （她恰在第二十回登场，还守着篦头那一场），「紫鹃」再被第二十一回推翻
     // （她恰在第二十一回登场，替黛玉递香皂），「檀云」最后被第二十三回推翻
     // （底本原句「室霭檀云品御香」里的「檀云」是檀香熏的云气，搜索照样
-    // 命中了她）。这里用「侍书」：
-    // 她是黛玉房里的丫鬟，原著确有此人、尚未登场，前二十四回一个字都没出现，
-    // 也不在 cast 表里——搜人名是靠在场人物命中的，她压根没被画过。
+    // 命中了她）。侍书又被第二十九回的「探春的丫头侍书，翠墨」推翻，
+    // 这里改用「春燕」：原著确有此人，前三十回一次也没出现，也不在 cast 表里。
     // 样本的静态校验在上方（那里复刻了运行时索引范围）；这里只验「搜不到」。
-    await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('侍书');
+    await toc.getByRole('searchbox',{name:'搜索剧情段落'}).fill('春燕');
  await page.waitForTimeout(150);
  assert.equal(await toc.locator('.toc-card').count(),0,'a name absent from the story must find nothing');
  assert.ok(await toc.locator('.toc-empty').count()>0,'an empty result must say so');
@@ -364,6 +363,32 @@ try{
  await page.screenshot({path:'artifacts/rongguo-travel.png',fullPage:true});
  await page.getByRole('button',{name:'继续演出',exact:true}).click();await page.waitForFunction(()=>!document.querySelector('[data-testid=world-travel-route]'));await reading();assert.equal(await node(),'U001');
  await page.getByRole('button',{name:'设置',exact:true}).click();await page.getByRole('checkbox',{name:'显示地图上的引导路线'}).check();assert.equal(await page.locator('dialog h2').textContent(),'阅读设置');await page.locator('dialog').getByRole('combobox').selectOption('2');await page.getByRole('checkbox',{name:'显示地图上的引导路线'}).uncheck();await page.keyboard.press('Escape');
+
+ // 「原文与改编」是读者看的「这本书改了什么」。它从前只写到前十九回，
+ // 第 20-30 回的十一段是后补的；补写时凭记忆写的一版里有好几处引文在底本里
+ // 查不到（黛玉的灯谜其实不是「更香」，「青埂峰下，别来无恙」也不是底本原话）。
+ // 所以这里把说明里的每一处引文都拿到底本里逐字核一遍——写错一个就红。
+ await page.getByRole('button',{name:'设置',exact:true}).click();
+ await page.getByRole('button',{name:'原文与改编'}).click();
+ await page.locator('.source-body').waitFor({timeout:20000});
+ const sourceNote=await page.locator('.source-body').textContent();
+ assert.ok(sourceNote.length>3000,`来源说明应有实质内容，实际长度 ${sourceNote.length}`);
+ assert.ok(!sourceNote.includes('前十九回'),'来源说明仍写着「前十九回」，口径未更新');
+ assert.ok(sourceNote.includes('前三十回'),'来源说明未声明覆盖前三十回');
+ for(const cn of ['二十','二十一','二十二','二十三','二十四','二十五','二十六','二十七','二十八','二十九','三十'])
+   assert.ok(sourceNote.includes(`第${cn}回`),`来源说明缺少第${cn}回的段落`);
+ const sourceQuotes=[...sourceNote.matchAll(/「([^」]{2,60})」/g)].map(m=>m[1]);
+ assert.ok(sourceQuotes.length>=20,`来源说明里的引文太少（${sourceQuotes.length}）`);
+ const normalize=(x)=>x.replace(/\s+/g,'').replace(/[“”‘’]/g,'「').replace(/[『』]/g,m=>m==='『'?'「':'」');
+ const sourceHaystack=[];
+ for(let n=1;n<=30;n++){
+   try{sourceHaystack.push(normalize(readFileSync(`docs/chapter${String(n).padStart(2,'0')}-source.txt`,'utf8')));}
+   catch{/* 某些早期底本可能没有落盘 */}
+ }
+ const haystack=sourceHaystack.join('');
+ const missingQuotes=sourceQuotes.filter(q=>q!=='原文段落起句'&&!haystack.includes(normalize(q)));
+ assert.deepEqual(missingQuotes,[],`以下引文在底本里查不到（可能是凭记忆写的转述）：${missingQuotes.join(' | ')}`);
+ await page.keyboard.press('Escape');
 
  // One switch, two readings: the button reads 自动 while the reader drives and 暂停 while
  // the story drives itself. There is no second button that looks live and does nothing.

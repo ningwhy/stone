@@ -2312,5 +2312,137 @@
   "noseOffset": 0.1382,
   "mouthOffset": 0.1276,
   "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "qingwen-portrait",
+  "kind": "portrait",
+  "facing": "right",
+  "votes": 3,
+  "voteDetail": [
+   "head-crop:right"
+  ],
+  "noseOffset": 0.1879,
+  "mouthOffset": 0.2685,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "qingwen-chibi",
+  "kind": "chibi",
+  "facing": "right",
+  "votes": 3,
+  "voteDetail": [
+   "head-crop:right"
+  ],
+  "noseOffset": 0.169,
+  "mouthOffset": 0.124,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "qixian-portrait",
+  "kind": "portrait",
+  "facing": "left",
+  "votes": 3,
+  "voteDetail": [
+   "head-crop:left"
+  ],
+  "noseOffset": -0.0516,
+  "mouthOffset": -0.1633,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "siqi-portrait",
+  "kind": "portrait",
+  "facing": "left",
+  "votes": 3,
+  "voteDetail": [
+   "head-crop:left"
+  ],
+  "noseOffset": -0.005,
+  "mouthOffset": -0.0739,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "feng_ziying-portrait",
+  "kind": "portrait",
+  "facing": "right",
+  "votes": 3,
+  "voteDetail": [
+   "head-crop:right"
+  ],
+  "noseOffset": 0.1296,
+  "mouthOffset": 0.1264,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "jiang_yuhan-portrait",
+  "kind": "portrait",
+  "facing": "right",
+  "votes": 3,
+  "voteDetail": [
+   "head-crop:right"
+  ],
+  "noseOffset": 0.4944,
+  "mouthOffset": 0.3489,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "jiang_yuhan-chibi",
+  "kind": "chibi",
+  "facing": "right",
+  "votes": 3,
+  "voteDetail": [
+   "head-crop:right"
+  ],
+  "noseOffset": 0.1355,
+  "mouthOffset": 0.1008,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "yun_er-portrait",
+  "kind": "portrait",
+  "facing": "right",
+  "votes": 3,
+  "voteDetail": [
+   "head-crop:right"
+  ],
+  "noseOffset": 0.5909,
+  "mouthOffset": 0.4625,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "yun_er-chibi",
+  "kind": "chibi",
+  "facing": "right",
+  "votes": 3,
+  "voteDetail": [
+   "head-crop:right"
+  ],
+  "noseOffset": 0.11,
+  "mouthOffset": 0.0012,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "zhang_daoshi-portrait",
+  "kind": "portrait",
+  "facing": "right",
+  "votes": 3,
+  "voteDetail": [
+   "head-crop:right"
+  ],
+  "noseOffset": 0.4258,
+  "mouthOffset": 0.2997,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "asset": "lingguan-portrait",
+  "kind": "portrait",
+  "facing": "right",
+  "votes": 3,
+  "voteDetail": [
+   "head-crop:right"
+  ],
+  "noseOffset": 0.1459,
+  "mouthOffset": 0.2646,
+  "method": "vision-landmark-geometry"
  }
 ]

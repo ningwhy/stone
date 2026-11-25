@@ -557,6 +557,76 @@
    "features": "底本无外貌描写，以下为视觉设计推定：王夫人房中丫鬟；与贾环相好、心气高，对宝玉淡淡不答理、夺手不肯；有咬嘴唇、戳额头的小动作",
    "prompt": "a proud young maid of sixteen with an oval face, level brows and steady eyes, a reserved and slightly disdainful expression, a maidservant in the women's quarters of a Qing-dynasty noble household who quietly favours the unfavoured young master and coolly rebuffs the pampered one, wearing a soft muted peach-and-cream two-piece maid outfit with a plain collar, hair in a simple side bun with a small plain pin",
    "seed": 10235110
+  },
+  {
+   "id": "jiahui",
+   "name": "佳蕙",
+   "features": "怡红院小丫头；年纪小，替宝玉送茶叶给黛玉，得了钱便请红玉代收；心直口快，替红玉抱不平，听了「千里搭长棚」的话眼圈发红。性别：女（底本称「个小丫头」，与红玉同为怡红院丫鬟）",
+   "prompt": "a lively thirteen-year-old maidservant GIRL in a Qing-dynasty noble household, a young girl and not a boy, with a round face, bright curious eyes and a slightly pouty mouth, simple and outspoken, wearing a plain pale celadon short jacket and light grey skirt with a small kerchief at her waist, hair in two small twin buns",
+   "seed": 10236100
+  },
+  {
+   "id": "zhuer",
+   "name": "坠儿",
+   "features": "怡红院小丫头；被李嬷嬷打发引贾芸进院，回头又向红玉索取手帕谢礼；年纪小、贪嘴好利。性别：女（底本与红玉同属怡红院丫鬟，俱称「丫头」）",
+   "prompt": "a small thin twelve-year-old servant GIRL in a Qing-dynasty noble household, a little girl and not a boy, with a pointed chin, quick glancing eyes and a greedy little smile, wearing a faded pale-yellow cotton jacket and dark skirt, hair in a single small side tuft with a red string",
+   "seed": 10236110
+  },
+  {
+   "id": "qingwen",
+   "name": "晴雯",
+   "features": "怡红院大丫鬟；生得模样标致、言谈爽利，性子骄傲尖刻；小红越房使唤时当面讥讽「爬上高枝儿去了」。性别：女（底本称「模样标致」的大丫鬟）",
+   "prompt": "a tall striking young maidservant WOMAN in a Qing-dynasty noble household, a beautiful young woman and not a man, with an oval fair face, sharp arched brows, bright cutting eyes and a proud tight mouth, haughty and quick-tongued, wearing a coral-red silk jacket with a white collar and a pale skirt, hair in a high bun with a jade clasp",
+   "seed": 10236120
+  },
+  {
+   "id": "qixian",
+   "name": "绮霰",
+   "features": "怡红院丫鬟，又称绮大姐姐；命小红描花样，说话带讥诮。性别：女（底本称「绮大姐姐」，怡红院丫鬟）",
+   "prompt": "a quiet-looking young maidservant WOMAN in a Qing-dynasty noble household, a young woman and not a man, with a softly rounded face, level brows, slightly sarcastic closed mouth, wearing a pale sage-green jacket and cream skirt with an embroidery purse at her waist, hair in a simple low bun",
+   "seed": 10236130
+  },
+  {
+   "id": "siqi",
+   "name": "司棋",
+   "features": "迎春房中的大丫鬟；身量高大、性情硬朗，回红玉「没理论」。「身量高大」据第七十一回「穿红裙子梳鬅头高大丰壮身材的，是迎春房里的司棋」；红裙、鬅头亦据此。性别：女（底本称「这麼大丫頭」「這麼大丫頭了」，与鸳鸯、迎春同为女子）",
+   "prompt": "a tall broad-shouldered FEMALE servant woman in a Qing-dynasty noble household, a sturdy young woman in her late twenties with a broad square face, heavy brows, steady blunt eyes and a firm mouth, plain and forthright, strong and capable, clearly a woman and not a man, wearing a RED long skirt with a dark teal short jacket over it, hair gathered into a plain high rounded bun with a black hairnet, female servant of a young mistress",
+   "seed": 10237140
+  },
+  {
+   "id": "feng_ziying",
+   "name": "冯紫英",
+   "features": "神武将军冯唐之子；宝玉的朋友，邀宝玉到家宴饮，言谈爽快带武人气质。性别：男（底本称「冯大爷」「令表兄弟」）",
+   "prompt": "a handsome martial young nobleman of twenty, a MAN, in Qing-dynasty China with a square jaw, bold brows and a forthright expression, son of a military commander, wearing a dark blue riding jacket with narrow sleeves and a embroidered sash, hair tied in a neat topknot with a jade pin",
+   "seed": 10237100
+  },
+  {
+   "id": "jiang_yuhan",
+   "name": "蒋玉菡",
+   "features": "唱小旦的伶人，艺名琪官；容貌俊美，性情温软，席间唱曲，解下茜香罗汗巾赠宝玉。性别：男（底本称「小旦」即男扮旦角，宝玉见其「妩媚温柔」；本回与薛蟠、冯紫英并称「令表兄弟」）",
+   "prompt": "a beautiful young MALE opera singer in Qing-dynasty China, a handsome young man and not a woman, with a delicate oval face, fine arched brows, soft moist eyes and rouged lips, gentle and ingratiating manner, wearing a rose-pink silk robe with long flowing water sleeves and a crimson sash, hair in a soft stage coiffure with a small flower pin",
+   "seed": 10237110
+  },
+  {
+   "id": "yun_er",
+   "name": "云儿",
+   "features": "锦香院陪酒的妓女；席间弹琵琶唱曲，言语风泼，与薛蟠冯紫英熟稔。性别：女（底本称「妓女」）",
+   "prompt": "a voluptuous young courtesan WOMAN in Qing-dynasty China, a female singer and not a man, with a rounded face, painted brows, laughing eyes and a bold smiling mouth, wearing a peach-red silk jacket and a deep crimson pleated skirt with a gold hair ornament, holding a small pipa lute",
+   "seed": 10237120
+  },
+  {
+   "id": "zhang_daoshi",
+   "name": "张道士",
+   "features": "清虚观住持，宝玉寄名的干爷；须发皆白，言辞谨慎恭敬，贾母称他「老神仙」。性别：男（底本称「老神仙」，为宝玉寄名的「干爷」）",
+   "prompt": "a venerable white-bearded elderly MALE Taoist abbot in Qing-dynasty China, an old man and not a woman, with a long white beard, deep-set kind eyes and a respectful reserved expression, wearing a grey-blue Taoist robe with a wide sash and a small Taoist crown, thin and stooped with age",
+   "seed": 10239100
+  },
+  {
+   "id": "lingguan",
+   "name": "龄官",
+   "features": "梨香院十二官之一，唱小旦；眉蹙目愁，气质清高孤傲；在蔷薇架下用金簪划「蔷」字，与贾蔷相恋。性别：女（第三十回正文明写「文官等十二个女子」「小生宝官，正旦玉官等两个女孩子」；龄官本回正面姓名未出，为回目及后文称呼）",
+   "prompt": "a slender melancholy young actress WOMAN in Qing-dynasty China, a young female performer and not a man, with a pale oval face, finely knit brows, downcast eyes and a proud sensitive mouth, wearing a muted lavender-grey opera costume with narrow sleeves, hair in a simple stage bun with a single white flower",
+   "seed": 10230100
   }
  ]
 }

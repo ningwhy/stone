@@ -1507,6 +1507,168 @@
     }
    },
    "chibi": "left"
+  },
+  "jiahui": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "method": "visual-review",
+     "reason": "vision nose/mouth offsets disagree (+0.102/-0.140); read by eye on the head crop, the nose and mouth sit right of the eye midpoint, the face turns right"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face; painted head read by eye against right-facing chibi references, the nose sits just right of the eye midpoint"
+    }
+   },
+   "chibi": "right"
+  },
+  "zhuer": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "method": "visual-review",
+     "reason": "vision nose/mouth offsets disagree (+0.171/-0.145); read by eye, the nose and mouth sit right of the eye midpoint, the face turns right"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face; painted head read by eye, it turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "qingwen": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.1879,
+     "mouthOffset": 0.2685,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "noseOffset": 0.169,
+     "mouthOffset": 0.124,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    }
+   },
+   "chibi": "right"
+  },
+  "qixian": {
+   "portrait": "left",
+   "evidence": {
+    "portrait": {
+     "noseOffset": -0.0516,
+     "mouthOffset": -0.1633,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face; painted head read by eye against right-facing chibi references, it turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "siqi": {
+   "portrait": "left",
+   "evidence": {
+    "portrait": {
+     "noseOffset": -0.005,
+     "mouthOffset": -0.0739,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "the detector read the face with the eye naming check swapped, so its sign carries no meaning; painted head read by eye, the nose sits on the eye midpoint and leans slightly right — the same reading the cui_lv chibi was settled on"
+    }
+   },
+   "chibi": "right"
+  },
+  "feng_ziying": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.1296,
+     "mouthOffset": 0.1264,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face; painted head read by eye, it turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "jiang_yuhan": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.4944,
+     "mouthOffset": 0.3489,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "noseOffset": 0.1355,
+     "mouthOffset": 0.1008,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    }
+   },
+   "chibi": "right"
+  },
+  "yun_er": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.5909,
+     "mouthOffset": 0.4625,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "noseOffset": 0.11,
+     "mouthOffset": 0.0012,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    }
+   },
+   "chibi": "right"
+  },
+  "zhang_daoshi": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.4258,
+     "mouthOffset": 0.2997,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face; painted head read by eye, it turns right"
+    }
+   },
+   "chibi": "right"
+  },
+  "lingguan": {
+   "portrait": "right",
+   "evidence": {
+    "portrait": {
+     "noseOffset": 0.1459,
+     "mouthOffset": 0.2646,
+     "votes": 3,
+     "method": "vision-landmark-geometry"
+    },
+    "chibi": {
+     "method": "visual-review",
+     "reason": "detector reads no face; painted head read by eye against right-facing chibi references, it turns right"
+    }
+   },
+   "chibi": "right"
   }
  },
  "variants": {

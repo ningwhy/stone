@@ -5,9 +5,9 @@
 
 ## 总览
 
-- 位图总数 **205**（立绘 92、Q版 92、表情变体 21）
-- 朝左 **31**，朝右 **174**
-- 依据：实测 **131**、目视裁决 **66**
+- 位图总数 **225**（立绘 102、Q版 102、表情变体 21）
+- 朝左 **33**，朝右 **192**
+- 依据：实测 **142**、目视裁决 **75**
 
 「朝左 / 朝右」指的是**原图**里脸偏向画面的哪一侧——不是角色在剧情里该朝哪边。
 运行时用它决定该用原图还是左右镜像：要求显示的一侧与原图不符时才镜像。
@@ -34,6 +34,8 @@
 | `dai_quan-portrait` | dai_quan | 立绘 | **朝左** | 实测·2票 |
 | `er_ya_tou-chibi` | er_ya_tou | Q版 | **朝右** | 目视 |
 | `er_ya_tou-portrait` | er_ya_tou | 立绘 | **朝右** | 实测·3票 |
+| `feng_ziying-chibi` | feng_ziying | Q版 | **朝右** | 目视 |
+| `feng_ziying-portrait` | feng_ziying | 立绘 | **朝右** | 实测·3票 |
 | `hu_shi-chibi` | hu_shi | Q版 | **朝右** | 实测·3票 |
 | `hu_shi-portrait` | hu_shi | 立绘 | **朝右** | 实测·3票 |
 | `jia_dairu-chibi` | jia_dairu | Q版 | **朝右** | 实测·4票 |
@@ -56,6 +58,10 @@
 | `jia_yun-portrait` | jia_yun | 立绘 | **朝右** | 实测·3票 |
 | `jia_zhen-chibi` | jia_zhen | Q版 | **朝右** | 实测·2票 |
 | `jia_zhen-portrait` | jia_zhen | 立绘 | **朝右** | 实测·3票 |
+| `jiahui-chibi` | jiahui | Q版 | **朝右** | 目视 |
+| `jiahui-portrait` | jiahui | 立绘 | **朝右** | 目视 |
+| `jiang_yuhan-chibi` | jiang_yuhan | Q版 | **朝右** | 实测·3票 |
+| `jiang_yuhan-portrait` | jiang_yuhan | 立绘 | **朝右** | 实测·3票 |
 | `jin_rong-chibi` | jin_rong | Q版 | **朝左** | default-unmeasured |
 | `jin_rong-portrait` | jin_rong | 立绘 | **朝左** | default-unmeasured |
 | `jin_shi-chibi` | jin_shi | Q版 | **朝右** | 实测·6票 |
@@ -70,6 +76,8 @@
 | `lai_sheng-portrait` | lai_sheng | 立绘 | **朝左** | 目视 |
 | `li_gui-chibi` | li_gui | Q版 | **朝左** | default-unmeasured |
 | `li_gui-portrait` | li_gui | 立绘 | **朝左** | default-unmeasured |
+| `lingguan-chibi` | lingguan | Q版 | **朝右** | 目视 |
+| `lingguan-portrait` | lingguan | 立绘 | **朝右** | 实测·3票 |
 | `liu_lao-chibi` | liu_lao | Q版 | **朝右** | 目视 |
 | `liu_lao-portrait` | liu_lao | 立绘 | **朝左** | default-unmeasured |
 | `ma_dao_po-chibi` | ma_dao_po | Q版 | **朝右** | 目视 |
@@ -86,8 +94,12 @@
 | `qin_ye-portrait` | qin_ye | 立绘 | **朝右** | 实测·3票 |
 | `qin_zhong-chibi` | qin_zhong | Q版 | **朝右** | 实测·6票 |
 | `qin_zhong-portrait` | qin_zhong | 立绘 | **朝右** | 实测·3票 |
+| `qingwen-chibi` | qingwen | Q版 | **朝右** | 实测·3票 |
+| `qingwen-portrait` | qingwen | 立绘 | **朝右** | 实测·3票 |
 | `qiuwen-chibi` | qiuwen | Q版 | **朝右** | 目视 |
 | `qiuwen-portrait` | qiuwen | 立绘 | **朝右** | 实测·3票 |
+| `qixian-chibi` | qixian | Q版 | **朝右** | 目视 |
+| `qixian-portrait` | qixian | 立绘 | **朝左** | 实测·3票 |
 | `she_yue-chibi` | she_yue | Q版 | **朝右** | 目视 |
 | `she_yue-portrait` | she_yue | 立绘 | **朝右** | 实测·3票 |
 | `shi_xiangyun-chibi` | shi_xiangyun | Q版 | **朝右** | 目视 |
@@ -97,6 +109,8 @@
 | `shui_rong-portrait` | shui_rong | 立绘 | **朝右** | 实测·3票 |
 | `si_er-chibi` | si_er | Q版 | **朝右** | 实测·1票 |
 | `si_er-portrait` | si_er | 立绘 | **朝右** | 实测·3票 |
+| `siqi-chibi` | siqi | Q版 | **朝右** | 目视 |
+| `siqi-portrait` | siqi | 立绘 | **朝左** | 实测·3票 |
 | `wang_er-chibi` | wang_er | Q版 | **朝右** | 实测·4票 |
 | `wang_er-portrait` | wang_er | 立绘 | **朝左** | 目视 |
 | `xiangling-chibi` | xiangling | Q版 | **朝右** | 目视 |
@@ -111,6 +125,10 @@
 | `yuan_yang-portrait` | yuan_yang | 立绘 | **朝右** | 实测·3票 |
 | `yuanchun-chibi` | yuanchun | Q版 | **朝右** | 实测·2票 |
 | `yuanchun-portrait` | yuanchun | 立绘 | **朝右** | 实测·3票 |
+| `yun_er-chibi` | yun_er | Q版 | **朝右** | 实测·3票 |
+| `yun_er-portrait` | yun_er | 立绘 | **朝右** | 实测·3票 |
+| `zhang_daoshi-chibi` | zhang_daoshi | Q版 | **朝右** | 目视 |
+| `zhang_daoshi-portrait` | zhang_daoshi | 立绘 | **朝右** | 实测·3票 |
 | `zhang_youshi-chibi` | zhang_youshi | Q版 | **朝右** | 实测·2票 |
 | `zhang_youshi-portrait` | zhang_youshi | 立绘 | **朝左** | 实测·3票 |
 | `zhao_er-chibi` | zhao_er | Q版 | **朝右** | 目视 |
@@ -121,6 +139,8 @@
 | `zhi_neng-portrait` | zhi_neng | 立绘 | **朝右** | 实测·3票 |
 | `zhou_rui-chibi` | zhou_rui | Q版 | **朝左** | 目视 |
 | `zhou_rui-portrait` | zhou_rui | 立绘 | **朝右** | 实测·3票 |
+| `zhuer-chibi` | zhuer | Q版 | **朝右** | 目视 |
+| `zhuer-portrait` | zhuer | 立绘 | **朝右** | 目视 |
 | `zijun-chibi` | zijun | Q版 | **朝右** | 实测·1票 |
 | `zijun-portrait` | zijun | 立绘 | **朝右** | 实测·3票 |
 | `maid-chibi` | 丫鬟 | Q版 | **朝右** | 目视 |
@@ -245,6 +265,8 @@
 | `ming_yan-chibi` | ming_yan | Q版 | default-unmeasured |
 | `ming_yan-portrait` | ming_yan | 立绘 | 实测·2票 |
 | `ni_er-portrait` | ni_er | 立绘 | 目视 |
+| `qixian-portrait` | qixian | 立绘 | 实测·3票 |
+| `siqi-portrait` | siqi | 立绘 | 实测·3票 |
 | `wang_er-portrait` | wang_er | 立绘 | 目视 |
 | `zhang_youshi-portrait` | zhang_youshi | 立绘 | 实测·3票 |
 | `zhou_rui-chibi` | zhou_rui | Q版 | 目视 |

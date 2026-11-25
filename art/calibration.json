@@ -4273,6 +4273,226 @@
     "split": 365,
     "factor": 0.64
    }
+  },
+  {
+   "id": "jiahui-portrait",
+   "seed": 10236100,
+   "height": 600,
+   "anchor": [
+    383,
+    1121
+   ]
+  },
+  {
+   "id": "jiahui-chibi",
+   "seed": 10236101,
+   "height": 116,
+   "anchor": [
+    407,
+    926
+   ],
+   "bodyCompress": {
+    "split": 389,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "zhuer-portrait",
+   "seed": 10236110,
+   "height": 600,
+   "anchor": [
+    402,
+    1124
+   ]
+  },
+  {
+   "id": "zhuer-chibi",
+   "seed": 10236111,
+   "height": 116,
+   "anchor": [
+    429,
+    962
+   ],
+   "bodyCompress": {
+    "split": 404,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "qingwen-portrait",
+   "seed": 10236120,
+   "height": 600,
+   "anchor": [
+    411,
+    1110
+   ]
+  },
+  {
+   "id": "qingwen-chibi",
+   "seed": 10236121,
+   "height": 116,
+   "anchor": [
+    431,
+    961
+   ],
+   "bodyCompress": {
+    "split": 404,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "qixian-portrait",
+   "seed": 10236130,
+   "height": 600,
+   "anchor": [
+    369,
+    1121
+   ]
+  },
+  {
+   "id": "qixian-chibi",
+   "seed": 10236131,
+   "height": 116,
+   "anchor": [
+    396,
+    943
+   ],
+   "bodyCompress": {
+    "split": 396,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "siqi-portrait",
+   "seed": 10237140,
+   "height": 600,
+   "anchor": [
+    409,
+    1102
+   ]
+  },
+  {
+   "id": "siqi-chibi",
+   "seed": 10237141,
+   "height": 116,
+   "anchor": [
+    358,
+    937
+   ],
+   "bodyCompress": {
+    "split": 394,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "feng_ziying-portrait",
+   "seed": 10237100,
+   "height": 600,
+   "anchor": [
+    456,
+    1132
+   ]
+  },
+  {
+   "id": "feng_ziying-chibi",
+   "seed": 10237101,
+   "height": 116,
+   "anchor": [
+    432,
+    964
+   ],
+   "bodyCompress": {
+    "split": 405,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "jiang_yuhan-portrait",
+   "seed": 10237110,
+   "height": 600,
+   "anchor": [
+    413,
+    1119
+   ]
+  },
+  {
+   "id": "jiang_yuhan-chibi",
+   "seed": 10237111,
+   "height": 116,
+   "anchor": [
+    429,
+    945
+   ],
+   "bodyCompress": {
+    "split": 397,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "yun_er-portrait",
+   "seed": 10237120,
+   "height": 600,
+   "anchor": [
+    364,
+    1116
+   ]
+  },
+  {
+   "id": "yun_er-chibi",
+   "seed": 10237121,
+   "height": 116,
+   "anchor": [
+    421,
+    929
+   ],
+   "bodyCompress": {
+    "split": 390,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "zhang_daoshi-portrait",
+   "seed": 10239100,
+   "height": 600,
+   "anchor": [
+    425,
+    1125
+   ]
+  },
+  {
+   "id": "zhang_daoshi-chibi",
+   "seed": 10239101,
+   "height": 116,
+   "anchor": [
+    469,
+    916
+   ],
+   "bodyCompress": {
+    "split": 385,
+    "factor": 0.64
+   }
+  },
+  {
+   "id": "lingguan-portrait",
+   "seed": 10230100,
+   "height": 600,
+   "anchor": [
+    355,
+    1131
+   ]
+  },
+  {
+   "id": "lingguan-chibi",
+   "seed": 10230101,
+   "height": 116,
+   "anchor": [
+    412,
+    933
+   ],
+   "bodyCompress": {
+    "split": 392,
+    "factor": 0.64
+   }
   }
  ],
  "placements": [

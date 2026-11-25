@@ -2270,5 +2270,165 @@
     "faintAlphaRatio": 0.0305,
     "width": 75,
     "height": 116
+  },
+  {
+    "asset": "jiahui-portrait",
+    "visiblePixels": 74045,
+    "solidAlpha250Ratio": 0.98092,
+    "faintAlphaRatio": 0.00802,
+    "width": 168,
+    "height": 600
+  },
+  {
+    "asset": "jiahui-chibi",
+    "visiblePixels": 5829,
+    "solidAlpha250Ratio": 0.93429,
+    "faintAlphaRatio": 0.02916,
+    "width": 73,
+    "height": 116
+  },
+  {
+    "asset": "zhuer-portrait",
+    "visiblePixels": 74670,
+    "solidAlpha250Ratio": 0.98134,
+    "faintAlphaRatio": 0.00775,
+    "width": 189,
+    "height": 600
+  },
+  {
+    "asset": "zhuer-chibi",
+    "visiblePixels": 5795,
+    "solidAlpha250Ratio": 0.93167,
+    "faintAlphaRatio": 0.03141,
+    "width": 80,
+    "height": 116
+  },
+  {
+    "asset": "qingwen-portrait",
+    "visiblePixels": 68469,
+    "solidAlpha250Ratio": 0.98002,
+    "faintAlphaRatio": 0.0085,
+    "width": 166,
+    "height": 600
+  },
+  {
+    "asset": "qingwen-chibi",
+    "visiblePixels": 4051,
+    "solidAlpha250Ratio": 0.92224,
+    "faintAlphaRatio": 0.03382,
+    "width": 49,
+    "height": 116
+  },
+  {
+    "asset": "qixian-portrait",
+    "visiblePixels": 70600,
+    "solidAlpha250Ratio": 0.98222,
+    "faintAlphaRatio": 0.00758,
+    "width": 168,
+    "height": 600
+  },
+  {
+    "asset": "qixian-chibi",
+    "visiblePixels": 4835,
+    "solidAlpha250Ratio": 0.93775,
+    "faintAlphaRatio": 0.02565,
+    "width": 58,
+    "height": 116
+  },
+  {
+    "asset": "siqi-portrait",
+    "visiblePixels": 77936,
+    "solidAlpha250Ratio": 0.98252,
+    "faintAlphaRatio": 0.00721,
+    "width": 185,
+    "height": 600
+  },
+  {
+    "asset": "siqi-chibi",
+    "visiblePixels": 5264,
+    "solidAlpha250Ratio": 0.9318,
+    "faintAlphaRatio": 0.0304,
+    "width": 60,
+    "height": 116
+  },
+  {
+    "asset": "feng_ziying-portrait",
+    "visiblePixels": 76408,
+    "solidAlpha250Ratio": 0.97555,
+    "faintAlphaRatio": 0.00974,
+    "width": 180,
+    "height": 600
+  },
+  {
+    "asset": "feng_ziying-chibi",
+    "visiblePixels": 4343,
+    "solidAlpha250Ratio": 0.91734,
+    "faintAlphaRatio": 0.03776,
+    "width": 54,
+    "height": 116
+  },
+  {
+    "asset": "jiang_yuhan-portrait",
+    "visiblePixels": 84768,
+    "solidAlpha250Ratio": 0.97461,
+    "faintAlphaRatio": 0.01069,
+    "width": 293,
+    "height": 600
+  },
+  {
+    "asset": "jiang_yuhan-chibi",
+    "visiblePixels": 5038,
+    "solidAlpha250Ratio": 0.92934,
+    "faintAlphaRatio": 0.03255,
+    "width": 61,
+    "height": 116
+  },
+  {
+    "asset": "yun_er-portrait",
+    "visiblePixels": 86367,
+    "solidAlpha250Ratio": 0.98101,
+    "faintAlphaRatio": 0.00808,
+    "width": 214,
+    "height": 600
+  },
+  {
+    "asset": "yun_er-chibi",
+    "visiblePixels": 6405,
+    "solidAlpha250Ratio": 0.92053,
+    "faintAlphaRatio": 0.0356,
+    "width": 72,
+    "height": 116
+  },
+  {
+    "asset": "zhang_daoshi-portrait",
+    "visiblePixels": 85639,
+    "solidAlpha250Ratio": 0.98438,
+    "faintAlphaRatio": 0.00689,
+    "width": 213,
+    "height": 600
+  },
+  {
+    "asset": "zhang_daoshi-chibi",
+    "visiblePixels": 5500,
+    "solidAlpha250Ratio": 0.94564,
+    "faintAlphaRatio": 0.024,
+    "width": 65,
+    "height": 116
+  },
+  {
+    "asset": "lingguan-portrait",
+    "visiblePixels": 66962,
+    "solidAlpha250Ratio": 0.98045,
+    "faintAlphaRatio": 0.00835,
+    "width": 172,
+    "height": 600
+  },
+  {
+    "asset": "lingguan-chibi",
+    "visiblePixels": 4529,
+    "solidAlpha250Ratio": 0.93575,
+    "faintAlphaRatio": 0.02628,
+    "width": 59,
+    "height": 116
   }
 ]

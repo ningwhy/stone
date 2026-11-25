@@ -1,0 +1,819 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "orientation": "isometric",
+  "renderorder": "right-down",
+  "width": 40,
+  "height": 40,
+  "tilewidth": 128,
+  "tileheight": 64,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "PlanZones",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 1,
+          "name": "HALL 冯紫英家 · 家宴厅",
+          "x": 512,
+          "y": 768,
+          "width": 1152,
+          "height": 704,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "indoor",
+              "value": true,
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "A1 冯紫英家 · 家宴厅",
+          "x": 512,
+          "y": 1536,
+          "width": 1152,
+          "height": 384,
+          "rotation": 0,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PlanBlockers",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": []
+    },
+    {
+      "id": 3,
+      "name": "Anchors",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 3,
+          "name": "gate",
+          "x": 992.0,
+          "y": 1824.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 4,
+          "name": "court",
+          "x": 992.0,
+          "y": 1568.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 5,
+          "name": "hall",
+          "x": 992.0,
+          "y": 1312.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 6,
+          "name": "table",
+          "x": 992.0,
+          "y": 1120.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 7,
+          "name": "host_seat",
+          "x": 800.0,
+          "y": 1120.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 8,
+          "name": "baoyu_seat",
+          "x": 1184.0,
+          "y": 1120.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 9,
+          "name": "xuepan_seat",
+          "x": 1312.0,
+          "y": 1056.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 10,
+          "name": "jiang_seat",
+          "x": 736.0,
+          "y": 1056.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 11,
+          "name": "yun_seat",
+          "x": 1248.0,
+          "y": 1248.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 12,
+          "name": "singer_place",
+          "x": 608.0,
+          "y": 1248.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 13,
+          "name": "corridor",
+          "x": 1504.0,
+          "y": 1440.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Routes",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 14,
+          "name": "动线 enter",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "enter",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "gate,court,hall,table",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "动线 host",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "host",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "table,host_seat,jiang_seat,singer_place",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "动线 guests",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "guests",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "table,baoyu_seat,xuepan_seat,yun_seat",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "动线 to_corridor",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "route_id",
+              "value": "to_corridor",
+              "type": "string"
+            },
+            {
+              "name": "anchor_ids",
+              "value": "table,corridor",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Art",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 18,
+          "name": "square-table",
+          "x": 992.50998,
+          "y": 1056.50998,
+          "width": 141.9,
+          "height": 141.04,
+          "rotation": 0,
+          "visible": true,
+          "gid": 110,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "square-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "round-stool",
+          "x": 782.24302,
+          "y": 1102.24302,
+          "width": 40.599999999999994,
+          "height": 53.94,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "round-stool",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "round-stool",
+          "x": 1166.24302,
+          "y": 1102.24302,
+          "width": 40.599999999999994,
+          "height": 53.94,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "round-stool",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "round-stool",
+          "x": 1287.24302,
+          "y": 1049.24302,
+          "width": 40.599999999999994,
+          "height": 53.94,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "round-stool",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "round-stool",
+          "x": 735.24302,
+          "y": 1029.24302,
+          "width": 40.599999999999994,
+          "height": 53.94,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "round-stool",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "name": "round-stool",
+          "x": 1234.24302,
+          "y": 1234.24302,
+          "width": 40.599999999999994,
+          "height": 53.94,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "round-stool",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "name": "round-stool",
+          "x": 602.23464,
+          "y": 1230.2346400000001,
+          "width": 39.2,
+          "height": 52.080000000000005,
+          "rotation": 0,
+          "visible": true,
+          "gid": 114,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "round-stool",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "wine-jars",
+          "x": 1504.1399999999999,
+          "y": 927.86,
+          "width": 221.76000000000002,
+          "height": 202.72000000000003,
+          "rotation": 0,
+          "visible": true,
+          "gid": 179,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "wine-jars",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "name": "wood-screen",
+          "x": 1440.3744,
+          "y": 864.3743999999999,
+          "width": 136.79999999999998,
+          "height": 123.83999999999999,
+          "rotation": 0,
+          "visible": true,
+          "gid": 39,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "wood-screen",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "name": "wang-cabinet",
+          "x": 1556.4523,
+          "y": 1068.29806,
+          "width": 125.8,
+          "height": 204.24,
+          "rotation": 0,
+          "visible": true,
+          "gid": 157,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "wang-cabinet",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "name": "lamp-stand",
+          "x": 672.0,
+          "y": 864.0,
+          "width": 463.36,
+          "height": 276.48,
+          "rotation": 0,
+          "visible": true,
+          "gid": 187,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "lamp-stand",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "name": "lamp-stand",
+          "x": 1696.0,
+          "y": 1312.0,
+          "width": 419.91999999999996,
+          "height": 250.55999999999997,
+          "rotation": 0,
+          "visible": true,
+          "gid": 187,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "lamp-stand",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "name": "tea-table",
+          "x": 1696.50985,
+          "y": 1568.50985,
+          "width": 71.5,
+          "height": 63.25000000000001,
+          "rotation": 0,
+          "visible": true,
+          "gid": 43,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "tea-table",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "name": "garden-tree",
+          "x": 742.61725,
+          "y": 1768.12787,
+          "width": 295.8,
+          "height": 257.04,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "name": "garden-tree",
+          "x": 1574.3577500000001,
+          "y": 1831.80913,
+          "width": 284.2,
+          "height": 246.96,
+          "rotation": 0,
+          "visible": true,
+          "gid": 3,
+          "type": "art",
+          "properties": [
+            {
+              "name": "asset",
+              "value": "garden-tree",
+              "type": "string"
+            },
+            {
+              "name": "visibility",
+              "value": "always",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ArtFootprints",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "draworder": "topdown",
+      "objects": [
+        {
+          "id": 19,
+          "name": "square-table",
+          "x": 960.0,
+          "y": 1024.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 28,
+          "name": "wood-screen",
+          "x": 1408.0,
+          "y": 832.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 30,
+          "name": "wang-cabinet",
+          "x": 1536.0,
+          "y": 1024.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        },
+        {
+          "id": 34,
+          "name": "tea-table",
+          "x": 1664.0,
+          "y": 1536.0,
+          "width": 64,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "type": "collision"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Labels",
+      "type": "objectgroup",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false,
+      "objects": [
+        {
+          "id": 37,
+          "name": "冯紫英家",
+          "x": 1120.0,
+          "y": 736.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 38,
+          "name": "家宴厅",
+          "x": 992.0,
+          "y": 928.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 39,
+          "name": "廊檐",
+          "x": 1568.0,
+          "y": 1312.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        },
+        {
+          "id": 40,
+          "name": "大门",
+          "x": 1056.0,
+          "y": 1888.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "point": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "rongguo-art.tsj"
+    }
+  ],
+  "nextlayerid": 8,
+  "nextobjectid": 41,
+  "properties": [
+    {
+      "name": "sceneId",
+      "type": "string",
+      "value": "fengziying_home"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "value": "冯紫英家 · 家宴厅"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "value": "interior"
+    },
+    {
+      "name": "terraces",
+      "type": "string",
+      "value": "14,25,4,5,path"
+    },
+    {
+      "name": "walls",
+      "type": "string",
+      "value": "8,12,26,12;8,12,8,30;26,12,26,30;8,30,14,30;19,30,26,30"
+    },
+    {
+      "name": "flowerbeds",
+      "type": "bool",
+      "value": false
+    }
+  ]
+}

@@ -91,13 +91,13 @@ test('搜索找不到的必须是原著里根本没有的词，不能是索引�
   // 紫鹃被第二十一回推翻（她是黛玉房首席大丫头，第二十一回替她递香皂）、
   // 檀云被第二十三回推翻——底本原句「室霭檀云品御香」里的「檀云」是
   // 檀香熏的云气，却让搜索照样命中了她。
-  // 现在用「侍书」——她是黛玉房里的丫鬟，原著确有此人，但本书二十三回
-  // 里一次也没出现过，也不在 cast 表里（搜人物是靠在场人物命中的，
-  // 她压根没被画过）。
+  // 现在用「春燕」——原著确有此人（后来的怡红院丫鬟），但本书三十回
+  // 里一次也没出现过，也不在 cast 表里。侍书已被第二十九回的
+  // 「探春的丫头侍书，翠墨」推翻，不能再当「查无此人」样本。
   //
   // 判据覆盖**所有可搜路径**：正文、段落标题、地点、在场人物、段 id。
   // 只查正文是不够的——名字要是出现在地点或人物表里，搜索照样能命中。
-  const absent = '侍书';
+  const absent = '春燕';
   assert.equal(ids(absent).length, 0, `${absent} does not appear in any book`);
   assert.equal(story.filter(node => (node.title + node.text + node.place).includes(absent)).length, 0,
     `${absent} really is absent from the story`);

@@ -322,6 +322,32 @@ REVIEWED = {
                                   'towards the left, its right cheek hidden by hair'),
     'cai_xia-chibi': ('left', 'detector reads no face; nose sits left of the eye midpoint '
                               'on a 5x grid against right/left reference chibis'),
+    # 第二十六至第三十回新出场角色的目视裁决。Vision 对这批 Q 版读不出脸
+    # （Q 版只有六十来像素宽），立绘里又有几张鼻嘴落在中线两侧、方向相反，
+    # 所以这些都按「目视 + 参考对比」定，并把理由写在这里，免得下次重跑
+    # 测量时被悄悄改回去。
+    'jiahui-portrait': ('right', 'vision nose/mouth offsets disagree (+0.102/-0.140); '
+                                  'read by eye on the head crop, the nose and mouth sit right '
+                                  'of the eye midpoint, the face turns right'),
+    'jiahui-chibi': ('right', 'detector reads no face; painted head read by eye against '
+                              'right-facing chibi references, the nose sits just right of the '
+                              'eye midpoint'),
+    'zhuer-portrait': ('right', 'vision nose/mouth offsets disagree (+0.171/-0.145); '
+                                 'read by eye, the nose and mouth sit right of the eye '
+                                 'midpoint, the face turns right'),
+    'zhuer-chibi': ('right', 'detector reads no face; painted head read by eye, it turns right'),
+    'qixian-chibi': ('right', 'detector reads no face; painted head read by eye against '
+                              'right-facing chibi references, it turns right'),
+    'siqi-chibi': ('right', 'the detector read the face with the eye naming check swapped, '
+                            'so its sign carries no meaning; painted head read by eye, the '
+                            'nose sits on the eye midpoint and leans slightly right — the '
+                            'same reading the cui_lv chibi was settled on'),
+    'feng_ziying-chibi': ('right', 'detector reads no face; painted head read by eye, it '
+                                   'turns right'),
+    'zhang_daoshi-chibi': ('right', 'detector reads no face; painted head read by eye, it '
+                                     'turns right'),
+    'lingguan-chibi': ('right', 'detector reads no face; painted head read by eye against '
+                                'right-facing chibi references, it turns right'),
 }
 
 # Vehicles are cast members but not a single face: the sedan is carried by four

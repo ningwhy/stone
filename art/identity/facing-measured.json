@@ -750,5 +750,115 @@
   "noseOffset": 0.0675,
   "mouthOffset": 0.0048,
   "confidence": 0.0048
+ },
+ {
+  "actor": "qingwen",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.1879,
+  "mouthOffset": 0.2685,
+  "confidence": 0.1879,
+  "votes": 3,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "actor": "qingwen",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.169,
+  "mouthOffset": 0.124,
+  "confidence": 0.124,
+  "votes": 3,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "actor": "qixian",
+  "kind": "portrait",
+  "facing": "left",
+  "noseOffset": -0.0516,
+  "mouthOffset": -0.1633,
+  "confidence": 0.0516,
+  "votes": 3,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "actor": "siqi",
+  "kind": "portrait",
+  "facing": "left",
+  "noseOffset": -0.005,
+  "mouthOffset": -0.0739,
+  "confidence": 0.005,
+  "votes": 3,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "actor": "feng_ziying",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.1296,
+  "mouthOffset": 0.1264,
+  "confidence": 0.1264,
+  "votes": 3,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "actor": "jiang_yuhan",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.4944,
+  "mouthOffset": 0.3489,
+  "confidence": 0.3489,
+  "votes": 3,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "actor": "jiang_yuhan",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.1355,
+  "mouthOffset": 0.1008,
+  "confidence": 0.1008,
+  "votes": 3,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "actor": "yun_er",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.5909,
+  "mouthOffset": 0.4625,
+  "confidence": 0.4625,
+  "votes": 3,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "actor": "yun_er",
+  "kind": "chibi",
+  "facing": "right",
+  "noseOffset": 0.11,
+  "mouthOffset": 0.0012,
+  "confidence": 0.0012,
+  "votes": 3,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "actor": "zhang_daoshi",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.4258,
+  "mouthOffset": 0.2997,
+  "confidence": 0.2997,
+  "votes": 3,
+  "method": "vision-landmark-geometry"
+ },
+ {
+  "actor": "lingguan",
+  "kind": "portrait",
+  "facing": "right",
+  "noseOffset": 0.1459,
+  "mouthOffset": 0.2646,
+  "confidence": 0.1459,
+  "votes": 3,
+  "method": "vision-landmark-geometry"
  }
 ]

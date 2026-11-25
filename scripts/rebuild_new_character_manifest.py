@@ -24,12 +24,41 @@ FACE_BOXES = json.loads((ROOT / 'art/identity/auto-face-boxes.json').read_text()
 
 # Characters drawn by scripts/gen_new_characters.py / gen_ch20_characters.py,
 # outside the calibration pipeline that owns the manifest.
-NEW_CHARACTERS = ['yuanchun', 'jia_lian', 'jia_huan', 'zhao_yiniang', 'shi_xiangyun', 'she_yue',
-                  'zijun', 'cui_lv', 'si_er', 'jia_lan',
-                  'jinyuan', 'caiyun', 'jia_qin',
-                  'jia_yun', 'xiaohong', 'ni_er', 'bu_shi_ren',
-                  'xiangling', 'qiuwen', 'bihen', 'yuan_yang',
-                  'ma_dao_po', 'cai_xia']
+NEW_CHARACTERS = [
+    'yuanchun',
+    'jia_lian',
+    'jia_huan',
+    'zhao_yiniang',
+    'shi_xiangyun',
+    'she_yue',
+    'zijun',
+    'cui_lv',
+    'si_er',
+    'jia_lan',
+    'jinyuan',
+    'caiyun',
+    'jia_qin',
+    'jia_yun',
+    'xiaohong',
+    'ni_er',
+    'bu_shi_ren',
+    'xiangling',
+    'qiuwen',
+    'bihen',
+    'yuan_yang',
+    'ma_dao_po',
+    'cai_xia',
+    'jiahui',
+    'zhuer',
+    'qingwen',
+    'qixian',
+    'siqi',
+    'feng_ziying',
+    'jiang_yuhan',
+    'yun_er',
+    'zhang_daoshi',
+    'lingguan',
+]
 
 
 def final_anchor(key: str, entry: dict, cal: dict):
