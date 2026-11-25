@@ -98,4 +98,4 @@
 - [x] 「查无此人」样本复核（「侍书」第 25 回仍 0 命中，无需重选）
 - [x] 写 `tests/chapter25.mjs` 与 `tests/online-chapter25.mjs`
 - [x] 全链：check:content（2422 节点/227 段/53 图/91 人/304 资产）→ check:anchors → map:framing → tsc → npm test 97 pass → test:locator → build → 图鉴 → 定向（含第 24 回回归）→ browser-smoke
-- [ ] 部署到 `stone-direct.yan.pub` 并线上复验；git 提交推送
+- [x] 部署到 `stone-direct.yan.pub` 并线上复验（全项通过）；提交 `cf6bdf4` 已推送 `origin/main`
