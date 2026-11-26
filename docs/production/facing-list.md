@@ -6,8 +6,8 @@
 ## 总览
 
 - 位图总数 **225**（立绘 102、Q版 102、表情变体 21）
-- 朝左 **33**，朝右 **192**
-- 依据：实测 **142**、目视裁决 **75**
+- 朝左 **34**，朝右 **191**
+- 依据：实测 **141**、目视裁决 **76**
 
 「朝左 / 朝右」指的是**原图**里脸偏向画面的哪一侧——不是角色在剧情里该朝哪边。
 运行时用它决定该用原图还是左右镜像：要求显示的一侧与原图不符时才镜像。
@@ -60,7 +60,7 @@
 | `jia_zhen-portrait` | jia_zhen | 立绘 | **朝右** | 实测·3票 |
 | `jiahui-chibi` | jiahui | Q版 | **朝右** | 目视 |
 | `jiahui-portrait` | jiahui | 立绘 | **朝右** | 目视 |
-| `jiang_yuhan-chibi` | jiang_yuhan | Q版 | **朝右** | 实测·3票 |
+| `jiang_yuhan-chibi` | jiang_yuhan | Q版 | **朝左** | 目视 |
 | `jiang_yuhan-portrait` | jiang_yuhan | 立绘 | **朝右** | 实测·3票 |
 | `jin_rong-chibi` | jin_rong | Q版 | **朝左** | default-unmeasured |
 | `jin_rong-portrait` | jin_rong | 立绘 | **朝左** | default-unmeasured |
@@ -254,6 +254,7 @@
 | `jia_qiang-chibi` | jia_qiang | Q版 | default-unmeasured |
 | `jia_rong-chibi` | jia_rong | Q版 | 目视 |
 | `jia_rui-portrait` | jia_rui | 立绘 | 实测·3票 |
+| `jiang_yuhan-chibi` | jiang_yuhan | Q版 | 目视 |
 | `jin_rong-chibi` | jin_rong | Q版 | default-unmeasured |
 | `jin_rong-portrait` | jin_rong | 立绘 | default-unmeasured |
 | `jing_xu-portrait` | jing_xu | 立绘 | 目视 |

@@ -3859,7 +3859,7 @@
     {
       "id": 296,
       "image": "../public/assets/rongguo/jiang_yuhan-portrait.png",
-      "imagewidth": 293,
+      "imagewidth": 215,
       "imageheight": 600,
       "properties": [
         {
@@ -3872,7 +3872,7 @@
     {
       "id": 297,
       "image": "../public/assets/rongguo/jiang_yuhan-chibi.png",
-      "imagewidth": 61,
+      "imagewidth": 53,
       "imageheight": 116,
       "properties": [
         {

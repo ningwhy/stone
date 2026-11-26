@@ -2379,22 +2379,24 @@
   "facing": "right",
   "votes": 3,
   "voteDetail": [
-   "head-crop:right"
+   "whole:right",
+   "tight:right",
+   "wide:right"
   ],
-  "noseOffset": 0.4944,
-  "mouthOffset": 0.3489,
+  "noseOffset": 0.4493,
+  "mouthOffset": 0.3379,
   "method": "vision-landmark-geometry"
  },
  {
   "asset": "jiang_yuhan-chibi",
   "kind": "chibi",
-  "facing": "right",
-  "votes": 3,
+  "facing": "left",
+  "votes": 1,
   "voteDetail": [
-   "head-crop:right"
+   "wide:left"
   ],
-  "noseOffset": 0.1355,
-  "mouthOffset": 0.1008,
+  "noseOffset": -0.0329,
+  "mouthOffset": -0.1624,
   "method": "vision-landmark-geometry"
  },
  {

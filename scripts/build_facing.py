@@ -348,6 +348,22 @@ REVIEWED = {
                                      'turns right'),
     'lingguan-chibi': ('right', 'detector reads no face; painted head read by eye against '
                                 'right-facing chibi references, it turns right'),
+    # 第二十八回蒋玉菡。立绘（重画后的男性版本）由 Vision 三票一致测出朝右：
+    # 鼻偏移 +0.43、嘴偏移 +0.31，两特征同号且幅度大，无需目视裁决。
+    #
+    # Q 版只有五十三像素宽，Vision 在七种裁切里只有 wide 一种读出了脸，
+    # 而那一次的鼻偏移 -0.033 与嘴偏移 -0.162 符号相反、量级极小——
+    # 画上标出的鼻与嘴其实落在头部中央偏下（被衣领挡住），属误检。
+    # 改用目视：与 baochai-chibi（6 票朝右）、daiyu-chibi（6 票朝右）、
+    # jing_xu-chibi（5 票朝右）并排比对，这三张都明显侧身朝画面右，
+    # 蒋玉菡这张基本正对、面部略偏向画面左（鼻尖落在眼中点左侧）。
+    # 若按检测器那一票记成朝右，运行时镜像后头就会朝反方向，与全组不一致。
+    'jiang_yuhan-chibi': ('left', 'detector reads a face in one crop only and its nose and '
+                                  'mouth offsets disagree (-0.033/-0.162), the fitted mouth '
+                                  'lands on the collar; painted head read by eye against '
+                                  'three confirmed right-facing chibis (baochai, daiyu, '
+                                  'jing_xu), the head is near frontal and leans slightly '
+                                  'left, so the head turns left'),
 }
 
 # Vehicles are cast members but not a single face: the sedan is carried by four

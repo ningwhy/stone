@@ -2369,18 +2369,18 @@
   },
   {
     "asset": "jiang_yuhan-portrait",
-    "visiblePixels": 84768,
-    "solidAlpha250Ratio": 0.97461,
-    "faintAlphaRatio": 0.01069,
-    "width": 293,
+    "visiblePixels": 81637,
+    "solidAlpha250Ratio": 0.98431,
+    "faintAlphaRatio": 0.00622,
+    "width": 215,
     "height": 600
   },
   {
     "asset": "jiang_yuhan-chibi",
-    "visiblePixels": 5038,
-    "solidAlpha250Ratio": 0.92934,
-    "faintAlphaRatio": 0.03255,
-    "width": 61,
+    "visiblePixels": 4254,
+    "solidAlpha250Ratio": 0.91232,
+    "faintAlphaRatio": 0.04208,
+    "width": 53,
     "height": 116
   },
   {

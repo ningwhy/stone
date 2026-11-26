@@ -35,9 +35,11 @@
 ### 外形锚点
 
 `features`（设计推定，非底本原文）：
-**唱小旦的伶人，艺名琪官；容貌俊美，性情温软，席间唱曲，解下茜香罗汗巾赠宝玉。性别：男（底本称「小旦」即男扮旦角，宝玉见其「妩媚温柔」；本回与薛蟠、冯紫英并称「令表兄弟」）**。
+**唱小旦的伶人，艺名琪官；容貌俊美，性情温软，席间唱曲，解下茜香罗汗巾赠宝玉。男扮旦角，故面施薄粉、眉目妩媚而仍为男子身量；性别：男（底本称「小旦」即男扮旦角，宝玉见其「妩媚温柔」；本回与薛蟠、冯紫英并称「令表兄弟」；第二十八回「唱小旦的蒋玉菡」，男优伶，艺名琪官）**。
 
-英文生图提示词：a beautiful young MALE opera singer in Qing-dynasty China, a handsome young man and not a woman, with a delicate oval face, fine arched brows, soft moist eyes and rouged lips, gentle and ingratiating manner, wearing a rose-pink silk robe with long flowing water sleeves and a crimson sash, hair in a soft stage coiffure with a small flower pin。
+英文生图提示词：a handsome young MALE opera singer in Qing-dynasty China, a man in his early twenties and clearly not a woman, a male performer of the female dan role (xiaodan) in a private opera troupe, a slender masculine oval face with a defined jawline and a clean-shaven chin, strong straight dark eyebrows, bright moist almond eyes with a soft theatrical gaze, a straight slender nose, lightly rouged lips on a manly mouth, faint rouge on the cheeks from stage makeup, slender straight shoulders and a tall masculine build, wearing a soft rose-pink silk opera robe with long flowing water sleeves and a crimson sash over a dark inner garment, a stage coiffure tied in a man's topknot with a small gilt hairpin, gentle and ingratiating manner, clearly a young man。
+
+> **性别更正（2026-11-26）**：第一版立绘与 Q 版都被画成了粉衣女子。底本明写他是「唱小旦的蒋玉菡」——小旦是戏曲行当，指**男演员扮演旦角**；本回又与薛蟠、冯紫英并称「令表兄弟」。因此换了 seed（10237110/111 → 10237120/121）重画，并在提示词开头加上 `a handsome young MALE opera singer … clearly not a woman` 与「男扮旦角 / 男性顶髻」等显式锚点，避免模型按旦角妆自动补成女性。
 
 ### 色彩标识
 
@@ -47,17 +49,21 @@
 
 | 项 | 立绘 | Q 版 |
 | --- | --- | --- |
-| 尺寸 | 293×600 | 61×116 |
-| anchor | `[173.465, 599.444]` | `[39.783, 115.421]` |
-| faceBox | `[118, 37, 156, 69]` | `[8, 31, 43, 57]` |
-| seed | 10237110 | 10237111 |
-| bodyCompress | — | `{'split': 397, 'factor': 0.64}` |
-| hash | `e496221d5ea2` | `d1287120ca19` |
+| 尺寸 | 215×600 | 53×116 |
+| anchor | `[98.724, 599.452]` | `[25.303, 115.513]` |
+| faceBox | `[70, 36, 116, 91]` | `[10, 28, 45, 58]` |
+| seed | 10237120 | 10237121 |
+| bodyCompress | — | `{'split': 394, 'factor': 0.64}` |
+| hash | `59156f766803` | `f541934436b2` |
+
+> faceBox 是**最终 PNG 坐标**，且在换 seed 后**目视重标**过：旧值 `[118,37,156,69]` / `[8,31,43,57]` 是上一版（女性版）图上的框，用在新图上会偏到头顶与颈侧。
 
 ### 朝向裁决
 
-- portrait **right**（`vision-landmark-geometry`）
-- chibi **right**（`vision-landmark-geometry`）
+- portrait **right**（`vision-landmark-geometry`，三票一致；鼻 +0.449 / 嘴 +0.338 同号）
+- chibi **left**（`visual-review`）
+
+Q 版只有五十三像素宽，Vision 在七种裁切里只有 `wide` 一种读出了脸，而那一次的鼻偏移 −0.033 与嘴偏移 −0.162 **符号相反且量级极小**，标出的嘴其实落在衣领上，属误检。改用目视裁决：与 `baochai-chibi`（6 票朝右）、`daiyu-chibi`（6 票朝右）、`jing_xu-chibi`（5 票朝右）并排比对，这三张都明显侧身朝画面右，蒋玉菡这张基本正对、面部略偏画面左。若照检测器那一票记成朝右，运行时镜像后头就会朝反方向，与全组不一致。
 
 立绘与 Q 版是两张独立图，朝向各自裁决，不互相推断。
 

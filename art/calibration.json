@@ -4408,23 +4408,23 @@
   },
   {
    "id": "jiang_yuhan-portrait",
-   "seed": 10237110,
+   "seed": 10237120,
    "height": 600,
    "anchor": [
-    413,
-    1119
+    387,
+    1125
    ]
   },
   {
    "id": "jiang_yuhan-chibi",
-   "seed": 10237111,
+   "seed": 10237121,
    "height": 116,
    "anchor": [
-    429,
-    945
+    393,
+    938
    ],
    "bodyCompress": {
-    "split": 397,
+    "split": 394,
     "factor": 0.64
    }
   },

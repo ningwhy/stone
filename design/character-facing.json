@@ -1606,19 +1606,17 @@
    "portrait": "right",
    "evidence": {
     "portrait": {
-     "noseOffset": 0.4944,
-     "mouthOffset": 0.3489,
+     "noseOffset": 0.4493,
+     "mouthOffset": 0.3379,
      "votes": 3,
      "method": "vision-landmark-geometry"
     },
     "chibi": {
-     "noseOffset": 0.1355,
-     "mouthOffset": 0.1008,
-     "votes": 3,
-     "method": "vision-landmark-geometry"
+     "method": "visual-review",
+     "reason": "detector reads a face in one crop only and its nose and mouth offsets disagree (-0.033/-0.162), the fitted mouth lands on the collar; painted head read by eye against three confirmed right-facing chibis (baochai, daiyu, jing_xu), the head is near frontal and leans slightly left, so the head turns left"
     }
    },
-   "chibi": "right"
+   "chibi": "left"
   },
   "yun_er": {
    "portrait": "right",
