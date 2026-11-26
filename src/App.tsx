@@ -444,13 +444,17 @@ export function App({engine,initialNotice=''}:{engine:StoryEngine;initialNotice?
   useEffect(()=>{if(!stageReady)setLocator(null);},[stageReady]);
   // 计时推进。封面/封底期间冻结，免得读者还没翻页图就自己淡出了。
   // progress 到 1 后再停一拍，让终点高亮与地名能被看清。
+  // ★ 转场节奏与「人物行走速度」解耦：那个设置管的是脚程，读者不会想到
+  // 它也把方位示意砍短一半（2 倍速时 2 秒变 1 秒，地名还没读完就没了）。
+  // 两拍是交代「这段戏在哪儿」，有自己的节奏，跟走多快无关。
+  // 放慢到约 2.1 秒到终点，终点多停一拍；否则第二拍只有 0.7 秒，读不清。
   useEffect(()=>{
     if(!locator||leaf!==null||state.paused)return;
-    if(locator.progress>=1){const t=setTimeout(()=>setLocator(null),reducedMotion?900:420);return ()=>clearTimeout(t);}
-    const stepSize=reducedMotion?.12:.032;
-    const t=setInterval(()=>setLocator(l=>l?{...l,progress:Math.min(1,l.progress+stepSize*state.speed)}:null),50);
+    if(locator.progress>=1){const t=setTimeout(()=>setLocator(null),reducedMotion?1100:900);return ()=>clearTimeout(t);}
+    const stepSize=reducedMotion?.12:.024;
+    const t=setInterval(()=>setLocator(l=>l?{...l,progress:Math.min(1,l.progress+stepSize)}:null),50);
     return ()=>clearInterval(t);
-  },[!!locator,(locator?.progress??0)>=1,leaf,state.paused,state.speed,reducedMotion]);
+  },[!!locator,(locator?.progress??0)>=1,leaf,state.paused,reducedMotion]);
   const skipLocator=useCallback(()=>{pendingLocator.current=null;setLocator(null);},[]);
   useEffect(()=>{
     if(locatorEnabled)return;

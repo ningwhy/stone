@@ -483,9 +483,9 @@ dialog.is-toc{width:min(980px,calc(100% - 30px));height:min(760px,88vh);max-heig
    也不会被一层看不见的遮罩拦住。z-index 6 压住小场景图，但仍在
    map-navigation(5)、map-tools(10)、对白面板(4) 与封面/封底(58) 之下。 */
 .scene-locator{position:absolute;inset:0 0 226px;z-index:6;pointer-events:none;
-  background:radial-gradient(ellipse at 50% 42%,#f7f1df,#e6e8d5 78%);
-  animation:locator-in .28s ease both;overflow:hidden}
-@keyframes locator-in{from{opacity:0}to{opacity:1}}
+  background:radial-gradient(ellipse at 50% 42%,#f7f1df,#e6e8d5 78%);overflow:hidden}
+/* 不做整层淡入：首帧 opacity 从 0 起会让地图空 280ms，读起来像「还没加载完」。
+   舞台的图已画完才挂这一层（见 App 的 stageReady），第一帧就该看见天下舆图。 */
 /* 转场期间把小场景图藏掉：两层图叠在一起会变成一堆看不懂的影子。
    用 opacity 而不是 visibility：Playwright 把 visibility:hidden 判为不可见，
    几十个既有测试都在等 .game-map[data-scene-ready] visible，改 visibility 会让
@@ -518,7 +518,6 @@ dialog.is-toc{width:min(980px,calc(100% - 30px));height:min(760px,88vh);max-heig
 .locator-skip:hover{border-color:#9cae8b;background:#e9efdc}
 @media(max-width:1050px){.locator-head{max-width:calc(100% - 300px);gap:6px 9px;padding:7px 10px}.locator-kicker{font-size:11px;letter-spacing:1px}.locator-place-name{font-size:17px}.locator-place-meta{display:none}.locator-svg{inset:88px 0 18px;height:calc(100% - 106px)}}
 @media(max-width:700px){.scene-locator{inset:0 0 262px}.locator-head{left:10px;right:10px;top:60px;transform:none;width:auto;max-width:none;gap:4px 8px;padding:6px 9px}.locator-kicker{font-size:10px;letter-spacing:0;padding:3px 6px}.locator-crumbs{font-size:9px}.locator-place-name{font-size:14px;letter-spacing:1px}.locator-skip{font-size:10px;padding:4px 7px}.locator-svg{inset:120px 0 18px;height:calc(100% - 138px)}}
-@media(prefers-reduced-motion:reduce){.scene-locator{animation:none}}
 
 /* ---- 背包卡片页：一张竖版卡牌摆在桌面上 ----
    这层是独立的原生 dialog（top layer），盖在册页之上：

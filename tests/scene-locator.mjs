@@ -212,7 +212,9 @@ try {
   await loc2.waitFor({ timeout: 8000 });
   const frames = await p2.evaluate(async () => {
     const out = [];
-    const end = performance.now() + 2600;
+    // 转场约 2.1s 推进到终点 + 900ms 停留；采样窗口要盖住整段，
+    // 否则最后一帧还没到 p=1 就退出，下面的 「reaches its endpoint」 会假红。
+    const end = performance.now() + 3600;
     while (performance.now() < end) {
       const e = document.querySelector('[data-testid=scene-locator]');
       if (e) {
@@ -242,6 +244,44 @@ try {
   assert.equal(await loc2.count(), 0, 'the locator is gone after the animation finishes');
   assert.deepEqual(animated.errors, [], JSON.stringify(animated.errors));
   console.log(`animation: ${frames.length} frames, ${frames[0].p.toFixed(2)} → ${Math.max(...frames.map(f => f.p)).toFixed(2)}, zoom ${frames[0].zoom} → ${Math.max(...frames.map(f => f.zoom)).toFixed(3)}`);
+
+  // ---- ★ 不变量 9：「没加载完就一闪而过」的两道回归锁 ----
+  // 上次修复只保证了「等场景图 ready 再播」，但读者仍反馈大地图一闪而过。
+  // 两个真因：(1) progress 乘了人物行走速度，2 倍速时整段砍半；
+  // (2) 整层 CSS 淡入 .28s，首帧地图是空白的，看着像还没加载。
+  // 这里量「挂载 → 卸载」的墙钟时长：无论速度几档都不得低于 2.6s，
+  // 且首帧 computed opacity 必须为 1（有内容，不在淡入）。
+  for (const speed of [1, 2]) {
+    const s = await boot('no-preference');
+    await s.page.locator('.leaf-sheet.leaf-cover').waitFor({ timeout: 10000 });
+    await s.page.locator('.leaf-cover .leaf-open').click();
+    await s.page.waitForFunction(() => !!window.__mapScene, undefined, { timeout: 30000 });
+    await s.page.evaluate(v => window.__mapScene.engine.setSpeed(v), speed);
+    await s.page.evaluate(() => {
+      // 只量新场景 dream 的转场：换场景瞬间旧转场会被 stageReady 收掉，
+      // 那几毫秒不是「一闪而过」的对象（见 App 的 stageReady 注释）。
+      window.__life = { firstOpacity: null, mount: 0, unmount: 0 };
+      const mo = new MutationObserver(() => {
+        const e = document.querySelector('[data-testid=scene-locator]');
+        if (e && e.dataset.scene === 'dream' && !window.__life.mount) {
+          window.__life.mount = performance.now();
+          window.__life.firstOpacity = Number(getComputedStyle(e).opacity);
+        }
+        if (!e && window.__life.mount && !window.__life.unmount) window.__life.unmount = performance.now();
+      });
+      mo.observe(document.body, { childList: true, subtree: true });
+      window.__moLife = mo;
+    });
+    await seekSection(s.page, 'c1-dream');
+    await dismissPickup(s.page);
+    await s.page.waitForTimeout(5000);
+    const life = await s.page.evaluate(() => { window.__moLife.disconnect(); return window.__life; });
+    const shown = Math.round(life.unmount - life.mount);
+    assert.ok(shown >= 2600, `locator must stay legible ≥2.6s at speed ${speed}, got ${shown}ms`);
+    assert.equal(life.firstOpacity, 1, `the first frame must show the map, not fade in from blank (speed ${speed})`);
+    console.log(`legibility: speed ${speed} → ${shown}ms visible, first-frame opacity ${life.firstOpacity}`);
+    await s.context.close();
+  }
 
   // ---- ★ 不变量 8：两拍不交叠 ----
   // 天下层与府内层同时半透明 = 两张地图压在一起，地名互相干扰，
@@ -314,7 +354,7 @@ try {
   await seekSection(p2, 'dinner');
   await dismissLeaf(p2, false, true);
   await dismissPickup(p2);
-  await p2.waitForTimeout(4500);
+  await p2.waitForTimeout(5500);
   const mounts = await p2.evaluate(() => { window.__stopMounts(); return window.__mounts; });
   const dinnerMounts = mounts.filter(m => m.scene === 'dinner');
   assert.ok(dinnerMounts.length >= 1, `expected the transition to mount, got ${JSON.stringify(mounts)}`);
